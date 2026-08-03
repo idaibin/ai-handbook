@@ -1,0 +1,289 @@
+format_version: legacy-v1
+batch_id: batch-observe-coding-v1
+checked_at: "2026-07-31"
+evidence_policy:
+  method: "Each entry was read from the named GitHub repository through the Contents API at the pinned commit. git_blob_sha is the API-returned blob identifier."
+  status_meaning:
+    read: "The cited path and locator were read; claims are limited to that material."
+    not_found: "No suitable file was found after the recorded search scope; it is not evidence of absence from external docs or runtime behavior."
+  exclusions:
+    - "README links, repository stars, and workflow filenames are not treated as proof of runtime or production behavior."
+    - "No external SaaS account, deployment, benchmark run, or browser automation was performed in this reading batch."
+sources:
+  - source_id: langfuse-langfuse
+    repo: langfuse/langfuse
+    commit_sha: 314804b5c68d42bc742505c7b2552298bfe0ca88
+    records:
+      - status: read
+        role: readme
+        path: README.md
+        git_blob_sha: aa96cd81580a43260174793e63561d5a490055f9
+        locator: "README.md#core-features"
+        coverage: "Product positioning and declared observability, evaluation, dataset, and prompt-management capabilities."
+        atomic_claims:
+          - "Langfuse declares traces can include LLM calls, retrieval, embeddings, and agent actions."
+          - "The README lists LLM-judge, code evaluator, user-feedback, manual-labeling, and custom evaluation-pipeline options."
+        boundaries_or_counterexamples:
+          - "Feature listing does not establish correctness, retention, privacy, or performance for a particular deployment."
+        not_verified:
+          - "Cloud behavior and self-hosted runtime were not deployed."
+      - status: read
+        role: core
+        path: .agents/ARCHITECTURE_PRINCIPLES.md
+        git_blob_sha: b4b5d324a77d651c104d778e1a80fbfb6318611c
+        locator: ".agents/ARCHITECTURE_PRINCIPLES.md#principles"
+        coverage: "Repository architecture principles for high-cardinality observability event storage and querying."
+        atomic_claims:
+          - "Observations are described as the primary analytical unit; traces correlate related observations."
+          - "The document prefers wide attributed events, append-oriented records, and scale-aware time-bounded API queries."
+        boundaries_or_counterexamples:
+          - "These are design principles, not a proof that every API or storage path follows them."
+        not_verified:
+          - "Production schema, query plan, and throughput were not inspected or measured."
+      - status: read
+        role: security_or_boundary
+        path: SECURITY.md
+        git_blob_sha: e6a64f67dfef0d403b2a85bd8f5b9b2a911547e8
+        locator: "SECURITY.md#security-policy"
+        coverage: "Published security-policy pointer."
+        atomic_claims:
+          - "The policy recommends using the latest version and points readers to the Data Security and Privacy documentation."
+        boundaries_or_counterexamples:
+          - "This short policy is not a data-flow, tenant-isolation, or deployment-hardening specification."
+        not_verified:
+          - "The linked external privacy documentation and runtime controls were not read in this batch."
+      - status: read
+        role: evaluation_or_testing
+        path: .agents/skills/backend-dev-guidelines/references/testing-guide.md
+        git_blob_sha: 238568324c544e94b728ee229c19c99688cc696e
+        locator: ".agents/skills/backend-dev-guidelines/references/testing-guide.md#test-types-overview; ## Key Testing Principles"
+        coverage: "Backend testing guidance for integration, tRPC, service, and worker layers."
+        atomic_claims:
+          - "The guide requires isolated tests, unique IDs or scoped cleanup, and coverage of flag or fallback branches."
+          - "It distinguishes public HTTP, authenticated tRPC, service, and worker test layers."
+        boundaries_or_counterexamples:
+          - "A test strategy guide is not proof that the listed tests run on this commit."
+        not_verified:
+          - "No Langfuse test suite was executed."
+      - status: read
+        role: code_or_test
+        path: packages/shared/src/features/evals/observationForEval.test.ts
+        git_blob_sha: 9270a89a0e454fc69aac89d4ce1f3a4534b4e84d
+        locator: "packages/shared/src/features/evals/observationForEval.test.ts#zipObservationToolCalls"
+        coverage: "Representative unit-test entry for converting observation tool-call arrays into evaluation input."
+        atomic_claims:
+          - "The tests require paired tool-call names and serialized calls to be normalized into named calls with parsed arguments."
+          - "Malformed JSON is expected to fall back to raw strings or default fields rather than crash this helper."
+        boundaries_or_counterexamples:
+          - "This is a focused normalization test; it does not validate end-to-end evaluation scoring."
+        not_verified:
+          - "Test execution and integration with persisted trace data were not verified."
+
+  - source_id: promptfoo-promptfoo
+    repo: promptfoo/promptfoo
+    commit_sha: 82ca3c24ec445cf1734face46042c187b659b954
+    records:
+      - status: read
+        role: readme
+        path: README.md
+        git_blob_sha: 9ffb6e9e61e099eea702427f963afa1c2b3ce7ef
+        locator: "README.md#what-can-you-do-with-promptfoo; CLI and library for evaluating and red-teaming LLM apps; ## Quick Start"
+        coverage: "CLI/library positioning and declared evaluation, red-team, CI, and model-comparison uses."
+        atomic_claims:
+          - "The README describes Promptfoo as a CLI and library for evaluating and red-teaming LLM applications."
+          - "It documents local evaluation commands and presents CI/CD and vulnerability scanning as supported workflows."
+        boundaries_or_counterexamples:
+          - "The README claim that evals run locally does not cover optional cloud or provider calls."
+        not_verified:
+          - "Installation, provider calls, and CI integration were not run."
+      - status: read
+        role: core
+        path: docs/architecture/packages.md
+        git_blob_sha: b2895240764a5de54731ab0e8f72032d1955b775
+        locator: "docs/architecture/packages.md#current-private-layers; ## Layer Dependency Ratchet; defines the evaluator's narrow runtime port."
+        coverage: "Internal package/layer boundaries and evaluator runtime port."
+        atomic_claims:
+          - "The document separates facade, contracts, core evaluation logic, node adapters, providers, red-team, view-server, CLI, and app layers."
+          - "It describes a narrow evaluator runtime port with store adapters rather than direct coupling to the concrete Eval model."
+        boundaries_or_counterexamples:
+          - "The architecture is explicitly transitional and the allowlist records a baseline rather than a finished package topology."
+        not_verified:
+          - "The architecture checker was not run."
+      - status: read
+        role: security_or_boundary
+        path: SECURITY.md
+        git_blob_sha: 59590f12d7bc7242a71d306969b07f2b8411c96d
+        locator: "SECURITY.md#security-model"
+        coverage: "Trust model for local evaluation, code-executing configuration, local interfaces, and configured destinations."
+        atomic_claims:
+          - "Promptfoo OSS is described as a local eval runner, not a sandbox for adversarial evaluation content."
+          - "Custom assertions, script providers, transforms, hooks, plugins, and code-executing fields run unsandboxed with user permissions."
+        boundaries_or_counterexamples:
+          - "Local UI and MCP interfaces are trusted single-user tools, not multi-user authorization boundaries."
+        not_verified:
+          - "Actual egress controls, provider transports, and hosted-feature data paths were not tested."
+      - status: read
+        role: evaluation_or_testing
+        path: docs/plans/smoke-tests.md
+        git_blob_sha: 362f02183744b706aa933428556d26d2e783b535
+        locator: "### 1. CLI Binary Tests; ### 2. Config Format Tests; #### 1.7 Exit Codes; #### 1.8 Filter Flags; #### 1.12 Resume and Retry Flags"
+        coverage: "Documented smoke-test matrix for commands, exit codes, filters, configuration formats, providers, resume, and retry."
+        atomic_claims:
+          - "The plan specifies expected exit codes for pass, assertion failure, config error, and provider error."
+          - "It includes test cases for filtering, result persistence controls, resume, retry, and multiple config formats."
+        boundaries_or_counterexamples:
+          - "This is a plan/matrix, not a recorded passing test result for the pinned commit."
+        not_verified:
+          - "No smoke test command or external provider evaluation was executed."
+      - status: read
+        role: code_or_test
+        path: src/main.ts
+        git_blob_sha: 84a88f46048964acdecb4853ee68dd8cb7501e50
+        locator: "async function main(); program.parseAsync(); if (isMain); EvalRunError; shutdownGracefully"
+        coverage: "CLI entrypoint command registration and top-level failure handling."
+        atomic_claims:
+          - "The entrypoint registers eval, view, MCP, red-team, generation, validation, sharing, and code-scan command paths."
+          - "The direct-execution path preserves explicit EvalRunError exit codes and performs graceful shutdown."
+        boundaries_or_counterexamples:
+          - "Registration in the CLI does not prove individual commands or integrations work."
+        not_verified:
+          - "Runtime migrations, update checks, and command execution were not run."
+
+  - source_id: openhands-openhands
+    repo: OpenHands/OpenHands
+    commit_sha: 2feab551c4c12130c126159e1a0bd56753e2968f
+    records:
+      - status: read
+        role: readme
+        path: README.md
+        git_blob_sha: 973cbf183baa9a25e4d17bb09679b45baa82d668
+        locator: "README.md#architecture"
+        coverage: "Agent Canvas positioning, backend choices, local/Docker launch options, and Agent Server relationship."
+        atomic_claims:
+          - "The README describes Agent Canvas as a self-hosted control center that can connect to multiple agent backends."
+          - "It warns that a dockerless Agent Server has full host-filesystem access and describes a Docker project-mount option."
+        boundaries_or_counterexamples:
+          - "Docker mounting a project directory still grants the agent access to projects under that mount."
+        not_verified:
+          - "No OpenHands backend or Docker sandbox was started."
+      - status: read
+        role: core
+        path: docs/architecture.md
+        git_blob_sha: 14bbf01fcd05a7d1518b541cae8d15778167d866
+        locator: "docs/architecture.md#system-boundaries"
+        coverage: "Frontend, Agent Server, automation-server, and cloud-runtime responsibilities."
+        atomic_claims:
+          - "Agent Canvas renders and translates UI actions to Agent Server APIs but does not directly execute agent actions or provide sandbox isolation."
+          - "The documented default safer local workflow uses an Agent Server in Docker; dockerless mode gives host filesystem access."
+        boundaries_or_counterexamples:
+          - "The UI repository does not itself define the Agent Server's execution algorithm or isolation implementation."
+        not_verified:
+          - "Optional live end-to-end QA and Agent Server behavior were not run."
+      - status: read
+        role: security_or_boundary
+        path: docs/SELF_HOSTING.md
+        git_blob_sha: 7b8cc1281a8ffc1d97a78d101ad9b4f9a40611b6
+        locator: "## 2. Secure the machine; ## 3. Run Agent Canvas; ## 4. (Optional) Get a domain and put nginx + Let's Encrypt in front; Session API key"
+        coverage: "Public VM deployment threat model, network firewall, loopback ingress, and session API key."
+        atomic_claims:
+          - "The guide states that an exposed agent server can read/write its host filesystem, execute shell commands, and reach the network."
+          - "The documented public mode requires an API key for /api calls and recommends firewall restrictions plus TLS termination."
+        boundaries_or_counterexamples:
+          - "The API key and firewall are deployment controls; this document does not prove a live deployment is hardened."
+        not_verified:
+          - "No VM, TLS, firewall, or authentication path was provisioned or tested."
+      - status: read
+        role: evaluation_or_testing
+        path: __tests__/api/runtime-service/agent-server-runtime-service.test.ts
+        git_blob_sha: e37bdb3b653220fbdf1e7d38d69b704983e00feb
+        locator: "describe(\"AgentServerRuntimeService.executeCommand\""
+        coverage: "Representative mocked tests for local versus cloud command/file runtime routing."
+        atomic_claims:
+          - "The tests assert cloud command calls use a proxy with session-api-key authentication and a configured runtime host override."
+          - "The tests distinguish direct typed-client calls for local backends from proxied calls for cloud backends."
+        boundaries_or_counterexamples:
+          - "Mocks validate routing contracts, not a real cloud runtime, CORS policy, or command authorization."
+        not_verified:
+          - "The test suite was not executed."
+      - status: read
+        role: code_or_test
+        path: src/api/runtime-service/agent-server-runtime-service.ts
+        git_blob_sha: 83d45845c5d2350397dd674b410d6147f6947013
+        locator: "symbol:AgentServerRuntimeService"
+        coverage: "Cloud-aware command execution and file-download adapter."
+        atomic_claims:
+          - "For cloud backends with a conversation URL, the service proxies command execution and file download using a session API key."
+          - "Otherwise it delegates to RemoteWorkspace and FileClient with resolved Agent Server options."
+        boundaries_or_counterexamples:
+          - "This adapter passes command and cwd to its selected backend; it is not a command allowlist or sandbox."
+        not_verified:
+          - "Authentication, proxy implementation, and backend enforcement were not executed."
+
+  - source_id: browser-use-browser-use
+    repo: browser-use/browser-use
+    commit_sha: f0aa3a8bb03779c71a5aa262d389e3bfe6b77cdc
+    records:
+      - status: read
+        role: readme
+        path: README.md
+        git_blob_sha: 4eec68396b2cfe2f81cb0ebae79930d123baaf9e
+        locator: "README.md#what-can-browser-use-do; Should I use the CLI vs. the Python library?"
+        coverage: "Declared browser-agent tasks and user-facing examples."
+        atomic_claims:
+          - "The README describes agents opening pages, clicking, typing, and filling forms for tasks such as form filling, extraction, and QA."
+          - "It distinguishes one-off agent use through a CLI from repeatable Python-library automation."
+        boundaries_or_counterexamples:
+          - "The examples are demonstrations, not evidence that a task will reliably succeed in another browser or website."
+        not_verified:
+          - "No browser session, form submission, or QA task was run."
+      - status: read
+        role: core
+        path: README.md
+        git_blob_sha: 4eec68396b2cfe2f81cb0ebae79930d123baaf9e
+        locator: "README.md#python-library-the-easiest-way-to-automate-the-web; # Open Source vs Cloud"
+        coverage: "Public Agent construction interface and model/browser integration posture."
+        atomic_claims:
+          - "The public example constructs an Agent with a task and LLM, then awaits agent.run()."
+          - "The README states the open-source agent lets the user choose an LLM and customize behavior, while hosted cloud adds proxy, CAPTCHA, integrations, and persistent-state capabilities."
+        boundaries_or_counterexamples:
+          - "Open-source and hosted-cloud capabilities are explicitly different; cloud claims cannot be attributed to a local install."
+        not_verified:
+          - "Model compatibility, hosted performance, and benchmark values were not independently reproduced."
+      - status: read
+        role: security_or_boundary
+        path: .github/SECURITY.md
+        git_blob_sha: 67a6533784ebc59e03ecb4be1e08acec71a1b031
+        locator: ".github/SECURITY.md#reporting-security-issues"
+        coverage: "Coordinated vulnerability-reporting channel and required report details."
+        atomic_claims:
+          - "The policy asks reporters to use GitHub Security Advisories rather than public issues, discussions, or pull requests."
+        boundaries_or_counterexamples:
+          - "This disclosure policy does not specify browser permission, secret handling, network egress, or sandbox guarantees."
+        not_verified:
+          - "Runtime security controls were not established from this document."
+      - status: read
+        role: evaluation_or_testing
+        path: .github/workflows/eval-on-pr.yml
+        git_blob_sha: 9bd6fce68ed5331acf28b9d2879483413b48acf2
+        locator: ".github/workflows/eval-on-pr.yml#trigger-evaluation; pull_request; opened; synchronize; reopened"
+        coverage: "PR-triggered external interaction-evaluation invocation."
+        atomic_claims:
+          - "The workflow triggers on opened, synchronized, or reopened pull requests only when the author has owner, member, or collaborator association."
+          - "It posts the PR head commit, PR number, branch, test case, and repository to a secret-configured evaluation platform and fails when success is not true."
+        boundaries_or_counterexamples:
+          - "The workflow invokes an external secret-configured platform; it does not include results or prove the evaluation service's semantics."
+        not_verified:
+          - "The external evaluation platform, secrets, and workflow execution were not accessible."
+      - status: read
+        role: code_or_test
+        path: browser_use/agent/service.py
+        git_blob_sha: 4bee7b6dffe9c45fec47740a6e5326a2c1dd534f
+        locator: "symbol:Agent"
+        coverage: "Representative Agent constructor configuration for LLM, browser session, tools, skills, planning, timeouts, and failure limits."
+        atomic_claims:
+          - "The Agent constructor accepts task, model, browser session, tools, optional skills, structured-output schema, and safety-relevant controls such as max_failures and timeouts."
+          - "Flash mode disables planning because the code comments that its output schema makes planning structurally impossible."
+        boundaries_or_counterexamples:
+          - "Exposed constructor controls do not by themselves prove a task is safe, isolated, or successful."
+        not_verified:
+          - "Agent loops, tool execution, judge behavior, and browser watchdogs were not run."

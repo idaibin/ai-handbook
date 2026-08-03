@@ -1,0 +1,309 @@
+version: "0.1"
+checked_at: "2026-07-31"
+selection_policy:
+  discovery_threshold: ">=1000 GitHub stars at check time"
+  star_interpretation: "Stars are a discovery signal, not a quality, security, fitness, or production-readiness proof."
+  eligibility: "Official non-archived repositories only; record the default-branch commit so each review is reproducible."
+  verification_rule: "source_checked means repository metadata and the relevant README claims were checked; metadata_checked means only metadata was checked."
+  learning_rule: "All entries remain unverified until a source note, reproduction, or experiment supplies the required evidence."
+repositories:
+  - id: openai-agents-python
+    repo: "openai/openai-agents-python"
+    url: "https://github.com/openai/openai-agents-python"
+    stars: 28309
+    default_branch: "main"
+    commit_sha: "000a96b602889b00f7cfaa210c41e1a74be65272"
+    license: "MIT"
+    archived: false
+    category: "agent_runtime"
+    tier: "primary"
+    source_verification: "source_checked"
+    learning_status: "unverified"
+    role: "Lightweight agent runtime: agents, tools, handoffs, guardrails, sessions, tracing, and sandboxing concepts."
+    pull_when: "A project needs a small, provider-neutral agent control loop with explicit handoffs or approvals."
+    caveat: "README-level source check only; suitability, provider behavior, and sandbox safety require a scoped experiment."
+  - id: langgraph
+    repo: "langchain-ai/langgraph"
+    url: "https://github.com/langchain-ai/langgraph"
+    stars: 38555
+    default_branch: "main"
+    commit_sha: "b2926a0ff9589c28c7e01fe7cdbb337b86d5a4b4"
+    license: "MIT"
+    archived: false
+    category: "agent_orchestration"
+    tier: "primary"
+    source_verification: "source_checked"
+    learning_status: "unverified"
+    role: "Stateful orchestration for durable execution, interrupts, human-in-the-loop, memory, and traceable long-running agents."
+    pull_when: "A workflow must resume safely after interruption or preserve explicit state across multi-step work."
+    caveat: "Low-level orchestration is not a correctness guarantee; state schema and recovery behavior need case-level tests."
+  - id: autogen
+    repo: "microsoft/autogen"
+    url: "https://github.com/microsoft/autogen"
+    stars: 60124
+    default_branch: "main"
+    commit_sha: "027ecf0a379bcc1d09956d46d12d44a3ad9cee14"
+    license: "CC-BY-4.0"
+    archived: false
+    category: "multi_agent_framework"
+    tier: "cross_check"
+    source_verification: "metadata_checked"
+    learning_status: "unverified"
+    role: "Alternative multi-agent framework candidate for comparing collaboration abstractions."
+    pull_when: "A comparison needs a mature multi-agent framework beyond the selected primary runtime."
+    caveat: "README content was not reviewed in this pass; license and maintenance fit need task-specific verification."
+  - id: crewai
+    repo: "crewAIInc/crewAI"
+    url: "https://github.com/crewAIInc/crewAI"
+    stars: 56419
+    default_branch: "main"
+    commit_sha: "ebe0082acaafd2559152a37a0d201e167a5f280a"
+    license: "MIT"
+    archived: false
+    category: "multi_agent_framework"
+    tier: "cross_check"
+    source_verification: "metadata_checked"
+    learning_status: "unverified"
+    role: "Alternative role-and-crew-oriented multi-agent framework candidate."
+    pull_when: "A comparison needs role-based task decomposition as a distinct implementation style."
+    caveat: "README content was not reviewed in this pass; avoid treating popularity as evidence of workflow quality."
+  - id: smolagents
+    repo: "huggingface/smolagents"
+    url: "https://github.com/huggingface/smolagents"
+    stars: 28609
+    default_branch: "main"
+    commit_sha: "e3a5b8994b301983b91c0325546e9dc82eab8cf0"
+    license: "Apache-2.0"
+    archived: false
+    category: "code_agent_runtime"
+    tier: "cross_check"
+    source_verification: "source_checked"
+    learning_status: "unverified"
+    role: "Minimal code-agent comparison with model/tool agnosticism, MCP integrations, and configurable sandbox execution."
+    pull_when: "A simple code-agent baseline is needed to contrast a heavier orchestration runtime."
+    caveat: "Code execution requires explicit sandbox and tool-permission boundaries; minimal implementation is not production proof."
+  - id: pydantic-ai
+    repo: "pydantic/pydantic-ai"
+    url: "https://github.com/pydantic/pydantic-ai"
+    stars: 18924
+    default_branch: "main"
+    commit_sha: "6e96a74cd2229d1dbe5bb2f71db8732159804b15"
+    license: "MIT"
+    archived: false
+    category: "typed_agent_runtime"
+    tier: "primary"
+    source_verification: "source_checked"
+    learning_status: "unverified"
+    role: "Typed agent contracts, structured outputs, tools, dependency injection, approvals, durable execution, and graph support."
+    pull_when: "A task needs schema-checked outputs or typed boundaries around model/tool interaction."
+    caveat: "Type validation constrains interfaces, not factual correctness or tool side effects."
+  - id: mcp-servers
+    repo: "modelcontextprotocol/servers"
+    url: "https://github.com/modelcontextprotocol/servers"
+    stars: 89074
+    default_branch: "main"
+    commit_sha: "76d64c822f5125032f89eb71dbdb94e42b434821"
+    license: "Not verified"
+    archived: false
+    category: "tool_protocol_reference"
+    tier: "primary"
+    source_verification: "source_checked"
+    learning_status: "unverified"
+    role: "Reference MCP server implementations and examples for tool-protocol integration and threat-boundary analysis."
+    pull_when: "A tool integration needs an official protocol example or a security review of filesystem, fetch, git, or memory access."
+    caveat: "Repository states that examples are not production-ready; apply threat modeling and safeguards before any adoption."
+  - id: llama-index
+    repo: "run-llama/llama_index"
+    url: "https://github.com/run-llama/llama_index"
+    stars: 51251
+    default_branch: "main"
+    commit_sha: "c864fcfa2c1d1f987ccdbcdab7b18e395c01ba86"
+    license: "MIT"
+    archived: false
+    category: "rag_framework"
+    tier: "primary"
+    source_verification: "source_checked"
+    learning_status: "unverified"
+    role: "RAG implementation map covering data connectors, structures/indexes/graphs, retrieval, and query interfaces."
+    pull_when: "A knowledge-grounded feature needs a concrete ingestion-to-retrieval implementation reference."
+    caveat: "README says documentation is more current; verify current APIs and evaluate retrieval quality on local data."
+  - id: haystack
+    repo: "deepset-ai/haystack"
+    url: "https://github.com/deepset-ai/haystack"
+    stars: 26071
+    default_branch: "main"
+    commit_sha: "5add74ecda75c78271b26feeef7d897bfb4e7796"
+    license: "Apache-2.0"
+    archived: false
+    category: "rag_framework"
+    tier: "cross_check"
+    source_verification: "source_checked"
+    learning_status: "unverified"
+    role: "Alternative modular pipeline framework for production RAG and agents."
+    pull_when: "A RAG design needs a pipeline-oriented cross-check against the primary implementation map."
+    caveat: "Telemetry and component behavior need environment-specific privacy and runtime review."
+  - id: graphrag
+    repo: "microsoft/graphrag"
+    url: "https://github.com/microsoft/graphrag"
+    stars: 35112
+    default_branch: "main"
+    commit_sha: "14a00ad88fc33cf2b52f4f113f25807556f8e25e"
+    license: "MIT"
+    archived: false
+    category: "graph_rag"
+    tier: "primary"
+    source_verification: "source_checked"
+    learning_status: "unverified"
+    role: "Specialized GraphRAG pipeline reference for deriving structured data from unstructured corpora."
+    pull_when: "Flat retrieval cannot expose relationships needed by the target question or evaluation case."
+    caveat: "Not a default RAG replacement; cost, quality, responsible-AI constraints, and graph value require comparison evidence."
+  - id: mem0
+    repo: "mem0ai/mem0"
+    url: "https://github.com/mem0ai/mem0"
+    stars: 62186
+    default_branch: "main"
+    commit_sha: "760dca6f391277d79c3c7d2096c1bf1d037526c3"
+    license: "Apache-2.0"
+    archived: false
+    category: "agent_memory"
+    tier: "primary"
+    source_verification: "source_checked"
+    learning_status: "unverified"
+    role: "Candidate memory layer for user, session, and agent state, with an open evaluation framework."
+    pull_when: "An agent's repeated work shows a measured memory gap that cannot be addressed by explicit task context alone."
+    caveat: "Managed-platform benchmark results use proprietary optimizations; they are not proof of equivalent OSS behavior."
+  - id: langfuse
+    repo: "langfuse/langfuse"
+    url: "https://github.com/langfuse/langfuse"
+    stars: 32219
+    default_branch: "main"
+    commit_sha: "314804b5c68d42bc742505c7b2552298bfe0ca88"
+    license: "Not verified"
+    archived: false
+    category: "llm_observability_evaluation"
+    tier: "primary"
+    source_verification: "source_checked"
+    learning_status: "unverified"
+    role: "Trace observability, datasets, evaluations, prompt versioning, and feedback collection reference."
+    pull_when: "An experiment needs trace-to-case linkage, prompt version provenance, or predeployment evaluation datasets."
+    caveat: "Traces diagnose behavior but do not prove correctness; deployment and telemetry privacy must be reviewed."
+  - id: deepeval
+    repo: "confident-ai/deepeval"
+    url: "https://github.com/confident-ai/deepeval"
+    stars: 17300
+    default_branch: "main"
+    commit_sha: "0d100e37d4263f208488f3c13e15561bce3b694f"
+    license: "Apache-2.0"
+    archived: false
+    category: "llm_evaluation"
+    tier: "primary"
+    source_verification: "source_checked"
+    learning_status: "unverified"
+    role: "Pytest-like LLM evaluation with task, tool, goal, efficiency, plan, dataset, and trace-oriented metrics."
+    pull_when: "An agent change needs fixed cases and scored outcome/tool behavior instead of anecdotal acceptance."
+    caveat: "LLM judges and metric configuration need calibration against adjudicated cases; optional cloud logging is a privacy decision."
+  - id: phoenix
+    repo: "Arize-ai/phoenix"
+    url: "https://github.com/Arize-ai/phoenix"
+    stars: 10824
+    default_branch: "main"
+    commit_sha: "3745ac7baf823c3bedccf5f88b99564ae1fd75f6"
+    license: "Not verified"
+    archived: false
+    category: "llm_observability_evaluation"
+    tier: "cross_check"
+    source_verification: "metadata_checked"
+    learning_status: "unverified"
+    role: "Alternative observability and evaluation candidate."
+    pull_when: "The selected observability stack needs a feature, deployment, or data-handling comparison."
+    caveat: "README content was not reviewed in this pass; claims and deployment constraints are not yet source-checked."
+  - id: promptfoo
+    repo: "promptfoo/promptfoo"
+    url: "https://github.com/promptfoo/promptfoo"
+    stars: 23779
+    default_branch: "main"
+    commit_sha: "82ca3c24ec445cf1734face46042c187b659b954"
+    license: "MIT"
+    archived: false
+    category: "llm_regression_redteam"
+    tier: "primary"
+    source_verification: "source_checked"
+    learning_status: "unverified"
+    role: "Configuration-driven local prompt/model evaluation, regression checks, red teaming, and CI-oriented workflow."
+    pull_when: "A prompt or tool workflow requires repeatable regressions or adversarial test coverage."
+    caveat: "Local execution does not itself validate test oracle quality, threat coverage, or CI policy."
+  - id: guardrails
+    repo: "guardrails-ai/guardrails"
+    url: "https://github.com/guardrails-ai/guardrails"
+    stars: 7232
+    default_branch: "main"
+    commit_sha: "798d2c4574474593114dbd79f9c031982a3289a8"
+    license: "Apache-2.0"
+    archived: false
+    category: "llm_guardrails"
+    tier: "cross_check"
+    source_verification: "metadata_checked"
+    learning_status: "unverified"
+    role: "Alternative guardrails candidate for comparing output-validation and safety-control approaches."
+    pull_when: "A project has a defined safety or output-contract gap needing a dedicated framework comparison."
+    caveat: "README content was not reviewed in this pass; security effectiveness must be tested against a project threat model."
+  - id: litellm
+    repo: "BerriAI/litellm"
+    url: "https://github.com/BerriAI/litellm"
+    stars: 55151
+    default_branch: "litellm_internal_staging"
+    commit_sha: "3c2264cfacc3081492e41c8cb9bff5d7da2a7c4a"
+    license: "Not verified"
+    archived: false
+    category: "llm_gateway"
+    tier: "primary"
+    source_verification: "source_checked"
+    learning_status: "unverified"
+    role: "Provider gateway reference for unified API formats, proxying, virtual keys, spend tracking, guardrails, and load balancing."
+    pull_when: "A multi-provider application needs a deliberately evaluated compatibility and governance boundary."
+    caveat: "API metadata did not assert a license; verify reuse terms, provider semantics, and data flow before adoption."
+  - id: browser-use
+    repo: "browser-use/browser-use"
+    url: "https://github.com/browser-use/browser-use"
+    stars: 107381
+    default_branch: "main"
+    commit_sha: "f0aa3a8bb03779c71a5aa262d389e3bfe6b77cdc"
+    license: "MIT"
+    archived: false
+    category: "browser_agent"
+    tier: "primary"
+    source_verification: "source_checked"
+    learning_status: "unverified"
+    role: "Browser-agent architecture reference for browsing, form interaction, QA, and extraction workflows."
+    pull_when: "A browser task has a constrained, permitted workflow and can be tested with explicit evidence and failure handling."
+    caveat: "Real-profile reuse, CAPTCHA, proxies, cloud execution, and parallel-browser resource use require separate security and operational approval."
+  - id: composio
+    repo: "ComposioHQ/composio"
+    url: "https://github.com/ComposioHQ/composio"
+    stars: 29474
+    default_branch: "next"
+    commit_sha: "f1c1aa5613c2464aa8a53420d2357617a4d8bf2f"
+    license: "MIT"
+    archived: false
+    category: "tool_integration"
+    tier: "primary"
+    source_verification: "source_checked"
+    learning_status: "unverified"
+    role: "Tool discovery, per-user auth/session, triggers, sandbox, and provider-adapter comparison reference."
+    pull_when: "An agent needs many external tools but context, authorization, and discovery must remain explicit and bounded."
+    caveat: "Cloud/API dependencies and runtime tool discovery need authorization, data-flow, and failure-mode review."
+  - id: openhands
+    repo: "OpenHands/OpenHands"
+    url: "https://github.com/OpenHands/OpenHands"
+    stars: 82645
+    default_branch: "main"
+    commit_sha: "2feab551c4c12130c126159e1a0bd56753e2968f"
+    license: "MIT"
+    archived: false
+    category: "coding_agent_control_plane"
+    tier: "primary"
+    source_verification: "source_checked"
+    learning_status: "unverified"
+    role: "Self-hosted coding-agent control-plane reference for multiple coding backends and sandboxed execution boundaries."
+    pull_when: "A coding-agent deployment needs control-plane and sandbox design references, not a default autonomous coding loop."
+    caveat: "Repository warns that execution without a sandbox has full filesystem access; assess deployment isolation before use."

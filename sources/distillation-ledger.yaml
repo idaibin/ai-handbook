@@ -1,0 +1,51 @@
+version: "0.1"
+updated_at: "2026-07-31"
+scope_rule: "distilled applies only to the listed fixed-commit sections; it never means the full repository was read, reproduced, or adopted."
+clusters:
+  - id: evaluation-driven-agent-workflow
+    artifact: ../../knowledge-distillation/examples/engineering/evaluation-driven-agent-workflow/knowledge.yaml
+    selected_level: level_3
+    validation: "Knowledge IR validator and JSON Schema passed for this IR; the generic 9-case basic suite passed but does not exercise this IR"
+    sources:
+      - source_id: openai-agents-python
+        coverage: "README.md — Core concepts"
+        status: distilled
+      - source_id: langgraph
+        coverage: "README.md — Why use LangGraph?"
+        status: distilled
+      - source_id: deepeval
+        coverage: "README.md — Agentic metrics"
+        status: distilled
+      - source_id: langfuse
+        coverage: "README.md — Observability, Evaluations, Datasets, Prompt Management"
+        status: distilled
+      - source_id: promptfoo
+        coverage: "README.md — test cases, CI/CD integration, and red teaming"
+        status: distilled
+    downstream_evidence:
+      - "interface-closure-v1 packet frozen and tested on Case 003"
+      - "No Case 003 lift; not promoted to Skill"
+  - id: agent-tool-boundaries
+    artifact: ../../knowledge-distillation/examples/engineering/agent-tool-boundaries/knowledge.yaml
+    selected_level: level_3
+    validation: "Knowledge IR validator and JSON Schema passed for this IR; the generic 9-case basic suite passed but does not exercise this IR"
+    sources:
+      - source_id: mcp-servers
+        coverage: "README.md — reference-server warning and access examples"
+        status: distilled
+      - source_id: composio
+        coverage: "README.md lines 27-38, 55-57, and 96-98"
+        status: distilled
+      - source_id: browser-use
+        coverage: "README.md — browser actions and authentication FAQ"
+        status: distilled
+      - source_id: openhands
+        coverage: "README.md — Quickstart sandbox warnings"
+        status: distilled
+      - source_id: pydantic-ai
+        coverage: "README.md — Human-in-the-Loop Tool Approval"
+        status: distilled
+    downstream_evidence:
+      - "Compared against ops-browser, ops-client, and repo-review"
+      - "Existing operational Skills already cover the material gates; no duplicate change proposed"
+remaining_repository_status: "All full-repository learning_status values remain unverified until broader reading, reproduction, or application evidence exists."

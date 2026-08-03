@@ -1,0 +1,348 @@
+format_version: "legacy-v1"
+batch_id: "memory-mcp-eval-fixed-commit-reading-v1"
+checked_at: "2026-07-31T16:20:00+08:00"
+evidence_policy:
+  fixed_revision: "Every record is read from the listed GitHub commit, not the moving default branch. git_blob_sha identifies the exact file blob returned by GitHub."
+  reading_standard: "read_at_fixed_commit means the named section or symbol was read from the official repository through GitHub API raw/blob content; it is not a claim that the full document or repository was read."
+  claim_standard: "atomic_claims are constrained to the named locator. boundaries_or_counterexamples and not_verified must travel with any later distillation."
+  missing_standard: "A role may be status:not_found only after documenting its searched path scope. No role below is inferred from stars, README summaries, or search-result snippets."
+sources:
+  - source_id: "mem0"
+    repo: "mem0ai/mem0"
+    commit_sha: "760dca6f391277d79c3c7d2096c1bf1d037526c3"
+    document_identity: &mem0_identity
+      source_id: "mem0"
+      repo: "mem0ai/mem0"
+      commit_sha: "760dca6f391277d79c3c7d2096c1bf1d037526c3"
+    records:
+      - <<: *mem0_identity
+        role: "readme"
+        status: "read_at_fixed_commit"
+        path: "README.md"
+        git_blob_sha: "9a81e74effacbd7433e91b6c1fcc907f110d4773"
+        locator: "#New Memory Algorithm (April 2026); #Introduction; Quickstart Guide; #Basic Usage"
+        coverage: "Product scope, managed-versus-OSS setup choices, memory scopes, default dependencies, and add/search integration example."
+        atomic_claims:
+          - "Mem0 presents user, session, and agent state as distinct memory scopes."
+          - "The README describes managed-platform benchmark numbers as including proprietary optimizations that are not available in the open-source SDK."
+          - "The basic integration flow searches before a model response and adds the completed exchange afterward."
+        boundaries_or_counterexamples:
+          - "The stated benchmark scores are explicitly not equivalent proof for OSS behavior."
+          - "The default library path needs an LLM and an embedding model; it is not a standalone deterministic store."
+        not_verified:
+          - "No Mem0 backend, model provider, vector store, or benchmark was run in this batch."
+      - <<: *mem0_identity
+        role: "core"
+        status: "read_at_fixed_commit"
+        path: "docs/core-concepts/how-it-works.mdx"
+        git_blob_sha: "55cc2c1cf1985e1dd6b7d62e30929115bc856589"
+        locator: "## The mental model; ## Messages vs memories; ## Two phases: extraction and retrieval; ## Where memories live; ## Build against this flow"
+        coverage: "Extraction/retrieval lifecycle, durable-fact storage, scoping filters, multi-store layout, and recommended application placement."
+        atomic_claims:
+          - "With inference enabled, Mem0 stores extracted memories rather than a verbatim transcript; infer=False is the documented raw-content alternative."
+          - "The documented write path is context lookup, fact extraction, deduplication/embedding, and optional entity linking."
+          - "The documented retrieval guidance requires caller-provided filters such as user_id, agent_id, or run_id to avoid cross-scope mixing."
+        boundaries_or_counterexamples:
+          - "OSS retrieval behavior depends on configured vector, reranker, and graph stores, while managed Platform signal fusion is separately described."
+          - "The document warns against storing secrets, raw credentials, or unredacted sensitive data."
+        not_verified:
+          - "No extraction quality, deduplication behavior, or scope-isolation behavior was exercised."
+      - <<: *mem0_identity
+        role: "security_or_boundary"
+        status: "read_at_fixed_commit"
+        path: "SECURITY.md"
+        git_blob_sha: "2c4caa2a694676cc0e000640ba03b633bd130b8d"
+        locator: "#Security Policy; ## Reporting a Vulnerability; ## Response Process; ## Supported Versions"
+        coverage: "Vulnerability reporting channel and supported-version statement."
+        atomic_claims:
+          - "The repository asks reporters not to disclose vulnerabilities through public issues, pull requests, or discussions."
+          - "It states security fixes are released against the latest published version of each package."
+        boundaries_or_counterexamples:
+          - "This reporting policy is not an implementation security guarantee for an application using Mem0."
+        not_verified:
+          - "No vulnerability-report workflow or supported-version release process was tested."
+      - <<: *mem0_identity
+        role: "evaluation_or_testing"
+        status: "read_at_fixed_commit"
+        path: "docs/core-concepts/memory-evaluation.mdx"
+        git_blob_sha: "e265abf61da815e6155bb1f9a980eeaa24f9b7eb"
+        locator: "## Why Memory Evaluation Matters; ## Architecture Overview; ## Benchmarks; ## Performance Summary; ## Running Evaluations; ## Running a Benchmark"
+        coverage: "Evaluation axes, constrained retrieval budget, listed public benchmarks, cloud/OSS setup, and runner parameters."
+        atomic_claims:
+          - "The document treats accuracy, context-token cost, and latency as separate evaluation parameters."
+          - "Its reported benchmark configuration uses a top_200 retrieval budget and states a plus/minus one point confidence interval due to judge inconsistency."
+          - "It points to a separate open-source memory-benchmarks repository and documents OSS and cloud runner setup."
+        boundaries_or_counterexamples:
+          - "The document states smaller benchmarks can improve through larger context or frontier models without proving the memory system itself improved."
+          - "Its managed-platform scores are explicitly not expected to reproduce identically in OSS."
+        not_verified:
+          - "The linked memory-benchmarks repository and its command outputs were not run or independently audited here."
+      - <<: *mem0_identity
+        role: "code_or_test"
+        status: "read_at_fixed_commit"
+        path: "mem0/memory/main.py"
+        git_blob_sha: "4aac8f8e55f4a19d87687839c5d5b0ca85346f9a"
+        locator: "symbol:_SENSITIVE_FIELDS_EXACT; symbol:ENTITY_PARAMS; symbol:_IDENTITY_KEYS; symbol:_strip_identity_keys; symbol:_reject_top_level_entity_params; symbol:_validate_search_params; symbol:_validate_and_trim_search_query"
+        coverage: "Representative input/scoping/telemetry-sensitivity boundary code in the core Memory implementation."
+        atomic_claims:
+          - "The code classifies common credential and token field names as sensitive for redaction."
+          - "It makes user_id, agent_id, and run_id identity keys and rejects top-level entity parameters in favor of filters."
+          - "It validates non-empty queries, non-negative top_k, and threshold values in the inclusive 0..1 range."
+        boundaries_or_counterexamples:
+          - "Configuration redaction and parameter validation do not establish end-to-end tenant isolation or external-store security."
+        not_verified:
+          - "No unit test, integration test, or runtime trace of these paths was executed."
+
+  - source_id: "mcp-servers"
+    repo: "modelcontextprotocol/servers"
+    commit_sha: "76d64c822f5125032f89eb71dbdb94e42b434821"
+    document_identity: &mcp_servers_identity
+      source_id: "mcp-servers"
+      repo: "modelcontextprotocol/servers"
+      commit_sha: "76d64c822f5125032f89eb71dbdb94e42b434821"
+    records:
+      - <<: *mcp_servers_identity
+        role: "readme"
+        status: "read_at_fixed_commit"
+        path: "README.md"
+        git_blob_sha: "fe5351a890ab80f6d49b2b50f1e0732224313b24"
+        locator: "#Model Context Protocol servers; ## Reference Servers; ## Getting Started; ## Using an MCP Client; ## Creating Your Own Server"
+        coverage: "Repository purpose, official reference-server inventory, client configuration examples, and SDK links."
+        atomic_claims:
+          - "The repository describes itself as a collection of MCP reference implementations and links to community resources separately."
+          - "It identifies Everything, Fetch, Filesystem, Git, Memory, Sequential Thinking, and Time as reference servers."
+          - "Its client examples pass filesystem allowed paths and a Git repository path explicitly."
+        boundaries_or_counterexamples:
+          - "The README says the examples are educational, not production-ready, and require safeguards based on the adopter's threat model."
+        not_verified:
+          - "No MCP server package was installed, configured in a client, or connected to a real external system."
+      - <<: *mcp_servers_identity
+        role: "core"
+        status: "read_at_fixed_commit"
+        path: "src/everything/docs/architecture.md"
+        git_blob_sha: "728cfd4010925ee5a029800c2bf12d0fef0fbe5e"
+        locator: "#Everything Server – Architecture; ## High-level Overview; ### Purpose; ### Design; ### Multi-client; ## Build and Distribution"
+        coverage: "Minimal reference-server decomposition, transport separation, feature registration, multi-client example, and build packaging."
+        atomic_claims:
+          - "The Everything server architecture separates a server factory from transport-specific entry points."
+          - "Tools, prompts, and resources are organized as separate submodules in this reference implementation."
+          - "The document describes STDIO, SSE, and Streamable HTTP as supported transports for the example."
+        boundaries_or_counterexamples:
+          - "This is documentation for the Everything reference server, not a general production architecture prescription."
+        not_verified:
+          - "Transport concurrency, session behavior, and build output were not run."
+      - <<: *mcp_servers_identity
+        role: "security_or_boundary"
+        status: "read_at_fixed_commit"
+        path: "SECURITY.md"
+        git_blob_sha: "2d6cdc2be4862fb7ed3e6454a13ce82b7adf4f90"
+        locator: "#Security Policy; ## Important Notice; ## Reporting Security Issues in MCP SDKs"
+        coverage: "Reference-only status and security-reporting boundary."
+        atomic_claims:
+          - "The policy repeats that these servers are reference implementations, not production-ready solutions."
+          - "It directs MCP SDK vulnerability reports to the applicable SDK repository rather than this repository."
+        boundaries_or_counterexamples:
+          - "A reference implementation's behavior is not a security certification or an adoption approval."
+        not_verified:
+          - "No SDK or server threat model was performed in this reading batch."
+      - <<: *mcp_servers_identity
+        role: "evaluation_or_testing"
+        status: "read_at_fixed_commit"
+        path: "src/fetch/tests/test_server.py"
+        git_blob_sha: "96c1cb38c7b4eae0870f89066faec2697c980434"
+        locator: "TestGetRobotsTxtUrl; TestExtractContentFromHtml; TestCheckMayAutonomouslyFetchUrl; TestFetchUrl"
+        coverage: "Representative unit tests for URL normalization, HTML conversion, robots policy branches, and HTTP error behavior."
+        atomic_claims:
+          - "The test suite expects autonomous fetching to block on robots.txt 401, 403, and a disallow-all policy."
+          - "The tests distinguish raw HTML return from simplified content and assert HTTP 404/500 failure paths."
+        boundaries_or_counterexamples:
+          - "The tests mock HTTP clients, so they do not prove network behavior, remote robots compliance, or browser-equivalent behavior."
+        not_verified:
+          - "pytest was not run, and the current fixed revision's dependencies were not installed."
+      - <<: *mcp_servers_identity
+        role: "code_or_test"
+        status: "read_at_fixed_commit"
+        path: "src/fetch/src/mcp_server_fetch/server.py"
+        git_blob_sha: "b42c7b1f6b7ce1fea6b50a5a4554f3436cb36131"
+        locator: "symbol:check_may_autonomously_fetch_url; symbol:fetch_url; symbol:Fetch; symbol:serve"
+        coverage: "Representative MCP fetch-server policy flow, request validation, autonomous versus manual behavior, and output truncation."
+        atomic_claims:
+          - "When ignore_robots_txt is false, the fetch tool invokes a robots-policy check before autonomous fetching."
+          - "The implementation distinguishes autonomous and user-specified User-Agent values."
+          - "The tool validates URL parameters and caps returned text through max_length/start_index pagination."
+        boundaries_or_counterexamples:
+          - "The serve() function exposes an ignore_robots_txt option, so caller configuration can bypass the default autonomous policy check."
+          - "A robots check is not a complete SSRF, content-safety, authorization, or production security control."
+        not_verified:
+          - "No live URL was fetched and no MCP protocol session was exercised."
+
+  - source_id: "composio"
+    repo: "ComposioHQ/composio"
+    commit_sha: "f1c1aa5613c2464aa8a53420d2357617a4d8bf2f"
+    document_identity: &composio_identity
+      source_id: "composio"
+      repo: "ComposioHQ/composio"
+      commit_sha: "f1c1aa5613c2464aa8a53420d2357617a4d8bf2f"
+    records:
+      - <<: *composio_identity
+        role: "readme"
+        status: "read_at_fixed_commit"
+        path: "README.md"
+        git_blob_sha: "951b2ead521096752f9df74f1b06fb97c24e53cd"
+        locator: "#Composio; ## Quickstart; ## Providers; ## Repository layout; ## Development"
+        coverage: "SDK scope, per-user sessions, runtime meta-tools, provider adapters, MCP endpoint option, and local development command."
+        atomic_claims:
+          - "The README describes sessions as scoped to one user and says their session_id can be reused across turns."
+          - "It says the default session uses meta tools to discover, authenticate, and execute app tools at runtime rather than loading hundreds of definitions."
+          - "It documents an optional hosted MCP endpoint for a session and links multiple provider adapters."
+        boundaries_or_counterexamples:
+          - "The quickstart requires a dashboard API key and is not a local-only tool runtime."
+          - "Claimed toolkit count and provider availability were not independently enumerated or exercised."
+        not_verified:
+          - "No account connection, session, sandbox, hosted endpoint, or tool call was created."
+      - <<: *composio_identity
+        role: "core"
+        status: "read_at_fixed_commit"
+        path: "ts/docs/core-concepts.md"
+        git_blob_sha: "35ae0a07d6086859d29e4f18ee582e7f551d27e5"
+        locator: "#Core Concepts; ## User IDs; ### Critical Security Considerations; ### The `default` User ID; ### Production User IDs; ## Tools; ## Toolkits; ## Connected Accounts; ## Auth Configs"
+        coverage: "User-context requirement, production identifier guidance, organization scope, tool/toolkit model, and connected-account/auth-config concepts."
+        atomic_claims:
+          - "The document states that tool execution, connection authorization, and account-management operations require a userId context."
+          - "It recommends a stable, unique production identifier and labels the default userId as testing/development or single-user use only."
+          - "It distinguishes organization-scoped connected accounts from individual-user connections."
+        boundaries_or_counterexamples:
+          - "The document explicitly shows that using default in a multi-user production application can expose another user's data."
+          - "Using an organization ID is only appropriate when connections are organization-level and application authorization permits it."
+        not_verified:
+          - "No authorization model, userId validation, or connected-account behavior was tested."
+      - <<: *composio_identity
+        role: "security_or_boundary"
+        status: "read_at_fixed_commit"
+        path: "docs/content/docs/security/overview.mdx"
+        git_blob_sha: "13a2a857a5812911509ea12ba150bfb638012343"
+        locator: "title: Security; ## Compliance and the Trust Center; ## Isolation and access control"
+        coverage: "Published isolation, access-control, key, and credential-handling claims."
+        atomic_claims:
+          - "The document says organizations and projects isolate resources and describes project-scoped API keys with optional capability controls."
+          - "It describes least-privilege defaults, credential encryption, and dashboard MFA availability."
+        boundaries_or_counterexamples:
+          - "These are vendor-published claims; this reading does not independently verify compliance status, encryption implementation, or isolation."
+        not_verified:
+          - "No Trust Center report, API-key scope, proxy-execute policy, or security control was independently audited."
+      - <<: *composio_identity
+        role: "evaluation_or_testing"
+        status: "read_at_fixed_commit"
+        path: "python/tests/test_tool_execution.py"
+        git_blob_sha: "26e25179098c7470754ed5b9875e0c3715c4c983"
+        locator: "test_get_raw_tool_router_meta_tools_fetches_all_pages; test_tool_execution_uses_toolkit_version; test_tool_execution_with_explicit_version; test_tool_execution_unknown_toolkit_fallback; test_tool_execution_matches_typescript_behavior"
+        coverage: "Representative mocked SDK tests for paginated tool discovery and toolkit-version resolution."
+        atomic_claims:
+          - "The tests assert that meta-tool listing follows a next_cursor across pages."
+          - "They assert an explicit tool version overrides toolkit-version mapping and that a missing mapping falls back to latest."
+        boundaries_or_counterexamples:
+          - "The tests use mocks and do not establish API service behavior or that latest is safe for a production workflow."
+        not_verified:
+          - "The Python test suite was not installed or run."
+      - <<: *composio_identity
+        role: "code_or_test"
+        status: "read_at_fixed_commit"
+        path: "python/composio/core/models/tool_router.py"
+        git_blob_sha: "2994995ea41e0c1f366a3affde988a5aa1e51f33"
+        locator: "symbol:ToolRouterTag; symbol:ToolRouterSandboxConfig; symbol:ToolRouterPreloadConfig; symbol:_apply_session_preset_defaults"
+        coverage: "Representative tool-router session configuration for tool filtering, sandbox controls, connection management, multi-account choice, and preload behavior."
+        atomic_claims:
+          - "ToolRouterSandboxConfig defines an enable flag and an enable_proxy_execution flag; disabled sandbox configuration removes code-execution tools and rejects direct sandbox calls."
+          - "The session configuration supports explicit enable/disable lists for toolkits and tools, plus MCP tool tags."
+          - "The direct_tools preset defaults connection management and sandbox off while preloading all tools when the caller omits those settings."
+        boundaries_or_counterexamples:
+          - "Changing sandbox size on an existing session can recreate the sandbox and lose in-memory filesystem state, while the documented mounted-files path persists."
+          - "Configuration types alone do not prove service-side enforcement."
+        not_verified:
+          - "No session was created and no configured permission/sandbox behavior was run."
+
+  - source_id: "deepeval"
+    repo: "confident-ai/deepeval"
+    commit_sha: "0d100e37d4263f208488f3c13e15561bce3b694f"
+    document_identity: &deepeval_identity
+      source_id: "deepeval"
+      repo: "confident-ai/deepeval"
+      commit_sha: "0d100e37d4263f208488f3c13e15561bce3b694f"
+    records:
+      - <<: *deepeval_identity
+        role: "readme"
+        status: "read_at_fixed_commit"
+        path: "README.md"
+        git_blob_sha: "3eb303a471184368766718c33d29d9a4fe6f7363"
+        locator: "# Metrics and Features; # Vibe-Coder QuickStart; ## Write your first test case; ## Evals With Full Traceability"
+        coverage: "Framework positioning, metric families, evaluation examples, test command, integrations, and cloud-account notice."
+        atomic_claims:
+          - "The README positions DeepEval as a pytest-like framework for LLM systems and lists task, tool, plan, RAG, multi-turn, and MCP metrics."
+          - "Its example evaluates an LLMTestCase with a metric threshold and runs through deepeval test run."
+          - "The README distinguishes local framework capabilities from the optional Confident AI platform."
+        boundaries_or_counterexamples:
+          - "The README's cloud-login flow says test cases are automatically logged after login, making data handling a deliberate choice."
+          - "Metric availability does not establish calibrated correctness for a particular model, judge, or product task."
+        not_verified:
+          - "No DeepEval package, model API key, metric, CLI command, or cloud account was used."
+      - <<: *deepeval_identity
+        role: "core"
+        status: "read_at_fixed_commit"
+        path: "docs/content/docs/(concepts)/(test-cases)/evaluation-test-cases.mdx"
+        git_blob_sha: "798fa752cf5abba9d3fd592cfe4a111c37eab8a6"
+        locator: "## Quick Summary; ## What Is An LLM Interaction?; ## LLM Test Case; ### Input; ### Actual Output; ### Expected Output; ### Context; ### Retrieval Context; ### Tools Called"
+        coverage: "Atomic interaction concept, LLMTestCase data model, agent-versus-RAG scope, and distinction between ideal and runtime context."
+        atomic_claims:
+          - "The document defines a single-turn test case as one atomic LLM-application interaction and allows component, RAG-pipeline, or agent-level scope."
+          - "It states input and actual_output are required for the LLMTestCase model even though individual metrics may use different subsets of fields."
+          - "It distinguishes static ideal context from runtime retrieval_context and documents tools_called for agent execution evidence."
+        boundaries_or_counterexamples:
+          - "It says scope selection is up to the evaluator, so scores from differently scoped interactions are not automatically comparable."
+          - "It warns that conversational metrics cannot evaluate an LLMTestCase."
+        not_verified:
+          - "No test-case serialization, metric selection, or evaluation result was independently produced."
+      - <<: *deepeval_identity
+        role: "security_or_boundary"
+        status: "read_at_fixed_commit"
+        path: "docs/content/docs/data-privacy.mdx"
+        git_blob_sha: "33a37ae429a4ddfebd433a5060c4635b6a7ab424"
+        locator: "title: Data Privacy; ## Your Privacy Using `deepeval`; ## Your Privacy Using Confident AI"
+        coverage: "Published telemetry, error-reporting, opt-out, and hosted-platform data boundary."
+        atomic_claims:
+          - "The document says DeepEval telemetry is basic PostHog telemetry by default and documents DEEPEVAL_TELEMETRY_OPT_OUT=1."
+          - "It describes Sentry error reporting as opt-in through ERROR_REPORTING=1."
+          - "It distinguishes hosted Confident AI storage from use of the local deepeval package."
+        boundaries_or_counterexamples:
+          - "These are publisher claims and settings, not an independent privacy audit or proof that no sensitive data can leave a process."
+        not_verified:
+          - "No telemetry payload, environment setting, or hosted-data access control was observed."
+      - <<: *deepeval_identity
+        role: "evaluation_or_testing"
+        status: "read_at_fixed_commit"
+        path: "tests/test_metrics/test_tool_use_metric.py"
+        git_blob_sha: "72b37ca65a367b31a30335bd07d9a77d6fec3dfd"
+        locator: "pytestmark; class TestToolUseMetric; test_normal_sync_metric_measure; test_normal_async_metric_measure; test_invalid_model_throws_error_for_multimodal; test_normal_evaluate_method"
+        coverage: "Representative metric tests for sync/async evaluation, conversational cases, multimodal input, error handling, and evaluate() integration."
+        atomic_claims:
+          - "The test module skips when OPENAI_API_KEY is absent."
+          - "It exercises ToolUseMetric against ConversationalTestCase inputs and checks that score and reason are populated."
+          - "It asserts a ValueError for an incompatible model in a multimodal case."
+        boundaries_or_counterexamples:
+          - "The suite's API-key skip condition means these tests do not by themselves provide an offline deterministic verification path."
+        not_verified:
+          - "No API key was supplied and no metric test was run."
+      - <<: *deepeval_identity
+        role: "code_or_test"
+        status: "read_at_fixed_commit"
+        path: "deepeval/metrics/tool_use/tool_use.py"
+        git_blob_sha: "6ccd80ad4dab0d4b05fa45dceab3fc01a3a091a8"
+        locator: "symbol:ToolUseMetric; symbol:ToolUseMetric.__init__; symbol:ToolUseMetric.measure; symbol:ToolUseMetric.a_measure; symbol:ToolUseMetric._get_argument_correctness_score; symbol:ToolUseMetric._get_tool_selection_score; symbol:ToolUseMetric._get_user_input_and_turns"
+        coverage: "Representative tool-use metric configuration, required fields, sync/async score paths, tool-selection and argument-correctness scoring, and verbose output."
+        atomic_claims:
+          - "ToolUseMetric requires conversational role and content fields and takes available_tools plus a configurable threshold/model."
+          - "Its score combines tool-selection and argument-correctness scores gathered from conversational unit interactions."
+          - "strict_mode sets the metric threshold to 1, and async_mode switches to the asynchronous evaluation path."
+        boundaries_or_counterexamples:
+          - "The metric initializes a model and uses generated structured scores, so reproducibility depends on model/judge configuration beyond this source file."
+        not_verified:
+          - "No score calculation, judge call, or strict-mode behavior was run."

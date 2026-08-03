@@ -1,0 +1,361 @@
+format_version: "legacy-v1"
+batch_id: "agent-rag-fixed-commit-reading-2026-07-31"
+checked_at: "2026-07-31"
+evidence_policy:
+  method: "Every `status: read` record was fetched from the named public GitHub repository through the GitHub REST git-blob API at the fixed commit. `git_blob_sha` is the Git blob SHA returned by the repository tree/content API."
+  interpretation: "Atomic claims are source-supported paraphrases limited to the listed locator and coverage. They are not runtime, production, security-effectiveness, or full-repository verification."
+  role_rule: "A source has one record for each required role: readme, core, security_or_boundary, evaluation_or_testing, and code_or_test. A reused file has independent locators and records."
+  absence_rule: "If a required role cannot be located after a bounded repository-tree search it must be recorded as `status: not_found`; no README summary may substitute for it."
+sources:
+  - source_id: "openai-agents-python"
+    repo: "openai/openai-agents-python"
+    commit_sha: "000a96b602889b00f7cfaa210c41e1a74be65272"
+    status: "read"
+    role: "readme"
+    path: "README.md"
+    git_blob_sha: "584e895292a0936b15eeab1fbed8b2e335dfbc88"
+    locator: "OpenAI Agents SDK; ### Core concepts:; ## Run your first agents"
+    coverage: "Read the project positioning, the nine-item core-concepts list, and the sandbox/text/realtime quickstart sections."
+    atomic_claims:
+      - "The SDK presents Agent, tools, handoffs, guardrails, human-in-the-loop, sessions, tracing, and sandbox agents as separate concepts."
+      - "The documented sandbox-agent path is for filesystem/command/patch work with workspace state, while the text-agent path is for workflows without a sandbox workspace."
+    boundaries_or_counterexamples:
+      - "The README claims provider agnosticism but does not establish equivalent provider behavior or sandbox isolation for a target deployment."
+      - "The sandbox example needs a platform-supported client and is not a production threat model."
+    not_verified:
+      - "Live provider routing, credentials, and sandbox containment."
+
+  - source_id: "openai-agents-python"
+    repo: "openai/openai-agents-python"
+    commit_sha: "000a96b602889b00f7cfaa210c41e1a74be65272"
+    status: "read"
+    role: "core"
+    path: "docs/agents.md"
+    git_blob_sha: "f5946643bb73a35ec5082351ff305bb44082d0f7"
+    locator: "# Agents; ## Basic configuration; ## Multi-agent system design patterns; ## Tool use behavior"
+    coverage: "Read the Agent/Runner definition, configuration table, manager-versus-handoff patterns, and tool-result loop controls."
+    atomic_claims:
+      - "A plain Agent is an LLM configured with instructions, tools, and optional handoffs, guardrails, or structured outputs; Runner owns the turn/tool/handoff/session loop."
+      - "Manager-as-tools retains a central conversation owner, whereas a handoff transfers conversation control to a specialist."
+      - "Tool output can re-enter the LLM loop or terminate it, depending on tool_use_behavior."
+    boundaries_or_counterexamples:
+      - "The guide says to use the Responses API directly when the caller must own the orchestration loop."
+      - "Offering a tool does not guarantee that an LLM will call it; forcing tool choice carries its own loop constraints."
+    not_verified:
+      - "Correctness of a multi-agent decomposition for any particular task."
+
+  - source_id: "openai-agents-python"
+    repo: "openai/openai-agents-python"
+    commit_sha: "000a96b602889b00f7cfaa210c41e1a74be65272"
+    status: "read"
+    role: "security_or_boundary"
+    path: "docs/guardrails.md"
+    git_blob_sha: "5caa814c3e9abdd7385bd2ac457eae7d9b859e52"
+    locator: "# Guardrails; ## Workflow boundaries; ## Execution modes; ## Tool guardrails"
+    coverage: "Read agent-level input/output timing, parallel versus blocking behavior, and tool-guardrail applicability."
+    atomic_claims:
+      - "Agent input guardrails run only on the first agent and output guardrails only on the final agent; function-tool guardrails run around each configured function-tool invocation."
+      - "Parallel input guardrails improve latency but may permit model work or tool execution before cancellation; blocking mode runs before the agent."
+      - "The documented tool-guardrail pipeline does not cover handoffs, hosted tools, built-in execution tools, or Agent.as_tool directly."
+    boundaries_or_counterexamples:
+      - "A guardrail tripwire is a control-flow check, not evidence that an LLM safety classifier is accurate."
+      - "Agent-level guardrails alone do not surround every tool call in a delegated workflow."
+    not_verified:
+      - "Coverage against prompt injection or project-specific side effects."
+
+  - source_id: "openai-agents-python"
+    repo: "openai/openai-agents-python"
+    commit_sha: "000a96b602889b00f7cfaa210c41e1a74be65272"
+    status: "read"
+    role: "evaluation_or_testing"
+    path: "tests/test_guardrails.py"
+    git_blob_sha: "49ed36faa502f1e6d7d7f8effcd8f44ec0e63fa7"
+    locator: "test_sync_input_guardrail; test_sync_output_guardrail; test_parallel_guardrail_runs_concurrently_with_agent; test_blocking_guardrail_prevents_agent_execution"
+    coverage: "Read the unit tests for input/output tripwires, parallel scheduling, and blocking cancellation using FakeModel."
+    atomic_claims:
+      - "The test suite asserts input and output guardrail result shapes for triggering and non-triggering synchronous and asynchronous functions."
+      - "A blocking input guardrail trip is tested to prevent the fake model from being called; a parallel guardrail test expects the model to be called."
+    boundaries_or_counterexamples:
+      - "These are deterministic unit tests with a FakeModel and do not measure real model safety, latency, or external tool containment."
+    not_verified:
+      - "CI execution result at this commit."
+
+  - source_id: "openai-agents-python"
+    repo: "openai/openai-agents-python"
+    commit_sha: "000a96b602889b00f7cfaa210c41e1a74be65272"
+    status: "read"
+    role: "code_or_test"
+    path: "src/agents/run.py"
+    git_blob_sha: "d0e3f9ee5668e4daeaf7183290739c49b98958e3"
+    locator: "symbol:Runner.run; symbol:Runner.run_sync; symbol:AgentRunner.run_streamed"
+    coverage: "Read the public run loop contract, max-turn and guardrail exceptions, synchronous wrapper, and streamed RunState initialization path."
+    atomic_claims:
+      - "Runner documents a loop of agent invocation, final output, handoff, or tool execution followed by another loop."
+      - "The public run path exposes max_turns, hooks, run_config, sessions, and conversation identifiers; guardrail trips and max turns are explicit error paths."
+    boundaries_or_counterexamples:
+      - "The code documents only the first agent's input guardrails in the public Runner contract."
+      - "Synchronous execution rejects an already-running event loop."
+    not_verified:
+      - "End-to-end behavior with a real model, session backend, or sandbox client."
+
+  - source_id: "langgraph"
+    repo: "langchain-ai/langgraph"
+    commit_sha: "b2926a0ff9589c28c7e01fe7cdbb337b86d5a4b4"
+    status: "read"
+    role: "readme"
+    path: "README.md"
+    git_blob_sha: "97c31e9cb4d8fe56be8d768ce3eb5e22400e897e"
+    locator: "## Documentation; ## Additional resources; ## Why use LangGraph?"
+    coverage: "Read the project positioning, package installation, pointers to official documentation, and standalone-use statement."
+    atomic_claims:
+      - "LangGraph describes itself as a low-level orchestration framework for long-running, stateful agents."
+      - "The repository says LangGraph can be used without LangChain and points to a separate official documentation site for conceptual material."
+    boundaries_or_counterexamples:
+      - "The README's production-ready deployment link is an ecosystem claim, not proof that an arbitrary graph is production-ready."
+    not_verified:
+      - "Exact content/version correspondence of the separately hosted documentation site."
+
+  - source_id: "langgraph"
+    repo: "langchain-ai/langgraph"
+    commit_sha: "b2926a0ff9589c28c7e01fe7cdbb337b86d5a4b4"
+    status: "read"
+    role: "core"
+    path: "README.md"
+    git_blob_sha: "97c31e9cb4d8fe56be8d768ce3eb5e22400e897e"
+    locator: "## Why use LangGraph?"
+    coverage: "Read the durable-execution, human-in-the-loop, memory, debugging, and deployment capability descriptions."
+    atomic_claims:
+      - "The README presents durable execution, interrupts/human oversight, short- and long-term memory, and tracing as supporting infrastructure for stateful workflows."
+      - "The framework is intentionally low-level rather than a complete high-level agent package."
+    boundaries_or_counterexamples:
+      - "Persistence and memory capability do not by themselves specify a correct state schema, recovery policy, or business approval control."
+    not_verified:
+      - "Durability behavior against a chosen external checkpointer."
+
+  - source_id: "langgraph"
+    repo: "langchain-ai/langgraph"
+    commit_sha: "b2926a0ff9589c28c7e01fe7cdbb337b86d5a4b4"
+    status: "read"
+    role: "security_or_boundary"
+    path: "libs/langgraph/langgraph/types.py"
+    git_blob_sha: "ac9aa9b00565ec20476b4d00a3847f6b7e8fda34"
+    locator: "symbol:Durability; symbol:ensure_valid_checkpointer; symbol:interrupt; symbol:TimeoutPolicy"
+    coverage: "Read durability modes, checkpointer validation, resumable interrupt semantics, and cooperative timeout warning."
+    atomic_claims:
+      - "interrupt() requires a checkpointer, raises a GraphInterrupt on its first call in a node, and resumes by re-executing the node from its start."
+      - "The timeout policy states that CPU-bound or synchronous work can delay cooperative asyncio cancellation."
+    boundaries_or_counterexamples:
+      - "An interrupt is not a transactional exactly-once boundary because node logic is re-executed on resume."
+      - "The bounded repository tree search found no SECURITY.md in this fixed commit; this record therefore covers execution boundaries, not a security policy."
+    not_verified:
+      - "Side-effect idempotency of user node code."
+
+  - source_id: "langgraph"
+    repo: "langchain-ai/langgraph"
+    commit_sha: "b2926a0ff9589c28c7e01fe7cdbb337b86d5a4b4"
+    status: "read"
+    role: "evaluation_or_testing"
+    path: "libs/langgraph/tests/test_delta_channel_benchmark.py"
+    git_blob_sha: "0e45ffdafc4078da2243d92d54ba278ae708cdae"
+    locator: "_run_scenario; SCENARIOS; test_delta_channel_benchmark"
+    coverage: "Read the manual benchmark sweep, measurements, storage paths, and pytest skip marker."
+    atomic_claims:
+      - "This benchmark sweeps channel count, snapshot frequencies, and turns and reports read/write latency, storage, and peak Python heap usage."
+      - "The pytest entry point is intentionally skipped as a slow benchmark and the Postgres path is conditional on environment availability."
+    boundaries_or_counterexamples:
+      - "The benchmark does not establish general agent-task quality or a production database result."
+    not_verified:
+      - "Benchmark measurements on this machine or any external checkpointer."
+
+  - source_id: "langgraph"
+    repo: "langchain-ai/langgraph"
+    commit_sha: "b2926a0ff9589c28c7e01fe7cdbb337b86d5a4b4"
+    status: "read"
+    role: "code_or_test"
+    path: "libs/langgraph/langgraph/pregel/main.py"
+    git_blob_sha: "f4ca480244718a9c0b3cf20a8238bf1306664c87"
+    locator: "symbol:NodeBuilder; symbol:Pregel; symbol:Pregel.ainvoke"
+    coverage: "Read NodeBuilder composition, Pregel actor/channel overview, retry/cache/timeout fields, and invocation durability options."
+    atomic_claims:
+      - "Pregel models actors that read channels and write channels, arranged into bulk-synchronous steps."
+      - "Nodes can carry retry, cache, and timeout policies; graph invocation offers sync, async, and exit persistence modes."
+    boundaries_or_counterexamples:
+      - "The async durability default writes while the next step executes, so it is not equivalent to synchronous persistence."
+    not_verified:
+      - "Behavior of a user-defined node under crash, retry, or external side effects."
+
+  - source_id: "llama-index"
+    repo: "run-llama/llama_index"
+    commit_sha: "c864fcfa2c1d1f987ccdbcdab7b18e395c01ba86"
+    status: "read"
+    role: "readme"
+    path: "README.md"
+    git_blob_sha: "c1c7af8256b4d278748ea9b5c8b1a5da1858e691"
+    locator: "# LlamaIndex; ## Overview; ## Example Usage"
+    coverage: "Read package/integration split, data-framework overview, retrieval/query framing, and simple vector-store example."
+    atomic_claims:
+      - "The repository distinguishes core from separately installed integrations and describes connectors, data structures, and retrieval/query interfaces."
+      - "The README's example creates a VectorStoreIndex, then uses a query engine; it says in-memory storage is the default in that example."
+    boundaries_or_counterexamples:
+      - "The README explicitly says it is less current than the documentation, so this record does not establish latest APIs."
+      - "The short example does not evaluate retrieval quality or source faithfulness."
+    not_verified:
+      - "Integration compatibility and behavior of a selected vector database or model provider."
+
+  - source_id: "llama-index"
+    repo: "run-llama/llama_index"
+    commit_sha: "c864fcfa2c1d1f987ccdbcdab7b18e395c01ba86"
+    status: "read"
+    role: "core"
+    path: "docs/src/content/docs/framework/getting_started/concepts.mdx"
+    git_blob_sha: "6b2a4bc56bfd92552c188458ebf4c9434762139d"
+    locator: "## Agentic Applications; ## Agents; ## Retrieval Augmented Generation (RAG)"
+    coverage: "Read definitions of agentic applications, agents, RAG, workflows, query engines, and chat engines."
+    atomic_claims:
+      - "The document defines RAG as indexing private data and selectively supplying relevant parts at query time rather than training on all of that data."
+      - "It describes an agent reasoning loop that selects tools, interprets tool outputs, and stops when it returns final output."
+      - "It describes a query engine as an end-to-end question flow returning both response and retrieved reference context."
+    boundaries_or_counterexamples:
+      - "Selective context does not demonstrate that retrieved context is relevant, complete, or faithful to a response."
+    not_verified:
+      - "Retrieval performance on a target corpus."
+
+  - source_id: "llama-index"
+    repo: "run-llama/llama_index"
+    commit_sha: "c864fcfa2c1d1f987ccdbcdab7b18e395c01ba86"
+    status: "read"
+    role: "security_or_boundary"
+    path: "SECURITY.md"
+    git_blob_sha: "75f264dc65aa699968bc6b3314b4344fda56b1ee"
+    locator: "## Threat Model; ## Out-of-Scope Vulnerability Classes"
+    coverage: "Read the trusted-execution-environment assumption and application-layer security responsibilities."
+    atomic_claims:
+      - "The policy scopes the library to trusted execution environments and assigns validation, authorization, rate limiting, and network-service controls to the hosting application."
+      - "It treats application-layer SSRF, untrusted paths, prompt injection, and endpoint-level unbounded input as out of scope under its stated model."
+    boundaries_or_counterexamples:
+      - "Out-of-scope policy language is not a mitigation; a network-facing host must implement its own controls."
+    not_verified:
+      - "Security of a particular loader, integration, or deployed host application."
+
+  - source_id: "llama-index"
+    repo: "run-llama/llama_index"
+    commit_sha: "c864fcfa2c1d1f987ccdbcdab7b18e395c01ba86"
+    status: "read"
+    role: "evaluation_or_testing"
+    path: "docs/src/content/docs/framework/module_guides/evaluating/usage_pattern.md"
+    git_blob_sha: "7c07cccf6aad0a2fb9f5cc56f105e92818952cef"
+    locator: "## Using BaseEvaluator; ## Evaluating Response Faithfulness (i.e. Hallucination); ## Evaluating Query + Response Relevancy; ## Batch Evaluation"
+    coverage: "Read evaluator inputs/results, faithfulness and relevancy examples, generated-question flow, and batch runner example."
+    atomic_claims:
+      - "The documented BaseEvaluator inputs include query, contexts, and response and returns an EvaluationResult with optional passing, score, and feedback fields."
+      - "Faithfulness evaluates a response against retrieved contexts, while relevancy includes the query; a BatchEvalRunner can apply named evaluators across questions."
+    boundaries_or_counterexamples:
+      - "Different evaluators may populate only a subset of result fields, so scores are not automatically comparable across metrics."
+      - "The documentation example uses an LLM evaluator and does not prove an oracle's calibration."
+    not_verified:
+      - "Metric accuracy or cost for a target model and dataset."
+
+  - source_id: "llama-index"
+    repo: "run-llama/llama_index"
+    commit_sha: "c864fcfa2c1d1f987ccdbcdab7b18e395c01ba86"
+    status: "read"
+    role: "code_or_test"
+    path: "llama-index-core/llama_index/core/query_engine/retriever_query_engine.py"
+    git_blob_sha: "907d391048d1d636b24ceb3c1dc0feee5e6682ed"
+    locator: "symbol:RetrieverQueryEngine.__init__; symbol:RetrieverQueryEngine.retrieve; symbol:RetrieverQueryEngine.synthesize; symbol:RetrieverQueryEngine._query; symbol:RetrieverQueryEngine._aquery"
+    coverage: "Read retrieval, node post-processing, response synthesis, callback event, synchronous, and asynchronous query paths."
+    atomic_claims:
+      - "RetrieverQueryEngine retrieves scored nodes, applies configured node postprocessors, then passes those nodes to a response synthesizer."
+      - "The query and async-query paths emit a query callback event containing the query and response payload."
+    boundaries_or_counterexamples:
+      - "The code composes retrieval and synthesis but does not validate response grounding before returning it."
+    not_verified:
+      - "Callback storage, tracing privacy, and answer quality in a live application."
+
+  - source_id: "graphrag"
+    repo: "microsoft/graphrag"
+    commit_sha: "14a00ad88fc33cf2b52f4f113f25807556f8e25e"
+    status: "read"
+    role: "readme"
+    path: "README.md"
+    git_blob_sha: "b17d46fdaff576147051eedef932d5992392bbe7"
+    locator: "## Overview; ## Repository Guidance; ## Prompt Tuning; ## Responsible AI FAQ"
+    coverage: "Read project positioning, support/cost warning, prompt-tuning recommendation, versioning note, and Responsible AI FAQ entry points."
+    atomic_claims:
+      - "GraphRAG describes itself as a data-pipeline and transformation suite that extracts structured data from unstructured text using LLMs."
+      - "The repository calls the code a demonstration rather than an officially supported Microsoft offering and warns that indexing can be expensive."
+    boundaries_or_counterexamples:
+      - "The README recommends prompt tuning because out-of-the-box use may not give the best results."
+      - "The repository's quickstart does not establish fit for a particular corpus or cost envelope."
+    not_verified:
+      - "Cost, quality, and reliability of an indexing run on a target dataset."
+
+  - source_id: "graphrag"
+    repo: "microsoft/graphrag"
+    commit_sha: "14a00ad88fc33cf2b52f4f113f25807556f8e25e"
+    status: "read"
+    role: "core"
+    path: "docs/index/architecture.md"
+    git_blob_sha: "c5d86938fe5ac6c9ddc912072c3e25b2a2a9eafd"
+    locator: "# Indexing Architecture; ## Knowledge Model; ## Workflows; ## LLM Caching; ## Providers & Factories"
+    coverage: "Read the knowledge-model abstraction, default indexing dataflow, LLM cache rationale, and extension factory list."
+    atomic_claims:
+      - "The documented default pipeline loads and chunks documents, extracts graph/claims, creates embeddings, detects communities, and generates/embeds reports."
+      - "The document says cache keys reuse completion results for the same prompt and tuning input, aiming at resilience, idempotence, and efficiency."
+      - "Model, reader, cache, logger, storage, vector store, and workflow/pipeline implementations are factory extension points."
+    boundaries_or_counterexamples:
+      - "A cache hit only applies to the stated input set; it is not a data-quality or semantic-equivalence guarantee."
+    not_verified:
+      - "Correctness of extracted entities, relationships, or community reports on a target corpus."
+
+  - source_id: "graphrag"
+    repo: "microsoft/graphrag"
+    commit_sha: "14a00ad88fc33cf2b52f4f113f25807556f8e25e"
+    status: "read"
+    role: "security_or_boundary"
+    path: "SECURITY.md"
+    git_blob_sha: "e5c7ae541b5634d57d75ffaaf2841c58b708f867"
+    locator: "## Security; ## Reporting Security Issues; ## Policy"
+    coverage: "Read the Microsoft coordinated-vulnerability-disclosure policy and the requested report details."
+    atomic_claims:
+      - "The file provides a private Microsoft security-vulnerability reporting channel and asks reporters for affected commit, reproduction, proof of concept, and impact."
+    boundaries_or_counterexamples:
+      - "This SECURITY.md is a reporting policy, not a GraphRAG runtime threat model or deployment security guarantee."
+      - "Runtime applicability and limitations are separately covered by the Responsible AI FAQ record."
+    not_verified:
+      - "Security control effectiveness for GraphRAG indexing or query deployments."
+
+  - source_id: "graphrag"
+    repo: "microsoft/graphrag"
+    commit_sha: "14a00ad88fc33cf2b52f4f113f25807556f8e25e"
+    status: "read"
+    role: "evaluation_or_testing"
+    path: "RAI_TRANSPARENCY.md"
+    git_blob_sha: "1a789aede716938549844fbbf74ede0646828896"
+    locator: "## How was GraphRAG evaluated? What metrics are used to measure performance?; ## What are the limitations of GraphRAG? How can users minimize the impact of GraphRAG’s limitations when using the system?; ## What operational factors and settings allow for effective and responsible use of GraphRAG?"
+    coverage: "Read the stated evaluation dimensions, manual/automated methods, injection tests, target-corpus guidance, cost limitation, and human-analysis condition."
+    atomic_claims:
+      - "The FAQ states that evaluation includes gold-answer checks, answer coverage, human context inspection, prompt/data injection probes, and hallucination checks using claim coverage and adversarial datasets."
+      - "It recommends a small target-domain test dataset before large indexing because indexing is relatively expensive."
+    boundaries_or_counterexamples:
+      - "The FAQ says GraphRAG is intended for trusted users and that domain-expert human analysis and provenance tracing remain necessary."
+      - "Its evaluation description does not publish a reproducible benchmark dataset, command, or measured result in this document."
+    not_verified:
+      - "Reproducibility, metrics, and outcomes of the described GraphRAG evaluations."
+
+  - source_id: "graphrag"
+    repo: "microsoft/graphrag"
+    commit_sha: "14a00ad88fc33cf2b52f4f113f25807556f8e25e"
+    status: "read"
+    role: "code_or_test"
+    path: "packages/graphrag/graphrag/index/workflows/extract_graph.py"
+    git_blob_sha: "dc86b180fc870a9fc8f2d456236cb8d4ec907262"
+    locator: "run_workflow; extract_graph; get_summarized_entities_relationships"
+    coverage: "Read graph-extraction workflow setup, cached model construction, entity/relationship extraction, zero-result errors, raw snapshots, and summary merge."
+    atomic_claims:
+      - "The workflow builds extraction and summarization completion models with child caches, reads text units, and writes entities and relationships to the output table provider."
+      - "The extraction path raises an error when no entities or no relationships are detected, then preserves raw copies before description summarization."
+    boundaries_or_counterexamples:
+      - "Nonempty entities and relationships are only a pipeline success condition; the code does not establish their factual accuracy."
+    not_verified:
+      - "Model-provider behavior, cache backend semantics, and graph quality for a target corpus."

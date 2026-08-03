@@ -1,0 +1,89 @@
+version: "0.1"
+learning_status_vocabulary:
+  - unverified
+  - read
+  - reproduced
+  - applied
+  - distilled
+source_policy:
+  allowed_urls: "用户提供链接、官方页面、项目官方仓库，以及满足纳入规则的 GitHub/X 候选来源"
+  completion_rule: "未附可复核证据不得提高 learning_status；来源核对不等于学习或运行验证"
+sources:
+  - id: hub
+    title: "Hub（路线与门禁基线）"
+    type: repository
+    role: "路线、能力依赖与阶段门禁"
+    url: "https://github.com/datawhalechina/Agent-Learning-Hub"
+    source_verification: source_checked
+    checked_at: "2026-07-31"
+    learning_status: unverified
+    input: "用户给出的仓库链接；公开 README/目录已核对，待选择适用章节"
+    output: "阶段选择和 Gate 检查单"
+    evidence_required: "仓库归属、版本/提交、对应章节"
+    note: "本轮核对了公开 README/目录；案例运行性和个人项目适用性未验证。"
+  - id: ai-agents-from-zero
+    title: "ai-agents-from-zero（Python 实验教材基线）"
+    type: repository
+    role: "Python 最小实验与代码练习"
+    url: "https://github.com/didilili/ai-agents-from-zero"
+    source_verification: source_checked
+    checked_at: "2026-07-31"
+    learning_status: unverified
+    input: "用户给出的仓库链接；公开 README/目录已核对，待确认环境与示例"
+    output: "可独立运行的实验"
+    evidence_required: "环境、命令、输入、输出、失败案例"
+    note: "本轮核对了公开 README/目录；没有运行案例，不以来源核对替代复现。"
+  - id: company-courses
+    title: "原会话十类公司课程"
+    type: course_collection
+    role: "按缺口 Pull 的候选池"
+    url: null
+    source_verification: unverified
+    learning_status: unverified
+    input: "以下十类用户提供链接与适用阶段"
+    output: "经核验且去重后的来源条目"
+    evidence_required: "官方链接、问题匹配、来源卡、学习/实验证据"
+    note: "保留为待验证集合；不声称已学完。"
+    expected_categories:
+      - title: "Anthropic"
+        url: "http://anthropic.skilljar.com"
+        learning_status: unverified
+      - title: "Google AI"
+        url: "https://grow.google/ai"
+        learning_status: unverified
+      - title: "Meta AI Resources"
+        url: "https://ai.meta.com/resources/"
+        learning_status: unverified
+      - title: "NVIDIA CUDA"
+        url: "https://developer.nvidia.com/cuda"
+        learning_status: unverified
+      - title: "Microsoft Learn"
+        url: "https://learn.microsoft.com/en-us/training/"
+        learning_status: unverified
+      - title: "OpenAI Academy"
+        url: "https://academy.openai.com"
+        learning_status: unverified
+      - title: "IBM SkillsBuild"
+        url: "https://skillsbuild.org"
+        learning_status: unverified
+      - title: "AWS Skill Builder"
+        url: "https://skillbuilder.aws"
+        learning_status: unverified
+      - title: "DeepLearning.AI"
+        url: "https://www.deeplearning.ai"
+        learning_status: unverified
+      - title: "Hugging Face Learn"
+        url: "https://huggingface.co/learn"
+        learning_status: unverified
+  - id: github-ai-repositories
+    title: "GitHub 1000+ Star AI 工程仓库候选池"
+    type: repository_collection
+    role: "按真实工程缺口 Pull 的实现、评估与交叉验证来源"
+    url: "./github-ai-repositories.yaml"
+    source_verification: source_checked
+    checked_at: "2026-07-31"
+    learning_status: unverified
+    input: "20 个非归档项目官方仓库；Star、默认分支和提交通过 GitHub API 实时核验"
+    output: "按 Agent Runtime、RAG、Memory、Evaluation、Tooling 等分类的固定提交候选清单"
+    evidence_required: "固定提交、README/文档 locator、适用边界、实验或项目应用证据"
+    note: "全部仓库在检查时超过 1000 Star；Star 仅用于发现，不证明正确性、适用性或已学习。"

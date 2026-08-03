@@ -1,0 +1,41 @@
+version: "1.0"
+purpose: "Fixed-commit reading coverage contract for the 12 selected primary sources."
+supported_format_versions: ["canonical-v2", "legacy-v1"]
+# These are the only historical files allowed to omit repeated child identity.
+legacy_batch_allowlist:
+  - batch-agent-rag.yaml
+  - batch-memory-mcp-eval.yaml
+  - batch-observe-coding.yaml
+required_roles:
+  - readme
+  - core
+  - security_or_boundary
+  - evaluation_or_testing
+  - code_or_test
+ability_clusters:
+  agent_runtime_orchestration:
+    source_ids: [openai-agents-python, langgraph]
+  rag_graphrag:
+    source_ids: [llama-index, graphrag]
+  memory:
+    source_ids: [mem0, langgraph]
+    allowed_reuse: [langgraph]
+  mcp_tools:
+    source_ids: [mcp-servers, composio]
+  evaluation_observability:
+    source_ids: [deepeval, langfuse-langfuse, promptfoo-promptfoo]
+  coding_browser_agent:
+    source_ids: [openhands-openhands, browser-use-browser-use]
+sources:
+  openai-agents-python: {repo: openai/openai-agents-python, commit_sha: 000a96b602889b00f7cfaa210c41e1a74be65272}
+  langgraph: {repo: langchain-ai/langgraph, commit_sha: b2926a0ff9589c28c7e01fe7cdbb337b86d5a4b4}
+  llama-index: {repo: run-llama/llama_index, commit_sha: c864fcfa2c1d1f987ccdbcdab7b18e395c01ba86}
+  graphrag: {repo: microsoft/graphrag, commit_sha: 14a00ad88fc33cf2b52f4f113f25807556f8e25e}
+  mem0: {repo: mem0ai/mem0, commit_sha: 760dca6f391277d79c3c7d2096c1bf1d037526c3}
+  mcp-servers: {repo: modelcontextprotocol/servers, commit_sha: 76d64c822f5125032f89eb71dbdb94e42b434821}
+  composio: {repo: ComposioHQ/composio, commit_sha: f1c1aa5613c2464aa8a53420d2357617a4d8bf2f}
+  deepeval: {repo: confident-ai/deepeval, commit_sha: 0d100e37d4263f208488f3c13e15561bce3b694f}
+  langfuse-langfuse: {repo: langfuse/langfuse, commit_sha: 314804b5c68d42bc742505c7b2552298bfe0ca88}
+  promptfoo-promptfoo: {repo: promptfoo/promptfoo, commit_sha: 82ca3c24ec445cf1734face46042c187b659b954}
+  openhands-openhands: {repo: OpenHands/OpenHands, commit_sha: 2feab551c4c12130c126159e1a0bd56753e2968f}
+  browser-use-browser-use: {repo: browser-use/browser-use, commit_sha: f0aa3a8bb03779c71a5aa262d389e3bfe6b77cdc}
