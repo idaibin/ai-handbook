@@ -1,0 +1,23 @@
+schema_version: "1.0"
+handoff_type: skill_candidate
+status: template
+id: null
+basis:
+  workflow_version: 0.2.0
+  handbook_commit: null
+problem: null
+trigger_cases: []
+non_trigger_cases: []
+authorization_boundaries: []
+workflow_steps: []
+input_contract: null
+output_contract: null
+failure_modes: []
+supporting_evidence: []
+experiment_refs: []
+application_refs: []
+promotion:
+  current_status: candidate
+  missing_evidence: []
+target:
+  repository: idaibin/skills

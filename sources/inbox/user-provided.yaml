@@ -1,0 +1,116 @@
+schema_version: "1.0"
+observed_at: "2026-08-03"
+status: discovery_inbox
+sources:
+  - id: github.freestylefly.awesome-gpt-image-2
+    canonical_url: https://github.com/freestylefly/awesome-gpt-image-2
+    source_type: github_repository
+    source_role: index_and_case_library
+    domains:
+      - ai-image
+      - prompt-patterns
+      - skills
+    origins:
+      - user_provided
+    discovery_status: discovered
+    reading_status: unread
+    verification_status: unverified
+
+  - id: github.sorenduan.awesome-java-books
+    canonical_url: https://github.com/sorenduan/awesome-java-books
+    source_type: github_repository
+    source_role: resource_index
+    domains:
+      - java
+      - learning-resources
+    origins:
+      - user_provided
+    discovery_status: discovered
+    reading_status: unread
+    verification_status: unverified
+
+  - id: github.xstongxue.best-skills
+    canonical_url: https://github.com/xstongxue/best-skills
+    source_type: github_repository
+    source_role: skill_catalog
+    domains:
+      - skills
+      - content-workflows
+    origins:
+      - user_provided
+    discovery_status: discovered
+    reading_status: unread
+    verification_status: unverified
+
+  - id: github.leey21.awesome-ai-research-writing
+    canonical_url: https://github.com/Leey21/awesome-ai-research-writing
+    source_type: github_repository
+    source_role: prompt_and_case_library
+    domains:
+      - ai-research-writing
+      - prompt-patterns
+      - skills
+    origins:
+      - user_provided
+    discovery_status: discovered
+    reading_status: unread
+    verification_status: unverified
+
+  - id: github.jwasham.coding-interview-university
+    canonical_url: https://github.com/jwasham/coding-interview-university
+    source_type: github_repository
+    source_role: learning_path
+    domains:
+      - software-engineering
+      - computer-science
+      - learning-resources
+    origins:
+      - user_provided
+    discovery_status: discovered
+    reading_status: unread
+    verification_status: unverified
+
+  - id: github.nousresearch.hermes-agent
+    canonical_url: https://github.com/NousResearch/hermes-agent
+    source_type: github_repository
+    source_role: implementation
+    domains:
+      - agent-runtime
+      - mcp
+      - memory
+      - skills
+    origins:
+      - user_provided
+    discovery_status: discovered
+    reading_status: unread
+    verification_status: unverified
+
+  - id: github.ebookfoundation.free-programming-books
+    canonical_url: https://github.com/EbookFoundation/free-programming-books
+    source_type: github_repository
+    source_role: resource_index
+    domains:
+      - learning-resources
+      - programming
+    origins:
+      - user_provided
+    discovery_status: discovered
+    reading_status: unread
+    verification_status: unverified
+
+  - id: github-stars.idaibin
+    canonical_url: https://github.com/idaibin?tab=stars
+    source_type: github_collection
+    source_role: personal_discovery_inbox
+    domains:
+      - mixed
+    origins:
+      - user_provided
+    discovery_status: discovered
+    reading_status: unread
+    verification_status: unverified
+
+duplicates_observed:
+  - canonical_id: github.jwasham.coding-interview-university
+    provided_occurrences: 2
+    action: retained_one_canonical_record

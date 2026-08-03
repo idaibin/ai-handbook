@@ -1,29 +1,104 @@
 # 来源目录
 
-`catalog.yaml` 是候选来源台账，不是已完成清单。任何来源先使用 [来源卡模板](../templates/source-note.md) 记录，再决定是否进入实验。
+`sources/` 保存候选来源、固定阅读证据和来源治理记录。它不是“已完成学习清单”。
 
-## 收录与核验
+- `catalog.yaml`：现有候选来源台账；历史字段按原证据解释，不自动升级。
+- `inbox/`：用户提供、GitHub Stars 或自动发现的待筛选来源。
+- `coverage/`：固定提交上的来源角色覆盖和验证工具。
+- `distillation-ledger.yaml`：历史局部蒸馏记录，不代表整个来源已完成研究。
+- `github-ai-repositories.yaml`：已有 GitHub 候选池。
 
-1. 仅收录用户提供的链接、来源官方页面或项目官方仓库。
-2. 分开记录 `source_verification` 与 `learning_status`：前者说明来源到当前摘要的映射是否已核对，后者说明个人是否阅读、复现和应用。
-3. 记录解决的问题、对应阶段、可交付 Output 和预期证据。
-4. 同题来源依照 README 的去重原则保留主来源，其余作为交叉验证或淘汰候选。
+统一来源规则见 [`../workflows/ai-engineering-system/source-management.md`](../workflows/ai-engineering-system/source-management.md)，状态合同见 [`../workflows/ai-engineering-system/state-model.yaml`](../workflows/ai-engineering-system/state-model.yaml)。
 
-## GitHub 与 X 扩展来源
+## 双循环
 
-- GitHub 仓库优先选择检查时超过 1000 Star、未归档的项目官方仓库，并固定检查日期、默认分支和提交 SHA。
-- Star 只是发现信号，不是质量或正确性证明。是否进入蒸馏仍取决于问题匹配、可定位证据、许可、风险边界和实验价值。
-- 同一问题只保留一个主来源；框架替代品、供应商自述和性能数字只作为交叉验证，不能相互叠加成“多数即正确”。
-- X 只接收有稳定 URL、作者、日期和具体主张的内容。能回链官方仓库、文档、论文或独特失败证据时才入库；点赞、转发和账号影响力不作为正确性证据。
-- `source_checked` 只表示来源与摘要映射已核对；只有实际阅读、复现、应用或蒸馏后，才按证据提升 `learning_status`。
+### 持续发现
 
-当前 GitHub 候选池见 [`github-ai-repositories.yaml`](github-ai-repositories.yaml)。本轮没有为了凑数量强行纳入 X 推文；后续仅在其提供 GitHub/官方文档没有的可复核信息时补充。
+持续发现只完成：
 
-已完成的局部蒸馏范围单独登记在 [`distillation-ledger.yaml`](distillation-ledger.yaml)。该台账只对点名的固定提交与 README 章节声明 `distilled`，不把局部提炼扩大成“整个仓库已学习”。
+```text
+发现 → canonical identity → 去重 → 分类 → 初筛 → 候选
+```
 
-## 两个基线资源
+来源可以来自 GitHub、官方文档、课程、论文、书籍、Release、新闻、公司披露或社区信号。发现不等于阅读、理解、验证或推荐。
 
-- [Agent Learning Hub](https://github.com/datawhalechina/Agent-Learning-Hub)：路线与门禁。
-- [ai-agents-from-zero](https://github.com/didilili/ai-agents-from-zero)：Python 最小实验教材。
+### 按需深研
 
-两者均为用户提供的候选输入。本轮已核对其公开 README/目录结构，但没有运行仓库案例；个人学习、实验复现和项目适配状态仍是 `unverified`。不要把来源核对等同于课程完成或工程验证。
+只有存在明确问题、项目缺口或用户委派时才进入：
+
+```text
+问题 → 主来源 → 固定版本 → 实际阅读 → 证据记录
+→ 汇总与知识图谱 → 实验或项目应用 → Review
+```
+
+## 来源选择
+
+来源按领域选择稳定主来源，不固定依赖 X、Reddit 或其他单一平台。一般优先级：
+
+```text
+官方规范 / 官方文档 / 官方仓库 / 原始论文或披露
+→ 可复现实验和独立验证
+→ 高质量二手分析
+→ 社区信号
+```
+
+社区内容只有在提供独特失败案例、原始作者说明或官方来源缺失的信息时才进入候选；点赞、转发、评论数和账号影响力不是正确性证据。
+
+## GitHub 来源
+
+GitHub 仓库优先保存 repository ID、canonical `owner/name`、默认分支、观察时间和固定 commit。
+
+- Star 数只是发现优先级，不是质量证明。
+- Awesome List、资源索引和 GitHub Stars 是发现入口，不是其所列内容的直接证据。
+- description、搜索摘要和 README 标题不能替代实际阅读。
+- 声称研究 Skill、Agent、架构或测试时，必须读取对应文件或源码入口。
+- 重试、批次和多次领取是历史事件，不能增加唯一仓库数。
+
+## 状态
+
+不要使用一个 `status` 同时表示发现、阅读、证据和完成。至少分开：
+
+- `discovery_status`；
+- `reading_status`；
+- `verification_status`；
+- `freshness_status`；
+- `workflow_status`；
+- `handoff_status`。
+
+`partial` 只表示指定范围未完成，不能被宣称为完整研究。
+
+## 来源卡最小内容
+
+每个进入深研的来源至少记录：
+
+- stable source ID 和 canonical URL；
+- 来源类型、领域和来源角色；
+- 固定版本、章节、路径或 locator；
+- 实际阅读范围；
+- 原子结论；
+- 来源支持边界；
+- 推断、反例和开放问题；
+- 许可证、版权或访问边界；
+- 观察时间和新鲜度。
+
+来源卡模板见 [`../templates/source-note.md`](../templates/source-note.md)。
+
+## 用户提供来源
+
+用户提供的地址直接进入高优先级 Inbox，但默认仍是：
+
+```yaml
+discovery_status: discovered
+reading_status: unread
+verification_status: unverified
+```
+
+当前已提供地址见 [`inbox/user-provided.yaml`](inbox/user-provided.yaml)。重复地址只保留一个 canonical 记录。
+
+## 输出边界
+
+- 来源、研究和证据保留在 `ai-handbook`。
+- 实时事件经核验后写入 `feeds-hub`。
+- 知识性对外内容交给 `knowledge-distillation`。
+- 稳定执行能力交给 `idaibin/skills`。
+- 大型、私有或受版权保护原始资产保存到 Google Drive，GitHub 只保存索引和哈希。

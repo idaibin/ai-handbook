@@ -1,0 +1,23 @@
+schema_version: "1.0"
+handoff_type: project_application
+status: template
+id: null
+basis:
+  workflow_version: 0.2.0
+  handbook_commit: null
+proposal:
+  problem: null
+  expected_change: null
+  constraints: []
+  acceptance_criteria: []
+target:
+  repository: null
+  commit: null
+validation:
+  required_commands: []
+  runtime_scope: target_repository
+  production_claim_allowed: false
+results:
+  commit: null
+  evidence_refs: []
+  residual_gaps: []

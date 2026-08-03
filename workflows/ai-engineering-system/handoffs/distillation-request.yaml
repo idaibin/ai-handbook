@@ -1,0 +1,21 @@
+schema_version: "1.0"
+handoff_type: distillation_request
+status: template
+id: null
+basis:
+  workflow_version: 0.2.0
+  handbook_commit: null
+topic: null
+audience: null
+learning_goal: null
+verified_claims: []
+unverified_inferences: []
+boundaries: []
+counterexamples: []
+open_questions: []
+source_refs: []
+desired_outputs:
+  - knowledge_ir
+copyright_constraints: []
+target:
+  repository: idaibin/knowledge-distillation

@@ -1,0 +1,27 @@
+schema_version: "1.0"
+handoff_type: feed_event
+status: template
+id: null
+basis:
+  workflow_version: 0.2.0
+  handbook_commit: null
+event:
+  title: null
+  category: null
+  occurred_at: null
+  observed_at: null
+  summary: null
+  facts: []
+  inferences: []
+sources:
+  - url: null
+    source_role: official_or_primary
+    checked_at: null
+verification:
+  status: unverified
+  conflicts: []
+  corrections: []
+target:
+  repository: idaibin/feeds-hub
+  operation: create_or_update_data_record
+  architecture_change_required: false

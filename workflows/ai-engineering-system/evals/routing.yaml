@@ -1,0 +1,80 @@
+schema_version: "1.0"
+eval_suite: ai_engineering_system_routing
+workflow_version: 0.2.0
+cases:
+  - id: official_product_release
+    input:
+      type: realtime_event
+      source_role: official
+    expected:
+      primary_owner: idaibin/feeds-hub
+      preserve_research_reference_in: idaibin/ai-handbook
+      modify_architecture: false
+
+  - id: unverified_social_post
+    input:
+      type: community_signal
+      corroborated: false
+    expected:
+      primary_owner: idaibin/ai-handbook
+      status: discovered
+      allowed_claim: unverified_signal
+      publish_as_stable_fact: false
+
+  - id: official_course_candidate
+    input:
+      type: learning_source
+      read: false
+    expected:
+      primary_owner: idaibin/ai-handbook
+      reading_status: unread
+      verification_status: unverified
+      route_to_knowledge_distillation: false
+
+  - id: validated_course_card_content
+    input:
+      type: knowledge_output
+      source_supported: true
+      requested_output: course_card
+    expected:
+      primary_owner: idaibin/knowledge-distillation
+      production_skill_owner: false
+
+  - id: repeatable_executable_method
+    input:
+      type: executable_capability_candidate
+      positive_cases_present: true
+      negative_cases_present: true
+      real_project_evidence_present: true
+    expected:
+      primary_owner: idaibin/skills
+      initial_release_status: candidate
+      automatic_stable_promotion: false
+
+  - id: target_repository_code_change
+    input:
+      type: project_change
+      target_repository: owner/repo
+    expected:
+      primary_owner: target_repository
+      handbook_keeps: decision_and_evidence_reference
+
+  - id: private_licensed_pdf
+    input:
+      type: source_asset
+      access: private
+      copyright_status: licensed_or_user_owned
+    expected:
+      binary_owner: google_drive
+      metadata_owner: idaibin/ai-handbook
+      public_raw_copy_allowed: false
+
+  - id: google_sheets_write_failure
+    input:
+      type: external_write
+      result: unauthorized_401
+    expected:
+      stop_new_claims: true
+      stop_new_research_claims: true
+      preserve_local_result: true
+      require_reauthorization: true

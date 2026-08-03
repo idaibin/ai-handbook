@@ -1,0 +1,158 @@
+schema_version: "1.0"
+workflow:
+  id: ai-engineering-system
+  version: 0.2.0
+  status: active
+  canonical_repository: idaibin/ai-handbook
+  canonical_path: workflows/ai-engineering-system
+
+principles:
+  - evidence_before_promotion
+  - domain_specific_source_selection
+  - broad_discovery_bounded_research
+  - fixed_basis_validation
+  - repository_owned_facts
+  - fail_closed_external_writes
+  - controlled_self_improvement
+
+lanes:
+  continuous_discovery:
+    trigger:
+      - scheduled_discovery
+      - github_stars_sync
+      - user_provided_source
+      - project_signal
+    maximum_depth:
+      - identity
+      - deduplication
+      - classification
+      - quality_screening
+    forbidden_claims:
+      - learned
+      - verified
+      - production_ready
+      - skill_ready
+
+  delegated_research:
+    trigger:
+      - explicit_user_delegation
+      - delivery_gap
+      - experiment_failure
+      - project_requirement
+    requires:
+      - explicit_question
+      - expected_output
+      - constraints
+      - failure_conditions
+      - evidence_scope
+
+stages:
+  - id: intake
+    owner: ai-handbook
+    output:
+      - stable_object_id
+      - origin
+      - discovered_at
+      - trigger
+
+  - id: normalize
+    owner: ai-handbook
+    requires:
+      - canonical_identity
+      - duplicate_check
+    output:
+      - unique_object
+      - separate_attempt_history
+
+  - id: screen
+    owner: ai-handbook
+    requires:
+      - domain
+      - source_type
+      - source_role
+      - authority_tier
+      - license_or_access_boundary
+    output:
+      - screened_source
+      - rejected_source
+      - watchlist_source
+
+  - id: research
+    owner: ai-handbook
+    requires:
+      - fixed_source_version
+      - reading_scope
+      - evidence_locator
+    output:
+      - atomic_claims
+      - boundaries
+      - counterexamples
+      - conflicts
+      - open_questions
+
+  - id: synthesize
+    owner: ai-handbook
+    output:
+      - research_synthesis
+      - knowledge_graph_update
+      - solution_candidate
+      - prompt_pattern
+      - practice_hypothesis
+
+  - id: validate
+    owner: ai-handbook
+    evidence_progression:
+      - static_or_declared
+      - local_deterministic
+      - target_repository
+      - target_runtime
+      - production
+    output:
+      - experiment_result
+      - application_result
+      - verification_status
+      - residual_gaps
+
+  - id: route
+    owner: ai-handbook
+    routes:
+      realtime_event: idaibin/feeds-hub
+      knowledge_output: idaibin/knowledge-distillation
+      executable_capability: idaibin/skills
+      project_change: target_repository
+      research_and_governance: idaibin/ai-handbook
+
+  - id: observe_and_improve
+    owner: ai-handbook
+    output:
+      - feedback_record
+      - regression_case
+      - workflow_change_candidate
+      - deprecation_or_downgrade
+
+storage:
+  structured_public_versioned: github
+  private_licensed_large_binary: google_drive
+  reusable_working_snapshot: chatgpt_library
+  selected_project_context: chatgpt_project_sources
+  operational_view: google_sheets
+
+external_write_policy:
+  preflight_required: true
+  on_401: stop_and_require_reauthorization
+  on_403: stop_and_report_permission_boundary
+  on_429: pause_with_bounded_backoff
+  on_write_failure:
+    preserve_local_result: true
+    mark_sync_pending: true
+    prohibit_duplicate_research: true
+
+promotion_policy:
+  automatic_evidence_promotion: false
+  automatic_skill_publication: false
+  independent_review_required_for:
+    - evidence_level_change
+    - workflow_owner_change
+    - state_model_change
+    - skill_promotion
+    - production_claim

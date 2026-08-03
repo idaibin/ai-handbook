@@ -1,0 +1,94 @@
+schema_version: "1.0"
+repositories:
+  idaibin/ai-handbook:
+    role: learning_and_governance_control_plane
+    owns:
+      - source_catalog
+      - research_queue
+      - source_reading_evidence
+      - knowledge_graph
+      - experiments
+      - application_cases
+      - search_and_research_playbooks
+      - workflow_governance
+      - cross_repository_handoffs
+      - promotion_and_deprecation_decisions
+    does_not_own:
+      - production_skill_packages
+      - realtime_feed_records
+      - large_private_source_files
+
+  idaibin/feeds-hub:
+    role: realtime_intelligence_output
+    owns:
+      - feed_event_records
+      - event_deduplication
+      - feed_schema_and_validation
+      - feed_presentation
+      - ingestion_implementation
+    routine_change_policy: write_data_using_current_contract
+    architecture_change_triggers:
+      - schema_change
+      - new_ingestion_adapter
+      - routing_or_presentation_change
+      - storage_or_api_change
+
+  idaibin/knowledge-distillation:
+    role: public_knowledge_output
+    owns:
+      - knowledge_ir
+      - articles
+      - courses
+      - knowledge_cards
+      - image_content_packages
+      - video_content_packages
+      - public_knowledge_assets
+    may_emit:
+      - skill_candidate_handoff
+    does_not_own:
+      - production_skill_implementation
+      - project_runtime_validation
+
+  idaibin/skills:
+    role: executable_capability_layer
+    owns:
+      - trigger_and_non_trigger_contracts
+      - executable_workflows
+      - authority_boundaries
+      - input_and_output_contracts
+      - behavioral_evaluations
+      - skill_release_status
+    does_not_own:
+      - bulk_source_catalogs
+      - course_material
+      - general_research_history
+
+  target_repository:
+    role: project_fact_and_runtime_owner
+    owns:
+      - project_code
+      - project_architecture
+      - project_instructions
+      - project_tests
+      - target_runtime_evidence
+      - deployment_evidence
+
+workspaces:
+  chatgpt_work:
+    role: research_orchestration_and_review
+    canonical: false
+  codex_cloud_or_local:
+    role: repository_execution_and_testing
+    canonical: false
+  self_hosted_server:
+    role: persistent_integration_environment
+    canonical: false
+  google_drive:
+    role: raw_private_large_asset_storage
+    canonical_for_binary_assets: true
+  chatgpt_library:
+    role: working_copy_and_snapshot
+    canonical: false
+  google_sheets:
+    role: operational_view
+    canonical: false

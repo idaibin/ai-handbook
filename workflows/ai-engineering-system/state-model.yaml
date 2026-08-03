@@ -1,0 +1,106 @@
+schema_version: "1.0"
+
+source_dimensions:
+  discovery_status:
+    values:
+      - discovered
+      - screened
+      - selected
+      - rejected
+      - archived
+
+  reading_status:
+    values:
+      - unread
+      - skimmed
+      - read
+      - synthesized
+
+  verification_status:
+    values:
+      - unverified
+      - source_supported
+      - independently_verified
+      - runtime_verified
+      - production_verified
+
+  freshness_status:
+    values:
+      - current
+      - review_due
+      - stale
+      - superseded
+
+workflow_dimensions:
+  workflow_status:
+    values:
+      - pending
+      - claimed
+      - processing
+      - closed
+      - cancelled
+
+  terminal_result:
+    values:
+      - none
+      - completed
+      - partial
+      - failed
+      - released
+
+  sync_status:
+    values:
+      - not_required
+      - pending
+      - synced
+      - write_failed
+
+  handoff_status:
+    values:
+      - none
+      - proposed
+      - accepted
+      - implemented
+      - rejected
+      - deprecated
+
+research_depth:
+  D0: discovered_only
+  D1: metadata_identity_verified
+  D2: readme_or_official_documentation_read
+  D3: key_files_or_primary_sections_read
+  D4: architecture_or_method_synthesized
+  D5: experiment_or_real_project_application
+
+claim_scopes:
+  - declared
+  - source_resolved
+  - local_deterministic
+  - artifact_resolved
+  - target_repository
+  - target_runtime
+  - production
+
+completion_claims:
+  metadata_complete:
+    minimum_scope: declared
+  source_reading_complete:
+    minimum_scope: source_resolved
+  local_experiment_complete:
+    minimum_scope: local_deterministic
+  project_validation_complete:
+    minimum_scope: target_repository
+  runtime_validation_complete:
+    minimum_scope: target_runtime
+  production_validation_complete:
+    minimum_scope: production
+
+invariants:
+  - one_current_record_per_unique_object
+  - attempts_and_batches_are_history_not_unique_objects
+  - partial_is_not_equivalent_to_complete_research
+  - metadata_and_search_snippets_are_not_source_reading_evidence
+  - local_static_evidence_cannot_support_runtime_or_production_claims
+  - claimed_records_require_a_terminal_closure_or_explicit_release
+  - aggregate_counts_must_use_unique_object_identity
+  - state_dimensions_must_not_be_collapsed_into_one_status
