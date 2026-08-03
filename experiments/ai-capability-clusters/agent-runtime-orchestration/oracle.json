@@ -1,0 +1,16 @@
+{
+  "treatment": {
+    "event_traces": {
+      "payment-allowed": ["guardrail_checked", "effect_applied", "checkpoint_saved", "interrupt", "effect_deduped", "recovered"],
+      "payment-blocked": ["guardrail_checked", "gate_blocked"],
+      "payment-interrupt-budget": ["guardrail_checked", "effect_applied", "checkpoint_saved", "interrupt", "turn_budget_exhausted"]
+    },
+    "side_effects": {
+      "payment-allowed": ["charge_card:payment-allowed-v1"],
+      "payment-blocked": [],
+      "payment-interrupt-budget": ["charge_card:payment-interrupt-budget-v1"]
+    },
+    "final_states": {"payment-allowed": "recovered", "payment-blocked": "blocked", "payment-interrupt-budget": "blocked"},
+    "recovery_cases": ["payment-allowed"]
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "answers": {
+    "q-u1-role": {
+      "selected_record": "r3:u1:role",
+      "selected_source_scope": "u1:role",
+      "selected_source_user": "u1",
+      "value": null
+    },
+    "q-u1-secret": {
+      "selected_record": null,
+      "selected_source_scope": null,
+      "selected_source_user": null,
+      "value": null
+    },
+    "q-u1-team": {
+      "selected_record": "r2:u1:team",
+      "selected_source_scope": "u1:team",
+      "selected_source_user": "u1",
+      "value": "platform"
+    },
+    "q-u2-role": {
+      "selected_record": "r1:u2:role",
+      "selected_source_scope": "u2:role",
+      "selected_source_user": "u2",
+      "value": "designer"
+    },
+    "q-u2-secret": {
+      "selected_record": null,
+      "selected_source_scope": null,
+      "selected_source_user": null,
+      "value": null
+    },
+    "q-u2-team": {
+      "selected_record": "r2:u2:team",
+      "selected_source_scope": "u2:team",
+      "selected_source_user": "u2",
+      "value": "design"
+    }
+  },
+  "event_dispositions": {
+    "r1:u1:role": "retained",
+    "r1:u2:role": "retained",
+    "r2:u1:role": "retained",
+    "r2:u1:team": "retained",
+    "r2:u2:team": "retained",
+    "r3:u1:role": "retained",
+    "r4:u1:api_key": "rejected",
+    "r5:u2:api_token": "rejected"
+  },
+  "metrics": {
+    "precision": 1.0,
+    "query_scope_leak_count": 0,
+    "query_scope_leak_rate": 0.0,
+    "recall": 1.0,
+    "rejected_secrets": 2,
+    "secret_rejection_ids": [
+      "r4:u1:api_key",
+      "r5:u2:api_token"
+    ],
+    "secret_retention": 0,
+    "stale_fact_rate": 0.0,
+    "store_provenance_mismatch_count": 0,
+    "store_provenance_mismatch_rate": 0.0,
+    "token_units": 28
+  },
+  "mode": "treatment",
+  "passed_oracle": true,
+  "store": [
+    {
+      "provenance": "r3:u1:role",
+      "scope": {
+        "key": "role",
+        "user": "u1"
+      },
+      "source_user": "u1",
+      "tombstone": true,
+      "value": null
+    },
+    {
+      "provenance": "r2:u1:team",
+      "scope": {
+        "key": "team",
+        "user": "u1"
+      },
+      "source_user": "u1",
+      "tombstone": false,
+      "value": "platform"
+    },
+    {
+      "provenance": "r1:u2:role",
+      "scope": {
+        "key": "role",
+        "user": "u2"
+      },
+      "source_user": "u2",
+      "tombstone": false,
+      "value": "designer"
+    },
+    {
+      "provenance": "r2:u2:team",
+      "scope": {
+        "key": "team",
+        "user": "u2"
+      },
+      "source_user": "u2",
+      "tombstone": false,
+      "value": "design"
+    }
+  ]
+}

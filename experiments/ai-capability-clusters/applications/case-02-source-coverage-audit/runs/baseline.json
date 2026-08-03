@@ -1,0 +1,28 @@
+{
+  "strategy": "README+manifest-summary-only",
+  "source_summaries": [
+    "openai-agents-python",
+    "langgraph",
+    "llama-index",
+    "graphrag",
+    "mem0",
+    "mcp-servers",
+    "composio",
+    "deepeval",
+    "langfuse-langfuse",
+    "promptfoo-promptfoo",
+    "openhands-openhands",
+    "browser-use-browser-use"
+  ],
+  "records": [],
+  "metrics": {
+    "TP": 0,
+    "FP": 12,
+    "FN": 60,
+    "precision": 0.0,
+    "recall": 0.0,
+    "F1": 0.0
+  },
+  "completion_claim": "coverage summarized; role evidence omitted",
+  "remote_runtime_effect": "Not verified"
+}

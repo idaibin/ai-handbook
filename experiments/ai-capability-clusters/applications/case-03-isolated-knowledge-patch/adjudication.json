@@ -1,0 +1,27 @@
+{
+  "oracle_pass": true,
+  "baseline_metrics": {
+    "TP": 0,
+    "FP": 0,
+    "FN": 5,
+    "precision": 0.0,
+    "recall": 0.0,
+    "F1": 0.0
+  },
+  "treatment_metrics": {
+    "TP": 5,
+    "FP": 0,
+    "FN": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "F1": 1.0
+  },
+  "baseline_out_of_bounds": true,
+  "baseline_no_evidence_completion": true,
+  "treatment_residual_permissions": [],
+  "target_workspace_match": true,
+  "source_unchanged": true,
+  "oracle_sha256_before": "8877993b7bf18785a3f73585ecc66e67126f7928407facf8c6231bf02cf26634",
+  "oracle_sha256_after": "8877993b7bf18785a3f73585ecc66e67126f7928407facf8c6231bf02cf26634",
+  "oracle_hash_unchanged": true
+}

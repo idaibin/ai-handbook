@@ -1,0 +1,53 @@
+{
+  "cases": {
+    "payment-allowed": {
+      "events": [
+        "guardrail_checked",
+        "effect_applied",
+        "checkpoint_saved",
+        "interrupt",
+        "effect_deduped",
+        "recovered"
+      ],
+      "final_state": "recovered",
+      "side_effects": [
+        "charge_card:payment-allowed-v1"
+      ],
+      "turns": 2
+    },
+    "payment-blocked": {
+      "events": [
+        "guardrail_checked",
+        "gate_blocked"
+      ],
+      "final_state": "blocked",
+      "side_effects": [],
+      "turns": 1
+    },
+    "payment-interrupt-budget": {
+      "events": [
+        "guardrail_checked",
+        "effect_applied",
+        "checkpoint_saved",
+        "interrupt",
+        "turn_budget_exhausted"
+      ],
+      "final_state": "blocked",
+      "side_effects": [
+        "charge_card:payment-interrupt-budget-v1"
+      ],
+      "turns": 1
+    }
+  },
+  "metrics": {
+    "budget_violations": 0,
+    "duplicate_side_effects": 0,
+    "final_state_accuracy": 1.0,
+    "guardrail_leaks": 0,
+    "max_turns": 2,
+    "recovery_cases": 1,
+    "recovery_state": 1
+  },
+  "mode": "treatment",
+  "passed_oracle": true
+}

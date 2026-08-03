@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "id": "payment-allowed",
+      "guardrail": "allow",
+      "interrupt_after_effect": true,
+      "max_turns": 3,
+      "effect": "charge_card",
+      "idempotency_key": "payment-allowed-v1"
+    },
+    {
+      "id": "payment-blocked",
+      "guardrail": "block",
+      "interrupt_after_effect": false,
+      "max_turns": 2,
+      "effect": "charge_card",
+      "idempotency_key": "payment-blocked-v1"
+    },
+    {
+      "id": "payment-interrupt-budget",
+      "guardrail": "allow",
+      "interrupt_after_effect": true,
+      "max_turns": 1,
+      "effect": "charge_card",
+      "idempotency_key": "payment-interrupt-budget-v1"
+    }
+  ]
+}

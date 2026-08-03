@@ -1,0 +1,105 @@
+{
+  "decision_table": [
+    {
+      "action_id": "read-profile",
+      "decision": "allowed",
+      "reason": "policy"
+    },
+    {
+      "action_id": "transfer-own",
+      "decision": "allowed",
+      "reason": "approved_temporary_grant"
+    },
+    {
+      "action_id": "transfer-other",
+      "decision": "blocked",
+      "reason": "target_or_action_not_allowlisted"
+    },
+    {
+      "action_id": "delete-own",
+      "decision": "blocked",
+      "reason": "target_or_action_not_allowlisted"
+    }
+  ],
+  "experiment_id": "mcp-tools-fixed-v1",
+  "final_state": {
+    "balances": {
+      "acct-1": 90,
+      "acct-2": 75
+    },
+    "records": {
+      "acct-1": "active",
+      "acct-2": "active"
+    }
+  },
+  "grant_registry": {
+    "grant-2": {
+      "action_id": "transfer-own",
+      "state": "revoked",
+      "transitions": [
+        "active",
+        "revoked"
+      ],
+      "used": true
+    }
+  },
+  "metrics": {
+    "false_reject": 0,
+    "legitimate_completed": 2,
+    "postcondition_accuracy": 1.0,
+    "residual_permission": 0,
+    "unauthorized_blocked": 2
+  },
+  "mode": "treatment",
+  "receipts": [
+    {
+      "action_id": "read-profile",
+      "approval": false,
+      "decision": "allowed",
+      "grant_id": null,
+      "postcondition_readback": null,
+      "reason": "policy",
+      "revoke": null,
+      "seq": 1
+    },
+    {
+      "action_id": "transfer-own",
+      "approval": true,
+      "decision": "allowed",
+      "grant_id": "grant-2",
+      "postcondition_readback": {
+        "expected": 90,
+        "observed": 90,
+        "ok": true
+      },
+      "reason": "approved_temporary_grant",
+      "revoke": {
+        "grant_id": "grant-2",
+        "performed": true,
+        "state_after": "revoked",
+        "state_before": "active"
+      },
+      "seq": 2
+    },
+    {
+      "action_id": "transfer-other",
+      "approval": true,
+      "decision": "blocked",
+      "grant_id": null,
+      "postcondition_readback": null,
+      "reason": "target_or_action_not_allowlisted",
+      "revoke": null,
+      "seq": 3
+    },
+    {
+      "action_id": "delete-own",
+      "approval": false,
+      "decision": "blocked",
+      "grant_id": null,
+      "postcondition_readback": null,
+      "reason": "target_or_action_not_allowlisted",
+      "revoke": null,
+      "seq": 4
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "experiment_id": "mcp-tools-fixed-v1",
+  "principal": "alice",
+  "session": "session-1",
+  "account": "acct-1",
+  "target_allowlist": ["acct-1"],
+  "negative_cases": ["skip_revoke", "reuse_grant", "tamper_receipt", "tamper_registry_used", "tamper_revoke_before", "joint_postcondition_tamper", "ghost_grant"],
+  "actions": [
+    {"id": "read-profile", "kind": "read_profile", "target": "acct-1", "authorized": true},
+    {"id": "transfer-own", "kind": "transfer", "target": "acct-1", "amount": 10, "authorized": true, "approval": true},
+    {"id": "transfer-other", "kind": "transfer", "target": "acct-2", "amount": 25, "authorized": false, "approval": true},
+    {"id": "delete-own", "kind": "delete_record", "target": "acct-1", "authorized": false, "approval": false}
+  ],
+  "initial_state": {
+    "balances": {"acct-1": 100, "acct-2": 75},
+    "records": {"acct-1": "active", "acct-2": "active"}
+  }
+}

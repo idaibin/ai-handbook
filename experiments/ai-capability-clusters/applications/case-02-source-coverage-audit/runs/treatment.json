@@ -1,0 +1,327 @@
+{
+  "strategy": "validator+normalized-records",
+  "validator_command": "python3 sources/coverage/validate_coverage.py sources/coverage/batch-agent-rag.yaml sources/coverage/batch-memory-mcp-eval.yaml sources/coverage/batch-observe-coding.yaml",
+  "validator_stdout": "coverage: batches=3 sources=12 records=60 read=60 not_found=0 incomplete=0\ncoverage: schema_valid=yes coverage_complete=yes errors=0",
+  "validator_exit": 0,
+  "summary": {
+    "batches": 3,
+    "sources": 12,
+    "records": 60,
+    "read": 60,
+    "not_found": 0,
+    "incomplete": 0
+  },
+  "errors": [],
+  "records": [
+    {
+      "source_id": "openai-agents-python",
+      "role": "readme",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "openai-agents-python",
+      "role": "core",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "openai-agents-python",
+      "role": "security_or_boundary",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "openai-agents-python",
+      "role": "evaluation_or_testing",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "openai-agents-python",
+      "role": "code_or_test",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "langgraph",
+      "role": "readme",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "langgraph",
+      "role": "core",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "langgraph",
+      "role": "security_or_boundary",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "langgraph",
+      "role": "evaluation_or_testing",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "langgraph",
+      "role": "code_or_test",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "llama-index",
+      "role": "readme",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "llama-index",
+      "role": "core",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "llama-index",
+      "role": "security_or_boundary",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "llama-index",
+      "role": "evaluation_or_testing",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "llama-index",
+      "role": "code_or_test",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "graphrag",
+      "role": "readme",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "graphrag",
+      "role": "core",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "graphrag",
+      "role": "security_or_boundary",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "graphrag",
+      "role": "evaluation_or_testing",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "graphrag",
+      "role": "code_or_test",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "mem0",
+      "role": "readme",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "mem0",
+      "role": "core",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "mem0",
+      "role": "security_or_boundary",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "mem0",
+      "role": "evaluation_or_testing",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "mem0",
+      "role": "code_or_test",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "mcp-servers",
+      "role": "readme",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "mcp-servers",
+      "role": "core",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "mcp-servers",
+      "role": "security_or_boundary",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "mcp-servers",
+      "role": "evaluation_or_testing",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "mcp-servers",
+      "role": "code_or_test",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "composio",
+      "role": "readme",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "composio",
+      "role": "core",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "composio",
+      "role": "security_or_boundary",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "composio",
+      "role": "evaluation_or_testing",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "composio",
+      "role": "code_or_test",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "deepeval",
+      "role": "readme",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "deepeval",
+      "role": "core",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "deepeval",
+      "role": "security_or_boundary",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "deepeval",
+      "role": "evaluation_or_testing",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "deepeval",
+      "role": "code_or_test",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "langfuse-langfuse",
+      "role": "readme",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "langfuse-langfuse",
+      "role": "core",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "langfuse-langfuse",
+      "role": "security_or_boundary",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "langfuse-langfuse",
+      "role": "evaluation_or_testing",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "langfuse-langfuse",
+      "role": "code_or_test",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "promptfoo-promptfoo",
+      "role": "readme",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "promptfoo-promptfoo",
+      "role": "core",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "promptfoo-promptfoo",
+      "role": "security_or_boundary",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "promptfoo-promptfoo",
+      "role": "evaluation_or_testing",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "promptfoo-promptfoo",
+      "role": "code_or_test",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "openhands-openhands",
+      "role": "readme",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "openhands-openhands",
+      "role": "core",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "openhands-openhands",
+      "role": "security_or_boundary",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "openhands-openhands",
+      "role": "evaluation_or_testing",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "openhands-openhands",
+      "role": "code_or_test",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "browser-use-browser-use",
+      "role": "readme",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "browser-use-browser-use",
+      "role": "core",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "browser-use-browser-use",
+      "role": "security_or_boundary",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "browser-use-browser-use",
+      "role": "evaluation_or_testing",
+      "status": "read_at_fixed_commit"
+    },
+    {
+      "source_id": "browser-use-browser-use",
+      "role": "code_or_test",
+      "status": "read_at_fixed_commit"
+    }
+  ],
+  "metrics": {
+    "TP": 60,
+    "FP": 0,
+    "FN": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "F1": 1.0
+  },
+  "remote_verify": "Not verified",
+  "runtime_effect": "Not verified"
+}

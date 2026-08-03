@@ -1,0 +1,8 @@
+{
+  "experiment_id": "evaluation-observability-fixed-v1",
+  "negative_check_count": 26,
+  "expected": {
+    "baseline": {"predictions": {"success-complete": "pass", "error-complete": "fail", "security-violation": "pass", "security-process-unknown": "pass", "missing-telemetry": "pass", "trace-incomplete-normal": "pass"}, "metrics": {"macro_f1": 0.277777778, "false_pass": 4, "unknown_recall": 0.0, "security_masking": 2}},
+    "treatment": {"predictions": {"success-complete": "pass", "error-complete": "fail", "security-violation": "fail", "security-process-unknown": "fail", "missing-telemetry": "unknown", "trace-incomplete-normal": "unknown"}, "metrics": {"macro_f1": 1.0, "false_pass": 0, "unknown_recall": 1.0, "security_masking": 0}}
+  }
+}

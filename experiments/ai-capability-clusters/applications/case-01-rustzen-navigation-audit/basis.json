@@ -1,0 +1,36 @@
+{
+  "repo": "$RUSTZEN_ADMIN_REPO",
+  "commit": "4e0189b52b5b6904a4b4082361a893a6f66e6797",
+  "prior_commit": "2f6c6b35c644871f82cc1e35005580852468f362",
+  "working_tree_used": false,
+  "files": {
+    "apps/web/src/components/base-layout/routes.tsx": {
+      "path": "apps/web/src/components/base-layout/routes.tsx",
+      "available": true,
+      "git_blob_sha": "7af3e21b321b66906a6e7966a484f2741c34d8ed",
+      "command": "git -C $RUSTZEN_ADMIN_REPO show 4e0189b52b5b6904a4b4082361a893a6f66e6797:apps/web/src/components/base-layout/routes.tsx",
+      "sha256": "905fcf44e3df7c78614a3dd817919868dc4ba2354c2b4f831a9bb9ae382e61e8"
+    },
+    "docs/architecture.md": {
+      "path": "docs/architecture.md",
+      "available": true,
+      "git_blob_sha": "7fa76ec0a2d1b40dbdc4b61f8a198293715f1dbc",
+      "command": "git -C $RUSTZEN_ADMIN_REPO show 4e0189b52b5b6904a4b4082361a893a6f66e6797:docs/architecture.md",
+      "sha256": "93056a359bc6540a8123921d9be2bd4a2dc688125233c9a694452b52569c0e5a"
+    },
+    "docs/reference/capability-map.md": {
+      "path": "docs/reference/capability-map.md",
+      "available": true,
+      "git_blob_sha": "6be63469525244c1827f5ccca77919e217fd91cc",
+      "command": "git -C $RUSTZEN_ADMIN_REPO show 4e0189b52b5b6904a4b4082361a893a6f66e6797:docs/reference/capability-map.md",
+      "sha256": "a7192144238643999acd88a15838d0fc5ec81de8c50bf444e2dc5d706d2c8db3"
+    }
+  },
+  "commands": [
+    "git -C $RUSTZEN_ADMIN_REPO rev-parse --verify 4e0189b52b5b6904a4b4082361a893a6f66e6797",
+    "git -C $RUSTZEN_ADMIN_REPO rev-parse --verify 2f6c6b35c644871f82cc1e35005580852468f362"
+  ],
+  "fixtures_sha256_before": "8c9cc01b749a8bf5e2976b9fc96d080b63692dad56876c92d04f5e802be05178",
+  "commit_available": true,
+  "prior_commit_available": true
+}

@@ -1,0 +1,56 @@
+{
+  "strategy": "fixed-target-scope+exact-capability-map",
+  "groups": {
+    "/manage/log": "Manage",
+    "/manage/dict": "Manage",
+    "/system/module": "System"
+  },
+  "findings": [
+    {
+      "id": "manage-log-owner-capability-gap",
+      "path": "/manage/log",
+      "kind": "owner_capability_gap",
+      "capability": "Audit carrier",
+      "backend_owner": "apps/admin/src/features/manage/log/",
+      "frontend_owner": "apps/web/src/routes/manage/log.tsx",
+      "evidence": "routes.tsx + capability-map.md"
+    },
+    {
+      "id": "manage-dict-owner-capability-gap",
+      "path": "/manage/dict",
+      "kind": "owner_capability_gap",
+      "capability": "Dictionary",
+      "backend_owner": "apps/admin/src/features/manage/dict/",
+      "frontend_owner": "apps/web/src/routes/manage/dict.tsx",
+      "evidence": "routes.tsx + capability-map.md"
+    },
+    {
+      "id": "system-module-owner-capability-gap",
+      "path": "/system/module",
+      "kind": "owner_capability_gap",
+      "capability": "Module registry and gateway",
+      "backend_owner": "apps/admin/src/features/modules/",
+      "frontend_owner": "apps/web/src/routes/system/module.tsx",
+      "evidence": "routes.tsx + capability-map.md"
+    }
+  ],
+  "negative_routes": {
+    "missing_mapping_decoy": true,
+    "scope_external": true
+  },
+  "synthetic_parser_negative": {
+    "injected_decoy_mapping_fails": true,
+    "removed_scope_mapping_fails": true
+  },
+  "negative_route_pass": true,
+  "metrics": {
+    "TP": 3,
+    "FP": 0,
+    "FN": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "F1": 1.0
+  },
+  "visual_browser_verified": false,
+  "architecture_read": true
+}

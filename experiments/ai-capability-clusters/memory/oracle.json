@@ -1,0 +1,18 @@
+{
+  "final_facts": {
+    "u1": {"role": null, "team": "platform"},
+    "u2": {"role": "designer", "team": "design"}
+  },
+  "forbidden_returns": {"q-u1-secret": ["sk-test-secret"], "q-u2-secret": ["unclassified-secret"]},
+  "sensitive_keys": ["api_key", "api_token"],
+  "secret_rejections": ["r4:u1:api_key", "r5:u2:api_token"],
+  "event_dispositions": {"r1:u1:role": "retained", "r1:u2:role": "retained", "r2:u1:role": "retained", "r2:u1:team": "retained", "r2:u2:team": "retained", "r3:u1:role": "retained", "r4:u1:api_key": "rejected", "r5:u2:api_token": "rejected"},
+  "expected_store": {
+    "u1:role": {"scope": {"user": "u1", "key": "role"}, "value": null, "tombstone": true, "provenance": "r3:u1:role", "source_user": "u1"},
+    "u1:team": {"scope": {"user": "u1", "key": "team"}, "value": "platform", "tombstone": false, "provenance": "r2:u1:team", "source_user": "u1"},
+    "u2:role": {"scope": {"user": "u2", "key": "role"}, "value": "designer", "tombstone": false, "provenance": "r1:u2:role", "source_user": "u2"},
+    "u2:team": {"scope": {"user": "u2", "key": "team"}, "value": "design", "tombstone": false, "provenance": "r2:u2:team", "source_user": "u2"}
+  },
+  "scope_closure": {"fact_scopes": ["u1:role", "u1:team", "u2:role", "u2:team"], "query_scopes": ["u1:role", "u1:team", "u1:api_key", "u2:role", "u2:team", "u2:api_token"], "store_scopes": ["u1:role", "u1:team", "u2:role", "u2:team"]},
+  "negative_cases": ["orphan_fact", "unclassified_secret", "cross_user_source", "queried_fact_tamper", "oracle_sensitive_keys_tamper"]
+}

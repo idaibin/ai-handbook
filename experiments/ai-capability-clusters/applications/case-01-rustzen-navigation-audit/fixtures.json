@@ -1,0 +1,11 @@
+{
+  "audit_targets": [
+    "/manage/log",
+    "/manage/dict",
+    "/system/module"
+  ],
+  "negative_routes": {
+    "missing_mapping_decoy": "/system/status",
+    "scope_external": "/manage/task"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "oracle_pass": true,
+  "baseline_metrics": {
+    "TP": 0,
+    "FP": 12,
+    "FN": 60,
+    "precision": 0.0,
+    "recall": 0.0,
+    "F1": 0.0
+  },
+  "treatment_metrics": {
+    "TP": 60,
+    "FP": 0,
+    "FN": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "F1": 1.0
+  },
+  "oracle_sha256_before": "44535d5ad633a4cdd1b15673d71ee1c4c2c1a2ff49fc187233b5ede21d23f125",
+  "oracle_sha256_after": "44535d5ad633a4cdd1b15673d71ee1c4c2c1a2ff49fc187233b5ede21d23f125",
+  "oracle_hash_unchanged": true,
+  "independent_checks": {
+    "validator_exit_0": true,
+    "errors_zero": true,
+    "source_count_matches_oracle": true,
+    "record_count_matches_oracle": true,
+    "record_keys_match_oracle": true,
+    "remote": "Not verified"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "axes": {
+    "error-complete": {
+      "outcome": "error",
+      "process": "complete",
+      "security": "pass",
+      "trace_complete": true
+    },
+    "missing-telemetry": {
+      "outcome": "success",
+      "process": "unknown",
+      "security": "unknown",
+      "trace_complete": false
+    },
+    "security-process-unknown": {
+      "outcome": "success",
+      "process": "unknown",
+      "security": "fail",
+      "trace_complete": false
+    },
+    "security-violation": {
+      "outcome": "success",
+      "process": "complete",
+      "security": "fail",
+      "trace_complete": true
+    },
+    "success-complete": {
+      "outcome": "success",
+      "process": "complete",
+      "security": "pass",
+      "trace_complete": true
+    },
+    "trace-incomplete-normal": {
+      "outcome": "success",
+      "process": "complete",
+      "security": "pass",
+      "trace_complete": false
+    }
+  },
+  "experiment_id": "evaluation-observability-fixed-v1",
+  "metrics": {
+    "false_pass": 0,
+    "macro_f1": 1.0,
+    "security_masking": 0,
+    "unknown_recall": 1.0
+  },
+  "mode": "treatment",
+  "predictions": {
+    "error-complete": "fail",
+    "missing-telemetry": "unknown",
+    "security-process-unknown": "fail",
+    "security-violation": "fail",
+    "success-complete": "pass",
+    "trace-incomplete-normal": "unknown"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "answers": {
+    "q-direct-acme": {"answer": "Paris", "evidence": ["d2"], "path": ["d2"]},
+    "q-multi-alice": {"answer": "Paris", "evidence": ["d1", "d2"], "path": ["d1", "d2"]},
+    "q-direct-beta": {"answer": "Rome", "evidence": ["d4"], "path": ["d4"]}
+  },
+  "inferred_kinds": {
+    "q-direct-acme": "direct",
+    "q-multi-alice": "multi-hop",
+    "q-direct-beta": "direct"
+  },
+  "lexical_evidence": {
+    "q-direct-acme": ["d2"],
+    "q-multi-alice": ["d1"],
+    "q-direct-beta": ["d4"]
+  },
+  "graph_expansion_steps": {
+    "q-direct-acme": 0,
+    "q-multi-alice": 1,
+    "q-direct-beta": 0
+  },
+  "label_negative_cases": ["q-direct-acme"]
+}

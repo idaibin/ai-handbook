@@ -1,0 +1,15 @@
+{
+  "documents": [
+    {"id": "d1", "text": "Alice founded Acme", "edges": ["d2"]},
+    {"id": "d2", "text": "Acme is headquartered in Paris", "edges": []},
+    {"id": "d3", "text": "Bob founded Beta", "edges": ["d4"]},
+    {"id": "d4", "text": "Beta is headquartered in Rome", "edges": []},
+    {"id": "d5", "text": "The weather is sunny", "edges": []}
+  ],
+  "questions": [
+    {"id": "q-direct-acme", "kind": "multi-hop", "label_perturbed": true, "text": "Where is Acme headquartered?", "answer": "Paris", "evidence": ["d2"], "path": ["d2"]},
+    {"id": "q-multi-alice", "kind": "multi-hop", "text": "Where is the company founded by Alice headquartered?", "answer": "Paris", "evidence": ["d1", "d2"], "path": ["d1", "d2"]},
+    {"id": "q-direct-beta", "kind": "direct", "text": "Where is Beta headquartered?", "answer": "Rome", "evidence": ["d4"], "path": ["d4"]}
+  ],
+  "top_k": 1
+}

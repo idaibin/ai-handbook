@@ -3,7 +3,7 @@ updated_at: "2026-07-31"
 scope_rule: "distilled applies only to the listed fixed-commit sections; it never means the full repository was read, reproduced, or adopted."
 clusters:
   - id: evaluation-driven-agent-workflow
-    artifact: ../../knowledge-distillation/examples/engineering/evaluation-driven-agent-workflow/knowledge.yaml
+    artifact: https://github.com/idaibin/knowledge-distillation/blob/main/examples/engineering/evaluation-driven-agent-workflow/knowledge.yaml
     selected_level: level_3
     validation: "Knowledge IR validator and JSON Schema passed for this IR; the generic 9-case basic suite passed but does not exercise this IR"
     sources:
@@ -26,7 +26,7 @@ clusters:
       - "interface-closure-v1 packet frozen and tested on Case 003"
       - "No Case 003 lift; not promoted to Skill"
   - id: agent-tool-boundaries
-    artifact: ../../knowledge-distillation/examples/engineering/agent-tool-boundaries/knowledge.yaml
+    artifact: https://github.com/idaibin/knowledge-distillation/blob/main/examples/engineering/agent-tool-boundaries/knowledge.yaml
     selected_level: level_3
     validation: "Knowledge IR validator and JSON Schema passed for this IR; the generic 9-case basic suite passed but does not exercise this IR"
     sources:

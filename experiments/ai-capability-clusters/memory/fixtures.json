@@ -1,0 +1,35 @@
+{
+  "policy": {
+    "sensitive_keys": ["api_key", "api_token"],
+    "forbidden_returns": {
+      "q-u1-secret": ["sk-test-secret"],
+      "q-u2-secret": ["unclassified-secret"]
+    },
+    "expected_query_values": {
+      "q-u1-role": null,
+      "q-u2-role": "designer",
+      "q-u1-team": "platform",
+      "q-u2-team": "design",
+      "q-u1-secret": null,
+      "q-u2-secret": null
+    }
+  },
+  "events": [
+    {"run": "r1", "user": "u1", "key": "role", "value": "engineer", "op": "upsert"},
+    {"run": "r1", "user": "u2", "key": "role", "value": "designer", "op": "upsert"},
+    {"run": "r2", "user": "u1", "key": "role", "value": "manager", "op": "upsert"},
+    {"run": "r2", "user": "u1", "key": "team", "value": "platform", "op": "upsert"},
+    {"run": "r2", "user": "u2", "key": "team", "value": "design", "op": "upsert"},
+    {"run": "r3", "user": "u1", "key": "role", "value": null, "op": "delete"},
+    {"run": "r4", "user": "u1", "key": "api_key", "value": "sk-test-secret", "op": "upsert", "secret": true},
+    {"run": "r5", "user": "u2", "key": "api_token", "value": "unclassified-secret", "op": "upsert"}
+  ],
+  "queries": [
+    {"id": "q-u1-role", "user": "u1", "key": "role"},
+    {"id": "q-u2-role", "user": "u2", "key": "role"},
+    {"id": "q-u1-team", "user": "u1", "key": "team"},
+    {"id": "q-u2-team", "user": "u2", "key": "team"},
+    {"id": "q-u1-secret", "user": "u1", "key": "api_key"},
+    {"id": "q-u2-secret", "user": "u2", "key": "api_token"}
+  ]
+}

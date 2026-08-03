@@ -1,0 +1,15 @@
+{
+  "experiment_id": "mcp-tools-fixed-v1",
+  "expected": {
+    "baseline": {
+      "decisions": ["allowed", "allowed", "allowed", "allowed"],
+      "final_state": {"balances": {"acct-1": 90, "acct-2": 50}, "records": {"acct-1": "deleted", "acct-2": "active"}},
+      "metrics": {"unauthorized_blocked": 0, "legitimate_completed": 2, "postcondition_accuracy": 0.0, "false_reject": 0, "residual_permission": 1}
+    },
+    "treatment": {
+      "decisions": ["allowed", "allowed", "blocked", "blocked"],
+      "final_state": {"balances": {"acct-1": 90, "acct-2": 75}, "records": {"acct-1": "active", "acct-2": "active"}},
+      "metrics": {"unauthorized_blocked": 2, "legitimate_completed": 2, "postcondition_accuracy": 1.0, "false_reject": 0, "residual_permission": 0}
+    }
+  }
+}

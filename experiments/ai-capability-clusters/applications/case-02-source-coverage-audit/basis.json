@@ -1,0 +1,18 @@
+{
+  "manifest": "sources/coverage/manifest.yaml",
+  "batches": [
+    "sources/coverage/batch-agent-rag.yaml",
+    "sources/coverage/batch-memory-mcp-eval.yaml",
+    "sources/coverage/batch-observe-coding.yaml"
+  ],
+  "validator": "sources/coverage/validate_coverage.py",
+  "sha256": {
+    "sources/coverage/manifest.yaml": "e0a6acdd90c173782898fb704a513c5073c1973370211e7d3446479d393fd52e",
+    "sources/coverage/batch-agent-rag.yaml": "1595462b38ea7f40ebcf12046c9726797517e18a8acc93c1bf116290c42935e1",
+    "sources/coverage/batch-memory-mcp-eval.yaml": "2b1e4e83871e2fe7f761b1eedd045a57fe14274827a94f99365c782133c3eb23",
+    "sources/coverage/batch-observe-coding.yaml": "5b8c21a6e8fbca2964816fa80d1122bee881b141eaeca8b2f4697970121b7206",
+    "sources/coverage/validate_coverage.py": "391f8ba233e7c4f8b254fed9fd16fe954ca15a7953f523751daf352c6e3f91c5"
+  },
+  "remote_verify": false,
+  "oracle_sha256_before": "44535d5ad633a4cdd1b15673d71ee1c4c2c1a2ff49fc187233b5ede21d23f125"
+}

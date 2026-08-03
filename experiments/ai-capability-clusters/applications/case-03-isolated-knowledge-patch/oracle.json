@@ -1,0 +1,18 @@
+{
+  "workspace_relative": "workspace",
+  "target_relative": "workspace/input/knowledge.yaml",
+  "allowed_added_lines": [
+    "# APPLICATION-MARK: isolated-knowledge-patch-v1"
+  ],
+  "required_evidence": [
+    "forbidden_paths_unchanged",
+    "scoped_unified_diff",
+    "target_file_mark_added",
+    "target_workspace_match",
+    "validator_passed"
+  ],
+  "forbidden_paths": [
+    "https://github.com/idaibin/knowledge-distillation/blob/main/examples/engineering/agent-runtime-orchestration/knowledge.yaml",
+    "https://github.com/idaibin/knowledge-distillation/blob/main/scripts/validate_ir.py"
+  ]
+}

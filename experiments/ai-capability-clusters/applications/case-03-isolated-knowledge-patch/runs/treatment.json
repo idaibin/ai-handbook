@@ -1,0 +1,38 @@
+{
+  "strategy": "fail-closed-isolated-copy+scoped-diff+validator+receipt",
+  "target": "workspace/input/knowledge.yaml",
+  "target_relative": "workspace/input/knowledge.yaml",
+  "workspace_relative": "workspace",
+  "before_sha256": "e094c81eae81ed37ddd00eee96646df3851fa3b259200927ff746d0d98e57b66",
+  "after_sha256": "d51167cbc4b3ff31910d23775ee6a16d529319f50b4b21ba77a4fb38e68a432a",
+  "validator_command": [
+    "python3",
+    "https://github.com/idaibin/knowledge-distillation/blob/main/scripts/validate_ir.py",
+    "workspace/input/knowledge.yaml"
+  ],
+  "validator_exit": 0,
+  "validator_stdout": "VALID: workspace/input/knowledge.yaml | id=agent-runtime-orchestration | level=level_3 | maturity=draft",
+  "unified_diff": "--- https://github.com/idaibin/knowledge-distillation/blob/main/examples/engineering/agent-runtime-orchestration/knowledge.yaml\n+++ workspace/input/knowledge.yaml\n@@ -146,3 +146,4 @@\n   selected_level: level_3\n   rationale: This Level 3 draft combines fixed-source capability and boundary descriptions with an ordered local method independently verified only against a fixed mock/fixture oracle. It does not prove a real provider, runtime, deployment, or production behavior and is not Level 4 or a Skill.\n   render_targets: [model, framework]\n+# APPLICATION-MARK: isolated-knowledge-patch-v1\n",
+  "evidence": [
+    "forbidden_paths_unchanged",
+    "scoped_unified_diff",
+    "target_file_mark_added",
+    "target_workspace_match",
+    "validator_passed"
+  ],
+  "out_of_bounds": false,
+  "no_evidence_completion": false,
+  "residual_permissions": [],
+  "receipt": {
+    "mutation": "append one application mark",
+    "revoke": "workspace remains local and no external credential/session was opened"
+  },
+  "metrics": {
+    "TP": 5,
+    "FP": 0,
+    "FN": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "F1": 1.0
+  }
+}

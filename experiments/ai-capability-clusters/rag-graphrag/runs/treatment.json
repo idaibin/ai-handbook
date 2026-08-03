@@ -1,0 +1,72 @@
+{
+  "comparison": {
+    "baseline_direct_accuracy": 1.0,
+    "direct_question_regression": false,
+    "treatment_direct_accuracy": 1.0
+  },
+  "metrics": {
+    "cost_units": 20,
+    "direct_accuracy": 1.0,
+    "direct_cases": 2,
+    "evidence_precision": 1.0,
+    "graph_expansion_budget": 1,
+    "graph_path_recall": 1.0,
+    "kind_label_negative_cases": 1,
+    "lexical_recall_at_k": 0.6666666666666666,
+    "multi_hop_cases": 1
+  },
+  "mode": "treatment",
+  "passed_oracle": true,
+  "questions": {
+    "q-direct-acme": {
+      "answer": "Paris",
+      "cost_units": 5,
+      "evidence": [
+        "d2"
+      ],
+      "expansion_steps": 0,
+      "inferred_kind": "direct",
+      "label_kind": "multi-hop",
+      "lexical_evidence": [
+        "d2"
+      ],
+      "path": [
+        "d2"
+      ]
+    },
+    "q-direct-beta": {
+      "answer": "Rome",
+      "cost_units": 5,
+      "evidence": [
+        "d4"
+      ],
+      "expansion_steps": 0,
+      "inferred_kind": "direct",
+      "label_kind": "direct",
+      "lexical_evidence": [
+        "d4"
+      ],
+      "path": [
+        "d4"
+      ]
+    },
+    "q-multi-alice": {
+      "answer": "Paris",
+      "cost_units": 10,
+      "evidence": [
+        "d1",
+        "d2"
+      ],
+      "expansion_steps": 1,
+      "inferred_kind": "multi-hop",
+      "label_kind": "multi-hop",
+      "lexical_evidence": [
+        "d1"
+      ],
+      "path": [
+        "d1",
+        "d2"
+      ]
+    }
+  }
+}

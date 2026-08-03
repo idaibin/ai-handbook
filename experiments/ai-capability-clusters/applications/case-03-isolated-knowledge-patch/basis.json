@@ -1,0 +1,16 @@
+{
+  "source": "https://github.com/idaibin/knowledge-distillation/blob/main/examples/engineering/agent-runtime-orchestration/knowledge.yaml",
+  "validator": "https://github.com/idaibin/knowledge-distillation/blob/main/scripts/validate_ir.py",
+  "source_sha256_before": "e094c81eae81ed37ddd00eee96646df3851fa3b259200927ff746d0d98e57b66",
+  "validator_sha256_before": "0485b1c103cd838956358f7a954e32b9dbc80fbdd23ff221d4b60c7cfbb8ddd6",
+  "workspace_relative": "workspace",
+  "target_relative": "workspace/input/knowledge.yaml",
+  "workspace": "workspace",
+  "target": "workspace/input/knowledge.yaml",
+  "mutation": "append exactly one marked comment to isolated copy",
+  "forbidden_paths": [
+    "https://github.com/idaibin/knowledge-distillation/blob/main/examples/engineering/agent-runtime-orchestration/knowledge.yaml",
+    "https://github.com/idaibin/knowledge-distillation/blob/main/scripts/validate_ir.py"
+  ],
+  "oracle_sha256_before": "8877993b7bf18785a3f73585ecc66e67126f7928407facf8c6231bf02cf26634"
+}

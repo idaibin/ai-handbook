@@ -1,0 +1,19 @@
+{
+  "strategy": "wide-path/no-diff-evidence",
+  "claimed_complete": true,
+  "evidence": [],
+  "out_of_bounds": true,
+  "no_evidence_completion": true,
+  "residual_permissions": [
+    "wide workspace",
+    "no revoke receipt"
+  ],
+  "metrics": {
+    "TP": 0,
+    "FP": 0,
+    "FN": 5,
+    "precision": 0.0,
+    "recall": 0.0,
+    "F1": 0.0
+  }
+}

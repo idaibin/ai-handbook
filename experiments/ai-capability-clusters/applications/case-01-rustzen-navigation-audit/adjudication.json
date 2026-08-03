@@ -1,0 +1,42 @@
+{
+  "oracle_pass": true,
+  "expected_candidate_ids": [
+    "manage-log-owner-capability-gap",
+    "manage-dict-owner-capability-gap",
+    "system-module-owner-capability-gap"
+  ],
+  "baseline": {
+    "TP": 0,
+    "FP": 0,
+    "FN": 3,
+    "precision": 0.0,
+    "recall": 0.0,
+    "F1": 0.0
+  },
+  "treatment": {
+    "TP": 3,
+    "FP": 0,
+    "FN": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "F1": 1.0
+  },
+  "oracle_sha256_before": "4522c7fce0a3ceb9be97eeadd88403795563becfd6d328e7f69de9b299601685",
+  "oracle_sha256_after": "4522c7fce0a3ceb9be97eeadd88403795563becfd6d328e7f69de9b299601685",
+  "oracle_hash_unchanged": true,
+  "fixture_sha256": "8c9cc01b749a8bf5e2976b9fc96d080b63692dad56876c92d04f5e802be05178",
+  "independent_checks": {
+    "frozen_commit": true,
+    "all_paths_read": true,
+    "negative_routes": {
+      "missing_mapping_decoy": true,
+      "scope_external": true
+    },
+    "synthetic_parser_negative": {
+      "injected_decoy_mapping_fails": true,
+      "removed_scope_mapping_fails": true
+    },
+    "negative_routes_no_false_positives": true,
+    "browser_visual": "not_verified"
+  }
+}

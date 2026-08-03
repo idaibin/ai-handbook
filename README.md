@@ -48,6 +48,7 @@
 - `maps/`：能力地图、依赖关系与阶段门禁。
 - `roadmap/`：以产出驱动的学习路径。
 - `sources/`：来源目录和收录规则；十类公司课程只作为待验证输入。
+- `experiments/`：固定输入、冻结 oracle、baseline/treatment runs 与应用案例；总审计见 [`completion-audit-2026-08-03.md`](experiments/ai-capability-clusters/completion-audit-2026-08-03.md)。
 - `templates/`：单个来源的证据卡模板。
 
 ## v0.1 边界

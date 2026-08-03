@@ -1,0 +1,11 @@
+{
+  "experiment_id": "evaluation-observability-fixed-v1",
+  "traces": [
+    {"id": "success-complete", "truth": "pass", "outcome": "success", "process": "complete", "security": "pass", "trace_complete": true},
+    {"id": "error-complete", "truth": "fail", "outcome": "error", "process": "complete", "security": "pass", "trace_complete": true},
+    {"id": "security-violation", "truth": "fail", "outcome": "success", "process": "complete", "security": "fail", "trace_complete": true},
+    {"id": "security-process-unknown", "truth": "fail", "outcome": "success", "process": "unknown", "security": "fail", "trace_complete": false},
+    {"id": "missing-telemetry", "truth": "unknown", "outcome": "success", "process": "unknown", "security": "unknown", "trace_complete": false},
+    {"id": "trace-incomplete-normal", "truth": "unknown", "outcome": "success", "process": "complete", "security": "pass", "trace_complete": false}
+  ]
+}
