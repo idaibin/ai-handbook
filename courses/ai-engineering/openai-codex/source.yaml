@@ -1,0 +1,41 @@
+schema_version: "1.0"
+course_id: ai-engineering.openai-codex
+status: started
+
+source:
+  repository: openai/codex
+  source_type: github_repository
+  role:
+    - implementation
+    - architecture_reference
+  fixed_commit: pending
+  fixed_at: pending
+
+learning_objectives:
+  - Understand coding agent runtime architecture
+  - Understand client-runtime separation
+  - Understand event and state models
+  - Evaluate reusable patterns for AI Engineering Lab
+
+scope:
+  included:
+    - agent_runtime
+    - protocol_boundary
+    - skills_plugins_mcp
+    - execution_security
+    - evaluation_regression
+  excluded:
+    - complete_product_replication
+    - production_claims
+    - unsupported_internal_assumptions
+
+verification:
+  source_reading: not_started
+  experiments: not_started
+  project_application: not_started
+
+outputs:
+  - knowledge_graph_update
+  - experiment_candidate
+  - project_mapping
+  - possible_skill_candidate
