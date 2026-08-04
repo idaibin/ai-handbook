@@ -1,0 +1,29 @@
+course_id: ai-engineering.openai-codex
+
+source:
+  repository: openai/codex
+  source_type: github_repository
+  role:
+    - implementation
+    - architecture_reference
+
+basis:
+  commit: pending
+  observed_at: pending
+
+reading_scope:
+  include:
+    - runtime
+    - protocol
+    - skills
+    - security
+    - evaluation
+
+verification:
+  source_reading: not_started
+  locator_validation: not_started
+  runtime_validation: not_started
+
+rule:
+  - Do not upgrade source reading into runtime verification.
+  - Do not infer production behavior from static source review.
