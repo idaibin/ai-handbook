@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.3",
+  "observed_at": "2026-08-07T07:22:33+08:00",
+  "status": "discovery_batch",
+  "scope": "github_agent_skills_repository_index",
+  "query": "\"agent skills registry\" in:name,description",
+  "pages": [8],
+  "results_per_page": 20,
+  "raw_hits": 20,
+  "deep_content_reading": false,
+  "classification_basis": "repository_identity_and_search_context_only",
+  "base_catalog": {
+    "path": "sources/catalog/github-agent-skills-index-latest.json",
+    "commit": "abf814fecb382bdaef545e805339106602089d32",
+    "blob_sha": "9b2338fb5b44ae198834c48daa04032121893390",
+    "unique_total": 1857
+  },
+  "deduplication": {
+    "key": "case_insensitive owner/repository",
+    "duplicates_within_batch": [],
+    "duplicates_against_base": [],
+    "new_unique": 20,
+    "composed_unique_total": 1877,
+    "verification": "All page-8 identities were directly compared against persisted agent-skills-registry pages 1-7 and the overlapping skill-registry pages 1-10, agent-skills-hub pages 1-2, and skill-hub pages 1-10 artifacts. Exact AI-handbook code search was also attempted for page-8 identities and returned no positive prior identity matches. Because prior runs proved that GitHub code search can return false negatives for known persisted identities, empty code-search results were not treated as uniqueness proof; uniqueness is based on direct comparison against the inspected persisted overlap sets plus current-query pages."
+  },
+  "classification_counts_raw": {
+    "specification": 0,
+    "skill_collection": 4,
+    "single_skill_or_domain_package": 1,
+    "awesome_index": 0,
+    "skill_tooling": 12,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 3
+  },
+  "classification_counts_new_unique": {
+    "specification": 0,
+    "skill_collection": 4,
+    "single_skill_or_domain_package": 1,
+    "awesome_index": 0,
+    "skill_tooling": 12,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 3
+  },
+  "progress": {
+    "added_to_deep_analysis_eligible": 17,
+    "added_to_held_for_review": 3
+  },
+  "repository_fields": [
+    "github_id",
+    "full_name",
+    "default_branch",
+    "size_kb",
+    "archived",
+    "result_rank",
+    "classification",
+    "is_new_unique",
+    "deep_analysis_eligible"
+  ],
+  "repositories": [
+    ["1283541333", "kriptoburak/skills-29", "main", 3247, false, 1, "skill_collection", true, true],
+    ["1223252816", "Civic-Skills-Lab/civil-resistance-skills", "master", 755, false, 2, "single_skill_or_domain_package", true, true],
+    ["1276270657", "kriptoburak/ai-agent-skills-registry", "main", 12, false, 3, "skill_tooling", true, true],
+    ["1294516190", "kriptoburak/agent-skills-registry-4", "main", 123, false, 4, "skill_tooling", true, true],
+    ["1272763934", "kriptoburak/agent-skills-registry-2", "main", 26, false, 5, "skill_tooling", true, true],
+    ["1285796456", "kriptoburak/agent-skills-registry-3", "main", 136, false, 6, "skill_tooling", true, true],
+    ["1188713421", "2670044605/agent-skills-hub", "main", 15599, false, 7, "skill_tooling", true, true],
+    ["1213665602", "jjfantini/humblSKILLS", "main", 9040, false, 8, "skill_collection", true, true],
+    ["1288766947", "kriptoburak/linx777-agent-skills-registry", "main", 843, false, 9, "skill_tooling", true, true],
+    ["1268452663", "kriptoburak/cognis-skills-xquik", "main", 77, false, 10, "skill_collection", true, true],
+    ["1277269959", "kriptoburak/pr0toshi-agent-skills-registry", "main", 16, false, 11, "skill_tooling", true, true],
+    ["1264009678", "eagnespuerto/skill-registry", "main", 2, false, 12, "unclear_search_hit", true, false],
+    ["1270339647", "kriptoburak/clawskills", "master", 84, false, 13, "skill_collection", true, true],
+    ["1312922444", "brndngln/skill-registry", "main", 2, false, 14, "unclear_search_hit", true, false],
+    ["1268543877", "kriptoburak/tinyhumansai-skill-registry", "main", 37, false, 15, "skill_tooling", true, true],
+    ["1299896940", "0xsarwagya/skill-registry-tinyhumansai-ontoly", "main", 3, false, 16, "skill_tooling", true, true],
+    ["1303517563", "michaelbiafore/SL_skill-registry-demo", "master", 221, false, 17, "skill_tooling", true, true],
+    ["1273640707", "kalisam/skill-registry", "main", 2, false, 18, "unclear_search_hit", true, false],
+    ["1291336342", "zenlee123/skill-registry-openhuman", "main", 4, false, 19, "skill_tooling", true, true],
+    ["1267118872", "wjsoj/skillhub", "main", 8418, false, 20, "skill_tooling", true, true]
+  ],
+  "coverage": {
+    "completed_pages": [8],
+    "next_page": 9,
+    "query_complete": false,
+    "next_page_probe": "page 9 returned 20 repositories and was not merged in this batch"
+  },
+  "verification": {
+    "repository_identity": "verified_by_github_connector",
+    "deduplication": "verified against persisted current-query pages plus directly inspected overlapping registry and hub batch artifacts; code-search emptiness explicitly excluded as uniqueness proof",
+    "content": "not_started",
+    "note": "Index-only. No README, SKILL.md, scripts, references, eval contents, stars, quality, or implementation content was read."
+  }
+}
