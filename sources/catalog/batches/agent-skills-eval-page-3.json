@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.2",
+  "observed_at": "2026-08-07T04:40:27+08:00",
+  "status": "verified_index_batch",
+  "scope": "github_agent_skills_repository_index",
+  "query": "\"agent skills eval\" in:name,description",
+  "search": {
+    "pages": [3],
+    "per_page": 20,
+    "raw_hits": 4,
+    "internal_duplicates": 0,
+    "duplicates_against_prior": 0,
+    "new_unique": 4,
+    "prior_unique_total": 1543,
+    "composed_unique_total": 1547,
+    "deduplication_key": "case_insensitive owner/repository",
+    "terminal_page_verified": true,
+    "next_page_result_count": 0
+  },
+  "classification_counts_raw": {
+    "specification": 0,
+    "skill_collection": 0,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 4,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 0
+  },
+  "classification_counts_new_unique": {
+    "specification": 0,
+    "skill_collection": 0,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 4,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 0
+  },
+  "repository_tuple_fields": ["page", "rank", "github_id", "repository_full_name", "default_branch", "size", "classification", "duplicate_against_prior"],
+  "repositories": [
+    [3,1,"1231725392","juliuss1907/agent-skills-eval","main",79,"skill_tooling",false],
+    [3,2,"1225400897","dimayip/learn-eval-skills","main",49,"skill_tooling",false],
+    [3,3,"1234822130","h1r9do/agent-skills-eval-SkillsUpgrade","main",79,"skill_tooling",false],
+    [3,4,"1241456002","homgorn/agent-skills-eval-open-source-","main",81,"skill_tooling",false]
+  ],
+  "verification": {
+    "repository_identity": "verified_by_github_repository_search",
+    "deduplication": "case-insensitive full-name checks against the current AI-handbook indexed artifacts found no prior match for the four page-3 identities",
+    "classification": "provisional_from_repository_identity_and_query_context_only",
+    "content": "not_started",
+    "terminal_page": "GitHub repository search returned four results on page 3 and zero results on page 4 at per_page=20",
+    "note": "Index-only batch. README, SKILL.md, scripts, references, evals, stars, and implementation content were not read."
+  }
+}
