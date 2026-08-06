@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.3",
+  "observed_at": "2026-08-07T07:04:24+08:00",
+  "status": "discovery_batch",
+  "scope": "github_agent_skills_repository_index",
+  "query": "\"agent skills registry\" in:name,description",
+  "pages": [6],
+  "results_per_page": 20,
+  "raw_hits": 20,
+  "deep_content_reading": false,
+  "classification_basis": "repository_identity_and_search_context_only",
+  "base_catalog": {
+    "path": "sources/catalog/github-agent-skills-index-latest.json",
+    "commit": "9703c4f0b159fa8c0aeb91139e6b4ecf2e0d8eb7",
+    "blob_sha": "3e01d7a15c24afe8c5f98896cdfe5bf78031af46",
+    "unique_total": 1818
+  },
+  "deduplication": {
+    "key": "case_insensitive owner/repository",
+    "duplicates_within_batch": [],
+    "duplicates_against_base": [],
+    "new_unique": 20,
+    "composed_unique_total": 1838,
+    "verification": "All 20 page-6 identities were compared directly against persisted agent-skills-registry pages 1-5 and the earlier skill-registry pages 1-10 batch. Exact AI-handbook code search was also executed for each full owner/repository identity and returned no prior exact match. Recent current-query pages were checked directly because GitHub code-search indexing can lag recent writes."
+  },
+  "classification_counts_raw": {
+    "specification": 0,
+    "skill_collection": 4,
+    "single_skill_or_domain_package": 1,
+    "awesome_index": 0,
+    "skill_tooling": 14,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 1
+  },
+  "classification_counts_new_unique": {
+    "specification": 0,
+    "skill_collection": 4,
+    "single_skill_or_domain_package": 1,
+    "awesome_index": 0,
+    "skill_tooling": 14,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 1
+  },
+  "progress": {
+    "added_to_deep_analysis_eligible": 19,
+    "added_to_held_for_review": 1
+  },
+  "repository_fields": [
+    "github_id",
+    "full_name",
+    "default_branch",
+    "size_kb",
+    "archived",
+    "result_rank",
+    "classification",
+    "is_new_unique",
+    "deep_analysis_eligible"
+  ],
+  "repositories": [
+    ["1186048395", "linx777/agent-skills-registry", "main", 842, false, 1, "skill_tooling", true, true],
+    ["1295620016", "QuickDeployAI/agent-skills-registry", "main", 183, false, 2, "skill_tooling", true, true],
+    ["1300113160", "tark5139/skill-hub-public", "main", 226, false, 3, "skill_tooling", true, true],
+    ["1183861634", "NebulaLumino/ai-agent-skills-registry", "main", 10, false, 4, "skill_tooling", true, true],
+    ["1269799187", "kriptoburak/agent-skills-registry-1", "main", 18, false, 5, "skill_tooling", true, true],
+    ["1171499500", "Mark850409/20260303_agent_skills_registry", "master", 421, false, 6, "skill_tooling", true, true],
+    ["1191094284", "djbiz/skills-for-Zo.computer", "main", 3814, false, 7, "skill_collection", true, true],
+    ["1288751957", "kriptoburak/linka-skillhub", "main", 4250, false, 8, "skill_tooling", true, true],
+    ["1266273128", "kriptoburak/asrpm", "main", 7796, false, 9, "skill_tooling", true, true],
+    ["1266231365", "kriptoburak/gemproject", "main", 153, false, 10, "unclear_search_hit", true, false],
+    ["1175324803", "l7448294-afk/agent-skill-registry", "main", 279, false, 11, "skill_tooling", true, true],
+    ["1222478696", "7t1-studio/so-me-hermes-skill", "main", 17, false, 12, "single_skill_or_domain_package", true, true],
+    ["1262672153", "cognis-digital/skills", "main", 110, false, 13, "skill_collection", true, true],
+    ["1210759296", "kustomzone/skillhub", "main", 11168, false, 14, "skill_tooling", true, true],
+    ["1272766808", "kriptoburak/skills-6", "main", 5, false, 15, "skill_collection", true, true],
+    ["1237946306", "Rodriguespn/skillpm", "main", 68, false, 16, "skill_tooling", true, true],
+    ["1303334430", "grapeot/skill-registry-demo", "master", 267, false, 17, "skill_tooling", true, true],
+    ["1149031549", "trickv/clawskills", "master", 78, false, 18, "skill_collection", true, true],
+    ["1228625582", "rhwkafn/skill-hub", "main", 477, false, 19, "skill_tooling", true, true],
+    ["1288755672", "kriptoburak/aios-rs-skillhub", "main", 149, false, 20, "skill_tooling", true, true]
+  ],
+  "coverage": {
+    "completed_pages": [6],
+    "next_page": 7,
+    "query_complete": false,
+    "next_page_probe": "page 7 returned 20 repositories and was not merged in this batch"
+  },
+  "verification": {
+    "repository_identity": "verified_by_github_connector",
+    "deduplication": "verified_against_persisted_AI-handbook_index_artifacts_plus_exact_code_search_with_recent-page direct comparison",
+    "content": "not_started",
+    "note": "Index-only. No README, SKILL.md, scripts, references, eval contents, stars, quality, or implementation content was read."
+  }
+}
