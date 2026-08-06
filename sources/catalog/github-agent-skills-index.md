@@ -2,14 +2,14 @@
 
 ## Current verified catalog
 
-- Raw GitHub search hits: `1541`
+- Raw GitHub search hits: `1561`
 - Existing discovery-inbox candidates merged and re-verified: `4`
-- Raw identities across all inputs: `1545`
-- Unique repositories after case-insensitive `owner/repository` deduplication: `1445`
+- Raw identities across all inputs: `1565`
+- Unique repositories after case-insensitive `owner/repository` deduplication: `1465`
 - Exact duplicates removed across current inputs: `100`
 - New unique repositories collected in this run: `20`
 - Net catalog delta versus the previous published manifest: `+20`
-- Provisionally eligible for later deep analysis: `1078`
+- Provisionally eligible for later deep analysis: `1098`
 - Held as adjacent or unclear search hits: `367`
 
 Composed machine-readable authority: [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json).
@@ -34,7 +34,7 @@ Composed machine-readable authority: [`github-agent-skills-index-latest.json`](g
 - `"agentskills specification" in:name,description`, page `1`
 - `"skill lint" in:name,description`, complete accessible page-1 result set with `100` requested results
 - `"agent skills validator" in:name,description`, complete accessible page-1 result set with `100` requested results
-- `"agent skills standard" in:name,description`, pages `1-7`, `20` results per page
+- `"agent skills standard" in:name,description`, pages `1-8`, `20` results per page
 
 ## Composition
 
@@ -47,6 +47,7 @@ The composed catalog consists of the `304`-repository base catalog plus verified
 | `agent-skills-standard-page-3.json` | 20 | 0 | 20 |
 | `agent-skills-standard-pages-4-6.json` | 60 | 0 | 60 |
 | `agent-skills-standard-page-7.json` | 20 | 0 | 20 |
+| `agent-skills-standard-page-8.json` | 20 | 0 | 20 |
 
 The full machine-readable composition, including all earlier batches and their commit references, is stored in [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json).
 
@@ -58,22 +59,22 @@ Query:
 "agent skills standard" in:name,description
 ```
 
-This run collected page `7`, using `per_page=20`.
+This run collected page `8`, using `per_page=20`.
 
 - Raw repository identities: `20`
 - Internal batch duplicates: `0`
 - Duplicates against the prior catalog: `0`
 - Added as new repositories: `20`
-- Previous composed catalog: `1425`
-- Updated composed catalog: `1445`
+- Previous composed catalog: `1445`
+- Updated composed catalog: `1465`
 
-All 20 returned repositories have the identity `*/agent-skills-standard`; at the index stage they are provisionally classified as `specification`. The complete page order, GitHub IDs, default branches, sizes, and deduplication status are stored in [`batches/agent-skills-standard-page-7.json`](batches/agent-skills-standard-page-7.json).
+All 20 returned repositories have the identity `*/agent-skills-standard`; at the index stage they are provisionally classified as `specification`. The complete page order, GitHub IDs, default branches, sizes, and deduplication status are stored in [`batches/agent-skills-standard-page-8.json`](batches/agent-skills-standard-page-8.json).
 
 ## Classification totals
 
 | Classification | Count | Index-stage meaning |
 | --- | ---: | --- |
-| `specification` | 103 | Identity strongly indicates a Skill specification, standard, or normative guidance. |
+| `specification` | 123 | Identity strongly indicates a Skill specification, standard, or normative guidance. |
 | `skill_collection` | 483 | Identity indicates a collection of Skills. |
 | `single_skill_or_domain_package` | 87 | Identity indicates one Skill or a domain-focused package. |
 | `awesome_index` | 36 | Identity indicates a curated Skill index. |
@@ -87,11 +88,11 @@ This remains an index-only catalog. GitHub repository search verified repository
 
 ## Validation
 
-- Page `7` batch commit: `d07bf2bf58edb314217172271d969652cd51f61d`.
-- Composed latest-manifest commit: `cb536823de6d4be18850ae6d8ca3571e4d71dbad`.
-- `1425 + 20 = 1445` current unique repositories.
-- `1545 - 100 = 1445` raw-to-unique reconciliation.
-- Classification totals resolve to `1445`.
-- `1078 + 367 = 1445`, matching the eligible and held partitions.
+- Page `8` batch commit: `1e3d03371795c7ffe380db32bfbe7256b50501fb`.
+- Composed latest-manifest commit: `fc459be82a54681573c5329c4341b0b73ff88ba4`.
+- `1445 + 20 = 1465` current unique repositories.
+- `1565 - 100 = 1465` raw-to-unique reconciliation.
+- Classification totals resolve to `1465`.
+- `1098 + 367 = 1465`, matching the eligible and held partitions.
 - No README, `SKILL.md`, scripts, references, evaluations, stars, or implementation contents were read during this index-only run.
-- The next index run should continue `"agent skills standard" in:name,description` from page `8` when keeping `per_page=20`.
+- The next index run should continue `"agent skills standard" in:name,description` from page `9` when keeping `per_page=20`.
