@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "observed_at": "2026-08-07T01:23:34+08:00",
+  "observed_at": "2026-08-07T01:31:46+08:00",
   "status": "composed_discovery_catalog",
   "scope": "github_agent_skills_repository_index",
   "composition": {
@@ -43,24 +43,32 @@
         "raw_hits": 100,
         "duplicates_against_prior": 56,
         "new_unique": 44
+      },
+      {
+        "path": "sources/catalog/batches/agentskills-cli-search.json",
+        "commit": "4fa0269bb7ded288e6f2f72eaa0dee3bd88b105d",
+        "query": "\"agentskills cli\" in:name,description",
+        "raw_hits": 6,
+        "duplicates_against_prior": 0,
+        "new_unique": 6
       }
     ]
   },
   "progress": {
-    "raw_search_hits": 700,
+    "raw_search_hits": 706,
     "merged_existing_candidates": 4,
-    "raw_total": 704,
-    "unique_total": 641,
+    "raw_total": 710,
+    "unique_total": 647,
     "duplicates_removed": 63,
-    "new_unique_repositories_this_run": 44,
-    "deep_analysis_eligible": 375,
+    "new_unique_repositories_this_run": 6,
+    "deep_analysis_eligible": 381,
     "held_for_review": 266,
     "classification_counts": {
       "specification": 1,
       "skill_collection": 197,
-      "single_skill_or_domain_package": 61,
+      "single_skill_or_domain_package": 62,
       "awesome_index": 32,
-      "skill_tooling": 84,
+      "skill_tooling": 89,
       "adjacent_search_hit": 90,
       "unclear_search_hit": 176
     }
@@ -68,6 +76,6 @@
   "verification": {
     "repository_identity": "verified_by_github_connector",
     "content": "not_started",
-    "note": "Compose the referenced base catalog and delta batches using the stated case-insensitive key. This run removed 56 repositories already present in the prior catalog. No deep repository content was read."
+    "note": "Compose the referenced base catalog and delta batches using the stated case-insensitive key. This run added six previously unindexed repository identities. No deep repository content was read."
   }
 }
