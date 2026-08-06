@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.2",
+  "observed_at": "2026-08-07T03:30:07+08:00",
+  "status": "verified_index_batch",
+  "scope": "github_agent_skills_repository_index",
+  "query": "\"agent skills standard\" in:name,description",
+  "search": {
+    "page": 2,
+    "per_page": 20,
+    "raw_hits": 20,
+    "internal_duplicates": 0,
+    "duplicates_against_prior": 0,
+    "new_unique": 20,
+    "deduplication_key": "case_insensitive owner/repository"
+  },
+  "classification_counts": {
+    "specification": 2,
+    "skill_collection": 11,
+    "single_skill_or_domain_package": 4,
+    "awesome_index": 0,
+    "skill_tooling": 1,
+    "adjacent_search_hit": 2,
+    "unclear_search_hit": 0
+  },
+  "repositories": [
+    {"github_id":"1323721528","repository_full_name":"vichhka-git/pdf-reader-skills","default_branch":"main","size":126,"classification":"skill_collection","duplicate_against_prior":false},
+    {"github_id":"1178275634","repository_full_name":"schauersbergern/generalskills","default_branch":"main","size":98,"classification":"skill_collection","duplicate_against_prior":false},
+    {"github_id":"1192475573","repository_full_name":"siluat/skills","default_branch":"main","size":19,"classification":"skill_collection","duplicate_against_prior":false},
+    {"github_id":"1219645122","repository_full_name":"ninhtq97/agent-skills-standard","default_branch":"main","size":0,"classification":"specification","duplicate_against_prior":false},
+    {"github_id":"1136251659","repository_full_name":"dohuuduy/agent-skills-standard","default_branch":"main","size":166,"classification":"specification","duplicate_against_prior":false},
+    {"github_id":"1180237771","repository_full_name":"jordiportal/brain-skills","default_branch":"main","size":48,"classification":"skill_collection","duplicate_against_prior":false},
+    {"github_id":"1210786717","repository_full_name":"andreas-roennestad/openhive-skill","default_branch":"main","size":7,"classification":"single_skill_or_domain_package","duplicate_against_prior":false},
+    {"github_id":"1246017873","repository_full_name":"satvik-jain-iitd/linkright-skills","default_branch":"main","size":518,"classification":"skill_collection","duplicate_against_prior":false},
+    {"github_id":"1308931535","repository_full_name":"ryanrudd/skills","default_branch":"main","size":7,"classification":"skill_collection","duplicate_against_prior":false},
+    {"github_id":"1135532798","repository_full_name":"pan94u/skill-optimizer","default_branch":"main","size":14,"classification":"skill_tooling","duplicate_against_prior":false},
+    {"github_id":"1247815751","repository_full_name":"specdd/agentskills","default_branch":"main","size":36,"classification":"skill_collection","duplicate_against_prior":false},
+    {"github_id":"1205431224","repository_full_name":"marceloeatworld/mdbook-ai-skill","default_branch":"main","size":82,"classification":"single_skill_or_domain_package","duplicate_against_prior":false},
+    {"github_id":"1204704556","repository_full_name":"CirclePOS/circle-v2-agentic-guidelines","default_branch":"main","size":130,"classification":"adjacent_search_hit","duplicate_against_prior":false},
+    {"github_id":"1178454538","repository_full_name":"chengguijin-maker/skills","default_branch":"main","size":3130,"classification":"skill_collection","duplicate_against_prior":false},
+    {"github_id":"1199269535","repository_full_name":"youngfreeFJS/skill-test-skill","default_branch":"main","size":33,"classification":"single_skill_or_domain_package","duplicate_against_prior":false},
+    {"github_id":"1124401308","repository_full_name":"SpillwaveSolutions/using-claude-code-cli-agent-skill","default_branch":"main","size":23,"classification":"single_skill_or_domain_package","duplicate_against_prior":false},
+    {"github_id":"1306996066","repository_full_name":"ryanilano/ilano-skills","default_branch":"main","size":60,"classification":"skill_collection","duplicate_against_prior":false},
+    {"github_id":"1156624577","repository_full_name":"kryptobaseddev/cleo-skills","default_branch":"main","size":499,"classification":"skill_collection","duplicate_against_prior":false},
+    {"github_id":"1143993196","repository_full_name":"xxxryan/agent-skills","default_branch":"main","size":10,"classification":"skill_collection","duplicate_against_prior":false},
+    {"github_id":"1214693077","repository_full_name":"shimo4228/claude-harness","default_branch":"main","size":1471,"classification":"adjacent_search_hit","duplicate_against_prior":false}
+  ],
+  "verification": {
+    "repository_identity": "verified_by_github_repository_search",
+    "deduplication": "each returned owner/repository identity was compared case-insensitively against the base catalog and every delta referenced by the current composed manifest; no exact prior identity match was found",
+    "classification": "provisional_from_repository_identity_only",
+    "content": "not_started",
+    "note": "Index-only batch. README, SKILL.md, scripts, references, evals, stars, and implementation content were not read."
+  }
+}
