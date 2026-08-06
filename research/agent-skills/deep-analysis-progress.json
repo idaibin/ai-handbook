@@ -1,22 +1,22 @@
 {
   "schema_version": "1.1",
-  "observed_at": "2026-08-07T03:00:45+08:00",
+  "observed_at": "2026-08-07T04:13:06+08:00",
   "status": "deep_analysis_in_progress",
   "queue_source": "sources/catalog/github-agent-skills-index-latest.json",
-  "latest_batch_id": "2026-08-07-batch-003",
-  "latest_batch_report": "research/agent-skills/batches/2026-08-07-batch-003-deep-analysis.md",
+  "latest_batch_id": "2026-08-07-batch-004",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-07-batch-004-deep-analysis.md",
   "repositories_completed_this_batch": 10,
-  "skills_reviewed_this_batch": 23,
-  "repositories_completed_total": 30,
-  "skills_reviewed_total": 47,
+  "skills_reviewed_this_batch": 10,
+  "repositories_completed_total": 40,
+  "skills_reviewed_total": 57,
   "repository_status": "structure-reviewed",
   "runtime_validation": "not_executed",
   "index_snapshot": {
-    "observed_at": "2026-08-07T03:05:23+08:00",
-    "unique_total": 1256,
-    "eligible": 904,
-    "held_for_review": 352,
-    "eligible_remaining_estimate": 874
+    "observed_at": "2026-08-07T04:00:51+08:00",
+    "unique_total": 1445,
+    "eligible": 1078,
+    "held_for_review": 367,
+    "eligible_remaining_estimate": 1038
   },
   "completed_repositories": [
     "adithya-s-k/manim_skill",
@@ -48,7 +48,17 @@
     "oldred-byte/ec-visual-skill",
     "op7418/guizang-ppt-skill",
     "op7418/guizang-social-card-skill",
-    "p697/youmind-skill"
+    "p697/youmind-skill",
+    "pmlaowangba-lab/laowangba-pmprototype-skill",
+    "ShawhinT/ai-tutor-skill",
+    "soulmujoco/EditableImage2PPTSkill",
+    "SpillwaveSolutions/confluence-skill",
+    "Tang1206cc/codex-skill-paper-formatting-skill",
+    "umairalipathan1980/Claude-Skill-for-Full-Stack-Application-Development",
+    "wuyoscar/GPT-Image2-Skill",
+    "xuezheng627/daily-literature-digest-skill",
+    "yaojingang/yao-meta-skill",
+    "Zechang-Xiong/chinese-reference-formatter-skill"
   ],
   "individual_skills": [
     "manimce-best-practices",
@@ -97,7 +107,17 @@
     "ec-visual",
     "guizang-ppt-skill",
     "guizang-social-card-skill",
-    "youmind"
+    "youmind",
+    "product-prototype-figma",
+    "ai-tutor",
+    "ppt-image-to-editable-ppt",
+    "confluence",
+    "word-format-from-content-template",
+    "fullstack-template-generator",
+    "gpt-image",
+    "daily-literature-digest",
+    "yao-meta-skill",
+    "chinese-reference-formatter-skill"
   ],
   "batches": [
     {
@@ -123,7 +143,15 @@
       "report": "research/agent-skills/batches/2026-08-07-batch-003-deep-analysis.md",
       "validation": "structure-reviewed",
       "runtime_validation": "not_executed"
+    },
+    {
+      "batch_id": "2026-08-07-batch-004",
+      "repositories": 10,
+      "skills": 10,
+      "report": "research/agent-skills/batches/2026-08-07-batch-004-deep-analysis.md",
+      "validation": "structure-reviewed",
+      "runtime_validation": "not_executed"
     }
   ],
-  "verification_note": "Repositories are counted complete only after identity and displayed stars were verified and actual README/equivalent, skill definitions, and available scripts/references/eval assets were inspected. No third-party runtime command was executed."
+  "verification_note": "Repositories are counted complete only after identity and displayed stars were verified and actual README/equivalent, skill definitions, and available scripts/references/eval assets were inspected. Batch 004 deferred Pluviobyte/rnskill and samber/cc-skills-golang after current content showed collection-level classification drift; neither was counted complete. No third-party runtime command was executed."
 }
