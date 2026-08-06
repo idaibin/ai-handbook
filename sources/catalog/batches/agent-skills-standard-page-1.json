@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.1",
-  "observed_at": "2026-08-07T03:23:13+08:00",
+  "schema_version": "1.2",
+  "observed_at": "2026-08-07T03:48:44+08:00",
   "status": "verified_index_batch",
   "scope": "github_agent_skills_repository_index",
   "query": "\"agent skills standard\" in:name,description",
@@ -9,11 +9,11 @@
     "per_page": 20,
     "raw_hits": 20,
     "internal_duplicates": 0,
-    "duplicates_against_prior": 0,
-    "new_unique": 20,
+    "duplicates_against_prior": 2,
+    "new_unique": 18,
     "deduplication_key": "case_insensitive owner/repository"
   },
-  "classification_counts": {
+  "classification_counts_raw": {
     "specification": 3,
     "skill_collection": 8,
     "single_skill_or_domain_package": 3,
@@ -22,9 +22,18 @@
     "adjacent_search_hit": 2,
     "unclear_search_hit": 4
   },
+  "classification_counts_new_unique": {
+    "specification": 2,
+    "skill_collection": 7,
+    "single_skill_or_domain_package": 3,
+    "awesome_index": 0,
+    "skill_tooling": 0,
+    "adjacent_search_hit": 2,
+    "unclear_search_hit": 4
+  },
   "repositories": [
-    {"github_id":"1135063276","repository_full_name":"HoangNguyen0403/agent-skills-standard","default_branch":"develop","size":5499,"classification":"specification","duplicate_against_prior":false},
-    {"github_id":"1079456184","repository_full_name":"K-Dense-AI/scientific-agent-skills","default_branch":"main","size":239001,"classification":"skill_collection","duplicate_against_prior":false},
+    {"github_id":"1135063276","repository_full_name":"HoangNguyen0403/agent-skills-standard","default_branch":"develop","size":5499,"classification":"specification","duplicate_against_prior":true,"prior_source":"sources/catalog/batches/agent-skill-pages-1-10.json"},
+    {"github_id":"1079456184","repository_full_name":"K-Dense-AI/scientific-agent-skills","default_branch":"main","size":239001,"classification":"skill_collection","duplicate_against_prior":true,"prior_source":"sources/catalog/github-agent-skills-index.json"},
     {"github_id":"1127110039","repository_full_name":"OthmanAdi/planning-with-files","default_branch":"master","size":12371,"classification":"unclear_search_hit","duplicate_against_prior":false},
     {"github_id":"743825398","repository_full_name":"ageerle/ruoyi-ai","default_branch":"main","size":69277,"classification":"adjacent_search_hit","duplicate_against_prior":false},
     {"github_id":"1189740753","repository_full_name":"petrkindlmann/qa-skills","default_branch":"main","size":1816,"classification":"skill_collection","duplicate_against_prior":false},
@@ -46,9 +55,13 @@
   ],
   "verification": {
     "repository_identity": "verified_by_github_repository_search",
-    "deduplication": "each returned owner/repository identity was checked against the existing AI-handbook catalog artifacts via GitHub repository code search; no exact prior identity match was found",
+    "deduplication": "corrected_after_direct_comparison_with_prior_authority_artifacts",
     "classification": "provisional_from_repository_identity_only",
     "content": "not_started",
+    "corrections": [
+      "K-Dense-AI/scientific-agent-skills was already present in the 304-repository base catalog.",
+      "HoangNguyen0403/agent-skills-standard was already added as a new unique repository by agent-skill-pages-1-10.json."
+    ],
     "note": "Index-only batch. README, SKILL.md, scripts, references, evals, stars, and implementation content were not read."
   }
 }
