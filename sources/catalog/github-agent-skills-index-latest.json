@@ -1,6 +1,6 @@
 {
   "schema_version": "1.2",
-  "observed_at": "2026-08-07T04:10:10+08:00",
+  "observed_at": "2026-08-07T04:18:56+08:00",
   "status": "composed_discovery_catalog",
   "scope": "github_agent_skills_repository_index",
   "composition": {
@@ -32,7 +32,8 @@
       {"path":"sources/catalog/batches/agent-skills-standard-page-3.json","commit":"42df855e68e74dfd87173657af94d7be37baec23","query":"\"agent skills standard\" in:name,description","raw_hits":20,"duplicates_against_prior":0,"new_unique":20},
       {"path":"sources/catalog/batches/agent-skills-standard-pages-4-6.json","commit":"48d5621001386e1a5cf3309371f54e0a74aa0cd6","query":"\"agent skills standard\" in:name,description","raw_hits":60,"duplicates_against_prior":0,"new_unique":60},
       {"path":"sources/catalog/batches/agent-skills-standard-page-7.json","commit":"d07bf2bf58edb314217172271d969652cd51f61d","query":"\"agent skills standard\" in:name,description","raw_hits":20,"duplicates_against_prior":0,"new_unique":20},
-      {"path":"sources/catalog/batches/agent-skills-standard-page-8.json","commit":"1e3d03371795c7ffe380db32bfbe7256b50501fb","query":"\"agent skills standard\" in:name,description","raw_hits":20,"duplicates_against_prior":0,"new_unique":20}
+      {"path":"sources/catalog/batches/agent-skills-standard-page-8.json","commit":"1e3d03371795c7ffe380db32bfbe7256b50501fb","query":"\"agent skills standard\" in:name,description","raw_hits":20,"duplicates_against_prior":0,"new_unique":20},
+      {"path":"sources/catalog/batches/agent-skills-standard-pages-9-10.json","commit":"1cb4f8bed2cf49b9483779e43bb3e191e961a7c3","query":"\"agent skills standard\" in:name,description","raw_hits":40,"duplicates_against_prior":0,"new_unique":40}
     ],
     "historical_dedup_corrections": [
       {"repository":"K-Dense-AI/scientific-agent-skills","duplicate_batch":"sources/catalog/batches/agent-skills-standard-page-1.json","authoritative_prior_source":"sources/catalog/github-agent-skills-index.json"},
@@ -40,18 +41,18 @@
     ]
   },
   "progress": {
-    "raw_search_hits": 1561,
+    "raw_search_hits": 1601,
     "merged_existing_candidates": 4,
-    "raw_total": 1565,
-    "unique_total": 1465,
+    "raw_total": 1605,
+    "unique_total": 1505,
     "duplicates_removed": 100,
-    "new_unique_repositories_this_run": 20,
-    "net_unique_delta_vs_previous_manifest": 20,
-    "deep_analysis_eligible": 1098,
+    "new_unique_repositories_this_run": 40,
+    "net_unique_delta_vs_previous_manifest": 40,
+    "deep_analysis_eligible": 1138,
     "held_for_review": 367,
     "classification_counts": {
-      "specification": 123,
-      "skill_collection": 483,
+      "specification": 162,
+      "skill_collection": 484,
       "single_skill_or_domain_package": 87,
       "awesome_index": 36,
       "skill_tooling": 369,
@@ -62,6 +63,6 @@
   "verification": {
     "repository_identity": "verified_by_github_connector",
     "content": "not_started",
-    "note": "This run collected 20 repository identities from page 8 of the agent skills standard query at per_page=20. No README, SKILL.md, scripts, references, evaluations, stars, or implementation content was read."
+    "note": "This run collected 40 repository identities from pages 9-10 of the agent skills standard query at per_page=20. No README, SKILL.md, scripts, references, evaluations, stars, or implementation content was read."
   }
 }
