@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.2",
+  "observed_at": "2026-08-07T03:12:52+08:00",
+  "status": "discovery_batch",
+  "scope": "github_agent_skills_repository_index",
+  "query": "\"agent skills validator\" in:name,description",
+  "pages": [
+    1
+  ],
+  "results_per_page": 100,
+  "raw_hits": 53,
+  "deep_content_reading": false,
+  "classification_basis": "repository_identity_and_search_query_only",
+  "base_catalog": {
+    "path": "sources/catalog/github-agent-skills-index-latest.json",
+    "blob_sha": "f6a59f2de9367c10b9b0896a778bb703cab9cc22",
+    "unique_total": 1256
+  },
+  "deduplication": {
+    "key": "case_insensitive owner/repository",
+    "duplicates_within_batch": [],
+    "duplicates_against_base": [
+      "swarmclawai/agent-skills-lint",
+      "kriptoburak/agent-skills-lint"
+    ],
+    "new_unique": 51,
+    "composed_unique_total": 1307
+  },
+  "classification_counts_raw": {
+    "specification": 2,
+    "skill_collection": 27,
+    "single_skill_or_domain_package": 1,
+    "awesome_index": 0,
+    "skill_tooling": 17,
+    "adjacent_search_hit": 3,
+    "unclear_search_hit": 3
+  },
+  "classification_counts_new_unique": {
+    "specification": 2,
+    "skill_collection": 27,
+    "single_skill_or_domain_package": 1,
+    "awesome_index": 0,
+    "skill_tooling": 15,
+    "adjacent_search_hit": 3,
+    "unclear_search_hit": 3
+  },
+  "composed_classification_totals": {
+    "specification": 4,
+    "skill_collection": 461,
+    "single_skill_or_domain_package": 80,
+    "awesome_index": 36,
+    "skill_tooling": 368,
+    "adjacent_search_hit": 132,
+    "unclear_search_hit": 226
+  },
+  "progress": {
+    "deep_analysis_eligible": 949,
+    "held_for_review": 358
+  },
+  "repository_tuple_fields": [
+    "full_name",
+    "classification",
+    "is_new_unique"
+  ],
+  "repositories": [
+    ["intertwine/dspy-agent-skills", "skill_collection", true],
+    ["motiful/skill-forge", "skill_tooling", true],
+    ["vaibhavtupe/skill-guard", "skill_tooling", true],
+    ["swarmclawai/agent-skills-lint", "skill_tooling", false],
+    ["crisemy/skills-best-practices-guidelines", "specification", true],
+    ["bjester/shinyskills", "unclear_search_hit", true],
+    ["ronaldtebrake/agent-skills-validator", "skill_tooling", true],
+    ["coffeegrind123/skill-refiner", "skill_tooling", true],
+    ["danieljustus/symaira-skills", "skill_collection", true],
+    ["kriptoburak/shinyskills", "unclear_search_hit", true],
+    ["ollieb89/ai-devops-actions", "adjacent_search_hit", true],
+    ["acruiz375/skill-reviewer-pre-install", "skill_tooling", true],
+    ["harrypham2000/skill-audit", "skill_tooling", true],
+    ["ModelBound/modelbound-mcp-server", "adjacent_search_hit", true],
+    ["Meet-Miyani/agent-skill-validator", "skill_tooling", true],
+    ["srinitude/building-deterministic-skills", "specification", true],
+    ["vtupe-equinix/skill-guard", "skill_tooling", true],
+    ["kriptoburak/agent-skills-validator", "skill_tooling", true],
+    ["raphaelstolt/agent-skills-validator", "skill_tooling", true],
+    ["azrabano23/interp", "unclear_search_hit", true],
+    ["Flower-F/fix-cr-expert-skill", "single_skill_or_domain_package", true],
+    ["kriptoburak/modelbound-mcp-server", "adjacent_search_hit", true],
+    ["kriptoburak/agent-skills-lint", "skill_tooling", false],
+    ["kriptoburak/skill-audit", "skill_tooling", true],
+    ["JokerRun/dspy-agent-skills", "skill_collection", true],
+    ["samithaj/dspy-agent-skills", "skill_collection", true],
+    ["samarthpatel24/dspy-agent-skills", "skill_collection", true],
+    ["lightforgemedia/dspy-agent-skills", "skill_collection", true],
+    ["OCWC22/dspy-agent-skills", "skill_collection", true],
+    ["OctAg0nO/dspy-agent-skills", "skill_collection", true],
+    ["Dunc4nJ/dspy-agent-skills", "skill_collection", true],
+    ["lateralus426/dspy-agent-skills", "skill_collection", true],
+    ["shitshorty/dspy-agent-skills", "skill_collection", true],
+    ["llorella/dspy-agent-skills", "skill_collection", true],
+    ["tabtablabs-dev/dspy-agent-skills", "skill_collection", true],
+    ["tbergman/dspy-agent-skills", "skill_collection", true],
+    ["brndngln/dspy-agent-skills", "skill_collection", true],
+    ["netzkontrast/dspy-agent-skills", "skill_collection", true],
+    ["trieungoctam/dspy-agent-skills", "skill_collection", true],
+    ["Limooo-echo/dspy-agent-skills", "skill_collection", true],
+    ["zelohon/skill-forge", "skill_tooling", true],
+    ["gigantsc/skill-forge", "skill_tooling", true],
+    ["fengshurong/skill-forge", "skill_tooling", true],
+    ["kriptoburak/skill-forge", "skill_tooling", true],
+    ["linm1/dspy-agent-skills", "skill_collection", true],
+    ["AriMKatz/dspy-agent-skills", "skill_collection", true],
+    ["emilva/dspy-agent-skills", "skill_collection", true],
+    ["khalefa-ow/dspy-agent-skills", "skill_collection", true],
+    ["santoshdahale/dspy-agent-skills", "skill_collection", true],
+    ["rbgit/dspy-agent-skills", "skill_collection", true],
+    ["marklabz/dspy-agent-skills", "skill_collection", true],
+    ["oraekene/dspy-agent-skills", "skill_collection", true],
+    ["kziemski/dspy-agent-skills", "skill_collection", true]
+  ],
+  "verification": {
+    "repository_identity": "verified_by_github_connector",
+    "deduplication": "verified_by_exact_case_insensitive_identity_comparison_against_the_github_indexed_1154_repository_ai_handbook_snapshot_plus_direct_comparison_with_the_two_newer_batches",
+    "content": "not_started",
+    "note": "Repository identities were collected from the complete accessible page-1 result set. README, SKILL.md, scripts, references, evaluations, stars, quality, and implementation behavior were not read."
+  }
+}
