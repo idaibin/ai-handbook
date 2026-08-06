@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0",
-  "observed_at": "2026-08-07T00:49:28+08:00",
+  "schema_version": "1.1",
+  "observed_at": "2026-08-07T01:03:00+08:00",
   "status": "composed_discovery_catalog",
   "scope": "github_agent_skills_repository_index",
   "composition": {
@@ -14,34 +14,44 @@
     "deltas": [
       {
         "path": "sources/catalog/batches/mcp-skills-pages-1-10.json",
+        "commit": "c28dfe4c018f404186925e7ff47384b9aa876367",
         "query": "\"mcp skills\" in:name,description",
         "raw_hits": 100,
+        "duplicates_against_prior": 0,
         "new_unique": 100
+      },
+      {
+        "path": "sources/catalog/batches/skill-catalog-pages-1-10.json",
+        "commit": "32a54ab7171c8449832a1271cb639a6ab0f364a4",
+        "query": "\"skill catalog\" in:name,description",
+        "raw_hits": 100,
+        "duplicates_against_prior": 2,
+        "new_unique": 98
       }
     ]
   },
   "progress": {
-    "raw_search_hits": 400,
+    "raw_search_hits": 500,
     "merged_existing_candidates": 4,
-    "raw_total": 404,
-    "unique_total": 404,
-    "duplicates_removed": 0,
-    "new_unique_repositories_this_run": 100,
-    "deep_analysis_eligible": 243,
-    "held_for_review": 161,
+    "raw_total": 504,
+    "unique_total": 502,
+    "duplicates_removed": 2,
+    "new_unique_repositories_this_run": 98,
+    "deep_analysis_eligible": 282,
+    "held_for_review": 220,
     "classification_counts": {
       "specification": 1,
-      "skill_collection": 138,
-      "single_skill_or_domain_package": 56,
-      "awesome_index": 25,
-      "skill_tooling": 23,
-      "adjacent_search_hit": 71,
-      "unclear_search_hit": 90
+      "skill_collection": 158,
+      "single_skill_or_domain_package": 57,
+      "awesome_index": 26,
+      "skill_tooling": 40,
+      "adjacent_search_hit": 83,
+      "unclear_search_hit": 137
     }
   },
   "verification": {
     "repository_identity": "verified_by_github_connector",
     "content": "not_started",
-    "note": "Compose the referenced base catalog and delta batches using the stated case-insensitive key. No deep repository content was read."
+    "note": "Compose the referenced base catalog and delta batches using the stated case-insensitive key. The two repeated identities are jMerta/codex-skills and vadimcomanescu/codex-skills. No deep repository content was read."
   }
 }
