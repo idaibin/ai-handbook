@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.3",
+  "observed_at": "2026-08-07T07:11:05+08:00",
+  "status": "discovery_batch",
+  "scope": "github_agent_skills_repository_index",
+  "query": "\"agent skills registry\" in:name,description",
+  "pages": [7],
+  "results_per_page": 20,
+  "raw_hits": 20,
+  "deep_content_reading": false,
+  "classification_basis": "repository_identity_and_search_context_only",
+  "base_catalog": {
+    "path": "sources/catalog/github-agent-skills-index-latest.json",
+    "commit": "021bab3cf22813ab41d968c3e3f5fab832c5af7f",
+    "blob_sha": "11b97ef45aae51b6b9641c97e064843fa6cd197b",
+    "unique_total": 1838
+  },
+  "deduplication": {
+    "key": "case_insensitive owner/repository",
+    "duplicates_within_batch": [],
+    "duplicates_against_base": [
+      "mur-run/skill-registry"
+    ],
+    "new_unique": 19,
+    "composed_unique_total": 1857,
+    "verification": "All page-7 identities were compared directly against persisted agent-skills-registry pages 1-6. The overlapping historical skill-registry pages 1-10 batch confirms mur-run/skill-registry as an existing identity. Additional directly inspected overlapping batches included the initial agent-skills index, agent-skill pages 1-10, agent-skills-hub, skill-hub, skill-marketplace, agent-skills-marketplace, agent-skills-directory, and agent-skills-examples artifacts; no other page-7 exact identity was found. Exact AI-handbook code search was also attempted for all 20 identities, but returned a false negative even for known duplicate mur-run/skill-registry, so code-search emptiness was not treated as proof of uniqueness."
+  },
+  "classification_counts_raw": {
+    "specification": 0,
+    "skill_collection": 9,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 8,
+    "adjacent_search_hit": 1,
+    "unclear_search_hit": 2
+  },
+  "classification_counts_new_unique": {
+    "specification": 0,
+    "skill_collection": 9,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 8,
+    "adjacent_search_hit": 1,
+    "unclear_search_hit": 1
+  },
+  "progress": {
+    "added_to_deep_analysis_eligible": 17,
+    "added_to_held_for_review": 2
+  },
+  "repository_fields": [
+    "github_id",
+    "full_name",
+    "default_branch",
+    "size_kb",
+    "archived",
+    "result_rank",
+    "classification",
+    "is_new_unique",
+    "deep_analysis_eligible"
+  ],
+  "repositories": [
+    ["1266252824", "kriptoburak/aguara-observatory", "main", 46940, false, 1, "adjacent_search_hit", true, false],
+    ["1241587994", "OmMaBaMiHong/openskills", "main", 0, false, 2, "unclear_search_hit", true, false],
+    ["1272773159", "kriptoburak/skills-20", "main", 28, false, 3, "skill_collection", true, true],
+    ["1314139619", "miguel-leca-superside/superside-skills", "main", 53, false, 4, "skill_collection", true, true],
+    ["1307946481", "ekuyum/agent-skills", "main", 139, false, 5, "skill_collection", true, true],
+    ["1288741052", "kriptoburak/agentic_skills_registry", "main", 76, false, 6, "skill_tooling", true, true],
+    ["1263740860", "kriptoburak/agent-skills-registry", "main", 95, false, 7, "skill_tooling", true, true],
+    ["1151381703", "cellinlab/agent-skills-registry", "main", 197, false, 8, "skill_tooling", true, true],
+    ["1267612201", "muhilvarnan-v/agent-skills-registry", "main", 25, false, 9, "skill_tooling", true, true],
+    ["1267196174", "kriptoburak/agentos-skills-registry", "master", 282, false, 10, "skill_tooling", true, true],
+    ["1184700238", "sushil-kamble/skillpod", "main", 461, false, 11, "skill_tooling", true, true],
+    ["1243016479", "MackDing/agent-skills-zh", "main", 16462, false, 12, "skill_collection", true, true],
+    ["1310404712", "gomesfin/hnl-agent-skills", "master", 136, false, 13, "skill_collection", true, true],
+    ["1299897400", "0xsarwagya/hnl-agent-skills-ontoly", "master", 137, false, 14, "skill_collection", true, true],
+    ["1285796459", "kriptoburak/skillforge", "main", 4640, false, 15, "skill_tooling", true, true],
+    ["1279840684", "WuFengSheng/skills", "main", 3587, false, 16, "skill_collection", true, true],
+    ["1309132316", "johnjohnnc/hnl-agent-skills", "master", 136, false, 17, "skill_collection", true, true],
+    ["1283553173", "kriptoburak/hnl-agent-skills", "master", 139, false, 18, "skill_collection", true, true],
+    ["1283066770", "mur-run/skill-registry", "main", 57, false, 19, "unclear_search_hit", false, false],
+    ["1322792630", "Eileenes/SkillVault", "main", 23, false, 20, "skill_tooling", true, true]
+  ],
+  "coverage": {
+    "completed_pages": [7],
+    "next_page": 8,
+    "query_complete": false,
+    "next_page_probe": "page 8 returned 20 repositories and was not merged in this batch"
+  },
+  "verification": {
+    "repository_identity": "verified_by_github_connector",
+    "deduplication": "verified_against_current-query pages plus directly inspected overlapping persisted batch artifacts; code-search false negatives explicitly excluded as uniqueness evidence",
+    "content": "not_started",
+    "note": "Index-only. No README, SKILL.md, scripts, references, eval contents, stars, quality, or implementation content was read."
+  }
+}
