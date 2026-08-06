@@ -31,16 +31,18 @@ Machine-readable batch: [`../batches/agent-skills-authoring-search.json`](../bat
 
 Internal case-insensitive `owner/repository` deduplication is complete: `14 raw -> 14 distinct batch identities`.
 
-Exact deduplication against the full existing `1731`-repository catalog is **not verified in this run**. The current canonical manifest stores composed totals and batch references rather than one complete exact-identity array. The available GitHub code-search path also returned no result for an identity that is known to be present in the current catalog, so an empty code-search result cannot safely be used as proof that a candidate is absent.
+Exact deduplication against the full existing catalog is **not verified in this run**. At batch collection time the canonical manifest contained `1731` unique repositories. That manifest stores composed totals and batch references rather than one complete exact-identity array. The available GitHub code-search path also returned no result for an identity known to be present in the catalog, so an empty code-search result cannot safely be used as proof that a candidate is absent.
+
+A separate index writer advanced the canonical manifest during this run to `1739` unique repositories using the `"agent skills registry"` page-1 batch. Current canonical manifest blob: `778f812b8d513ddfdd91662ca7f31a1671791cae`; compose commit: `678e9598812028246bdeaed117f9fe21d1511ced`. The authoring candidate batch was therefore intentionally not composed on top of its stale `1731` base.
 
 For that reason this run does **not**:
 
 - claim any of the 14 candidates as new unique repositories;
-- change the canonical `1731` unique-repository count;
+- change the canonical unique-repository count;
 - change canonical classification totals;
 - mark any candidate as deep-analysis complete.
 
-This prevents a false unique-count increase while preserving the verified GitHub search results for later exact batch-level reconciliation.
+This prevents both false deduplication and lost-update errors while preserving the verified GitHub search results for later exact batch-level reconciliation.
 
 ## Validation boundary
 
@@ -50,4 +52,7 @@ Not read or assessed: README, `SKILL.md`, scripts, references, evals, stars, imp
 
 ## Commit record
 
-The machine-readable candidate batch was committed as `6ed817fa779d63ef64d339d5ea7e9c939838a1c9` (`chore(research): stage agent skills authoring index batch`). The file was fetched back from `main` after the write and matched the staged 14-candidate result set.
+- `6ed817fa779d63ef64d339d5ea7e9c939838a1c9` — `chore(research): stage agent skills authoring index batch`
+- `b99b32c92665749bf4fc88697dc51a10bcfc2e9c` — initial run record
+
+The machine-readable batch was fetched back from `main` after the write and matched the staged 14-candidate result set. The canonical manifest was also re-read after the concurrent registry update; this run did not overwrite it.
