@@ -1,6 +1,6 @@
 {
   "schema_version": "1.2",
-  "observed_at": "2026-08-07T04:40:27+08:00",
+  "observed_at": "2026-08-07",
   "status": "composed_discovery_catalog",
   "scope": "github_agent_skills_repository_index",
   "composition": {
@@ -36,7 +36,8 @@
       {"path":"sources/catalog/batches/agent-skills-standard-pages-9-10.json","commit":"1cb4f8bed2cf49b9483779e43bb3e191e961a7c3","query":"\"agent skills standard\" in:name,description","raw_hits":40,"duplicates_against_prior":0,"new_unique":40},
       {"path":"sources/catalog/batches/agent-skills-eval-page-1.json","commit":"1d4ec765bf679ebd135b4a1169413ff48610e1bb","query":"\"agent skills eval\" in:name,description","raw_hits":20,"duplicates_against_prior":1,"new_unique":19},
       {"path":"sources/catalog/batches/agent-skills-eval-page-2.json","commit":"88c36ba4a6871e2313b81a34eea92c780bc0f108","query":"\"agent skills eval\" in:name,description","raw_hits":20,"duplicates_against_prior":1,"new_unique":19},
-      {"path":"sources/catalog/batches/agent-skills-eval-page-3.json","commit":"917b64b3fae8b560e600bf2ce6ab2ee41802e19c","query":"\"agent skills eval\" in:name,description","raw_hits":4,"duplicates_against_prior":0,"new_unique":4}
+      {"path":"sources/catalog/batches/agent-skills-eval-page-3.json","commit":"917b64b3fae8b560e600bf2ce6ab2ee41802e19c","query":"\"agent skills eval\" in:name,description","raw_hits":4,"duplicates_against_prior":0,"new_unique":4},
+      {"path":"sources/catalog/batches/agent-skills-benchmark-search.json","commit":"be28b04abc3fceb3c03e87d6172af6e15f8214ac","query":"\"agent skills benchmark\" in:name,description","raw_hits":16,"duplicates_against_prior":0,"new_unique":16}
     ],
     "historical_dedup_corrections": [
       {"repository":"K-Dense-AI/scientific-agent-skills","duplicate_batch":"sources/catalog/batches/agent-skills-standard-page-1.json","authoritative_prior_source":"sources/catalog/github-agent-skills-index.json"},
@@ -44,21 +45,21 @@
     ]
   },
   "progress": {
-    "raw_search_hits": 1645,
+    "raw_search_hits": 1661,
     "merged_existing_candidates": 4,
-    "raw_total": 1649,
-    "unique_total": 1547,
+    "raw_total": 1665,
+    "unique_total": 1563,
     "duplicates_removed": 102,
-    "new_unique_repositories_this_run": 4,
-    "net_unique_delta_vs_previous_manifest": 4,
-    "deep_analysis_eligible": 1180,
+    "new_unique_repositories_this_run": 16,
+    "net_unique_delta_vs_previous_manifest": 16,
+    "deep_analysis_eligible": 1196,
     "held_for_review": 367,
     "classification_counts": {
       "specification": 162,
       "skill_collection": 484,
       "single_skill_or_domain_package": 87,
       "awesome_index": 36,
-      "skill_tooling": 411,
+      "skill_tooling": 427,
       "adjacent_search_hit": 136,
       "unclear_search_hit": 231
     }
@@ -66,6 +67,6 @@
   "verification": {
     "repository_identity": "verified_by_github_connector",
     "content": "not_started",
-    "note": "This run collected the four remaining repository identities from page 3 of the agent skills eval query at per_page=20. Page 4 returned zero results, confirming the accessible query boundary. No prior indexed identity matched these four repositories. No README, SKILL.md, scripts, references, evaluations, stars, or implementation content was read."
+    "note": "This run collected the complete accessible result set for the agent skills benchmark query: sixteen repositories on page 1 at per_page=50, with page 2 returning zero. Case-insensitive full-name checks against the current AI-handbook indexed artifacts found no prior match for any of the sixteen repositories. No README, SKILL.md, scripts, references, eval contents, stars, or implementation content was read."
   }
 }
