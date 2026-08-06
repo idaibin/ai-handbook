@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.3",
+  "observed_at": "2026-08-07T06:40:12+08:00",
+  "status": "discovery_batch",
+  "scope": "github_agent_skills_repository_index",
+  "query": "\"agent skills registry\" in:name,description",
+  "pages": [4],
+  "results_per_page": 20,
+  "raw_hits": 20,
+  "deep_content_reading": false,
+  "classification_basis": "repository_identity_and_search_context_only",
+  "base_catalog": {
+    "path": "sources/catalog/github-agent-skills-index-latest.json",
+    "commit": "f1089c57551fbce856cbcbd09579f5b016fe191a",
+    "blob_sha": "267724a1f1eba50bfeb5894478bb3cb6e7c70adb",
+    "unique_total": 1778
+  },
+  "deduplication": {
+    "key": "case_insensitive owner/repository",
+    "duplicates_within_batch": [],
+    "duplicates_against_base": [],
+    "new_unique": 20,
+    "composed_unique_total": 1798,
+    "verification": "AI-handbook code search was executed for every page-4 repository identity using the full owner/repository identity. No prior persisted indexed match was returned for any of the 20 identities."
+  },
+  "classification_counts_raw": {
+    "specification": 0,
+    "skill_collection": 18,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 1,
+    "adjacent_search_hit": 1,
+    "unclear_search_hit": 0
+  },
+  "classification_counts_new_unique": {
+    "specification": 0,
+    "skill_collection": 18,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 1,
+    "adjacent_search_hit": 1,
+    "unclear_search_hit": 0
+  },
+  "progress": {
+    "added_to_deep_analysis_eligible": 19,
+    "added_to_held_for_review": 1
+  },
+  "repository_fields": [
+    "github_id",
+    "full_name",
+    "default_branch",
+    "size_kb",
+    "archived",
+    "result_rank",
+    "classification",
+    "is_new_unique",
+    "deep_analysis_eligible"
+  ],
+  "repositories": [
+    ["1154189591", "skeletor-js/skills", "main", 6637, false, 1, "skill_collection", true, true],
+    ["1324303979", "VimicoachAdmin/skills", "main", 6948, false, 2, "skill_collection", true, true],
+    ["1282494750", "bitphill/skills", "main", 7087, false, 3, "skill_collection", true, true],
+    ["1178393584", "bizmindx/skills", "main", 3728, false, 4, "skill_collection", true, true],
+    ["1155326026", "nloui/skills", "main", 3594, false, 5, "skill_collection", true, true],
+    ["1275553622", "CCAgentOrg/skills", "main", 7008, false, 6, "skill_collection", true, true],
+    ["1162463687", "shanjairaj7/skills", "main", 3704, false, 7, "skill_collection", true, true],
+    ["1290546741", "endo-yusuke/skills", "main", 6862, false, 8, "skill_collection", true, true],
+    ["1314376498", "fairysquadmother/zo-skills", "main", 6868, false, 9, "skill_collection", true, true],
+    ["1315672153", "Chilli9527/skills", "main", 7199, false, 10, "skill_collection", true, true],
+    ["1172354427", "jyonah/skills", "main", 3734, false, 11, "skill_collection", true, true],
+    ["1310126544", "Jeff-Kazzee/skills", "main", 7139, false, 12, "skill_collection", true, true],
+    ["1150541522", "MahoneyContextProtocol/skills", "main", 3973, false, 13, "skill_collection", true, true],
+    ["1160491032", "Grauer813/skills", "main", 3624, false, 14, "skill_collection", true, true],
+    ["1260146551", "Cooper3363/ai-agent-skills-stable-registry", "main", 167, false, 15, "skill_tooling", true, true],
+    ["1184705483", "sushil-kamble/skills", "main", 27, false, 16, "skill_collection", true, true],
+    ["1234319951", "AKHtun/skills", "main", 7174, false, 17, "skill_collection", true, true],
+    ["1198933312", "djeviled/skills", "main", 3814, false, 18, "skill_collection", true, true],
+    ["1187668997", "arkcle83/skills", "main", 3780, false, 19, "skill_collection", true, true],
+    ["1149280332", "R09722akaBennett/ai-daily-2026-02-04-agent-skill-registry", "main", 10, false, 20, "adjacent_search_hit", true, false]
+  ],
+  "coverage": {
+    "completed_pages": [4],
+    "next_page": 5,
+    "query_complete": false,
+    "next_page_probe": "page 5 returned 20 repositories and was not merged in this batch"
+  },
+  "verification": {
+    "repository_identity": "verified_by_github_connector",
+    "deduplication": "verified_against_persisted_AI-handbook_index_artifacts_and_code_search",
+    "content": "not_started",
+    "note": "Index-only. No README, SKILL.md, scripts, references, eval contents, stars, quality, or implementation content was read."
+  }
+}
