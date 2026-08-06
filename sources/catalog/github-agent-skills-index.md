@@ -2,19 +2,19 @@
 
 ## Current verified catalog
 
-- Raw GitHub search hits: `1969`
+- Raw GitHub search hits: `1989`
 - Existing discovery-inbox candidates merged and re-verified: `4`
-- Raw identities across all inputs: `1973`
-- Unique repositories after case-insensitive `owner/repository` deduplication: `1857`
+- Raw identities across all inputs: `1993`
+- Unique repositories after case-insensitive `owner/repository` deduplication: `1877`
 - Exact duplicates removed across current inputs: `116`
-- New unique repositories collected in this run: `19`
-- Net catalog delta versus the previous verified manifest: `+19`
-- Provisionally eligible for later deep analysis: `1446`
-- Held as adjacent or unclear search hits: `411`
+- New unique repositories collected in this run: `20`
+- Net catalog delta versus the previous verified manifest: `+20`
+- Provisionally eligible for later deep analysis: `1463`
+- Held as adjacent or unclear search hits: `414`
 
 Composed machine-readable authority: [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json).
 
-The current manifest composes the previous verified `1838`-repository canonical manifest with page `7` of the `agent skills registry` discovery query.
+The current manifest composes the previous verified `1857`-repository canonical manifest with page `8` of the `agent skills registry` discovery query.
 
 ## Completed search coverage
 
@@ -47,7 +47,7 @@ The current manifest composes the previous verified `1838`-repository canonical 
 
 ## In-progress search coverage
 
-- `"agent skills registry" in:name,description`, pages `1-7` complete at `20` results per page; page `8` was probed and returned `20` repositories, so the next merge boundary is page `8`.
+- `"agent skills registry" in:name,description`, pages `1-8` complete at `20` results per page; page `9` was probed and returned `20` repositories, so the next merge boundary is page `9`.
 
 ## This run
 
@@ -57,34 +57,34 @@ Query:
 "agent skills registry" in:name,description
 ```
 
-Processed page `7` at `per_page=20`.
+Processed page `8` at `per_page=20`.
 
 - Raw repository identities: `20`
 - Internal batch duplicates: `0`
-- Confirmed duplicates against the prior verified catalog: `1`
-- Added as new repositories: `19`
-- Previous verified catalog: `1838`
-- Updated composed catalog: `1857`
+- Confirmed duplicates against the prior verified catalog: `0`
+- Added as new repositories: `20`
+- Previous verified catalog: `1857`
+- Updated composed catalog: `1877`
 - Added to provisional deep-analysis queue: `17`
-- Added to held-for-review: `2`
+- Added to held-for-review: `3`
 
-All page-7 identities were compared directly against persisted `agent-skills-registry` pages `1-6`. `mur-run/skill-registry` was confirmed in the earlier `skill-registry` pages `1-10` batch and was therefore not added again. Additional overlapping historical batch artifacts inspected in this run included the initial `agent skills` index, `agent skill`, `agent skills hub`, `skill hub`, `skill marketplace`, `agent skills marketplace`, `agent skills directory`, and `agent skills examples`; no other page-7 exact identity was found.
+All page-8 identities were directly compared against persisted `agent-skills-registry` pages `1-7`, plus directly inspected overlapping `skill-registry` pages `1-10`, `agent-skills-hub` pages `1-2`, and `skill-hub` pages `1-10` batch artifacts. No exact case-insensitive `owner/repository` identity was found in those persisted overlap sets.
 
-AI-handbook code search was attempted for all 20 full identities, but it returned an empty result even for the known `mur-run/skill-registry` duplicate. Therefore empty code-search results were explicitly not used as proof of uniqueness in this run.
+Exact AI-handbook code search was also attempted for page-8 identities and returned no positive prior identity matches. Because earlier runs demonstrated code-search false negatives for known persisted identities, empty code-search results were not treated as uniqueness proof.
 
-The 19 new identities were provisionally classified only from repository identity and GitHub search context: `9 skill_collection`, `8 skill_tooling`, `1 adjacent_search_hit`, and `1 unclear_search_hit`. Repository IDs, default branches, sizes, archived flags, result ordering, classifications, eligibility, and verification notes are stored in [`batches/agent-skills-registry-page-7.json`](batches/agent-skills-registry-page-7.json).
+The 20 new identities were provisionally classified only from repository identity and GitHub search context: `4 skill_collection`, `1 single_skill_or_domain_package`, `12 skill_tooling`, and `3 unclear_search_hit`. Repository IDs, default branches, sizes, archived flags, result ordering, classifications, eligibility, and verification notes are stored in [`batches/agent-skills-registry-page-8.json`](batches/agent-skills-registry-page-8.json).
 
 ## Classification totals
 
 | Classification | Count | Index-stage meaning |
 | --- | ---: | --- |
 | `specification` | 163 | Identity strongly indicates a Skill specification, standard, or normative guidance. |
-| `skill_collection` | 605 | Identity indicates a collection or examples of Skills. |
-| `single_skill_or_domain_package` | 103 | Identity indicates one Skill or a domain-focused package. |
+| `skill_collection` | 609 | Identity indicates a collection or examples of Skills. |
+| `single_skill_or_domain_package` | 104 | Identity indicates one Skill or a domain-focused package. |
 | `awesome_index` | 38 | Identity indicates a curated Skill index. |
-| `skill_tooling` | 537 | Identity indicates validation, linting, evaluation, testing, packaging, discovery, registry, marketplace, management, benchmark, SDK, template, fixture, or runtime tooling. |
+| `skill_tooling` | 549 | Identity indicates validation, linting, evaluation, testing, packaging, discovery, registry, marketplace, management, benchmark, SDK, template, fixture, or runtime tooling. |
 | `adjacent_search_hit` | 152 | Related to agents or Skills, but not clearly a Skill repository from identity alone. |
-| `unclear_search_hit` | 259 | Identity is insufficient for reliable classification. |
+| `unclear_search_hit` | 262 | Identity is insufficient for reliable classification. |
 
 ## Evidence boundary
 
@@ -92,12 +92,12 @@ This remains an index-only catalog. GitHub repository search verified repository
 
 ## Validation
 
-- Previous canonical manifest commit: `021bab3cf22813ab41d968c3e3f5fab832c5af7f` (`1838` repositories).
-- `agent skills registry` page-7 batch commit: `26c827f7d9a18aef3e29a845a1615fc22ab9ebf3`.
-- Composed latest-manifest commit: `abf814fecb382bdaef545e805339106602089d32`.
-- `1838 + 19 = 1857` current unique repositories.
-- `1973 - 116 = 1857` raw-to-unique reconciliation.
-- Classification totals resolve to `1857`.
-- `1446 + 411 = 1857`, matching the eligible and held partitions.
-- Next index boundary: `"agent skills registry" in:name,description`, page `8`, `per_page=20`.
+- Previous canonical manifest commit: `abf814fecb382bdaef545e805339106602089d32` (`1857` repositories).
+- `agent skills registry` page-8 batch commit: `2f5013ca8bf86dd3975345fcfdd83b4b8fa889a9`.
+- Composed latest-manifest commit: `5c3fc57cfd8c5d9b1fc006dde306a08fc477c8dc`.
+- `1857 + 20 = 1877` current unique repositories.
+- `1993 - 116 = 1877` raw-to-unique reconciliation.
+- Classification totals resolve to `1877`.
+- `1463 + 414 = 1877`, matching the eligible and held partitions.
+- Next index boundary: `"agent skills registry" in:name,description`, page `9`, `per_page=20`.
 - No README, `SKILL.md`, scripts, references, eval contents, stars, or implementation contents were read during this index-only run.
