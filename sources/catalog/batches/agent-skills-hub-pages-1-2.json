@@ -1,0 +1,257 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-08-07T02:02:39+08:00",
+  "status": "index_only_batch",
+  "scope": "github_agent_skills_repository_index",
+  "batch_id": "agent-skills-hub-pages-1-2",
+  "query": "\"agent skills hub\" in:name,description",
+  "pages": [
+    1,
+    2
+  ],
+  "results_per_page": 10,
+  "raw_hits": 20,
+  "internal_duplicates": 0,
+  "prior_catalog_unique_total": 743,
+  "duplicates_against_prior": 0,
+  "new_unique": 20,
+  "deduplication_key": "case_insensitive owner/repository",
+  "classification_basis": "repository_identity_and_search_metadata_only",
+  "classification_counts": {
+    "skill_collection": 3,
+    "single_skill_or_domain_package": 1,
+    "skill_tooling": 15,
+    "adjacent_search_hit": 1,
+    "specification": 0,
+    "awesome_index": 0,
+    "unclear_search_hit": 0
+  },
+  "verification": {
+    "repository_identity": "verified_by_github_connector",
+    "prior_catalog_comparison": "exact full-name searches against idaibin/ai-handbook",
+    "deep_content_reading": false,
+    "note": "No README, SKILL.md, scripts, references, evaluations, stars, or implementation behavior were assessed."
+  },
+  "repositories": [
+    {
+      "id": "1174625805",
+      "full_name": "zhuyansen/agent-skills-hub",
+      "url": "https://github.com/zhuyansen/agent-skills-hub",
+      "default_branch": "main",
+      "archived": false,
+      "size": 5549,
+      "classification": "skill_tooling",
+      "rank": 1,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1149771319",
+      "full_name": "agent-skills-hub/agent-skills-hub",
+      "url": "https://github.com/agent-skills-hub/agent-skills-hub",
+      "default_branch": "main",
+      "archived": false,
+      "size": 33021,
+      "classification": "skill_tooling",
+      "rank": 2,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1134865227",
+      "full_name": "youzaiAGI/agent-skills-hub",
+      "url": "https://github.com/youzaiAGI/agent-skills-hub",
+      "default_branch": "main",
+      "archived": false,
+      "size": 118,
+      "classification": "skill_tooling",
+      "rank": 3,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1200883468",
+      "full_name": "saker-ai/skillhub",
+      "url": "https://github.com/saker-ai/skillhub",
+      "default_branch": "main",
+      "archived": false,
+      "size": 762,
+      "classification": "skill_tooling",
+      "rank": 4,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1284198482",
+      "full_name": "lza6/Agent-Skills-Hub",
+      "url": "https://github.com/lza6/Agent-Skills-Hub",
+      "default_branch": "main",
+      "archived": false,
+      "size": 7220,
+      "classification": "skill_tooling",
+      "rank": 5,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1165059936",
+      "full_name": "0x-Professor/Agent-Skills-Hub",
+      "url": "https://github.com/0x-Professor/Agent-Skills-Hub",
+      "default_branch": "main",
+      "archived": false,
+      "size": 226,
+      "classification": "skill_tooling",
+      "rank": 6,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1140262501",
+      "full_name": "llsenyue/Agent-Skills-Hub",
+      "url": "https://github.com/llsenyue/Agent-Skills-Hub",
+      "default_branch": "main",
+      "archived": false,
+      "size": 2972,
+      "classification": "skill_tooling",
+      "rank": 7,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1309272092",
+      "full_name": "tmolavi/mcp-agent-skills-hub",
+      "url": "https://github.com/tmolavi/mcp-agent-skills-hub",
+      "default_branch": "main",
+      "archived": false,
+      "size": 1684,
+      "classification": "skill_tooling",
+      "rank": 8,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1132681938",
+      "full_name": "deletexiumu/AgentSkills-Hub",
+      "url": "https://github.com/deletexiumu/AgentSkills-Hub",
+      "default_branch": "main",
+      "archived": false,
+      "size": 343,
+      "classification": "skill_tooling",
+      "rank": 9,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1315795326",
+      "full_name": "techysy/yangyu-hermes-skills",
+      "url": "https://github.com/techysy/yangyu-hermes-skills",
+      "default_branch": "main",
+      "archived": false,
+      "size": 234,
+      "classification": "skill_collection",
+      "rank": 10,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1175175662",
+      "full_name": "gezhongjian-mini/agent-skill-hub",
+      "url": "https://github.com/gezhongjian-mini/agent-skill-hub",
+      "default_branch": "main",
+      "archived": false,
+      "size": 34,
+      "classification": "skill_tooling",
+      "rank": 11,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1154288848",
+      "full_name": "pzyyll/ai-agents",
+      "url": "https://github.com/pzyyll/ai-agents",
+      "default_branch": "main",
+      "archived": false,
+      "size": 109,
+      "classification": "adjacent_search_hit",
+      "rank": 12,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1141851576",
+      "full_name": "handosme/skill-hub",
+      "url": "https://github.com/handosme/skill-hub",
+      "default_branch": "main",
+      "archived": false,
+      "size": 134,
+      "classification": "skill_tooling",
+      "rank": 13,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1261677665",
+      "full_name": "heliopaivajr/Agent-Skills-Hub",
+      "url": "https://github.com/heliopaivajr/Agent-Skills-Hub",
+      "default_branch": "main",
+      "archived": false,
+      "size": 2420,
+      "classification": "skill_tooling",
+      "rank": 14,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1187871020",
+      "full_name": "Kucell/Agent-Skill-Hub",
+      "url": "https://github.com/Kucell/Agent-Skill-Hub",
+      "default_branch": "main",
+      "archived": false,
+      "size": 8,
+      "classification": "skill_tooling",
+      "rank": 15,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1231547272",
+      "full_name": "coolyhx/1xm-agent-skills",
+      "url": "https://github.com/coolyhx/1xm-agent-skills",
+      "default_branch": "main",
+      "archived": false,
+      "size": 81,
+      "classification": "skill_collection",
+      "rank": 16,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1231583975",
+      "full_name": "burgerman/agentic_skill_manager",
+      "url": "https://github.com/burgerman/agentic_skill_manager",
+      "default_branch": "main",
+      "archived": false,
+      "size": 55,
+      "classification": "skill_tooling",
+      "rank": 17,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1246202314",
+      "full_name": "Milesnee/Hermes-Skills",
+      "url": "https://github.com/Milesnee/Hermes-Skills",
+      "default_branch": "main",
+      "archived": false,
+      "size": 61,
+      "classification": "skill_collection",
+      "rank": 18,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1192532510",
+      "full_name": "emaxe/skill-hub",
+      "url": "https://github.com/emaxe/skill-hub",
+      "default_branch": "main",
+      "archived": false,
+      "size": 2102,
+      "classification": "skill_tooling",
+      "rank": 19,
+      "catalog_status": "new_unique"
+    },
+    {
+      "id": "1284700315",
+      "full_name": "tanght/Agent-Skill",
+      "url": "https://github.com/tanght/Agent-Skill",
+      "default_branch": "main",
+      "archived": false,
+      "size": 786,
+      "classification": "single_skill_or_domain_package",
+      "rank": 20,
+      "catalog_status": "new_unique"
+    }
+  ]
+}
