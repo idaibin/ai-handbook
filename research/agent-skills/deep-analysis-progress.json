@@ -1,15 +1,23 @@
 {
-  "schema_version": "1.0",
-  "observed_at": "2026-08-07",
+  "schema_version": "1.1",
+  "observed_at": "2026-08-07T02:01:49+08:00",
   "status": "deep_analysis_in_progress",
-  "queue_source": "sources/catalog/",
-  "batch_id": "2026-08-07-batch-001",
+  "queue_source": "sources/catalog/github-agent-skills-index-latest.json",
+  "latest_batch_id": "2026-08-07-batch-002",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-07-batch-002-deep-analysis.md",
   "repositories_completed_this_batch": 10,
-  "skills_reviewed_this_batch": 11,
+  "skills_reviewed_this_batch": 13,
+  "repositories_completed_total": 20,
+  "skills_reviewed_total": 24,
   "repository_status": "structure-reviewed",
   "runtime_validation": "not_executed",
-  "eligible_queue_before_batch": 282,
-  "eligible_queue_remaining_estimate": 272,
+  "index_snapshot": {
+    "observed_at": "2026-08-07T02:07:02+08:00",
+    "unique_total": 850,
+    "eligible": 543,
+    "held_for_review": 307,
+    "eligible_remaining_estimate": 523
+  },
   "completed_repositories": [
     "adithya-s-k/manim_skill",
     "AvdLee/SwiftUI-Agent-Skill",
@@ -20,7 +28,17 @@
     "distil-labs/distil-cli-skill",
     "maquina-app/rails-upgrade-skill",
     "twostraws/SwiftUI-Agent-Skill",
-    "yantoumu/adsense-site-auditor-skill"
+    "yantoumu/adsense-site-auditor-skill",
+    "chuspeeism/dashi-ppt-skill",
+    "Cuimao777/eterna-image2image-skill",
+    "dgreenheck/webgpu-claude-skill",
+    "ferdinandobons/startup-skill",
+    "Frankieli123/grok-skill",
+    "freestylefly/author-methodology-analysis-skill",
+    "guangyuspace/codex-gamestudio-skill",
+    "jdubois/dr-jskill",
+    "Kappaemme-git/codex-first-customer-finder-skill",
+    "KyrieCheungYep/ky-design-to-html-skill"
   ],
   "individual_skills": [
     "manimce-best-practices",
@@ -33,8 +51,38 @@
     "distil-cli",
     "rails-upgrade-assistant",
     "swiftui-pro",
-    "adsense-site-auditor"
+    "adsense-site-auditor",
+    "dashi-ppt",
+    "eterna-image2image",
+    "webgpu-threejs-tsl",
+    "startup-design",
+    "startup-competitors",
+    "startup-positioning",
+    "startup-pitch",
+    "grok-search",
+    "author-methodology-analysis",
+    "gamestudio",
+    "dr-jskill",
+    "first-customer-finder",
+    "ky-design-to-html"
   ],
-  "report_path": "research/agent-skills/batches/2026-08-07-batch-001-deep-analysis.md",
-  "verification_note": "Each repository was counted only after actual skill content was read. Available scripts, references, schemas, tests, or workflows were inspected. No test/evaluation command was executed."
+  "batches": [
+    {
+      "batch_id": "2026-08-07-batch-001",
+      "repositories": 10,
+      "skills": 11,
+      "report": "research/agent-skills/batches/2026-08-07-batch-001-deep-analysis.md",
+      "validation": "structure-reviewed",
+      "runtime_validation": "not_executed"
+    },
+    {
+      "batch_id": "2026-08-07-batch-002",
+      "repositories": 10,
+      "skills": 13,
+      "report": "research/agent-skills/batches/2026-08-07-batch-002-deep-analysis.md",
+      "validation": "structure-reviewed",
+      "runtime_validation": "not_executed"
+    }
+  ],
+  "verification_note": "Repositories are counted complete only after identity and displayed stars were verified and actual README/equivalent, skill definitions, and available scripts/references/eval assets were inspected. No third-party runtime command was executed."
 }
