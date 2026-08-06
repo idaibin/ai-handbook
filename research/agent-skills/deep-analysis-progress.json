@@ -1,22 +1,22 @@
 {
   "schema_version": "1.1",
-  "observed_at": "2026-08-07T02:01:49+08:00",
+  "observed_at": "2026-08-07T03:00:45+08:00",
   "status": "deep_analysis_in_progress",
   "queue_source": "sources/catalog/github-agent-skills-index-latest.json",
-  "latest_batch_id": "2026-08-07-batch-002",
-  "latest_batch_report": "research/agent-skills/batches/2026-08-07-batch-002-deep-analysis.md",
+  "latest_batch_id": "2026-08-07-batch-003",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-07-batch-003-deep-analysis.md",
   "repositories_completed_this_batch": 10,
-  "skills_reviewed_this_batch": 13,
-  "repositories_completed_total": 20,
-  "skills_reviewed_total": 24,
+  "skills_reviewed_this_batch": 23,
+  "repositories_completed_total": 30,
+  "skills_reviewed_total": 47,
   "repository_status": "structure-reviewed",
   "runtime_validation": "not_executed",
   "index_snapshot": {
-    "observed_at": "2026-08-07T02:07:02+08:00",
-    "unique_total": 850,
-    "eligible": 543,
-    "held_for_review": 307,
-    "eligible_remaining_estimate": 523
+    "observed_at": "2026-08-07T03:05:23+08:00",
+    "unique_total": 1256,
+    "eligible": 904,
+    "held_for_review": 352,
+    "eligible_remaining_estimate": 874
   },
   "completed_repositories": [
     "adithya-s-k/manim_skill",
@@ -38,7 +38,17 @@
     "guangyuspace/codex-gamestudio-skill",
     "jdubois/dr-jskill",
     "Kappaemme-git/codex-first-customer-finder-skill",
-    "KyrieCheungYep/ky-design-to-html-skill"
+    "KyrieCheungYep/ky-design-to-html-skill",
+    "knight6669/knight-imagetopptx-skill",
+    "maxazure/video-editing-skill",
+    "muxuuu/serenity-skill",
+    "naive-kun/naive-video-skill",
+    "ningzimu/image-to-editable-ppt-skill",
+    "obra/superpowers",
+    "oldred-byte/ec-visual-skill",
+    "op7418/guizang-ppt-skill",
+    "op7418/guizang-social-card-skill",
+    "p697/youmind-skill"
   ],
   "individual_skills": [
     "manimce-best-practices",
@@ -64,7 +74,30 @@
     "gamestudio",
     "dr-jskill",
     "first-customer-finder",
-    "ky-design-to-html"
+    "ky-design-to-html",
+    "knight-imagetopptx-skill",
+    "video-editing",
+    "serenity-skill",
+    "talking-head-video-pipeline",
+    "image-to-editable-ppt",
+    "brainstorming",
+    "dispatching-parallel-agents",
+    "executing-plans",
+    "finishing-a-development-branch",
+    "receiving-code-review",
+    "requesting-code-review",
+    "subagent-driven-development",
+    "systematic-debugging",
+    "test-driven-development",
+    "using-git-worktrees",
+    "using-superpowers",
+    "verification-before-completion",
+    "writing-plans",
+    "writing-skills",
+    "ec-visual",
+    "guizang-ppt-skill",
+    "guizang-social-card-skill",
+    "youmind"
   ],
   "batches": [
     {
@@ -80,6 +113,14 @@
       "repositories": 10,
       "skills": 13,
       "report": "research/agent-skills/batches/2026-08-07-batch-002-deep-analysis.md",
+      "validation": "structure-reviewed",
+      "runtime_validation": "not_executed"
+    },
+    {
+      "batch_id": "2026-08-07-batch-003",
+      "repositories": 10,
+      "skills": 23,
+      "report": "research/agent-skills/batches/2026-08-07-batch-003-deep-analysis.md",
       "validation": "structure-reviewed",
       "runtime_validation": "not_executed"
     }
