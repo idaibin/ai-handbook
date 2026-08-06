@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.1",
-  "observed_at": "2026-08-07T03:41:51+08:00",
+  "schema_version": "1.2",
+  "observed_at": "2026-08-07T03:48:44+08:00",
   "status": "composed_discovery_catalog",
   "scope": "github_agent_skills_repository_index",
   "composition": {
@@ -27,23 +27,29 @@
       {"path":"sources/catalog/batches/agentskills-specification-search.json","commit":"52f3bb07893254a81ce0dede76a72a1ff3592272","query":"\"agentskills specification\" in:name,description","raw_hits":12,"duplicates_against_prior":0,"new_unique":12},
       {"path":"sources/catalog/batches/skill-lint-search.json","commit":"39d18b64b3df476536383a01b4b5f60075d9056c","query":"\"skill lint\" in:name,description","raw_hits":90,"duplicates_against_prior":0,"new_unique":90},
       {"path":"sources/catalog/batches/agent-skills-validator-search.json","commit":"466e0a94b4e01f73a040c0817fc3e76390b0a6cd","query":"\"agent skills validator\" in:name,description","raw_hits":53,"duplicates_against_prior":2,"new_unique":51},
-      {"path":"sources/catalog/batches/agent-skills-standard-page-1.json","commit":"67796335a00c9f9acd006fa3818e434d513ffa24","query":"\"agent skills standard\" in:name,description","raw_hits":20,"duplicates_against_prior":0,"new_unique":20},
+      {"path":"sources/catalog/batches/agent-skills-standard-page-1.json","commit":"06265e0cca2cd9789ef05fc19e223808b57afe84","query":"\"agent skills standard\" in:name,description","raw_hits":20,"duplicates_against_prior":2,"new_unique":18},
       {"path":"sources/catalog/batches/agent-skills-standard-page-2.json","commit":"76792d7a6d00d4a25d99605287002d4140754051","query":"\"agent skills standard\" in:name,description","raw_hits":20,"duplicates_against_prior":0,"new_unique":20},
-      {"path":"sources/catalog/batches/agent-skills-standard-page-3.json","commit":"42df855e68e74dfd87173657af94d7be37baec23","query":"\"agent skills standard\" in:name,description","raw_hits":20,"duplicates_against_prior":0,"new_unique":20}
+      {"path":"sources/catalog/batches/agent-skills-standard-page-3.json","commit":"42df855e68e74dfd87173657af94d7be37baec23","query":"\"agent skills standard\" in:name,description","raw_hits":20,"duplicates_against_prior":0,"new_unique":20},
+      {"path":"sources/catalog/batches/agent-skills-standard-pages-4-6.json","commit":"48d5621001386e1a5cf3309371f54e0a74aa0cd6","query":"\"agent skills standard\" in:name,description","raw_hits":60,"duplicates_against_prior":0,"new_unique":60}
+    ],
+    "historical_dedup_corrections": [
+      {"repository":"K-Dense-AI/scientific-agent-skills","duplicate_batch":"sources/catalog/batches/agent-skills-standard-page-1.json","authoritative_prior_source":"sources/catalog/github-agent-skills-index.json"},
+      {"repository":"HoangNguyen0403/agent-skills-standard","duplicate_batch":"sources/catalog/batches/agent-skills-standard-page-1.json","authoritative_prior_source":"sources/catalog/batches/agent-skill-pages-1-10.json"}
     ]
   },
   "progress": {
-    "raw_search_hits": 1461,
+    "raw_search_hits": 1521,
     "merged_existing_candidates": 4,
-    "raw_total": 1465,
-    "unique_total": 1367,
-    "duplicates_removed": 98,
-    "new_unique_repositories_this_run": 20,
-    "deep_analysis_eligible": 1000,
+    "raw_total": 1525,
+    "unique_total": 1425,
+    "duplicates_removed": 100,
+    "new_unique_repositories_this_run": 60,
+    "net_unique_delta_vs_previous_manifest": 58,
+    "deep_analysis_eligible": 1058,
     "held_for_review": 367,
     "classification_counts": {
-      "specification": 24,
-      "skill_collection": 484,
+      "specification": 83,
+      "skill_collection": 483,
       "single_skill_or_domain_package": 87,
       "awesome_index": 36,
       "skill_tooling": 369,
@@ -54,6 +60,6 @@
   "verification": {
     "repository_identity": "verified_by_github_connector",
     "content": "not_started",
-    "note": "Compose the referenced base catalog and delta batches using the stated case-insensitive key. This run added 20 previously unindexed repository identities from page 3 of the agent skills standard query using per_page=20. Exact repository-identity searches against the AI-handbook catalog artifacts returned no prior matches before this batch was written. No deep repository content was read."
+    "note": "This run collected 60 repository identities from pages 4-6 of the agent skills standard query at per_page=20. It also corrected two historical cross-batch duplicate counts in page 1 after direct comparison with prior authority artifacts. No README, SKILL.md, scripts, references, evaluations, stars, or implementation content was read."
   }
 }
