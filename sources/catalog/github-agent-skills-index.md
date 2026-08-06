@@ -2,14 +2,14 @@
 
 ## Current verified catalog
 
-- Raw GitHub search hits: `1421`
+- Raw GitHub search hits: `1441`
 - Existing discovery-inbox candidates merged and re-verified: `4`
-- Raw identities across all inputs: `1425`
-- Unique repositories after case-insensitive `owner/repository` deduplication: `1327`
+- Raw identities across all inputs: `1445`
+- Unique repositories after case-insensitive `owner/repository` deduplication: `1347`
 - Exact duplicates removed across current inputs: `98`
 - New unique repositories added in this run: `20`
-- Provisionally eligible for later deep analysis: `963`
-- Held as adjacent or unclear search hits: `364`
+- Provisionally eligible for later deep analysis: `981`
+- Held as adjacent or unclear search hits: `366`
 
 Composed machine-readable authority: [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json).
 
@@ -33,7 +33,7 @@ Composed machine-readable authority: [`github-agent-skills-index-latest.json`](g
 - `"agentskills specification" in:name,description`, page `1`
 - `"skill lint" in:name,description`, complete accessible page-1 result set with `100` requested results
 - `"agent skills validator" in:name,description`, complete accessible page-1 result set with `100` requested results
-- `"agent skills standard" in:name,description`, page `1`, first `20` results
+- `"agent skills standard" in:name,description`, pages `1-2`, `20` results per page
 
 ## Composition
 
@@ -57,6 +57,7 @@ The composed catalog consists of the `304`-repository base catalog plus these ve
 | `skill-lint-search.json` | 90 | 0 | 90 |
 | `agent-skills-validator-search.json` | 53 | 2 | 51 |
 | `agent-skills-standard-page-1.json` | 20 | 0 | 20 |
+| `agent-skills-standard-page-2.json` | 20 | 0 | 20 |
 
 ## This run
 
@@ -66,36 +67,36 @@ Query:
 "agent skills standard" in:name,description
 ```
 
-This batch records the first `20` GitHub repository-search results from page `1` using `per_page=20`.
+This batch records `20` GitHub repository-search results from page `2` using `per_page=20`.
 
 - Raw repository identities: `20`
 - Internal batch duplicates: `0`
-- Exact case-insensitive identities found in the prior `1307`-repository catalog: `0`
+- Exact case-insensitive identities found in the prior `1327`-repository catalog: `0`
 - Added as new repositories: `20`
-- Updated composed catalog: `1327`
+- Updated composed catalog: `1347`
 
 | Classification | Raw hits | New unique |
 | --- | ---: | ---: |
-| `specification` | 3 | 3 |
-| `skill_collection` | 8 | 8 |
-| `single_skill_or_domain_package` | 3 | 3 |
+| `specification` | 2 | 2 |
+| `skill_collection` | 11 | 11 |
+| `single_skill_or_domain_package` | 4 | 4 |
 | `awesome_index` | 0 | 0 |
-| `skill_tooling` | 0 | 0 |
+| `skill_tooling` | 1 | 1 |
 | `adjacent_search_hit` | 2 | 2 |
-| `unclear_search_hit` | 4 | 4 |
+| `unclear_search_hit` | 0 | 0 |
 
-The complete ordered result set, provisional classifications, and per-identity deduplication status are stored in [`batches/agent-skills-standard-page-1.json`](batches/agent-skills-standard-page-1.json).
+The complete ordered result set, provisional classifications, and per-identity deduplication status are stored in [`batches/agent-skills-standard-page-2.json`](batches/agent-skills-standard-page-2.json).
 
 ## Classification totals
 
 | Classification | Count | Index-stage meaning |
 | --- | ---: | --- |
-| `specification` | 7 | Identity strongly indicates a Skill specification, standard, or normative guidance. |
-| `skill_collection` | 469 | Identity indicates a collection of Skills. |
-| `single_skill_or_domain_package` | 83 | Identity indicates one Skill or a domain-focused package. |
+| `specification` | 9 | Identity strongly indicates a Skill specification, standard, or normative guidance. |
+| `skill_collection` | 480 | Identity indicates a collection of Skills. |
+| `single_skill_or_domain_package` | 87 | Identity indicates one Skill or a domain-focused package. |
 | `awesome_index` | 36 | Identity indicates a curated Skill index. |
-| `skill_tooling` | 368 | Identity indicates validation, linting, evaluation, packaging, discovery, registry, marketplace, management, or runtime tooling. |
-| `adjacent_search_hit` | 134 | Related to agents or Skills, but not clearly a Skill repository from identity alone. |
+| `skill_tooling` | 369 | Identity indicates validation, linting, evaluation, packaging, discovery, registry, marketplace, management, or runtime tooling. |
+| `adjacent_search_hit` | 136 | Related to agents or Skills, but not clearly a Skill repository from identity alone. |
 | `unclear_search_hit` | 230 | Identity is insufficient for reliable classification. |
 
 ## Evidence boundary
@@ -104,12 +105,13 @@ This remains an index-only catalog. GitHub connector results verified repository
 
 ## Validation
 
-- Agent-skills-standard batch commit: `67796335a00c9f9acd006fa3818e434d513ffa24`.
-- Composed latest-manifest commit: `125308257abb14b7d67c3e5086d1fea1d0057a77`.
+- Agent-skills-standard page-2 batch commit: `76792d7a6d00d4a25d99605287002d4140754051`.
+- Composed latest-manifest commit: `cccfe409ad433ac75a28f8a0e20cbb2a16ac0fb4`.
 - The current batch contains `20` unique case-insensitive repository keys.
-- Prior `1307` plus `20` new repositories resolves to `1327`.
-- `1425 - 98 = 1327`.
-- Classification totals resolve to `1327` repositories.
-- `963 + 364 = 1327`, matching the eligible and held partitions.
-- Each returned `owner/repository` identity was checked against the existing AI-handbook catalog artifacts through GitHub repository code search before being recorded as new.
-- The next index run must compose against [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json), continue this query from page `2` if using `per_page=20`, preserve query origins, and add only genuinely new identities.
+- Prior `1327` plus `20` new repositories resolves to `1347`.
+- `1445 - 98 = 1347`.
+- Classification totals resolve to `1347` repositories.
+- `981 + 366 = 1347`, matching the eligible and held partitions.
+- Each returned `owner/repository` identity was compared case-insensitively against the base catalog and every delta referenced by the prior composed manifest before being recorded as new.
+- No README, `SKILL.md`, scripts, references, evaluations, stars, or implementation contents were read during this index-only run.
+- The next index run must compose against [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json), continue this query from page `3` if using `per_page=20`, preserve query origins, and add only genuinely new identities.
