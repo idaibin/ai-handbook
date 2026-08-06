@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.2",
+  "observed_at": "2026-08-07T04:31:10+08:00",
+  "status": "verified_index_batch",
+  "scope": "github_agent_skills_repository_index",
+  "query": "\"agent skills eval\" in:name,description",
+  "search": {
+    "pages": [2],
+    "per_page": 20,
+    "raw_hits": 20,
+    "internal_duplicates": 0,
+    "duplicates_against_prior": 1,
+    "new_unique": 19,
+    "prior_unique_total": 1524,
+    "composed_unique_total": 1543,
+    "deduplication_key": "case_insensitive owner/repository"
+  },
+  "classification_counts_raw": {
+    "specification": 0,
+    "skill_collection": 0,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 20,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 0
+  },
+  "classification_counts_new_unique": {
+    "specification": 0,
+    "skill_collection": 0,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 19,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 0
+  },
+  "repository_tuple_fields": ["page", "rank", "github_id", "repository_full_name", "default_branch", "size", "classification", "duplicate_against_prior"],
+  "repositories": [
+    [2,1,"1235233274","coketaste/agent-skills-eval","main",79,"skill_tooling",true],
+    [2,2,"1235025726","aicatalyst-team/agent-skills-eval","main",93,"skill_tooling",false],
+    [2,3,"1231858217","kedarkolluri/agent-skills-eval","main",79,"skill_tooling",false],
+    [2,4,"1234834357","srsudu/agent-skills-eval","main",79,"skill_tooling",false],
+    [2,5,"1245092299","ekipo-user/agent-skills-eval","main",81,"skill_tooling",false],
+    [2,6,"1234194819","DarshitDsp/agent-skills-eval","main",79,"skill_tooling",false],
+    [2,7,"1262502457","richard-shan/agent-skills-eval","main",93,"skill_tooling",false],
+    [2,8,"1268851015","kaleox-dev/agent-skills-eval","main",15373,"skill_tooling",false],
+    [2,9,"1308676138","rizqibasith7/agent-skills-eval","main",65,"skill_tooling",false],
+    [2,10,"1290938483","iAmAdheil/agent-skills-eval","main",80,"skill_tooling",false],
+    [2,11,"1254191789","codesoda/agent-skills-eval","main",81,"skill_tooling",false],
+    [2,12,"1235710418","wzk2025/agent-skills-eval","main",79,"skill_tooling",false],
+    [2,13,"1252487542","githb-ac/agent-skills-eval","main",81,"skill_tooling",false],
+    [2,14,"1235309159","siddhant-albertinvent/agent-skills-eval","main",79,"skill_tooling",false],
+    [2,15,"1238026571","amitdmore/agent-skills-eval","main",81,"skill_tooling",false],
+    [2,16,"1311298572","geddings-bsn/agent-skills-eval","main",65,"skill_tooling",false],
+    [2,17,"1258903333","yuzhongxuehualuo/agent-skills-eval","main",81,"skill_tooling",false],
+    [2,18,"1252281133","rollytucan/agent-skills-eval","main",81,"skill_tooling",false],
+    [2,19,"1251715339","anmho/agent-skills-eval","main",91,"skill_tooling",false],
+    [2,20,"1247152880","wangwei8027/agent-skills-eval","main",81,"skill_tooling",false]
+  ],
+  "verification": {
+    "repository_identity": "verified_by_github_repository_search",
+    "deduplication": "case-insensitive full-name checks against the current AI-handbook indexed artifacts; coketaste/agent-skills-eval is already present in sources/catalog/batches/agent-skills-eval-page-1.json and no other page-2 identity matched a prior indexed repository",
+    "classification": "provisional_from_repository_identity_and_query_context_only",
+    "content": "not_started",
+    "note": "Index-only batch. README, SKILL.md, scripts, references, evals, stars, and implementation content were not read."
+  }
+}
