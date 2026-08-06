@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.2",
+  "observed_at": "2026-08-07T03:41:51+08:00",
+  "status": "verified_index_batch",
+  "scope": "github_agent_skills_repository_index",
+  "query": "\"agent skills standard\" in:name,description",
+  "search": {
+    "page": 3,
+    "per_page": 20,
+    "raw_hits": 20,
+    "internal_duplicates": 0,
+    "duplicates_against_prior": 0,
+    "new_unique": 20,
+    "deduplication_key": "case_insensitive owner/repository"
+  },
+  "classification_counts": {
+    "specification": 15,
+    "skill_collection": 4,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 0,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 1
+  },
+  "repositories": [
+    {"github_id":"1251044441","repository_full_name":"Xpos587/agent-skills","default_branch":"main","size":27815,"classification":"skill_collection","duplicate_against_prior":false},
+    {"github_id":"1289384108","repository_full_name":"belicinodev/ricerca-giuridica-it","default_branch":"main","size":302,"classification":"unclear_search_hit","duplicate_against_prior":false},
+    {"github_id":"1275305404","repository_full_name":"bitnahian/pi-skills","default_branch":"main","size":20,"classification":"skill_collection","duplicate_against_prior":false},
+    {"github_id":"1170321423","repository_full_name":"Goodeye-Labs/truesight-mcp-skills","default_branch":"main","size":72,"classification":"skill_collection","duplicate_against_prior":false},
+    {"github_id":"1305055731","repository_full_name":"hamzabellouch/agent-skills","default_branch":"main","size":37905,"classification":"skill_collection","duplicate_against_prior":false},
+    {"github_id":"1149158158","repository_full_name":"khuongsatou/agent-skills-standard","default_branch":"develop","size":912,"classification":"specification","duplicate_against_prior":false},
+    {"github_id":"1136241293","repository_full_name":"OceanHpCK/agent-skills-standard","default_branch":"develop","size":112,"classification":"specification","duplicate_against_prior":false},
+    {"github_id":"1184047916","repository_full_name":"lenguyenthuyhang/agent-skills-standard","default_branch":"develop","size":1704,"classification":"specification","duplicate_against_prior":false},
+    {"github_id":"1217225656","repository_full_name":"daokimluc/agent-skills-standard","default_branch":"develop","size":2691,"classification":"specification","duplicate_against_prior":false},
+    {"github_id":"1223082969","repository_full_name":"duyoanhjiren/agent-skills-standard","default_branch":"develop","size":3016,"classification":"specification","duplicate_against_prior":false},
+    {"github_id":"1211745008","repository_full_name":"codeaudit/agent-skills-standard","default_branch":"develop","size":2691,"classification":"specification","duplicate_against_prior":false},
+    {"github_id":"1209554248","repository_full_name":"hautc-it/agent-skills-standard","default_branch":"develop","size":2691,"classification":"specification","duplicate_against_prior":false},
+    {"github_id":"1296964817","repository_full_name":"SkyBulk/agent-skills-standard","default_branch":"develop","size":3824,"classification":"specification","duplicate_against_prior":false},
+    {"github_id":"1180080484","repository_full_name":"thanhcl/agent-skills-standard","default_branch":"develop","size":1259,"classification":"specification","duplicate_against_prior":false},
+    {"github_id":"1230079684","repository_full_name":"MSShohag/agent-skills-standard","default_branch":"develop","size":3025,"classification":"specification","duplicate_against_prior":false},
+    {"github_id":"1228784296","repository_full_name":"vncoder8x/agent-skills-standard","default_branch":"develop","size":3016,"classification":"specification","duplicate_against_prior":false},
+    {"github_id":"1161494982","repository_full_name":"khoand17321/agent-skills-standard","default_branch":"develop","size":869,"classification":"specification","duplicate_against_prior":false},
+    {"github_id":"1191849996","repository_full_name":"Cazorlas/agent-skills-standard","default_branch":"develop","size":3023,"classification":"specification","duplicate_against_prior":false},
+    {"github_id":"1236815740","repository_full_name":"ducbv98/agent-skills-standard","default_branch":"develop","size":12156,"classification":"specification","duplicate_against_prior":false},
+    {"github_id":"1136310778","repository_full_name":"arrivekimkha/agent-skills-standard","default_branch":"develop","size":176,"classification":"specification","duplicate_against_prior":false}
+  ],
+  "verification": {
+    "repository_identity": "verified_by_github_repository_search",
+    "deduplication": "Each returned owner/repository identity was checked case-insensitively against the current AI-handbook catalog artifacts using exact repository-identity searches before this batch was written; no prior identity match was found.",
+    "classification": "provisional_from_repository_identity_only",
+    "content": "not_started",
+    "note": "Index-only batch. README, SKILL.md, scripts, references, evals, stars, and implementation content were not read."
+  }
+}
