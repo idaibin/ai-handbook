@@ -2,14 +2,14 @@
 
 ## Current verified catalog
 
-- Raw GitHub search hits: `1645`
+- Raw GitHub search hits: `1661`
 - Existing discovery-inbox candidates merged and re-verified: `4`
-- Raw identities across all inputs: `1649`
-- Unique repositories after case-insensitive `owner/repository` deduplication: `1547`
+- Raw identities across all inputs: `1665`
+- Unique repositories after case-insensitive `owner/repository` deduplication: `1563`
 - Exact duplicates removed across current inputs: `102`
-- New unique repositories collected in this run: `4`
-- Net catalog delta versus the previous published manifest: `+4`
-- Provisionally eligible for later deep analysis: `1180`
+- New unique repositories collected in this run: `16`
+- Net catalog delta versus the previous published manifest: `+16`
+- Provisionally eligible for later deep analysis: `1196`
 - Held as adjacent or unclear search hits: `367`
 
 Composed machine-readable authority: [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json).
@@ -36,6 +36,7 @@ Composed machine-readable authority: [`github-agent-skills-index-latest.json`](g
 - `"agent skills validator" in:name,description`, complete accessible page-1 result set with `100` requested results
 - `"agent skills standard" in:name,description`, pages `1-10`, `20` results per page
 - `"agent skills eval" in:name,description`, complete accessible pages `1-3`, `20` requested results per page; page `4` returned `0`
+- `"agent skills benchmark" in:name,description`, complete accessible page `1`, `50` requested results; page `2` returned `0`
 
 ## Composition
 
@@ -51,13 +52,14 @@ The composed catalog consists of the `304`-repository base catalog plus verified
 | `agent-skills-standard-page-8.json` | 20 | 0 | 20 |
 | `agent-skills-standard-pages-9-10.json` | 40 | 0 | 40 |
 
-Completed evaluation-query batches:
+Completed evaluation and benchmark query batches:
 
 | Batch | Raw | Duplicates | New |
 | --- | ---: | ---: | ---: |
 | `agent-skills-eval-page-1.json` | 20 | 1 | 19 |
 | `agent-skills-eval-page-2.json` | 20 | 1 | 19 |
 | `agent-skills-eval-page-3.json` | 4 | 0 | 4 |
+| `agent-skills-benchmark-search.json` | 16 | 0 | 16 |
 
 The full machine-readable composition, including all earlier batches and their commit references, is stored in [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json).
 
@@ -66,20 +68,20 @@ The full machine-readable composition, including all earlier batches and their c
 Query:
 
 ```text
-"agent skills eval" in:name,description
+"agent skills benchmark" in:name,description
 ```
 
-This run collected page `3`, using `per_page=20`, then queried page `4` to verify the terminal boundary.
+This run requested `50` repositories on page `1`, received `16`, then queried page `2` to verify the terminal boundary.
 
-- Raw repository identities on page 3: `4`
-- Page 4 repository identities: `0`
+- Raw repository identities on page 1: `16`
+- Page 2 repository identities: `0`
 - Internal batch duplicates: `0`
 - Duplicates against the prior catalog: `0`
-- Added as new repositories: `4`
-- Previous composed catalog: `1543`
-- Updated composed catalog: `1547`
+- Added as new repositories: `16`
+- Previous composed catalog: `1547`
+- Updated composed catalog: `1563`
 
-The four new identities are `juliuss1907/agent-skills-eval`, `dimayip/learn-eval-skills`, `h1r9do/agent-skills-eval-SkillsUpgrade`, and `homgorn/agent-skills-eval-open-source-`. Exact full-name searches against the current AI-handbook indexed artifacts found no prior match. All four are provisionally classified as `skill_tooling` from repository identity and query context only. The complete GitHub IDs, default branches, sizes, ordering, classification, and deduplication state are stored in [`batches/agent-skills-eval-page-3.json`](batches/agent-skills-eval-page-3.json).
+Case-insensitive full-name searches against the current AI-handbook indexed artifacts found no prior match for any of the sixteen repository identities. The result set contains benchmark and evaluation-oriented repositories such as `claudekit/skillmark`, `milesgoscha/skillbench`, `djm204/agent-skills-benchmarks`, `GeorgeQLe/agentic-skills-benchmarks`, and `RohanT766/skill-test-generator`, plus related benchmark forks returned by the same repository search. All sixteen are provisionally classified as `skill_tooling` from repository identity and query context only. Complete GitHub IDs, default branches, sizes, ordering, classification, and deduplication state are stored in [`batches/agent-skills-benchmark-search.json`](batches/agent-skills-benchmark-search.json).
 
 ## Classification totals
 
@@ -89,21 +91,21 @@ The four new identities are `juliuss1907/agent-skills-eval`, `dimayip/learn-eval
 | `skill_collection` | 484 | Identity indicates a collection of Skills. |
 | `single_skill_or_domain_package` | 87 | Identity indicates one Skill or a domain-focused package. |
 | `awesome_index` | 36 | Identity indicates a curated Skill index. |
-| `skill_tooling` | 411 | Identity indicates validation, linting, evaluation, packaging, discovery, registry, marketplace, management, or runtime tooling. |
+| `skill_tooling` | 427 | Identity indicates validation, linting, evaluation, packaging, discovery, registry, marketplace, management, benchmark, or runtime tooling. |
 | `adjacent_search_hit` | 136 | Related to agents or Skills, but not clearly a Skill repository from identity alone. |
 | `unclear_search_hit` | 231 | Identity is insufficient for reliable classification. |
 
 ## Evidence boundary
 
-This remains an index-only catalog. GitHub repository search verified repository identities and accessibility. Classifications are provisional from repository identity and query context only. No repository README, `SKILL.md`, scripts, references, evaluations, stars, quality, or implementation behavior was assessed.
+This remains an index-only catalog. GitHub repository search verified repository identities and accessibility. Classifications are provisional from repository identity and query context only. No repository README, `SKILL.md`, scripts, references, eval contents, stars, quality, or implementation behavior was assessed.
 
 ## Validation
 
-- `agent skills eval` page `3` batch commit: `917b64b3fae8b560e600bf2ce6ab2ee41802e19c`.
-- Composed latest-manifest commit: `c131da6d622fcf4b69c2b64619f921cacfc96216`.
-- `1543 + 4 = 1547` current unique repositories.
-- `1649 - 102 = 1547` raw-to-unique reconciliation.
-- Classification totals resolve to `1547`.
-- `1180 + 367 = 1547`, matching the eligible and held partitions.
-- GitHub search page `4` returned zero repositories, so the accessible `"agent skills eval"` query is complete through page `3` at this pagination size.
-- No README, `SKILL.md`, scripts, references, evaluations, stars, or implementation contents were read during this index-only run.
+- `agent skills benchmark` batch commit: `be28b04abc3fceb3c03e87d6172af6e15f8214ac`.
+- Composed latest-manifest commit: `4bb54d22e8ab0ec97cabbfa99e74d43187aac05a`.
+- `1547 + 16 = 1563` current unique repositories.
+- `1665 - 102 = 1563` raw-to-unique reconciliation.
+- Classification totals resolve to `1563`.
+- `1196 + 367 = 1563`, matching the eligible and held partitions.
+- GitHub search page `2` returned zero repositories, so the accessible `"agent skills benchmark"` query is complete at this pagination size.
+- No README, `SKILL.md`, scripts, references, eval contents, stars, or implementation contents were read during this index-only run.
