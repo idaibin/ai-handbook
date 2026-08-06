@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-08-07",
+  "status": "deep_analysis_in_progress",
+  "queue_source": "sources/catalog/",
+  "batch_id": "2026-08-07-batch-001",
+  "repositories_completed_this_batch": 10,
+  "skills_reviewed_this_batch": 11,
+  "repository_status": "structure-reviewed",
+  "runtime_validation": "not_executed",
+  "eligible_queue_before_batch": 282,
+  "eligible_queue_remaining_estimate": 272,
+  "completed_repositories": [
+    "adithya-s-k/manim_skill",
+    "AvdLee/SwiftUI-Agent-Skill",
+    "Brandon030722/ark-ui-skill",
+    "chrisvoncsefalvay/claude-d3js-skill",
+    "cloudflare/security-audit-skill",
+    "disler/agent-sandbox-skill",
+    "distil-labs/distil-cli-skill",
+    "maquina-app/rails-upgrade-skill",
+    "twostraws/SwiftUI-Agent-Skill",
+    "yantoumu/adsense-site-auditor-skill"
+  ],
+  "individual_skills": [
+    "manimce-best-practices",
+    "manimgl-best-practices",
+    "swiftui-expert-skill",
+    "ark-ui",
+    "d3-viz",
+    "security-audit",
+    "Agent Sandboxes",
+    "distil-cli",
+    "rails-upgrade-assistant",
+    "swiftui-pro",
+    "adsense-site-auditor"
+  ],
+  "report_path": "research/agent-skills/batches/2026-08-07-batch-001-deep-analysis.md",
+  "verification_note": "Each repository was counted only after actual skill content was read. Available scripts, references, schemas, tests, or workflows were inspected. No test/evaluation command was executed."
+}
