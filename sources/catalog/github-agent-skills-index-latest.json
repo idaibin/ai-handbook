@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "observed_at": "2026-08-07T01:03:00+08:00",
+  "observed_at": "2026-08-07T01:12:02+08:00",
   "status": "composed_discovery_catalog",
   "scope": "github_agent_skills_repository_index",
   "composition": {
@@ -27,31 +27,39 @@
         "raw_hits": 100,
         "duplicates_against_prior": 2,
         "new_unique": 98
+      },
+      {
+        "path": "sources/catalog/batches/skill-registry-pages-1-10.json",
+        "commit": "afa3cca6e1ebbc245e8dee6e3b6a2b150ea76d32",
+        "query": "\"skill registry\" in:name,description",
+        "raw_hits": 100,
+        "duplicates_against_prior": 5,
+        "new_unique": 95
       }
     ]
   },
   "progress": {
-    "raw_search_hits": 500,
+    "raw_search_hits": 600,
     "merged_existing_candidates": 4,
-    "raw_total": 504,
-    "unique_total": 502,
-    "duplicates_removed": 2,
-    "new_unique_repositories_this_run": 98,
-    "deep_analysis_eligible": 282,
-    "held_for_review": 220,
+    "raw_total": 604,
+    "unique_total": 597,
+    "duplicates_removed": 7,
+    "new_unique_repositories_this_run": 95,
+    "deep_analysis_eligible": 331,
+    "held_for_review": 266,
     "classification_counts": {
       "specification": 1,
-      "skill_collection": 158,
+      "skill_collection": 166,
       "single_skill_or_domain_package": 57,
-      "awesome_index": 26,
-      "skill_tooling": 40,
-      "adjacent_search_hit": 83,
-      "unclear_search_hit": 137
+      "awesome_index": 29,
+      "skill_tooling": 78,
+      "adjacent_search_hit": 90,
+      "unclear_search_hit": 176
     }
   },
   "verification": {
     "repository_identity": "verified_by_github_connector",
     "content": "not_started",
-    "note": "Compose the referenced base catalog and delta batches using the stated case-insensitive key. The two repeated identities are jMerta/codex-skills and vadimcomanescu/codex-skills. No deep repository content was read."
+    "note": "Compose the referenced base catalog and delta batches using the stated case-insensitive key. This run removed five repositories already present in the prior catalog. No deep repository content was read."
   }
 }
