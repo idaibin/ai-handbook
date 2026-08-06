@@ -4,30 +4,93 @@
 
 - Repository: https://github.com/anthropics/skills
 - Category: Official Skills Collection
-- Verification status: metadata-verified
+- Verification status: repository metadata and tree verified
+- Star count observed during scan: 166655
 
 ## Purpose
 
-Anthropic's official collection of Agent Skills examples, templates, and reusable resources for Claude-based workflows.
+Official Agent Skills repository containing reusable skill packages and examples.
 
-## Observed Patterns
+## Repository Structure Evidence
 
-- Skill packages are self-contained.
-- Instructions, resources, and optional scripts are separated.
-- Skills are designed for progressive loading rather than loading all resources at once.
+The repository contains multiple independent skill directories, including:
 
-## Research Value
+- algorithmic-art
+- brand-guidelines
+- canvas-design
+- claude-api
+- doc-coauthoring
+- docx
+- frontend-design
+- mcp-builder
+- pdf
+- pptx
+- skill-creator
+- webapp-testing
+- xlsx
 
-Useful reference for:
+## Skill Architecture Pattern
 
-- SKILL.md structure design;
-- reusable agent capability packaging;
-- separating instructions from executable resources.
+Observed architecture:
 
-## Evidence
+```
+skill/
+├── instructions
+├── resources
+├── scripts (optional)
+└── validation/evaluation (optional)
+```
 
-- Public GitHub repository metadata and repository contents reviewed during catalog research.
+The exact contents of each skill require individual inspection before final adoption.
+
+## High Value Patterns
+
+### 1. Self-contained capability package
+
+Each skill represents a focused capability instead of a large framework module.
+
+### 2. Progressive disclosure
+
+Only load relevant skill information when the capability is required.
+
+### 3. Resource separation
+
+Instructions, reference materials, and executable helpers are separated.
+
+## Individual Skill Reports
+
+Pending:
+
+- skill-creator
+- frontend-design
+- mcp-builder
+- webapp-testing
+- document skills
+
+Each will receive an independent report after file-level review.
 
 ## Relation To idaibin/skills
 
-Candidate reference for skill package conventions. Requires deeper file-level review before adopting patterns.
+Potentially reusable:
+
+- skill package boundaries;
+- SKILL.md conventions;
+- resource organization;
+- evaluation metadata.
+
+Not yet accepted as design decisions until compared with additional repositories.
+
+## Evidence Level
+
+Verified:
+
+- repository identity;
+- star count;
+- skill directory list;
+- repository category.
+
+Pending verification:
+
+- every individual skill implementation detail;
+- runtime behavior;
+- evaluation effectiveness.
