@@ -1,6 +1,6 @@
 {
   "schema_version": "1.2",
-  "observed_at": "2026-08-07T04:24:02+08:00",
+  "observed_at": "2026-08-07T04:31:10+08:00",
   "status": "composed_discovery_catalog",
   "scope": "github_agent_skills_repository_index",
   "composition": {
@@ -34,7 +34,8 @@
       {"path":"sources/catalog/batches/agent-skills-standard-page-7.json","commit":"d07bf2bf58edb314217172271d969652cd51f61d","query":"\"agent skills standard\" in:name,description","raw_hits":20,"duplicates_against_prior":0,"new_unique":20},
       {"path":"sources/catalog/batches/agent-skills-standard-page-8.json","commit":"1e3d03371795c7ffe380db32bfbe7256b50501fb","query":"\"agent skills standard\" in:name,description","raw_hits":20,"duplicates_against_prior":0,"new_unique":20},
       {"path":"sources/catalog/batches/agent-skills-standard-pages-9-10.json","commit":"1cb4f8bed2cf49b9483779e43bb3e191e961a7c3","query":"\"agent skills standard\" in:name,description","raw_hits":40,"duplicates_against_prior":0,"new_unique":40},
-      {"path":"sources/catalog/batches/agent-skills-eval-page-1.json","commit":"1d4ec765bf679ebd135b4a1169413ff48610e1bb","query":"\"agent skills eval\" in:name,description","raw_hits":20,"duplicates_against_prior":1,"new_unique":19}
+      {"path":"sources/catalog/batches/agent-skills-eval-page-1.json","commit":"1d4ec765bf679ebd135b4a1169413ff48610e1bb","query":"\"agent skills eval\" in:name,description","raw_hits":20,"duplicates_against_prior":1,"new_unique":19},
+      {"path":"sources/catalog/batches/agent-skills-eval-page-2.json","commit":"88c36ba4a6871e2313b81a34eea92c780bc0f108","query":"\"agent skills eval\" in:name,description","raw_hits":20,"duplicates_against_prior":1,"new_unique":19}
     ],
     "historical_dedup_corrections": [
       {"repository":"K-Dense-AI/scientific-agent-skills","duplicate_batch":"sources/catalog/batches/agent-skills-standard-page-1.json","authoritative_prior_source":"sources/catalog/github-agent-skills-index.json"},
@@ -42,21 +43,21 @@
     ]
   },
   "progress": {
-    "raw_search_hits": 1621,
+    "raw_search_hits": 1641,
     "merged_existing_candidates": 4,
-    "raw_total": 1625,
-    "unique_total": 1524,
-    "duplicates_removed": 101,
+    "raw_total": 1645,
+    "unique_total": 1543,
+    "duplicates_removed": 102,
     "new_unique_repositories_this_run": 19,
     "net_unique_delta_vs_previous_manifest": 19,
-    "deep_analysis_eligible": 1157,
+    "deep_analysis_eligible": 1176,
     "held_for_review": 367,
     "classification_counts": {
       "specification": 162,
       "skill_collection": 484,
       "single_skill_or_domain_package": 87,
       "awesome_index": 36,
-      "skill_tooling": 388,
+      "skill_tooling": 407,
       "adjacent_search_hit": 136,
       "unclear_search_hit": 231
     }
@@ -64,6 +65,6 @@
   "verification": {
     "repository_identity": "verified_by_github_connector",
     "content": "not_started",
-    "note": "This run collected 20 repository identities from page 1 of the agent skills eval query at per_page=20, removed one exact prior duplicate, and added 19 new unique repositories. No README, SKILL.md, scripts, references, evaluations, stars, or implementation content was read."
+    "note": "This run collected 20 repository identities from page 2 of the agent skills eval query at per_page=20, removed one exact prior duplicate (coketaste/agent-skills-eval, already in page 1), and added 19 new unique repositories. No README, SKILL.md, scripts, references, evaluations, stars, or implementation content was read."
   }
 }
