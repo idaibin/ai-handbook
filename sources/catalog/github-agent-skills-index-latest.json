@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "observed_at": "2026-08-07T01:39:03+08:00",
+  "observed_at": "2026-08-07T02:02:39+08:00",
   "status": "composed_discovery_catalog",
   "scope": "github_agent_skills_repository_index",
   "composition": {
@@ -59,31 +59,39 @@
         "raw_hits": 100,
         "duplicates_against_prior": 4,
         "new_unique": 96
+      },
+      {
+        "path": "sources/catalog/batches/agent-skills-hub-pages-1-2.json",
+        "commit": "d9486ad49498ecfed82c0e3fe1d017ed73798d58",
+        "query": "\"agent skills hub\" in:name,description",
+        "raw_hits": 20,
+        "duplicates_against_prior": 0,
+        "new_unique": 20
       }
     ]
   },
   "progress": {
-    "raw_search_hits": 806,
+    "raw_search_hits": 826,
     "merged_existing_candidates": 4,
-    "raw_total": 810,
-    "unique_total": 743,
+    "raw_total": 830,
+    "unique_total": 763,
     "duplicates_removed": 67,
-    "new_unique_repositories_this_run": 96,
-    "deep_analysis_eligible": 461,
-    "held_for_review": 282,
+    "new_unique_repositories_this_run": 20,
+    "deep_analysis_eligible": 480,
+    "held_for_review": 283,
     "classification_counts": {
       "specification": 1,
-      "skill_collection": 222,
-      "single_skill_or_domain_package": 62,
+      "skill_collection": 225,
+      "single_skill_or_domain_package": 63,
       "awesome_index": 34,
-      "skill_tooling": 142,
-      "adjacent_search_hit": 96,
+      "skill_tooling": 157,
+      "adjacent_search_hit": 97,
       "unclear_search_hit": 186
     }
   },
   "verification": {
     "repository_identity": "verified_by_github_connector",
     "content": "not_started",
-    "note": "Compose the referenced base catalog and delta batches using the stated case-insensitive key. This run added 96 previously unindexed repository identities and removed four exact duplicates. No deep repository content was read."
+    "note": "Compose the referenced base catalog and delta batches using the stated case-insensitive key. This run added 20 previously unindexed repository identities and found no exact duplicates in the indexed two-page batch. No deep repository content was read."
   }
 }
