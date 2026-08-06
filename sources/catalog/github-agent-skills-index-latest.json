@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-08-07T00:49:28+08:00",
+  "status": "composed_discovery_catalog",
+  "scope": "github_agent_skills_repository_index",
+  "composition": {
+    "deduplication_key": "case_insensitive owner/repository",
+    "base": {
+      "path": "sources/catalog/github-agent-skills-index.json",
+      "commit": "faefb042813b2b61d76ae63bfd75f774b7d9befb",
+      "blob_sha": "ac4271f285c35be8805c3f50920d90166c55010e",
+      "unique_total": 304
+    },
+    "deltas": [
+      {
+        "path": "sources/catalog/batches/mcp-skills-pages-1-10.json",
+        "query": "\"mcp skills\" in:name,description",
+        "raw_hits": 100,
+        "new_unique": 100
+      }
+    ]
+  },
+  "progress": {
+    "raw_search_hits": 400,
+    "merged_existing_candidates": 4,
+    "raw_total": 404,
+    "unique_total": 404,
+    "duplicates_removed": 0,
+    "new_unique_repositories_this_run": 100,
+    "deep_analysis_eligible": 243,
+    "held_for_review": 161,
+    "classification_counts": {
+      "specification": 1,
+      "skill_collection": 138,
+      "single_skill_or_domain_package": 56,
+      "awesome_index": 25,
+      "skill_tooling": 23,
+      "adjacent_search_hit": 71,
+      "unclear_search_hit": 90
+    }
+  },
+  "verification": {
+    "repository_identity": "verified_by_github_connector",
+    "content": "not_started",
+    "note": "Compose the referenced base catalog and delta batches using the stated case-insensitive key. No deep repository content was read."
+  }
+}
