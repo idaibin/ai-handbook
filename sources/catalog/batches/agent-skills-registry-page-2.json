@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.3",
+  "observed_at": "2026-08-07T06:20:21+08:00",
+  "status": "discovery_batch",
+  "scope": "github_agent_skills_repository_index",
+  "query": "\"agent skills registry\" in:name,description",
+  "pages": [2],
+  "results_per_page": 20,
+  "raw_hits": 20,
+  "deep_content_reading": false,
+  "classification_basis": "repository_identity_and_search_context_only",
+  "base_catalog": {
+    "path": "sources/catalog/github-agent-skills-index-latest.json",
+    "commit": "678e9598812028246bdeaed117f9fe21d1511ced",
+    "blob_sha": "778f812b8d513ddfdd91662ca7f31a1671791cae",
+    "unique_total": 1739
+  },
+  "deduplication": {
+    "key": "case_insensitive owner/repository",
+    "duplicates_within_batch": [],
+    "duplicates_against_base": [
+      "wm4n/skill-registry"
+    ],
+    "new_unique": 19,
+    "composed_unique_total": 1758,
+    "verification": "Exact AI-handbook code search was executed for all 20 full owner/repository identities. wm4n/skill-registry matched the persisted skill-registry-pages-1-10 batch; the remaining 19 identities returned no prior indexed match."
+  },
+  "classification_counts_raw": {
+    "specification": 0,
+    "skill_collection": 14,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 4,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 2
+  },
+  "classification_counts_new_unique": {
+    "specification": 0,
+    "skill_collection": 14,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 4,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 1
+  },
+  "progress": {
+    "added_to_deep_analysis_eligible": 18,
+    "added_to_held_for_review": 1
+  },
+  "repository_fields": [
+    "github_id",
+    "full_name",
+    "default_branch",
+    "size_kb",
+    "archived",
+    "result_rank",
+    "classification",
+    "is_new_unique",
+    "deep_analysis_eligible"
+  ],
+  "repositories": [
+    ["1289462900", "wm4n/skill-registry", "main", 273, false, 1, "unclear_search_hit", false, false],
+    ["1245847516", "hahhforest/linka-skillhub", "main", 4249, false, 2, "skill_tooling", true, true],
+    ["1220268481", "vorpalengineering/asrpm", "main", 7782, false, 3, "skill_tooling", true, true],
+    ["1172947289", "klimekszymon/gemproject", "main", 139, false, 4, "unclear_search_hit", true, false],
+    ["1114913279", "khooinguyeen/agent-skills-registry", "main", 1787, false, 5, "skill_tooling", true, true],
+    ["1188893363", "vaibhav31s/skills", "main", 4, false, 6, "skill_collection", true, true],
+    ["1215558333", "aios-rs/skillhub", "main", 147, false, 7, "skill_tooling", true, true],
+    ["1304745954", "onebornboy/skills", "main", 7159, false, 8, "skill_collection", true, true],
+    ["1292254678", "TerminallyLazy/skills", "main", 6868, false, 9, "skill_collection", true, true],
+    ["1172763574", "ankitjh4/skills", "main", 3703, false, 10, "skill_collection", true, true],
+    ["1179502333", "ravioliiii665/skills", "main", 3728, false, 11, "skill_collection", true, true],
+    ["1206109182", "idonotwritecode2342/skills", "main", 6893, false, 12, "skill_collection", true, true],
+    ["1207069437", "kriptoburak/zocomputer-skills", "main", 7021, false, 13, "skill_collection", true, true],
+    ["1200766120", "erhuve/skills", "main", 6813, false, 14, "skill_collection", true, true],
+    ["1185893423", "yshishenya/skills", "main", 3805, false, 15, "skill_collection", true, true],
+    ["1203492792", "LubaKaper/skills", "main", 6646, false, 16, "skill_collection", true, true],
+    ["1200857765", "Dobrychlopak87/skills", "main", 4637, false, 17, "skill_collection", true, true],
+    ["1301583575", "Adam-s-tech/Zo-Agent-Skills", "main", 7054, false, 18, "skill_collection", true, true],
+    ["1276411452", "bigdogg6565/skills", "main", 7018, false, 19, "skill_collection", true, true],
+    ["1242850885", "ajspig/skills", "main", 7080, false, 20, "skill_collection", true, true]
+  ],
+  "coverage": {
+    "completed_pages": [2],
+    "next_page": 3,
+    "query_complete": false,
+    "next_page_probe": "page 3 returned 20 repositories and was not merged in this batch"
+  },
+  "verification": {
+    "repository_identity": "verified_by_github_connector",
+    "deduplication": "verified_against_persisted_AI-handbook_index_artifacts_and_exact_code_search",
+    "content": "not_started",
+    "note": "Index-only. No README, SKILL.md, scripts, references, eval contents, stars, quality, or implementation content was read."
+  }
+}
