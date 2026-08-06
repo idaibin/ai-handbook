@@ -2,14 +2,14 @@
 
 ## Current verified catalog
 
-- Raw GitHub search hits: `1401`
+- Raw GitHub search hits: `1421`
 - Existing discovery-inbox candidates merged and re-verified: `4`
-- Raw identities across all inputs: `1405`
-- Unique repositories after case-insensitive `owner/repository` deduplication: `1307`
+- Raw identities across all inputs: `1425`
+- Unique repositories after case-insensitive `owner/repository` deduplication: `1327`
 - Exact duplicates removed across current inputs: `98`
-- New unique repositories added in this run: `51`
-- Provisionally eligible for later deep analysis: `949`
-- Held as adjacent or unclear search hits: `358`
+- New unique repositories added in this run: `20`
+- Provisionally eligible for later deep analysis: `963`
+- Held as adjacent or unclear search hits: `364`
 
 Composed machine-readable authority: [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json).
 
@@ -33,6 +33,7 @@ Composed machine-readable authority: [`github-agent-skills-index-latest.json`](g
 - `"agentskills specification" in:name,description`, page `1`
 - `"skill lint" in:name,description`, complete accessible page-1 result set with `100` requested results
 - `"agent skills validator" in:name,description`, complete accessible page-1 result set with `100` requested results
+- `"agent skills standard" in:name,description`, page `1`, first `20` results
 
 ## Composition
 
@@ -55,66 +56,60 @@ The composed catalog consists of the `304`-repository base catalog plus these ve
 | `agentskills-specification-search.json` | 12 | 0 | 12 |
 | `skill-lint-search.json` | 90 | 0 | 90 |
 | `agent-skills-validator-search.json` | 53 | 2 | 51 |
+| `agent-skills-standard-page-1.json` | 20 | 0 | 20 |
 
 ## This run
 
 Query:
 
 ```text
-"agent skills validator" in:name,description
+"agent skills standard" in:name,description
 ```
 
-GitHub returned `53` accessible repository identities in the complete page-1 result set when requesting up to `100` results.
+This batch records the first `20` GitHub repository-search results from page `1` using `per_page=20`.
 
-- Raw repository identities: `53`
+- Raw repository identities: `20`
 - Internal batch duplicates: `0`
-- Exact case-insensitive identities already present in the prior `1256`-repository catalog: `2`
-- Added as new repositories: `51`
-- Updated composed catalog: `1307`
-
-Duplicates removed:
-
-```text
-swarmclawai/agent-skills-lint
-kriptoburak/agent-skills-lint
-```
+- Exact case-insensitive identities found in the prior `1307`-repository catalog: `0`
+- Added as new repositories: `20`
+- Updated composed catalog: `1327`
 
 | Classification | Raw hits | New unique |
 | --- | ---: | ---: |
-| `specification` | 2 | 2 |
-| `skill_collection` | 27 | 27 |
-| `single_skill_or_domain_package` | 1 | 1 |
+| `specification` | 3 | 3 |
+| `skill_collection` | 8 | 8 |
+| `single_skill_or_domain_package` | 3 | 3 |
 | `awesome_index` | 0 | 0 |
-| `skill_tooling` | 17 | 15 |
-| `adjacent_search_hit` | 3 | 3 |
-| `unclear_search_hit` | 3 | 3 |
+| `skill_tooling` | 0 | 0 |
+| `adjacent_search_hit` | 2 | 2 |
+| `unclear_search_hit` | 4 | 4 |
 
-The complete ordered result set, provisional classifications, and per-identity deduplication status are stored in [`batches/agent-skills-validator-search.json`](batches/agent-skills-validator-search.json).
+The complete ordered result set, provisional classifications, and per-identity deduplication status are stored in [`batches/agent-skills-standard-page-1.json`](batches/agent-skills-standard-page-1.json).
 
 ## Classification totals
 
 | Classification | Count | Index-stage meaning |
 | --- | ---: | --- |
-| `specification` | 4 | Identity strongly indicates a Skill specification or normative guidance. |
-| `skill_collection` | 461 | Identity indicates a collection of Skills. |
-| `single_skill_or_domain_package` | 80 | Identity indicates one Skill or a domain-focused package. |
+| `specification` | 7 | Identity strongly indicates a Skill specification, standard, or normative guidance. |
+| `skill_collection` | 469 | Identity indicates a collection of Skills. |
+| `single_skill_or_domain_package` | 83 | Identity indicates one Skill or a domain-focused package. |
 | `awesome_index` | 36 | Identity indicates a curated Skill index. |
 | `skill_tooling` | 368 | Identity indicates validation, linting, evaluation, packaging, discovery, registry, marketplace, management, or runtime tooling. |
-| `adjacent_search_hit` | 132 | Related to agents or Skills, but not clearly a Skill repository from identity alone. |
-| `unclear_search_hit` | 226 | Identity is insufficient for reliable classification. |
+| `adjacent_search_hit` | 134 | Related to agents or Skills, but not clearly a Skill repository from identity alone. |
+| `unclear_search_hit` | 230 | Identity is insufficient for reliable classification. |
 
 ## Evidence boundary
 
-This remains an index-only catalog. GitHub connector results verified repository identities and accessibility. No repository README, `SKILL.md`, scripts, references, evaluations, stars, quality, or implementation behavior was assessed. Classifications are provisional and must not be treated as deep-analysis results.
+This remains an index-only catalog. GitHub connector results verified repository identities and accessibility. Classifications are provisional from repository identity only. No repository README, `SKILL.md`, scripts, references, evaluations, stars, quality, or implementation behavior was assessed.
 
 ## Validation
 
-- Agent-skills-validator batch commit: `466e0a94b4e01f73a040c0817fc3e76390b0a6cd`.
-- Composed latest-manifest commit: `d2f7a6324cad6073031bb3b412d5fd48eb95d223`.
-- The current batch contains `53` unique case-insensitive repository keys.
-- Prior `1256` plus `51` new repositories resolves to `1307`.
-- `1405 - 98 = 1307`.
-- Classification totals resolve to `1307` repositories.
-- `949 + 358 = 1307`, matching the eligible and held partitions.
-- Deduplication used exact case-insensitive identity comparison against the GitHub-indexed `1154`-repository AI-handbook snapshot, then direct comparison with the two newer batches totaling `102` repositories.
-- The next index run must compose against [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json), preserve query origins, and add only genuinely new identities.
+- Agent-skills-standard batch commit: `67796335a00c9f9acd006fa3818e434d513ffa24`.
+- Composed latest-manifest commit: `125308257abb14b7d67c3e5086d1fea1d0057a77`.
+- The current batch contains `20` unique case-insensitive repository keys.
+- Prior `1307` plus `20` new repositories resolves to `1327`.
+- `1425 - 98 = 1327`.
+- Classification totals resolve to `1327` repositories.
+- `963 + 364 = 1327`, matching the eligible and held partitions.
+- Each returned `owner/repository` identity was checked against the existing AI-handbook catalog artifacts through GitHub repository code search before being recorded as new.
+- The next index run must compose against [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json), continue this query from page `2` if using `per_page=20`, preserve query origins, and add only genuinely new identities.
