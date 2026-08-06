@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.2",
+  "observed_at": "2026-08-07",
+  "status": "verified_index_batch",
+  "scope": "github_agent_skills_repository_index",
+  "query": "\"agentskills sdk\" in:name,description",
+  "search": {
+    "pages": [1],
+    "per_page": 50,
+    "raw_hits": 9,
+    "internal_duplicates": 0,
+    "duplicates_against_prior": 0,
+    "new_unique": 9,
+    "prior_unique_total": 1608,
+    "composed_unique_total": 1617,
+    "deduplication_key": "case_insensitive owner/repository",
+    "terminal_page_verified": true,
+    "next_page_result_count": 0
+  },
+  "classification_counts_raw": {
+    "specification": 0,
+    "skill_collection": 0,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 9,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 0
+  },
+  "classification_counts_new_unique": {
+    "specification": 0,
+    "skill_collection": 0,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 9,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 0
+  },
+  "repository_tuple_fields": ["page", "rank", "github_id", "repository_full_name", "default_branch", "size", "archived", "classification", "deep_analysis_eligible", "duplicate_against_prior"],
+  "repositories": [
+    [1,1,"1156378628","pratikxpanda/agentskills-sdk","main",1071,false,"skill_tooling",true,false],
+    [1,2,"1298384838","Rebel028/AgentSkills.Sdk","master",92,false,"skill_tooling",true,false],
+    [1,3,"1242303970","yasssir04/agentskills-sdk","main",1211,false,"skill_tooling",true,false],
+    [1,4,"1268593561","YvanKOB/agentskills-sdk","main",662,false,"skill_tooling",true,false],
+    [1,5,"1172625288","atzamis/agentskills-sdk","main",315,false,"skill_tooling",true,false],
+    [1,6,"1171757333","AbhijeetLT/agentskills-sdk","main",311,false,"skill_tooling",true,false],
+    [1,7,"1218584939","hitmao/agentskills-sdk","main",1206,false,"skill_tooling",true,false],
+    [1,8,"1189374734","cuoicungtui/agentskills-sdk","main",854,false,"skill_tooling",true,false],
+    [1,9,"1184962742","iflow-mcp/pratikxpanda-agentskills-sdk","main",854,false,"skill_tooling",true,false]
+  ],
+  "verification": {
+    "repository_identity": "verified_by_github_repository_search",
+    "deduplication": "No exact owner/repository match was found in the 304-repository base catalog, the broad agent-skill pages 1-10 batch, the agentskills CLI/specification batches, or the current AI-handbook code-search snapshot; the immediately preceding benchmark and test batches were also fetched and compared directly. No prior exact identity match was found for these nine repositories.",
+    "classification": "provisional_from_repository_identity_and_query_context_only",
+    "content": "not_started",
+    "terminal_page": "GitHub repository search returned nine results on page 1 and zero results on page 2 at per_page=50",
+    "note": "Index-only batch. README, SKILL.md, scripts, references, eval contents, stars, and implementation content were not read."
+  }
+}
