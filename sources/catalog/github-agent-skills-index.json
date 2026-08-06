@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-08-07T00:19:26+08:00",
+  "status": "discovery_catalog",
+  "scope": "github_agent_skills_repository_index",
+  "method": {
+    "provider": "GitHub connector",
+    "query": "\"agent skills\" in:name,description",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "results_per_page": 10,
+    "deep_content_reading": false,
+    "classification_basis": "repository_identity_only"
+  },
+  "verification": {
+    "repository_identity": "verified_by_github_connector",
+    "content": "not_started",
+    "note": "Identity/accessibility verified; quality, stars, README and Skill contents were not assessed in this index-only run."
+  },
+  "progress": {
+    "raw_search_hits": 100,
+    "merged_existing_candidates": 4,
+    "raw_total": 104,
+    "unique_total": 104,
+    "duplicates_removed": 0,
+    "deep_analysis_eligible": 79,
+    "held_for_review": 25,
+    "classification_counts": {
+      "adjacent_search_hit": 16,
+      "awesome_index": 10,
+      "single_skill_or_domain_package": 18,
+      "skill_collection": 44,
+      "skill_tooling": 6,
+      "specification": 1,
+      "unclear_search_hit": 9
+    }
+  },
+  "duplicate_policy": {
+    "key": "case_insensitive owner/repository",
+    "action": "retain_one_and_merge_origins"
+  },
+  "origins": {
+    "github_search_count": 100,
+    "existing_discovery_inbox_verified": [
+      "freestylefly/awesome-gpt-image-2",
+      "xstongxue/best-skills",
+      "Leey21/awesome-ai-research-writing",
+      "NousResearch/hermes-agent"
+    ]
+  },
+  "categories": {
+    "skill_collection": [
+      "addyosmani/agent-skills",
+      "addyosmani/web-quality-skills",
+      "antfu/skills",
+      "anthropics/skills",
+      "apify/agent-skills",
+      "browserbase/skills",
+      "cafe3310/public-agent-skills",
+      "callstackincubator/agent-skills",
+      "DannyMac180/skills",
+      "davidondrej/skills",
+      "davidpc007/openclaw-marketing-skills",
+      "firebase/agent-skills",
+      "futantan/agent-skills.md",
+      "getsentry/skills",
+      "google-labs-code/stitch-skills",
+      "google/skills",
+      "hashicorp/agent-skills",
+      "huangkiki/dailypaper-skills",
+      "intellectronica/agent-skills",
+      "itsmostafa/aws-agent-skills",
+      "K-Dense-AI/scientific-agent-skills",
+      "kangarooking/kangarooking-skills",
+      "kepano/obsidian-skills",
+      "LambdaTest/agent-skills",
+      "laravel/agent-skills",
+      "lixiaolin94/skills",
+      "ljagiello/ctf-skills",
+      "MengTo/Skills",
+      "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "phuryn/pm-skills",
+      "railwayapp/railway-skills",
+      "remotion-dev/skills",
+      "ReScienceLab/opc-skills",
+      "rmyndharis/antigravity-skills",
+      "supabase/agent-skills",
+      "tech-leads-club/agent-skills",
+      "tiangolo/library-skills",
+      "vercel-labs/agent-skills",
+      "vercel-labs/skills",
+      "vibe-motion/skills",
+      "vuejs-ai/skills",
+      "WordPress/agent-skills",
+      "xstongxue/best-skills",
+      "zocomputer/skills"
+    ],
+    "single_skill_or_domain_package": [
+      "adithya-s-k/manim_skill",
+      "alibaba-flyai/flyai-skill",
+      "AvdLee/SwiftUI-Agent-Skill",
+      "chuspeeism/dashi-ppt-skill",
+      "cloudflare/security-audit-skill",
+      "disler/agent-sandbox-skill",
+      "ferdinandobons/startup-skill",
+      "https-deeplearning-ai/sc-agent-skills-files",
+      "jdubois/dr-jskill",
+      "muxuuu/serenity-skill",
+      "mvanhorn/last30days-skill",
+      "obra/superpowers",
+      "op7418/guizang-ppt-skill",
+      "Pluviobyte/rnskill",
+      "samber/cc-skills-golang",
+      "twostraws/SwiftUI-Agent-Skill",
+      "wuyoscar/GPT-Image2-Skill",
+      "yaojingang/yao-meta-skill"
+    ],
+    "specification": [
+      "agentskills/agentskills"
+    ],
+    "adjacent_search_hit": [
+      "basecamp/fizzy-cli",
+      "ClawBio/ClawBio",
+      "CloudAI-X/claude-workflow-v2",
+      "DenisSergeevitch/agents-best-practices",
+      "gadicc/yahoo-finance2",
+      "jacob-bd/gemini-notebook-mcp-cli",
+      "jarrodwatts/claude-code-config",
+      "krusemediallc/arcads-claude-code",
+      "memodb-io/Acontext",
+      "noobnooc/agent",
+      "NousResearch/hermes-agent",
+      "rpamis/comet",
+      "Shubhamsaboo/awesome-llm-apps",
+      "TanStack/cli",
+      "u14app/neo-chat",
+      "zebbern/claude-code-guide"
+    ],
+    "awesome_index": [
+      "freestylefly/awesome-gpt-image-2",
+      "github/awesome-copilot",
+      "heilcheng/awesome-agent-skills",
+      "Leey21/awesome-ai-research-writing",
+      "libukai/awesome-agent-skills",
+      "mliu98/awesome-human-distillation",
+      "RKiding/Awesome-finance-skills",
+      "skillmatic-ai/awesome-agent-skills",
+      "VoltAgent/awesome-agent-skills",
+      "xixu-me/awesome-persona-distill-skills"
+    ],
+    "unclear_search_hit": [
+      "0x0funky/agent-sprite-forge",
+      "AminBlg/SimpleEnglish",
+      "berabuddies/Semia",
+      "blader/humanizer",
+      "earthtojake/text-to-cad",
+      "nicobailon/visual-explainer",
+      "plannotator/effective-html",
+      "PrathamLearnsToCode/paper2code",
+      "tt-a1i/archify"
+    ],
+    "skill_tooling": [
+      "antfu/skills-npm",
+      "cisco-ai-defense/skill-scanner",
+      "mgechev/skillgrade",
+      "SJTU-IPADS/SkVM",
+      "snyk/agent-scan",
+      "Varnan-Tech/opendirectory"
+    ]
+  }
+}
