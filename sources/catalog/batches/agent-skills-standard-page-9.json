@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.2",
+  "observed_at": "2026-08-07T04:24:02+08:00",
+  "status": "verified_index_batch",
+  "scope": "github_agent_skills_repository_index",
+  "query": "\"agent skills standard\" in:name,description",
+  "search": {
+    "pages": [9],
+    "per_page": 20,
+    "raw_hits": 20,
+    "internal_duplicates": 0,
+    "duplicates_against_prior": 0,
+    "new_unique": 20,
+    "prior_unique_total": 1465,
+    "composed_unique_total": 1485,
+    "deduplication_key": "case_insensitive owner/repository"
+  },
+  "classification_counts_raw": {
+    "specification": 20,
+    "skill_collection": 0,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 0,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 0
+  },
+  "classification_counts_new_unique": {
+    "specification": 20,
+    "skill_collection": 0,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 0,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 0
+  },
+  "repository_tuple_fields": ["page", "rank", "github_id", "repository_full_name", "default_branch", "size", "classification", "duplicate_against_prior"],
+  "repositories": [
+    [9,1,"1287820796","tuantc00/agent-skills-standard","develop",3546,"specification",false],
+    [9,2,"1137603365","canh7antt8a/agent-skills-standard","develop",195,"specification",false],
+    [9,3,"1136301057","Bios597407/agent-skills-standard","develop",176,"specification",false],
+    [9,4,"1271860823","huysynf/agent-skills-standard","develop",3194,"specification",false],
+    [9,5,"1136615994","ken2190/agent-skills-standard","develop",202,"specification",false],
+    [9,6,"1136310652","nkkha/agent-skills-standard","develop",176,"specification",false],
+    [9,7,"1150254228","bolobala91/agent-skills-standard","develop",912,"specification",false],
+    [9,8,"1219489940","lpcuong2106/agent-skills-standard","develop",3016,"specification",false],
+    [9,9,"1209550843","NguyenDinhTruong97/agent-skills-standard","develop",2691,"specification",false],
+    [9,10,"1136256971","crayon196tq/agent-skills-standard","develop",112,"specification",false],
+    [9,11,"1136895212","goluflqh/agent-skills-standard","develop",195,"specification",false],
+    [9,12,"1230652676","Donyta79/agent-skills-standard","develop",3025,"specification",false],
+    [9,13,"1309843109","tran-haison/agent-skills-standard","develop",5499,"specification",false],
+    [9,14,"1214504171","NVQuan/agent-skills-standard","develop",2691,"specification",false],
+    [9,15,"1229055646","yuk1na2312/agent-skills-standard","develop",3016,"specification",false],
+    [9,16,"1229137107","bsnyl5/agent-skills-standard","develop",3016,"specification",false],
+    [9,17,"1137601056","tekarratter/agent-skills-standard","develop",195,"specification",false],
+    [9,18,"1298644407","cowvet195/agent-skills-standard","develop",6525,"specification",false],
+    [9,19,"1136461650","visionarygaze369/agent-skills-standard","develop",178,"specification",false],
+    [9,20,"1217858916","cong91/agent-skills-standard","develop",3385,"specification",false]
+  ],
+  "verification": {
+    "repository_identity": "verified_by_github_repository_search",
+    "deduplication": "case-insensitive full-name comparison against the published composed catalog sources, including the base catalog, prior broad agent-skill and relevant validator/specification batches, and agent-skills-standard pages 1-8; no page-9 identity matched a prior indexed repository",
+    "classification": "provisional_from_repository_identity_only",
+    "content": "not_started",
+    "note": "Index-only batch. README, SKILL.md, scripts, references, evals, stars, and implementation content were not read."
+  }
+}
