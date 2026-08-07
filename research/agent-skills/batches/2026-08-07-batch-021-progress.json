@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "batch": "2026-08-07-batch-021",
+  "observed_at": "2026-08-07",
+  "status": "structure-reviewed",
+  "repositories_structure_reviewed_delta": 10,
+  "repository_scoped_skill_reports_delta": 23,
+  "cumulative_repositories_structure_reviewed": 210,
+  "cumulative_repository_scoped_skill_reports": 2573,
+  "canonical_eligible_basis": 2088,
+  "remaining_estimate": 1878,
+  "runtime_validation": "not_executed",
+  "previous_batch": "2026-08-07-batch-020",
+  "batch_report": "research/agent-skills/batches/2026-08-07-batch-021-deep-analysis.md",
+  "skill_report": "research/agent-skills/batches/2026-08-07-batch-021-skill-reports.md"
+}
