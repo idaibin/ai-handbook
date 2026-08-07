@@ -13,7 +13,7 @@
 
 Composed machine-readable authority: [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json).
 
-The canonical total remains `2502` because the current `agentskills in:name,description` search is staged but has not completed exhaustive historical identity reconciliation. This run persisted pages `22-31`, bringing staging coverage to pages `1-31`.
+The canonical total remains `2502` because the current `agentskills in:name,description` search is staged but has not completed exhaustive historical identity reconciliation. This run persisted pages `32-41`, bringing staging coverage to pages `1-41`.
 
 ## Completed search coverage
 
@@ -53,18 +53,18 @@ Query:
 agentskills in:name,description
 ```
 
-Persisted staging coverage now includes pages `1-31`. Pages `22-31` were retrieved from live GitHub repository search in this run with `20` repository identities per page and persisted as one verified staging batch.
+Persisted staging coverage now includes pages `1-41`. Pages `32-41` were retrieved from live GitHub repository search in this run with `20` repository identities per page and persisted as one verified staging batch. Page `42` was also probed and returned `20` repositories, but it is not counted as persisted coverage.
 
 Current staging state:
 
 | Metric | Value |
 | --- | ---: |
-| Raw identities persisted | `620` |
+| Raw identities persisted | `820` |
 | Confirmed cross-staging duplicates in reconciled pages `1-16` | `1` |
 | Staged unique identities reconciled through page `16` | `319` |
-| Identities unique within unreconciled pages `17-31` batches | `300` |
+| Identities unique within unreconciled pages `17-41` batches | `500` |
 | Exact prior-catalog duplicates directly confirmed | `3` |
-| Unresolved identity records awaiting full reconciliation | `616` |
+| Unresolved identity records awaiting full reconciliation | `816` |
 | Global staged-unique total | `not asserted` |
 | Canonical delta asserted | `0` |
 
@@ -76,7 +76,7 @@ The three directly confirmed prior-catalog duplicates remain:
 
 Across reconciled pages `1-16`, the confirmed cross-staging repeat remains `0xsarawut/agentskills`, which appeared at page `3` rank `20` and page `4` rank `1`.
 
-Pages `22-31` contain `200` distinct case-insensitive `owner/repository` identities within the new batch. Cross-staging comparison against pages `1-21` and full historical reconciliation are still pending, so these identities are not used to inflate the canonical total.
+Pages `32-41` contain `200` distinct case-insensitive `owner/repository` identities within the new batch. Cross-staging comparison against pages `1-31` and full historical reconciliation are still pending, so these identities are not used to inflate the canonical total.
 
 Staging artifacts:
 
@@ -88,8 +88,9 @@ Staging artifacts:
 - [`batches/agentskills-pages-17-20.json`](batches/agentskills-pages-17-20.json)
 - [`batches/agentskills-page-21.json`](batches/agentskills-page-21.json)
 - [`batches/agentskills-pages-22-31.json`](batches/agentskills-pages-22-31.json)
+- [`batches/agentskills-pages-32-41.json`](batches/agentskills-pages-32-41.json)
 
-## Pages 22-31 provisional classification
+## Pages 32-41 provisional classification
 
 | Classification | Count |
 | --- | ---: |
@@ -122,12 +123,13 @@ This remains an index-only catalog. GitHub repository search verified repository
 ## Validation
 
 - Current canonical state remains: `2502 unique / 2088 eligible / 414 held`.
-- Newly persisted pages in this run: `22-31`.
+- Newly persisted pages in this run: `32-41`.
 - Raw identities newly persisted in this run: `200`.
-- Internal duplicates within pages `22-31`: `0`.
-- Total staged raw identities across pages `1-31`: `620`.
-- Cross-staging/full-history reconciliation for pages `17-31`: `pending`.
+- Internal duplicates within pages `32-41`: `0`.
+- Total staged raw identities across pages `1-41`: `820`.
+- Cross-staging/full-history reconciliation for pages `17-41`: `pending`.
 - Directly confirmed prior-catalog duplicates across earlier reconciled staging: `3`.
-- Batch staging commit: `bd38e038c0002dfd485176fbaffc395c548e87c8`.
+- Batch staging commit: `9f7afac52bc6b909311e796d6c7dafae2461025a`.
+- Page `42` probe: `20` repositories; not yet persisted.
 - `2088 + 414 = 2502`, matching the canonical eligible and held partitions.
 - No README, `SKILL.md`, scripts, references, eval contents, stars, or implementation contents were read during this index-only run.
