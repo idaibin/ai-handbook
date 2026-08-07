@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.3",
+  "observed_at": "2026-08-07T08:40:05+08:00",
+  "status": "discovery_batch",
+  "scope": "github_agent_skills_repository_index",
+  "query": "\"agent skills registry\" in:name,description",
+  "pages": [16],
+  "results_per_page": 20,
+  "raw_hits": 20,
+  "deep_content_reading": false,
+  "classification_basis": "repository_identity_and_search_context_only",
+  "base_catalog": {
+    "path": "sources/catalog/github-agent-skills-index-latest.json",
+    "commit": "fb784edf17c97b02d9ee574c257867176b4de3f7",
+    "blob_sha": "9fd3a89dfd9980aab43b64b00e3dfb4ecf7f5bdb",
+    "unique_total": 2007
+  },
+  "deduplication": {
+    "key": "case_insensitive owner/repository",
+    "duplicates_within_batch": [],
+    "duplicates_against_base": [],
+    "new_unique": 20,
+    "composed_unique_total": 2027,
+    "verification": "All page-16 identities were directly compared against the persisted current-query pages 12-15, including the adjacent pagination window where prior drift had produced duplicates. The full skill-hub pages 1-10 and agent-skills-hub pages 1-2 artifacts were also directly inspected as high-overlap sets, and exact AI-handbook search for candidate identities found no positive prior match. Empty code-search results were not used as sole uniqueness proof because prior runs demonstrated false negatives."
+  },
+  "classification_counts_raw": {
+    "specification": 0,
+    "skill_collection": 0,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 20,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 0
+  },
+  "classification_counts_new_unique": {
+    "specification": 0,
+    "skill_collection": 0,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 20,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 0
+  },
+  "progress": {
+    "added_to_deep_analysis_eligible": 20,
+    "added_to_held_for_review": 0
+  },
+  "repository_fields": [
+    "github_id",
+    "full_name",
+    "default_branch",
+    "size_kb",
+    "archived",
+    "result_rank",
+    "classification",
+    "is_new_unique",
+    "deep_analysis_eligible"
+  ],
+  "repositories": [
+    ["1199012594", "zerolugithub/skillhub", "main", 3095, false, 1, "skill_tooling", true, true],
+    ["1235425434", "1105342076/skillhub", "main", 12458, false, 2, "skill_tooling", true, true],
+    ["1266890638", "zztdandan/skillhub", "main", 13115, false, 3, "skill_tooling", true, true],
+    ["1266004437", "kowinner123/skillhub", "main", 12711, false, 4, "skill_tooling", true, true],
+    ["1276716726", "seric705/skillhub", "main", 13562, false, 5, "skill_tooling", true, true],
+    ["1254921104", "lihujun002/skillhub", "main", 12945, false, 6, "skill_tooling", true, true],
+    ["1258013863", "sun-zhang/skillhub", "main", 12966, false, 7, "skill_tooling", true, true],
+    ["1251162344", "jianxiongsos-boop/skillhub", "main", 12839, false, 8, "skill_tooling", true, true],
+    ["1234332230", "thomasgogo/skillhub", "main", 13448, false, 9, "skill_tooling", true, true],
+    ["1288269698", "dmore/skillhub-self-hosted-ai-skill-registrar-blue", "main", 13753, false, 10, "skill_tooling", true, true],
+    ["1253207118", "LiBaoxuan-Neil/skillhub", "main", 12939, false, 11, "skill_tooling", true, true],
+    ["1262427283", "BryanHoo/skillhub", "main", 13187, false, 12, "skill_tooling", true, true],
+    ["1271098436", "LWJ007/skillhub", "main", 13323, false, 13, "skill_tooling", true, true],
+    ["1271758363", "jacky539027/skillhub", "main", 13334, false, 14, "skill_tooling", true, true],
+    ["1265816638", "alizhimx/skillhub", "main", 14150, false, 15, "skill_tooling", true, true],
+    ["1181996141", "182731170n3/skillhub", "main", 1355, false, 16, "skill_tooling", true, true],
+    ["1182388317", "thamerbel/skillhub", "main", 1660, false, 17, "skill_tooling", true, true],
+    ["1206939773", "flyer5200/skillhub", "main", 10805, false, 18, "skill_tooling", true, true],
+    ["1229213481", "lovelygomez488-commits/skillhub", "main", 13223, false, 19, "skill_tooling", true, true],
+    ["1198661170", "flyrun9527/skillhub", "main", 3095, false, 20, "skill_tooling", true, true]
+  ],
+  "coverage": {
+    "completed_pages": [16],
+    "next_page": 17,
+    "query_complete": false,
+    "next_page_probe": "page 17 returned 20 repositories and was not merged in this batch"
+  },
+  "verification": {
+    "repository_identity": "verified_by_github_connector",
+    "deduplication": "verified against the persisted adjacent current-query pages plus directly inspected high-overlap skill-hub and agent-skills-hub batch artifacts; exact code-search emptiness explicitly excluded as sole uniqueness proof",
+    "content": "not_started",
+    "note": "Index-only. No README, SKILL.md, scripts, references, eval contents, stars, quality, or implementation content was read."
+  }
+}
