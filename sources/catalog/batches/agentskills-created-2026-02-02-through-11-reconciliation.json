@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-08-07",
+  "scope": "github_agent_skills_repository_index",
+  "phase": "index_only",
+  "strategy": "single created-date shards with per_page=100 plus explicit page-2 terminal probes",
+  "dates": ["2026-02-02","2026-02-03","2026-02-04","2026-02-05","2026-02-06","2026-02-07","2026-02-08","2026-02-09","2026-02-10","2026-02-11"],
+  "deduplication_key": "case_insensitive owner/repository",
+  "raw_candidate_records": 144,
+  "unique_within_reconciliation_batch": 144,
+  "internal_duplicates_removed": 0,
+  "prior_february_staging_matches": 144,
+  "missing_from_prior_february_staging": 0,
+  "new_unique_after_merge": 0,
+  "terminal_probe": "page 2 returned 0 repositories for every single-day shard",
+  "classification_basis": "preserved from the previously persisted February staging classification after exact case-insensitive identity matching; no target repository contents were read",
+  "default_classification": "skill_collection",
+  "classification_overrides": {
+    "scottfalconer/drupal-intent-testing": "adjacent_search_hit",
+    "scottfalconer/drupal-issue-queue": "adjacent_search_hit",
+    "hexdaemon/archon-skill": "single_skill_or_domain_package",
+    "archetech/archon-skill": "unclear_search_hit",
+    "YZhuAndrew/agent-skills-installer": "skill_tooling",
+    "bourlierbigus-lgtm/apple-id-us-register": "adjacent_search_hit",
+    "smouj/essentials-skill-openclaw": "single_skill_or_domain_package",
+    "bourlierbigus-lgtm/office-network-admin": "adjacent_search_hit",
+    "morningstar-daemon/archon-skill": "single_skill_or_domain_package",
+    "kriskimmerle/skillsafe": "skill_tooling",
+    "AntonioTriguero/Agent0": "adjacent_search_hit",
+    "gepeiyu/agentskills-proxy": "skill_tooling",
+    "TTBoy/linkHub": "adjacent_search_hit",
+    "adjahossoualexandre/codecompanion-agentskills.nvim": "skill_tooling",
+    "chum-cloud/chum-cloud-skill": "single_skill_or_domain_package",
+    "Lincoln-cn/JAgentSkillManager": "skill_tooling",
+    "flexigpt/agentskills-go": "skill_tooling",
+    "jason-TwT/agent_skills_learning": "adjacent_search_hit",
+    "leonaaardob/lb-better-auth-skill": "single_skill_or_domain_package",
+    "noreastergroup/isitwater-agentskill": "single_skill_or_domain_package",
+    "leonaaardob/lb-nextjs16-skill": "single_skill_or_domain_package",
+    "cuizhanming/vibe-coding-skills": "unclear_search_hit",
+    "jooey/openclaw-skill-add-minimax-provider": "single_skill_or_domain_package",
+    "McMuff86/ComicMaster": "adjacent_search_hit",
+    "TangBaron/LangChain_Agent_Skill": "single_skill_or_domain_package",
+    "sumleo/AgentSkillsScanner": "skill_tooling",
+    "chigwell/skilldock.io": "skill_tooling",
+    "ck10100713/agentskillscanner": "skill_tooling",
+    "skill-tools/skill-tools": "skill_tooling",
+    "alexcreew/keyboard-layout-fix": "adjacent_search_hit",
+    "irfiacre/AgentSkills-Tutorial": "adjacent_search_hit"
+  },
+  "classification_counts": {
+    "specification": 0,
+    "skill_collection": 113,
+    "single_skill_or_domain_package": 9,
+    "awesome_index": 0,
+    "skill_tooling": 10,
+    "adjacent_search_hit": 10,
+    "unclear_search_hit": 2
+  },
+  "shards": [
+    {
+      "date": "2026-02-02",
+      "query": "agentskills in:name,description created:2026-02-02..2026-02-02",
+      "page_1_results": 13,
+      "page_2_results": 0,
+      "repositories": ["SzpakKamil/AgentSkills","aitabasco/agentskills","PetsasTeam/agentskills","yogitas/AgentSkills","scottfalconer/drupal-intent-testing","scottfalconer/drupal-issue-queue","Backgetters/agentskills","hlyther583-code/agentskills","preigile/agentskills","poerwantosantoso/agentskills","ShakeDewan/agentskills","hexdaemon/archon-skill","archetech/archon-skill"]
+    },
+    {
+      "date": "2026-02-03",
+      "query": "agentskills in:name,description created:2026-02-03..2026-02-03",
+      "page_1_results": 18,
+      "page_2_results": 0,
+      "repositories": ["laidasan/AgentSkills","renesansz/agentskills","neuroradiology/agentskills","ClementWalter/agentskills","Followgleader/agentskills","woshare/agentskills","OpenAiIst/agentskills","kustomzone/agentskills","Jay991/agentskills","jamiechicago312/agentskills","dhruvinrsoni/agentskills-garden","malitov/agentskills-collection","FHIDev/Fhi.AgentSkills","YZhuAndrew/agent-skills-installer","bourlierbigus-lgtm/apple-id-us-register","smouj/essentials-skill-openclaw","bourlierbigus-lgtm/office-network-admin","morningstar-daemon/archon-skill"]
+    },
+    {
+      "date": "2026-02-04",
+      "query": "agentskills in:name,description created:2026-02-04..2026-02-04",
+      "page_1_results": 16,
+      "page_2_results": 0,
+      "repositories": ["lamtuanvu/agentskills","guoguolord/AgentSkills","jaden680/agentskills","jasonchengf/agentskills","mbrukman/agentskills","YKamemura/agentskills","mz0in/agentskills","ahsimonus/agentskills","bpd1069/agentskills","vmalyi/agentskills","wellitongervickas/agentskills","ovidiu-eremia/agentskills","Superodmo/agentskills","kriskimmerle/skillsafe","felirami/skillsbyfelirami","AntonioTriguero/Agent0"]
+    },
+    {
+      "date": "2026-02-05",
+      "query": "agentskills in:name,description created:2026-02-05..2026-02-05",
+      "page_1_results": 12,
+      "page_2_results": 0,
+      "repositories": ["gepeiyu/agentskills-proxy","SSK015/AgentSkills","lslab/agentskills","lqkklz/agentskills","nnennandukwe/agentskills","groupthinking/agentskills","navinpai/agentskills","MidaTechnology/AgentSkillsHub","TTBoy/linkHub","adjahossoualexandre/codecompanion-agentskills.nvim","chum-cloud/chum-cloud-skill","Lincoln-cn/JAgentSkillManager"]
+    },
+    {
+      "date": "2026-02-06",
+      "query": "agentskills in:name,description created:2026-02-06..2026-02-06",
+      "page_1_results": 29,
+      "page_2_results": 0,
+      "repositories": ["CrestApps/CrestApps.AgentSkills","AsherBond/agentskills","wuchubuzai2018/expert-skills-hub","DragonL641/AgentSkills","WayneChou-bot/AgentSkills","flexigpt/agentskills-go","quareth/agentskills","hrmkmdtv/agentskills","SUNPENG916/agentskills","chosen67one-source/agentskills","kinfey/agentskills","webboty/agentskills","ginjaninja78/agentskills","kosyik/agentskills","fritz-astronomer/agentskills","liangxiaojian0210/agentskills","yelei1987/agentskills","ElasticProvisioner/agentskills","pan5633/agentskills","Distillative-AI/agentskills","Atanycosts/AgentSkills","23hashtag/agentskills","jason-TwT/agent_skills_learning","elbruno/elbruno-agentskills","leonaaardob/lb-better-auth-skill","noreastergroup/isitwater-agentskill","Kazdanka/skills","agentskills-vn/microsoft-skills","leonaaardob/lb-nextjs16-skill"]
+    },
+    {
+      "date": "2026-02-07",
+      "query": "agentskills in:name,description created:2026-02-07..2026-02-07",
+      "page_1_results": 12,
+      "page_2_results": 0,
+      "repositories": ["beriberikix/zephyr-agent-skills","codebyfredrik/agentskills","pandafields/agentskills","omar-knaina/agentskills","martalberto74/agentskills","lordchildrey/agentskills","srinivasmd/agentskills","incsx/agentskills","irfiacre/agentskills","truthanb/laravel-ai-skills","cuizhanming/vibe-coding-skills","FeliksPie/skills"]
+    },
+    {
+      "date": "2026-02-08",
+      "query": "agentskills in:name,description created:2026-02-08..2026-02-08",
+      "page_1_results": 9,
+      "page_2_results": 0,
+      "repositories": ["AnhTrieu/AgentSkills","bf56rrxbrs-crypto/agentskills","AetharaAI/agentskills","GQAdonis/agentskills","guozhijian611/phpDevelopmentAgentSkills","yazelin/ching-tech-os-skills","jooey/openclaw-skill-add-minimax-provider","AliasgharArabi/sample-strands-agents-agentskills","McMuff86/ComicMaster"]
+    },
+    {
+      "date": "2026-02-09",
+      "query": "agentskills in:name,description created:2026-02-09..2026-02-09",
+      "page_1_results": 14,
+      "page_2_results": 0,
+      "repositories": ["TrogonStack/agentskills","TangBaron/LangChain_Agent_Skill","imclab/agentskills","javartisan/agentskills","nowordsformylove/agentskills","abdulrahman-gaith-beep/agentskills","NateTheGreat714/agentskills","gitabssi/agentskills","Csraf/agentskills","zyztek/agentskills","sumleo/AgentSkillsScanner","zkp2p/zkp2p-skills","ellenxiao7/sample-strands-agents-agentskills","gbtami/pydantic-ai-skills"]
+    },
+    {
+      "date": "2026-02-10",
+      "query": "agentskills in:name,description created:2026-02-10..2026-02-10",
+      "page_1_results": 13,
+      "page_2_results": 0,
+      "repositories": ["chigwell/skilldock.io","shaoguangehen/agentskills","Ammonknows/agentskills","woshidashuaigeaaa/agentskills","akashtalole/agentskills","DeepLajpal/agentskills","bomyoungkim-gmail/agentskills","arnestrickmann/agentskills","micheleangioni/agent-skills","ck10100713/agentskillscanner","skill-tools/skill-tools","yhs666/Maf.AgentSkills","alexcreew/keyboard-layout-fix"]
+    },
+    {
+      "date": "2026-02-11",
+      "query": "agentskills in:name,description created:2026-02-11..2026-02-11",
+      "page_1_results": 8,
+      "page_2_results": 0,
+      "repositories": ["smartcontractkit/chainlink-agent-skills","nag12317/agentskills","RVR-111/agentskills","kandreyrosales/agentskills","sam-fakhreddine/agentskills","irfiacre/AgentSkills-Tutorial","karthick-sk20/agentskillsnew-anthro","jszalkowski/claude-skills"]
+    }
+  ],
+  "verification": {
+    "identity": "144 repository identities were retrieved from live GitHub repository search across ten exact single-day created-date shards. Each shard used per_page=100 and an explicit page-2 probe; all page-2 probes returned zero repositories.",
+    "deduplication": "All 144 identities are distinct within this reconciliation batch under case-insensitive owner/repository comparison. Single-day creation-date shards are mutually exclusive by repository creation date.",
+    "merge": "All 144 identities were matched against the previously persisted February staging artifacts (pages 1-2, 3-12, and 13-21); zero identities were missing and no new staged identity was introduced.",
+    "classification": "Existing provisional February classifications were preserved for exact identity matches; classification remains index-only and is not merged into canonical classification totals.",
+    "content": "not_started",
+    "note": "Index-only. No target repository README, SKILL.md, scripts, references, evals, stars, implementation code, or runtime behavior was read."
+  }
+}
