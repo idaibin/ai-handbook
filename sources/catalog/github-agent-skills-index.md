@@ -79,41 +79,41 @@ One exact cross-run duplicate was confirmed: `irfiacre/agentskills`. It had appe
 
 Classification is provisional and uses only repository identity plus GitHub repository-search metadata. It is not merged into canonical classification totals.
 
-### Deterministic February reconciliation — verified through 2026-02-11
+### Deterministic February reconciliation — verified through 2026-02-15
 
 To remove best-match pagination-drift risk, reconciliation uses exact single-day `created:` shards with `per_page=100` plus an explicit page-2 terminal probe.
 
 Verified coverage now spans:
 
 ```text
-2026-02-01 .. 2026-02-11
+2026-02-01 .. 2026-02-15
 ```
 
 | Metric | Value |
 | --- | ---: |
-| Completed daily shards | **`11`** |
-| Unique identities observed | **`153`** |
-| Matches to prior February staging | **`153`** |
+| Completed daily shards | **`15`** |
+| Unique identities observed | **`203`** |
+| Matches to prior February staging | **`203`** |
 | Missing from prior February staging | **`0`** |
 | New staged identities after merge | **`0`** |
-| Page-2 terminal probes | **`11 / 11 = 0 results`** |
+| Page-2 terminal probes | **`15 / 15 = 0 results`** |
 
-The current run reconciled `2026-02-02` through `2026-02-11`: **144 raw / 144 unique identities**, all 144 already present in the persisted February staging union. No cross-day duplicate can occur because repository creation dates are mutually exclusive, and all current identities were checked against the prior February staging artifacts.
+The current run reconciled `2026-02-12` through `2026-02-15`: **50 raw / 50 unique identities**, all 50 already present in the persisted February staging union. No cross-day duplicate can occur because repository creation dates are mutually exclusive, and all current identities were checked against the prior February staging artifacts.
 
 Current-run provisional classifications, preserving the existing staging classifications for exact identity matches:
 
 | Classification | Count |
 | --- | ---: |
 | `specification` | `0` |
-| `skill_collection` | `113` |
-| `single_skill_or_domain_package` | `9` |
+| `skill_collection` | `43` |
+| `single_skill_or_domain_package` | `0` |
 | `awesome_index` | `0` |
-| `skill_tooling` | `10` |
-| `adjacent_search_hit` | `10` |
-| `unclear_search_hit` | `2` |
-| **Total** | **`144`** |
+| `skill_tooling` | `4` |
+| `adjacent_search_hit` | `3` |
+| `unclear_search_hit` | `0` |
+| **Total** | **`50`** |
 
-This verifies that the first eleven February date shards have no observed gap relative to the existing staged union. Dates `2026-02-12` through `2026-02-28` remain unreconciled, so February is still **not** marked complete.
+This verifies that the first fifteen February date shards have no observed gap relative to the existing staged union. Dates `2026-02-16` through `2026-02-28` remain unreconciled, so February is still **not** marked complete.
 
 ### February artifacts
 
@@ -122,6 +122,7 @@ This verifies that the first eleven February date shards have no observed gap re
 - [`batches/agentskills-created-2026-02-pages-13-21.json`](batches/agentskills-created-2026-02-pages-13-21.json)
 - [`batches/agentskills-created-2026-02-01-reconciliation.json`](batches/agentskills-created-2026-02-01-reconciliation.json)
 - [`batches/agentskills-created-2026-02-02-through-11-reconciliation.json`](batches/agentskills-created-2026-02-02-through-11-reconciliation.json)
+- [`batches/agentskills-created-2026-02-12-through-15-reconciliation.json`](batches/agentskills-created-2026-02-12-through-15-reconciliation.json)
 - [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json)
 
 ## Canonical classification totals
@@ -144,4 +145,4 @@ This phase is index-only. No target repository README, `SKILL.md`, scripts, refe
 
 ## Next index action
 
-Continue deterministic February reconciliation with the `2026-02-12` single-day created-date shard. After all February dates are reconciled, compare the verified union against unpartitioned staging and the complete historical ledger. Canonical `2502 / 2088 / 414` remains unchanged until that reconciliation is complete.
+Continue deterministic February reconciliation with the `2026-02-16` single-day created-date shard. After all February dates are reconciled, compare the verified union against unpartitioned staging and the complete historical ledger. Canonical `2502 / 2088 / 414` remains unchanged until that reconciliation is complete.
