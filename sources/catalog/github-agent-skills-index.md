@@ -78,36 +78,43 @@ Query:
 agentskills in:name,description created:2026-02-01..2026-02-28
 ```
 
-This run persisted pages `1-2`, each with `20` live GitHub repository-search results. The `40` identities are all distinct under case-insensitive `owner/repository` comparison. January and February are disjoint `created:` ranges, so a repository identity cannot legitimately belong to both partitions; reconciliation against the unpartitioned staging set and complete historical catalog is still pending.
+Pages `1-12` are now persisted. This run collected pages `3-12`, with `20` live GitHub repository-search results on every persisted page. The new `200` identities are all distinct under case-insensitive `owner/repository`, and they have zero overlap with the previously persisted `40` identities from pages `1-2`. February therefore currently contains `240/240` unique staged identities through page `12`.
+
+Page `13` was separately probed and returned `20` repositories; it remains unpersisted and is the next index boundary.
 
 | Metric | Value |
 | --- | ---: |
-| Persisted pages | `1-2` |
-| Raw identities | `40` |
-| Unique identities within persisted pages | `40` |
+| Persisted pages | `1-12` |
+| Raw identities | `240` |
+| Unique identities within persisted pages | `240` |
 | Duplicates removed within persisted pages | `0` |
+| Current-run pages | `3-12` |
+| Current-run raw / unique | `200 / 200` |
+| Overlap with pages `1-2` | `0` |
+| Page `13` probe | `20` results; not persisted |
 | Partition complete | `no` |
 | Canonical additions asserted | `0` |
 
-### February provisional classification, pages 1-2
+### February provisional classification, pages 1-12
 
 | Classification | Count |
 | --- | ---: |
 | `specification` | `0` |
-| `skill_collection` | `30` |
-| `single_skill_or_domain_package` | `0` |
+| `skill_collection` | `224` |
+| `single_skill_or_domain_package` | `1` |
 | `awesome_index` | `0` |
-| `skill_tooling` | `5` |
-| `adjacent_search_hit` | `4` |
+| `skill_tooling` | `8` |
+| `adjacent_search_hit` | `6` |
 | `unclear_search_hit` | `1` |
-| **Total** | **`40`** |
+| **Total** | **`240`** |
 
-Classification is provisional and uses repository identity plus search-returned repository metadata only. It is not merged into canonical classification totals.
+For pages `3-12`, the default provisional class is `skill_collection`; six explicit exceptions are recorded in the batch artifact: three `skill_tooling`, two `adjacent_search_hit`, and one `single_skill_or_domain_package`. Classification uses repository identity plus GitHub search-returned repository metadata only and is not merged into canonical classification totals.
 
 ### February artifacts
 
 - [`batches/agentskills-created-2026-02-pages-1-2.json`](batches/agentskills-created-2026-02-pages-1-2.json) — batch commit `2f74722f0b8b0da9322c1da7ca3dde1c95389b52`
-- [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json) — manifest commit `91973c2823bfd07847f89a76c75def75ba573b0e`
+- [`batches/agentskills-created-2026-02-pages-3-12.json`](batches/agentskills-created-2026-02-pages-3-12.json) — batch commit `e220b39c5897f20bfb604b4e9274918cfcd0538c`
+- [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json) — manifest commit `01838a9e6cc5f4489ae9daf4354dff46d94fbde3`
 
 ## Canonical classification totals
 
@@ -129,4 +136,4 @@ This phase is index-only. No target repository README, `SKILL.md`, scripts, refe
 
 ## Next index action
 
-Continue the February 2026 `created:` partition from page `3`. Canonical `2502 / 2088 / 414` remains unchanged until partition identities are reconciled against unpartitioned staging and the complete historical ledger.
+Continue the February 2026 `created:` partition from page `13`. Canonical `2502 / 2088 / 414` remains unchanged until partition identities are reconciled against unpartitioned staging and the complete historical ledger.
