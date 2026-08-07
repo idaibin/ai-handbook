@@ -1,14 +1,14 @@
 {
   "schema_version": "1.3",
-  "observed_at": "2026-08-07T14:18:35+08:00",
+  "observed_at": "2026-08-07T15:09:11+08:00",
   "status": "deep_analysis_in_progress",
   "queue_source": "sources/catalog/github-agent-skills-index-latest.json",
-  "latest_batch_id": "2026-08-07-batch-015",
-  "latest_batch_report": "research/agent-skills/batches/2026-08-07-batch-015-deep-analysis.md",
+  "latest_batch_id": "2026-08-07-batch-016",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-07-batch-016-deep-analysis.md",
   "repositories_completed_this_batch": 10,
-  "skills_reviewed_this_batch": 274,
-  "repositories_completed_total": 150,
-  "skills_reviewed_total": 2154,
+  "skills_reviewed_this_batch": 77,
+  "repositories_completed_total": 160,
+  "skills_reviewed_total": 2231,
   "repository_status": "structure-reviewed",
   "runtime_validation": "not_executed",
   "index_snapshot": {
@@ -16,7 +16,7 @@
     "unique_total": 2502,
     "eligible": 2088,
     "held_for_review": 414,
-    "eligible_remaining_estimate": 1938
+    "eligible_remaining_estimate": 1928
   },
   "completed_repositories": [
     "adithya-s-k/manim_skill",
@@ -168,12 +168,22 @@
     "jezweb/claude-skills",
     "Jeffallan/claude-skills",
     "oaustegard/claude-skills",
-    "vercel-labs/skills"
+    "vercel-labs/skills",
+    "c-kick/hnl-agent-skills",
+    "bird-chinese-community/BIRD.skills",
+    "Conway-Research/skills",
+    "zeroclaw-labs/zeroclaw-skills",
+    "tinyhumansai/skill-registry",
+    "Jignesh-Ponamwar/skills-mcp",
+    "aios-rs/skillhub",
+    "framerslab/agentos-skills-registry",
+    "markusle56/Agent-Skills-Registry",
+    "nvhuy249/agent-skills-registry"
   ],
   "skill_report_tracking": {
     "authority": "per-batch deep-analysis reports",
-    "reports_total": 2154,
-    "latest_batch_reports": 274,
+    "reports_total": 2231,
+    "latest_batch_reports": 77,
     "flat_name_list_status": "deprecated_from_canonical_progress_manifest",
     "migration_note": "Schema 1.3 keeps repository-specific skill identities, duplicate-name handling, evidence, and findings in immutable per-batch reports rather than an ever-growing flat individual_skills array."
   },
@@ -200,7 +210,8 @@
     {"batch_id":"2026-08-07-batch-012","repositories":10,"skills":240,"report":"research/agent-skills/batches/2026-08-07-batch-012-deep-analysis.md","validation":"structure-reviewed","runtime_validation":"not_executed","count_reconciliation":"LambdaTest/agent-skills declares total_skills=70 but the current skills_index.json has 71 rows because test-framework-migration-skill appears twice at the same path. Batch 012 counts 70 unique LambdaTest skill identities, so the batch total is 240."},
     {"batch_id":"2026-08-07-batch-013","repositories":10,"skills":266,"report":"research/agent-skills/batches/2026-08-07-batch-013-deep-analysis.md","skill_report_parts":["research/agent-skills/batches/2026-08-07-batch-013-skill-reports-01.md","research/agent-skills/batches/2026-08-07-batch-013-skill-reports-02.md","research/agent-skills/batches/2026-08-07-batch-013-skill-reports-03.md"],"validation":"structure-reviewed","runtime_validation":"not_executed","count_reconciliation":"MicrosoftDocs/Agent-Skills current docs/CATALOG.md enumerates 194 distinct repository-scoped skill identities. The README wording is 193+, so no conflict is asserted. Batch 013 uses 194."},
     {"batch_id":"2026-08-07-batch-014","repositories":10,"skills":222,"report":"research/agent-skills/batches/2026-08-07-batch-014-deep-analysis.md","skill_report_parts":["research/agent-skills/batches/2026-08-07-batch-014-skill-reports-01.md","research/agent-skills/batches/2026-08-07-batch-014-skill-reports-02.md"],"validation":"structure-reviewed","runtime_validation":"not_executed","count_reconciliation":"Batch 014 counts 26 Infinite Labs skills (goal + 25 marketing), 15 current formal wlzh SKILL.md packages, 70 TheGoat manifest/inventory skills, and 103 current local google/skills README-listed skills while excluding six external Additional Google skills. Total repository-scoped reports: 222."},
-    {"batch_id":"2026-08-07-batch-015","repositories":10,"skills":274,"report":"research/agent-skills/batches/2026-08-07-batch-015-deep-analysis.md","skill_report_parts":["research/agent-skills/batches/2026-08-07-batch-015-skill-reports-01.md","research/agent-skills/batches/2026-08-07-batch-015-skill-reports-02.md","research/agent-skills/batches/2026-08-07-batch-015-skill-reports-03.md"],"validation":"structure-reviewed","runtime_validation":"not_executed","count_reconciliation":"Batch 015 uses 60 current jezweb identities from the explicit current README inventory despite a stale history note saying 52; 66 Jeffallan identities from SKILLS_GUIDE.md; 87 oaustegard identities from the marketplace keyword inventory; and one bundled find-skills identity in vercel-labs/skills. Total repository-scoped reports: 274."}
+    {"batch_id":"2026-08-07-batch-015","repositories":10,"skills":274,"report":"research/agent-skills/batches/2026-08-07-batch-015-deep-analysis.md","skill_report_parts":["research/agent-skills/batches/2026-08-07-batch-015-skill-reports-01.md","research/agent-skills/batches/2026-08-07-batch-015-skill-reports-02.md","research/agent-skills/batches/2026-08-07-batch-015-skill-reports-03.md"],"validation":"structure-reviewed","runtime_validation":"not_executed","count_reconciliation":"Batch 015 uses 60 current jezweb identities from the explicit current README inventory despite a stale history note saying 52; 66 Jeffallan identities from SKILLS_GUIDE.md; 87 oaustegard identities from the marketplace keyword inventory; and one bundled find-skills identity in vercel-labs/skills. Total repository-scoped reports: 274."},
+    {"batch_id":"2026-08-07-batch-016","repositories":10,"skills":77,"report":"research/agent-skills/batches/2026-08-07-batch-016-deep-analysis.md","skill_report_parts":["research/agent-skills/batches/2026-08-07-batch-016-skill-reports-01.md"],"validation":"structure-reviewed","runtime_validation":"not_executed","count_reconciliation":"Batch 016 counts 77 repository-scoped skill identities: c-kick 19, BIRD.skills 5, Conway 1, ZeroClaw 18, tinyhumans 1, and Jignesh 33 (32 current bundled skills plus the separate root master-skill). The four registry/tooling implementations aios-rs/skillhub, framerslab/agentos-skills-registry, markusle56/Agent-Skills-Registry, and nvhuy249/agent-skills-registry contribute zero local skill definitions; remote, dependency-provided, user-uploaded, and README-example skills are not reassigned to those repositories."}
   ],
-  "verification_note": "Repositories are counted complete only after identity and displayed stars are verified and actual repository content is read. Large collections may use a complete repository-maintained inventory plus representative direct SKILL.md/equivalent reads and support-surface inspection; catalog-verified never means every body was read line-by-line. Detailed repository-specific evidence and historical count reconciliations remain authoritative in immutable per-batch reports. Batch 015 content-reviewed ten repositories and produced 274 repository-scoped individual reports. It recorded jezweb current-inventory versus stale-history drift, Jeffallan's repository-level validator, oaustegard's deterministic AST context bundler and semantic-review boundary, Tyuts's reversible backup-oriented curation, lordsarcastic's author-local absolute Temporal reference, and reclassified vercel-labs/skills as skill_tooling while counting its one bundled find-skills package. No third-party installer, cloud API, browser action, build, test suite, evaluation suite, or repository script was executed in Batch 015."
+  "verification_note": "Repositories are counted complete only after identity and displayed stars are verified and actual repository content is read. Large collections may use a complete repository-maintained inventory plus representative direct SKILL.md/equivalent reads and support-surface inspection; catalog-verified never means every body was read line-by-line. Detailed repository-specific evidence and historical count reconciliations remain authoritative in immutable per-batch reports. Batch 016 content-reviewed ten repositories and produced 77 repository-scoped individual reports. It verified concrete evaluation/calibration assets in BIRD.skills and skills-mcp, preserved the distinction between registry/schema validation and runtime security in ZeroClaw, recorded a seven-versus-six MCP tool documentation drift in skills-mcp, and confirmed that four indexed registry candidates are tooling implementations with zero local skill packages rather than content collections. For nvhuy249/agent-skills-registry the actual gray-matter ingestion path and process-level smoke test were read; for markusle56/Agent-Skills-Registry the upload route was read and automatic frontmatter parsing remains unverified in that reviewed route. No third-party installer, cloud API, application server, build, test suite, evaluation runner, repository validator, or repository script was executed in Batch 016."
 }
