@@ -1,7 +1,7 @@
 {
   "schema_version": "2.2",
   "observed_at": "2026-08-07",
-  "status": "january_and_february_created_date_partitions_verified",
+  "status": "march_created_date_partition_in_progress",
   "scope": "github_agent_skills_repository_index",
   "deduplication_key": "case_insensitive owner/repository",
   "canonical_progress": {
@@ -55,35 +55,57 @@
       "reconciliation_complete": true
     }
   ],
-  "current_run": {
-    "date_range": "2026-02-22..2026-02-28",
-    "daily_shards": 7,
-    "page_1_counts": [15, 10, 12, 16, 19, 23, 12],
-    "page_2_terminal_probes": 7,
+  "in_progress_partition": {
+    "partition": "2026-03",
+    "query_template": "agentskills in:name,description created:<date>..<date>",
+    "verified_date_range": "2026-03-01..2026-03-10",
+    "verified_daily_shards": 10,
+    "per_page": 100,
+    "page_2_terminal_probes": 10,
     "page_2_total_hits": 0,
-    "raw_candidate_records": 107,
-    "unique": 107,
-    "matches_to_original_february_paging_union": 107,
-    "missing_from_original_february_paging_union": 0,
-    "new_unique_after_merge": 0,
+    "raw_candidate_records": 162,
+    "staged_unique": 162,
+    "duplicates": 0,
     "classification_counts": {
       "specification": 0,
-      "skill_collection": 80,
-      "single_skill_or_domain_package": 4,
+      "skill_collection": 116,
+      "single_skill_or_domain_package": 16,
       "awesome_index": 2,
-      "skill_tooling": 9,
-      "adjacent_search_hit": 10,
-      "unclear_search_hit": 2
+      "skill_tooling": 11,
+      "adjacent_search_hit": 14,
+      "unclear_search_hit": 3
     },
-    "artifact": "sources/catalog/batches/agentskills-created-2026-02-22-through-28-reconciliation.json",
-    "run_report": "sources/catalog/runs/2026-08-07-agentskills-february-reconciliation-2026-02-22-through-28.md"
+    "artifact": "sources/catalog/batches/agentskills-created-2026-03-01-through-10-deterministic.json",
+    "next_shard": "2026-03-11"
+  },
+  "current_run": {
+    "date_range": "2026-03-01..2026-03-10",
+    "daily_shards": 10,
+    "page_1_counts": [12, 18, 17, 25, 14, 15, 10, 13, 22, 16],
+    "page_2_terminal_probes": 10,
+    "page_2_total_hits": 0,
+    "raw_candidate_records": 162,
+    "unique": 162,
+    "internal_duplicates": 0,
+    "canonical_delta_asserted": 0,
+    "classification_counts": {
+      "specification": 0,
+      "skill_collection": 116,
+      "single_skill_or_domain_package": 16,
+      "awesome_index": 2,
+      "skill_tooling": 11,
+      "adjacent_search_hit": 14,
+      "unclear_search_hit": 3
+    },
+    "artifact": "sources/catalog/batches/agentskills-created-2026-03-01-through-10-deterministic.json",
+    "run_report": "sources/catalog/runs/2026-08-07-agentskills-march-2026-03-01-through-10.md"
   },
   "verification": {
-    "deduplication": "All 107 current-run identities are distinct under case-insensitive owner/repository comparison.",
-    "merge": "All 107 current-run identities are present in the three original February paging artifacts. Together with the prior 295 verified daily identities, the complete February daily union is 402.",
-    "classification": "Existing provisional classifications were preserved for exact identities from the February paging artifacts.",
+    "pagination": "Each of the 10 exact single-day March shards used page 1 with per_page=100 plus an explicit page-2 terminal probe; all page-2 probes returned 0.",
+    "deduplication": "All 162 current-run identities are distinct under case-insensitive owner/repository comparison.",
+    "classification": "Provisional index classification uses repository identity/name metadata only; it is not a deep-content conclusion.",
     "content": "not_started",
     "note": "Index-only. No target repository README, SKILL.md, scripts, references, evals, stars, implementation code, or runtime behavior was inspected."
   },
-  "next_index_action": "reconcile verified January and February unions against unpartitioned staging and the historical canonical ledger before asserting canonical additions; then continue the next created-date partition"
+  "next_index_action": "continue the deterministic March partition with the 2026-03-11 single-day shard; keep canonical totals frozen until partition unions are reconciled against unpartitioned staging and the complete historical canonical ledger"
 }
