@@ -1,6 +1,6 @@
 {
   "schema_version": "1.3",
-  "observed_at": "2026-08-07T09:10:16+08:00",
+  "observed_at": "2026-08-07T09:10:52+08:00",
   "status": "deep_analysis_in_progress",
   "queue_source": "sources/catalog/github-agent-skills-index-latest.json",
   "latest_batch_id": "2026-08-07-batch-008",
@@ -12,11 +12,11 @@
   "repository_status": "structure-reviewed",
   "runtime_validation": "not_executed",
   "index_snapshot": {
-    "observed_at": "2026-08-07T09:02:25+08:00",
-    "unique_total": 2067,
-    "eligible": 1653,
+    "observed_at": "2026-08-07T09:10:52+08:00",
+    "unique_total": 2087,
+    "eligible": 1673,
     "held_for_review": 414,
-    "eligible_remaining_estimate": 1573
+    "eligible_remaining_estimate": 1593
   },
   "completed_repositories": [
     "adithya-s-k/manim_skill",
@@ -182,5 +182,5 @@
       "runtime_validation": "not_executed"
     }
   ],
-  "verification_note": "Repositories are counted complete only after identity and displayed stars were verified and actual README/equivalent, skill definitions, and available scripts/references/eval or test assets were inspected. Batch 004 deferred Pluviobyte/rnskill and samber/cc-skills-golang after current content showed collection-level classification drift; neither was counted complete. Batch 006 reclassified tiangolo/library-skills as skill_tooling after inspecting its scanner implementation and tests; it contributes zero installable skill reports. Batch 007 read repository content for all ten repositories, used direct SKILL.md inspection plus current repository inventories for large collections, inspected representative scripts/references/evals when available, recorded README/catalog drift in jykim/claude-obsidian-skills, and excluded cha9ro/agent-skills upstream git submodules from local skill counts to avoid double-counting. Batch 008 content-reviewed ten repositories and produced 160 active/canonical skill reports; it triaged abuba­karsiddik31/claude-skills-collection as a README-only outbound catalog and did not count it. No third-party runtime command was executed."
+  "verification_note": "Repositories are counted complete only after identity and displayed stars were verified and actual README/equivalent, skill definitions, and available scripts/references/eval or test assets were inspected. Batch 004 deferred Pluviobyte/rnskill and samber/cc-skills-golang after current content showed collection-level classification drift; neither was counted complete. Batch 006 reclassified tiangolo/library-skills as skill_tooling after inspecting its scanner implementation and tests; it contributes zero installable skill reports. Batch 007 read repository content for all ten repositories, used direct SKILL.md inspection plus current repository inventories for large collections, inspected representative scripts/references/evals when available, recorded README/catalog drift in jykim/claude-obsidian-skills, and excluded cha9ro/agent-skills upstream git submodules from local skill counts to avoid double-counting. Batch 008 content-reviewed ten repositories and produced 160 active/canonical skill reports; it triaged abubakarsiddik31/claude-skills-collection as a README-only outbound catalog and did not count it. No third-party runtime command was executed."
 }
