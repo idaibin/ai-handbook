@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-08-batch-029",
+  "observed_at": "2026-08-08",
+  "stage": "repository deep analysis",
+  "queue_source": "sources/catalog/batches/agentskills-created-2026-03-30-deterministic.json",
+  "repositories_completed_this_batch": 10,
+  "repositories_structure_reviewed_total": 290,
+  "repository_scoped_skill_reports_added_this_batch": 9,
+  "repository_scoped_skill_reports_total": 2808,
+  "direct_skill_bodies_reviewed_this_batch": 9,
+  "canonical_eligible_basis": 2088,
+  "remaining_estimate": 1798,
+  "remaining_estimate_note": "Arithmetic continuation against the frozen 2088 canonical basis; deterministic March index shards still require canonical reconciliation, so this is not a final unique-repository remainder.",
+  "runtime_build_test_eval_execution": "not_executed",
+  "repositories": [
+    {
+      "repository": "OmarQV/agentskills",
+      "repository_id": 1195799142,
+      "stars_observed": 0,
+      "revision": "5e7f3e2c4c9f5464fe342bf2fea72367a914e9b4",
+      "content_class": "agent-skills-specification-reference-sdk-snapshot",
+      "skill_reports": 0,
+      "status": "completed"
+    },
+    {
+      "repository": "LamVu22/agentskills",
+      "repository_id": 1196459379,
+      "stars_observed": 0,
+      "revision": "5e7f3e2c4c9f5464fe342bf2fea72367a914e9b4",
+      "content_class": "agent-skills-specification-reference-sdk-snapshot",
+      "skill_reports": 0,
+      "status": "completed"
+    },
+    {
+      "repository": "MAGArENKO/agentskills",
+      "repository_id": 1196624050,
+      "stars_observed": 0,
+      "revision": "5e7f3e2c4c9f5464fe342bf2fea72367a914e9b4",
+      "content_class": "agent-skills-specification-reference-sdk-snapshot",
+      "skill_reports": 0,
+      "status": "completed"
+    },
+    {
+      "repository": "Centaurioun/agentskills",
+      "repository_id": 1196677457,
+      "stars_observed": 0,
+      "revision": "5e7f3e2c4c9f5464fe342bf2fea72367a914e9b4",
+      "content_class": "agent-skills-specification-reference-sdk-snapshot",
+      "skill_reports": 0,
+      "status": "completed"
+    },
+    {
+      "repository": "duyvhh/agentskills",
+      "repository_id": 1195999182,
+      "stars_observed": 0,
+      "revision": "5e7f3e2c4c9f5464fe342bf2fea72367a914e9b4",
+      "content_class": "agent-skills-specification-reference-sdk-snapshot",
+      "skill_reports": 0,
+      "status": "completed"
+    },
+    {
+      "repository": "D4RK-777/agentskills-D4rk",
+      "repository_id": 1195711087,
+      "stars_observed": 0,
+      "revision": "5e7f3e2c4c9f5464fe342bf2fea72367a914e9b4",
+      "content_class": "agent-skills-specification-reference-sdk-snapshot",
+      "skill_reports": 0,
+      "status": "completed"
+    },
+    {
+      "repository": "carabase/carabase-claw-skills",
+      "repository_id": 1195769636,
+      "stars_observed": 0,
+      "revision": "25581dcd481c3a46f62299231c59335fc169e648",
+      "content_class": "four-skill-openclaw-integration-collection",
+      "skill_reports": 4,
+      "status": "completed"
+    },
+    {
+      "repository": "vstorm-co/pydantic-ai-skills",
+      "repository_id": 1196328175,
+      "stars_observed": 0,
+      "revision": "308cd9339009761989ab85e080a1aaf4601ea1eb",
+      "content_class": "skill-runtime-tooling-plus-example-skills",
+      "skill_reports": 3,
+      "status": "completed"
+    },
+    {
+      "repository": "rohan-tessl/Agentic-MCP-Skill",
+      "repository_id": 1196037426,
+      "stars_observed": 0,
+      "revision": "7d7ebbed34aeb6fead9a7f3c1904e47b937567c1",
+      "content_class": "single-skill-plus-executable-mcp-tooling",
+      "skill_reports": 1,
+      "status": "completed"
+    },
+    {
+      "repository": "Aston1690/skill-authoring",
+      "repository_id": 1195779624,
+      "stars_observed": 0,
+      "revision": "6af042bfc15e582f3a92338d22f7a62185a6d06f",
+      "content_class": "single-skill-package",
+      "skill_reports": 1,
+      "status": "completed"
+    }
+  ],
+  "content_deduplication": [
+    {
+      "repositories": [
+        "OmarQV/agentskills",
+        "LamVu22/agentskills",
+        "MAGArENKO/agentskills",
+        "Centaurioun/agentskills",
+        "duyvhh/agentskills",
+        "D4RK-777/agentskills-D4rk"
+      ],
+      "shared_revision": "5e7f3e2c4c9f5464fe342bf2fea72367a914e9b4",
+      "shared_readme_blob": "98534c18d286e0a651f74028666b1ae97db687ed",
+      "evidence": "Same Git commit SHA across all six repository identities plus the same README blob; common specification/reference tree was content-reviewed once and no duplicate skill reports were generated.",
+      "skill_reports_generated": 0
+    }
+  ],
+  "deferred_not_completed": [
+    {
+      "repository": "irishdan/skills",
+      "reason": "README revealed a large multi-skill collection; it was not marked complete because full individual-skill review was not completed in this run."
+    }
+  ]
+}
