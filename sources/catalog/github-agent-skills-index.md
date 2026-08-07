@@ -13,7 +13,7 @@
 
 Composed machine-readable authority: [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json).
 
-The canonical total remains `2502` because the current `agentskills in:name,description` search is staged but has not yet completed exhaustive historical identity reconciliation. This run persisted pages `4-6`, bringing staging coverage to pages `1-6`.
+The canonical total remains `2502` because the current `agentskills in:name,description` search is staged but has not yet completed exhaustive historical identity reconciliation. This run persisted pages `7-10`, bringing staging coverage to pages `1-10`.
 
 ## Completed search coverage
 
@@ -53,48 +53,47 @@ Query:
 agentskills in:name,description
 ```
 
-Persisted staging coverage now includes pages `1-6`, each observed with `20` GitHub repository identities. Existing verified state records that this query was probed through page `11`; pages `7-11` remain unpersisted staging coverage.
+Persisted staging coverage now includes pages `1-10`, each observed with `20` GitHub repository identities. This run also probed pages `11-16`; those pages returned `20` results each but are not claimed as persisted staging coverage yet.
 
 Staged totals:
 
 | Metric | Value |
 | --- | ---: |
-| Raw identities | `120` |
+| Raw identities | `200` |
 | Batch/internal or cross-staging duplicates | `1` |
-| Unique staged identities after cross-staging deduplication | `119` |
+| Unique staged identities after cross-staging deduplication | `199` |
 | Exact prior duplicates directly confirmed | `3` |
-| Identities still requiring full historical reconciliation | `116` |
+| Identities still requiring full historical reconciliation | `196` |
 | Canonical delta asserted | `0` |
 
-The three directly confirmed prior-catalog duplicates are:
+The three directly confirmed prior-catalog duplicates remain:
 
 - `agentskills/agentskills`
 - `darkrishabh/agent-skills-eval`
 - `pratikxpanda/agentskills-sdk`
 
-Pages `4-6` add `60` raw identities. Case-insensitive `owner/repository` deduplication found one cross-staging repeat: `0xsarawut/agentskills` was already persisted at page `3` rank `20` and reappeared at page `4` rank `1`. Therefore pages `4-6` contribute `59` staged-unique identities, all of which remain `unresolved_against_full_prior_catalog` until complete historical reconciliation.
-
-This repeated boundary result demonstrates why GitHub search pagination is treated as mutable evidence rather than as a stable partition. Raw page evidence is retained, while duplicate identities are excluded from staged-unique counts.
+Across persisted pages `1-10`, the only currently observed cross-staging repeat is `0xsarawut/agentskills`, which appeared at page `3` rank `20` and page `4` rank `1`. Pages `7-10` added `80` raw identities and all `80` were distinct from persisted pages `1-6` under case-insensitive `owner/repository` comparison.
 
 Staging artifacts:
 
 - [`batches/agentskills-page-1.json`](batches/agentskills-page-1.json)
 - [`batches/agentskills-pages-2-3.json`](batches/agentskills-pages-2-3.json)
 - [`batches/agentskills-pages-4-6.json`](batches/agentskills-pages-4-6.json)
+- [`batches/agentskills-pages-7-10.json`](batches/agentskills-pages-7-10.json)
 
-## Pages 4-6 provisional classification
+## Pages 7-10 provisional classification
 
-| Classification | Raw count | Staged-unique count |
-| --- | ---: | ---: |
-| `specification` | `0` | `0` |
-| `skill_collection` | `44` | `43` |
-| `single_skill_or_domain_package` | `7` | `7` |
-| `awesome_index` | `0` | `0` |
-| `skill_tooling` | `4` | `4` |
-| `adjacent_search_hit` | `3` | `3` |
-| `unclear_search_hit` | `2` | `2` |
+| Classification | Count |
+| --- | ---: |
+| `specification` | `0` |
+| `skill_collection` | `79` |
+| `single_skill_or_domain_package` | `0` |
+| `awesome_index` | `0` |
+| `skill_tooling` | `0` |
+| `adjacent_search_hit` | `0` |
+| `unclear_search_hit` | `1` |
 
-These classifications are provisional from repository identity and query context only. They are not added to canonical classification totals until historical reconciliation is complete.
+`OpenTideHQ/AgentTide` is kept as `unclear_search_hit` because this index phase intentionally does not read repository content to infer more than the search result identity supports. These classifications are not added to canonical classification totals until historical reconciliation is complete.
 
 ## Canonical classification totals
 
@@ -117,16 +116,16 @@ The current run deliberately does not treat code-search emptiness, mutable page 
 ## Validation
 
 - Previous canonical state remains: `2502 unique / 2088 eligible / 414 held`.
-- Newly persisted pages in this run: `4-6`.
-- Raw identities newly persisted in this run: `60`.
-- Internal duplicates within pages `4-6`: `0`.
-- Cross-staging duplicates against pages `1-3`: `1` (`0xsarawut/agentskills`).
-- New staged-unique identities in this run: `59`.
-- Total staged raw identities across pages `1-6`: `120`.
-- Total staged unique identities after cross-staging deduplication: `119`.
+- Newly persisted pages in this run: `7-10`.
+- Raw identities newly persisted in this run: `80`.
+- Internal duplicates within pages `7-10`: `0`.
+- Cross-staging duplicates against pages `1-6`: `0`.
+- New staged-unique identities in this run: `80`.
+- Total staged raw identities across pages `1-10`: `200`.
+- Total staged unique identities after cross-staging deduplication: `199`.
 - Directly confirmed prior-catalog duplicates across staged pages: `3`.
-- Unresolved staged identities requiring exhaustive historical reconciliation: `116`.
-- Pages `4-6` staging commit: `d8adc6f539bae1da80f61a987999f53bd0f031ca`.
-- Latest-manifest staging-state commit: `79bf543c83034a31c1fa3f567cec513db1136734`.
+- Unresolved staged identities requiring exhaustive historical reconciliation: `196`.
+- Pages `7-10` staging commit: `f2e7d25f2372dcb601363135e6879ba82aa26570`.
+- Latest-manifest staging-state commit: `00b5b25b4c94e2127ee18f03a6b0782e887c2d80`.
 - `2088 + 414 = 2502`, matching the canonical eligible and held partitions.
 - No README, `SKILL.md`, scripts, references, eval contents, stars, or implementation contents were read during this index-only run.
