@@ -1,22 +1,22 @@
 {
   "schema_version": "1.3",
-  "observed_at": "2026-08-07T12:22:48+08:00",
+  "observed_at": "2026-08-07T12:48:16+08:00",
   "status": "deep_analysis_in_progress",
   "queue_source": "sources/catalog/github-agent-skills-index-latest.json",
-  "latest_batch_id": "2026-08-07-batch-011",
-  "latest_batch_report": "research/agent-skills/batches/2026-08-07-batch-011-deep-analysis.md",
+  "latest_batch_id": "2026-08-07-batch-012",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-07-batch-012-deep-analysis.md",
   "repositories_completed_this_batch": 10,
-  "skills_reviewed_this_batch": 274,
-  "repositories_completed_total": 110,
-  "skills_reviewed_total": 1152,
+  "skills_reviewed_this_batch": 240,
+  "repositories_completed_total": 120,
+  "skills_reviewed_total": 1392,
   "repository_status": "structure-reviewed",
   "runtime_validation": "not_executed",
   "index_snapshot": {
-    "observed_at": "2026-08-07T12:22:48+08:00",
+    "observed_at": "2026-08-07T12:48:16+08:00",
     "unique_total": 2502,
     "eligible": 2088,
     "held_for_review": 414,
-    "eligible_remaining_estimate": 1978
+    "eligible_remaining_estimate": 1968
   },
   "completed_repositories": [
     "adithya-s-k/manim_skill",
@@ -128,12 +128,22 @@
     "honnibal/claude-skills",
     "iamzhihuix/happy-claude-skills",
     "jianshuo/claude-skills",
-    "rampstackco/claude-skills"
+    "rampstackco/claude-skills",
+    "davidpc007/openclaw-marketing-skills",
+    "huangkiki/dailypaper-skills",
+    "itsmostafa/aws-agent-skills",
+    "jorgerosal/wordpress-skills",
+    "LambdaTest/agent-skills",
+    "WordPress/agent-skills",
+    "vibe-motion/skills",
+    "YANZHANLIN/ielts-claude-skills",
+    "rrezartprebreza/spring-boot-skills",
+    "vadimcomanescu/codex-skills"
   ],
   "skill_report_tracking": {
     "authority": "per-batch deep-analysis reports",
-    "reports_total": 1152,
-    "latest_batch_reports": 274,
+    "reports_total": 1392,
+    "latest_batch_reports": 240,
     "flat_name_list_status": "deprecated_from_canonical_progress_manifest",
     "migration_note": "Schema 1.3 removes the ever-growing flat individual_skills name array from the canonical progress manifest. Repository-specific skill identities, duplicate names across repositories, evidence, and findings remain authoritative in immutable per-batch reports. The previous schema-1.2 manifest is preserved by Git history at blob 5154242fe3203d66a452b9b11485cc9d031dfeec."
   },
@@ -234,7 +244,16 @@
       "report": "research/agent-skills/batches/2026-08-07-batch-011-deep-analysis.md",
       "validation": "structure-reviewed",
       "runtime_validation": "not_executed"
+    },
+    {
+      "batch_id": "2026-08-07-batch-012",
+      "repositories": 10,
+      "skills": 240,
+      "report": "research/agent-skills/batches/2026-08-07-batch-012-deep-analysis.md",
+      "validation": "structure-reviewed",
+      "runtime_validation": "not_executed",
+      "count_reconciliation": "LambdaTest/agent-skills declares total_skills=70 but the current skills_index.json has 71 rows because test-framework-migration-skill appears twice at the same path. Batch 012 counts 70 unique LambdaTest skill identities, so the batch total is 240."
     }
   ],
-  "verification_note": "Repositories are counted complete only after identity and displayed stars were verified and actual README/equivalent, skill definitions, and available scripts/references/eval or test assets were inspected. Batch 004 deferred Pluviobyte/rnskill and samber/cc-skills-golang after current content showed collection-level classification drift; neither was counted complete. Batch 006 reclassified tiangolo/library-skills as skill_tooling after inspecting its scanner implementation and tests; it contributes zero installable skill reports. Batch 007 read repository content for all ten repositories, used direct SKILL.md inspection plus current repository inventories for large collections, inspected representative scripts/references/evals when available, recorded README/catalog drift in jykim/claude-obsidian-skills, and excluded cha9ro/agent-skills upstream git submodules from local skill counts to avoid double-counting. Batch 008 content-reviewed ten repositories and produced 160 active/canonical skill reports; it triaged abubakarsiddik31/claude-skills-collection as a README-only outbound catalog and did not count it. Batch 009 content-reviewed ten repositories and produced 115 active/canonical skill reports. Every completed repository had actual skill content read; large collections used complete repository-maintained inventories plus representative direct SKILL.md reads, and repository-specific evidence depth is recorded in the immutable batch report. BGGG eval definitions and renderer code, Chujianyun validation code/tests, Coleam MCP implementation, DannyMac risk reference, David Ondrej browser reference, Fokkyp research reference, Haowjy packaging code, Harishwarrior scanner code, and Lukas Reese PBIR structure reference were inspected. No third-party runtime command was executed. Batch 010 content-reviewed ten repositories and produced 300 current individual skill reports. Large inventories were grounded in repository-maintained catalogs/tables and representative direct SKILL.md reads. Supporting implementation/validation surfaces inspected included Mar Antaya's static skill scanner, ClaudeKit's quick validator, msrv-tech's test-only bridge packaging, Murat Cankoylan's researcher/evaluation surface, Nimrod Fisher's structural validator, grp06's publishing helper, and phuryn's plugin validator/test surface. The batch recorded concrete inventory drift in founder-skills (README headline says 20+ while the current table has 15) and corrected useful-codex-skills to nine current skills by including explain-code-change. No third-party runtime command or test suite was executed. Batch 011 content-reviewed ten additional repositories and produced 274 current individual reports. It recorded README/tree drift in RTFM (15 documented vs 14 current), SimonTheSalesBooster (18 documented vs 29 unique current identities after alias deduplication), and Jianshuo (13 documented vs 35 current); recorded the GRC repository's internal benchmark-summary inconsistency (detailed table 94% vs summary 97%) without independently validating the benchmark; inspected Staruhub structural validator/routing eval fixtures, Rampstack checksum manifest, Posit token-size checker, RTFM pricing script, Honnibal AST helper, Happy browser launcher, and Jianshuo blind-judge rubric. Happy's profile-copy browser mode was flagged as a higher-authority privacy/security boundary. Export-control packages were kept at high-level inventory only. No third-party runtime command or test suite was executed."
+  "verification_note": "Repositories are counted complete only after identity and displayed stars were verified and actual README/equivalent, skill definitions, and available scripts/references/eval or test assets were inspected. Batch 004 deferred Pluviobyte/rnskill and samber/cc-skills-golang after current content showed collection-level classification drift; neither was counted complete. Batch 006 reclassified tiangolo/library-skills as skill_tooling after inspecting its scanner implementation and tests; it contributes zero installable skill reports. Batch 007 read repository content for all ten repositories, used direct SKILL.md inspection plus current repository inventories for large collections, inspected representative scripts/references/evals when available, recorded README/catalog drift in jykim/claude-obsidian-skills, and excluded cha9ro/agent-skills upstream git submodules from local skill counts to avoid double-counting. Batch 008 content-reviewed ten repositories and produced 160 active/canonical skill reports; it triaged abubakarsiddik31/claude-skills-collection as a README-only outbound catalog and did not count it. Batch 009 content-reviewed ten repositories and produced 115 active/canonical skill reports. Every completed repository had actual skill content read; large collections used complete repository-maintained inventories plus representative direct SKILL.md reads, and repository-specific evidence depth is recorded in the immutable batch report. BGGG eval definitions and renderer code, Chujianyun validation code/tests, Coleam MCP implementation, DannyMac risk reference, David Ondrej browser reference, Fokkyp research reference, Haowjy packaging code, Harishwarrior scanner code, and Lukas Reese PBIR structure reference were inspected. No third-party runtime command was executed. Batch 010 content-reviewed ten repositories and produced 300 current individual skill reports. Large inventories were grounded in repository-maintained catalogs/tables and representative direct SKILL.md reads. Supporting implementation/validation surfaces inspected included Mar Antaya's static skill scanner, ClaudeKit's quick validator, msrv-tech's test-only bridge packaging, Murat Cankoylan's researcher/evaluation surface, Nimrod Fisher's structural validator, grp06's publishing helper, and phuryn's plugin validator/test surface. The batch recorded concrete inventory drift in founder-skills (README headline says 20+ while the current table has 15) and corrected useful-codex-skills to nine current skills by including explain-code-change. No third-party runtime command or test suite was executed. Batch 011 content-reviewed ten additional repositories and produced 274 current individual reports. It recorded README/tree drift in RTFM (15 documented vs 14 current), SimonTheSalesBooster (18 documented vs 29 unique current identities after alias deduplication), and Jianshuo (13 documented vs 35 current); recorded the GRC repository's internal benchmark-summary inconsistency (detailed table 94% vs summary 97%) without independently validating the benchmark; inspected Staruhub structural validator/routing eval fixtures, Rampstack checksum manifest, Posit token-size checker, RTFM pricing script, Honnibal AST helper, Happy browser launcher, and Jianshuo blind-judge rubric. Happy's profile-copy browser mode was flagged as a higher-authority privacy/security boundary. Export-control packages were kept at high-level inventory only. No third-party runtime command or test suite was executed. Batch 012 content-reviewed ten repositories and produced 240 unique individual reports. It reconciled LambdaTest's 71 index rows to 70 unique identities because test-framework-migration-skill is duplicated, recorded missing Google Ads support paths and 37-vs-38 catalog drift in openclaw-marketing-skills, 18-vs-17 prose/catalog drift in jorgerosal/wordpress-skills, counted Spring Boot 3/4 packages once per logical identity while inspecting its parity validator, and inspected deterministic support/eval code in DailyPaper, AWS Agent Skills, LambdaTest, WordPress, vibe-motion, Spring Boot, and codex-skills. No third-party runtime command or test suite was executed."
 }
