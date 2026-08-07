@@ -56,19 +56,21 @@
         "start": "2026-02-01",
         "end": "2026-02-28",
         "persisted_pages": "1-21",
-        "raw_candidate_records": 402,
-        "unique_within_persisted_union": 401,
-        "duplicates_removed_within_persisted_union": 1,
+        "original_paging_raw_candidate_records": 402,
+        "original_paging_unique_union": 401,
+        "duplicates_removed_within_original_paging_union": 1,
         "confirmed_duplicate_identities": ["irfiacre/agentskills"],
-        "terminal_probe": "page 22 returned 0 repositories",
+        "deterministic_reconciliation_new_identities": ["UCTooCom/agentskills-runtime"],
+        "staging_unique_after_reconciliation": 402,
+        "terminal_probe": "page 22 returned 0 repositories in the original paging pass",
         "partition_complete": false,
-        "partition_completeness_note": "One cross-run duplicate at the prior page-12/page-13 boundary proves GitHub best-match pagination order drifted between runs. Deterministic day-level reconciliation is complete for 2026-02-01 through 2026-02-15; remaining dates are pending.",
-        "classification_counts_deduplicated": {
+        "partition_completeness_note": "A cross-run duplicate at the prior page-12/page-13 boundary proved GitHub best-match pagination drift. Deterministic day-level reconciliation is complete for 2026-02-01 through 2026-02-21 and found one identity missing from the original paging union: UCTooCom/agentskills-runtime. Remaining dates 2026-02-22 through 2026-02-28 are pending.",
+        "classification_counts_deduplicated_staging": {
           "specification": 0,
           "skill_collection": 313,
           "single_skill_or_domain_package": 16,
           "awesome_index": 3,
-          "skill_tooling": 35,
+          "skill_tooling": 36,
           "adjacent_search_hit": 30,
           "unclear_search_hit": 4
         },
@@ -78,7 +80,8 @@
           "sources/catalog/batches/agentskills-created-2026-02-pages-13-21.json",
           "sources/catalog/batches/agentskills-created-2026-02-01-reconciliation.json",
           "sources/catalog/batches/agentskills-created-2026-02-02-through-11-reconciliation.json",
-          "sources/catalog/batches/agentskills-created-2026-02-12-through-15-reconciliation.json"
+          "sources/catalog/batches/agentskills-created-2026-02-12-through-15-reconciliation.json",
+          "sources/catalog/batches/agentskills-created-2026-02-12-through-21-reconciliation.json"
         ],
         "historical_reconciliation": "pending",
         "canonical_delta": null
@@ -88,13 +91,14 @@
   "deterministic_reconciliation": {
     "partition": "2026-02",
     "strategy": "single created-date shards with per_page=100 and an explicit next-page terminal probe",
-    "completed_date_range": "2026-02-01..2026-02-15",
-    "completed_shard_count": 15,
-    "verified_records_across_completed_shards": 203,
-    "verified_unique_across_completed_shards": 203,
-    "matches_to_prior_february_staging": 203,
-    "missing_from_prior_february_staging": 0,
-    "new_unique_after_merge": 0,
+    "completed_date_range": "2026-02-01..2026-02-21",
+    "completed_shard_count": 21,
+    "verified_records_across_completed_shards": 295,
+    "verified_unique_across_completed_shards": 295,
+    "matches_to_original_february_paging_staging": 294,
+    "missing_from_original_february_paging_staging": 1,
+    "new_unique_after_merge": 1,
+    "new_staged_identities": ["UCTooCom/agentskills-runtime"],
     "completed_shards": [
       {
         "date": "2026-02-01",
@@ -146,41 +150,63 @@
           "unclear_search_hit": 0
         },
         "artifact": "sources/catalog/batches/agentskills-created-2026-02-12-through-15-reconciliation.json"
+      },
+      {
+        "date_range": "2026-02-16..2026-02-21",
+        "shard_count": 6,
+        "raw_candidate_records": 92,
+        "unique_within_reconciliation_batch": 92,
+        "prior_february_staging_matches": 91,
+        "missing_from_prior_february_staging": 1,
+        "new_unique_after_merge": 1,
+        "new_staged_identities": ["UCTooCom/agentskills-runtime"],
+        "page_2_terminal_probes": "6 of 6 returned 0 repositories",
+        "classification_counts": {
+          "specification": 0,
+          "skill_collection": 70,
+          "single_skill_or_domain_package": 2,
+          "awesome_index": 1,
+          "skill_tooling": 13,
+          "adjacent_search_hit": 6,
+          "unclear_search_hit": 0
+        },
+        "artifact": "sources/catalog/batches/agentskills-created-2026-02-12-through-21-reconciliation.json",
+        "artifact_note": "This artifact is a superset covering 2026-02-12..2026-02-21 because the live run searched all ten dates; the previously committed 2026-02-12..2026-02-15 artifact remains authoritative for those four earlier shards."
       }
     ],
-    "next_shard": "2026-02-16",
+    "next_shard": "2026-02-22",
     "february_reconciliation_complete": false
   },
   "current_run": {
-    "queries": "four exact single-day agentskills created-date shards, 2026-02-12 through 2026-02-15",
+    "queries_executed": "ten exact single-day agentskills created-date shards, 2026-02-12 through 2026-02-21",
+    "new_coverage_advanced": "2026-02-16..2026-02-21 because 2026-02-12..2026-02-15 had been committed by another index run before manifest update",
     "per_page": 100,
-    "page_1_total_hits": 50,
-    "page_2_probes": 4,
-    "page_2_total_hits": 0,
-    "raw_hits_persisted": 50,
-    "internal_duplicates": 0,
-    "unique_within_run": 50,
-    "overlap_with_previous_february_staging": 50,
-    "missing_from_previous_february_staging": 0,
-    "new_unique_after_merge": 0,
-    "deterministic_shards_complete": 4,
+    "new_coverage_page_1_hits": 92,
+    "new_coverage_page_2_probes": 6,
+    "new_coverage_page_2_total_hits": 0,
+    "new_coverage_unique": 92,
+    "overlap_with_original_february_paging_staging": 91,
+    "missing_from_original_february_paging_staging": 1,
+    "new_unique_after_merge": 1,
+    "new_staged_identities": ["UCTooCom/agentskills-runtime"],
+    "february_staging_unique_after_merge": 402,
     "february_partition_complete": false,
     "canonical_delta": null,
     "historical_reconciliation": "pending"
   },
   "verification": {
-    "repository_identity": "50 repository identities were retrieved from live GitHub repository search for exact 2026-02-12 through 2026-02-15 single-day created-date shards; every page-2 probe returned 0.",
-    "deduplication": "All 50 current-run identities are distinct within their daily shards under case-insensitive owner/repository comparison. Creation-date shards are mutually exclusive.",
-    "merge": "All 50 identities were matched against the previously persisted February staging artifacts; zero were missing. Together with the already verified 2026-02-01 through 2026-02-11 shards, deterministic coverage is verified through 2026-02-15 for 203 identities, all already present in staging.",
-    "classification": "Existing provisional February classifications were preserved for exact identity matches; classification remains index-only and is not added to canonical totals.",
+    "repository_identity": "The live run searched exact daily shards 2026-02-12 through 2026-02-21. After preserving the concurrently committed 2026-02-12 through 2026-02-15 coverage, this manifest advances new deterministic coverage through 2026-02-21. The six newly advanced shards contain 92 distinct identities and all six page-2 probes returned 0.",
+    "deduplication": "All 92 identities in newly advanced dates 2026-02-16 through 2026-02-21 are distinct under case-insensitive owner/repository comparison; daily creation-date shards are mutually exclusive.",
+    "merge": "91 of the 92 identities matched the three original February paging artifacts. UCTooCom/agentskills-runtime was absent from those artifacts and exact AI-handbook code search returned no match before this run, so it was added as one new staged identity. February staging now contains 402 distinct identities.",
+    "classification": "Existing provisional February classifications were preserved for exact matches. UCTooCom/agentskills-runtime is provisionally classified as skill_tooling from repository identity and GitHub search metadata only.",
     "content": "not_started",
     "note": "Index-only. No target repository README, SKILL.md, scripts, references, eval contents, stars, quality, implementation content, or runtime behavior was read."
   },
   "coverage": {
     "unpartitioned_agentskills": "pages 1-50 persisted; page 51 hit GitHub's first-1000-results ceiling",
     "january_2026_partition": "complete: pages 1-19 persisted, 368/368 unique within partition; page 20 returned 0",
-    "february_2026_partition": "pages 1-21 persisted as a deduplicated 401-identity union; page 22 returned 0, but gap-free completeness is not asserted because cross-run pagination drift was observed",
-    "february_deterministic_reconciliation": "2026-02-01 through 2026-02-15 complete: 203 unique identities observed across exact daily shards, all 203 matched prior February staging, zero missing and zero new",
-    "next_index_action": "continue deterministic February reconciliation with the 2026-02-16 created-date shard; after all February dates are reconciled, compare the verified union against unpartitioned staging and the historical canonical ledger"
+    "february_2026_partition": "original pages 1-21 produced a 401-identity deduplicated union; deterministic reconciliation through 2026-02-21 has added one previously missed identity, bringing staging to 402",
+    "february_deterministic_reconciliation": "2026-02-01 through 2026-02-21 complete: 295 unique identities observed across exact daily shards, 294 matched original February staging, one previously missing identity was added",
+    "next_index_action": "continue deterministic February reconciliation with the 2026-02-22 created-date shard; after 2026-02-28 is reconciled, compare the verified union against unpartitioned staging and the historical canonical ledger"
   }
 }
