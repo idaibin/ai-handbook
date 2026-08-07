@@ -1,0 +1,99 @@
+{
+  "schema_version": "2.0",
+  "observed_at": "2026-08-07",
+  "scope": "github_agent_skills_repository_index_reconciliation_shard",
+  "query": "agentskills in:name,description created:2026-02-01..2026-02-01",
+  "date_range": {
+    "start": "2026-02-01",
+    "end": "2026-02-01"
+  },
+  "pagination": {
+    "per_page": 100,
+    "page_1_results": 9,
+    "page_2_results": 0,
+    "terminal_page": 2,
+    "shard_complete": true
+  },
+  "deduplication_key": "case_insensitive owner/repository",
+  "raw_candidate_records": 9,
+  "unique_within_shard": 9,
+  "duplicates_removed_within_shard": 0,
+  "prior_february_staging_matches": 9,
+  "missing_from_prior_february_staging": 0,
+  "new_unique_after_merge": 0,
+  "classification_counts": {
+    "specification": 0,
+    "skill_collection": 6,
+    "single_skill_or_domain_package": 1,
+    "awesome_index": 0,
+    "skill_tooling": 0,
+    "adjacent_search_hit": 1,
+    "unclear_search_hit": 1
+  },
+  "repositories": [
+    {
+      "repository_full_name": "rrbear117/AgentSkills",
+      "classification": "skill_collection",
+      "prior_february_staging_match": true,
+      "prior_staging_artifact": "sources/catalog/batches/agentskills-created-2026-02-pages-3-12.json"
+    },
+    {
+      "repository_full_name": "jonathanhefner/agentskills",
+      "classification": "skill_collection",
+      "prior_february_staging_match": true,
+      "prior_staging_artifact": "sources/catalog/batches/agentskills-created-2026-02-pages-3-12.json"
+    },
+    {
+      "repository_full_name": "ddbnew/agentskills",
+      "classification": "skill_collection",
+      "prior_february_staging_match": true,
+      "prior_staging_artifact": "sources/catalog/batches/agentskills-created-2026-02-pages-3-12.json"
+    },
+    {
+      "repository_full_name": "okwinds/agentskills",
+      "classification": "skill_collection",
+      "prior_february_staging_match": true,
+      "prior_staging_artifact": "sources/catalog/batches/agentskills-created-2026-02-pages-3-12.json"
+    },
+    {
+      "repository_full_name": "Robhawk12/agentskills",
+      "classification": "skill_collection",
+      "prior_february_staging_match": true,
+      "prior_staging_artifact": "sources/catalog/batches/agentskills-created-2026-02-pages-3-12.json"
+    },
+    {
+      "repository_full_name": "asgard-finance/asgard-agent-skill",
+      "classification": "single_skill_or_domain_package",
+      "prior_february_staging_match": true,
+      "prior_staging_artifact": "sources/catalog/batches/agentskills-created-2026-02-pages-13-21.json"
+    },
+    {
+      "repository_full_name": "Dandelight/intro-to-agentskills",
+      "classification": "adjacent_search_hit",
+      "prior_february_staging_match": true,
+      "prior_staging_artifact": "sources/catalog/batches/agentskills-created-2026-02-pages-13-21.json"
+    },
+    {
+      "repository_full_name": "kkbot991/isnad",
+      "classification": "unclear_search_hit",
+      "prior_february_staging_match": true,
+      "prior_staging_artifact": "sources/catalog/batches/agentskills-created-2026-02-pages-13-21.json"
+    },
+    {
+      "repository_full_name": "fi21-ventures/frameworks-agentskills",
+      "classification": "skill_collection",
+      "prior_february_staging_match": true,
+      "prior_staging_artifact": "sources/catalog/batches/agentskills-created-2026-02-pages-13-21.json"
+    }
+  ],
+  "verification": {
+    "repository_identity": "Nine repository identities were retrieved from live GitHub repository search for the exact 2026-02-01 created-date shard. Page 1 returned 9 repositories at per_page=100 and page 2 returned 0.",
+    "deduplication": "All nine identities are distinct under case-insensitive owner/repository comparison.",
+    "merge": "Each of the nine identities was independently found in the previously persisted February staging artifacts; this shard contributes zero new staged identities.",
+    "classification": "Classification is provisional from repository identity and GitHub repository-search context only.",
+    "content": "not_started",
+    "note": "Index-only. No target repository README, SKILL.md, scripts, references, eval contents, stars, implementation code, quality, or runtime behavior was read."
+  },
+  "canonical_delta": null,
+  "canonical_note": "Canonical totals remain frozen until all deterministic February shards and the historical ledger are reconciled."
+}
