@@ -1,16 +1,16 @@
 {
   "schema_version": "1.0",
-  "latest_batch_id": "2026-08-07-batch-023",
-  "latest_batch_report": "research/agent-skills/batches/2026-08-07-batch-023-deep-analysis.md",
-  "latest_batch_progress": "research/agent-skills/batches/2026-08-07-batch-023-progress.json",
-  "latest_skill_report": "research/agent-skills/batches/2026-08-07-batch-023-skill-reports.md",
-  "repositories_structure_reviewed_total": 230,
-  "repository_scoped_skill_reports_total": 2677,
+  "latest_batch_id": "2026-08-07-batch-024",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-07-batch-024-deep-analysis.md",
+  "latest_batch_progress": "research/agent-skills/batches/2026-08-07-batch-024-progress.json",
+  "latest_skill_report": "research/agent-skills/batches/2026-08-07-batch-024-skill-reports.md",
+  "repositories_structure_reviewed_total": 240,
+  "repository_scoped_skill_reports_total": 2700,
   "canonical_eligible_basis": 2088,
-  "remaining_estimate": 1858,
+  "remaining_estimate": 1848,
   "status": "structure-reviewed",
   "runtime_validation": "not_executed",
-  "direct_skill_body_reviews_latest_batch": 77,
+  "direct_skill_body_reviews_latest_batch": 23,
   "observed_at": "2026-08-07",
-  "note": "Batch 023 content-reviewed 10 indexed queue entries. Nine were content-qualified skill repositories; parilsanghvi/AgentSkills was held after actual repository inspection because it currently has no local skill definition. All 77 reported repository-scoped skill bodies were directly read. Runtime validation remains not executed."
+  "note": "Batch 024 content-reviewed 10 qualified indexed repositories and directly read all 23 reported repository-scoped skill bodies. Identity and stars were verified against current GitHub repository data; README/guide, current skill definitions, and scripts/references/eval surfaces were inspected when available. Runtime validation remains not executed."
 }
