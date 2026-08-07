@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.8",
+  "schema_version": "1.9",
   "observed_at": "2026-08-07",
   "status": "composed_discovery_catalog_with_complete_january_and_in_progress_february_partition_pending_historical_reconciliation",
   "scope": "github_agent_skills_repository_index",
@@ -55,22 +55,24 @@
         "query": "agentskills in:name,description created:2026-02-01..2026-02-28",
         "start": "2026-02-01",
         "end": "2026-02-28",
-        "persisted_pages": "1-2",
-        "raw_candidate_records": 40,
-        "unique_within_persisted_pages": 40,
+        "persisted_pages": "1-12",
+        "raw_candidate_records": 240,
+        "unique_within_persisted_pages": 240,
         "duplicates_removed_within_persisted_pages": 0,
         "terminal_probe": null,
+        "next_page_probe": "page 13 returned 20 repositories and remains unpersisted",
         "classification_counts_raw": {
           "specification": 0,
-          "skill_collection": 30,
-          "single_skill_or_domain_package": 0,
+          "skill_collection": 224,
+          "single_skill_or_domain_package": 1,
           "awesome_index": 0,
-          "skill_tooling": 5,
-          "adjacent_search_hit": 4,
+          "skill_tooling": 8,
+          "adjacent_search_hit": 6,
           "unclear_search_hit": 1
         },
         "artifacts": [
-          "sources/catalog/batches/agentskills-created-2026-02-pages-1-2.json"
+          "sources/catalog/batches/agentskills-created-2026-02-pages-1-2.json",
+          "sources/catalog/batches/agentskills-created-2026-02-pages-3-12.json"
         ],
         "historical_reconciliation": "pending",
         "canonical_delta": null
@@ -79,19 +81,22 @@
   },
   "current_run": {
     "query": "agentskills in:name,description created:2026-02-01..2026-02-28",
-    "pages_searched": [1,2],
-    "pages_persisted": [1,2],
-    "raw_hits": 40,
+    "pages_searched": [3,4,5,6,7,8,9,10,11,12,13],
+    "pages_persisted": [3,4,5,6,7,8,9,10,11,12],
+    "raw_hits_persisted": 200,
     "internal_duplicates": 0,
-    "unique_within_batch": 40,
+    "unique_within_batch": 200,
+    "overlap_with_february_pages_1_2": 0,
+    "february_unique_through_page_12": 240,
+    "page_13_probe_results": 20,
     "february_partition_complete": false,
     "canonical_delta": null,
     "historical_reconciliation": "pending"
   },
   "verification": {
-    "repository_identity": "40 repository identities were retrieved from live GitHub repository search across February partition pages 1-2, 20 results per page.",
-    "deduplication": "All 40 current-run identities are distinct case-insensitively.",
-    "cross_partition": "The January and February created-date ranges are disjoint by repository creation date; reconciliation against the unpartitioned staging set and complete historical catalog is still required.",
+    "repository_identity": "200 repository identities were retrieved from live GitHub repository search across February partition pages 3-12, 20 results per page; page 13 was separately probed and returned 20 repositories.",
+    "deduplication": "All 200 current-run identities are distinct case-insensitively and have zero overlap with the previously persisted February pages 1-2 identities.",
+    "cross_partition": "January and February created-date ranges are disjoint by repository creation date; reconciliation against unpartitioned staging and the complete historical catalog is still required.",
     "classification": "Classification is provisional from repository identity and search-returned repository metadata only; it is not added to canonical totals.",
     "content": "not_started",
     "note": "Index-only. No target repository README, SKILL.md, scripts, references, eval contents, stars, quality, implementation content, or runtime behavior was read."
@@ -99,7 +104,7 @@
   "coverage": {
     "unpartitioned_agentskills": "pages 1-50 persisted; page 51 hit GitHub's first-1000-results ceiling",
     "january_2026_partition": "complete: pages 1-19 persisted, 368/368 unique within partition; page 20 returned 0",
-    "february_2026_partition": "in progress: pages 1-2 persisted, 40/40 unique within persisted pages",
-    "next_index_action": "continue February 2026 created-date partition from page 3 and separately reconcile partition identities against unpartitioned staging and the historical canonical ledger"
+    "february_2026_partition": "in progress: pages 1-12 persisted, 240/240 unique within persisted pages; page 13 returned 20 and is next",
+    "next_index_action": "continue February 2026 created-date partition from page 13 and separately reconcile partition identities against unpartitioned staging and the historical canonical ledger"
   }
 }
