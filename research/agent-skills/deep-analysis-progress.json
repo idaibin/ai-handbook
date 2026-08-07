@@ -1,22 +1,22 @@
 {
   "schema_version": "1.3",
-  "observed_at": "2026-08-07T10:12:14+08:00",
+  "observed_at": "2026-08-07T11:21:21+08:00",
   "status": "deep_analysis_in_progress",
   "queue_source": "sources/catalog/github-agent-skills-index-latest.json",
-  "latest_batch_id": "2026-08-07-batch-009",
-  "latest_batch_report": "research/agent-skills/batches/2026-08-07-batch-009-deep-analysis.md",
+  "latest_batch_id": "2026-08-07-batch-010",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-07-batch-010-deep-analysis.md",
   "repositories_completed_this_batch": 10,
-  "skills_reviewed_this_batch": 115,
-  "repositories_completed_total": 90,
-  "skills_reviewed_total": 578,
+  "skills_reviewed_this_batch": 300,
+  "repositories_completed_total": 100,
+  "skills_reviewed_total": 878,
   "repository_status": "structure-reviewed",
   "runtime_validation": "not_executed",
   "index_snapshot": {
-    "observed_at": "2026-08-07T10:09:45+08:00",
-    "unique_total": 2201,
-    "eligible": 1787,
+    "observed_at": "2026-08-07T11:21:21+08:00",
+    "unique_total": 2502,
+    "eligible": 2088,
     "held_for_review": 414,
-    "eligible_remaining_estimate": 1697
+    "eligible_remaining_estimate": 1988
   },
   "completed_repositories": [
     "adithya-s-k/manim_skill",
@@ -108,12 +108,22 @@
     "Fokkyp/claude-skills",
     "haowjy/creative-writing-skills",
     "Harishwarrior/flutter-claude-skills",
-    "lukasreese/powerbi-claude-skills"
+    "lukasreese/powerbi-claude-skills",
+    "mar-antaya/my-claude-skills",
+    "mrgoonie/claudekit-skills",
+    "msrv-tech/skills",
+    "muratcankoylan/Agent-Skills-for-Context-Engineering",
+    "nimrodfisher/data-analytics-skills",
+    "NTCoding/claude-skillz",
+    "ognjengt/founder-skills",
+    "grp06/useful-codex-skills",
+    "aiskilloftheweek/claude-ai-skill-of-the-week",
+    "phuryn/pm-skills"
   ],
   "skill_report_tracking": {
     "authority": "per-batch deep-analysis reports",
-    "reports_total": 578,
-    "latest_batch_reports": 115,
+    "reports_total": 878,
+    "latest_batch_reports": 300,
     "flat_name_list_status": "deprecated_from_canonical_progress_manifest",
     "migration_note": "Schema 1.3 removes the ever-growing flat individual_skills name array from the canonical progress manifest. Repository-specific skill identities, duplicate names across repositories, evidence, and findings remain authoritative in immutable per-batch reports. The previous schema-1.2 manifest is preserved by Git history at blob 5154242fe3203d66a452b9b11485cc9d031dfeec."
   },
@@ -198,7 +208,15 @@
       "report": "research/agent-skills/batches/2026-08-07-batch-009-deep-analysis.md",
       "validation": "structure-reviewed",
       "runtime_validation": "not_executed"
+    },
+    {
+      "batch_id": "2026-08-07-batch-010",
+      "repositories": 10,
+      "skills": 300,
+      "report": "research/agent-skills/batches/2026-08-07-batch-010-deep-analysis.md",
+      "validation": "structure-reviewed",
+      "runtime_validation": "not_executed"
     }
   ],
-  "verification_note": "Repositories are counted complete only after identity and displayed stars were verified and actual README/equivalent, skill definitions, and available scripts/references/eval or test assets were inspected. Batch 004 deferred Pluviobyte/rnskill and samber/cc-skills-golang after current content showed collection-level classification drift; neither was counted complete. Batch 006 reclassified tiangolo/library-skills as skill_tooling after inspecting its scanner implementation and tests; it contributes zero installable skill reports. Batch 007 read repository content for all ten repositories, used direct SKILL.md inspection plus current repository inventories for large collections, inspected representative scripts/references/evals when available, recorded README/catalog drift in jykim/claude-obsidian-skills, and excluded cha9ro/agent-skills upstream git submodules from local skill counts to avoid double-counting. Batch 008 content-reviewed ten repositories and produced 160 active/canonical skill reports; it triaged abubakarsiddik31/claude-skills-collection as a README-only outbound catalog and did not count it. Batch 009 content-reviewed ten repositories and produced 115 active/canonical skill reports. Every completed repository had actual skill content read; large collections used complete repository-maintained inventories plus representative direct SKILL.md reads, and repository-specific evidence depth is recorded in the immutable batch report. BGGG eval definitions and renderer code, Chujianyun validation code/tests, Coleam MCP implementation, DannyMac risk reference, David Ondrej browser reference, Fokkyp research reference, Haowjy packaging code, Harishwarrior scanner code, and Lukas Reese PBIR structure reference were inspected. No third-party runtime command was executed."
+  "verification_note": "Repositories are counted complete only after identity and displayed stars were verified and actual README/equivalent, skill definitions, and available scripts/references/eval or test assets were inspected. Batch 004 deferred Pluviobyte/rnskill and samber/cc-skills-golang after current content showed collection-level classification drift; neither was counted complete. Batch 006 reclassified tiangolo/library-skills as skill_tooling after inspecting its scanner implementation and tests; it contributes zero installable skill reports. Batch 007 read repository content for all ten repositories, used direct SKILL.md inspection plus current repository inventories for large collections, inspected representative scripts/references/evals when available, recorded README/catalog drift in jykim/claude-obsidian-skills, and excluded cha9ro/agent-skills upstream git submodules from local skill counts to avoid double-counting. Batch 008 content-reviewed ten repositories and produced 160 active/canonical skill reports; it triaged abubakarsiddik31/claude-skills-collection as a README-only outbound catalog and did not count it. Batch 009 content-reviewed ten repositories and produced 115 active/canonical skill reports. Every completed repository had actual skill content read; large collections used complete repository-maintained inventories plus representative direct SKILL.md reads, and repository-specific evidence depth is recorded in the immutable batch report. BGGG eval definitions and renderer code, Chujianyun validation code/tests, Coleam MCP implementation, DannyMac risk reference, David Ondrej browser reference, Fokkyp research reference, Haowjy packaging code, Harishwarrior scanner code, and Lukas Reese PBIR structure reference were inspected. No third-party runtime command was executed. Batch 010 content-reviewed ten repositories and produced 300 current individual skill reports. Large inventories were grounded in repository-maintained catalogs/tables and representative direct SKILL.md reads. Supporting implementation/validation surfaces inspected included Mar Antaya's static skill scanner, ClaudeKit's quick validator, msrv-tech's test-only bridge packaging, Murat Cankoylan's researcher/evaluation surface, Nimrod Fisher's structural validator, grp06's publishing helper, and phuryn's plugin validator/test surface. The batch recorded concrete inventory drift in founder-skills (README headline says 20+ while the current table has 15) and corrected useful-codex-skills to nine current skills by including explain-code-change. No third-party runtime command or test suite was executed."
 }
