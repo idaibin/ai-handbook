@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.2",
+  "observed_at": "2026-08-07",
+  "scope": "github_agent_skills_repository_index",
+  "phase": "index_only",
+  "partition": "2026-03",
+  "date_range": "2026-03-24..2026-03-24",
+  "query": "agentskills in:name,description created:2026-03-24..2026-03-24",
+  "per_page": 100,
+  "deduplication_key": "case_insensitive owner/repository",
+  "page_counts": [26, 0],
+  "repositories": [
+    {"identity":"sansernsam/agentskills","classification":"skill_collection"},
+    {"identity":"suevip1/agentskills","classification":"skill_collection"},
+    {"identity":"Tuks101/agentskills","classification":"skill_collection"},
+    {"identity":"bon3less/agentskills","classification":"skill_collection"},
+    {"identity":"djbiz/agentskills","classification":"skill_collection"},
+    {"identity":"Kom1977/agentskills","classification":"skill_collection"},
+    {"identity":"TylerGarlick/skills","classification":"skill_collection"},
+    {"identity":"sagarvarulegit/sagarv-agentskills","classification":"skill_collection"},
+    {"identity":"gcmarks/paper-whisperer","classification":"adjacent_search_hit"},
+    {"identity":"pauldub/codon","classification":"adjacent_search_hit"},
+    {"identity":"ObiWonShinobi/agentskills.io","classification":"skill_collection"},
+    {"identity":"slyviahadisatrio/Skills","classification":"skill_collection"},
+    {"identity":"catgodtwno1/ops-lcm-setup","classification":"adjacent_search_hit"},
+    {"identity":"pfzhang-xmu/research-workflow","classification":"adjacent_search_hit"},
+    {"identity":"rmichak/courseforge","classification":"adjacent_search_hit"},
+    {"identity":"yagebin79386/openclaw-disk-cleanup","classification":"single_skill_or_domain_package"},
+    {"identity":"ExoticVacuumObject/chainlink-agent-skills","classification":"skill_collection"},
+    {"identity":"lb1121/chinese-ebook-downloader","classification":"adjacent_search_hit"},
+    {"identity":"ai-startup/conductor","classification":"adjacent_search_hit"},
+    {"identity":"BaijuGangaraj/dotnet-skills-main","classification":"skill_collection"},
+    {"identity":"Abhinav21110/Anthropic-Cybersecurity-Skills","classification":"skill_collection"},
+    {"identity":"Lumencraft/Cybersecurity-Skills","classification":"skill_collection"},
+    {"identity":"barellamatthew17-commits/Anthropic-Cybersecurity-Skills","classification":"skill_collection"},
+    {"identity":"bbpatil/Anthropic-Cybersecurity-Skills","classification":"skill_collection"},
+    {"identity":"vinodg7289/Anthropic-Cybersecurity-Skills","classification":"skill_collection"},
+    {"identity":"ngoquytuan/Anthropic-Cybersecurity-Skills","classification":"skill_collection"}
+  ],
+  "summary": {
+    "raw_candidate_records": 26,
+    "unique": 26,
+    "internal_duplicates": 0,
+    "classification_counts": {
+      "specification": 0,
+      "skill_collection": 18,
+      "single_skill_or_domain_package": 1,
+      "awesome_index": 0,
+      "skill_tooling": 0,
+      "adjacent_search_hit": 7,
+      "unclear_search_hit": 0
+    },
+    "canonical_delta_asserted": 0
+  },
+  "verification": {
+    "pagination": "Page 1 returned 26 repositories with per_page=100; explicit page 2 returned 0.",
+    "deduplication": "All 26 identities are distinct under case-insensitive owner/repository comparison. Exact created-date shards are disjoint from the persisted 2026-03-01..2026-03-23 date range by repository creation date.",
+    "classification": "Provisional index-stage classification uses repository identity/name metadata only; it is not a deep-content conclusion.",
+    "content": "not_started",
+    "note": "Index-only. No target repository README, SKILL.md, scripts, references, evals, stars, implementation code, or runtime behavior was inspected."
+  }
+}
