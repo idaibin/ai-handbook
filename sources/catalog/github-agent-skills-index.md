@@ -49,11 +49,9 @@ Pages `1-19` are persisted: `368` raw identities / `368` unique identities. Page
 agentskills in:name,description created:2026-02-01..2026-02-28
 ```
 
-This run searched pages `13-22`. Pages `13-20` returned `20` repositories each, page `21` returned `2`, and page `22` returned `0`. Pages `13-21` were persisted as `162` raw identities, all distinct within the current batch.
+The persisted February pagination run searched through page `22`. Pages `1-21` produced `402` raw staged records, and page `22` returned `0`. After case-insensitive identity deduplication, the staged union contains `401` distinct repositories.
 
-During merge with the previously persisted pages `1-12`, one exact case-insensitive duplicate was found: `irfiacre/agentskills`. The February staged union therefore contains `402` raw staged records and `401` distinct repository identities after deduplication.
-
-The duplicate is important evidence: the repository had previously appeared at the page-12 boundary and reappeared on page `13`, which shows GitHub best-match ordering changed between runs. For that reason, page `22 = 0` is recorded as a verified terminal probe, but a gap-free complete February snapshot is **not** asserted yet. A deterministic reconciliation pass using smaller `created:` shards or a stable full refresh is required before marking the partition complete.
+One exact cross-run duplicate was confirmed: `irfiacre/agentskills`. It had appeared at the prior page-12 boundary and then reappeared on page `13`, proving GitHub best-match ordering changed between runs. For that reason, page `22 = 0` is a verified terminal probe, but a gap-free complete February snapshot is **not** asserted from the pagination run alone.
 
 | Metric | Value |
 | --- | ---: |
@@ -61,8 +59,6 @@ The duplicate is important evidence: the repository had previously appeared at t
 | Raw staged records | `402` |
 | Distinct staged identities | `401` |
 | Confirmed duplicate removed | `1` |
-| Current-run raw / unique | `162 / 162` |
-| New unique identities after merge | `161` |
 | Page `22` probe | `0` results |
 | Pagination drift detected | `yes` |
 | Partition completeness asserted | `no` |
@@ -83,11 +79,32 @@ The duplicate is important evidence: the repository had previously appeared at t
 
 Classification is provisional and uses only repository identity plus GitHub repository-search metadata. It is not merged into canonical classification totals.
 
+### Deterministic February reconciliation — started
+
+To remove the best-match pagination-drift risk, reconciliation now uses single-day `created:` shards with `per_page=100` plus an explicit next-page terminal probe.
+
+The first deterministic shard is complete:
+
+```text
+agentskills in:name,description created:2026-02-01..2026-02-01
+```
+
+- Page `1`: `9` repositories
+- Page `2`: `0` repositories
+- Raw / unique identities: `9 / 9`
+- Internal duplicates: `0`
+- Matches found in previously persisted February staging: `9 / 9`
+- Missing from prior February staging: `0`
+- New staged identities after merge: `0`
+
+Provisional shard classification: `6 skill_collection`, `1 single_skill_or_domain_package`, `1 adjacent_search_hit`, `1 unclear_search_hit`. The shard therefore verifies that February `2026-02-01` has no observed gap relative to the existing staged union. The rest of February remains unreconciled.
+
 ### February artifacts
 
 - [`batches/agentskills-created-2026-02-pages-1-2.json`](batches/agentskills-created-2026-02-pages-1-2.json)
 - [`batches/agentskills-created-2026-02-pages-3-12.json`](batches/agentskills-created-2026-02-pages-3-12.json)
 - [`batches/agentskills-created-2026-02-pages-13-21.json`](batches/agentskills-created-2026-02-pages-13-21.json)
+- [`batches/agentskills-created-2026-02-01-reconciliation.json`](batches/agentskills-created-2026-02-01-reconciliation.json)
 - [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json)
 
 ## Canonical classification totals
@@ -110,4 +127,4 @@ This phase is index-only. No target repository README, `SKILL.md`, scripts, refe
 
 ## Next index action
 
-Reconcile February using smaller `created:` shards or a stable full refresh so pagination drift cannot create a silent gap. After that, continue the next created-date partition. Canonical `2502 / 2088 / 414` remains unchanged until partition identities are reconciled against unpartitioned staging and the complete historical ledger.
+Continue deterministic February reconciliation with the `2026-02-02` single-day created-date shard. After all February dates are reconciled, compare the verified union against unpartitioned staging and the complete historical ledger. Canonical `2502 / 2088 / 414` remains unchanged until that reconciliation is complete.
