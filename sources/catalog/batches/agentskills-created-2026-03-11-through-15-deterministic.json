@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.2",
+  "observed_at": "2026-08-07",
+  "scope": "github_agent_skills_repository_index",
+  "phase": "index_only",
+  "partition": "2026-03",
+  "date_range": "2026-03-11..2026-03-15",
+  "query_template": "agentskills in:name,description created:<date>..<date>",
+  "per_page": 100,
+  "deduplication_key": "case_insensitive owner/repository",
+  "daily_shards": [
+    {
+      "date": "2026-03-11",
+      "query": "agentskills in:name,description created:2026-03-11..2026-03-11",
+      "page_counts": [20, 0],
+      "repositories_by_classification": {
+        "skill_collection": ["Guikingone/php-agent-skills","Eshwari07/AgentSkills","sunsetxh/AgentSkills","Hunter79-stack/agentskills","pjsalomao/agentskills","babisRoutis/agentskills","Virtual0ps/agentskills","pxcadmin/agentskills","cfmanco/agentskills","chookee/agentskills","vpegasus/agentskills","23skdu/agentskills","cdzwb1017/agentskills","Maxcilo/openclaw-skills","unixcrh/MS-AgentSkills","maxbayuk/relay-cli-skills"],
+        "adjacent_search_hit": ["arkhai-io/claude-plugins","brandonwise/diagramer"],
+        "skill_tooling": ["iflow-mcp/olgasafonova-skillcheck-free"],
+        "single_skill_or_domain_package": ["Alenryuichi/tech-interview-slides-skill"]
+      }
+    },
+    {
+      "date": "2026-03-12",
+      "query": "agentskills in:name,description created:2026-03-12..2026-03-12",
+      "page_counts": [29, 0],
+      "repositories_by_classification": {
+        "skill_collection": ["skopp002/agentskills","JheisonMB/skills","DHclly/agentskills","rizkym84/agentskills","dancer1325/agentskills","ErrisDing/agentskills","voodootikigod/agentskills","rosefun/agentskills","Samadaeus/agentskills","rkampani/agentskills","harishpiyer/agentskills","xyzwj/agentskills","mustiny8402/agentskills","roger120981/agentskills","pankajkr23/agentskills","jefferydhughes/skills","demf/Anthropic-Cybersecurity-Skills"],
+        "skill_tooling": ["MaxLogic/AgentSkillSearch","SaluteYB/openclaw-skill-eval","Ricard/AgentSkillsManager"],
+        "single_skill_or_domain_package": ["justadm/agentskills-bitrix","justadm/agentskills-bitrix-core","roskva000/openclaw-x-automation-skill","DylanHuang-0121/dev-pipeline-skill"],
+        "adjacent_search_hit": ["justadm/agentskills-bitrix-wiki","JacobGaoZQ/sample-strands-agents-agentskills","sanikacentric/cybersecurity_agentskills_modelcomparison_evals_guardrails","larrybarker73/sample-strands-agents-agentskills"],
+        "awesome_index": ["catcam/awesomeAgentskills"]
+      }
+    },
+    {
+      "date": "2026-03-13",
+      "query": "agentskills in:name,description created:2026-03-13..2026-03-13",
+      "page_counts": [18, 0],
+      "repositories_by_classification": {
+        "skill_collection": ["ChihShueiJiao/AgentSkills","lanshengzhi/agentskills","mooncellex/agentskills","lokii49/agentskills","rodriguzejl1/agentskills","ajithvnr2001/agentskills","drdave-flexnetos/agentskills","xiaotong125/phpDevelopmentAgentSkills","JerryYangAI/agentskillsrepo","tylerbittner/agent-skills","ailabph/Anthropic-Cybersecurity-Skills"],
+        "skill_tooling": ["bongrealty/skillcraft"],
+        "adjacent_search_hit": ["raccooncoon/sample-strands-agents-agentskills","AlexU-A/drupal-intent-testing","qwwiwi/independence-from-ai"],
+        "single_skill_or_domain_package": ["tarunag10/agentskills.legal-multi-contract-analyzer","EllipsesMark/openclaw-x-automation-skill","piiiico/aeo-skill"]
+      }
+    },
+    {
+      "date": "2026-03-14",
+      "query": "agentskills in:name,description created:2026-03-14..2026-03-14",
+      "page_counts": [45, 0],
+      "repositories_by_classification": {
+        "skill_collection": ["pkumashi/AgentSkills","XiaSchumann/agentskills","devaige/agentskills-cn","fenghaitao/pydantic-ai-skills","Uchenna1000/Anthropic-Cybersecurity-Skills","Elmunito/Anthropic-Cybersecurity-Skills","joel-correa/Anthropic-Cybersecurity-Skills","wizard2773/Anthropic-Cybersecurity-Skills","xuesu/Anthropic-Cybersecurity-Skills","panagiotisilia/Anthropic-Cybersecurity-Skills","tjatspace/Anthropic-Cybersecurity-Skills","imft-debug/Anthropic-Cybersecurity-Skills","brendjames/Anthropic-Cybersecurity-Skills","Xaadim-Bamba/anthropic-cybersecurity-skills","Fiooodooor/Anthropic-Cybersecurity-Skills","moneya/Anthropic-Cybersecurity-Skills","JasonBee/Anthropic-Cybersecurity-Skills","marcostolosa/anthropic-cybersecurity-skills","WillCybertron/anthropic-cybersecurity-skills","ajaypachpande/anthropic-cybersecurity-skills","erafio/Anthropic-Cybersecurity-Skills","thecoldblooded/anthropic-cybersecurity-skills","X-File-City/Anthropic-Cybersecurity-Skills","BalajiAnbil/anthropic-cybersecurity-skills","t4tobgay/anthropic-cybersecurity-skills","sandbox-open-tools/Anthropic-Cybersecurity-Skills","skardas/Anthropic-Cybersecurity-Skills","dumpsterfirevip/anthropic-cybersecurity-skills","oluwaseunmauwedo/Anthropic-Cybersecurity-Skills","MaTriXy/Anthropic-Cybersecurity-Skills","edreams/Anthropic-Cybersecurity-Skills","toufik-airane/Anthropic-Cybersecurity-Skills","Salman0x01/Anthropic-Cybersecurity-Skills","jaredfolkins/Anthropic-Cybersecurity-Skills","tektite-io/Anthropic-Cybersecurity-Skills","jeffgiveaway/Anthropic-Cybersecurity-Skills","apanchoo/Anthropic-Cybersecurity-Skills","Neogod59/anthropic-cybersecurity-skills","DanPazlev/Anthropic-Cybersecurity-Skills","snashaat-git/Anthropic-Cybersecurity-Skills","dimetron/Anthropic-Cybersecurity-Skills","r00tedbrain-backup/anthropic-cybersecurity-skills"],
+        "adjacent_search_hit": ["Espboxx/ace-code-retrieval"],
+        "single_skill_or_domain_package": ["esmatcm/openclaw-memory-lancedb-pro-skill","esmatcm/openclaw-heartbeat-report-cn-skill"]
+      }
+    },
+    {
+      "date": "2026-03-15",
+      "query": "agentskills in:name,description created:2026-03-15..2026-03-15",
+      "page_counts": [100, 13, 0],
+      "repositories_by_classification": {
+        "skill_collection": ["kayaman/agentskills","annujk/agentskills","enkaybit/agentskills","virtualcloud0/agentskills","NoahIBS/Marketing-Agentskills","jeremyeder/dgx-agentskills","gigantsc/agentskills-hermes","giannik/CrestApps.AgentSkills","yashab-cyber/Anthropic-Cybersecurity-Skills","aaronsilinskas/ai-skills","cesareth/hermes-turkce-skills","marketcalls/Anthropic-Cybersecurity-Skills","kekewolf/pydantic-ai-skills","mhiconsult/Anthropic-Cybersecurity-Skills","YezGuardian/Anthropic-Cybersecurity-Skills","nanox/Anthropic-Cybersecurity-Skills","vijaydr29/Anthropic-Cybersecurity-Skills","esrovillar/Anthropic-Cybersecurity-Skills","kabuki-software/Anthropic-Cybersecurity-Skills","ssendisamuel/Anthropic-Cybersecurity-Skills","TheNeonRogue/Anthropic-Cybersecurity-Skills","invested-developer/Anthropic-Cybersecurity-Skills","r-y-love-coding/Anthropic-Cybersecurity-Skills","chatgptiv4/Anthropic-Cybersecurity-Skills","AlexMikhalev/anthropic-cybersecurity-skills","smcgaha/anthropic-cybersecurity-skills","pythontime/Anthropic-Cybersecurity-Skills","K3yKur0n0/Anthropic-Cybersecurity-Skills","luyosamson/Anthropic-Cybersecurity-Skills","manuelapetsi/anthropic-cybersecurity-skills","tinle1986/anthropic-cybersecurity-skills","Pytho2535/Anthropic-Cybersecurity-Skills","jyothishkshatri/Anthropic-Cybersecurity-Skills","ArixgroupJL/Anthropic-Cybersecurity-Skills","zaghamarshad/Anthropic-Cybersecurity-Skills","Cybers911/anthropic-cybersecurity-skills","attacker-codeninja/Anthropic-Cybersecurity-Skills","oraekene/Anthropic-Cybersecurity-Skills","g1e2x87/Anthropic-Cybersecurity-Skills","Th3C0d1-one/Anthropic-Cybersecurity-Skills","elhernan08git/Anthropic-Cybersecurity-Skills","Shahrainis/Anthropic-Cybersecurity-Skills","349K/Anthropic-Cybersecurity-Skills","datastars-ai/Anthropic-Cybersecurity-Skills","l1kw1d/Anthropic-Cybersecurity-Skills","thomasbln/anthropic-cybersecurity-skills","Silentsoul04/Anthropic-Cybersecurity-Skills","redpack-kr/Anthropic-Cybersecurity-Skills","musman96/anthropic-cybersecurity-skills","Griimmj0w/Anthropic-Cybersecurity-Skills","cruncher1982/Anthropic-Cybersecurity-Skills","moontua/Anthropic-Cybersecurity-Skills","lowdias/Anthropic-Cybersecurity-Skills","trip-nine/anthropic-cybersecurity-skills","mkk2026/Anthropic-Cybersecurity-Skills","tristandebartolo/Anthropic-Cybersecurity-Skills","leckio/Anthropic-Cybersecurity-Skills","elwarren/Anthropic-Cybersecurity-Skills","santoshdahale/Anthropic-Cybersecurity-Skills","crisprss/Anthropic-Cybersecurity-Skills","Shewart/Anthropic-Cybersecurity-Skills","dh4wes/Anthropic-Cybersecurity-Skills","DragonsBlue/Anthropic-Cybersecurity-Skills","Ecopavel81/Anthropic-Cybersecurity-Skills","patrickheinzelmann/anthropic-cybersecurity-skills","xdanos/Anthropic-Cybersecurity-Skills","liptonj-eng/anthropic-cybersecurity-skills","FlorrenMuuneni/Anthropic-Cybersecurity-Skills","jsodeh/Anthropic-Cybersecurity-Skills","GinoLucianoRojo1993/Anthropic-Cybersecurity-Skills","kurtiepie/anthropic-cybersecurity-skills","YasinShaikh2003/Anthropic-Cybersecurity-Skills","gitechx/Anthropic-Cybersecurity-Skills","jigsaw77/Anthropic-Cybersecurity-Skills","mohamedBoujdi/Anthropic-Cybersecurity-Skills","alhantawi/Anthropic-Cybersecurity-Skills","yanitedhacker/anthropic-cybersecurity-skills","Wenkow/anthropic-cybersecurity-skills","D-Eminence/Anthropic-Cybersecurity-Skills","Ciyfly/Anthropic-Cybersecurity-Skills","thecoder8890/anthropic-cybersecurity-skills","J0hn8uff3r/Anthropic-Cybersecurity-Skills","jjardel-infosec/Anthropic-Cybersecurity-Skills","dporkka/Anthropic-Cybersecurity-Skills","joesgits/Anthropic-Cybersecurity-Skills","pnagori02/Anthropic-Cybersecurity-Skills","vineetha20/Anthropic-Cybersecurity-Skills","dr-steven-puckett/Anthropic-Cybersecurity-Skills","AmesianX/anthropic-cybersecurity-skills","jsaldanar/anthropic-cybersecurity-skills","mr-reb00t/Anthropic-Cybersecurity-Skills","mahinthjoe/Anthropic-Cybersecurity-Skills","bpcrao/Anthropic-Cybersecurity-Skills","igounton/Anthropic-Cybersecurity-Skills","AshishBhadouria/Anthropic-Cybersecurity-Skills","Dario/Anthropic-Cybersecurity-Skills","vichhka-git/Anthropic-Cybersecurity-Skills","bharathcsmys/Anthropic-Cybersecurity-Skills","iamk12/Anthropic-Cybersecurity-Skills","blackkhawkk/Anthropic-Cybersecurity-Skills","PurpleCHOIms/anthropic-cybersecurity-skills","admin-kube/Anthropic-Cybersecurity-Skills","toniall/Anthropic-Cybersecurity-Skills","satyagadepalli/Anthropic-Cybersecurity-Skills","ballbadboy/Anthropic-Cybersecurity-Skills","beerandgin/Anthropic-Cybersecurity-Skills","vchain/Anthropic-Cybersecurity-Skills","adityasinha-1988/Anthropic-Cybersecurity-Skills","leonsgithub/Anthropic-Cybersecurity-Skills","venkatesh-gangavarapu/anthropic-cybersecurity-skills"],
+        "skill_tooling": ["pratikxpanda/agentskills-hub"],
+        "adjacent_search_hit": ["Proskhmer08/ripley-xmr-gateway","Susin0811/Anthropic-Cyber"]
+      }
+    }
+  ],
+  "run_summary": {
+    "daily_shards": 5,
+    "page_1_counts": [20,29,18,45,100],
+    "page_2_counts": [0,0,0,0,13],
+    "page_3_counts": [0],
+    "raw_candidate_records": 225,
+    "unique": 225,
+    "internal_duplicates": 0,
+    "classification_counts": {
+      "specification": 0,
+      "skill_collection": 196,
+      "single_skill_or_domain_package": 10,
+      "awesome_index": 1,
+      "skill_tooling": 6,
+      "adjacent_search_hit": 12,
+      "unclear_search_hit": 0
+    },
+    "canonical_delta_asserted": 0
+  },
+  "verification": {
+    "pagination": "2026-03-11 through 2026-03-14 used page 1 plus explicit page-2 terminal probes, all returning 0. 2026-03-15 filled page 1 with 100 results, returned 13 results on page 2, and used an explicit page-3 terminal probe returning 0.",
+    "deduplication": "All 225 identities are distinct under case-insensitive owner/repository comparison.",
+    "classification": "Provisional index classification uses repository identity/name metadata only; it is not a deep-content conclusion.",
+    "content": "not_started",
+    "note": "Index-only. No target repository README, SKILL.md, scripts, references, evals, stars, implementation code, or runtime behavior was inspected."
+  }
+}
