@@ -1,16 +1,16 @@
 {
   "schema_version": "1.0",
-  "latest_batch_id": "2026-08-08-batch-029",
-  "latest_batch_report": "research/agent-skills/batches/2026-08-08-batch-029-deep-analysis.md",
-  "latest_batch_progress": "research/agent-skills/batches/2026-08-08-batch-029-progress.json",
-  "latest_skill_report": "research/agent-skills/batches/2026-08-08-batch-029-skill-reports.md",
-  "repositories_structure_reviewed_total": 290,
-  "repository_scoped_skill_reports_total": 2808,
+  "latest_batch_id": "2026-08-08-batch-030",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-08-batch-030-deep-analysis.md",
+  "latest_batch_progress": "research/agent-skills/batches/2026-08-08-batch-030-progress.json",
+  "latest_skill_report": "research/agent-skills/batches/2026-08-08-batch-030-skill-reports.md",
+  "repositories_structure_reviewed_total": 300,
+  "repository_scoped_skill_reports_total": 2814,
   "canonical_eligible_basis": 2088,
-  "remaining_estimate": 1798,
+  "remaining_estimate": 1788,
   "status": "structure-reviewed",
   "runtime_validation": "not_executed",
-  "direct_skill_body_reviews_latest_batch": 9,
+  "direct_skill_body_reviews_latest_batch": 6,
   "observed_at": "2026-08-08",
-  "note": "Batch 029 content-reviewed 10 indexed queue repositories and directly reviewed 9 SKILL.md bodies. Six repository identities were verified as exact full-tree copies of the same Agent Skills specification/reference SDK revision and therefore generated no duplicate skill reports. The remaining four unique repositories produced nine repository-scoped skill reports: four Carabase integration skills, three Pydantic AI example skills, one Agentic MCP skill, and one skill-authoring guide. Source inspection found a prose-spec versus Unicode-aware validator naming tension, eager upstream tool-schema caching behind Agentic MCP's caller-facing progressive disclosure, and missing npm package metadata for skill-authoring's advertised validation commands. Runtime/build/test/eval execution remains not executed. The remaining estimate is arithmetic continuation from the frozen 2088 basis and remains subject to canonical reconciliation of deterministic index shards."
+  "note": "Batch 030 content-reviewed 10 indexed single-skill repository identities from the April 1 deterministic queue and directly reviewed six unique SKILL.md bodies. Four repository pairs were exact full-tree duplicates at identical Git commit SHAs and were deduplicated without inflating the skill-report total. The reviewed packages are document-only policy skills; code search and reviewed documentation surfaced no repository-local scripts, references or eval suites. A repeated provenance/install mismatch was found: all six unique README files install from Arxchibobo/... rather than the current repository identity. Runtime/build/test/eval execution remains not executed. The remaining estimate is arithmetic continuation from the frozen 2088 basis and remains subject to canonical reconciliation."
 }
