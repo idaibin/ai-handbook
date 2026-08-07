@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-08-batch-030",
+  "observed_at": "2026-08-08",
+  "stage": "repository deep analysis",
+  "queue_source": "sources/catalog/batches/agentskills-created-2026-04-01-deterministic.json",
+  "repositories_completed_this_batch": 10,
+  "repositories_structure_reviewed_total": 300,
+  "repository_scoped_skill_reports_added_this_batch": 6,
+  "repository_scoped_skill_reports_total": 2814,
+  "direct_skill_bodies_reviewed_this_batch": 6,
+  "canonical_eligible_basis": 2088,
+  "remaining_estimate": 1788,
+  "remaining_estimate_note": "Arithmetic continuation against the frozen 2088 canonical basis; deterministic index shards still require canonical reconciliation, so this is not a final unique-repository remainder.",
+  "runtime_build_test_eval_execution": "not_executed",
+  "artifact_commits": {
+    "repository_analysis": "2847b2157496bd2da734d3934860de18ee7de36e",
+    "skill_reports": "01e349d9bfdbacd2afd69e8c5bb9a92436a60386"
+  },
+  "repositories": [
+    {"repository":"camCX/adversarial-verification","repository_id":1198534332,"stars_observed":0,"revision":"909a2f70fc0de13aff1175c0b507ec24bf0b4815","content_class":"document-only-single-skill","skill_reports":1,"status":"completed"},
+    {"repository":"YTT-CSH/adversarial-verification","repository_id":1198117559,"stars_observed":0,"revision":"909a2f70fc0de13aff1175c0b507ec24bf0b4815","content_class":"exact-full-tree-duplicate","skill_reports":0,"status":"completed"},
+    {"repository":"ajunlonglive/smart-memory-guard","repository_id":1198081842,"stars_observed":0,"revision":"802b0f14f8f0fbdc8ee4be39cdc342e5121efbeb","content_class":"document-only-single-skill","skill_reports":1,"status":"completed"},
+    {"repository":"k1w1f1sh/smart-memory-guard","repository_id":1198053675,"stars_observed":0,"revision":"802b0f14f8f0fbdc8ee4be39cdc342e5121efbeb","content_class":"exact-full-tree-duplicate","skill_reports":0,"status":"completed"},
+    {"repository":"alexchenyu/coordinator-orchestrator","repository_id":1198043379,"stars_observed":0,"revision":"a6d0311d279b32497a9c952061fafb798309b4e3","content_class":"document-only-single-skill","skill_reports":1,"status":"completed"},
+    {"repository":"k1w1f1sh/coordinator-orchestrator","repository_id":1198054856,"stars_observed":0,"revision":"a6d0311d279b32497a9c952061fafb798309b4e3","content_class":"exact-full-tree-duplicate","skill_reports":0,"status":"completed"},
+    {"repository":"ajunlonglive/task-concurrency-patterns","repository_id":1198087036,"stars_observed":0,"revision":"7fa43a3fc72ceb0fb488fedbb09faa37198fcb5e","content_class":"document-only-single-skill","skill_reports":1,"status":"completed"},
+    {"repository":"k1w1f1sh/task-concurrency-patterns","repository_id":1198061428,"stars_observed":0,"revision":"7fa43a3fc72ceb0fb488fedbb09faa37198fcb5e","content_class":"exact-full-tree-duplicate","skill_reports":0,"status":"completed"},
+    {"repository":"YTT-CSH/worker-prompt-craft","repository_id":1198154943,"stars_observed":0,"revision":"8f8a14fc8da0e687457516da3d9f79f8873e9061","content_class":"document-only-single-skill","skill_reports":1,"status":"completed"},
+    {"repository":"camCX/memory-type-system","repository_id":1198538950,"stars_observed":0,"revision":"d3805f3e5a576afd0c55e2de9cddb78511a30c95","content_class":"document-only-single-skill","skill_reports":1,"status":"completed"}
+  ],
+  "content_deduplication": [
+    {"repositories":["camCX/adversarial-verification","YTT-CSH/adversarial-verification"],"shared_revision":"909a2f70fc0de13aff1175c0b507ec24bf0b4815","skill_reports_generated":1},
+    {"repositories":["ajunlonglive/smart-memory-guard","k1w1f1sh/smart-memory-guard"],"shared_revision":"802b0f14f8f0fbdc8ee4be39cdc342e5121efbeb","skill_reports_generated":1},
+    {"repositories":["alexchenyu/coordinator-orchestrator","k1w1f1sh/coordinator-orchestrator"],"shared_revision":"a6d0311d279b32497a9c952061fafb798309b4e3","skill_reports_generated":1},
+    {"repositories":["ajunlonglive/task-concurrency-patterns","k1w1f1sh/task-concurrency-patterns"],"shared_revision":"7fa43a3fc72ceb0fb488fedbb09faa37198fcb5e","skill_reports_generated":1}
+  ],
+  "selection_note": "This run selected ten qualified single-skill entries from the existing indexed queue that could pass the full content-review gate. Large earlier collections remain deferred and are not marked complete until their individual skills can be reviewed.",
+  "verification_notes": [
+    "All 10 repository identities matched GitHub repository search with exact stars:0 qualifiers.",
+    "Four pairs shared exact Git commit SHAs; shared commit identity was used as full-tree deduplication evidence.",
+    "Six unique README.md and six unique SKILL.md bodies were directly read at pinned revisions.",
+    "Repository code search across the six unique trees returned no scripts, references, or eval matches.",
+    "No runtime/build/test/eval success is inferred from source/document inspection."
+  ]
+}
