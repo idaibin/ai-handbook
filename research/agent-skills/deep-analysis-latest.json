@@ -1,16 +1,16 @@
 {
   "schema_version": "1.0",
-  "latest_batch_id": "2026-08-08-batch-026",
-  "latest_batch_report": "research/agent-skills/batches/2026-08-08-batch-026-deep-analysis.md",
-  "latest_batch_progress": "research/agent-skills/batches/2026-08-08-batch-026-progress.json",
-  "latest_skill_report": "research/agent-skills/batches/2026-08-08-batch-026-skill-reports.md",
-  "repositories_structure_reviewed_total": 260,
-  "repository_scoped_skill_reports_total": 2750,
+  "latest_batch_id": "2026-08-08-batch-027",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-08-batch-027-deep-analysis.md",
+  "latest_batch_progress": "research/agent-skills/batches/2026-08-08-batch-027-progress.json",
+  "latest_skill_report": "research/agent-skills/batches/2026-08-08-batch-027-skill-reports.md",
+  "repositories_structure_reviewed_total": 270,
+  "repository_scoped_skill_reports_total": 2772,
   "canonical_eligible_basis": 2088,
-  "remaining_estimate": 1828,
+  "remaining_estimate": 1818,
   "status": "structure-reviewed",
   "runtime_validation": "not_executed",
-  "direct_skill_body_reviews_latest_batch": 4,
+  "direct_skill_body_reviews_latest_batch": 22,
   "observed_at": "2026-08-08",
-  "note": "Batch 026 content-reviewed 10 persisted indexed queue entries and directly reviewed 4 local SKILL.md bodies. Identity and exact stars were verified against current GitHub repository search; actual repository content, README/definitions, scripts/references/eval surfaces were inspected when available. Six metadata-stage skill-collection candidates were proven to be exact official Agent Skills specification snapshots/mirrors by shared official commit SHAs; one candidate was a non-skill interview prompt and one was Go SDK/reference tooling. These content corrections are recorded without generating duplicate or synthetic skill reports. Runtime validation remains not executed. The remaining estimate is arithmetic continuation from the existing 2088 basis and remains subject to canonical reconciliation of deterministic March staging shards."
+  "note": "Batch 027 content-reviewed 10 persisted indexed queue entries and directly reviewed 22 distinct local SKILL.md bodies: 21 Zephyr RTOS skills plus the agentskills-cli progressive-disclosure guide. Exact commit identity and commit deltas were used to reuse prior content review for official Agent Skills snapshots and a Zephyr packaging-only variant without generating duplicate skill reports. A source-level correctness issue was found in agentskills-cli: the bundled guide still uses the obsolete 'upgrade' command while the current CLI exposes 'decompose' and 'lint'. Runtime validation remains not executed. The remaining estimate is arithmetic continuation from the existing 2088 basis and remains subject to canonical reconciliation of deterministic March staging shards."
 }
