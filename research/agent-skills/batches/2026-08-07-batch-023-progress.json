@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-07-batch-023",
+  "observed_at": "2026-08-07",
+  "status": "structure-reviewed",
+  "runtime_validation": "not_executed",
+  "queue_entries_reviewed": 10,
+  "content_qualified_repositories": 9,
+  "content_rejected_or_held": 1,
+  "repositories_structure_reviewed_delta": 10,
+  "repository_scoped_skill_reports_delta": 77,
+  "direct_skill_body_reviews": 77,
+  "repositories_structure_reviewed_total": 230,
+  "repository_scoped_skill_reports_total": 2677,
+  "canonical_eligible_basis": 2088,
+  "remaining_estimate": 1858,
+  "report": "research/agent-skills/batches/2026-08-07-batch-023-deep-analysis.md",
+  "skill_report": "research/agent-skills/batches/2026-08-07-batch-023-skill-reports.md",
+  "notes": [
+    "Ten indexed queue entries were content-reviewed; parilsanghvi/AgentSkills was rejected/held after actual repository inspection because it currently has no local skill definition.",
+    "All 77 repository-scoped skill bodies counted in the skill report were directly read.",
+    "Scripts, references, tests, and eval surfaces were source-inspected where material; no runtime validation was executed.",
+    "The historical canonical eligible basis was not reconciled in this batch; remaining_estimate advances only by the ten reviewed queue entries."
+  ]
+}
