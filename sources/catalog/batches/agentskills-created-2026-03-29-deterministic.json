@@ -1,0 +1,60 @@
+{
+  "schema_version": "2.2",
+  "observed_at": "2026-08-08",
+  "scope": "github_agent_skills_repository_index",
+  "phase": "index_only",
+  "partition": "2026-03",
+  "date_range": "2026-03-29..2026-03-29",
+  "query": "agentskills in:name,description created:2026-03-29..2026-03-29",
+  "per_page": 100,
+  "deduplication_key": "case_insensitive owner/repository",
+  "page_counts": [24, 0],
+  "repositories": [
+    {"identity":"Gedanke/agentSkills","classification":"skill_collection"},
+    {"identity":"r-senchuk/agentskills","classification":"skill_collection"},
+    {"identity":"rapidstartup/agentskills","classification":"skill_collection"},
+    {"identity":"richard-shan/agentskills","classification":"skill_collection"},
+    {"identity":"ReignnRule11/agentskills","classification":"skill_collection"},
+    {"identity":"bjester/agentskills","classification":"skill_collection"},
+    {"identity":"Tomybarq/agentskills","classification":"skill_collection"},
+    {"identity":"jozrftamson/agentskills","classification":"skill_collection"},
+    {"identity":"legale/agentskills","classification":"skill_collection"},
+    {"identity":"gxt0x2/ari-skills","classification":"skill_collection"},
+    {"identity":"backchainai/backchain-plugins","classification":"adjacent_search_hit"},
+    {"identity":"wecan-doit/agentskills_Brief","classification":"skill_collection"},
+    {"identity":"rasmialkharshan/jobsdone","classification":"adjacent_search_hit"},
+    {"identity":"web3-claw/ai-skills","classification":"skill_collection"},
+    {"identity":"miyakhelwaleedahmad/skills","classification":"skill_collection"},
+    {"identity":"limabravolima/agentskill.sh","classification":"skill_tooling"},
+    {"identity":"edezacas/agent-skills","classification":"skill_collection"},
+    {"identity":"tomoncle/anthropics-skills","classification":"skill_collection"},
+    {"identity":"slooppe/Anthropic-Cybersecurity-Skills","classification":"skill_collection"},
+    {"identity":"WhiteCrow/Anthropic-Cybersecurity-Skills","classification":"skill_collection"},
+    {"identity":"paulpham157/Anthropic-Cybersecurity-Skills","classification":"skill_collection"},
+    {"identity":"Wired411media/Anthropic-Cybersecurity-Skills","classification":"skill_collection"},
+    {"identity":"reket99/Anthropic-Cybersecurity-Skills","classification":"skill_collection"},
+    {"identity":"BadRequest0404/Anthropic-Cybersecurity-Skills","classification":"skill_collection"}
+  ],
+  "summary": {
+    "raw_candidate_records": 24,
+    "unique": 24,
+    "internal_duplicates": 0,
+    "classification_counts": {
+      "specification": 0,
+      "skill_collection": 21,
+      "single_skill_or_domain_package": 0,
+      "awesome_index": 0,
+      "skill_tooling": 1,
+      "adjacent_search_hit": 2,
+      "unclear_search_hit": 0
+    },
+    "canonical_delta_asserted": 0
+  },
+  "verification": {
+    "pagination": "Page 1 returned 24 repositories with per_page=100; explicit page 2 returned 0.",
+    "deduplication": "All 24 identities are distinct under case-insensitive owner/repository comparison. Exact created-date shards are disjoint from the persisted 2026-03-01..2026-03-28 date range by repository creation date.",
+    "classification": "Provisional index-stage classification uses repository identity/name metadata only; ambiguous metadata-only hits are held as adjacent_search_hit or unclear_search_hit rather than promoted by assumption.",
+    "content": "not_started",
+    "note": "Index-only. No target repository README, SKILL.md, scripts, references, evals, stars, implementation code, or runtime behavior was inspected."
+  }
+}
