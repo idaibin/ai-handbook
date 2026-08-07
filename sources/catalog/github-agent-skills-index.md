@@ -60,27 +60,27 @@ Latest March artifact: [`batches/agentskills-created-2026-03-31-deterministic.js
 Verified persisted coverage:
 
 ```text
-2026-04-01 .. 2026-04-02
+2026-04-01 .. 2026-04-03
 per_page=100
-2 exact single-day shards with explicit terminal pagination probes
+3 exact single-day shards with explicit terminal pagination probes
 ```
 
-The `2026-04-02` shard returned `53` repositories on page 1 and `0` on page 2. A second pagination check using `per_page=20` returned `20,20,13,0`, confirming the same 53-record result set. Case-insensitive `owner/repository` deduplication produced `53` current-shard unique identities and `0` internal duplicates.
+The `2026-04-03` shard returned `27` repositories on page 1 and `0` on page 2. A second pagination check using `per_page=20` returned `20,7,0`, confirming the same 27-record result set. Case-insensitive `owner/repository` deduplication produced `27` current-shard unique identities and `0` internal duplicates.
 
-The April staging union now contains `148` unique identities across the exact `2026-04-01` and `2026-04-02` creation-date shards, with `0` cross-shard duplicates asserted.
+The April staging union now contains `175` unique identities across the exact `2026-04-01`, `2026-04-02`, and `2026-04-03` creation-date shards, with `0` cross-shard duplicates asserted.
 
 ### April staging provisional classification
 
 | Classification | Count |
 | --- | ---: |
 | `specification` | 0 |
-| `skill_collection` | 39 |
-| `single_skill_or_domain_package` | 104 |
+| `skill_collection` | 56 |
+| `single_skill_or_domain_package` | 106 |
 | `awesome_index` | 0 |
 | `skill_tooling` | 0 |
-| `adjacent_search_hit` | 5 |
+| `adjacent_search_hit` | 13 |
 | `unclear_search_hit` | 0 |
-| **Total** | **148** |
+| **Total** | **175** |
 
 Classification is index-stage only and uses repository identity/name metadata. Ambiguous metadata-only hits remain adjacent rather than being promoted by assumption.
 
@@ -88,8 +88,9 @@ Classification is index-stage only and uses repository identity/name metadata. A
 
 - [`batches/agentskills-created-2026-04-01-deterministic.json`](batches/agentskills-created-2026-04-01-deterministic.json)
 - [`batches/agentskills-created-2026-04-02-deterministic.json`](batches/agentskills-created-2026-04-02-deterministic.json)
+- [`batches/agentskills-created-2026-04-03-deterministic.json`](batches/agentskills-created-2026-04-03-deterministic.json)
 
-Current run report: [`runs/2026-08-08-agentskills-april-2026-04-02.md`](runs/2026-08-08-agentskills-april-2026-04-02.md).
+Current run report: [`runs/2026-08-08-agentskills-april-2026-04-03.md`](runs/2026-08-08-agentskills-april-2026-04-03.md).
 
 ## Evidence boundary
 
@@ -97,4 +98,4 @@ This phase is index-only. No target repository README, `SKILL.md`, scripts, refe
 
 ## Next index action
 
-Continue the deterministic April partition with the `2026-04-03` exact single-day shard. Keep canonical totals frozen until created-date partition unions are reconciled against unpartitioned staging and the complete historical canonical ledger.
+Continue the deterministic April partition with the `2026-04-04` exact single-day shard. Keep canonical totals frozen until created-date partition unions are reconciled against unpartitioned staging and the complete historical canonical ledger.
