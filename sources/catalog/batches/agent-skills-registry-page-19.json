@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.3",
+  "observed_at": "2026-08-07T09:10:52+08:00",
+  "status": "discovery_batch",
+  "scope": "github_agent_skills_repository_index",
+  "query": "\"agent skills registry\" in:name,description",
+  "pages": [19],
+  "results_per_page": 20,
+  "raw_hits": 20,
+  "deep_content_reading": false,
+  "classification_basis": "repository_identity_and_search_context_only",
+  "base_catalog": {
+    "path": "sources/catalog/github-agent-skills-index-latest.json",
+    "commit": "4e3264410aaa420b91f3ae297e02edc27ea4357b",
+    "blob_sha": "7ee3666a1c05cb223ad4db41c30246a58b18c002",
+    "unique_total": 2067
+  },
+  "deduplication": {
+    "key": "case_insensitive owner/repository",
+    "duplicates_within_batch": [],
+    "duplicates_against_base": [],
+    "new_unique": 20,
+    "composed_unique_total": 2087,
+    "verification": "All page-19 identities were directly compared against the persisted agent-skills-registry pages 1-18. The full persisted skill-hub pages 1-10, agent-skills-hub pages 1-2, and skill-registry pages 1-10 artifacts were also directly inspected as high-overlap cross-query sets. No exact case-insensitive owner/repository match was found. AI-handbook code search was not used as uniqueness proof because earlier runs demonstrated false negatives for known persisted identities."
+  },
+  "classification_counts_raw": {
+    "specification": 0,
+    "skill_collection": 0,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 20,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 0
+  },
+  "classification_counts_new_unique": {
+    "specification": 0,
+    "skill_collection": 0,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 20,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 0
+  },
+  "progress": {
+    "added_to_deep_analysis_eligible": 20,
+    "added_to_held_for_review": 0
+  },
+  "repository_fields": ["github_id", "full_name", "default_branch", "size_kb", "archived", "result_rank", "classification", "is_new_unique", "deep_analysis_eligible"],
+  "repositories": [
+    ["1243697602", "ntheanh201/skillhub", "main", 12796, false, 1, "skill_tooling", true, true],
+    ["1290589312", "leaftsui/skillhub", "main", 13364, false, 2, "skill_tooling", true, true],
+    ["1293082067", "Vatthanachai/skillhub", "main", 13665, false, 3, "skill_tooling", true, true],
+    ["1294779584", "18910317150/skillhub", "main", 13665, false, 4, "skill_tooling", true, true],
+    ["1237244268", "shawn0915/skillhub", "main", 12390, false, 5, "skill_tooling", true, true],
+    ["1200403492", "Nliver/skillhub", "main", 12439, false, 6, "skill_tooling", true, true],
+    ["1269675278", "NewYuee/skillhub", "main", 13280, false, 7, "skill_tooling", true, true],
+    ["1281202871", "kjken23/skillhub", "main", 13520, false, 8, "skill_tooling", true, true],
+    ["1259131671", "linht12/skillhub", "main", 12992, false, 9, "skill_tooling", true, true],
+    ["1284669329", "chanchan0391/skillhub", "main", 13786, false, 10, "skill_tooling", true, true],
+    ["1230635944", "nasirhomna3/skillhub", "main", 13168, false, 11, "skill_tooling", true, true],
+    ["1198444766", "itsharex/skillhub", "main", 13252, false, 12, "skill_tooling", true, true],
+    ["1220645052", "ITELMN/skillhub", "main", 11782, false, 13, "skill_tooling", true, true],
+    ["1195740215", "Karen0758/skillhub", "main", 3640, false, 14, "skill_tooling", true, true],
+    ["1198270987", "PhilisterD/skillhub", "main", 3761, false, 15, "skill_tooling", true, true],
+    ["1198280661", "yug191005-eng/skillhub", "main", 3761, false, 16, "skill_tooling", true, true],
+    ["1223223918", "coldSun233/skillhub", "main", 11887, false, 17, "skill_tooling", true, true],
+    ["1222240813", "bobohaha/skillhub", "main", 11791, false, 18, "skill_tooling", true, true],
+    ["1205508798", "JetSquirrel/skillhub", "main", 10759, false, 19, "skill_tooling", true, true],
+    ["1215169900", "vladik9/skillhub", "main", 10471, false, 20, "skill_tooling", true, true]
+  ],
+  "coverage": {
+    "completed_pages": [19],
+    "next_page": 20,
+    "query_complete": false,
+    "next_page_probe": "page 20 returned 20 repositories and was not merged in this batch"
+  },
+  "verification": {
+    "repository_identity": "verified_by_github_connector",
+    "deduplication": "verified against persisted current-query pages 1-18 plus directly inspected high-overlap skill-hub, agent-skills-hub, and skill-registry artifacts; code-search emptiness explicitly excluded as uniqueness proof",
+    "content": "not_started",
+    "note": "Index-only. No README, SKILL.md, scripts, references, eval contents, stars, quality, or implementation content was read."
+  }
+}
