@@ -7,132 +7,77 @@
 - Raw identities across composed inputs: `2634`
 - Unique repositories after case-insensitive `owner/repository` deduplication: `2502`
 - Exact duplicates removed across composed inputs: `132`
-- New unique repositories composed in this run: `0`
 - Provisionally eligible for later deep analysis: `2088`
 - Held as adjacent or unclear search hits: `414`
 
-Composed machine-readable authority: [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json).
-
-The canonical total remains `2502`. The unpartitioned `agentskills in:name,description` search has persisted its accessible first `1000` results, but pages `17-50` still require full historical identity reconciliation. This run began deterministic created-date partitioning and persisted January 2026 partition page `10` as an additional `20` verified candidate records without promoting them into the canonical total.
+Canonical totals remain frozen while the newer `agentskills` staging and created-date partitions are reconciled against the complete historical ledger. Machine-readable authority: [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json).
 
 ## Completed search coverage
 
-- `"agent skills" in:name,description`, pages `1-10`
-- `"codex skills" in:name,description`, pages `1-10`
-- `"claude skills" in:name,description`, pages `1-10`
-- `"mcp skills" in:name,description`, pages `1-10`
-- `"skill catalog" in:name,description`, pages `1-10`
-- `"skill registry" in:name,description`, pages `1-10`
-- `"agent skill" in:name,description`, pages `1-10`
-- `"agentskills cli" in:name,description`, page `1`
-- `"skill marketplace" in:name,description`, pages `1-10`
-- `"agent skills hub" in:name,description`, pages `1-2`
-- `"skill hub" in:name,description`, pages `1-10`
-- `"agent skills directory" in:name,description`, pages `1-2`
-- `"openai skills" in:name,description`, pages `1-10`
-- `"anthropic skills" in:name,description`, pages `1-10`
-- `"agent skills marketplace" in:name,description`, pages `1-10`
-- `"agentskills specification" in:name,description`, page `1`
-- `"skill lint" in:name,description`, complete accessible page-1 result set with `100` requested results
-- `"agent skills validator" in:name,description`, complete accessible page-1 result set with `100` requested results
-- `"agent skills standard" in:name,description`, pages `1-10`, `20` results per page
-- `"agent skills eval" in:name,description`, complete accessible pages `1-3`, `20` requested results per page; page `4` returned `0`
-- `"agent skills benchmark" in:name,description`, complete accessible page `1`, `50` requested results; page `2` returned `0`
-- `"agent skills test" in:name,description`, complete accessible page `1`, `50` requested results; page `2` returned `0`
-- `"agentskills sdk" in:name,description`, complete accessible page `1`, `50` requested results; page `2` returned `0`
-- `"agent skills template" in:name,description`, complete accessible pages `1-3`, `20` requested results per page; page `4` returned `0`
-- `"agent skills examples" in:name,description`, complete accessible pages `1-2`, `50` requested results per page; page `3` returned `0`
-- `"agent skills protocol" in:name,description`, complete accessible page `1`, `50` requested results; page `2` returned `0`
-- `"agent skills registry" in:name,description`, complete accessible pages `1-41`, `20` requested results per page; page `42` returned `0`
+The earlier index already persisted the documented query families for `agent skills`, `codex skills`, `claude skills`, `mcp skills`, skill catalogs/registries/marketplaces, OpenAI/Anthropic skills, validators, standards, evals, benchmarks, tests, SDKs, templates, examples, protocols, and the complete accessible `agent skills registry` pagination.
 
-## Unpartitioned `agentskills` staging
-
-Query:
+### Unpartitioned `agentskills`
 
 ```text
 agentskills in:name,description
 ```
 
-Persisted staging coverage includes pages `1-50`, `20` repository identities per page. Page `51` returns GitHub HTTP `422`:
+- Persisted pages: `1-50`
+- Requested results per page: `20`
+- Raw staging records: `1000`
+- Page `51`: GitHub first-1000-results limit
+- Full historical reconciliation: still pending for the unreconciled staging tail
 
-```text
-Only the first 1000 search results are available
-```
+The unpartitioned query therefore covers its accessible first `1000` search results, not the complete query universe.
 
-Therefore pages `1-50` cover only the unpartitioned query's accessible first `1000` results, not the complete query universe.
+## January 2026 created-date partition — complete
 
-| Metric | Value |
-| --- | ---: |
-| Raw identities persisted | `1000` |
-| Confirmed cross-staging duplicates in reconciled pages `1-16` | `1` |
-| Staged unique identities reconciled through page `16` | `319` |
-| Identities unique within unreconciled pages `17-50` batches | `680` |
-| Exact prior-catalog duplicates directly confirmed | `3` |
-| Unresolved identity records awaiting full reconciliation | `996` |
-| Global staged-unique total | `not asserted` |
-| Canonical delta asserted | `0` |
-
-The three directly confirmed prior-catalog duplicates remain:
-
-- `agentskills/agentskills`
-- `darkrishabh/agent-skills-eval`
-- `pratikxpanda/agentskills-sdk`
-
-Across reconciled pages `1-16`, the confirmed cross-staging repeat remains `0xsarawut/agentskills`, which appeared at page `3` rank `20` and page `4` rank `1`.
-
-## Partitioned discovery beyond the 1000-result window
-
-Active partition:
+Query:
 
 ```text
 agentskills in:name,description created:2026-01-01..2026-01-31
 ```
 
-This run persisted page `10` with `20` repository identities. All 20 are distinct under case-insensitive `owner/repository` within the batch. Each exact `repository_full_name` was also searched across the persisted `idaibin/ai-handbook` index artifacts; those lookups returned `0` indexed-text matches.
+This run backfilled pages `1-9`, each with `20` live GitHub repository-search results. The `180` identities are all distinct under case-insensitive `owner/repository` comparison. They were then merged with the already-persisted January pages `10-19` (`188` identities); the cross-set overlap count is `0`.
 
-That negative lookup is recorded only as evidence that no persisted index match was observed. It is **not** treated as proof that all 20 are absent from every historical source batch, so no canonical increment is asserted yet.
+The complete January partition is therefore:
 
-Partition probes:
+| Metric | Value |
+| --- | ---: |
+| Persisted pages | `1-19` |
+| Raw identities | `368` |
+| Unique identities within partition | `368` |
+| Duplicates removed within partition | `0` |
+| Terminal probe | page `20` returned `0` |
+| Canonical additions asserted | `0` |
 
-- page `11`: `20` repositories, not persisted in this run
-- page `25`: `0` repositories
-- page `50`: `0` repositories
-
-This confirms the January 2026 monthly partition is below GitHub Search's 1000-result accessible ceiling and can be exhausted deterministically in later index runs.
-
-Partition artifact:
-
-- [`batches/agentskills-created-2026-01-page-10.json`](batches/agentskills-created-2026-01-page-10.json)
-
-### January 2026 page 10 provisional classification
+### January provisional classification
 
 | Classification | Count |
 | --- | ---: |
-| `specification` | `0` |
-| `skill_collection` | `19` |
-| `single_skill_or_domain_package` | `0` |
-| `awesome_index` | `0` |
-| `skill_tooling` | `1` |
-| `adjacent_search_hit` | `0` |
-| `unclear_search_hit` | `0` |
+| `specification` | `2` |
+| `skill_collection` | `275` |
+| `single_skill_or_domain_package` | `32` |
+| `awesome_index` | `11` |
+| `skill_tooling` | `21` |
+| `adjacent_search_hit` | `12` |
+| `unclear_search_hit` | `15` |
+| **Total** | **`368`** |
 
-The `skill_tooling` candidate is `Flash-Brew-Digital/validate-skill`. Classification is based only on repository identity and GitHub search context and is not added to canonical totals.
+Classification remains provisional and is based only on repository identity, GitHub search context, and search-returned size metadata where applicable. It is not merged into canonical classification totals yet.
 
-## Staging artifacts
+### January artifacts
 
-- [`batches/agentskills-page-1.json`](batches/agentskills-page-1.json)
-- [`batches/agentskills-pages-2-3.json`](batches/agentskills-pages-2-3.json)
-- [`batches/agentskills-pages-4-6.json`](batches/agentskills-pages-4-6.json)
-- [`batches/agentskills-pages-7-10.json`](batches/agentskills-pages-7-10.json)
-- [`batches/agentskills-pages-11-16.json`](batches/agentskills-pages-11-16.json)
-- [`batches/agentskills-pages-17-20.json`](batches/agentskills-pages-17-20.json)
-- [`batches/agentskills-page-21.json`](batches/agentskills-page-21.json)
-- [`batches/agentskills-pages-22-31.json`](batches/agentskills-pages-22-31.json)
-- [`batches/agentskills-pages-32-41.json`](batches/agentskills-pages-32-41.json)
-- [`batches/agentskills-pages-42-50.json`](batches/agentskills-pages-42-50.json)
+- [`batches/agentskills-created-2026-01-pages-1-9.json`](batches/agentskills-created-2026-01-pages-1-9.json) — batch commit `07dcd90a08fb9fb988e8631b971a6d94e4c031b0`
 - [`batches/agentskills-created-2026-01-page-10.json`](batches/agentskills-created-2026-01-page-10.json)
+- [`batches/agentskills-created-2026-01-pages-11-13.json`](batches/agentskills-created-2026-01-pages-11-13.json)
+- [`batches/agentskills-created-2026-01-pages-14-16.json`](batches/agentskills-created-2026-01-pages-14-16.json)
+- [`batches/agentskills-created-2026-01-pages-17-19.json`](batches/agentskills-created-2026-01-pages-17-19.json)
+- [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json) — January-completion manifest commit `0242d579844f6a46d7008dfabb60c61fa1b6e4ff`
 
 ## Canonical classification totals
+
+These remain unchanged until deterministic historical reconciliation completes.
 
 | Classification | Count |
 | --- | ---: |
@@ -146,18 +91,8 @@ The `skill_tooling` candidate is `Flash-Brew-Digital/validate-skill`. Classifica
 
 ## Evidence boundary
 
-This remains an index-only catalog. GitHub repository search verified repository identities and accessibility. Classification is provisional from repository identity and search context only. No repository README, `SKILL.md`, scripts, references, eval contents, stars, quality, or implementation behavior was assessed.
+This phase is index-only. No target repository README, `SKILL.md`, scripts, references, eval contents, stars, implementation code, or runtime behavior was inspected. Repository completion for deep-analysis purposes is not asserted from these records.
 
-## Validation
+## Next index action
 
-- Current canonical state: `2502 unique / 2088 eligible / 414 held`.
-- Unpartitioned `agentskills` raw staging: `1000` identities across pages `1-50`.
-- Newly persisted partition records in this run: `20`.
-- Internal duplicates in the new partition batch: `0`.
-- Persisted-index exact search matches for the 20 new partition records: `0 observed`; historical reconciliation remains pending.
-- Partition batch commit: `8a306c5baeacdb3f68595c583cd6aaf513e819f5`.
-- Manifest update commit: `640cb452f6612d17aec1cebe6cbc092409b4af31`.
-- January partition page `11` probe: `20` repositories; not persisted.
-- January partition pages `25` and `50` probes: `0` repositories.
-- `2088 + 414 = 2502`.
-- No README, `SKILL.md`, scripts, references, eval contents, stars, or implementation contents were read during this index-only run.
+Begin the next deterministic `created:` partition while separately reconciling partition identities against the unpartitioned staging set and the historical canonical ledger. Canonical `2502 / 2088 / 414` remains unchanged until that reconciliation produces verified deltas.
