@@ -81,12 +81,12 @@ Run report: [`runs/2026-08-07-agentskills-february-reconciliation-2026-02-22-thr
 
 March indexing continues with exact single-day `created:` shards rather than unstable best-match whole-month pagination.
 
-Verified coverage in the current run:
+Verified persisted coverage:
 
 ```text
-2026-03-01 .. 2026-03-10
+2026-03-01 .. 2026-03-14
 per_page=100
-page 1 + explicit page 2 terminal probe for every day
+single-day shards with terminal pagination probes
 ```
 
 | Date | Page 1 | Page 2 |
@@ -101,28 +101,47 @@ page 1 + explicit page 2 terminal probe for every day
 | 2026-03-08 | 13 | 0 |
 | 2026-03-09 | 22 | 0 |
 | 2026-03-10 | 16 | 0 |
-| **Total** | **162** | **0** |
+| 2026-03-11 | 20 | 0 |
+| 2026-03-12 | 29 | 0 |
+| 2026-03-13 | 18 | 0 |
+| 2026-03-14 | 45 | 0 |
+| **Persisted total** | **274** | **0** |
 
-The 162 records are `162 / 162` distinct under case-insensitive `owner/repository` deduplication. No March identity is promoted into canonical totals in this phase.
+The persisted `2026-03-01..2026-03-14` shards contain `274 / 274` staged identities. Exact creation-date shards are disjoint by repository creation date, and the current `2026-03-11..2026-03-14` batch contains `112 / 112` case-insensitive unique identities.
 
-### March provisional classification through 2026-03-10
+### March provisional classification through 2026-03-14
 
 | Classification | Count |
 | --- | ---: |
 | `specification` | 0 |
-| `skill_collection` | 116 |
-| `single_skill_or_domain_package` | 16 |
-| `awesome_index` | 2 |
-| `skill_tooling` | 11 |
-| `adjacent_search_hit` | 14 |
+| `skill_collection` | 202 |
+| `single_skill_or_domain_package` | 28 |
+| `awesome_index` | 3 |
+| `skill_tooling` | 16 |
+| `adjacent_search_hit` | 22 |
 | `unclear_search_hit` | 3 |
-| **Total** | **162** |
+| **Total** | **274** |
 
 Classification is index-stage only and uses repository identity/name metadata. It is not a deep-content determination.
 
-Artifact: [`batches/agentskills-created-2026-03-01-through-10-deterministic.json`](batches/agentskills-created-2026-03-01-through-10-deterministic.json).
+Artifacts:
 
-Run report: [`runs/2026-08-07-agentskills-march-2026-03-01-through-10.md`](runs/2026-08-07-agentskills-march-2026-03-01-through-10.md).
+- [`batches/agentskills-created-2026-03-01-through-10-deterministic.json`](batches/agentskills-created-2026-03-01-through-10-deterministic.json)
+- [`batches/agentskills-created-2026-03-11-through-14-deterministic.json`](batches/agentskills-created-2026-03-11-through-14-deterministic.json)
+
+Current run report: [`runs/2026-08-07-agentskills-march-2026-03-11-through-14.md`](runs/2026-08-07-agentskills-march-2026-03-11-through-14.md).
+
+### 2026-03-15 high-volume probe
+
+The next exact-day shard was probed but not merged into authoritative staging in this run:
+
+| Page | Results |
+| --- | ---: |
+| 1 | 100 |
+| 2 | 13 |
+| 3 | 0 |
+
+Because this shard spans multiple result pages, it is deferred for a controlled multi-page persistence pass rather than mixing it into the same artifact as four terminal-on-page-1 shards. No `2026-03-15` repository is counted in the `274` persisted March identities above.
 
 ## Evidence boundary
 
@@ -130,4 +149,4 @@ This phase is index-only. No target repository README, `SKILL.md`, scripts, refe
 
 ## Next index action
 
-Continue the deterministic March partition with the `2026-03-11` exact single-day shard. Keep canonical totals frozen until created-date partition unions are reconciled against unpartitioned staging and the complete historical canonical ledger.
+Persist the `2026-03-15` high-volume shard from one controlled multi-page snapshot, then continue deterministic March daily shards. Keep canonical totals frozen until created-date partition unions are reconciled against unpartitioned staging and the complete historical canonical ledger.
