@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-08-batch-026",
+  "observed_at": "2026-08-08",
+  "phase": "deep_analysis",
+  "status": "structure-reviewed",
+  "runtime_validation": "not_executed",
+  "queue_sources": [
+    "sources/catalog/batches/agentskills-created-2026-03-28-deterministic.json",
+    "sources/catalog/batches/agentskills-created-2026-03-27-deterministic.json"
+  ],
+  "repositories_reviewed_this_batch": 10,
+  "repository_scoped_skill_reports_this_batch": 4,
+  "direct_skill_body_reviews_this_batch": 4,
+  "repositories_structure_reviewed_total": 260,
+  "repository_scoped_skill_reports_total": 2750,
+  "canonical_eligible_basis": 2088,
+  "remaining_estimate": 1828,
+  "remaining_estimate_note": "Arithmetic continuation from the existing deep-analysis basis. Index-stage March shards still require catalog reconciliation, so dedupe/reclassification corrections from this batch should be applied to the canonical catalog before treating the estimate as a final unique-repository count.",
+  "repositories": [
+    {
+      "identity": "sampath1310/AgentSkills",
+      "repository_id": 1194503996,
+      "stars_observed": 0,
+      "classification": "single_prompt_not_agent_skill_package",
+      "skill_reports": 0,
+      "result": "content_rejected_held"
+    },
+    {
+      "identity": "ctvida/agentskills",
+      "repository_id": 1194741834,
+      "stars_observed": 0,
+      "classification": "skill_collection_workflow_and_design",
+      "skill_reports": 3,
+      "result": "structure_reviewed"
+    },
+    {
+      "identity": "wujixialan/agentskills",
+      "repository_id": 1194302478,
+      "stars_observed": 0,
+      "classification": "official_agent_skills_spec_snapshot",
+      "skill_reports": 0,
+      "result": "reference_dedupe"
+    },
+    {
+      "identity": "ILyes-SS/agentskills",
+      "repository_id": 1194703771,
+      "stars_observed": 0,
+      "classification": "official_agent_skills_spec_snapshot",
+      "skill_reports": 0,
+      "result": "reference_dedupe"
+    },
+    {
+      "identity": "Jahid11978/agentskills",
+      "repository_id": 1194380358,
+      "stars_observed": 1,
+      "classification": "official_agent_skills_spec_mirror_snapshot",
+      "skill_reports": 0,
+      "result": "reference_dedupe"
+    },
+    {
+      "identity": "zurbrick/ooda-skill",
+      "repository_id": 1194834757,
+      "stars_observed": 0,
+      "classification": "single_skill_decision_methodology",
+      "skill_reports": 1,
+      "result": "structure_reviewed"
+    },
+    {
+      "identity": "nijaru/agentskills",
+      "repository_id": 1193497345,
+      "stars_observed": 1,
+      "classification": "agent_skills_go_reference_tooling",
+      "skill_reports": 0,
+      "result": "tooling_reference"
+    },
+    {
+      "identity": "dev-juha/agentskills",
+      "repository_id": 1193730251,
+      "stars_observed": 0,
+      "classification": "official_agent_skills_spec_snapshot",
+      "skill_reports": 0,
+      "result": "reference_dedupe"
+    },
+    {
+      "identity": "luizotavioautomacao/agentskills",
+      "repository_id": 1194009493,
+      "stars_observed": 0,
+      "classification": "official_agent_skills_spec_snapshot",
+      "skill_reports": 0,
+      "result": "reference_dedupe"
+    },
+    {
+      "identity": "netover/agentskills",
+      "repository_id": 1193622038,
+      "stars_observed": 0,
+      "classification": "official_agent_skills_spec_snapshot",
+      "skill_reports": 0,
+      "result": "reference_dedupe"
+    }
+  ],
+  "verification": {
+    "metadata_only_completion_forbidden": true,
+    "identity_verified": true,
+    "exact_stars_verified": true,
+    "actual_content_read": true,
+    "skill_definitions_read_when_present": true,
+    "scripts_references_evals_inspected_when_material": true,
+    "third_party_runtime_executed": false,
+    "note": "Six indexed candidates were exact official Agent Skills specification snapshots/mirrors identified by shared official commit SHAs; one candidate was a non-skill prompt repository and one was Go SDK/reference tooling. They were content-reviewed but did not generate duplicate/synthetic skill reports."
+  }
+}
