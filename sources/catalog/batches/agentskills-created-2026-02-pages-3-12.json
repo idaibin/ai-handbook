@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.1",
+  "observed_at": "2026-08-07",
+  "scope": "github_agent_skills_repository_index",
+  "phase": "index_only",
+  "query": "agentskills in:name,description created:2026-02-01..2026-02-28",
+  "pages": [3,4,5,6,7,8,9,10,11,12],
+  "per_page": 20,
+  "repository_order": "GitHub search result order; first 20 entries are page 3, next 20 page 4, through page 12",
+  "raw_hits": 200,
+  "deduplication_key": "case_insensitive owner/repository",
+  "internal_duplicates_removed": 0,
+  "unique_within_batch": 200,
+  "overlap_with_february_pages_1_2": 0,
+  "unique_within_february_pages_1_12": 240,
+  "canonical_delta": null,
+  "historical_reconciliation": "pending",
+  "classification_basis": "repository identity plus search-returned repository metadata only; no target repository content was read",
+  "default_classification": "skill_collection",
+  "classification_overrides": {
+    "flexigpt/agentskills-go": "skill_tooling",
+    "mrsimpson/agentskills-mcp": "skill_tooling",
+    "PederHP/skillsdotnet": "skill_tooling",
+    "scottfalconer/drupal-intent-testing": "adjacent_search_hit",
+    "scottfalconer/drupal-issue-queue": "adjacent_search_hit",
+    "TangBaron/LangChain_Agent_Skill": "single_skill_or_domain_package"
+  },
+  "classification_counts": {
+    "specification": 0,
+    "skill_collection": 194,
+    "single_skill_or_domain_package": 1,
+    "awesome_index": 0,
+    "skill_tooling": 3,
+    "adjacent_search_hit": 2,
+    "unclear_search_hit": 0
+  },
+  "repositories": [
+    "guoguolord/AgentSkills","LikeCodeMain/AgentSkills","Subharmonic-cloud/AgentSkills","heirloomlogic/AgentSkills","yogitas/AgentSkills","devtint/AgentSkills","WayneChou-bot/AgentSkills","rrbear117/AgentSkills","QilinAI626/AgentSkills","pisces-pi/AgentSkills","resilens/agentskills","cagriemiracikkapi-projects/AgentSkills","flexigpt/agentskills-go","mrsimpson/agentskills-mcp","PederHP/skillsdotnet","scottfalconer/drupal-intent-testing","scottfalconer/drupal-issue-queue","m3tazai9labz-ux/agentskills","hesamrahimpour1994-create/agentskills","jonathanhefner/agentskills",
+    "ITsolution-git/agentskills","quareth/agentskills","WangAoHui/agentskills","sechan9999/AgentSkills","TangBaron/LangChain_Agent_Skill","hrmkmdtv/agentskills","babadudu/agentskills","Sherlock999xxx/agentskills","southpawriter02/agentskills","SUNPENG916/agentskills","jaden680/agentskills","xuzhr/agentskills","Tommy2Face/agentskills","proptech007/agentskills","tilepin-cloud/agentskills","sebecode-claw/agentskills","EMDL-bot/agentskills","renesansz/agentskills","shaoguangehen/agentskills","MoonMamaAU/agentskills",
+    "luiz158/agentskills","melbazpeach-source/agentskills","fblissjr/agentskills","step2part/agentskills","youssefmgerges/agentskills","lslab/agentskills","kevinchang1001/agentskills","Backgetters/agentskills","Ammonknows/agentskills","PranayHaldiya/agentskills","chosen67one-source/agentskills","lawrencekm/agentskills","EvaRoksBot/agentskills","jakob-haywood/agentskills","joe-ieta/agentskills","Itsskell/agentskills","Valley-15/agentskills","nag12317/agentskills","Itsokay-co/agentskills","codebyfredrik/agentskills",
+    "esmaysadnan-noob/agentskills","NocturnalGlory/agentskills","kinfey/agentskills","jasonchengf/agentskills","PaddyJay-afk/agentskills","haylenfoust-svg/agentskills","hlyther583-code/agentskills","neuroradiology/agentskills","mbrukman/agentskills","joserprieto/agentskills","Joseyosei/agentskills","woshidashuaigeaaa/agentskills","samueldreadfulwater3-hash/agentskills","chaozhouzhang/agentskills","imclab/agentskills","Kaairofelipe/agentskills","ClementWalter/agentskills","lqkklz/agentskills","webboty/agentskills","dhqcl/agentskills",
+    "rfikki/agentskills","YKamemura/agentskills","ddbnew/agentskills","jxshi/agentskills","javartisan/agentskills","gstarnet/agentskills","ginjaninja78/agentskills","nnennandukwe/agentskills","davidearney/agentskills","terrylica/agentskills","mmesomakelvin/agentskills","spy-skills/agentskills","shopend/agentskills","preigile/agentskills","Followgleader/agentskills","Samspaghetti/agentskills","nowordsformylove/agentskills","groupthinking/agentskills","mz0in/agentskills","okwinds/agentskills",
+    "bf56rrxbrs-crypto/agentskills","abdulrahman-gaith-beep/agentskills","Mohit5Upadhyay/agentskills","NateTheGreat714/agentskills","pandafields/agentskills","akashtalole/agentskills","slbinilkumar/agentskills","kosyik/agentskills","omar-knaina/agentskills","martalberto74/agentskills","DavMorr/agentskills","navinpai/agentskills","ReZorg/agentskills","Robhawk12/agentskills","meefs/agentskills","casualuser/agentskills","bobdavis84/agentskills","j1mehta/agentskills","Alot1z/agentskills","woshare/agentskills",
+    "thiruselvaa/agentskills","hridoythebest/agentskills","sfc-gh-uunnikrishnan/agentskills","fritz-astronomer/agentskills","liangxiaojian0210/agentskills","772510387wd-create/agentskills","pushpak1300/agentskills","AetharaAI/agentskills","ahsimonus/agentskills","bpd1069/agentskills","webdominateorbit/agentskills","rainmanwang/agentskills","BhavinM/agentskills","tdoyle8696phunky42/agentskills","jgarciadevelopers/agentskills","yelei1987/agentskills","ezekielhpro/agentskills","ElasticProvisioner/agentskills","ArtemFilin1990/agentskills","david-w-millar/agentskills",
+    "nikhil-bora/agentskills","simonking200/agentskills","winnyschuster/agentskills","nzsdyun/agentskills","wellitongervickas/agentskills","gitabssi/agentskills","source-command/agentskills","kandreyrosales/agentskills","OpenAiIst/agentskills","gowthamkasi/agentskills","sam-fakhreddine/agentskills","homar33/agentskills","vmalyi/agentskills","pan5633/agentskills","JonDevOps/agentskills","RVR-111/agentskills","verylucky01/agentskills","psyb0t/agentskills","jeanthink/agentskills","sudoMktemp/agentskills",
+    "kustomzone/agentskills","iamcaglardogan/agentskills","dianamunozlar/agentskills","rolandkakonyi/agentskills","lordchildrey/agentskills","srinivasmd/agentskills","DeepLajpal/agentskills","ovidiu-eremia/agentskills","saltukalakus/agentskills","jackwbinny-design/agentskills","Csraf/agentskills","MacJoom/agentskills","TrillGates/agentskills","dean-harel-nekuda-ai/agentskills","tedchiu/agentskills","ekarthickeyan32-rgb/agentskills","guocf20/agentskills","BhautikChudasama/agentskills","zyztek/agentskills","xiaodouzi666/agentskills",
+    "Distillative-AI/agentskills","msantiago007/agentskills","GQAdonis/agentskills","LeeYoungJin/agentskills","redstrike/agentskills","kekewolf/agentskills","Atanycosts/AgentSkills","Superodmo/agentskills","bbwb/agentskills","odier7599/agentskills","sjeong722/agentskills","hanjunyi/agentskills","Ruzenie/RUI-agentskills","poerwantosantoso/agentskills","qiulimu1030/AgentSkills","mtbw/agentskills","Koji-Kanao/agentskills","unbeatendev/agentskills","bomyoungkim-gmail/agentskills","irfiacre/agentskills"
+  ],
+  "verification": {
+    "identity": "200 repository identities were retrieved from live GitHub repository search, pages 3-12 at 20 results per page.",
+    "deduplication": "All 200 current-run identities are distinct under case-insensitive owner/repository comparison.",
+    "merge": "Zero case-insensitive overlap with the previously persisted February pages 1-2 batch; pages 1-12 contain 240 distinct staged identities.",
+    "next_probe": "February page 13 returned 20 repositories and was not persisted in this run.",
+    "content": "not_started",
+    "note": "Index-only. README, SKILL.md, scripts, references, evals, stars, implementation code, and runtime behavior were not inspected."
+  }
+}
