@@ -43,7 +43,7 @@
     [16,"1122748488","cairijun/codecompanion-agentskills.nvim","master",99,false,"skill_tooling","unresolved_against_full_prior_catalog"],
     [17,"1115757148","zouyingcao/agentskills-mcp","main",323,false,"skill_tooling","unresolved_against_full_prior_catalog"],
     [18,"1279033669","Mininglamp-OSS/octo-skills","main",41,false,"skill_collection","unresolved_against_full_prior_catalog"],
-    [19,"1118556483","DougTrajano/pydantic-ai-skills","main",0,false,"single_skill_or_domain_package","unresolved_against_full_prior_catalog"],
+    [19,"1118556483","DougTrajano/pydantic-ai-skills","main",9970,false,"single_skill_or_domain_package","unresolved_against_full_prior_catalog"],
     [20,"1122012460","Piebald-AI/agentskills","main",160,false,"skill_collection","unresolved_against_full_prior_catalog"]
   ],
   "confirmed_duplicate_evidence": {
