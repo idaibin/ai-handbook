@@ -38,7 +38,7 @@ per_page=100
 31 exact single-day shards with explicit terminal pagination probes
 ```
 
-March staging through March 30 contained `762 / 762` identities. The `2026-03-31` shard contributed `69 / 69` additional case-insensitive unique identities with page counts `69, 0`. Exact `created:` day shards are disjoint by repository creation date, so final March staging is `831 / 831` identities with no intra-March duplicate asserted.
+Final March staging is `831 / 831` identities with no intra-March duplicate asserted.
 
 ### March final provisional classification
 
@@ -53,31 +53,40 @@ March staging through March 30 contained `762 / 762` identities. The `2026-03-31
 | `unclear_search_hit` | 6 |
 | **Total** | **831** |
 
-The March 31 contribution is `13 skill_collection`, `45 single_skill_or_domain_package`, `1 awesome_index`, `1 skill_tooling`, `8 adjacent_search_hit`, and `1 unclear_search_hit`. Classification is index-stage only and uses repository identity/name metadata; it is not a deep-content determination.
+Latest March artifact: [`batches/agentskills-created-2026-03-31-deterministic.json`](batches/agentskills-created-2026-03-31-deterministic.json).
 
-### March artifacts
+## April 2026 created-date partition — in progress
 
-- [`batches/agentskills-created-2026-03-01-through-10-deterministic.json`](batches/agentskills-created-2026-03-01-through-10-deterministic.json)
-- [`batches/agentskills-created-2026-03-11-through-14-deterministic.json`](batches/agentskills-created-2026-03-11-through-14-deterministic.json)
-- [`batches/agentskills-created-2026-03-15-controlled-multipage.json`](batches/agentskills-created-2026-03-15-controlled-multipage.json)
-- [`batches/agentskills-created-2026-03-16-deterministic.json`](batches/agentskills-created-2026-03-16-deterministic.json)
-- [`batches/agentskills-created-2026-03-17-deterministic.json`](batches/agentskills-created-2026-03-17-deterministic.json)
-- [`batches/agentskills-created-2026-03-18-deterministic.json`](batches/agentskills-created-2026-03-18-deterministic.json)
-- [`batches/agentskills-created-2026-03-19-deterministic.json`](batches/agentskills-created-2026-03-19-deterministic.json)
-- [`batches/agentskills-created-2026-03-20-deterministic.json`](batches/agentskills-created-2026-03-20-deterministic.json)
-- [`batches/agentskills-created-2026-03-21-deterministic.json`](batches/agentskills-created-2026-03-21-deterministic.json)
-- [`batches/agentskills-created-2026-03-22-deterministic.json`](batches/agentskills-created-2026-03-22-deterministic.json)
-- [`batches/agentskills-created-2026-03-23-deterministic.json`](batches/agentskills-created-2026-03-23-deterministic.json)
-- [`batches/agentskills-created-2026-03-24-deterministic.json`](batches/agentskills-created-2026-03-24-deterministic.json)
-- [`batches/agentskills-created-2026-03-25-deterministic.json`](batches/agentskills-created-2026-03-25-deterministic.json)
-- [`batches/agentskills-created-2026-03-26-deterministic.json`](batches/agentskills-created-2026-03-26-deterministic.json)
-- [`batches/agentskills-created-2026-03-27-deterministic.json`](batches/agentskills-created-2026-03-27-deterministic.json)
-- [`batches/agentskills-created-2026-03-28-deterministic.json`](batches/agentskills-created-2026-03-28-deterministic.json)
-- [`batches/agentskills-created-2026-03-29-deterministic.json`](batches/agentskills-created-2026-03-29-deterministic.json)
-- [`batches/agentskills-created-2026-03-30-deterministic.json`](batches/agentskills-created-2026-03-30-deterministic.json)
-- [`batches/agentskills-created-2026-03-31-deterministic.json`](batches/agentskills-created-2026-03-31-deterministic.json)
+Verified persisted coverage:
 
-Current run report: [`runs/2026-08-08-agentskills-march-2026-03-31.md`](runs/2026-08-08-agentskills-march-2026-03-31.md).
+```text
+2026-04-01 .. 2026-04-01
+per_page=100
+1 exact single-day shard with explicit terminal pagination probe
+```
+
+The `2026-04-01` shard returned `95` repositories on page 1 and `0` on page 2. A second pagination check using `per_page=20` returned `20,20,20,20,15,0`, confirming the same 95-record result set. Case-insensitive `owner/repository` deduplication produced `95` unique identities and `0` internal duplicates.
+
+### April staging provisional classification
+
+| Classification | Count |
+| --- | ---: |
+| `specification` | 0 |
+| `skill_collection` | 19 |
+| `single_skill_or_domain_package` | 73 |
+| `awesome_index` | 0 |
+| `skill_tooling` | 0 |
+| `adjacent_search_hit` | 3 |
+| `unclear_search_hit` | 0 |
+| **Total** | **95** |
+
+Classification is index-stage only and uses repository identity/name metadata. Ambiguous metadata-only hits remain adjacent rather than being promoted by assumption.
+
+### April artifacts
+
+- [`batches/agentskills-created-2026-04-01-deterministic.json`](batches/agentskills-created-2026-04-01-deterministic.json)
+
+Current run report: [`runs/2026-08-08-agentskills-april-2026-04-01.md`](runs/2026-08-08-agentskills-april-2026-04-01.md).
 
 ## Evidence boundary
 
@@ -85,4 +94,4 @@ This phase is index-only. No target repository README, `SKILL.md`, scripts, refe
 
 ## Next index action
 
-Begin the deterministic April partition with the `2026-04-01` exact single-day shard. Keep canonical totals frozen until created-date partition unions are reconciled against unpartitioned staging and the complete historical canonical ledger.
+Continue the deterministic April partition with the `2026-04-02` exact single-day shard. Keep canonical totals frozen until created-date partition unions are reconciled against unpartitioned staging and the complete historical canonical ledger.
