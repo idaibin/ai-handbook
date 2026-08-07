@@ -62,7 +62,7 @@
         "confirmed_duplicate_identities": ["irfiacre/agentskills"],
         "terminal_probe": "page 22 returned 0 repositories",
         "partition_complete": false,
-        "partition_completeness_note": "One cross-run duplicate at the prior page-12/page-13 boundary proves GitHub best-match pagination order drifted between runs. Deterministic day-level reconciliation is complete for 2026-02-01 through 2026-02-11; remaining dates are pending.",
+        "partition_completeness_note": "One cross-run duplicate at the prior page-12/page-13 boundary proves GitHub best-match pagination order drifted between runs. Deterministic day-level reconciliation is complete for 2026-02-01 through 2026-02-15; remaining dates are pending.",
         "classification_counts_deduplicated": {
           "specification": 0,
           "skill_collection": 313,
@@ -77,7 +77,8 @@
           "sources/catalog/batches/agentskills-created-2026-02-pages-3-12.json",
           "sources/catalog/batches/agentskills-created-2026-02-pages-13-21.json",
           "sources/catalog/batches/agentskills-created-2026-02-01-reconciliation.json",
-          "sources/catalog/batches/agentskills-created-2026-02-02-through-11-reconciliation.json"
+          "sources/catalog/batches/agentskills-created-2026-02-02-through-11-reconciliation.json",
+          "sources/catalog/batches/agentskills-created-2026-02-12-through-15-reconciliation.json"
         ],
         "historical_reconciliation": "pending",
         "canonical_delta": null
@@ -87,11 +88,11 @@
   "deterministic_reconciliation": {
     "partition": "2026-02",
     "strategy": "single created-date shards with per_page=100 and an explicit next-page terminal probe",
-    "completed_date_range": "2026-02-01..2026-02-11",
-    "completed_shard_count": 11,
-    "verified_records_across_completed_shards": 153,
-    "verified_unique_across_completed_shards": 153,
-    "matches_to_prior_february_staging": 153,
+    "completed_date_range": "2026-02-01..2026-02-15",
+    "completed_shard_count": 15,
+    "verified_records_across_completed_shards": 203,
+    "verified_unique_across_completed_shards": 203,
+    "matches_to_prior_february_staging": 203,
     "missing_from_prior_february_staging": 0,
     "new_unique_after_merge": 0,
     "completed_shards": [
@@ -125,32 +126,52 @@
           "unclear_search_hit": 2
         },
         "artifact": "sources/catalog/batches/agentskills-created-2026-02-02-through-11-reconciliation.json"
+      },
+      {
+        "date_range": "2026-02-12..2026-02-15",
+        "shard_count": 4,
+        "raw_candidate_records": 50,
+        "unique_within_reconciliation_batch": 50,
+        "prior_february_staging_matches": 50,
+        "missing_from_prior_february_staging": 0,
+        "new_unique_after_merge": 0,
+        "page_2_terminal_probes": "4 of 4 returned 0 repositories",
+        "classification_counts": {
+          "specification": 0,
+          "skill_collection": 43,
+          "single_skill_or_domain_package": 0,
+          "awesome_index": 0,
+          "skill_tooling": 4,
+          "adjacent_search_hit": 3,
+          "unclear_search_hit": 0
+        },
+        "artifact": "sources/catalog/batches/agentskills-created-2026-02-12-through-15-reconciliation.json"
       }
     ],
-    "next_shard": "2026-02-12",
+    "next_shard": "2026-02-16",
     "february_reconciliation_complete": false
   },
   "current_run": {
-    "queries": "ten exact single-day agentskills created-date shards, 2026-02-02 through 2026-02-11",
+    "queries": "four exact single-day agentskills created-date shards, 2026-02-12 through 2026-02-15",
     "per_page": 100,
-    "page_1_total_hits": 144,
-    "page_2_probes": 10,
+    "page_1_total_hits": 50,
+    "page_2_probes": 4,
     "page_2_total_hits": 0,
-    "raw_hits_persisted": 144,
+    "raw_hits_persisted": 50,
     "internal_duplicates": 0,
-    "unique_within_run": 144,
-    "overlap_with_previous_february_staging": 144,
+    "unique_within_run": 50,
+    "overlap_with_previous_february_staging": 50,
     "missing_from_previous_february_staging": 0,
     "new_unique_after_merge": 0,
-    "deterministic_shards_complete": 10,
+    "deterministic_shards_complete": 4,
     "february_partition_complete": false,
     "canonical_delta": null,
     "historical_reconciliation": "pending"
   },
   "verification": {
-    "repository_identity": "144 repository identities were retrieved from live GitHub repository search for exact 2026-02-02 through 2026-02-11 single-day created-date shards; every page-2 probe returned 0.",
-    "deduplication": "All 144 current-run identities are distinct under case-insensitive owner/repository comparison. Creation-date shards are mutually exclusive.",
-    "merge": "All 144 identities were matched against the previously persisted February staging artifacts; zero were missing. Together with the already verified 2026-02-01 shard, deterministic coverage is verified through 2026-02-11 for 153 identities, all already present in staging.",
+    "repository_identity": "50 repository identities were retrieved from live GitHub repository search for exact 2026-02-12 through 2026-02-15 single-day created-date shards; every page-2 probe returned 0.",
+    "deduplication": "All 50 current-run identities are distinct within their daily shards under case-insensitive owner/repository comparison. Creation-date shards are mutually exclusive.",
+    "merge": "All 50 identities were matched against the previously persisted February staging artifacts; zero were missing. Together with the already verified 2026-02-01 through 2026-02-11 shards, deterministic coverage is verified through 2026-02-15 for 203 identities, all already present in staging.",
     "classification": "Existing provisional February classifications were preserved for exact identity matches; classification remains index-only and is not added to canonical totals.",
     "content": "not_started",
     "note": "Index-only. No target repository README, SKILL.md, scripts, references, eval contents, stars, quality, implementation content, or runtime behavior was read."
@@ -159,7 +180,7 @@
     "unpartitioned_agentskills": "pages 1-50 persisted; page 51 hit GitHub's first-1000-results ceiling",
     "january_2026_partition": "complete: pages 1-19 persisted, 368/368 unique within partition; page 20 returned 0",
     "february_2026_partition": "pages 1-21 persisted as a deduplicated 401-identity union; page 22 returned 0, but gap-free completeness is not asserted because cross-run pagination drift was observed",
-    "february_deterministic_reconciliation": "2026-02-01 through 2026-02-11 complete: 153 unique identities observed across exact daily shards, all 153 matched prior February staging, zero missing and zero new",
-    "next_index_action": "continue deterministic February reconciliation with the 2026-02-12 created-date shard; after all February dates are reconciled, compare the verified union against unpartitioned staging and the historical canonical ledger"
+    "february_deterministic_reconciliation": "2026-02-01 through 2026-02-15 complete: 203 unique identities observed across exact daily shards, all 203 matched prior February staging, zero missing and zero new",
+    "next_index_action": "continue deterministic February reconciliation with the 2026-02-16 created-date shard; after all February dates are reconciled, compare the verified union against unpartitioned staging and the historical canonical ledger"
   }
 }
