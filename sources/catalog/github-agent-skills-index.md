@@ -2,19 +2,19 @@
 
 ## Current verified catalog
 
-- Raw GitHub search hits: `2389`
+- Raw GitHub search hits: `2409`
 - Existing discovery-inbox candidates merged and re-verified: `4`
-- Raw identities across all inputs: `2393`
-- Unique repositories after case-insensitive `owner/repository` deduplication: `2261`
+- Raw identities across all inputs: `2413`
+- Unique repositories after case-insensitive `owner/repository` deduplication: `2281`
 - Exact duplicates removed across current inputs: `132`
 - New unique repositories collected in this run: `20`
 - Net catalog delta versus the previous verified manifest: `+20`
-- Provisionally eligible for later deep analysis: `1847`
+- Provisionally eligible for later deep analysis: `1867`
 - Held as adjacent or unclear search hits: `414`
 
 Composed machine-readable authority: [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json).
 
-The current manifest composes the previous verified `2241`-repository canonical manifest with page `28` of the `agent skills registry` discovery query.
+The current manifest composes the previous verified `2261`-repository canonical manifest with page `29` of the `agent skills registry` discovery query.
 
 ## Completed search coverage
 
@@ -47,7 +47,7 @@ The current manifest composes the previous verified `2241`-repository canonical 
 
 ## In-progress search coverage
 
-- `"agent skills registry" in:name,description`, pages `1-28` processed at `20` results per page; page `29` was probed and returned `20` repositories, so the next merge boundary is page `29`.
+- `"agent skills registry" in:name,description`, pages `1-29` processed at `20` results per page; page `30` was probed and returned `20` repositories, so the next merge boundary is page `30`.
 
 ## This run
 
@@ -57,20 +57,20 @@ Query:
 "agent skills registry" in:name,description
 ```
 
-Processed page `28` at `per_page=20`.
+Processed page `29` at `per_page=20`.
 
 - Raw repository identities: `20`
 - Internal batch duplicates: `0`
 - Confirmed duplicates in directly inspected prior sets: `0`
 - Added as new repositories: `20`
-- Previous verified catalog: `2241`
-- Updated composed catalog: `2261`
+- Previous verified catalog: `2261`
+- Updated composed catalog: `2281`
 - Added to provisional deep-analysis queue: `20`
 - Added to held-for-review: `0`
 
-Page-28 identities were directly compared against persisted adjacent `agent-skills-registry` pages `22-27` and the full persisted `skill-hub` pages `1-10`, `agent-skills-hub` pages `1-2`, and `skill-registry` pages `1-10` high-overlap artifacts. No exact case-insensitive `owner/repository` duplicate was found in those directly inspected sets. Earlier catalog coverage is inherited through the verified `2241`-repository canonical manifest. AI-handbook code-search emptiness was not used as uniqueness evidence.
+Page-29 identities were directly compared against persisted adjacent `agent-skills-registry` pages `25-28` and the full persisted `skill-hub` pages `1-10`, `agent-skills-hub` pages `1-2`, and `skill-registry` pages `1-10` high-overlap artifacts. No exact case-insensitive `owner/repository` duplicate was found in those directly inspected sets. Earlier catalog coverage is inherited through the verified `2261`-repository canonical manifest. AI-handbook code-search emptiness was not used as uniqueness evidence.
 
-All 20 raw page-28 results were provisionally classified from repository identity and GitHub search context as `skill_tooling`; all 20 were added to the provisional deep-analysis queue. Repository IDs, default branches, sizes, archived flags, result ordering, classifications, eligibility, duplicate status, and verification notes are stored in [`batches/agent-skills-registry-page-28.json`](batches/agent-skills-registry-page-28.json).
+All 20 raw page-29 results were provisionally classified from repository identity and GitHub search context as `skill_tooling`; all 20 were added to the provisional deep-analysis queue. Repository IDs, default branches, sizes, archived flags, result ordering, classifications, eligibility, duplicate status, and verification notes are stored in [`batches/agent-skills-registry-page-29.json`](batches/agent-skills-registry-page-29.json).
 
 ## Classification totals
 
@@ -80,7 +80,7 @@ All 20 raw page-28 results were provisionally classified from repository identit
 | `skill_collection` | 611 | Identity indicates a collection or examples of Skills. |
 | `single_skill_or_domain_package` | 104 | Identity indicates one Skill or a domain-focused package. |
 | `awesome_index` | 38 | Identity indicates a curated Skill index. |
-| `skill_tooling` | 931 | Identity indicates validation, linting, evaluation, testing, packaging, discovery, registry, marketplace, management, benchmark, SDK, template, fixture, or runtime tooling. |
+| `skill_tooling` | 951 | Identity indicates validation, linting, evaluation, testing, packaging, discovery, registry, marketplace, management, benchmark, SDK, template, fixture, or runtime tooling. |
 | `adjacent_search_hit` | 152 | Related to agents or Skills, but not clearly a Skill repository from identity alone. |
 | `unclear_search_hit` | 262 | Identity is insufficient for reliable classification. |
 
@@ -90,12 +90,12 @@ This remains an index-only catalog. GitHub repository search verified repository
 
 ## Validation
 
-- Previous canonical manifest commit: `e01262b24aaf1e89e201e9f4ea65c48ea2b1c9b0` (`2241` repositories).
-- `agent skills registry` page-28 batch commit: `54bf5c35f709d8d49e5177da367f526c06c511b6`.
-- Composed latest-manifest commit: `de7fab65e4e5d5e0d895320bec5588d72bec9499`.
-- `2241 + 20 = 2261` current unique repositories.
-- `2393 - 132 = 2261` raw-to-unique reconciliation.
-- Classification totals resolve to `2261`.
-- `1847 + 414 = 2261`, matching the eligible and held partitions.
-- Next index boundary: `"agent skills registry" in:name,description`, page `29`, `per_page=20`.
+- Previous canonical manifest commit: `de7fab65e4e5d5e0d895320bec5588d72bec9499` (`2261` repositories).
+- `agent skills registry` page-29 batch commit: `c37c31ac80182be3a60b3d1dba9c4450a1950194`.
+- Composed latest-manifest commit: `53ffb1039b35dfce91c82c57ced5fdea0eb27e43`.
+- `2261 + 20 = 2281` current unique repositories.
+- `2413 - 132 = 2281` raw-to-unique reconciliation.
+- Classification totals resolve to `2281`.
+- `1867 + 414 = 2281`, matching the eligible and held partitions.
+- Next index boundary: `"agent skills registry" in:name,description`, page `30`, `per_page=20`.
 - No README, `SKILL.md`, scripts, references, eval contents, stars, or implementation contents were read during this index-only run.
