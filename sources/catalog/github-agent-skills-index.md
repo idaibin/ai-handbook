@@ -38,9 +38,7 @@ Query:
 agentskills in:name,description created:2026-01-01..2026-01-31
 ```
 
-This run backfilled pages `1-9`, each with `20` live GitHub repository-search results. The `180` identities are all distinct under case-insensitive `owner/repository` comparison. They were then merged with the already-persisted January pages `10-19` (`188` identities); the cross-set overlap count is `0`.
-
-The complete January partition is therefore:
+Pages `1-19` are persisted. The complete partition contains `368` raw identities and `368` unique identities under case-insensitive `owner/repository`; page `20` returned `0` repositories.
 
 | Metric | Value |
 | --- | ---: |
@@ -64,16 +62,52 @@ The complete January partition is therefore:
 | `unclear_search_hit` | `15` |
 | **Total** | **`368`** |
 
-Classification remains provisional and is based only on repository identity, GitHub search context, and search-returned size metadata where applicable. It is not merged into canonical classification totals yet.
-
 ### January artifacts
 
-- [`batches/agentskills-created-2026-01-pages-1-9.json`](batches/agentskills-created-2026-01-pages-1-9.json) — batch commit `07dcd90a08fb9fb988e8631b971a6d94e4c031b0`
+- [`batches/agentskills-created-2026-01-pages-1-9.json`](batches/agentskills-created-2026-01-pages-1-9.json)
 - [`batches/agentskills-created-2026-01-page-10.json`](batches/agentskills-created-2026-01-page-10.json)
 - [`batches/agentskills-created-2026-01-pages-11-13.json`](batches/agentskills-created-2026-01-pages-11-13.json)
 - [`batches/agentskills-created-2026-01-pages-14-16.json`](batches/agentskills-created-2026-01-pages-14-16.json)
 - [`batches/agentskills-created-2026-01-pages-17-19.json`](batches/agentskills-created-2026-01-pages-17-19.json)
-- [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json) — January-completion manifest commit `0242d579844f6a46d7008dfabb60c61fa1b6e4ff`
+
+## February 2026 created-date partition — in progress
+
+Query:
+
+```text
+agentskills in:name,description created:2026-02-01..2026-02-28
+```
+
+This run persisted pages `1-2`, each with `20` live GitHub repository-search results. The `40` identities are all distinct under case-insensitive `owner/repository` comparison. January and February are disjoint `created:` ranges, so a repository identity cannot legitimately belong to both partitions; reconciliation against the unpartitioned staging set and complete historical catalog is still pending.
+
+| Metric | Value |
+| --- | ---: |
+| Persisted pages | `1-2` |
+| Raw identities | `40` |
+| Unique identities within persisted pages | `40` |
+| Duplicates removed within persisted pages | `0` |
+| Partition complete | `no` |
+| Canonical additions asserted | `0` |
+
+### February provisional classification, pages 1-2
+
+| Classification | Count |
+| --- | ---: |
+| `specification` | `0` |
+| `skill_collection` | `30` |
+| `single_skill_or_domain_package` | `0` |
+| `awesome_index` | `0` |
+| `skill_tooling` | `5` |
+| `adjacent_search_hit` | `4` |
+| `unclear_search_hit` | `1` |
+| **Total** | **`40`** |
+
+Classification is provisional and uses repository identity plus search-returned repository metadata only. It is not merged into canonical classification totals.
+
+### February artifacts
+
+- [`batches/agentskills-created-2026-02-pages-1-2.json`](batches/agentskills-created-2026-02-pages-1-2.json) — batch commit `2f74722f0b8b0da9322c1da7ca3dde1c95389b52`
+- [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json) — manifest commit `91973c2823bfd07847f89a76c75def75ba573b0e`
 
 ## Canonical classification totals
 
@@ -95,4 +129,4 @@ This phase is index-only. No target repository README, `SKILL.md`, scripts, refe
 
 ## Next index action
 
-Begin the next deterministic `created:` partition while separately reconciling partition identities against the unpartitioned staging set and the historical canonical ledger. Canonical `2502 / 2088 / 414` remains unchanged until that reconciliation produces verified deltas.
+Continue the February 2026 `created:` partition from page `3`. Canonical `2502 / 2088 / 414` remains unchanged until partition identities are reconciled against unpartitioned staging and the complete historical ledger.
