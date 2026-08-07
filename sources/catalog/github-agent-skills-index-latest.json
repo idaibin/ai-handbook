@@ -58,21 +58,21 @@
   "in_progress_partition": {
     "partition": "2026-03",
     "query_template": "agentskills in:name,description created:<date>..<date>",
-    "verified_date_range": "2026-03-01..2026-03-17",
-    "verified_daily_shards": 17,
+    "verified_date_range": "2026-03-01..2026-03-18",
+    "verified_daily_shards": 18,
     "per_page": 100,
-    "persisted_terminal_probes": 17,
+    "persisted_terminal_probes": 18,
     "persisted_terminal_probe_hits": 0,
-    "raw_candidate_records": 477,
-    "staged_unique": 477,
+    "raw_candidate_records": 496,
+    "staged_unique": 496,
     "duplicates": 0,
     "classification_counts": {
       "specification": 0,
-      "skill_collection": 393,
-      "single_skill_or_domain_package": 32,
+      "skill_collection": 404,
+      "single_skill_or_domain_package": 36,
       "awesome_index": 3,
-      "skill_tooling": 20,
-      "adjacent_search_hit": 26,
+      "skill_tooling": 21,
+      "adjacent_search_hit": 29,
       "unclear_search_hit": 3
     },
     "artifacts": [
@@ -80,36 +80,37 @@
       "sources/catalog/batches/agentskills-created-2026-03-11-through-14-deterministic.json",
       "sources/catalog/batches/agentskills-created-2026-03-15-controlled-multipage.json",
       "sources/catalog/batches/agentskills-created-2026-03-16-deterministic.json",
-      "sources/catalog/batches/agentskills-created-2026-03-17-deterministic.json"
+      "sources/catalog/batches/agentskills-created-2026-03-17-deterministic.json",
+      "sources/catalog/batches/agentskills-created-2026-03-18-deterministic.json"
     ],
-    "next_shard": "2026-03-18"
+    "next_shard": "2026-03-19"
   },
   "current_run": {
-    "date_range": "2026-03-17..2026-03-17",
+    "date_range": "2026-03-18..2026-03-18",
     "daily_shards": 1,
-    "page_counts": [28, 0],
-    "raw_candidate_records": 28,
-    "unique": 28,
+    "page_counts": [19, 0],
+    "raw_candidate_records": 19,
+    "unique": 19,
     "internal_duplicates": 0,
     "canonical_delta_asserted": 0,
     "classification_counts": {
       "specification": 0,
-      "skill_collection": 24,
-      "single_skill_or_domain_package": 3,
+      "skill_collection": 11,
+      "single_skill_or_domain_package": 4,
       "awesome_index": 0,
-      "skill_tooling": 0,
-      "adjacent_search_hit": 1,
+      "skill_tooling": 1,
+      "adjacent_search_hit": 3,
       "unclear_search_hit": 0
     },
-    "artifact": "sources/catalog/batches/agentskills-created-2026-03-17-deterministic.json",
-    "run_report": "sources/catalog/runs/2026-08-07-agentskills-march-2026-03-17.md"
+    "artifact": "sources/catalog/batches/agentskills-created-2026-03-18-deterministic.json",
+    "run_report": "sources/catalog/runs/2026-08-07-agentskills-march-2026-03-18.md"
   },
   "verification": {
-    "pagination": "The 2026-03-17 exact single-day shard returned 28 repositories on page 1 with per_page=100; explicit page 2 returned 0.",
-    "deduplication": "All 28 current-run identities are distinct under case-insensitive owner/repository comparison. The cumulative March 2026-03-01..2026-03-17 exact created-date shards contain 477 staged identities; date shards are disjoint by repository creation date.",
+    "pagination": "The 2026-03-18 exact single-day shard returned 19 repositories on page 1 with per_page=100; explicit page 2 returned 0.",
+    "deduplication": "All 19 current-run identities are distinct under case-insensitive owner/repository comparison. The cumulative March 2026-03-01..2026-03-18 exact created-date shards contain 496 staged identities; date shards are disjoint by repository creation date.",
     "classification": "Provisional index classification uses repository identity/name metadata only; it is not a deep-content conclusion.",
     "content": "not_started",
     "note": "Index-only. No target repository README, SKILL.md, scripts, references, evals, stars, implementation code, or runtime behavior was inspected."
   },
-  "next_index_action": "continue the deterministic March partition with the 2026-03-18 exact single-day shard; keep canonical totals frozen until partition unions are reconciled against unpartitioned staging and the complete historical canonical ledger"
+  "next_index_action": "continue the deterministic March partition with the 2026-03-19 exact single-day shard; keep canonical totals frozen until partition unions are reconciled against unpartitioned staging and the complete historical canonical ledger"
 }
