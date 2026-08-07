@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.4",
+  "observed_at": "2026-08-07",
+  "status": "verified_index_staging_batch",
+  "scope": "github_agent_skills_repository_index",
+  "query": "agentskills in:name,description",
+  "search": {
+    "pages": [1],
+    "per_page": 20,
+    "raw_hits": 20,
+    "internal_duplicates": 0,
+    "prior_duplicates_confirmed": 3,
+    "prior_identity_status_unresolved": 17,
+    "canonical_merge_performed": false,
+    "deduplication_key": "case_insensitive owner/repository"
+  },
+  "classification_counts_raw": {
+    "specification": 1,
+    "skill_collection": 6,
+    "single_skill_or_domain_package": 6,
+    "awesome_index": 1,
+    "skill_tooling": 5,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 1
+  },
+  "repository_tuple_fields": ["rank", "github_id", "repository_full_name", "default_branch", "size", "archived", "classification", "prior_identity_status"],
+  "repositories": [
+    [1,"1117639997","agentskills/agentskills","main",738,false,"specification","confirmed_duplicate"],
+    [2,"1156597252","scienceaix/agentskills","main",41,false,"skill_collection","unresolved_against_full_prior_catalog"],
+    [3,"1211235520","lewislulu/html-ppt-skill","main",9791,false,"single_skill_or_domain_package","unresolved_against_full_prior_catalog"],
+    [4,"1078874155","littleben/awesomeAgentskills","main",237,false,"awesome_index","unresolved_against_full_prior_catalog"],
+    [5,"1197246514","yuyou-dev/dreamina-cli-skill","main",42,false,"single_skill_or_domain_package","unresolved_against_full_prior_catalog"],
+    [6,"1230541272","darkrishabh/agent-skills-eval","main",70,false,"skill_tooling","confirmed_duplicate"],
+    [7,"1130862126","lasoons/AgentSkillsManager","main",288,false,"skill_tooling","unresolved_against_full_prior_catalog"],
+    [8,"1127581739","aws-samples/sample-strands-agents-agentskills","main",17263,false,"skill_collection","unresolved_against_full_prior_catalog"],
+    [9,"1121174984","stakpak/paks","main",1728,false,"unclear_search_hit","unresolved_against_full_prior_catalog"],
+    [10,"1145158024","wondelai/skills","main",2979,false,"skill_collection","unresolved_against_full_prior_catalog"],
+    [11,"1154952967","smartcontractkit/chainlink-agent-skills","main",766,false,"single_skill_or_domain_package","unresolved_against_full_prior_catalog"],
+    [12,"1127993384","sheng-jie/Maf.AgentSkills","main",76,false,"skill_collection","unresolved_against_full_prior_catalog"],
+    [13,"1156378628","pratikxpanda/agentskills-sdk","main",1071,false,"skill_tooling","confirmed_duplicate"],
+    [14,"1166506614","mukul975/Anthropic-Cybersecurity-Skills","main",13605,false,"single_skill_or_domain_package","unresolved_against_full_prior_catalog"],
+    [15,"1145253414","tlaplus/AgentSkills","main",18,false,"single_skill_or_domain_package","unresolved_against_full_prior_catalog"],
+    [16,"1122748488","cairijun/codecompanion-agentskills.nvim","master",99,false,"skill_tooling","unresolved_against_full_prior_catalog"],
+    [17,"1115757148","zouyingcao/agentskills-mcp","main",323,false,"skill_tooling","unresolved_against_full_prior_catalog"],
+    [18,"1279033669","Mininglamp-OSS/octo-skills","main",41,false,"skill_collection","unresolved_against_full_prior_catalog"],
+    [19,"1118556483","DougTrajano/pydantic-ai-skills","main",0,false,"single_skill_or_domain_package","unresolved_against_full_prior_catalog"],
+    [20,"1122012460","Piebald-AI/agentskills","main",160,false,"skill_collection","unresolved_against_full_prior_catalog"]
+  ],
+  "confirmed_duplicate_evidence": {
+    "agentskills/agentskills": [
+      "sources/catalog/github-agent-skills-index.json",
+      "sources/catalog/batches/agent-skill-pages-1-10.json"
+    ],
+    "darkrishabh/agent-skills-eval": [
+      "sources/catalog/batches/agent-skill-pages-1-10.json",
+      "sources/catalog/batches/agent-skills-eval-page-1.json"
+    ],
+    "pratikxpanda/agentskills-sdk": [
+      "sources/catalog/batches/agentskills-sdk-search.json"
+    ]
+  },
+  "verification": {
+    "repository_identity": "verified_by_github_repository_search",
+    "internal_deduplication": "verified; no duplicate owner/repository identities among the 20 page-1 results",
+    "prior_deduplication": "partial: three exact duplicates were directly confirmed in persisted prior artifacts. The current canonical manifest stores aggregate composition state rather than a complete identity ledger, and the other seventeen identities were not exhaustively compared against every persisted historical batch in this run; therefore they are not marked new and the canonical total is not advanced.",
+    "classification": "provisional_from_repository_identity_and_query_context_only",
+    "content": "not_started",
+    "note": "Index-only. No repository README, SKILL.md, scripts, references, eval contents, stars, quality, or implementation content was read."
+  }
+}
