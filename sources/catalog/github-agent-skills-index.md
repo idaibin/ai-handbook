@@ -43,28 +43,26 @@ Pages `1-19` are persisted: `368` raw identities / `368` unique identities. Page
 | `unclear_search_hit` | `15` |
 | **Total** | **`368`** |
 
-## February 2026 created-date partition — terminal observed, reconciliation still required
+## February 2026 created-date partition — deterministic reconciliation in progress
 
 ```text
 agentskills in:name,description created:2026-02-01..2026-02-28
 ```
 
-The persisted February pagination run searched through page `22`. Pages `1-21` produced `402` raw staged records, and page `22` returned `0`. After case-insensitive identity deduplication, the staged union contains `401` distinct repositories.
+The original pagination pass searched through page `22`. Pages `1-21` produced `402` raw records and `401` case-insensitive unique identities; page `22` returned `0`. One cross-run duplicate, `irfiacre/agentskills`, proved GitHub best-match ordering drifted, so that pagination result alone is not treated as gap-free.
 
-One exact cross-run duplicate was confirmed: `irfiacre/agentskills`. It had appeared at the prior page-12 boundary and then reappeared on page `13`, proving GitHub best-match ordering changed between runs. For that reason, page `22 = 0` is a verified terminal probe, but a gap-free complete February snapshot is **not** asserted from the pagination run alone.
+Daily deterministic reconciliation has now found an actual omission from the original paging union: `UCTooCom/agentskills-runtime`, observed in the exact `2026-02-16` shard. It was absent from all three original February paging artifacts, and an exact AI-handbook code search returned no match before this run. The repository is therefore added to staging as a new identity and provisionally classified `skill_tooling` from identity/search metadata only.
 
 | Metric | Value |
 | --- | ---: |
-| Persisted pages | `1-21` |
-| Raw staged records | `402` |
-| Distinct staged identities | `401` |
-| Confirmed duplicate removed | `1` |
-| Page `22` probe | `0` results |
-| Pagination drift detected | `yes` |
-| Partition completeness asserted | `no` |
+| Original paging raw records | `402` |
+| Original paging distinct identities | `401` |
+| Confirmed paging duplicate | `irfiacre/agentskills` |
+| New identity recovered by deterministic reconciliation | `UCTooCom/agentskills-runtime` |
+| Current deduplicated February staging | **`402`** |
 | Canonical additions asserted | `0` |
 
-### February provisional classification, deduplicated staged union
+### February provisional classification, current deduplicated staging
 
 | Classification | Count |
 | --- | ---: |
@@ -72,48 +70,49 @@ One exact cross-run duplicate was confirmed: `irfiacre/agentskills`. It had appe
 | `skill_collection` | `313` |
 | `single_skill_or_domain_package` | `16` |
 | `awesome_index` | `3` |
-| `skill_tooling` | `35` |
+| `skill_tooling` | `36` |
 | `adjacent_search_hit` | `30` |
 | `unclear_search_hit` | `4` |
-| **Total** | **`401`** |
+| **Total** | **`402`** |
 
-Classification is provisional and uses only repository identity plus GitHub repository-search metadata. It is not merged into canonical classification totals.
+Classification remains provisional and uses only repository identity plus GitHub repository-search metadata. It is not merged into canonical classification totals.
 
-### Deterministic February reconciliation — verified through 2026-02-15
+### Deterministic February reconciliation — verified through 2026-02-21
 
-To remove best-match pagination-drift risk, reconciliation uses exact single-day `created:` shards with `per_page=100` plus an explicit page-2 terminal probe.
-
-Verified coverage now spans:
+Reconciliation uses exact single-day `created:` shards with `per_page=100` plus an explicit page-2 terminal probe.
 
 ```text
-2026-02-01 .. 2026-02-15
+verified date range: 2026-02-01 .. 2026-02-21
+next shard:          2026-02-22
 ```
 
 | Metric | Value |
 | --- | ---: |
-| Completed daily shards | **`15`** |
-| Unique identities observed | **`203`** |
-| Matches to prior February staging | **`203`** |
-| Missing from prior February staging | **`0`** |
-| New staged identities after merge | **`0`** |
-| Page-2 terminal probes | **`15 / 15 = 0 results`** |
+| Completed daily shards | **`21`** |
+| Unique identities observed across completed shards | **`295`** |
+| Matches to original February paging staging | **`294`** |
+| Missing from original paging staging | **`1`** |
+| New staged identities after merge | **`1`** |
+| New February staging total | **`402`** |
 
-The current run reconciled `2026-02-12` through `2026-02-15`: **50 raw / 50 unique identities**, all 50 already present in the persisted February staging union. No cross-day duplicate can occur because repository creation dates are mutually exclusive, and all current identities were checked against the prior February staging artifacts.
+The new coverage advanced in this run is `2026-02-16..2026-02-21`: **92 raw / 92 unique identities**. All six page-2 probes returned `0`. Of these 92 identities, 91 were already present in the original February paging artifacts and one was missing: `UCTooCom/agentskills-runtime`.
 
-Current-run provisional classifications, preserving the existing staging classifications for exact identity matches:
+Provisional classification for the six newly advanced daily shards:
 
 | Classification | Count |
 | --- | ---: |
 | `specification` | `0` |
-| `skill_collection` | `43` |
-| `single_skill_or_domain_package` | `0` |
-| `awesome_index` | `0` |
-| `skill_tooling` | `4` |
-| `adjacent_search_hit` | `3` |
+| `skill_collection` | `70` |
+| `single_skill_or_domain_package` | `2` |
+| `awesome_index` | `1` |
+| `skill_tooling` | `13` |
+| `adjacent_search_hit` | `6` |
 | `unclear_search_hit` | `0` |
-| **Total** | **`50`** |
+| **Total** | **`92`** |
 
-This verifies that the first fifteen February date shards have no observed gap relative to the existing staged union. Dates `2026-02-16` through `2026-02-28` remain unreconciled, so February is still **not** marked complete.
+A separate reconciliation artifact also records the complete live search performed for `2026-02-12..2026-02-21`. The already committed `2026-02-12..2026-02-15` artifact remains the authority for those four earlier shards; the superset artifact supplies the newly advanced `2026-02-16..2026-02-21` evidence and the recovered identity.
+
+Dates `2026-02-22` through `2026-02-28` remain unreconciled, so February is still **not** marked complete.
 
 ### February artifacts
 
@@ -123,6 +122,7 @@ This verifies that the first fifteen February date shards have no observed gap r
 - [`batches/agentskills-created-2026-02-01-reconciliation.json`](batches/agentskills-created-2026-02-01-reconciliation.json)
 - [`batches/agentskills-created-2026-02-02-through-11-reconciliation.json`](batches/agentskills-created-2026-02-02-through-11-reconciliation.json)
 - [`batches/agentskills-created-2026-02-12-through-15-reconciliation.json`](batches/agentskills-created-2026-02-12-through-15-reconciliation.json)
+- [`batches/agentskills-created-2026-02-12-through-21-reconciliation.json`](batches/agentskills-created-2026-02-12-through-21-reconciliation.json)
 - [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json)
 
 ## Canonical classification totals
@@ -145,4 +145,4 @@ This phase is index-only. No target repository README, `SKILL.md`, scripts, refe
 
 ## Next index action
 
-Continue deterministic February reconciliation with the `2026-02-16` single-day created-date shard. After all February dates are reconciled, compare the verified union against unpartitioned staging and the complete historical ledger. Canonical `2502 / 2088 / 414` remains unchanged until that reconciliation is complete.
+Continue deterministic February reconciliation with the `2026-02-22` single-day created-date shard. After `2026-02-28` is reconciled, compare the verified February union against unpartitioned staging and the complete historical ledger. Canonical `2502 / 2088 / 414` remains unchanged until that reconciliation is complete.
