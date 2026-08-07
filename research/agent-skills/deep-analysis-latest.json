@@ -1,16 +1,16 @@
 {
   "schema_version": "1.0",
-  "latest_batch_id": "2026-08-07-batch-024",
-  "latest_batch_report": "research/agent-skills/batches/2026-08-07-batch-024-deep-analysis.md",
-  "latest_batch_progress": "research/agent-skills/batches/2026-08-07-batch-024-progress.json",
-  "latest_skill_report": "research/agent-skills/batches/2026-08-07-batch-024-skill-reports.md",
-  "repositories_structure_reviewed_total": 240,
-  "repository_scoped_skill_reports_total": 2700,
+  "latest_batch_id": "2026-08-08-batch-025",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-08-batch-025-deep-analysis.md",
+  "latest_batch_progress": "research/agent-skills/batches/2026-08-08-batch-025-progress.json",
+  "latest_skill_report": "research/agent-skills/batches/2026-08-08-batch-025-skill-reports.md",
+  "repositories_structure_reviewed_total": 250,
+  "repository_scoped_skill_reports_total": 2746,
   "canonical_eligible_basis": 2088,
-  "remaining_estimate": 1848,
+  "remaining_estimate": 1838,
   "status": "structure-reviewed",
   "runtime_validation": "not_executed",
-  "direct_skill_body_reviews_latest_batch": 23,
-  "observed_at": "2026-08-07",
-  "note": "Batch 024 content-reviewed 10 qualified indexed repositories and directly read all 23 reported repository-scoped skill bodies. Identity and stars were verified against current GitHub repository data; README/guide, current skill definitions, and scripts/references/eval surfaces were inspected when available. Runtime validation remains not executed."
+  "direct_skill_body_reviews_latest_batch": 46,
+  "observed_at": "2026-08-08",
+  "note": "Batch 025 content-reviewed 10 repositories from the persisted indexed queue and directly reviewed 46 local skill/equivalent bodies. Identity and exact stars were verified against current GitHub repository search; README/guide, current skill definitions, scripts/references/eval surfaces were inspected when available. Content inspection reclassified three indexed collections as official-spec mirrors/forks and one additional repository as a reference specification snapshot; these corrections are recorded for later catalog reconciliation rather than inferred from metadata. Runtime validation remains not executed."
 }
