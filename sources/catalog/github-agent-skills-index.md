@@ -63,43 +63,36 @@ The original whole-month paging pass produced `402` raw records and `401` distin
 Verified persisted coverage now spans:
 
 ```text
-2026-03-01 .. 2026-03-15
+2026-03-01 .. 2026-03-16
 per_page=100
 exact single-day shards with explicit terminal pagination probes
 ```
 
-The first 14 daily shards produced `274 / 274` distinct staged identities. The `2026-03-15` shard was high-volume and therefore persisted from one controlled multi-page snapshot:
+The first 14 daily shards produced `274 / 274` distinct staged identities. The `2026-03-15` high-volume shard contributed `113 / 113` distinct identities from a controlled multi-page snapshot (`100`, `13`, `0`). The `2026-03-16` shard contributed `62 / 62` identities (`62`, `0`). Because exact `created:` day shards are disjoint by repository creation date, cumulative March staging through March 16 is now `449 / 449` identities.
 
-| Page | Results |
-| --- | ---: |
-| 1 | 100 |
-| 2 | 13 |
-| 3 | 0 |
-
-The March 15 snapshot contains `113 / 113` case-insensitive unique identities. No duplicate identity was observed inside the snapshot. Because exact `created:` day shards are disjoint by repository creation date, cumulative March staging through March 15 is now `387 / 387` identities.
-
-### March provisional classification through 2026-03-15
+### March provisional classification through 2026-03-16
 
 | Classification | Count |
 | --- | ---: |
 | `specification` | 0 |
-| `skill_collection` | 312 |
-| `single_skill_or_domain_package` | 28 |
+| `skill_collection` | 369 |
+| `single_skill_or_domain_package` | 29 |
 | `awesome_index` | 3 |
-| `skill_tooling` | 17 |
-| `adjacent_search_hit` | 24 |
+| `skill_tooling` | 20 |
+| `adjacent_search_hit` | 25 |
 | `unclear_search_hit` | 3 |
-| **Total** | **387** |
+| **Total** | **449** |
 
-The March 15 contribution is `110 skill_collection`, `1 skill_tooling`, and `2 adjacent_search_hit`. Classification is index-stage only and uses repository identity/name metadata; it is not a deep-content determination.
+The March 16 contribution is `57 skill_collection`, `1 single_skill_or_domain_package`, `3 skill_tooling`, and `1 adjacent_search_hit`. Classification is index-stage only and uses repository identity/name metadata; it is not a deep-content determination.
 
 Artifacts:
 
 - [`batches/agentskills-created-2026-03-01-through-10-deterministic.json`](batches/agentskills-created-2026-03-01-through-10-deterministic.json)
 - [`batches/agentskills-created-2026-03-11-through-14-deterministic.json`](batches/agentskills-created-2026-03-11-through-14-deterministic.json)
 - [`batches/agentskills-created-2026-03-15-controlled-multipage.json`](batches/agentskills-created-2026-03-15-controlled-multipage.json)
+- [`batches/agentskills-created-2026-03-16-deterministic.json`](batches/agentskills-created-2026-03-16-deterministic.json)
 
-Current run report: [`runs/2026-08-07-agentskills-march-2026-03-15.md`](runs/2026-08-07-agentskills-march-2026-03-15.md).
+Current run report: [`runs/2026-08-07-agentskills-march-2026-03-16.md`](runs/2026-08-07-agentskills-march-2026-03-16.md).
 
 ## Evidence boundary
 
@@ -107,4 +100,4 @@ This phase is index-only. No target repository README, `SKILL.md`, scripts, refe
 
 ## Next index action
 
-Continue the deterministic March partition with the `2026-03-16` exact single-day shard. Keep canonical totals frozen until created-date partition unions are reconciled against unpartitioned staging and the complete historical canonical ledger.
+Continue the deterministic March partition with the `2026-03-17` exact single-day shard. Keep canonical totals frozen until created-date partition unions are reconciled against unpartitioned staging and the complete historical canonical ledger.
