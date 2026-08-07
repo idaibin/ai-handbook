@@ -73,22 +73,56 @@ Full deterministic February result:
 | `unclear_search_hit` | 4 |
 | **Total** | **402** |
 
-### Final reconciliation batch: 2026-02-22..2026-02-28
+Artifact: [`batches/agentskills-created-2026-02-22-through-28-reconciliation.json`](batches/agentskills-created-2026-02-22-through-28-reconciliation.json).
+
+Run report: [`runs/2026-08-07-agentskills-february-reconciliation-2026-02-22-through-28.md`](runs/2026-08-07-agentskills-february-reconciliation-2026-02-22-through-28.md).
+
+## March 2026 created-date partition — deterministic indexing in progress
+
+March indexing continues with exact single-day `created:` shards rather than unstable best-match whole-month pagination.
+
+Verified coverage in the current run:
+
+```text
+2026-03-01 .. 2026-03-10
+per_page=100
+page 1 + explicit page 2 terminal probe for every day
+```
+
+| Date | Page 1 | Page 2 |
+| --- | ---: | ---: |
+| 2026-03-01 | 12 | 0 |
+| 2026-03-02 | 18 | 0 |
+| 2026-03-03 | 17 | 0 |
+| 2026-03-04 | 25 | 0 |
+| 2026-03-05 | 14 | 0 |
+| 2026-03-06 | 15 | 0 |
+| 2026-03-07 | 10 | 0 |
+| 2026-03-08 | 13 | 0 |
+| 2026-03-09 | 22 | 0 |
+| 2026-03-10 | 16 | 0 |
+| **Total** | **162** | **0** |
+
+The 162 records are `162 / 162` distinct under case-insensitive `owner/repository` deduplication. No March identity is promoted into canonical totals in this phase.
+
+### March provisional classification through 2026-03-10
 
 | Classification | Count |
 | --- | ---: |
 | `specification` | 0 |
-| `skill_collection` | 80 |
-| `single_skill_or_domain_package` | 4 |
+| `skill_collection` | 116 |
+| `single_skill_or_domain_package` | 16 |
 | `awesome_index` | 2 |
-| `skill_tooling` | 9 |
-| `adjacent_search_hit` | 10 |
-| `unclear_search_hit` | 2 |
-| **Total** | **107** |
+| `skill_tooling` | 11 |
+| `adjacent_search_hit` | 14 |
+| `unclear_search_hit` | 3 |
+| **Total** | **162** |
 
-Artifact: [`batches/agentskills-created-2026-02-22-through-28-reconciliation.json`](batches/agentskills-created-2026-02-22-through-28-reconciliation.json).
+Classification is index-stage only and uses repository identity/name metadata. It is not a deep-content determination.
 
-Run report: [`runs/2026-08-07-agentskills-february-reconciliation-2026-02-22-through-28.md`](runs/2026-08-07-agentskills-february-reconciliation-2026-02-22-through-28.md).
+Artifact: [`batches/agentskills-created-2026-03-01-through-10-deterministic.json`](batches/agentskills-created-2026-03-01-through-10-deterministic.json).
+
+Run report: [`runs/2026-08-07-agentskills-march-2026-03-01-through-10.md`](runs/2026-08-07-agentskills-march-2026-03-01-through-10.md).
 
 ## Evidence boundary
 
@@ -96,4 +130,4 @@ This phase is index-only. No target repository README, `SKILL.md`, scripts, refe
 
 ## Next index action
 
-Reconcile the verified January (`368`) and February (`402`) partition unions against the unpartitioned staging set and the complete historical canonical ledger before asserting canonical additions. Then continue the next deterministic created-date partition.
+Continue the deterministic March partition with the `2026-03-11` exact single-day shard. Keep canonical totals frozen until created-date partition unions are reconciled against unpartitioned staging and the complete historical canonical ledger.
