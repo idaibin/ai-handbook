@@ -1,7 +1,7 @@
 {
   "schema_version": "2.2",
   "observed_at": "2026-08-08",
-  "status": "march_created_date_partition_complete",
+  "status": "april_created_date_partition_in_progress",
   "scope": "github_agent_skills_repository_index",
   "deduplication_key": "case_insensitive owner/repository",
   "canonical_progress": {
@@ -18,29 +18,64 @@
     "search_ceiling": "page 51 returned GitHub first-1000-results limit"
   },
   "completed_partitions": [
-    {"partition":"2026-01","unique":368,"terminal_probe":"page 20 returned 0"},
-    {"partition":"2026-02","final_staging_unique":402,"deterministic_daily_shards":28,"recovered_missing_identity":"UCTooCom/agentskills-runtime","reconciliation_complete":true},
-    {"partition":"2026-03","final_staging_unique":831,"deterministic_daily_shards":31,"persisted_terminal_probes":31,"persisted_terminal_probe_hits":0,"reconciliation_complete":false}
+    {
+      "partition": "2026-01",
+      "unique": 368,
+      "terminal_probe": "page 20 returned 0"
+    },
+    {
+      "partition": "2026-02",
+      "final_staging_unique": 402,
+      "deterministic_daily_shards": 28,
+      "recovered_missing_identity": "UCTooCom/agentskills-runtime",
+      "reconciliation_complete": true
+    },
+    {
+      "partition": "2026-03",
+      "final_staging_unique": 831,
+      "deterministic_daily_shards": 31,
+      "persisted_terminal_probes": 31,
+      "persisted_terminal_probe_hits": 0,
+      "reconciliation_complete": false
+    }
   ],
-  "in_progress_partition": null,
+  "in_progress_partition": {
+    "partition": "2026-04",
+    "verified_date_range": "2026-04-01..2026-04-01",
+    "verified_daily_shards": 1,
+    "per_page": 100,
+    "raw_candidate_records": 95,
+    "staged_unique": 95,
+    "duplicates": 0,
+    "classification_counts": {
+      "specification": 0,
+      "skill_collection": 19,
+      "single_skill_or_domain_package": 73,
+      "awesome_index": 0,
+      "skill_tooling": 0,
+      "adjacent_search_hit": 3,
+      "unclear_search_hit": 0
+    },
+    "latest_artifact": "sources/catalog/batches/agentskills-created-2026-04-01-deterministic.json"
+  },
   "current_run": {
-    "date_range": "2026-03-31..2026-03-31",
-    "page_counts": [69, 0],
-    "raw_candidate_records": 69,
-    "unique": 69,
+    "date_range": "2026-04-01..2026-04-01",
+    "page_counts": [95, 0],
+    "raw_candidate_records": 95,
+    "unique": 95,
     "internal_duplicates": 0,
     "canonical_delta_asserted": 0,
     "classification_counts": {
       "specification": 0,
-      "skill_collection": 13,
-      "single_skill_or_domain_package": 45,
-      "awesome_index": 1,
-      "skill_tooling": 1,
-      "adjacent_search_hit": 8,
-      "unclear_search_hit": 1
+      "skill_collection": 19,
+      "single_skill_or_domain_package": 73,
+      "awesome_index": 0,
+      "skill_tooling": 0,
+      "adjacent_search_hit": 3,
+      "unclear_search_hit": 0
     },
-    "artifact": "sources/catalog/batches/agentskills-created-2026-03-31-deterministic.json",
-    "run_report": "sources/catalog/runs/2026-08-08-agentskills-march-2026-03-31.md"
+    "artifact": "sources/catalog/batches/agentskills-created-2026-04-01-deterministic.json",
+    "run_report": "sources/catalog/runs/2026-08-08-agentskills-april-2026-04-01.md"
   },
   "march_2026_final_staging": {
     "verified_date_range": "2026-03-01..2026-03-31",
@@ -61,10 +96,10 @@
     "latest_artifact": "sources/catalog/batches/agentskills-created-2026-03-31-deterministic.json"
   },
   "verification": {
-    "pagination": "2026-03-31 page 1 returned 69 repositories with per_page=100; page 2 returned 0.",
-    "deduplication": "All 69 identities are distinct case-insensitively; cumulative March staging is 831 identities across 31 disjoint exact created-date shards.",
-    "classification": "Provisional index-stage classification from repository identity/name metadata only; ambiguous metadata-only hits remain adjacent or unclear.",
+    "pagination": "2026-04-01 page 1 returned 95 repositories with per_page=100; page 2 returned 0. Recheck with per_page=20 returned 20,20,20,20,15,0.",
+    "deduplication": "All 95 identities are distinct case-insensitively; April staging currently contains one exact created-date shard with 95 identities.",
+    "classification": "Provisional index-stage classification from repository identity/name metadata only; ambiguous metadata-only hits remain adjacent rather than being promoted by assumption.",
     "content": "not_started"
   },
-  "next_index_action": "begin the 2026-04-01 exact single-day shard; keep canonical totals frozen until historical reconciliation"
+  "next_index_action": "continue the deterministic April partition with the 2026-04-02 exact single-day shard; keep canonical totals frozen until historical reconciliation"
 }
