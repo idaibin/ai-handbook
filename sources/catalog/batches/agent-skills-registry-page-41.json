@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.4",
+  "observed_at": "2026-08-07T11:21:21+08:00",
+  "status": "discovery_batch",
+  "scope": "github_agent_skills_repository_index",
+  "query": "\"agent skills registry\" in:name,description",
+  "pages": [41],
+  "results_per_page": 20,
+  "raw_hits": 1,
+  "deep_content_reading": false,
+  "classification_basis": "repository_identity_and_search_context_only",
+  "base_catalog": {
+    "path": "sources/catalog/github-agent-skills-index-latest.json",
+    "commit": "233dc8e631f9dfdde42c16449371a6fc290ebe71",
+    "blob_sha": "b724f2339b0dcbb8446a99b70149264192f90ffd",
+    "unique_total": 2501
+  },
+  "deduplication": {
+    "key": "case_insensitive owner/repository",
+    "duplicates_within_batch": [],
+    "duplicates_against_base": [],
+    "new_unique": 1,
+    "composed_unique_total": 2502,
+    "verification": "The page-41 identity was directly compared against persisted agent-skills-registry pages 31-40, skill-hub pages 1-10, skill-registry pages 1-10, and the original canonical inventory snapshot. No exact case-insensitive owner/repository duplicate was present in those directly inspected sets. Earlier catalog coverage is inherited through the verified 2501-repository canonical manifest; code-search emptiness was not used as uniqueness evidence."
+  },
+  "classification_counts_raw": {
+    "specification": 0,
+    "skill_collection": 0,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 1,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 0
+  },
+  "classification_counts_new_unique": {
+    "specification": 0,
+    "skill_collection": 0,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 1,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 0
+  },
+  "progress": {
+    "added_to_deep_analysis_eligible": 1,
+    "added_to_held_for_review": 0
+  },
+  "terminal_probe": {
+    "page": 42,
+    "results_per_page": 20,
+    "result_count": 0,
+    "query_complete": true
+  },
+  "repository_fields": [
+    "page",
+    "result_rank",
+    "github_id",
+    "full_name",
+    "default_branch",
+    "size",
+    "archived",
+    "classification",
+    "is_new_unique",
+    "deep_analysis_eligible"
+  ],
+  "repositories": [
+    [41, 1, "1201923331", "kms9/skillhub", "master", 7147, false, "skill_tooling", true, true]
+  ],
+  "verification": {
+    "repository_identity": "verified_by_github_repository_search",
+    "terminal_page": "GitHub repository search returned one result on page 41 and zero results on page 42 at per_page=20",
+    "classification": "provisional_from_repository_identity_and_query_context_only",
+    "content": "not_started",
+    "note": "Index-only batch. README, SKILL.md, scripts, references, eval contents, stars, quality, and implementation content were not read."
+  }
+}
