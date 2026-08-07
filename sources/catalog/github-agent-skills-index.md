@@ -13,7 +13,7 @@
 
 Composed machine-readable authority: [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json).
 
-The canonical total remains `2502`. A new `agentskills in:name,description` page-1 staging batch has been persisted, but it has **not** been composed into the canonical count because full historical identity reconciliation is not yet complete.
+The canonical total remains `2502` because the current `agentskills in:name,description` search is staged but has not yet completed exhaustive historical identity reconciliation. This run persisted pages `2-3`, bringing staged coverage to pages `1-3`.
 
 ## Completed search coverage
 
@@ -53,43 +53,56 @@ Query:
 agentskills in:name,description
 ```
 
-GitHub repository search was run through page `11` at `per_page=20`. Pages `1-10` each returned `20` repository identities, and page `11` also returned `20`, so this query is not terminal. Only page `1` has been persisted as a staging batch in this run; pages `2-11` are not claimed as merged catalog coverage.
+Persisted staging coverage now includes pages `1-3`, each with `20` GitHub repository identities. Existing verified state records that this query was probed through page `11`; pages `4-11` are not yet persisted as staging batches.
 
-Page `1` contains `20` identities and no batch-internal duplicate. Three exact prior identities were directly confirmed in persisted index artifacts:
+Staged totals:
+
+| Metric | Value |
+| --- | ---: |
+| Raw identities | `60` |
+| Batch/internal or cross-staging duplicates | `0` |
+| Exact prior duplicates directly confirmed | `3` |
+| Identities still requiring full historical reconciliation | `57` |
+| Canonical delta asserted | `0` |
+
+The three directly confirmed prior duplicates are:
 
 - `agentskills/agentskills`
 - `darkrishabh/agent-skills-eval`
 - `pratikxpanda/agentskills-sdk`
 
-The other `17` page-1 identities remain explicitly `unresolved_against_full_prior_catalog`. They are not marked new. The existing canonical manifest is aggregate-only and does not contain a complete identity ledger, and this run did not exhaustively traverse every historical batch. Therefore no canonical delta is asserted from page `1` yet.
+Pages `2-3` add `40` verified repository identities with no duplicate against the persisted page-1 staging batch. Those 40 identities remain `unresolved_against_full_prior_catalog`; code-search absence is not treated as evidence that an identity is new.
 
-The page-1 repository identities, GitHub IDs, default branches, sizes, archived states, provisional classifications, and reconciliation status are persisted in [`batches/agentskills-page-1.json`](batches/agentskills-page-1.json).
+Staging artifacts:
 
-## Page-1 provisional classification
+- [`batches/agentskills-page-1.json`](batches/agentskills-page-1.json)
+- [`batches/agentskills-pages-2-3.json`](batches/agentskills-pages-2-3.json)
 
-| Classification | Raw page-1 count |
+## Pages 2-3 provisional classification
+
+| Classification | Raw pages 2-3 count |
 | --- | ---: |
-| `specification` | 1 |
-| `skill_collection` | 6 |
-| `single_skill_or_domain_package` | 6 |
-| `awesome_index` | 1 |
-| `skill_tooling` | 5 |
-| `adjacent_search_hit` | 0 |
-| `unclear_search_hit` | 1 |
+| `specification` | `0` |
+| `skill_collection` | `24` |
+| `single_skill_or_domain_package` | `4` |
+| `awesome_index` | `1` |
+| `skill_tooling` | `6` |
+| `adjacent_search_hit` | `1` |
+| `unclear_search_hit` | `4` |
 
-These are raw page-1 classifications only. They are not added to canonical classification totals until each unresolved identity is reconciled against prior index artifacts.
+These classifications are provisional from repository identity and query context only. They are not added to canonical classification totals until historical reconciliation is complete.
 
 ## Canonical classification totals
 
 | Classification | Count |
 | --- | ---: |
-| `specification` | 163 |
-| `skill_collection` | 611 |
-| `single_skill_or_domain_package` | 104 |
-| `awesome_index` | 38 |
-| `skill_tooling` | 1172 |
-| `adjacent_search_hit` | 152 |
-| `unclear_search_hit` | 262 |
+| `specification` | `163` |
+| `skill_collection` | `611` |
+| `single_skill_or_domain_package` | `104` |
+| `awesome_index` | `38` |
+| `skill_tooling` | `1172` |
+| `adjacent_search_hit` | `152` |
+| `unclear_search_hit` | `262` |
 
 ## Evidence boundary
 
@@ -100,12 +113,14 @@ The current run deliberately does not treat code-search emptiness or an aggregat
 ## Validation
 
 - Previous canonical state remains: `2502 unique / 2088 eligible / 414 held`.
-- Page-1 raw identities: `20`.
-- Page-1 internal duplicates: `0`.
-- Directly confirmed prior duplicates: `3`.
-- Unresolved identities requiring exhaustive historical reconciliation: `17`.
-- Staging batch initial commit: `03bda2ed0ad757ec4130d83ee1b0959194a2024b`.
-- Metadata correction commit: `7aab4f571229ffb00b53ba8b70a4b5fdebda6bf5`.
-- Latest-manifest pending-reconciliation commit: `c1d0f07a8a666d25e60633982723139d63c26ed1`.
+- Newly persisted pages in this run: `2-3`.
+- New staged identities in this run: `40`.
+- Pages `2-3` internal duplicates: `0`.
+- Pages `2-3` duplicates against staged page `1`: `0`.
+- Total staged identities across pages `1-3`: `60`.
+- Directly confirmed prior duplicates across staged pages: `3`.
+- Unresolved staged identities requiring exhaustive historical reconciliation: `57`.
+- Pages `2-3` staging commit: `976813fd22aae37b599579977cb171539d5c6abf`.
+- Latest-manifest staging-state commit: `34f74f3960aa713cdf32072b9ad84eea60cbeb58`.
 - `2088 + 414 = 2502`, matching the canonical eligible and held partitions.
 - No README, `SKILL.md`, scripts, references, eval contents, stars, or implementation contents were read during this index-only run.
