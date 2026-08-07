@@ -2,19 +2,18 @@
 
 ## Current verified catalog
 
-- Raw GitHub search hits: `2630`
+- Raw GitHub search hits already composed into the canonical catalog: `2630`
 - Existing discovery-inbox candidates merged and re-verified: `4`
-- Raw identities across all inputs: `2634`
+- Raw identities across composed inputs: `2634`
 - Unique repositories after case-insensitive `owner/repository` deduplication: `2502`
-- Exact duplicates removed across current inputs: `132`
-- New unique repositories collected in this run: `1`
-- Net catalog delta versus the previous verified manifest: `+1`
+- Exact duplicates removed across composed inputs: `132`
+- New unique repositories composed in this run: `0`
 - Provisionally eligible for later deep analysis: `2088`
 - Held as adjacent or unclear search hits: `414`
 
 Composed machine-readable authority: [`github-agent-skills-index-latest.json`](github-agent-skills-index-latest.json).
 
-The current manifest composes the previous verified `2501`-repository canonical manifest with page `41` of the `agent skills registry` discovery query.
+The canonical total remains `2502`. A new `agentskills in:name,description` page-1 staging batch has been persisted, but it has **not** been composed into the canonical count because full historical identity reconciliation is not yet complete.
 
 ## Completed search coverage
 
@@ -48,56 +47,65 @@ The current manifest composes the previous verified `2501`-repository canonical 
 
 ## In-progress search coverage
 
-No partially merged query remains. A next high-recall index query candidate is `agentskills in:name,description`; it has not been merged yet.
-
-## This run
-
 Query:
 
 ```text
-"agent skills registry" in:name,description
+agentskills in:name,description
 ```
 
-Processed page `41` at `per_page=20` and probed page `42`.
+GitHub repository search was run through page `11` at `per_page=20`. Pages `1-10` each returned `20` repository identities, and page `11` also returned `20`, so this query is not terminal. Only page `1` has been persisted as a staging batch in this run; pages `2-11` are not claimed as merged catalog coverage.
 
-- Raw repository identities: `1`
-- Internal batch duplicates: `0`
-- Confirmed duplicates in directly inspected prior sets: `0`
-- Added as new repositories: `1`
-- Previous verified catalog: `2501`
-- Updated composed catalog: `2502`
-- Added to provisional deep-analysis queue: `1`
-- Added to held-for-review: `0`
-- Terminal probe: page `42` returned `0`, so this query is now complete.
+Page `1` contains `20` identities and no batch-internal duplicate. Three exact prior identities were directly confirmed in persisted index artifacts:
 
-The page-41 identity `kms9/skillhub` was directly compared against persisted `agent-skills-registry` pages `31-40`, `skill-hub` pages `1-10`, `skill-registry` pages `1-10`, and the original canonical inventory snapshot. No exact case-insensitive `owner/repository` duplicate was present in those directly inspected sets. Earlier catalog coverage remains inherited through the verified `2501`-repository canonical manifest; code-search emptiness was not used as uniqueness proof.
+- `agentskills/agentskills`
+- `darkrishabh/agent-skills-eval`
+- `pratikxpanda/agentskills-sdk`
 
-The repository was provisionally classified from repository identity and GitHub search context as `skill_tooling` and added to the provisional deep-analysis queue. Page, rank, GitHub repository ID, default branch, repository size, archived state, classification, eligibility, duplicate status, terminal coverage, and verification notes are stored in [`batches/agent-skills-registry-page-41.json`](batches/agent-skills-registry-page-41.json).
+The other `17` page-1 identities remain explicitly `unresolved_against_full_prior_catalog`. They are not marked new. The existing canonical manifest is aggregate-only and does not contain a complete identity ledger, and this run did not exhaustively traverse every historical batch. Therefore no canonical delta is asserted from page `1` yet.
 
-## Classification totals
+The page-1 repository identities, GitHub IDs, default branches, sizes, archived states, provisional classifications, and reconciliation status are persisted in [`batches/agentskills-page-1.json`](batches/agentskills-page-1.json).
 
-| Classification | Count | Index-stage meaning |
-| --- | ---: | --- |
-| `specification` | 163 | Identity strongly indicates a Skill specification, standard, or normative guidance. |
-| `skill_collection` | 611 | Identity indicates a collection or examples of Skills. |
-| `single_skill_or_domain_package` | 104 | Identity indicates one Skill or a domain-focused package. |
-| `awesome_index` | 38 | Identity indicates a curated Skill index. |
-| `skill_tooling` | 1172 | Identity indicates validation, linting, evaluation, testing, packaging, discovery, registry, marketplace, management, benchmark, SDK, template, fixture, or runtime tooling. |
-| `adjacent_search_hit` | 152 | Related to agents or Skills, but not clearly a Skill repository from identity alone. |
-| `unclear_search_hit` | 262 | Identity is insufficient for reliable classification. |
+## Page-1 provisional classification
+
+| Classification | Raw page-1 count |
+| --- | ---: |
+| `specification` | 1 |
+| `skill_collection` | 6 |
+| `single_skill_or_domain_package` | 6 |
+| `awesome_index` | 1 |
+| `skill_tooling` | 5 |
+| `adjacent_search_hit` | 0 |
+| `unclear_search_hit` | 1 |
+
+These are raw page-1 classifications only. They are not added to canonical classification totals until each unresolved identity is reconciled against prior index artifacts.
+
+## Canonical classification totals
+
+| Classification | Count |
+| --- | ---: |
+| `specification` | 163 |
+| `skill_collection` | 611 |
+| `single_skill_or_domain_package` | 104 |
+| `awesome_index` | 38 |
+| `skill_tooling` | 1172 |
+| `adjacent_search_hit` | 152 |
+| `unclear_search_hit` | 262 |
 
 ## Evidence boundary
 
 This remains an index-only catalog. GitHub repository search verified repository identity and accessibility. Classification is provisional from repository identity and search context only. No repository README, `SKILL.md`, scripts, references, eval contents, stars, quality, or implementation behavior was assessed.
 
+The current run deliberately does not treat code-search emptiness or an aggregate prior count as proof that an identity is new.
+
 ## Validation
 
-- Previous canonical manifest commit: `233dc8e631f9dfdde42c16449371a6fc290ebe71` (`2501` repositories).
-- `agent skills registry` page-41 batch commit: `9f40936da4f182a4c65ee56c7e7cf41cd0140102`.
-- Composed latest-manifest commit: `e80ed29a775828ed74cc2613464cd50ca597e5a5`.
-- `2501 + 1 = 2502` current unique repositories.
-- `2634 - 132 = 2502` raw-to-unique reconciliation.
-- Classification totals resolve to `2502`.
-- `2088 + 414 = 2502`, matching the eligible and held partitions.
-- Query terminal boundary: `"agent skills registry" in:name,description`, page `42`, `per_page=20`, returned `0`.
+- Previous canonical state remains: `2502 unique / 2088 eligible / 414 held`.
+- Page-1 raw identities: `20`.
+- Page-1 internal duplicates: `0`.
+- Directly confirmed prior duplicates: `3`.
+- Unresolved identities requiring exhaustive historical reconciliation: `17`.
+- Staging batch initial commit: `03bda2ed0ad757ec4130d83ee1b0959194a2024b`.
+- Metadata correction commit: `7aab4f571229ffb00b53ba8b70a4b5fdebda6bf5`.
+- Latest-manifest pending-reconciliation commit: `c1d0f07a8a666d25e60633982723139d63c26ed1`.
+- `2088 + 414 = 2502`, matching the canonical eligible and held partitions.
 - No README, `SKILL.md`, scripts, references, eval contents, stars, or implementation contents were read during this index-only run.
