@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.5",
+  "observed_at": "2026-08-07",
+  "status": "verified_index_partition_staging_batch",
+  "scope": "github_agent_skills_repository_index",
+  "query": "agentskills in:name,description created:2026-01-01..2026-01-31",
+  "partition": {
+    "field": "created",
+    "start": "2026-01-01",
+    "end": "2026-01-31",
+    "reason": "Partition the agentskills search after the unpartitioned query reached GitHub Search's first-1000-result ceiling."
+  },
+  "search": {
+    "pages": [10],
+    "per_page": 20,
+    "raw_hits": 20,
+    "internal_duplicates": 0,
+    "unique_within_batch": 20,
+    "persisted_index_exact_search_matches": 0,
+    "historical_reconciliation": "pending",
+    "canonical_merge_performed": false,
+    "deduplication_key": "case_insensitive owner/repository",
+    "next_page_probe": "page 11 returned 20 repositories and was not persisted in this batch"
+  },
+  "classification_counts_raw": {
+    "specification": 0,
+    "skill_collection": 19,
+    "single_skill_or_domain_package": 0,
+    "awesome_index": 0,
+    "skill_tooling": 1,
+    "adjacent_search_hit": 0,
+    "unclear_search_hit": 0
+  },
+  "repositories": [
+    {"page":10,"rank":1,"repository_full_name":"wazeerc/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":2,"repository_full_name":"AIXploits/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":3,"repository_full_name":"beyondeth/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":4,"repository_full_name":"appdirectory/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":5,"repository_full_name":"LyalinDotCom/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":6,"repository_full_name":"Flash-Brew-Digital/validate-skill","classification":"skill_tooling","persisted_index_search_match":false},
+    {"page":10,"rank":7,"repository_full_name":"RemyLoveLogicAI/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":8,"repository_full_name":"stanleyhlng/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":9,"repository_full_name":"phuongvm/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":10,"repository_full_name":"rsatcodehub/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":11,"repository_full_name":"rizwan-saddal/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":12,"repository_full_name":"strategist922/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":13,"repository_full_name":"coder/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":14,"repository_full_name":"wangxingjun778/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":15,"repository_full_name":"HandymanKHM/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":16,"repository_full_name":"JariGruyaert/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":17,"repository_full_name":"ramogollon1/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":18,"repository_full_name":"nghiatran0222/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":19,"repository_full_name":"whzhufan/agentskills","classification":"skill_collection","persisted_index_search_match":false},
+    {"page":10,"rank":20,"repository_full_name":"chrisliny/agentskills","classification":"skill_collection","persisted_index_search_match":false}
+  ],
+  "verification": {
+    "identity_source": "live GitHub repository search",
+    "batch_deduplication": "20 distinct case-insensitive owner/repository identities",
+    "persisted_index_lookup": "Each of the 20 exact repository_full_name values was searched in idaibin/ai-handbook; zero indexed-text matches were returned.",
+    "negative_lookup_boundary": "A negative repository code-search result is not treated as proof that the identity is absent from every historical source batch. Therefore these 20 identities remain staging candidates and do not advance canonical totals.",
+    "classification_basis": "repository identity and GitHub search context only",
+    "content": "not_started",
+    "note": "Index-only. No README, SKILL.md, scripts, references, eval contents, stars, quality, or implementation content was read."
+  }
+}
