@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-07-batch-022",
+  "status": "structure-reviewed",
+  "runtime_validation": "not_executed",
+  "repositories_completed_this_batch": 10,
+  "repository_scoped_skill_reports_this_batch": 27,
+  "direct_skill_body_reviews_this_batch": 27,
+  "repositories_structure_reviewed_total": 220,
+  "repository_scoped_skill_reports_total": 2600,
+  "canonical_eligible_basis": 2088,
+  "remaining_estimate": 1868,
+  "observed_at": "2026-08-07",
+  "batch_report": "research/agent-skills/batches/2026-08-07-batch-022-deep-analysis.md",
+  "skill_report": "research/agent-skills/batches/2026-08-07-batch-022-skill-reports.md",
+  "note": "Batch 022 completed content-level review of 10 repositories from the existing indexed queue; all 27 reported repository-scoped SKILL.md bodies were directly read. Runtime validation remains not executed."
+}
