@@ -1,0 +1,142 @@
+{
+  "batch_id": "2026-08-08-batch-028",
+  "date": "2026-08-08",
+  "stage": "repository deep analysis",
+  "status": "completed",
+  "queue_source": "sources/catalog/batches/agentskills-created-2026-03-30-deterministic.json",
+  "repositories_reviewed": 10,
+  "direct_skill_body_reviews": 27,
+  "repository_scoped_skill_reports_added": 27,
+  "runtime_validation": "not_executed",
+  "completion_gate": "repository identity, exact observed stars, pinned revision, and actual repository contents must be read; metadata-only completion is forbidden",
+  "totals_after_batch": {
+    "repositories_structure_reviewed_total": 280,
+    "repository_scoped_skill_reports_total": 2799,
+    "canonical_eligible_basis": 2088,
+    "remaining_estimate": 1808,
+    "remaining_estimate_status": "arithmetic continuation only; deterministic index shards still require canonical reconciliation"
+  },
+  "artifact_commits": {
+    "repository_analysis": "88336d01a0b3309d5e03a5edec8e8b4482eecc3c",
+    "skill_reports": "67052511aa468135de193eadd4bb18a47c3f7859"
+  },
+  "repositories": [
+    {
+      "repository": "RisorseArtificiali/agent-ready-skill",
+      "repository_id": 1196375122,
+      "stars_observed": 8,
+      "reviewed_revision": "364fba90748b69379bb27b6fd05cff3dbda0ae2b",
+      "indexed_classification": "single_skill_or_domain_package",
+      "content_classification": "skill_collection",
+      "skill_reports": 6,
+      "runtime_validation": "not_executed",
+      "result": "six-skill v2 agent-readiness suite; scoring/remediation references and read-only signal scripts inspected"
+    },
+    {
+      "repository": "dglijin-oss/xuanji-five-skills",
+      "repository_id": 1195918665,
+      "stars_observed": 7,
+      "reviewed_revision": "3f685a97b6ec634171394ec4823f70924983cb90",
+      "indexed_classification": "skill_collection",
+      "content_classification": "skill_collection",
+      "skill_reports": 5,
+      "runtime_validation": "not_executed",
+      "result": "five skill definitions and five implementations reviewed; missing referenced helper and source-level syntax defects recorded"
+    },
+    {
+      "repository": "pinkpixel-dev/agentskills-mcp",
+      "repository_id": 1195679864,
+      "stars_observed": 2,
+      "reviewed_revision": "808be83bf4344e4db532e1bb36da9811e7300194",
+      "indexed_classification": "skill_tooling",
+      "content_classification": "skill_tooling_plus_local_skill_collection",
+      "skill_reports": 5,
+      "runtime_validation": "not_executed",
+      "result": "FastMCP GitHub skill discovery/install server plus five local Codex skills; scripts and evaluation guide inspected"
+    },
+    {
+      "repository": "dglijin-oss/fengshui-skill",
+      "repository_id": 1195920040,
+      "stars_observed": 4,
+      "reviewed_revision": "7c84ed48ed4d97319d077f0678d494afa4e3646e",
+      "indexed_classification": "single_skill_or_domain_package",
+      "content_classification": "single_skill_or_domain_package",
+      "skill_reports": 1,
+      "runtime_validation": "not_executed",
+      "result": "v5 SKILL versus v1.x/v2.x implementation/export drift recorded"
+    },
+    {
+      "repository": "dglijin-oss/liuren-skill",
+      "repository_id": 1195920133,
+      "stars_observed": 2,
+      "reviewed_revision": "a3bbd3890bc9fc4c2fc97ab1d2e7a19a570c26db",
+      "indexed_classification": "single_skill_or_domain_package",
+      "content_classification": "single_skill_or_domain_package",
+      "skill_reports": 1,
+      "runtime_validation": "not_executed",
+      "result": "v5 declared capability substantially exceeds explicitly simplified v1.1 source"
+    },
+    {
+      "repository": "Willmo103/AgentSkillsBuilder",
+      "repository_id": 1196541772,
+      "stars_observed": 0,
+      "reviewed_revision": "b43c9195880b287a646f23227ff6659c94e6ff9a",
+      "indexed_classification": "skill_tooling",
+      "content_classification": "single_skill_package",
+      "skill_reports": 1,
+      "runtime_validation": "not_executed",
+      "result": "root README/SKILL absent at pinned revision; python-uv-scripting SKILL reviewed"
+    },
+    {
+      "repository": "dglijin-oss/ze-ri-skill",
+      "repository_id": 1195919542,
+      "stars_observed": 0,
+      "reviewed_revision": "411081b9713ce541c081e81c71d4114705d95014",
+      "indexed_classification": "single_skill_or_domain_package",
+      "content_classification": "single_skill_or_domain_package",
+      "skill_reports": 1,
+      "runtime_validation": "not_executed",
+      "result": "source-level yi/ji versus 宜/忌 contract mismatch and version drift recorded"
+    },
+    {
+      "repository": "dglijin-oss/taiyi-skill",
+      "repository_id": 1195919940,
+      "stars_observed": 1,
+      "reviewed_revision": "2aafc24a4c10397a3dc7c12e0acd7e918e4e04dd",
+      "indexed_classification": "single_skill_or_domain_package",
+      "content_classification": "single_skill_or_domain_package",
+      "skill_reports": 1,
+      "runtime_validation": "not_executed",
+      "result": "v5 declared scope versus simplified v1.1 implementation and static argument/type concerns recorded"
+    },
+    {
+      "repository": "dglijin-oss/ziwei-skill",
+      "repository_id": 1195919803,
+      "stars_observed": 0,
+      "reviewed_revision": "2972be97eed709dc2487f1944e9d1b34ae59648b",
+      "indexed_classification": "single_skill_or_domain_package",
+      "content_classification": "single_skill_or_domain_package",
+      "skill_reports": 1,
+      "runtime_validation": "not_executed",
+      "result": "README language mismatch and v5 versus simplified v1.1 implementation drift recorded"
+    },
+    {
+      "repository": "maeste/agent-ready-skill",
+      "repository_id": 1196376579,
+      "stars_observed": 1,
+      "reviewed_revision": "71c2049ffeb0052719ffa6e6263909d714d0319a",
+      "indexed_classification": "single_skill_or_domain_package",
+      "content_classification": "skill_collection",
+      "skill_reports": 5,
+      "runtime_validation": "not_executed",
+      "result": "five-skill eight-dimension v1 model reviewed; materially distinct from Risorse v2 and not deduplicated"
+    }
+  ],
+  "verification_notes": [
+    "All 10 repositories were counted only after actual content reads.",
+    "27 individual SKILL.md bodies were directly reviewed.",
+    "Large queued collections were not marked complete when full skill-level review could not be finished.",
+    "Source/static defects are labeled as such; no runtime failure/success is inferred.",
+    "Evaluation/reference documents are not treated as evidence of executed evaluations."
+  ]
+}
