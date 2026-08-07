@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-08-batch-027",
+  "observed_at": "2026-08-08",
+  "phase": "deep_analysis",
+  "status": "structure-reviewed",
+  "runtime_validation": "not_executed",
+  "queue_sources": [
+    "sources/catalog/batches/agentskills-created-2026-03-28-deterministic.json",
+    "sources/catalog/batches/agentskills-created-2026-03-27-deterministic.json",
+    "sources/catalog/batches/agentskills-created-2026-03-26-deterministic.json"
+  ],
+  "repositories_reviewed_this_batch": 10,
+  "repository_scoped_skill_reports_this_batch": 22,
+  "direct_skill_body_reviews_this_batch": 22,
+  "repositories_structure_reviewed_total": 270,
+  "repository_scoped_skill_reports_total": 2772,
+  "canonical_eligible_basis": 2088,
+  "remaining_estimate": 1818,
+  "remaining_estimate_note": "Arithmetic continuation from the existing deep-analysis basis. Deterministic March index shards still require canonical reconciliation, and content-level reclassification/deduplication corrections should be applied before treating this as a final unique-repository remainder.",
+  "repositories": [
+    {
+      "identity": "zyq5428/zephyr-agent-skills",
+      "repository_id": 1194502551,
+      "stars_observed": 0,
+      "reviewed_revision": "431ef375fadc8cd22cdbee53311ec5807d505657",
+      "classification": "zephyr_rtos_skill_collection",
+      "skill_reports": 21,
+      "result": "structure_reviewed"
+    },
+    {
+      "identity": "liangyongqin/zephyr-agent-skills",
+      "repository_id": 1194276522,
+      "stars_observed": 0,
+      "reviewed_revision": "d1ba906ec587339bc93e466e212248ccac21e4bf",
+      "classification": "zephyr_rtos_packaging_variant",
+      "skill_reports": 0,
+      "result": "reference_dedupe"
+    },
+    {
+      "identity": "blackwell-systems/agentskills-cli",
+      "repository_id": 1193377004,
+      "stars_observed": 2,
+      "reviewed_revision": "31f35119e4ed0e8165313ee3f1a7e8938cb481cf",
+      "classification": "skill_tooling_with_bundled_skill",
+      "skill_reports": 1,
+      "result": "structure_reviewed"
+    },
+    {
+      "identity": "gplm0/agentskills",
+      "repository_id": 1193771717,
+      "stars_observed": 0,
+      "reviewed_revision": "b5ce2a438123f9f9c9b167c5af297c048f15395b",
+      "classification": "official_agent_skills_spec_snapshot",
+      "skill_reports": 0,
+      "result": "reference_dedupe"
+    },
+    {
+      "identity": "TracyHe/agentskills",
+      "repository_id": 1192229698,
+      "stars_observed": 0,
+      "reviewed_revision": "5e7f3e2c4c9f5464fe342bf2fea72367a914e9b4",
+      "classification": "official_agent_skills_spec_snapshot_docs_delta",
+      "skill_reports": 0,
+      "result": "reference_dedupe"
+    },
+    {
+      "identity": "chlin1983/agentskills",
+      "repository_id": 1192286383,
+      "stars_observed": 0,
+      "reviewed_revision": "b5ce2a438123f9f9c9b167c5af297c048f15395b",
+      "classification": "official_agent_skills_spec_snapshot",
+      "skill_reports": 0,
+      "result": "reference_dedupe"
+    },
+    {
+      "identity": "ghwoodard/agentskills",
+      "repository_id": 1192922480,
+      "stars_observed": 0,
+      "reviewed_revision": "b5ce2a438123f9f9c9b167c5af297c048f15395b",
+      "classification": "official_agent_skills_spec_snapshot",
+      "skill_reports": 0,
+      "result": "reference_dedupe"
+    },
+    {
+      "identity": "puppetls/agentskills",
+      "repository_id": 1192689086,
+      "stars_observed": 0,
+      "reviewed_revision": "b5ce2a438123f9f9c9b167c5af297c048f15395b",
+      "classification": "official_agent_skills_spec_snapshot",
+      "skill_reports": 0,
+      "result": "reference_dedupe"
+    },
+    {
+      "identity": "xhoanggiang/agentskills",
+      "repository_id": 1192381797,
+      "stars_observed": 0,
+      "reviewed_revision": "b5ce2a438123f9f9c9b167c5af297c048f15395b",
+      "classification": "official_agent_skills_spec_snapshot",
+      "skill_reports": 0,
+      "result": "reference_dedupe"
+    },
+    {
+      "identity": "camillanapoles/skills_agentskills_reference",
+      "repository_id": 1192975744,
+      "stars_observed": 0,
+      "reviewed_revision": "b5ce2a438123f9f9c9b167c5af297c048f15395b",
+      "classification": "official_agent_skills_spec_snapshot",
+      "skill_reports": 0,
+      "result": "reference_dedupe"
+    }
+  ],
+  "verification": {
+    "metadata_only_completion_forbidden": true,
+    "identity_verified": true,
+    "exact_stars_verified": true,
+    "actual_content_read": true,
+    "skill_definitions_read_when_present": true,
+    "scripts_references_evals_inspected_when_material": true,
+    "exact_commit_reuse_requires_prior_content_review": true,
+    "third_party_runtime_executed": false,
+    "note": "The batch directly read 21 distinct Zephyr SKILL.md bodies plus the bundled progressive-disclosure guide. Exact commit/delta evidence was used to reuse already-reviewed specification and Zephyr trees without emitting duplicate reports. Larger unique collections encountered during queue walking were not marked complete unless their individual-skill review finished."
+  }
+}
