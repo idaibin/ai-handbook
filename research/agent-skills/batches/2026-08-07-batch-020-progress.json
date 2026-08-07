@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-07-batch-020",
+  "observed_at": "2026-08-07T18:58:55+08:00",
+  "queue_source": "sources/catalog/batches/agentskills-pages-2-3.json",
+  "repositories_completed_this_batch": 10,
+  "repository_scoped_skill_reports_this_batch": 42,
+  "repositories_structure_reviewed_total": 200,
+  "repository_scoped_skill_reports_total": 2550,
+  "canonical_eligible_basis": 2088,
+  "remaining_estimate": 1888,
+  "status": "structure-reviewed",
+  "runtime_validation": "not_executed",
+  "batch_report": "research/agent-skills/batches/2026-08-07-batch-020-deep-analysis.md",
+  "skill_report": "research/agent-skills/batches/2026-08-07-batch-020-skill-reports.md",
+  "completed_repositories": [
+    "chigwell/skilldock.io",
+    "akshayaggarwal99/agentskills",
+    "phronetic-ai/agentskills",
+    "trancong12102/agentskills",
+    "jason-allen-oneal/openclaw-skill-scanner",
+    "AnsonLai/AgentSkills.legal-Multi-Contract-Analyzer",
+    "civitai/civitai-gen-skill",
+    "SherifEldeeb/agentskills",
+    "editframe/skills",
+    "tiann/execplan-skill"
+  ],
+  "classification_corrections": [
+    {
+      "repository": "chigwell/skilldock.io",
+      "content_classification": "skill_tooling_registry_sdk",
+      "repository_scoped_skills": 0,
+      "reason": "Actual repository content implements a registry/package manager and packages external skill directories; no local bundled skill definition was counted."
+    },
+    {
+      "repository": "akshayaggarwal99/agentskills",
+      "content_classification": "skill_tooling_registry_cli",
+      "repository_scoped_skills": 0,
+      "reason": "Actual source fetches/parses upstream Anthropic or local external skills; upstream skills are not repository-scoped content."
+    },
+    {
+      "repository": "AnsonLai/AgentSkills.legal-Multi-Contract-Analyzer",
+      "content_classification": "adjacent_legal_ai_application",
+      "repository_scoped_skills": 0,
+      "reason": "No formal SKILL.md was found; the application uses internal legal rules/checklists called skills."
+    }
+  ],
+  "progress_rollup_note": "This immutable batch delta records the verified batch-020 advance. The monolithic research/agent-skills/deep-analysis-progress.json was not replaced in this commit because its large single-line content could not be safely round-tripped without risking loss of prior completed-repository history."
+}
