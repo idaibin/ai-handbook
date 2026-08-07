@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0",
-  "latest_batch_id": "2026-08-07-batch-020",
-  "latest_batch_report": "research/agent-skills/batches/2026-08-07-batch-020-deep-analysis.md",
-  "latest_batch_progress": "research/agent-skills/batches/2026-08-07-batch-020-progress.json",
-  "latest_skill_report": "research/agent-skills/batches/2026-08-07-batch-020-skill-reports.md",
-  "repositories_structure_reviewed_total": 200,
-  "repository_scoped_skill_reports_total": 2550,
+  "latest_batch_id": "2026-08-07-batch-021",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-07-batch-021-deep-analysis.md",
+  "latest_batch_progress": "research/agent-skills/batches/2026-08-07-batch-021-progress.json",
+  "latest_skill_report": "research/agent-skills/batches/2026-08-07-batch-021-skill-reports.md",
+  "repositories_structure_reviewed_total": 210,
+  "repository_scoped_skill_reports_total": 2573,
   "canonical_eligible_basis": 2088,
-  "remaining_estimate": 1888,
+  "remaining_estimate": 1878,
   "status": "structure-reviewed",
   "runtime_validation": "not_executed",
-  "observed_at": "2026-08-07T18:58:55+08:00",
-  "note": "Small latest-pointer artifact introduced to allow safe future rollups without replacing the large single-line canonical progress manifest."
+  "observed_at": "2026-08-07",
+  "note": "Batch 021 advanced from the existing indexed queue after content-level review of 10 repositories. Runtime validation remains not executed."
 }
