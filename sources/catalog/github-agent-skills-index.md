@@ -26,33 +26,34 @@ agentskills in:name,description
 | --- | ---: | --- |
 | `2026-01` | 368 | complete; terminal page `20 = 0` |
 | `2026-02` | 402 | deterministic daily reconciliation complete; recovered `UCTooCom/agentskills-runtime` |
+| `2026-03` | 831 | 31 deterministic single-day shards complete; historical reconciliation pending |
 
-## March 2026 created-date partition — deterministic indexing in progress
+## March 2026 created-date partition — deterministic indexing complete
 
 Verified persisted coverage:
 
 ```text
-2026-03-01 .. 2026-03-30
+2026-03-01 .. 2026-03-31
 per_page=100
-30 exact single-day shards with explicit terminal pagination probes
+31 exact single-day shards with explicit terminal pagination probes
 ```
 
-March staging through March 29 contained `727 / 727` identities. The `2026-03-30` shard contributed `35 / 35` additional case-insensitive unique identities with page counts `35, 0`. Exact `created:` day shards are disjoint by repository creation date, so cumulative March staging is now `762 / 762` identities with no intra-March duplicate asserted.
+March staging through March 30 contained `762 / 762` identities. The `2026-03-31` shard contributed `69 / 69` additional case-insensitive unique identities with page counts `69, 0`. Exact `created:` day shards are disjoint by repository creation date, so final March staging is `831 / 831` identities with no intra-March duplicate asserted.
 
-### March provisional classification through 2026-03-30
+### March final provisional classification
 
 | Classification | Count |
 | --- | ---: |
 | `specification` | 0 |
-| `skill_collection` | 593 |
-| `single_skill_or_domain_package` | 61 |
-| `awesome_index` | 3 |
-| `skill_tooling` | 37 |
-| `adjacent_search_hit` | 63 |
-| `unclear_search_hit` | 5 |
-| **Total** | **762** |
+| `skill_collection` | 606 |
+| `single_skill_or_domain_package` | 106 |
+| `awesome_index` | 4 |
+| `skill_tooling` | 38 |
+| `adjacent_search_hit` | 71 |
+| `unclear_search_hit` | 6 |
+| **Total** | **831** |
 
-The March 30 contribution is `21 skill_collection`, `9 single_skill_or_domain_package`, `3 skill_tooling`, and `2 adjacent_search_hit`. Classification is index-stage only and uses repository identity/name metadata; it is not a deep-content determination.
+The March 31 contribution is `13 skill_collection`, `45 single_skill_or_domain_package`, `1 awesome_index`, `1 skill_tooling`, `8 adjacent_search_hit`, and `1 unclear_search_hit`. Classification is index-stage only and uses repository identity/name metadata; it is not a deep-content determination.
 
 ### March artifacts
 
@@ -74,8 +75,9 @@ The March 30 contribution is `21 skill_collection`, `9 single_skill_or_domain_pa
 - [`batches/agentskills-created-2026-03-28-deterministic.json`](batches/agentskills-created-2026-03-28-deterministic.json)
 - [`batches/agentskills-created-2026-03-29-deterministic.json`](batches/agentskills-created-2026-03-29-deterministic.json)
 - [`batches/agentskills-created-2026-03-30-deterministic.json`](batches/agentskills-created-2026-03-30-deterministic.json)
+- [`batches/agentskills-created-2026-03-31-deterministic.json`](batches/agentskills-created-2026-03-31-deterministic.json)
 
-Current run report: [`runs/2026-08-08-agentskills-march-2026-03-30.md`](runs/2026-08-08-agentskills-march-2026-03-30.md).
+Current run report: [`runs/2026-08-08-agentskills-march-2026-03-31.md`](runs/2026-08-08-agentskills-march-2026-03-31.md).
 
 ## Evidence boundary
 
@@ -83,4 +85,4 @@ This phase is index-only. No target repository README, `SKILL.md`, scripts, refe
 
 ## Next index action
 
-Continue the deterministic March partition with the `2026-03-31` exact single-day shard. Keep canonical totals frozen until created-date partition unions are reconciled against unpartitioned staging and the complete historical canonical ledger.
+Begin the deterministic April partition with the `2026-04-01` exact single-day shard. Keep canonical totals frozen until created-date partition unions are reconciled against unpartitioned staging and the complete historical canonical ledger.
