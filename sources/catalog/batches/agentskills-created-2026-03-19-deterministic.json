@@ -1,0 +1,54 @@
+{
+  "schema_version": "2.2",
+  "observed_at": "2026-08-07",
+  "scope": "github_agent_skills_repository_index",
+  "phase": "index_only",
+  "partition": "2026-03",
+  "date_range": "2026-03-19..2026-03-19",
+  "query": "agentskills in:name,description created:2026-03-19..2026-03-19",
+  "per_page": 100,
+  "deduplication_key": "case_insensitive owner/repository",
+  "page_counts": [18, 0],
+  "repositories": [
+    {"identity":"Adam-S-Daniel/agentskills","classification":"skill_collection"},
+    {"identity":"mrpbennett/agentskills","classification":"skill_collection"},
+    {"identity":"asynchronos/agentskills","classification":"skill_collection"},
+    {"identity":"BasinLeon/agentskills","classification":"skill_collection"},
+    {"identity":"MariDaCoder/agentskills","classification":"skill_collection"},
+    {"identity":"maksy5310/agentskills","classification":"skill_collection"},
+    {"identity":"tupe12334/agentskills","classification":"skill_collection"},
+    {"identity":"useiya/agentskills","classification":"skill_collection"},
+    {"identity":"ok406lhq/skills-guardian","classification":"skill_tooling"},
+    {"identity":"jeremyknows/skill-doctor","classification":"skill_tooling"},
+    {"identity":"twbeatles/openclaw-korea-domestic-flights","classification":"adjacent_search_hit"},
+    {"identity":"yashasvigirdhar/skills","classification":"skill_collection"},
+    {"identity":"qihan-bot/stock-deep-research","classification":"adjacent_search_hit"},
+    {"identity":"eddieluong/investment-analyst","classification":"adjacent_search_hit"},
+    {"identity":"danielscow/wondelai","classification":"adjacent_search_hit"},
+    {"identity":"norrishuang/opensearch-vector-search-skill","classification":"single_skill_or_domain_package"},
+    {"identity":"zhongtingting/user-chat-analyst-skill","classification":"single_skill_or_domain_package"},
+    {"identity":"akolk/pydantic-ai-skills","classification":"skill_collection"}
+  ],
+  "summary": {
+    "raw_candidate_records": 18,
+    "unique": 18,
+    "internal_duplicates": 0,
+    "classification_counts": {
+      "specification": 0,
+      "skill_collection": 10,
+      "single_skill_or_domain_package": 2,
+      "awesome_index": 0,
+      "skill_tooling": 2,
+      "adjacent_search_hit": 4,
+      "unclear_search_hit": 0
+    },
+    "canonical_delta_asserted": 0
+  },
+  "verification": {
+    "pagination": "Page 1 returned 18 repositories with per_page=100; explicit page 2 returned 0.",
+    "deduplication": "All 18 identities are distinct under case-insensitive owner/repository comparison. Exact created-date shards are disjoint from the persisted 2026-03-01..2026-03-18 date range by repository creation date.",
+    "classification": "Provisional index-stage classification uses repository identity/name metadata only; it is not a deep-content conclusion.",
+    "content": "not_started",
+    "note": "Index-only. No target repository README, SKILL.md, scripts, references, evals, stars, implementation code, or runtime behavior was inspected."
+  }
+}
