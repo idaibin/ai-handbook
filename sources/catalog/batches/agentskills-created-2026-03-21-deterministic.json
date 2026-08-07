@@ -1,0 +1,54 @@
+{
+  "schema_version": "2.2",
+  "observed_at": "2026-08-07",
+  "scope": "github_agent_skills_repository_index",
+  "phase": "index_only",
+  "partition": "2026-03",
+  "date_range": "2026-03-21..2026-03-21",
+  "query": "agentskills in:name,description created:2026-03-21..2026-03-21",
+  "per_page": 100,
+  "deduplication_key": "case_insensitive owner/repository",
+  "page_counts": [18, 0],
+  "repositories": [
+    {"identity":"NecturaLabs/AgentSkills","classification":"skill_collection"},
+    {"identity":"vibeailabs-tech/agentskills","classification":"skill_collection"},
+    {"identity":"Thazzbelly/agentskills","classification":"skill_collection"},
+    {"identity":"armstrongl/agentskills","classification":"skill_collection"},
+    {"identity":"coding-fastandslow/agentskills","classification":"skill_collection"},
+    {"identity":"erkdgn/agentskills","classification":"skill_collection"},
+    {"identity":"PhungKhacVu/agentskills","classification":"skill_collection"},
+    {"identity":"master-starcloud/agentskills","classification":"skill_collection"},
+    {"identity":"AstraBert/skillzy","classification":"skill_tooling"},
+    {"identity":"openpup/openpup-skills","classification":"skill_collection"},
+    {"identity":"0xchitti/agentskillz","classification":"skill_collection"},
+    {"identity":"SuperPauly/SkillCreatorSkill","classification":"single_skill_or_domain_package"},
+    {"identity":"gtm-k/skill-forge","classification":"skill_tooling"},
+    {"identity":"dmoraine/clawEASA","classification":"adjacent_search_hit"},
+    {"identity":"danzee1/Anthropic-Cybersecurity-Skills","classification":"skill_collection"},
+    {"identity":"danhively/Anthropic-Cybersecurity-Skills","classification":"skill_collection"},
+    {"identity":"YFengFly/Anthropic-Cybersecurity-Skills","classification":"skill_collection"},
+    {"identity":"sahilccras/Anthropic-Cybersecurity-Skills","classification":"skill_collection"}
+  ],
+  "summary": {
+    "raw_candidate_records": 18,
+    "unique": 18,
+    "internal_duplicates": 0,
+    "classification_counts": {
+      "specification": 0,
+      "skill_collection": 14,
+      "single_skill_or_domain_package": 1,
+      "awesome_index": 0,
+      "skill_tooling": 2,
+      "adjacent_search_hit": 1,
+      "unclear_search_hit": 0
+    },
+    "canonical_delta_asserted": 0
+  },
+  "verification": {
+    "pagination": "Page 1 returned 18 repositories with per_page=100; explicit page 2 returned 0.",
+    "deduplication": "All 18 identities are distinct under case-insensitive owner/repository comparison. Exact created-date shards are disjoint from the persisted 2026-03-01..2026-03-20 date range by repository creation date.",
+    "classification": "Provisional index-stage classification uses repository identity/name metadata only; it is not a deep-content conclusion.",
+    "content": "not_started",
+    "note": "Index-only. No target repository README, SKILL.md, scripts, references, evals, stars, implementation code, or runtime behavior was inspected."
+  }
+}
