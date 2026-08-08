@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-08-batch-032",
+  "observed_at": "2026-08-08",
+  "stage": "repository deep analysis",
+  "queue_source": "sources/catalog/batches/agentskills-created-2026-04-01-deterministic.json",
+  "repositories_completed_this_batch": 10,
+  "repositories_structure_reviewed_total": 320,
+  "repository_scoped_skill_reports_added_this_batch": 0,
+  "repository_scoped_skill_reports_total": 2817,
+  "direct_skill_bodies_reviewed_this_batch": 5,
+  "canonical_eligible_basis": 2088,
+  "remaining_estimate": 1768,
+  "remaining_estimate_note": "Arithmetic continuation against the frozen 2088 canonical basis; deterministic index shards still require canonical reconciliation, so this is not a final unique-repository remainder.",
+  "runtime_build_test_eval_execution": "not_executed",
+  "repositories": [
+    {"repository":"camCX/lightweight-explorer","repository_id":1198535778,"stars_observed":0,"revision":"ba11d7eaab78fafd3982d36bff78c0f3fba633b1","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","skill_reports":0,"status":"completed"},
+    {"repository":"camCX/smart-memory-guard","repository_id":1198535005,"stars_observed":0,"revision":"802b0f14f8f0fbdc8ee4be39cdc342e5121efbeb","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","skill_reports":0,"status":"completed"},
+    {"repository":"alexchenyu/task-concurrency-patterns","repository_id":1198044270,"stars_observed":0,"revision":"7fa43a3fc72ceb0fb488fedbb09faa37198fcb5e","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","skill_reports":0,"status":"completed"},
+    {"repository":"wbxjj2008/smart-memory-guard","repository_id":1198101399,"stars_observed":0,"revision":"802b0f14f8f0fbdc8ee4be39cdc342e5121efbeb","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","skill_reports":0,"status":"completed"},
+    {"repository":"wbxjj2008/task-concurrency-patterns","repository_id":1198102830,"stars_observed":0,"revision":"7fa43a3fc72ceb0fb488fedbb09faa37198fcb5e","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","skill_reports":0,"status":"completed"},
+    {"repository":"MandyDragon/worker-prompt-craft","repository_id":1197911989,"stars_observed":0,"revision":"8f8a14fc8da0e687457516da3d9f79f8873e9061","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","skill_reports":0,"status":"completed"},
+    {"repository":"k1w1f1sh/adversarial-verification","repository_id":1198053996,"stars_observed":0,"revision":"909a2f70fc0de13aff1175c0b507ec24bf0b4815","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","skill_reports":0,"status":"completed"},
+    {"repository":"wbxjj2008/adversarial-verification","repository_id":1198101453,"stars_observed":0,"revision":"909a2f70fc0de13aff1175c0b507ec24bf0b4815","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","skill_reports":0,"status":"completed"},
+    {"repository":"wbxjj2008/lightweight-explorer","repository_id":1198101362,"stars_observed":0,"revision":"ba11d7eaab78fafd3982d36bff78c0f3fba633b1","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","skill_reports":0,"status":"completed"},
+    {"repository":"ShawnSiao/lightweight-explorer","repository_id":1198482434,"stars_observed":0,"revision":"ba11d7eaab78fafd3982d36bff78c0f3fba633b1","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","skill_reports":0,"status":"completed"}
+  ],
+  "content_deduplication": [
+    {"repositories":["camCX/lightweight-explorer","wbxjj2008/lightweight-explorer","ShawnSiao/lightweight-explorer"],"shared_revision":"ba11d7eaab78fafd3982d36bff78c0f3fba633b1","existing_review":"2026-08-08-batch-031","new_skill_reports_generated":0},
+    {"repositories":["camCX/smart-memory-guard","wbxjj2008/smart-memory-guard"],"shared_revision":"802b0f14f8f0fbdc8ee4be39cdc342e5121efbeb","existing_review":"2026-08-08-batch-030","new_skill_reports_generated":0},
+    {"repositories":["alexchenyu/task-concurrency-patterns","wbxjj2008/task-concurrency-patterns"],"shared_revision":"7fa43a3fc72ceb0fb488fedbb09faa37198fcb5e","existing_review":"2026-08-08-batch-030","new_skill_reports_generated":0},
+    {"repositories":["MandyDragon/worker-prompt-craft"],"shared_revision":"8f8a14fc8da0e687457516da3d9f79f8873e9061","existing_review":"2026-08-08-batch-030","new_skill_reports_generated":0},
+    {"repositories":["k1w1f1sh/adversarial-verification","wbxjj2008/adversarial-verification"],"shared_revision":"909a2f70fc0de13aff1175c0b507ec24bf0b4815","existing_review":"2026-08-08-batch-030","new_skill_reports_generated":0}
+  ],
+  "artifact_search": {
+    "repositories_searched": 10,
+    "query": "scripts references eval package.json",
+    "matches": 0,
+    "interpretation": "No repository-local executable/script/reference/eval/package artifacts surfaced in code search or reviewed documentation at the pinned revisions."
+  }
+}
