@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-08-batch-035",
+  "observed_at": "2026-08-08",
+  "stage": "repository deep analysis",
+  "queue_source": "sources/catalog/batches/agentskills-created-2026-04-01-deterministic.json",
+  "queue_slice": "70-79",
+  "repositories_completed_this_batch": 10,
+  "repositories_structure_reviewed_total": 350,
+  "repository_scoped_skill_reports_added_this_batch": 1,
+  "repository_scoped_skill_reports_total": 2819,
+  "repository_skill_files_read_this_batch": 10,
+  "direct_unique_skill_bodies_reviewed_this_batch": 8,
+  "canonical_eligible_basis": 2088,
+  "remaining_estimate": 1738,
+  "remaining_estimate_note": "Arithmetic continuation against the frozen 2088 canonical basis; deterministic index shards still require canonical reconciliation, so this is not a final unique-repository remainder.",
+  "runtime_build_test_eval_execution": "not_executed",
+  "artifact_commits": {
+    "repository_analysis": "eafae387b0ff3001090da80f44304a2363352ab3",
+    "skill_reports": "b2b05c48837e6ca523e997131e94be75bc2fe8cd"
+  },
+  "repositories": [
+    {"repository":"wbxjj2008/worker-prompt-craft","repository_id":1198101932,"stars_observed":0,"revision":"8f8a14fc8da0e687457516da3d9f79f8873e9061","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","canonical_review":"2026-08-08-batch-030","skill_reports":0,"status":"completed"},
+    {"repository":"MandyDragon/task-concurrency-patterns","repository_id":1197912503,"stars_observed":0,"revision":"7fa43a3fc72ceb0fb488fedbb09faa37198fcb5e","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","canonical_review":"2026-08-08-batch-030","skill_reports":0,"status":"completed"},
+    {"repository":"MandyDragon/memory-type-system","repository_id":1197912140,"stars_observed":0,"revision":"d3805f3e5a576afd0c55e2de9cddb78511a30c95","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","canonical_review":"2026-08-08-batch-030","skill_reports":0,"status":"completed"},
+    {"repository":"ajunlonglive/context-budget-analyzer","repository_id":1198092186,"stars_observed":0,"revision":"7d969967a717beb52538d510d42ee45b9f2d65a8","content_class":"content-reviewed-document-policy-skill","canonical_review":"2026-08-08-batch-035","skill_reports":1,"status":"completed"},
+    {"repository":"camCX/self-rationalization-guard","repository_id":1198540077,"stars_observed":0,"revision":"3df614e3ae87d80b3be338d247a2fc2488dc22a2","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","canonical_review":"2026-08-08-batch-031","skill_reports":0,"status":"completed"},
+    {"repository":"alexchenyu/smart-memory-guard","repository_id":1198042883,"stars_observed":0,"revision":"802b0f14f8f0fbdc8ee4be39cdc342e5121efbeb","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","canonical_review":"2026-08-08-batch-030","skill_reports":0,"status":"completed"},
+    {"repository":"ShawnSiao/adversarial-verification","repository_id":1198481081,"stars_observed":0,"revision":"909a2f70fc0de13aff1175c0b507ec24bf0b4815","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","canonical_review":"2026-08-08-batch-030","skill_reports":0,"status":"completed"},
+    {"repository":"YTT-CSH/task-concurrency-patterns","repository_id":1198155959,"stars_observed":0,"revision":"7fa43a3fc72ceb0fb488fedbb09faa37198fcb5e","content_class":"exact-full-tree-duplicate","canonical_review":"2026-08-08-batch-030","skill_reports":0,"status":"completed"},
+    {"repository":"ajunlonglive/coordinator-orchestrator","repository_id":1198083717,"stars_observed":0,"revision":"a6d0311d279b32497a9c952061fafb798309b4e3","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","canonical_review":"2026-08-08-batch-030","skill_reports":0,"status":"completed"},
+    {"repository":"MandyDragon/self-rationalization-guard","repository_id":1197912299,"stars_observed":0,"revision":"3df614e3ae87d80b3be338d247a2fc2488dc22a2","content_class":"exact-full-tree-duplicate","canonical_review":"2026-08-08-batch-031","skill_reports":0,"status":"completed"}
+  ],
+  "content_deduplication": [
+    {"repositories":["MandyDragon/task-concurrency-patterns","YTT-CSH/task-concurrency-patterns"],"shared_revision":"7fa43a3fc72ceb0fb488fedbb09faa37198fcb5e","existing_review":"2026-08-08-batch-030","new_skill_reports_generated":0},
+    {"repositories":["camCX/self-rationalization-guard","MandyDragon/self-rationalization-guard"],"shared_revision":"3df614e3ae87d80b3be338d247a2fc2488dc22a2","existing_review":"2026-08-08-batch-031","new_skill_reports_generated":0}
+  ],
+  "artifact_search": {
+    "repositories_searched": 10,
+    "queries": ["scripts", "references", "eval", "package.json"],
+    "matches": 0,
+    "interpretation": "No repository-local executable/script/reference/eval/package artifacts surfaced in code search or reviewed documentation at the pinned revisions."
+  },
+  "selection_note": "Selected the next ten qualified single-skill entries from positions 70-79 of the April 1 deterministic indexed queue after Batch 034. All ten passed identity/star/revision/content gates. Eight unique content trees were reviewed; seven mapped to existing canonical reviews and context-budget-analyzer added one new canonical skill report."
+}
