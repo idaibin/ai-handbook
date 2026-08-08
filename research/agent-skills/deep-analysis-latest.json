@@ -1,17 +1,18 @@
 {
   "schema_version": "1.0",
-  "latest_batch_id": "2026-08-08-batch-039",
-  "latest_batch_report": "research/agent-skills/batches/2026-08-08-batch-039-deep-analysis.md",
-  "latest_batch_progress": "research/agent-skills/batches/2026-08-08-batch-039-progress.json",
-  "latest_skill_report": "research/agent-skills/batches/2026-08-08-batch-039-skill-reports.md",
-  "repositories_structure_reviewed_total": 390,
-  "repository_scoped_skill_reports_total": 2827,
+  "latest_batch_id": "2026-08-08-batch-040",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-08-batch-040-deep-analysis.md",
+  "latest_batch_progress": "research/agent-skills/batches/2026-08-08-batch-040-progress.json",
+  "latest_skill_report": "research/agent-skills/batches/2026-08-08-batch-040-skill-reports.md",
+  "repositories_structure_reviewed_total": 400,
+  "repository_scoped_skill_reports_total": 2851,
   "canonical_eligible_basis": 2088,
-  "remaining_estimate": 1698,
+  "remaining_estimate": 1688,
   "status": "structure-reviewed",
   "runtime_validation": "not_executed",
-  "repository_skill_files_read_latest_batch": 12,
-  "direct_skill_body_reviews_latest_batch": 6,
+  "repository_skill_files_read_latest_batch": 29,
+  "direct_skill_body_reviews_latest_batch": 26,
+  "new_canonical_skill_reports_latest_batch": 24,
   "observed_at": "2026-08-08",
-  "note": "Batch 039 completed ten qualified repository identities after verifying GitHub identity, observed Stars, pinned revisions, and actual repository content. The ten identities collapse to four Git commit trees. Daily-briefing, current Wondel, an older Wondel-derived snapshot, and one shared Anthropic-Cybersecurity-Skills tree received repository-level deep review; the seven cybersecurity identities were each directly opened before exact-tree deduplication. Six directly reviewed skill-body revisions were added as canonical reports. Collection manifests/indexes verify 62, 41, and 753 skill identities respectively, but inventory-only entries are not counted as body-reviewed reports. Daily-briefing contains a committed hard-coded external API credential whose value is redacted; the cybersecurity index contains malformed/truncated metadata and its workflow only performs structural validation. magicoolx/typewriter-video remains held as adjacent_search_hit and HsinTsao/Anthropic-Cybersecurity-Skills remains pending after the ten-repository boundary. Runtime/build/test/eval execution remains not executed. The remaining estimate is arithmetic continuation from the frozen 2088 basis and remains subject to canonical reconciliation."
+  "note": "Batch 040 completed ten genuinely qualified repository identities after verifying GitHub identity, observed Stars, pinned revisions, and actual repository content. Five index-stage skill_collection candidates were reclassified and not completed after real content inspection showed an external-link index, an embedded external skill submodule, or Agent Skills specification/reference-SDK forks. The completed identities collapse to eight pinned revisions. Twenty-nine SKILL.md files were directly read, yielding 26 unique body reviews and 24 new canonical body reports; exact old Anthropic and Wondel bodies were mapped instead of duplicated. Major findings include Kagura's concrete but host-specific operational skill system and external-effect risks, ndtrongvn's deterministic file-gated pipeline with a project-specific rb-audit engine, Sylvia's real Dreamina dry-run/structured wrapper contract, an intermediate 42-skill Wondel snapshot, and newer defensive cybersecurity bodies with executable helpers but no measured behavioral eval. Runtime/build/test/eval execution remains not executed. The remaining estimate is arithmetic continuation from the frozen 2088 basis and remains subject to canonical reconciliation."
 }
