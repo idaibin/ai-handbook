@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-08-batch-036",
+  "stage": "repository_deep_analysis",
+  "observed_at": "2026-08-08",
+  "repositories_completed": 10,
+  "repository_skill_files_read": 10,
+  "repository_readmes_read": 10,
+  "unique_git_commit_trees_reviewed": 7,
+  "new_canonical_skill_reports": 0,
+  "repositories_structure_reviewed_total": 360,
+  "repository_scoped_skill_reports_total": 2819,
+  "canonical_eligible_basis": 2088,
+  "remaining_estimate": 1728,
+  "runtime_validation": "not_executed",
+  "artifact_search": {
+    "scripts": 0,
+    "references": 0,
+    "eval": 0,
+    "package.json": 0
+  },
+  "completed_repositories": [
+    {"identity":"ShawnSiao/self-rationalization-guard","github_id":1198484362,"stars":0,"revision":"3df614e3ae87d80b3be338d247a2fc2488dc22a2","skill":"self-rationalization-guard"},
+    {"identity":"ajunlonglive/adversarial-verification","github_id":1198092610,"stars":0,"revision":"909a2f70fc0de13aff1175c0b507ec24bf0b4815","skill":"adversarial-verification"},
+    {"identity":"YTT-CSH/lightweight-explorer","github_id":1198141106,"stars":0,"revision":"ba11d7eaab78fafd3982d36bff78c0f3fba633b1","skill":"lightweight-explorer"},
+    {"identity":"camCX/worker-prompt-craft","github_id":1198538019,"stars":0,"revision":"8f8a14fc8da0e687457516da3d9f79f8873e9061","skill":"worker-prompt-craft"},
+    {"identity":"drcaonet/lightweight-explorer","github_id":1198989891,"stars":0,"revision":"ba11d7eaab78fafd3982d36bff78c0f3fba633b1","skill":"lightweight-explorer"},
+    {"identity":"howknows/memory-type-system","github_id":1199422616,"stars":0,"revision":"d3805f3e5a576afd0c55e2de9cddb78511a30c95","skill":"memory-type-system"},
+    {"identity":"4ccsds/memory-type-system","github_id":1199651939,"stars":0,"revision":"d3805f3e5a576afd0c55e2de9cddb78511a30c95","skill":"memory-type-system"},
+    {"identity":"howknows/lightweight-explorer","github_id":1199421879,"stars":0,"revision":"ba11d7eaab78fafd3982d36bff78c0f3fba633b1","skill":"lightweight-explorer"},
+    {"identity":"drcaonet/task-concurrency-patterns","github_id":1198990180,"stars":0,"revision":"7fa43a3fc72ceb0fb488fedbb09faa37198fcb5e","skill":"task-concurrency-patterns"},
+    {"identity":"drcaonet/smart-memory-guard","github_id":1198989830,"stars":0,"revision":"802b0f14f8f0fbdc8ee4be39cdc342e5121efbeb","skill":"smart-memory-guard"}
+  ],
+  "queue_note": "Unselected entries remain pending and are not counted complete. Batch 036 completed only repositories for which identity, stars, pinned revision, README, and SKILL.md were all content-verified.",
+  "remaining_estimate_note": "Arithmetic continuation from the frozen canonical eligible basis; canonical reconciliation remains pending."
+}
