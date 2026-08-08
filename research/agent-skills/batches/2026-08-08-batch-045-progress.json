@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-08-batch-045",
+  "status": "completed",
+  "observed_at": "2026-08-08",
+  "selection_policy": "existing indexed queue; complete exactly 10 genuinely qualified repository identities when at least 10 remain; metadata-only completion forbidden",
+  "completed_repositories_count": 10,
+  "completed_repositories": [
+    {
+      "repository": "aminrj/Anthropic-Cybersecurity-Skills",
+      "stars_observed": 0,
+      "revision": "4ae0be7f4806596e94958ac343379e9c9b3111d2",
+      "tree": "5dd2ce82978a50cd014d4b310f5993bf5bba6f43",
+      "content_gate": "README + representative SKILL.md + inventory/structure read",
+      "canonical_action": "mapped_existing"
+    },
+    {
+      "repository": "Aizenkyel/Anthropic-Cybersecurity-Skills",
+      "stars_observed": 0,
+      "revision": "4ae0be7f4806596e94958ac343379e9c9b3111d2",
+      "tree": "5dd2ce82978a50cd014d4b310f5993bf5bba6f43",
+      "content_gate": "README + representative SKILL.md read",
+      "canonical_action": "mapped_existing_exact_tree"
+    },
+    {
+      "repository": "CodeHemP/Anthropic-Cybersecurity-Skills",
+      "stars_observed": 0,
+      "revision": "4ae0be7f4806596e94958ac343379e9c9b3111d2",
+      "tree": "5dd2ce82978a50cd014d4b310f5993bf5bba6f43",
+      "content_gate": "README + representative SKILL.md read",
+      "canonical_action": "mapped_existing_exact_tree"
+    },
+    {
+      "repository": "TPFLegionaire/Anthropic-Cybersecurity-Skills",
+      "stars_observed": 0,
+      "revision": "4ae0be7f4806596e94958ac343379e9c9b3111d2",
+      "tree": "5dd2ce82978a50cd014d4b310f5993bf5bba6f43",
+      "content_gate": "README + representative SKILL.md read",
+      "canonical_action": "mapped_existing_exact_tree"
+    },
+    {
+      "repository": "stehessel/agentskills",
+      "stars_observed": 0,
+      "revision": "a3285d168613e95080d3e332e0d2488b75368067",
+      "tree": "09bb585bdd3c0bd5f11ccb447367929dfa068567",
+      "content_gate": "README + all 5 SKILL.md + Python helpers + references read",
+      "canonical_action": "5_new_reports"
+    },
+    {
+      "repository": "mkobit/chezmoi-skills",
+      "stars_observed": 1,
+      "revision": "5197fe69daf95a4b729cba87890eb349be33f95d",
+      "tree": "1c2a117dc313fba9d80ca3727bd9cb02468e6744",
+      "content_gate": "README + all 9 SKILL.md + references + validator + contract eval + Promptfoo workflow read",
+      "canonical_action": "9_new_reports"
+    },
+    {
+      "repository": "langfeng1314/dreamina-cli-skill",
+      "stars_observed": 0,
+      "revision": "75e0a69a99f21a9c706045a0f6227b1b0804f886",
+      "tree": "dcd5dd83daec1b0786f92740876c949310bba95c",
+      "content_gate": "README + root SKILL.md read",
+      "canonical_action": "mapped_existing_exact_tree"
+    },
+    {
+      "repository": "huangzhen9527007/dreamina-cli-skill",
+      "stars_observed": 0,
+      "revision": "75e0a69a99f21a9c706045a0f6227b1b0804f886",
+      "tree": "dcd5dd83daec1b0786f92740876c949310bba95c",
+      "content_gate": "README + root SKILL.md read",
+      "canonical_action": "mapped_existing_exact_tree"
+    },
+    {
+      "repository": "letsmotion/dreamina-cli-skill",
+      "stars_observed": 0,
+      "revision": "75e0a69a99f21a9c706045a0f6227b1b0804f886",
+      "tree": "dcd5dd83daec1b0786f92740876c949310bba95c",
+      "content_gate": "README + root SKILL.md read",
+      "canonical_action": "mapped_existing_exact_tree"
+    },
+    {
+      "repository": "saxster/skills",
+      "stars_observed": 0,
+      "revision": "4d322538be8b9ce98fca29b0eef26d67bff1fe82",
+      "tree": "32d2d4cb75cf113fbc8e145d7c52672832e34a2d",
+      "content_gate": "README + representative clean-architecture SKILL.md read",
+      "canonical_action": "mapped_existing_exact_tree"
+    }
+  ],
+  "reclassified_not_completed": [
+    "dbiswas/agentskills",
+    "Suneelm5/agentskills",
+    "wuxinlilele/agentskills",
+    "jinjingforever/agentskills",
+    "zhidong010/agentskills",
+    "xiukun/agentskills",
+    "chiragce17/agentskills",
+    "skills-il/bundles",
+    "carlosmarte/agentskills-repo-version",
+    "DnXLogic/agentskills-mcp",
+    "ma-serra/AgentSkills.legal-Multi-Contract-Analyzer"
+  ],
+  "preinspected_not_completed_due_batch_boundary": [
+    "gigantsc/skills-hermes-"
+  ],
+  "repository_read_metrics": {
+    "readme_direct_reads": 10,
+    "skill_md_direct_reads": 22,
+    "unique_skill_bodies_directly_reviewed": 17,
+    "unique_git_trees": 5
+  },
+  "new_canonical_skill_reports": 14,
+  "new_report_slugs": [
+    "beadflow",
+    "reviewer",
+    "sculptor",
+    "session-viewer",
+    "treeflow",
+    "chezmoi-cli-commands",
+    "chezmoi-configuration",
+    "chezmoi-externals",
+    "chezmoi-file-attributes",
+    "chezmoi-init",
+    "chezmoi-machine-config",
+    "chezmoi-scripts",
+    "chezmoi-secrets-management",
+    "chezmoi-templating"
+  ],
+  "cumulative": {
+    "repositories_structure_reviewed_total": 450,
+    "repository_scoped_skill_reports_total": 2927,
+    "canonical_eligible_basis": 2088,
+    "remaining_estimate": 1638,
+    "canonical_reconciliation": "pending"
+  },
+  "runtime_validation": "not_executed",
+  "important_findings": [
+    "stehessel/agentskills is a real five-skill APM collection; its README structure is stale after moving skills under .apm/skills/.",
+    "stehessel treeflow tf.py uses dynamically constructed shell commands through shell=True and has no repository-local tests/evals in the pinned tree.",
+    "mkobit/chezmoi-skills has substantial validator/eval infrastructure, but scripts/test-contracts.ts is partly tautological because expected target skill and exact commands are fed back into the rule-based evaluator.",
+    "Promptfoo live evaluation is a stronger behavioral layer in mkobit/chezmoi-skills, but it was read rather than executed in this batch.",
+    "Exact-tree mirrors were content-gated per identity but did not inflate canonical individual report counts."
+  ],
+  "next_qualified_repository": "gigantsc/skills-hermes-",
+  "note": "gigantsc/skills-hermes- was pre-inspected while resolving the queue but deliberately remains pending because the ten-qualified Batch 045 boundary was already reached."
+}
