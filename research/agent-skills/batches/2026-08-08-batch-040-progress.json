@@ -1,0 +1,210 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-08-batch-040",
+  "stage": "repository_deep_analysis",
+  "observed_at": "2026-08-08",
+  "repositories_completed": 10,
+  "repository_skill_files_read": 29,
+  "repository_readmes_read": 10,
+  "repository_readmes_absent_verified": 0,
+  "unique_git_commit_trees_reviewed": 8,
+  "direct_unique_skill_bodies_reviewed": 26,
+  "new_canonical_skill_reports": 24,
+  "collection_inventory_records_verified": {
+    "kagura-agent/skills": 13,
+    "ndtrongvn/agents-skills": 6,
+    "skbauman3/wondelai-skills": 42
+  },
+  "repositories_structure_reviewed_total": 400,
+  "repository_scoped_skill_reports_total": 2851,
+  "canonical_eligible_basis": 2088,
+  "remaining_estimate": 1688,
+  "runtime_validation": "not_executed",
+  "artifact_presence": {
+    "repositories_with_executable_helpers_directly_read": 4,
+    "repositories_with_references_directly_read": 5,
+    "repositories_with_tests_surfaced": 0,
+    "repositories_with_dedicated_eval_harness_surfaced": 0,
+    "repositories_with_manifests_directly_read": 1,
+    "repositories_with_package_json_verified": 0
+  },
+  "completed_repositories": [
+    {
+      "identity": "HsinTsao/Anthropic-Cybersecurity-Skills",
+      "github_id": 1199232047,
+      "stars": 0,
+      "revision": "2c88b96cf758c8a742c5b683e02c01e84497034f",
+      "queue_classification": "skill_collection",
+      "content_gate": "README+representative_SKILL_direct_read+exact_tree_mapping",
+      "canonical_status": "existing_exact_tree_body"
+    },
+    {
+      "identity": "kagura-agent/skills",
+      "github_id": 1200164695,
+      "stars": 1,
+      "revision": "a034021bb5ceaa918fa843ccbecf1777de81df2b",
+      "queue_classification": "skill_collection",
+      "content_gate": "README+all_13_SKILL_bodies+scripts+references",
+      "inventory_skills": 13,
+      "canonical_skill_bodies_added": [
+        "agent-memes",
+        "cove-ops",
+        "discord-ops",
+        "flowforge",
+        "gogetajob",
+        "kagura-canvas",
+        "kagura-storyteller",
+        "memos-memory-guide",
+        "moltbook-community",
+        "pulse-todo",
+        "seedling",
+        "self-portrait",
+        "team-lead"
+      ]
+    },
+    {
+      "identity": "ndtrongvn/agents-skills",
+      "github_id": 1200130399,
+      "stars": 0,
+      "revision": "f5fbed26e84db1d378b4bab1b3888f0dc9fcb178",
+      "queue_classification": "skill_collection",
+      "content_gate": "README+all_6_SKILL_bodies+rb_audit_engine",
+      "inventory_skills": 6,
+      "canonical_skill_bodies_added": [
+        "rb-audit",
+        "rb-idea",
+        "rb-prd",
+        "rb-break-task",
+        "rb-tdd",
+        "rb-agent-md"
+      ]
+    },
+    {
+      "identity": "Sylvia-awen/dreamina-cli-skill",
+      "github_id": 1200196145,
+      "stars": 0,
+      "revision": "75e0a69a99f21a9c706045a0f6227b1b0804f886",
+      "queue_classification": "single_skill_or_domain_package",
+      "content_gate": "README+SKILL+wrapper_source+command_reference",
+      "canonical_skill_bodies_added": ["dreamina-cli"]
+    },
+    {
+      "identity": "Marvin-Cypher/openclaw-seedance-skill",
+      "github_id": 1200039088,
+      "stars": 0,
+      "revision": "a054285ffeacc3a6eebcc7e24248b0477f551fa4",
+      "queue_classification": "single_skill_or_domain_package",
+      "content_gate": "README+SKILL+reference",
+      "canonical_skill_bodies_added": ["open-claw-seedance"]
+    },
+    {
+      "identity": "skbauman3/wondelai-skills",
+      "github_id": 1200771123,
+      "stars": 0,
+      "revision": "7c71a845071e8f994253db0d26c7e36fa90e2b5e",
+      "queue_classification": "skill_collection",
+      "content_gate": "README+42_skill_marketplace_manifest+representative_SKILL+reference",
+      "inventory_skills": 42,
+      "canonical_skill_bodies_added": ["37signals-way"]
+    },
+    {
+      "identity": "Raven5101/skills",
+      "github_id": 1200847563,
+      "stars": 0,
+      "revision": "955115316fdf18eaef1ba6e7a9860704215e172f",
+      "queue_classification": "skill_collection",
+      "content_gate": "README+representative_SKILL_direct_read+existing_exact_revision_mapping",
+      "canonical_status": "existing_older_wondel_body"
+    },
+    {
+      "identity": "B0llieball/Anthropic-Cybersecurity-Skills",
+      "github_id": 1200088133,
+      "stars": 0,
+      "revision": "2c88b96cf758c8a742c5b683e02c01e84497034f",
+      "queue_classification": "skill_collection",
+      "content_gate": "README+representative_SKILL_direct_read+exact_tree_mapping",
+      "canonical_status": "existing_exact_tree_body"
+    },
+    {
+      "identity": "fernandezbaptiste/Anthropic-Cybersecurity-Skills",
+      "github_id": 1200444611,
+      "stars": 0,
+      "revision": "c15f73db46149587e31df83c2f9d92a3b578ef21",
+      "queue_classification": "skill_collection",
+      "content_gate": "README+stable_representative_SKILL+2_changed_or_new_SKILLs+scripts+references",
+      "canonical_skill_bodies_added": [
+        "detecting-lateral-movement-with-zeek",
+        "performing-cloud-native-threat-hunting-with-aws-detective"
+      ]
+    },
+    {
+      "identity": "cautionsign/Anthropic-Cybersecurity-Skills",
+      "github_id": 1200262968,
+      "stars": 1,
+      "revision": "c15f73db46149587e31df83c2f9d92a3b578ef21",
+      "queue_classification": "skill_collection",
+      "content_gate": "README+representative_SKILL_direct_read+exact_revision_mapping",
+      "canonical_status": "exact_revision_mirror_of_reviewed_c15f_tree"
+    }
+  ],
+  "reclassified_not_completed": [
+    {
+      "identity": "Duosl/AgentSkills",
+      "index_classification": "skill_collection",
+      "content_classification": "adjacent_index_or_awesome_list",
+      "reason": "pinned tree contains README links to external skill repositories but no local Agent Skill body"
+    },
+    {
+      "identity": "OmSatapathy/AgentSkills",
+      "index_classification": "skill_collection",
+      "content_classification": "project_embedding_external_skill_submodule",
+      "reason": "AgentSkills content is an external gitlink/submodule; local repository content is a separate Selenium project"
+    },
+    {
+      "identity": "intrepid-g/agentskills",
+      "index_classification": "skill_collection",
+      "content_classification": "specification_reference_sdk",
+      "reason": "actual README describes Agent Skills specification, documentation, and reference SDK rather than a local skill collection"
+    },
+    {
+      "identity": "pranamyajainn/agentskills",
+      "index_classification": "skill_collection",
+      "content_classification": "specification_reference_sdk",
+      "reason": "same inspected Agent Skills specification/reference SDK lineage; no local skill-body catalog used for completion"
+    },
+    {
+      "identity": "shitty-shit/agentskills",
+      "index_classification": "skill_collection",
+      "content_classification": "specification_reference_sdk",
+      "reason": "same inspected Agent Skills specification/reference SDK lineage; no local skill-body catalog used for completion"
+    }
+  ],
+  "held_not_completed": [
+    {"identity":"skilldag/opencode-sessions","index_classification":"adjacent_search_hit","reason":"not a qualified queue entry"},
+    {"identity":"Zovo314/paper-maker","index_classification":"adjacent_search_hit","reason":"not a qualified queue entry"},
+    {"identity":"99rebels/github-growth-tracker","index_classification":"adjacent_search_hit","reason":"not a qualified queue entry"},
+    {"identity":"fabiopacifici-bot/agent-routines","index_classification":"adjacent_search_hit","reason":"not a qualified queue entry"},
+    {"identity":"paul010/typewriter-video","index_classification":"adjacent_search_hit","reason":"not a qualified queue entry"},
+    {"identity":"yxybyq/typewriter-video","index_classification":"adjacent_search_hit","reason":"not a qualified queue entry"},
+    {"identity":"fabiopacificicom/agent-routines","index_classification":"adjacent_search_hit","reason":"not a qualified queue entry"},
+    {"identity":"ninenox/opencrust","index_classification":"adjacent_search_hit","reason":"not a qualified queue entry"}
+  ],
+  "pending_after_batch_boundary": [
+    {
+      "identity": "francktienta-lgtm/Anthropic-Cybersecurity-Skills",
+      "reason": "next qualified queue entry after the ten completed repositories; remains pending"
+    }
+  ],
+  "quality_notes": [
+    "five index-stage skill_collection candidates were rejected after real content inspection; none was counted complete",
+    "kagura-agent/skills contains 13 surfaced skill bodies while its README lists only a subset; repository documentation inventory is stale",
+    "kagura operational helpers and policies are concrete but highly coupled to one OpenClaw environment and need stronger shared external-effect authorization contracts",
+    "ndtrongvn rb-audit has a strong deterministic artifact contract but its executable engine is specialized to a particular Next.js/Solana/Supabase project despite generic repository positioning",
+    "dreamina-cli contains a real dry-run and structured wrapper contract; external service compatibility and cost/auth behavior were not executed",
+    "skbauman3 Wondel marketplace verifies 42 skill identities at this intermediate revision; only the directly read 37signals-way body is promoted in this batch",
+    "the c15f Anthropic Cybersecurity lineage adds executable defensive helpers, but the Zeek body references agent.py while the surfaced helper is scripts/process.py and no measured detection eval was surfaced",
+    "runtime/build/test/eval execution remains not_executed; source existence is not treated as behavioral success"
+  ],
+  "queue_note": "Batch 040 content-qualified the queue instead of trusting index labels, reclassified five false-positive skill_collection entries, held adjacent hits, and completed the next ten genuinely qualified repository identities. francktienta-lgtm/Anthropic-Cybersecurity-Skills is the next qualified pending identity.",
+  "remaining_estimate_note": "Arithmetic continuation from the frozen canonical eligible basis; canonical reconciliation remains pending."
+}
