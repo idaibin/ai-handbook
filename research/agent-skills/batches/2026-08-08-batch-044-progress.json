@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-08-batch-044",
+  "observed_at": "2026-08-08",
+  "scope": "next 10 genuinely qualified repository identities from deterministic indexed queue; specification/tooling/adjacent hits excluded after content checks",
+  "completion_rule": "identity + observed Stars + pinned revision + actual repository content read; metadata-only completion prohibited",
+  "repositories_completed_this_batch": 10,
+  "repositories_structure_reviewed_total": 440,
+  "canonical_eligible_basis": 2088,
+  "remaining_estimate": 1648,
+  "repository_scoped_skill_reports_total": 2913,
+  "read_metrics": {
+    "readme_direct_reads_completed_repositories": 10,
+    "skill_md_direct_reads_completed_repositories": 16,
+    "direct_unique_skill_bodies_reviewed": 12,
+    "unique_git_content_trees": 6,
+    "new_canonical_skill_reports": 2
+  },
+  "runtime_validation": "not_executed",
+  "completed_repositories": [
+    {
+      "repository": "JimmyZhangJW/dreamina-cli-skill",
+      "stars_observed": 0,
+      "pinned_revision": "75e0a69a99f21a9c706045a0f6227b1b0804f886",
+      "tree": "dcd5dd83daec1b0786f92740876c949310bba95c",
+      "canonical_action": "dreamina-cli body, Python wrapper and integration reference directly reread; map to prior Dreamina canonical report"
+    },
+    {
+      "repository": "fernandezbaptiste/agent-skills-public",
+      "stars_observed": 0,
+      "pinned_revision": "61e547e86d2c424f2ab6e54a4741948d37459665",
+      "tree": "0aa6ed76981d9daa8db35704c9edc47defe13d81",
+      "canonical_action": "all four Skill bodies directly reread; map to prior canonical reports"
+    },
+    {
+      "repository": "gregvanhorn/skills",
+      "stars_observed": 0,
+      "pinned_revision": "4d322538be8b9ce98fca29b0eef26d67bff1fe82",
+      "tree": "32d2d4cb75cf113fbc8e145d7c52672832e34a2d",
+      "canonical_action": "representative clean-architecture body directly read; map to prior Wondel canonical report"
+    },
+    {
+      "repository": "navneet10sep/skills",
+      "stars_observed": 0,
+      "pinned_revision": "4d322538be8b9ce98fca29b0eef26d67bff1fe82",
+      "tree": "32d2d4cb75cf113fbc8e145d7c52672832e34a2d",
+      "canonical_action": "independent README and representative body reread; exact Wondel tree duplicate"
+    },
+    {
+      "repository": "yamisoto/skills",
+      "stars_observed": 0,
+      "pinned_revision": "4d322538be8b9ce98fca29b0eef26d67bff1fe82",
+      "tree": "32d2d4cb75cf113fbc8e145d7c52672832e34a2d",
+      "canonical_action": "independent README and representative body reread; exact Wondel tree duplicate"
+    },
+    {
+      "repository": "leviathannexusprime-bot/skills",
+      "stars_observed": 0,
+      "pinned_revision": "4d322538be8b9ce98fca29b0eef26d67bff1fe82",
+      "tree": "32d2d4cb75cf113fbc8e145d7c52672832e34a2d",
+      "canonical_action": "independent README and representative body reread; exact Wondel tree duplicate"
+    },
+    {
+      "repository": "chethanuk/chainlink-agent-skills",
+      "stars_observed": 0,
+      "pinned_revision": "8d6f777a3e3c4a28449f98dbbfb29e108cd75ff5",
+      "tree": "5dcf050c2a97c7f57b7355c68426531145609be5",
+      "canonical_action": "2 new canonical reports: chainlink-cre-skill and chainlink-ccip-skill; references and Promptfoo eval contract inspected"
+    },
+    {
+      "repository": "bunjunwang/zephyr-agent-skills",
+      "stars_observed": 0,
+      "pinned_revision": "ed63cdfb8cdfbeb5946ea39c33f4aa6bcf3a5cce",
+      "tree": "60d5d8ad4dd3785d80eaca96f2587e3a755b4eba",
+      "canonical_action": "umbrella/index/devicetree bodies plus validator/helper/reference directly read; map to prior Zephyr canonical reports"
+    },
+    {
+      "repository": "rwe137/Anthropic-Cybersecurity-Skills",
+      "stars_observed": 0,
+      "pinned_revision": "4ae0be7f4806596e94958ac343379e9c9b3111d2",
+      "tree": "5dd2ce82978a50cd014d4b310f5993bf5bba6f43",
+      "canonical_action": "v1.2.0 README and representative defensive API-log body directly read; map to Batch 043 large-collection lineage"
+    },
+    {
+      "repository": "chillux/Anthropic-Cybersecurity-Skills",
+      "stars_observed": 0,
+      "pinned_revision": "4ae0be7f4806596e94958ac343379e9c9b3111d2",
+      "tree": "5dd2ce82978a50cd014d4b310f5993bf5bba6f43",
+      "canonical_action": "independent README and representative body reread; exact tree duplicate of rwe137 and Batch 043 lineage"
+    }
+  ],
+  "new_canonical_reports": [
+    "chainlink-cre-skill",
+    "chainlink-ccip-skill"
+  ],
+  "reclassified_not_completed": [
+    {
+      "repository": "edulazaro/agentskills",
+      "reason": "actual root content and README identify the Agent Skills specification, documentation and reference SDK rather than a local Skill collection",
+      "reclassified_as": "specification"
+    },
+    {
+      "repository": "CAgGen/agentskills",
+      "reason": "actual root content and README identify the Agent Skills specification, documentation and reference SDK rather than a local Skill collection",
+      "reclassified_as": "specification"
+    },
+    {
+      "repository": "kwakminoo/agentskills",
+      "reason": "actual root content and README identify specification/documentation/reference SDK rather than a local Skill collection",
+      "reclassified_as": "specification"
+    },
+    {
+      "repository": "jgf-dev/agentskills",
+      "reason": "actual root tree matches the specification repository layout and content lineage",
+      "reclassified_as": "specification"
+    },
+    {
+      "repository": "michaelsam94/agentskills",
+      "reason": "actual root tree matches the specification repository layout and content lineage",
+      "reclassified_as": "specification"
+    },
+    {
+      "repository": "JasonZhuGit/agentskills",
+      "reason": "actual root tree matches the specification repository layout and content lineage",
+      "reclassified_as": "specification"
+    }
+  ],
+  "skipped_not_completed": [
+    {
+      "repository": "dgallitelli/aws-data-agent-skill-strands-agentcore",
+      "reason": "already fully completed in Batch 043 before its April 8 queue position was reached"
+    },
+    {
+      "repository": "AI-Engineering-at/meta-skills-plugin",
+      "reason": "indexed as skill_tooling, not a qualified Skill repository completion target"
+    },
+    {
+      "repository": "fernandezbaptiste/skillcraft",
+      "reason": "indexed as skill_tooling, not a qualified Skill repository completion target"
+    }
+  ],
+  "key_findings": [
+    "Chainlink CCIP combines progressive reference disclosure with an explicit external-effect approval protocol and a real Promptfoo eval contract; the suite was inspected but not run.",
+    "Chainlink CRE uses fetch-as-resolution rather than speculative browsing, a useful pattern for freshness-sensitive developer Skills, but live source/host behavior remains external to the Skill contract.",
+    "Zephyr separates generated registry consistency and document quality gates from real build/hardware validation; its lightweight overlay helper must not be treated as a west-build substitute.",
+    "Dreamina has a real deterministic Python wrapper and dry-run/JSON contract, but this batch performed no service execution or behavioral eval.",
+    "Large Wondel and Cybersecurity inventories were not converted into synthetic body-level completions; exact-tree duplicates map to existing canonical content only.",
+    "Six April 8 agentskills hits were specification/reference-SDK copies and were reclassified instead of being promoted from metadata."
+  ],
+  "validation_boundary": {
+    "scripts_executed": false,
+    "builds_executed": false,
+    "tests_executed": false,
+    "evals_executed": false,
+    "live_external_apis_called_from_repository_code": false
+  },
+  "queue_resume": {
+    "next_unresolved_identity": "aminrj/Anthropic-Cybersecurity-Skills",
+    "note": "Batch 044 content-gated specification/tooling candidates and skipped the already-completed dgallitelli position to reach ten qualified completions. Resume from aminrj/Anthropic-Cybersecurity-Skills."
+  },
+  "canonical_reconciliation": "pending",
+  "canonicalization_note": "Two genuinely new Chainlink body reports were added. Ten other directly reviewed unique bodies map to earlier canonical analysis; repeated repository identities sharing exact trees were recorded as coverage without duplicate reports.",
+  "remaining_estimate_note": "1648 is arithmetic continuation from the frozen 2088 eligible basis minus 440 structure-reviewed repository identities; it is not a reconciled unique-repository remainder."
+}
