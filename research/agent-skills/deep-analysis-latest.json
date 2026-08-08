@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "latest_batch_id": "2026-08-08-batch-035",
-  "latest_batch_report": "research/agent-skills/batches/2026-08-08-batch-035-deep-analysis.md",
-  "latest_batch_progress": "research/agent-skills/batches/2026-08-08-batch-035-progress.json",
-  "latest_skill_report": "research/agent-skills/batches/2026-08-08-batch-035-skill-reports.md",
-  "repositories_structure_reviewed_total": 350,
+  "latest_batch_id": "2026-08-08-batch-036",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-08-batch-036-deep-analysis.md",
+  "latest_batch_progress": "research/agent-skills/batches/2026-08-08-batch-036-progress.json",
+  "latest_skill_report": "research/agent-skills/batches/2026-08-08-batch-036-skill-reports.md",
+  "repositories_structure_reviewed_total": 360,
   "repository_scoped_skill_reports_total": 2819,
   "canonical_eligible_basis": 2088,
-  "remaining_estimate": 1738,
+  "remaining_estimate": 1728,
   "status": "structure-reviewed",
   "runtime_validation": "not_executed",
   "repository_skill_files_read_latest_batch": 10,
-  "direct_skill_body_reviews_latest_batch": 8,
+  "direct_skill_body_reviews_latest_batch": 7,
   "observed_at": "2026-08-08",
-  "note": "Batch 035 content-reviewed the next 10 qualified repository identities from positions 70-79 of the April 1 deterministic queue. Root SKILL.md was directly fetched for all ten identities and README bodies were reviewed for all eight unique Git commit trees. Seven unique trees mapped to canonical reviews from Batch 030 or Batch 031; context-budget-analyzer was new to the current deep-analysis corpus and adds one canonical skill report. Two within-batch repository pairs share exact commit SHAs: task-concurrency-patterns and self-rationalization-guard. Repository code search across all ten identities returned no scripts, references, eval, or package.json matches. Runtime/build/test/eval execution remains not executed. The remaining estimate is arithmetic continuation from the frozen 2088 basis and remains subject to canonical reconciliation."
+  "note": "Batch 036 completed 10 repository identities only after verifying identity, exact observed stars, pinned revision, README, and SKILL.md content. The ten identities collapse to seven exact Git content trees, all already represented in prior canonical reviews, so canonical skill-report count is unchanged at 2819. Code search across all ten identities returned no scripts, references, eval, or package.json matches. Unselected queue entries remain pending and were not marked complete. Runtime/build/test/eval execution remains not executed. The remaining estimate is arithmetic continuation from the frozen 2088 basis and remains subject to canonical reconciliation."
 }
