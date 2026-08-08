@@ -73,7 +73,7 @@ Existing index classifications `adjacent_search_hit` / `awesome_index` were also
 
 ### 3. `benjaminyanjd/life-algorithm-skill`
 
-**Verified.** The repository contains one Skill plus `framework.md`, `quick-map.md` and `examples.md`. The Skill converts an abstract decision problem into constraints, a minimum model, one concrete action, a “do not do” boundary and evidence that would change the judgment.
+**Verified.** The repository contains one Skill plus `quick-map.md`, `guide.md` and `examples.md`. The Skill converts an abstract decision problem into constraints, a minimum model, one concrete action, a “do not do” boundary and evidence that would change the judgment.
 
 **Assessment.** The most reusable idea is the decision-output contract: judgment first, explicit uncertainty, validation action and stop condition. That makes a conceptual framework more operational than a plain book summary.
 
