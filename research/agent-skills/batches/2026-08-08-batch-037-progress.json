@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-08-batch-037",
+  "stage": "repository_deep_analysis",
+  "observed_at": "2026-08-08",
+  "repositories_completed": 10,
+  "repository_skill_files_read": 10,
+  "repository_readmes_read": 10,
+  "unique_git_commit_trees_reviewed": 6,
+  "new_canonical_skill_reports": 0,
+  "repositories_structure_reviewed_total": 370,
+  "repository_scoped_skill_reports_total": 2819,
+  "canonical_eligible_basis": 2088,
+  "remaining_estimate": 1718,
+  "runtime_validation": "not_executed",
+  "artifact_search": {
+    "scripts": 0,
+    "references": 0,
+    "eval": 0,
+    "package.json": 0
+  },
+  "completed_repositories": [
+    {"identity":"4ccsds/smart-memory-guard","github_id":1199649094,"stars":0,"revision":"802b0f14f8f0fbdc8ee4be39cdc342e5121efbeb","skill":"smart-memory-guard"},
+    {"identity":"drcaonet/self-rationalization-guard","github_id":1198990114,"stars":0,"revision":"3df614e3ae87d80b3be338d247a2fc2488dc22a2","skill":"self-rationalization-guard"},
+    {"identity":"howknows/adversarial-verification","github_id":1199419855,"stars":0,"revision":"909a2f70fc0de13aff1175c0b507ec24bf0b4815","skill":"adversarial-verification"},
+    {"identity":"howknows/self-rationalization-guard","github_id":1199422364,"stars":0,"revision":"3df614e3ae87d80b3be338d247a2fc2488dc22a2","skill":"self-rationalization-guard"},
+    {"identity":"4ccsds/worker-prompt-craft","github_id":1199651297,"stars":0,"revision":"8f8a14fc8da0e687457516da3d9f79f8873e9061","skill":"worker-prompt-craft"},
+    {"identity":"4ccsds/coordinator-orchestrator","github_id":1199650563,"stars":0,"revision":"a6d0311d279b32497a9c952061fafb798309b4e3","skill":"coordinator-orchestrator"},
+    {"identity":"4ccsds/lightweight-explorer","github_id":1199649751,"stars":0,"revision":"ba11d7eaab78fafd3982d36bff78c0f3fba633b1","skill":"lightweight-explorer"},
+    {"identity":"4ccsds/self-rationalization-guard","github_id":1199652508,"stars":0,"revision":"3df614e3ae87d80b3be338d247a2fc2488dc22a2","skill":"self-rationalization-guard"},
+    {"identity":"howknows/worker-prompt-craft","github_id":1199422775,"stars":0,"revision":"8f8a14fc8da0e687457516da3d9f79f8873e9061","skill":"worker-prompt-craft"},
+    {"identity":"drcaonet/coordinator-orchestrator","github_id":1198989947,"stars":0,"revision":"a6d0311d279b32497a9c952061fafb798309b4e3","skill":"coordinator-orchestrator"}
+  ],
+  "queue_note": "Unselected entries remain pending and are not counted complete. Batch 037 completed only repositories for which identity, stars, pinned revision, README, and SKILL.md were all content-verified.",
+  "remaining_estimate_note": "Arithmetic continuation from the frozen canonical eligible basis; canonical reconciliation remains pending."
+}
