@@ -22,27 +22,27 @@ Canonical totals remain frozen while created-date partitions are reconciled with
 Verified persisted coverage:
 
 ```text
-2026-04-01 .. 2026-04-08
+2026-04-01 .. 2026-04-09
 per_page=100
-8 exact single-day shards with terminal pagination probes
+9 exact single-day shards with terminal pagination probes
 ```
 
-The `2026-04-08` shard returned `36` repositories on page 1 and `0` on page 2. Recheck with `per_page=20` returned `20,16,0`. Case-insensitive `owner/repository` deduplication produced `36` unique identities and `0` internal duplicates.
+The `2026-04-09` shard returned `39` repositories on page 1 and `0` on page 2. Recheck with `per_page=20` returned `20,19,0`. Case-insensitive `owner/repository` deduplication produced `39` unique identities and `0` internal duplicates.
 
-April staging now contains `287` unique identities across `2026-04-01` through `2026-04-08`, with `0` cross-shard duplicates asserted.
+April staging now contains `326` unique identities across `2026-04-01` through `2026-04-09`, with `0` cross-shard duplicates asserted.
 
 ### April provisional classification
 
 | Classification | Count |
 | --- | ---: |
 | `specification` | 0 |
-| `skill_collection` | 129 |
-| `single_skill_or_domain_package` | 114 |
+| `skill_collection` | 151 |
+| `single_skill_or_domain_package` | 119 |
 | `awesome_index` | 0 |
-| `skill_tooling` | 8 |
-| `adjacent_search_hit` | 36 |
+| `skill_tooling` | 11 |
+| `adjacent_search_hit` | 45 |
 | `unclear_search_hit` | 0 |
-| **Total** | **287** |
+| **Total** | **326** |
 
 Classification remains metadata-only and provisional. Ambiguous hits are retained as adjacent rather than promoted by assumption.
 
@@ -56,8 +56,9 @@ Classification remains metadata-only and provisional. Ambiguous hits are retaine
 - [`batches/agentskills-created-2026-04-06-deterministic.json`](batches/agentskills-created-2026-04-06-deterministic.json)
 - [`batches/agentskills-created-2026-04-07-deterministic.json`](batches/agentskills-created-2026-04-07-deterministic.json)
 - [`batches/agentskills-created-2026-04-08-deterministic.json`](batches/agentskills-created-2026-04-08-deterministic.json)
+- [`batches/agentskills-created-2026-04-09-deterministic.json`](batches/agentskills-created-2026-04-09-deterministic.json)
 
-Current run report: [`runs/2026-08-08-agentskills-april-2026-04-08.md`](runs/2026-08-08-agentskills-april-2026-04-08.md).
+Current run report: [`runs/2026-08-08-agentskills-april-2026-04-09.md`](runs/2026-08-08-agentskills-april-2026-04-09.md).
 
 ## Evidence boundary
 
@@ -65,4 +66,4 @@ Index collection only. No target repository content, stars, scripts, evaluations
 
 ## Next index action
 
-Continue with the `2026-04-09` exact single-day shard and keep canonical totals frozen until reconciliation is complete.
+Continue with the `2026-04-10` exact single-day shard and keep canonical totals frozen until reconciliation is complete.
