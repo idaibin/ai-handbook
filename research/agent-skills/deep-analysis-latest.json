@@ -1,16 +1,16 @@
 {
   "schema_version": "1.0",
-  "latest_batch_id": "2026-08-08-batch-031",
-  "latest_batch_report": "research/agent-skills/batches/2026-08-08-batch-031-deep-analysis.md",
-  "latest_batch_progress": "research/agent-skills/batches/2026-08-08-batch-031-progress.json",
-  "latest_skill_report": "research/agent-skills/batches/2026-08-08-batch-031-skill-reports.md",
-  "repositories_structure_reviewed_total": 310,
+  "latest_batch_id": "2026-08-08-batch-032",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-08-batch-032-deep-analysis.md",
+  "latest_batch_progress": "research/agent-skills/batches/2026-08-08-batch-032-progress.json",
+  "latest_skill_report": "research/agent-skills/batches/2026-08-08-batch-032-skill-reports.md",
+  "repositories_structure_reviewed_total": 320,
   "repository_scoped_skill_reports_total": 2817,
   "canonical_eligible_basis": 2088,
-  "remaining_estimate": 1778,
+  "remaining_estimate": 1768,
   "status": "structure-reviewed",
   "runtime_validation": "not_executed",
-  "direct_skill_body_reviews_latest_batch": 6,
+  "direct_skill_body_reviews_latest_batch": 5,
   "observed_at": "2026-08-08",
-  "note": "Batch 031 content-reviewed 10 indexed single-skill repository identities from the April 1 deterministic queue. Ten identities reduced to six unique Git commit trees; six README/SKILL pairs were directly read. Three trees were exact duplicates of skills already reported in Batch 030, while three new unique skill bodies (lightweight-explorer, self-rationalization-guard, context-compressor) produced new reports. Repository searches across all ten identities returned no scripts, references, eval, or package.json matches. Runtime/build/test/eval execution remains not executed. The remaining estimate is arithmetic continuation from the frozen 2088 basis and remains subject to canonical reconciliation."
+  "note": "Batch 032 content-reviewed 10 additional indexed repository identities from the April 1 deterministic queue. Ten identities reduced to five unique Git commit trees; five README/SKILL pairs were directly re-read. All five trees were exact duplicates of skill content already deeply reviewed in Batch 030 or Batch 031, so no duplicate canonical skill reports were added. Repository search across all ten identities returned no scripts/references/eval/package.json matches. Runtime/build/test/eval execution remains not executed. The remaining estimate is arithmetic continuation from the frozen 2088 basis and remains subject to canonical reconciliation."
 }
