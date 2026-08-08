@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0",
-  "latest_batch_id": "2026-08-08-batch-037",
-  "latest_batch_report": "research/agent-skills/batches/2026-08-08-batch-037-deep-analysis.md",
-  "latest_batch_progress": "research/agent-skills/batches/2026-08-08-batch-037-progress.json",
-  "latest_skill_report": "research/agent-skills/batches/2026-08-08-batch-037-skill-reports.md",
-  "repositories_structure_reviewed_total": 370,
-  "repository_scoped_skill_reports_total": 2819,
+  "latest_batch_id": "2026-08-08-batch-038",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-08-batch-038-deep-analysis.md",
+  "latest_batch_progress": "research/agent-skills/batches/2026-08-08-batch-038-progress.json",
+  "latest_skill_report": "research/agent-skills/batches/2026-08-08-batch-038-skill-reports.md",
+  "repositories_structure_reviewed_total": 380,
+  "repository_scoped_skill_reports_total": 2821,
   "canonical_eligible_basis": 2088,
-  "remaining_estimate": 1718,
+  "remaining_estimate": 1708,
   "status": "structure-reviewed",
   "runtime_validation": "not_executed",
   "repository_skill_files_read_latest_batch": 10,
-  "direct_skill_body_reviews_latest_batch": 6,
+  "direct_skill_body_reviews_latest_batch": 8,
   "observed_at": "2026-08-08",
-  "note": "Batch 037 completed 10 repository identities only after verifying identity, exact observed stars, pinned revision, README, and SKILL.md content. The ten identities collapse to six exact Git content trees, all already represented in prior canonical reviews, so canonical skill-report count remains 2819. Code search across all ten identities returned no scripts, references, eval, or package.json matches. Unselected queue entries remain pending and were not marked complete. Runtime/build/test/eval execution remains not executed. The remaining estimate is arithmetic continuation from the frozen 2088 basis and remains subject to canonical reconciliation."
+  "note": "Batch 038 completed the next 10 qualified repository identities after verifying identity, exact observed stars, pinned revisions, and actual skill content. Nine READMEs were read and one README absence was verified. The ten identities collapse to eight unique Git commit trees; six were already represented in canonical reviews and two new canonical reports were added for skill-evolution and thekey. skill-evolution contains scripts, schemas, references, and test source but explicitly leaves behavioral verification unverified; tests were inspected but not executed. thekey contains operational scripts/references but also committed plaintext development credentials, which were redacted from reports and flagged for rotation/removal. The adjacent_search_hit tagai-dao/self-ip-agency was held and not counted complete. Runtime/build/test/eval execution remains not executed. The remaining estimate is arithmetic continuation from the frozen 2088 basis and remains subject to canonical reconciliation."
 }
