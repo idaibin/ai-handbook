@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-08-batch-038",
+  "stage": "repository_deep_analysis",
+  "observed_at": "2026-08-08",
+  "repositories_completed": 10,
+  "repository_skill_files_read": 10,
+  "repository_readmes_read": 9,
+  "repository_readmes_absent_verified": 1,
+  "unique_git_commit_trees_reviewed": 8,
+  "direct_unique_skill_bodies_reviewed": 8,
+  "new_canonical_skill_reports": 2,
+  "repositories_structure_reviewed_total": 380,
+  "repository_scoped_skill_reports_total": 2821,
+  "canonical_eligible_basis": 2088,
+  "remaining_estimate": 1708,
+  "runtime_validation": "not_executed",
+  "artifact_presence": {
+    "repositories_with_scripts": 2,
+    "repositories_with_references": 2,
+    "repositories_with_tests": 1,
+    "repositories_with_dedicated_eval_harness": 0,
+    "repositories_with_package_json": 0
+  },
+  "completed_repositories": [
+    {"identity":"4ccsds/task-concurrency-patterns","github_id":1199653059,"stars":0,"revision":"7fa43a3fc72ceb0fb488fedbb09faa37198fcb5e","skill":"task-concurrency-patterns","canonical_status":"existing"},
+    {"identity":"howknows/coordinator-orchestrator","github_id":1199422882,"stars":0,"revision":"a6d0311d279b32497a9c952061fafb798309b4e3","skill":"coordinator-orchestrator","canonical_status":"existing"},
+    {"identity":"drcaonet/adversarial-verification","github_id":1198989767,"stars":0,"revision":"909a2f70fc0de13aff1175c0b507ec24bf0b4815","skill":"adversarial-verification","canonical_status":"existing"},
+    {"identity":"drcaonet/memory-type-system","github_id":1198990070,"stars":0,"revision":"d3805f3e5a576afd0c55e2de9cddb78511a30c95","skill":"memory-type-system","canonical_status":"existing"},
+    {"identity":"howknows/task-concurrency-patterns","github_id":1199422112,"stars":0,"revision":"7fa43a3fc72ceb0fb488fedbb09faa37198fcb5e","skill":"task-concurrency-patterns","canonical_status":"existing"},
+    {"identity":"howknows/smart-memory-guard","github_id":1199421586,"stars":0,"revision":"802b0f14f8f0fbdc8ee4be39cdc342e5121efbeb","skill":"smart-memory-guard","canonical_status":"existing"},
+    {"identity":"4ccsds/adversarial-verification","github_id":1199648142,"stars":0,"revision":"909a2f70fc0de13aff1175c0b507ec24bf0b4815","skill":"adversarial-verification","canonical_status":"existing"},
+    {"identity":"drcaonet/worker-prompt-craft","github_id":1198990009,"stars":0,"revision":"8f8a14fc8da0e687457516da3d9f79f8873e9061","skill":"worker-prompt-craft","canonical_status":"existing"},
+    {"identity":"lostinheaven-knt/skill-evolution-skill","github_id":1199523227,"stars":0,"revision":"b7cb91acce415f82b0459968147fa6f9f2e7fedd","skill":"skill-evolution","canonical_status":"new"},
+    {"identity":"Akera-Agency/thekey-skill","github_id":1199591229,"stars":0,"revision":"4d5a534fc5d1f36faa6f4de09c8181e0ec1f34bd","skill":"thekey","canonical_status":"new","readme":"absent"}
+  ],
+  "held_not_completed": [
+    {"identity":"tagai-dao/self-ip-agency","index_classification":"adjacent_search_hit","reason":"broader agent runtime; no root SKILL.md surfaced; not a qualified queue item"}
+  ],
+  "queue_note": "Batch 038 consumed the next ten qualified queue identities. The adjacent_search_hit at queue position 38 was held and not counted complete. Unselected qualified entries remain pending.",
+  "remaining_estimate_note": "Arithmetic continuation from the frozen canonical eligible basis; canonical reconciliation remains pending."
+}
