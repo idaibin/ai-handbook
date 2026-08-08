@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-08-batch-033",
+  "observed_at": "2026-08-08",
+  "stage": "repository deep analysis",
+  "queue_source": "sources/catalog/batches/agentskills-created-2026-04-01-deterministic.json",
+  "repositories_completed_this_batch": 10,
+  "repositories_structure_reviewed_total": 330,
+  "repository_scoped_skill_reports_added_this_batch": 1,
+  "repository_scoped_skill_reports_total": 2818,
+  "repository_skill_files_read_this_batch": 10,
+  "direct_unique_skill_bodies_reviewed_this_batch": 8,
+  "canonical_eligible_basis": 2088,
+  "remaining_estimate": 1758,
+  "remaining_estimate_note": "Arithmetic continuation against the frozen 2088 canonical basis; deterministic index shards still require canonical reconciliation, so this is not a final unique-repository remainder.",
+  "runtime_build_test_eval_execution": "not_executed",
+  "artifact_commits": {
+    "repository_analysis": "cdde02286ac0b66da6d412cc85d064fac8ab06e7",
+    "skill_reports": "12f3eb31b73468eb14325ff240864af78e9c69a6"
+  },
+  "repositories": [
+    {"repository":"camCX/task-concurrency-patterns","repository_id":1198540612,"stars_observed":0,"revision":"7fa43a3fc72ceb0fb488fedbb09faa37198fcb5e","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","skill_reports":0,"status":"completed"},
+    {"repository":"ShawnSiao/smart-memory-guard","repository_id":1198481215,"stars_observed":0,"revision":"802b0f14f8f0fbdc8ee4be39cdc342e5121efbeb","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","skill_reports":0,"status":"completed"},
+    {"repository":"ajunlonglive/memory-type-system","repository_id":1198085103,"stars_observed":0,"revision":"d3805f3e5a576afd0c55e2de9cddb78511a30c95","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","skill_reports":0,"status":"completed"},
+    {"repository":"k1w1f1sh/memory-type-system","repository_id":1198055223,"stars_observed":0,"revision":"d3805f3e5a576afd0c55e2de9cddb78511a30c95","content_class":"exact-full-tree-duplicate","skill_reports":0,"status":"completed"},
+    {"repository":"MandyDragon/adversarial-verification","repository_id":1197911298,"stars_observed":0,"revision":"909a2f70fc0de13aff1175c0b507ec24bf0b4815","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","skill_reports":0,"status":"completed"},
+    {"repository":"YTT-CSH/coordinator-orchestrator","repository_id":1198154524,"stars_observed":0,"revision":"a6d0311d279b32497a9c952061fafb798309b4e3","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","skill_reports":0,"status":"completed"},
+    {"repository":"ajunlonglive/background-memory-extractor","repository_id":1198087351,"stars_observed":0,"revision":"e1fc9103f5714eca3b203d13bbc1ce1130a7e892","content_class":"document-only-single-skill","skill_reports":1,"status":"completed"},
+    {"repository":"k1w1f1sh/worker-prompt-craft","repository_id":1198055067,"stars_observed":0,"revision":"8f8a14fc8da0e687457516da3d9f79f8873e9061","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","skill_reports":0,"status":"completed"},
+    {"repository":"MandyDragon/coordinator-orchestrator","repository_id":1197911713,"stars_observed":0,"revision":"a6d0311d279b32497a9c952061fafb798309b4e3","content_class":"exact-full-tree-duplicate","skill_reports":0,"status":"completed"},
+    {"repository":"k1w1f1sh/self-rationalization-guard","repository_id":1198055381,"stars_observed":0,"revision":"3df614e3ae87d80b3be338d247a2fc2488dc22a2","content_class":"exact-full-tree-duplicate-of-prior-reviewed-skill","skill_reports":0,"status":"completed"}
+  ],
+  "content_deduplication": [
+    {"repositories":["ajunlonglive/memory-type-system","k1w1f1sh/memory-type-system"],"shared_revision":"d3805f3e5a576afd0c55e2de9cddb78511a30c95","existing_review":"2026-08-08-batch-030","new_skill_reports_generated":0},
+    {"repositories":["YTT-CSH/coordinator-orchestrator","MandyDragon/coordinator-orchestrator"],"shared_revision":"a6d0311d279b32497a9c952061fafb798309b4e3","existing_review":"2026-08-08-batch-030","new_skill_reports_generated":0}
+  ],
+  "artifact_search": {
+    "repositories_searched": 10,
+    "query": "scripts references eval package.json",
+    "matches": 0,
+    "interpretation": "No repository-local executable/script/reference/eval/package artifacts surfaced in code search or reviewed documentation at the pinned revisions."
+  },
+  "selection_note": "Selected the next ten qualified single-skill entries from the April 1 deterministic indexed queue after Batch 032. All ten passed identity/star/revision/content gates; nine mapped to already-reviewed content and one introduced new canonical skill content."
+}
