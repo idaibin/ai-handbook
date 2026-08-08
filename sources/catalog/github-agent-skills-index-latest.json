@@ -41,44 +41,44 @@
   ],
   "in_progress_partition": {
     "partition": "2026-04",
-    "verified_date_range": "2026-04-01..2026-04-16",
-    "verified_daily_shards": 16,
+    "verified_date_range": "2026-04-01..2026-04-17",
+    "verified_daily_shards": 17,
     "per_page": 100,
-    "raw_candidate_records": 566,
-    "staged_unique": 566,
+    "raw_candidate_records": 619,
+    "staged_unique": 619,
     "duplicates": 0,
     "classification_counts": {
       "specification": 0,
-      "skill_collection": 284,
-      "single_skill_or_domain_package": 197,
+      "skill_collection": 302,
+      "single_skill_or_domain_package": 230,
       "awesome_index": 1,
       "skill_tooling": 14,
-      "adjacent_search_hit": 70,
+      "adjacent_search_hit": 72,
       "unclear_search_hit": 0
     },
-    "latest_artifact": "sources/catalog/batches/agentskills-created-2026-04-16-deterministic.json"
+    "latest_artifact": "sources/catalog/batches/agentskills-created-2026-04-17-deterministic.json"
   },
   "current_run": {
-    "date_range": "2026-04-16..2026-04-16",
+    "date_range": "2026-04-17..2026-04-17",
     "page_counts": [
-      77,
+      53,
       0
     ],
-    "raw_candidate_records": 77,
-    "unique": 77,
+    "raw_candidate_records": 53,
+    "unique": 53,
     "internal_duplicates": 0,
     "canonical_delta_asserted": 0,
     "classification_counts": {
       "specification": 0,
-      "skill_collection": 19,
-      "single_skill_or_domain_package": 53,
+      "skill_collection": 18,
+      "single_skill_or_domain_package": 33,
       "awesome_index": 0,
       "skill_tooling": 0,
-      "adjacent_search_hit": 5,
+      "adjacent_search_hit": 2,
       "unclear_search_hit": 0
     },
-    "artifact": "sources/catalog/batches/agentskills-created-2026-04-16-deterministic.json",
-    "run_report": "sources/catalog/runs/2026-08-08-agentskills-april-2026-04-16.md"
+    "artifact": "sources/catalog/batches/agentskills-created-2026-04-17-deterministic.json",
+    "run_report": "sources/catalog/runs/2026-08-08-agentskills-april-2026-04-17.md"
   },
   "march_2026_final_staging": {
     "verified_date_range": "2026-03-01..2026-03-31",
@@ -99,10 +99,10 @@
     "latest_artifact": "sources/catalog/batches/agentskills-created-2026-03-31-deterministic.json"
   },
   "verification": {
-    "pagination": "2026-04-16 page 1 returned 77 repositories with per_page=100; page 2 returned 0. Recheck with per_page=20 returned 20,20,20,17,0.",
-    "deduplication": "All 77 current-shard identities are distinct case-insensitively; the April 1 through April 16 exact created-date shards are disjoint by creation date, producing 566 staged unique identities and 0 asserted duplicates.",
+    "pagination": "2026-04-17 page 1 returned 53 repositories with per_page=100; page 2 returned 0. Recheck with per_page=20 returned 20,20,13,0.",
+    "deduplication": "All 53 current-shard identities are distinct case-insensitively; the April 1 through April 17 exact created-date shards are disjoint by creation date, producing 619 staged unique identities and 0 asserted duplicates.",
     "classification": "Provisional index-stage classification from repository identity/name metadata only; ambiguous metadata-only hits remain adjacent rather than being promoted by assumption.",
     "content": "not_started"
   },
-  "next_index_action": "continue the deterministic April partition with the 2026-04-17 exact single-day shard; keep canonical totals frozen until historical reconciliation"
+  "next_index_action": "continue the deterministic April partition with the 2026-04-18 exact single-day shard; keep canonical totals frozen until historical reconciliation"
 }
