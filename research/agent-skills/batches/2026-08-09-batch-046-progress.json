@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-09-batch-046",
+  "status": "completed",
+  "observed_at": "2026-08-09",
+  "selection_policy": "existing indexed queue; complete exactly 10 genuinely qualified repository identities when at least 10 remain; metadata-only completion forbidden",
+  "completed_repositories_count": 10,
+  "completed_repositories": [
+    {
+      "repository": "gigantsc/skills-hermes-",
+      "stars_observed": 0,
+      "revision": "4d322538be8b9ce98fca29b0eef26d67bff1fe82",
+      "tree": "32d2d4cb75cf113fbc8e145d7c52672832e34a2d",
+      "content_gate": "README + clean-architecture/SKILL.md read",
+      "canonical_action": "mapped_existing_exact_tree"
+    },
+    {
+      "repository": "NailRunner/skills-base-2604",
+      "stars_observed": 0,
+      "revision": "4d322538be8b9ce98fca29b0eef26d67bff1fe82",
+      "tree": "32d2d4cb75cf113fbc8e145d7c52672832e34a2d",
+      "content_gate": "README + clean-architecture/SKILL.md read",
+      "canonical_action": "mapped_existing_exact_tree"
+    },
+    {
+      "repository": "SGuibord/chainlink-agent-skills",
+      "stars_observed": 0,
+      "revision": "bada72c0fbdba616412c65c239d69e4f94154abd",
+      "tree": "c78a0a34f3b952063f0bc45f87820615f4501a01",
+      "content_gate": "README + both SKILL.md + CCIP MCP reference + eval README + must-pass rubric read",
+      "canonical_action": "1_new_report_chainlink_ccip_revision; CRE mapped_existing"
+    },
+    {
+      "repository": "raykao/obsidian-plugin-skill",
+      "stars_observed": 0,
+      "revision": "7633460c8bc776030936d86d737f9e2679eeb7b6",
+      "tree": "7fb97ded5a5248b33b139cbf055ceb2b18e85dd9",
+      "content_gate": "README + obsidian-plugin/SKILL.md + API reference read; no scripts/tests/evals found",
+      "canonical_action": "1_new_report"
+    },
+    {
+      "repository": "michaelgallese3-coder/Anthropic-Cybersecurity-Skills",
+      "stars_observed": 0,
+      "revision": "d388b31205a9d31c21b6df6f28324075ec4f47a1",
+      "tree": "06755497f0ed54f925cc46b8cbc47cd6778ef7c6",
+      "content_gate": "README + representative SKILL.md + validate-skills workflow read",
+      "canonical_action": "mapped_existing_collection_lineage"
+    },
+    {
+      "repository": "0xhexrecon/Anthropic-Cybersecurity-Skills",
+      "stars_observed": 0,
+      "revision": "4ae0be7f4806596e94958ac343379e9c9b3111d2",
+      "tree": "5dd2ce82978a50cd014d4b310f5993bf5bba6f43",
+      "content_gate": "README + representative SKILL.md + recursive tree + validate-skills workflow read",
+      "canonical_action": "mapped_existing_collection_lineage"
+    },
+    {
+      "repository": "hnizil/Anthropic-Cybersecurity-Skills",
+      "stars_observed": 0,
+      "revision": "4ae0be7f4806596e94958ac343379e9c9b3111d2",
+      "tree": "5dd2ce82978a50cd014d4b310f5993bf5bba6f43",
+      "content_gate": "README + representative SKILL.md read",
+      "canonical_action": "mapped_existing_exact_tree"
+    },
+    {
+      "repository": "imperius361/Anthropic-Cybersecurity-Skills",
+      "stars_observed": 0,
+      "revision": "4ae0be7f4806596e94958ac343379e9c9b3111d2",
+      "tree": "5dd2ce82978a50cd014d4b310f5993bf5bba6f43",
+      "content_gate": "README + representative SKILL.md read",
+      "canonical_action": "mapped_existing_exact_tree"
+    },
+    {
+      "repository": "suriyaJaboon/Anthropic-Cybersecurity-Skills",
+      "stars_observed": 0,
+      "revision": "4ae0be7f4806596e94958ac343379e9c9b3111d2",
+      "tree": "5dd2ce82978a50cd014d4b310f5993bf5bba6f43",
+      "content_gate": "README + representative SKILL.md read",
+      "canonical_action": "mapped_existing_exact_tree"
+    },
+    {
+      "repository": "casky-ai/Anthropic-Cybersecurity-Skills",
+      "stars_observed": 0,
+      "revision": "888bbe4c6e4e54e026874cbf6072e84f0cfd3b7a",
+      "tree": "f22ca9d1c273c9278ef0a2aababa626552bd772b",
+      "content_gate": "README + representative SKILL.md + validate-skills workflow read",
+      "canonical_action": "mapped_existing_collection_lineage"
+    }
+  ],
+  "reclassified_not_completed": [],
+  "repository_read_metrics": {
+    "readme_direct_reads": 10,
+    "skill_md_direct_reads": 11,
+    "unique_skill_bodies_directly_reviewed": 6,
+    "unique_git_trees": 6
+  },
+  "new_canonical_skill_reports": 2,
+  "new_report_slugs": [
+    "chainlink-ccip-skill@sGuibord-revision",
+    "obsidian-plugin"
+  ],
+  "cumulative": {
+    "repositories_structure_reviewed_total": 460,
+    "repository_scoped_skill_reports_total": 2929,
+    "canonical_eligible_basis": 2088,
+    "remaining_estimate": 1628,
+    "canonical_reconciliation": "pending"
+  },
+  "runtime_validation": "not_executed",
+  "important_findings": [
+    "Two Wondel-derived repository identities independently passed content gates but resolve to the same pinned revision/tree and therefore add repository coverage without duplicate Skill reports.",
+    "SGuibord/chainlink-agent-skills contains a materially revised CCIP body with MCP metadata/routing and a dedicated MCP reference; repository eval/rubric definitions were inspected but not executed.",
+    "raykao/obsidian-plugin-skill is a compact procedural/reference Skill with no repository-local scripts, tests or eval harness at the pinned tree.",
+    "Six Cybersecurity fork identities were directly content-gated. Three distinct Git trees were observed, while the representative current Skill blob is shared across the 0x/shared-tree and casky lineages; the Michael Gallese fork carries an older frontmatter/content variant.",
+    "Cybersecurity validate-skills.yml checks structural metadata/name constraints and duplicate names; it is not behavioral or security-efficacy validation.",
+    "Generated large-collection inventory counts were not converted into synthetic deep-analysis reports."
+  ],
+  "validation_boundary": {
+    "scripts_executed": false,
+    "builds_executed": false,
+    "tests_executed": false,
+    "evals_executed": false,
+    "live_external_apis_called_from_repository_code": false
+  },
+  "next_qualified_repository": "hanul93/Anthropic-Cybersecurity-Skills",
+  "remaining_estimate_note": "1628 is arithmetic continuation from the frozen 2088 eligible basis minus 460 structure-reviewed repository identities; it is not a reconciled unique-repository remainder."
+}
