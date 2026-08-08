@@ -1,16 +1,17 @@
 {
   "schema_version": "1.0",
-  "latest_batch_id": "2026-08-08-batch-032",
-  "latest_batch_report": "research/agent-skills/batches/2026-08-08-batch-032-deep-analysis.md",
-  "latest_batch_progress": "research/agent-skills/batches/2026-08-08-batch-032-progress.json",
-  "latest_skill_report": "research/agent-skills/batches/2026-08-08-batch-032-skill-reports.md",
-  "repositories_structure_reviewed_total": 320,
-  "repository_scoped_skill_reports_total": 2817,
+  "latest_batch_id": "2026-08-08-batch-033",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-08-batch-033-deep-analysis.md",
+  "latest_batch_progress": "research/agent-skills/batches/2026-08-08-batch-033-progress.json",
+  "latest_skill_report": "research/agent-skills/batches/2026-08-08-batch-033-skill-reports.md",
+  "repositories_structure_reviewed_total": 330,
+  "repository_scoped_skill_reports_total": 2818,
   "canonical_eligible_basis": 2088,
-  "remaining_estimate": 1768,
+  "remaining_estimate": 1758,
   "status": "structure-reviewed",
   "runtime_validation": "not_executed",
-  "direct_skill_body_reviews_latest_batch": 5,
+  "repository_skill_files_read_latest_batch": 10,
+  "direct_skill_body_reviews_latest_batch": 8,
   "observed_at": "2026-08-08",
-  "note": "Batch 032 content-reviewed 10 additional indexed repository identities from the April 1 deterministic queue. Ten identities reduced to five unique Git commit trees; five README/SKILL pairs were directly re-read. All five trees were exact duplicates of skill content already deeply reviewed in Batch 030 or Batch 031, so no duplicate canonical skill reports were added. Repository search across all ten identities returned no scripts/references/eval/package.json matches. Runtime/build/test/eval execution remains not executed. The remaining estimate is arithmetic continuation from the frozen 2088 basis and remains subject to canonical reconciliation."
+  "note": "Batch 033 content-reviewed 10 additional indexed repository identities from the April 1 deterministic queue. Ten identities reduced to eight unique Git commit trees. Root SKILL.md was directly fetched for all ten identities and README bodies were reviewed for all eight unique trees. Seven unique trees were already represented by canonical reviews; ajunlonglive/background-memory-extractor introduced one new canonical skill report. Repository search across all ten identities returned no scripts/references/eval/package.json matches. The background-memory skill's after-turn trigger is documented but not implemented by any repository-local lifecycle hook. Runtime/build/test/eval execution remains not executed. The remaining estimate is arithmetic continuation from the frozen 2088 basis and remains subject to canonical reconciliation."
 }
