@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "topic": "agents",
+  "run_id": "agents-deep-20260809T152200Z",
+  "snapshot_id": "agents-agent-framework-20260809T151450Z",
+  "status": "completed",
+  "report": "research/agents/batches/agents-deep-20260809T152200Z.md",
+  "progress": "research/agents/progress/agents-deep-20260809T152200Z.json",
+  "dedup": "research/agents/dedup/agents-deep-20260809T152200Z.json",
+  "retrospective": "research/agents/retrospectives/agents-deep-20260809T152200Z.json",
+  "counts": {
+    "repositories_reviewed": 10,
+    "unique_contents_reviewed": 10,
+    "analyses_reused": 0,
+    "new_analysis_reports": 10
+  },
+  "next_candidate": {
+    "repository": "crewAIInc/crewAI",
+    "fixed_commit": "f7ba8e35212bbda82b44fefffea936f2673e0483"
+  },
+  "updated_at": "2026-08-09T15:35:45Z"
+}

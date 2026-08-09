@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "topic": "agents",
+  "run_id": "agents-deep-20260809T152200Z",
+  "method_version": "repository-research-v1.0",
+  "result": {
+    "planned": 10,
+    "completed": 10,
+    "held": 0,
+    "failed": 0,
+    "reused": 0
+  },
+  "quality_gate": {
+    "minimum_new_content": 3,
+    "new_content": 10,
+    "runtime_validated": 0,
+    "source_validated": 10,
+    "failure_sample": "Open-AutoGLM advertises sensitive-operation confirmation and automatic takeover, but the fixed Android core path gates only model-labelled Tap actions and does not consume the screenshot is_sensitive flag."
+  },
+  "previous_action": {
+    "action_id": "agent-index-action-001",
+    "applied": true,
+    "applied_change": "Every claimed item had a root-README execution marker and a fixed executable asset before deep review.",
+    "metric_before": {
+      "eligible_execution_marker_rate": 1
+    },
+    "metric_after": {
+      "deep_reviewed": 10,
+      "no_executable_asset": 0,
+      "deep_false_positive_rate": 0
+    },
+    "decision": "keep"
+  },
+  "next_action": {
+    "action_id": "agent-deep-action-001",
+    "hypothesis": "Recording the permission enforcement layer as code-enforced, model-mediated, external-host, or not-found before scoring will prevent prompt instructions and runtime authorization gates from receiving equivalent trust.",
+    "metric": "In the next batch, 100% of reports name one permission enforcement layer and zero cross-repository conclusions treat model-mediated confirmation as code-enforced authorization.",
+    "rollback_condition": "Rollback the fixed enum if more than 20% of next-batch repositories require two equally primary enforcement layers; retain a free-text enforcement description instead."
+  }
+}

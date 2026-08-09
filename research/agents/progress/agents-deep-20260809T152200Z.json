@@ -1,0 +1,220 @@
+{
+  "schema_version": "1.0",
+  "topic": "agents",
+  "run_id": "agents-deep-20260809T152200Z",
+  "snapshot_id": "agents-agent-framework-20260809T151450Z",
+  "claim_id": "agents-claim-20260809T152200Z",
+  "status": "completed",
+  "started_at": "2026-08-09T15:22:00Z",
+  "completed_at": "2026-08-09T15:35:45Z",
+  "counts": {
+    "repositories_reviewed": 10,
+    "unique_contents_reviewed": 10,
+    "analyses_reused": 0,
+    "new_analysis_reports": 10,
+    "held": 0,
+    "failed": 0
+  },
+  "evidence_levels": {
+    "metadata_verified": 0,
+    "structure_reviewed": 0,
+    "source_validated": 10,
+    "runtime_validated": 0
+  },
+  "items": [
+    {
+      "repository": "agent0ai/agent-zero",
+      "fixed_commit": "5ff106a2d489d17c2a3b378521a8f29fb29cf77d",
+      "content_id": "5ff106a2d489d17c2a3b378521a8f29fb29cf77d:README=5596007d11e9e827f87f5307ad0d6b31439214c0;agent=62beb8bc149267d5720586ddd4695f2b679fd172;models=e1fa5c42304fb46f6bb092011cb9dd48fb2edca8;history=f0ee4c0df9f485a9c8ff32e78858d0187bf4d063;response=9e2532b5b75cc4233a8973063eb75a1af2153d29",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "fit",
+      "subtype": "general-computer-agent",
+      "dimensions": {
+        "agent_boundary": 4,
+        "context_and_state": 4,
+        "tool_and_permission_boundary": 2,
+        "stop_and_recovery": 3,
+        "verification": 3,
+        "concurrency_and_cost": 4,
+        "production_readiness": 3
+      },
+      "report": "research/agents/reports/agent0ai-agent-zero-5ff106a.md"
+    },
+    {
+      "repository": "microsoft/agent-framework",
+      "fixed_commit": "5eb3eb745e16324ac7bffb1dbe006d8f13c8d993",
+      "content_id": "5eb3eb745e16324ac7bffb1dbe006d8f13c8d993:README=c26c8c90dff27725b6d203ca537f84344e043621;agents=05606d0a5fc47aa09daee42e5523eca2a9a0a333;tools=e7760c9cbdf2513bd48fe4a9477ea22aeaa33afd;sessions=893bb96e52604b5f2ed99cc8514e55a0e3a11de3;checkpoint=2b267979e996a7c855aac4a61aff99ad08567005",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "strong_fit",
+      "subtype": "multi-agent-runtime",
+      "dimensions": {
+        "agent_boundary": 5,
+        "context_and_state": 5,
+        "tool_and_permission_boundary": 4,
+        "stop_and_recovery": 5,
+        "verification": 5,
+        "concurrency_and_cost": 5,
+        "production_readiness": 5
+      },
+      "report": "research/agents/reports/microsoft-agent-framework-5eb3eb7.md"
+    },
+    {
+      "repository": "microsoft/autogen",
+      "fixed_commit": "027ecf0a379bcc1d09956d46d12d44a3ad9cee14",
+      "content_id": "027ecf0a379bcc1d09956d46d12d44a3ad9cee14:README=25f7cc162ae92c3988966d85cce173ff6df48020;assistant=8b8316fb0a7c04d32165dd0cf76d914aa00fed08;team=60f222912387d37be37f457ad486d51060255966;termination=f0ba274ebe721bfe6601aad2340ef71b06cea565;runtime=3a8a8d714ff0a214f224b4b9c8fc2ff2ec3d1f18",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "fit",
+      "subtype": "multi-agent-runtime",
+      "dimensions": {
+        "agent_boundary": 4,
+        "context_and_state": 4,
+        "tool_and_permission_boundary": 2,
+        "stop_and_recovery": 4,
+        "verification": 4,
+        "concurrency_and_cost": 4,
+        "production_readiness": 2
+      },
+      "report": "research/agents/reports/microsoft-autogen-027ecf0.md"
+    },
+    {
+      "repository": "zai-org/Open-AutoGLM",
+      "fixed_commit": "86f55382982fb054e8fc98ca80609dff8a2cdc3c",
+      "content_id": "git-tree:8ee1217deb8a7efe257747efd644aa9e20f89180",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "conditional_fit",
+      "subtype": "mobile-gui-agent",
+      "dimensions": {
+        "agent_boundary": 4,
+        "context_and_state": 2,
+        "tool_and_permission_boundary": 2,
+        "stop_and_recovery": 3,
+        "verification": 1,
+        "concurrency_and_cost": 2,
+        "production_readiness": 2
+      },
+      "report": "research/agents/reports/zai-org-open-autoglm-86f5538.md"
+    },
+    {
+      "repository": "TEN-framework/ten-framework",
+      "fixed_commit": "1b78cb725910d6f63389ef4ae69b182854d5b9d9",
+      "content_id": "git-tree:7b33640de9aa26cebefcae7b6daebab2f8167a26",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "fit",
+      "subtype": "realtime-multimodal-agent-framework",
+      "dimensions": {
+        "agent_boundary": 4,
+        "context_and_state": 3,
+        "tool_and_permission_boundary": 2,
+        "stop_and_recovery": 4,
+        "verification": 4,
+        "concurrency_and_cost": 3,
+        "production_readiness": 3
+      },
+      "report": "research/agents/reports/ten-framework-ten-framework-1b78cb7.md"
+    },
+    {
+      "repository": "pydantic/pydantic-ai",
+      "fixed_commit": "fc6a3ac506513150e2016ee5ba9785d792795150",
+      "content_id": "git-tree:950d55b571f0de4d5e6788b621cb9a2b3da03b3d",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "strong_fit",
+      "subtype": "typed-agent-sdk",
+      "dimensions": {
+        "agent_boundary": 5,
+        "context_and_state": 5,
+        "tool_and_permission_boundary": 4,
+        "stop_and_recovery": 5,
+        "verification": 5,
+        "concurrency_and_cost": 5,
+        "production_readiness": 5
+      },
+      "report": "research/agents/reports/pydantic-pydantic-ai-fc6a3ac.md"
+    },
+    {
+      "repository": "openai/openai-agents-python",
+      "fixed_commit": "e3d7c1727bf43761afbb7954651b7f908a973a3b",
+      "content_id": "github:openai/openai-agents-python@e3d7c1727bf43761afbb7954651b7f908a973a3b",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "strong_fit",
+      "subtype": "agent-orchestration-sdk",
+      "dimensions": {
+        "agent_boundary": 5,
+        "context_and_state": 5,
+        "tool_and_permission_boundary": 5,
+        "stop_and_recovery": 5,
+        "verification": 4,
+        "concurrency_and_cost": 3,
+        "production_readiness": 5
+      },
+      "report": "research/agents/reports/openai-openai-agents-python-e3d7c17.md"
+    },
+    {
+      "repository": "alibaba/spring-ai-alibaba",
+      "fixed_commit": "9aee0f1a86f59fcf284628a922d68ef71a4e2c85",
+      "content_id": "github:alibaba/spring-ai-alibaba@9aee0f1a86f59fcf284628a922d68ef71a4e2c85",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "strong_fit",
+      "subtype": "graph-agent-framework",
+      "dimensions": {
+        "agent_boundary": 5,
+        "context_and_state": 5,
+        "tool_and_permission_boundary": 4,
+        "stop_and_recovery": 5,
+        "verification": 4,
+        "concurrency_and_cost": 3,
+        "production_readiness": 3
+      },
+      "report": "research/agents/reports/alibaba-spring-ai-alibaba-9aee0f1.md"
+    },
+    {
+      "repository": "livekit/agents",
+      "fixed_commit": "02569a40794645195bd92003431e5197ea413922",
+      "content_id": "github:livekit/agents@02569a40794645195bd92003431e5197ea413922",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "strong_fit",
+      "subtype": "realtime-voice-agent-framework",
+      "dimensions": {
+        "agent_boundary": 5,
+        "context_and_state": 3,
+        "tool_and_permission_boundary": 3,
+        "stop_and_recovery": 5,
+        "verification": 5,
+        "concurrency_and_cost": 3,
+        "production_readiness": 5
+      },
+      "report": "research/agents/reports/livekit-agents-02569a4.md"
+    },
+    {
+      "repository": "FoundationAgents/MetaGPT",
+      "fixed_commit": "11cdf466d042aece04fc6cfd13b28e1a70341b1f",
+      "content_id": "commit:11cdf466d042aece04fc6cfd13b28e1a70341b1f:keyblobs:080c02cd-49b1d178-5dbadf9c-03a4760c",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "fit",
+      "subtype": "role-based-multi-agent-framework",
+      "dimensions": {
+        "agent_boundary": 5,
+        "context_and_state": 4,
+        "tool_and_permission_boundary": 3,
+        "stop_and_recovery": 4,
+        "verification": 3,
+        "concurrency_and_cost": 4,
+        "production_readiness": 3
+      },
+      "report": "research/agents/reports/foundationagents-metagpt-11cdf46.md"
+    }
+  ],
+  "next_candidate": {
+    "repository": "crewAIInc/crewAI",
+    "fixed_commit": "f7ba8e35212bbda82b44fefffea936f2673e0483"
+  }
+}

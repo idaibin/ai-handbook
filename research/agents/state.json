@@ -3,8 +3,8 @@
   "topic": "agents",
   "method_version": "repository-research-v1.0",
   "last_successful_run": {
-    "run_id": "agents-index-20260809T151450Z",
-    "mode": "index",
+    "run_id": "agents-deep-20260809T152200Z",
+    "mode": "deep-analysis",
     "commit_sha": "self",
     "snapshot_id": "agents-agent-framework-20260809T151450Z"
   },
@@ -16,10 +16,10 @@
     "candidate_count": 94
   },
   "counts": {
-    "repository_identity_coverage": 0,
-    "unique_content_deep_reviews": 0,
+    "repository_identity_coverage": 10,
+    "unique_content_deep_reviews": 10,
     "analyses_reused": 0,
-    "new_analysis_reports": 0
+    "new_analysis_reports": 10
   },
   "index_counts": {
     "canonical_repository_count": 121,
@@ -27,227 +27,67 @@
     "held": 6,
     "rejected": 21
   },
-  "active_claims": [
-    {
-      "claim_id": "agents-claim-20260809T152200Z",
-      "run_id": "agents-deep-20260809T152200Z",
-      "snapshot_id": "agents-agent-framework-20260809T151450Z",
-      "claimed_at": "2026-08-09T15:22:00Z",
-      "lease_expires_at": "2026-08-09T19:22:00Z",
-      "items": [
-        {
-          "repository_id": "812975380",
-          "full_name": "agent0ai/agent-zero",
-          "canonical_url": "https://github.com/agent0ai/agent-zero",
-          "stars": null,
-          "stars_query_floor": 1000,
-          "default_branch": "main",
-          "head_sha": "5ff106a2d489d17c2a3b378521a8f29fb29cf77d",
-          "content_pointer": {
-            "type": "default_branch_head",
-            "sha": "5ff106a2d489d17c2a3b378521a8f29fb29cf77d",
-            "content_body_inspected": false
-          },
-          "queue_status": "pending",
-          "classification_reason": "Executable open agent framework with a Dockerized computer, browser, skills, plugins and projects."
-        },
-        {
-          "repository_id": "974445592",
-          "full_name": "microsoft/agent-framework",
-          "canonical_url": "https://github.com/microsoft/agent-framework",
-          "stars": null,
-          "stars_query_floor": 1000,
-          "default_branch": "main",
-          "head_sha": "5eb3eb745e16324ac7bffb1dbe006d8f13c8d993",
-          "content_pointer": {
-            "type": "default_branch_head",
-            "sha": "5eb3eb745e16324ac7bffb1dbe006d8f13c8d993",
-            "content_body_inspected": false
-          },
-          "queue_status": "pending",
-          "classification_reason": "Published Microsoft framework for building and orchestrating agents."
-        },
-        {
-          "repository_id": "680120071",
-          "full_name": "microsoft/autogen",
-          "canonical_url": "https://github.com/microsoft/autogen",
-          "stars": null,
-          "stars_query_floor": 1000,
-          "default_branch": "main",
-          "head_sha": "027ecf0a379bcc1d09956d46d12d44a3ad9cee14",
-          "content_pointer": {
-            "type": "default_branch_head",
-            "sha": "027ecf0a379bcc1d09956d46d12d44a3ad9cee14",
-            "content_body_inspected": false
-          },
-          "queue_status": "pending",
-          "classification_reason": "Executable multi-agent framework; README also exposes maintenance/migration status for later deep review."
-        },
-        {
-          "repository_id": "1112189620",
-          "full_name": "zai-org/Open-AutoGLM",
-          "canonical_url": "https://github.com/zai-org/Open-AutoGLM",
-          "stars": null,
-          "stars_query_floor": 1000,
-          "default_branch": "main",
-          "head_sha": "86f55382982fb054e8fc98ca80609dff8a2cdc3c",
-          "content_pointer": {
-            "type": "default_branch_head",
-            "sha": "86f55382982fb054e8fc98ca80609dff8a2cdc3c",
-            "content_body_inspected": false
-          },
-          "queue_status": "pending",
-          "classification_reason": "Executable mobile GUI agent with perception, planning, actions and human takeover."
-        },
-        {
-          "repository_id": "817354652",
-          "full_name": "TEN-framework/ten-framework",
-          "canonical_url": "https://github.com/TEN-framework/ten-framework",
-          "stars": null,
-          "stars_query_floor": 1000,
-          "default_branch": "main",
-          "head_sha": "1b78cb725910d6f63389ef4ae69b182854d5b9d9",
-          "content_pointer": {
-            "type": "default_branch_head",
-            "sha": "1b78cb725910d6f63389ef4ae69b182854d5b9d9",
-            "content_body_inspected": false
-          },
-          "queue_status": "pending",
-          "classification_reason": "Executable framework for real-time conversational and multimodal agents."
-        },
-        {
-          "repository_id": "818331198",
-          "full_name": "pydantic/pydantic-ai",
-          "canonical_url": "https://github.com/pydantic/pydantic-ai",
-          "stars": null,
-          "stars_query_floor": 1000,
-          "default_branch": "main",
-          "head_sha": "fc6a3ac506513150e2016ee5ba9785d792795150",
-          "content_pointer": {
-            "type": "default_branch_head",
-            "sha": "fc6a3ac506513150e2016ee5ba9785d792795150",
-            "content_body_inspected": false
-          },
-          "queue_status": "pending",
-          "classification_reason": "Executable production-oriented Python agent framework."
-        },
-        {
-          "repository_id": "946380199",
-          "full_name": "openai/openai-agents-python",
-          "canonical_url": "https://github.com/openai/openai-agents-python",
-          "stars": null,
-          "stars_query_floor": 1000,
-          "default_branch": "main",
-          "head_sha": "e3d7c1727bf43761afbb7954651b7f908a973a3b",
-          "content_pointer": {
-            "type": "default_branch_head",
-            "sha": "e3d7c1727bf43761afbb7954651b7f908a973a3b",
-            "content_body_inspected": false
-          },
-          "queue_status": "pending",
-          "classification_reason": "Executable provider-agnostic Agents SDK for multi-agent workflows."
-        },
-        {
-          "repository_id": "854337508",
-          "full_name": "alibaba/spring-ai-alibaba",
-          "canonical_url": "https://github.com/alibaba/spring-ai-alibaba",
-          "stars": null,
-          "stars_query_floor": 1000,
-          "default_branch": "main",
-          "head_sha": "9aee0f1a86f59fcf284628a922d68ef71a4e2c85",
-          "content_pointer": {
-            "type": "default_branch_head",
-            "sha": "9aee0f1a86f59fcf284628a922d68ef71a4e2c85",
-            "content_body_inspected": false
-          },
-          "queue_status": "pending",
-          "classification_reason": "Executable Java agent framework and workflow ecosystem."
-        },
-        {
-          "repository_id": "707441527",
-          "full_name": "livekit/agents",
-          "canonical_url": "https://github.com/livekit/agents",
-          "stars": null,
-          "stars_query_floor": 1000,
-          "default_branch": "main",
-          "head_sha": "02569a40794645195bd92003431e5197ea413922",
-          "content_pointer": {
-            "type": "default_branch_head",
-            "sha": "02569a40794645195bd92003431e5197ea413922",
-            "content_body_inspected": false
-          },
-          "queue_status": "pending",
-          "classification_reason": "Executable framework for realtime voice and multimodal agents."
-        },
-        {
-          "repository_id": "660551251",
-          "full_name": "FoundationAgents/MetaGPT",
-          "canonical_url": "https://github.com/FoundationAgents/MetaGPT",
-          "stars": null,
-          "stars_query_floor": 1000,
-          "default_branch": "main",
-          "head_sha": "11cdf466d042aece04fc6cfd13b28e1a70341b1f",
-          "content_pointer": {
-            "type": "default_branch_head",
-            "sha": "11cdf466d042aece04fc6cfd13b28e1a70341b1f",
-            "content_body_inspected": false
-          },
-          "queue_status": "pending",
-          "classification_reason": "Executable collaborative multi-agent framework."
-        }
-      ]
-    }
-  ],
+  "active_claims": [],
   "queue": [
     {
       "repository": "agent0ai/agent-zero",
-      "status": "pending",
-      "fixed_commit": "5ff106a2d489d17c2a3b378521a8f29fb29cf77d"
+      "status": "analyzed",
+      "fixed_commit": "5ff106a2d489d17c2a3b378521a8f29fb29cf77d",
+      "run_id": "agents-deep-20260809T152200Z"
     },
     {
       "repository": "microsoft/agent-framework",
-      "status": "pending",
-      "fixed_commit": "5eb3eb745e16324ac7bffb1dbe006d8f13c8d993"
+      "status": "analyzed",
+      "fixed_commit": "5eb3eb745e16324ac7bffb1dbe006d8f13c8d993",
+      "run_id": "agents-deep-20260809T152200Z"
     },
     {
       "repository": "microsoft/autogen",
-      "status": "pending",
-      "fixed_commit": "027ecf0a379bcc1d09956d46d12d44a3ad9cee14"
+      "status": "analyzed",
+      "fixed_commit": "027ecf0a379bcc1d09956d46d12d44a3ad9cee14",
+      "run_id": "agents-deep-20260809T152200Z"
     },
     {
       "repository": "zai-org/Open-AutoGLM",
-      "status": "pending",
-      "fixed_commit": "86f55382982fb054e8fc98ca80609dff8a2cdc3c"
+      "status": "analyzed",
+      "fixed_commit": "86f55382982fb054e8fc98ca80609dff8a2cdc3c",
+      "run_id": "agents-deep-20260809T152200Z"
     },
     {
       "repository": "TEN-framework/ten-framework",
-      "status": "pending",
-      "fixed_commit": "1b78cb725910d6f63389ef4ae69b182854d5b9d9"
+      "status": "analyzed",
+      "fixed_commit": "1b78cb725910d6f63389ef4ae69b182854d5b9d9",
+      "run_id": "agents-deep-20260809T152200Z"
     },
     {
       "repository": "pydantic/pydantic-ai",
-      "status": "pending",
-      "fixed_commit": "fc6a3ac506513150e2016ee5ba9785d792795150"
+      "status": "analyzed",
+      "fixed_commit": "fc6a3ac506513150e2016ee5ba9785d792795150",
+      "run_id": "agents-deep-20260809T152200Z"
     },
     {
       "repository": "openai/openai-agents-python",
-      "status": "pending",
-      "fixed_commit": "e3d7c1727bf43761afbb7954651b7f908a973a3b"
+      "status": "analyzed",
+      "fixed_commit": "e3d7c1727bf43761afbb7954651b7f908a973a3b",
+      "run_id": "agents-deep-20260809T152200Z"
     },
     {
       "repository": "alibaba/spring-ai-alibaba",
-      "status": "pending",
-      "fixed_commit": "9aee0f1a86f59fcf284628a922d68ef71a4e2c85"
+      "status": "analyzed",
+      "fixed_commit": "9aee0f1a86f59fcf284628a922d68ef71a4e2c85",
+      "run_id": "agents-deep-20260809T152200Z"
     },
     {
       "repository": "livekit/agents",
-      "status": "pending",
-      "fixed_commit": "02569a40794645195bd92003431e5197ea413922"
+      "status": "analyzed",
+      "fixed_commit": "02569a40794645195bd92003431e5197ea413922",
+      "run_id": "agents-deep-20260809T152200Z"
     },
     {
       "repository": "FoundationAgents/MetaGPT",
-      "status": "pending",
-      "fixed_commit": "11cdf466d042aece04fc6cfd13b28e1a70341b1f"
+      "status": "analyzed",
+      "fixed_commit": "11cdf466d042aece04fc6cfd13b28e1a70341b1f",
+      "run_id": "agents-deep-20260809T152200Z"
     },
     {
       "repository": "crewAIInc/crewAI",
@@ -671,5 +511,77 @@
     }
   ],
   "latest_deep_analysis": "research/agents/deep-analysis-latest.json",
-  "updated_at": "2026-08-09T15:22:00Z"
+  "updated_at": "2026-08-09T15:35:45Z",
+  "completed_claims": [
+    {
+      "repository": "agent0ai/agent-zero",
+      "status": "analyzed",
+      "run_id": "agents-deep-20260809T152200Z",
+      "fixed_commit": "5ff106a2d489d17c2a3b378521a8f29fb29cf77d",
+      "content_id": "5ff106a2d489d17c2a3b378521a8f29fb29cf77d:README=5596007d11e9e827f87f5307ad0d6b31439214c0;agent=62beb8bc149267d5720586ddd4695f2b679fd172;models=e1fa5c42304fb46f6bb092011cb9dd48fb2edca8;history=f0ee4c0df9f485a9c8ff32e78858d0187bf4d063;response=9e2532b5b75cc4233a8973063eb75a1af2153d29"
+    },
+    {
+      "repository": "microsoft/agent-framework",
+      "status": "analyzed",
+      "run_id": "agents-deep-20260809T152200Z",
+      "fixed_commit": "5eb3eb745e16324ac7bffb1dbe006d8f13c8d993",
+      "content_id": "5eb3eb745e16324ac7bffb1dbe006d8f13c8d993:README=c26c8c90dff27725b6d203ca537f84344e043621;agents=05606d0a5fc47aa09daee42e5523eca2a9a0a333;tools=e7760c9cbdf2513bd48fe4a9477ea22aeaa33afd;sessions=893bb96e52604b5f2ed99cc8514e55a0e3a11de3;checkpoint=2b267979e996a7c855aac4a61aff99ad08567005"
+    },
+    {
+      "repository": "microsoft/autogen",
+      "status": "analyzed",
+      "run_id": "agents-deep-20260809T152200Z",
+      "fixed_commit": "027ecf0a379bcc1d09956d46d12d44a3ad9cee14",
+      "content_id": "027ecf0a379bcc1d09956d46d12d44a3ad9cee14:README=25f7cc162ae92c3988966d85cce173ff6df48020;assistant=8b8316fb0a7c04d32165dd0cf76d914aa00fed08;team=60f222912387d37be37f457ad486d51060255966;termination=f0ba274ebe721bfe6601aad2340ef71b06cea565;runtime=3a8a8d714ff0a214f224b4b9c8fc2ff2ec3d1f18"
+    },
+    {
+      "repository": "zai-org/Open-AutoGLM",
+      "status": "analyzed",
+      "run_id": "agents-deep-20260809T152200Z",
+      "fixed_commit": "86f55382982fb054e8fc98ca80609dff8a2cdc3c",
+      "content_id": "git-tree:8ee1217deb8a7efe257747efd644aa9e20f89180"
+    },
+    {
+      "repository": "TEN-framework/ten-framework",
+      "status": "analyzed",
+      "run_id": "agents-deep-20260809T152200Z",
+      "fixed_commit": "1b78cb725910d6f63389ef4ae69b182854d5b9d9",
+      "content_id": "git-tree:7b33640de9aa26cebefcae7b6daebab2f8167a26"
+    },
+    {
+      "repository": "pydantic/pydantic-ai",
+      "status": "analyzed",
+      "run_id": "agents-deep-20260809T152200Z",
+      "fixed_commit": "fc6a3ac506513150e2016ee5ba9785d792795150",
+      "content_id": "git-tree:950d55b571f0de4d5e6788b621cb9a2b3da03b3d"
+    },
+    {
+      "repository": "openai/openai-agents-python",
+      "status": "analyzed",
+      "run_id": "agents-deep-20260809T152200Z",
+      "fixed_commit": "e3d7c1727bf43761afbb7954651b7f908a973a3b",
+      "content_id": "github:openai/openai-agents-python@e3d7c1727bf43761afbb7954651b7f908a973a3b"
+    },
+    {
+      "repository": "alibaba/spring-ai-alibaba",
+      "status": "analyzed",
+      "run_id": "agents-deep-20260809T152200Z",
+      "fixed_commit": "9aee0f1a86f59fcf284628a922d68ef71a4e2c85",
+      "content_id": "github:alibaba/spring-ai-alibaba@9aee0f1a86f59fcf284628a922d68ef71a4e2c85"
+    },
+    {
+      "repository": "livekit/agents",
+      "status": "analyzed",
+      "run_id": "agents-deep-20260809T152200Z",
+      "fixed_commit": "02569a40794645195bd92003431e5197ea413922",
+      "content_id": "github:livekit/agents@02569a40794645195bd92003431e5197ea413922"
+    },
+    {
+      "repository": "FoundationAgents/MetaGPT",
+      "status": "analyzed",
+      "run_id": "agents-deep-20260809T152200Z",
+      "fixed_commit": "11cdf466d042aece04fc6cfd13b28e1a70341b1f",
+      "content_id": "commit:11cdf466d042aece04fc6cfd13b28e1a70341b1f:keyblobs:080c02cd-49b1d178-5dbadf9c-03a4760c"
+    }
+  ]
 }
