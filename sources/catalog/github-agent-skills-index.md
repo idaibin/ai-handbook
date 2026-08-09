@@ -30,7 +30,7 @@ per_page=100
 
 The `2026-04-30` shard returned `29` repositories on page 1 and `0` on page 2. Independent rechecks returned `20,9,0` with `per_page=20` and `29,0` with `per_page=33`. Case-insensitive `owner/repository` deduplication produced `29` unique identities and `0` internal duplicates.
 
-April staging now contains `1272` unique identities across `2026-04-01` through `2026-04-30`, with `0` cross-shard duplicates asserted under the established connector-search partition contract.
+April staging contains `1272` unique identities across `2026-04-01` through `2026-04-30`, with `0` cross-shard duplicates asserted under the established connector-search partition contract.
 
 ### April provisional classification
 
@@ -44,8 +44,6 @@ April staging now contains `1272` unique identities across `2026-04-01` through 
 | `adjacent_search_hit` | 85 |
 | `unclear_search_hit` | 2 |
 | **Total** | **1272** |
-
-Classification remains repository-identity/name plus repository-metadata-only and provisional. Metadata descriptions/fork metadata were used only where the name was ambiguous; no target repository content was inspected. In the latest shard, several generic `agentskills` repositories are forks of `agentskills/agentskills` and are therefore classified as `specification`; `Jethro7723/agentskills` is a fork of `obra/superpowers` whose metadata describes an agentic skills framework/software-development methodology; `codingr47/agentskills-framework-poc` describes a Rust AgentSkills framework implementation; `anatolykoptev/skillkit` describes a reference Go implementation of the agentskills.io standard; `Watermelon4000/typewriter-video` and `Nixer-2301/webpage-skill` describe single AgentSkill-compatible packages; `Nifflesvibe001/skills` is a fork of the Wondel.ai multi-skill collection; `wenni2005-ai/openclaw-skills` describes custom OpenClaw AgentSkills; `suhas-24/ai-engineering-2026` is an AI-engineering curriculum that mentions Agent Skills among many topics; and `dimayip/learn-agent-skills` is a learning workshop about the Agent Skills specification. `HenriqueGomesHub/agentskills` remains `unclear_search_hit` because repository metadata only says it is testing skill creation.
 
 ### April artifacts
 
@@ -80,7 +78,38 @@ Classification remains repository-identity/name plus repository-metadata-only an
 - [`batches/agentskills-created-2026-04-29-deterministic.json`](batches/agentskills-created-2026-04-29-deterministic.json)
 - [`batches/agentskills-created-2026-04-30-deterministic.json`](batches/agentskills-created-2026-04-30-deterministic.json)
 
-Current run report: [`runs/2026-08-09-agentskills-april-2026-04-30.md`](runs/2026-08-09-agentskills-april-2026-04-30.md).
+## May 2026 partition — staging in progress
+
+Verified persisted coverage:
+
+```text
+2026-05-01 .. 2026-05-01
+per_page=100
+1 exact single-day shard with terminal pagination probe
+```
+
+The `2026-05-01` shard returned `25` repositories on page 1 and `0` on page 2. Independent rechecks returned `20,5,0` with `per_page=20` and `25,0` with `per_page=33`. Case-insensitive `owner/repository` deduplication produced `25` unique identities and `0` internal duplicates.
+
+### May provisional classification
+
+| Classification | Count |
+| --- | ---: |
+| `specification` | 7 |
+| `skill_collection` | 6 |
+| `single_skill_or_domain_package` | 9 |
+| `awesome_index` | 0 |
+| `skill_tooling` | 1 |
+| `adjacent_search_hit` | 1 |
+| `unclear_search_hit` | 1 |
+| **Total** | **25** |
+
+Classification remains repository-identity/name plus GitHub-repository-metadata-only and provisional. Metadata confirms representative generic `agentskills` results as forks of `agentskills/agentskills`; `vectorlane80/root-cause-analyzer` describes an agentskills.io-compatible skill; `raphaelstolt/agent-skills-validator` describes specification validation tooling; `SherifAKAckles/skills` is a fork of the Wondel.ai multi-skill collection; and `sofiaarguello/agentic-qa-boilerplate` describes multi-agent QA skills following the agentskills.io specification. `LFernando07/AgentSkills_TaskDemo` has no repository description and remains `unclear_search_hit`. `PolarisZZZ/life-gamify` is a broader personal-growth system that lists AgentSkills compatibility, so it remains `adjacent_search_hit` at index stage.
+
+### May artifacts
+
+- [`batches/agentskills-created-2026-05-01-deterministic.json`](batches/agentskills-created-2026-05-01-deterministic.json)
+
+Current run report: [`runs/2026-08-09-agentskills-may-2026-05-01.md`](runs/2026-08-09-agentskills-may-2026-05-01.md).
 
 ## Evidence boundary
 
@@ -88,4 +117,4 @@ Index collection only. No target repository README, `SKILL.md`, scripts, referen
 
 ## Next index action
 
-Begin the deterministic May partition with the `2026-05-01` exact single-day shard. Keep canonical totals frozen until historical reconciliation is complete.
+Continue the deterministic May partition with the `2026-05-02` exact single-day shard. Keep canonical totals frozen until historical reconciliation is complete.
