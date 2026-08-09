@@ -27,6 +27,27 @@
     "held": 7,
     "rejected": 6
   },
-  "active_claims": [],
-  "updated_at": "2026-08-09T05:31:08Z"
+  "active_claims": [
+    {
+      "claim_id": "workflows-deep-20260809T054129Z",
+      "run_id": "workflows-deep-20260809T054129Z",
+      "snapshot_id": "workflows-agent-workflow-20260809T053108Z",
+      "claimed_at": "2026-08-09T05:41:29Z",
+      "lease_expires_at": "2026-08-09T08:41:29Z",
+      "status": "in_progress",
+      "items": [
+        "activepieces/activepieces",
+        "HKUDS/nanobot",
+        "patched-codes/patchwork",
+        "triggerdotdev/trigger.dev",
+        "lucaswalter/n8n-ai-automations",
+        "darrenhinde/OpenAgentsControl",
+        "hexabot-ai/Hexabot",
+        "nanobrowser/nanobrowser",
+        "enescingoz/awesome-n8n-templates",
+        "golutra/golutra"
+      ]
+    }
+  ],
+  "updated_at": "2026-08-09T05:41:29Z"
 }
