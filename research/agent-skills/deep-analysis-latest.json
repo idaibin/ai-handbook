@@ -1,19 +1,19 @@
 {
   "schema_version": "1.0",
-  "latest_batch_id": "2026-08-09-batch-055",
-  "latest_batch_report": "research/agent-skills/batches/2026-08-09-batch-055-deep-analysis.md",
-  "latest_batch_progress": "research/agent-skills/batches/2026-08-09-batch-055-progress.json",
-  "latest_skill_report": "research/agent-skills/batches/2026-08-09-batch-055-skill-reports.md",
-  "repositories_structure_reviewed_total": 550,
+  "latest_batch_id": "2026-08-09-batch-056",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-09-batch-056-deep-analysis.md",
+  "latest_batch_progress": "research/agent-skills/batches/2026-08-09-batch-056-progress.json",
+  "latest_skill_report": "research/agent-skills/batches/2026-08-09-batch-056-skill-reports.md",
+  "repositories_structure_reviewed_total": 560,
   "repository_scoped_skill_reports_total": 3087,
   "canonical_eligible_basis": 2088,
-  "remaining_estimate": 1538,
+  "remaining_estimate": 1528,
   "status": "structure-reviewed",
   "runtime_validation": "not_executed",
   "repository_skill_files_read_latest_batch": 10,
-  "direct_skill_body_reviews_latest_batch": 6,
-  "new_repository_scoped_skill_reports_latest_batch": 5,
+  "direct_skill_body_reviews_latest_batch": 3,
+  "new_repository_scoped_skill_reports_latest_batch": 0,
   "canonical_reconciliation": "pending",
   "observed_at": "2026-08-09",
-  "note": "Batch 055 completed ten qualified repository identities only after live GitHub identity/Stars checks, fixed revision/tree capture, and direct repository-content gates. Ten Skill files were directly read, representing 6 unique reviewed bodies across 6 Git trees; 5 new repository-scoped/content-addressed reports were materialized. Three entries originally indexed as adjacent search hits (jovd83/context-density-optimizer, FM7077/Easyimage-uploader, Hellomikiyazi/typewriter-video) were promoted only after actual Skill/package content proved qualification. agent-skills-manager/mempalace was encountered but not counted because its fixed tree is a package-manager/application without a Skill package. context-density-optimizer separates trigger and output-quality evaluation, but its checked-in 4/8 trigger artifact coincides with missing-executable environment failures and its wrapper contains a machine-specific absolute path, so the result was not treated as Skill-quality evidence. fr4ngou/claude-code-longrun-skill uses persistent tmux/operator patterns but prescribes claude --permission-mode bypassPermissions, reinforcing that expanded execution authority must be governed above individual Skills. Hellomikiyazi/typewriter-video contains deterministic timing-validator source but does not wire it into an automated project gate. Five html-ppt identities share exact tree c9b2a942... and therefore receive one new report after per-repository gates; hekiki/html-ppt-skill reuses exact tree c7a57a16... already reported through lewislulu/html-ppt-skill in Batch 051. Stored screenshots, validators, scripts, and saved eval results were treated as repository evidence, not passing execution. No repository scripts, tests, evals, builds, browser flows, network APIs, package installs, uploads, coding-agent sessions, video renders or presentation renders were executed. Historical cross-repository canonical reconciliation remains pending. The remaining estimate is arithmetic continuation from the frozen 2088 basis. Queue resumes at LovisYuan/html-ppt-skill, still requiring identity/Stars/fixed-revision/content gating before completion accounting."
+  "note": "Batch 056 completed ten qualified html-ppt repository identities only after live GitHub identity/Stars checks, fixed revision/tree capture, and direct README/SKILL content gates. The ten identities collapse to three exact Git trees and three Skill blobs: c9b2a942.../bf96c77d... (7 repositories), 656ebee6.../05d9ea03... (2 repositories), and presenter-mode c7a57a16.../0250b9ac... (1 repository). All three content identities were previously reported, so repository structure coverage increases to 560 while the repository-scoped/content-addressed Skill report total remains 3087. Fresh structure/reference/script review reconfirmed strong token/theme/layout/template decomposition, but also manual inventory drift (31 layouts versus stale '30'), a shared macOS-specific render script with a hard-coded Chrome path and --no-sandbox, and no automated browser E2E/eval for presenter-window synchronization/persistence/preview claims. Stored screenshots were treated as repository artifacts, not reproduced validation. No repository scripts, tests, evals, builds, browser flows, package installs, presentation renders, screenshot comparisons, or network APIs were executed. Historical canonical reconciliation remains pending; the 1528 remaining estimate is arithmetic continuation from the frozen 2088 basis. Queue resumes at ZWONJAVA/html-ppt-skill, still requiring identity/Stars/fixed-revision/content gating before completion accounting."
 }
