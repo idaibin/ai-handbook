@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "topic": "skills",
+  "snapshot_id": "skills-agentskills-created-2026-05-03-20260809T054833Z",
+  "status": "ready",
+  "source_commit": "d3ac6c30f181939a99f51b89aa3de0707a2344fc",
+  "source_batch": "sources/catalog/batches/agentskills-created-2026-05-03-deterministic.json",
+  "created_at": "2026-08-09T05:48:33Z",
+  "query": {
+    "id": "agentskills",
+    "text": "agentskills in:name,description created:2026-05-03..2026-05-03",
+    "shard": "2026-05-03",
+    "strategy": "created_date_then_page",
+    "per_page": 100,
+    "page_limit": 10
+  },
+  "candidate_count": 0,
+  "candidates": [],
+  "empty_reason": "No repository met the configured 1000-star gate and no low-star official or indispensable primary-source exception applied."
+}

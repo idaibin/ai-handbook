@@ -83,36 +83,37 @@ April staging contains `1272` unique identities across `2026-04-01` through `202
 Verified persisted coverage:
 
 ```text
-2026-05-01 .. 2026-05-02
+2026-05-01 .. 2026-05-03
 per_page=100
-2 exact single-day shards with terminal pagination probes
+3 exact single-day shards with terminal pagination probes
 ```
 
-The `2026-05-02` shard returned `22` repositories on page 1 and `0` on page 2. Independent rechecks returned `20,2,0` with `per_page=20` and `22,0` with `per_page=33`. Case-insensitive `owner/repository` deduplication produced `22` unique identities and `0` internal duplicates.
+The `2026-05-03` shard returned `19` repositories on page 1 and `0` on page 2. Independent rechecks returned `19,0` with both `per_page=20` and `per_page=33`. Case-insensitive `owner/repository` deduplication produced `19` within-shard unique identities and `0` internal duplicates. One identity already exists in an earlier catalog artifact, leaving `18` actual new identities.
 
-May staging now contains `47` unique identities across `2026-05-01` through `2026-05-02`, with `0` cross-shard duplicates asserted under the established connector-search partition contract.
+May daily staging now contains `66` unique created-date identities across `2026-05-01` through `2026-05-03`. Canonical totals remain frozen while historical reconciliation is pending.
 
 ### May provisional classification
 
 | Classification | Count |
 | --- | ---: |
-| `specification` | 15 |
-| `skill_collection` | 18 |
-| `single_skill_or_domain_package` | 11 |
+| `specification` | 21 |
+| `skill_collection` | 24 |
+| `single_skill_or_domain_package` | 17 |
 | `awesome_index` | 0 |
 | `skill_tooling` | 1 |
-| `adjacent_search_hit` | 1 |
+| `adjacent_search_hit` | 2 |
 | `unclear_search_hit` | 1 |
-| **Total** | **47** |
+| **Total** | **66** |
 
-Classification remains repository-identity/name plus GitHub-repository-metadata-only and provisional. For the `2026-05-02` shard, metadata confirms `fsrd017/agentskills` and `bsmr/agentskills---agentskills` as forks of `agentskills/agentskills` with the description “Specification and documentation for Agent Skills”; `rabidgremlin/agentskills` describes a repository of often-used agent skills; `APOLLONLIN/xuanji-five-skills` describes five OpenClaw AgentSkills; `abrahamFerga/scrum-skills` describes a vendor-agnostic AI agent skills library; and `mengfan71/skills` is a Wondel.ai multi-skill collection fork.
+Classification remains repository-metadata-only and provisional. In the `2026-05-03` shard, all 18 topic-relevant identities were held below the `1000`-star eligibility gate; one adjacent agent UI was rejected. The ready snapshot is valid but empty. Identical default-branch HEAD clusters were recorded without collapsing repository identity counts.
 
 ### May artifacts
 
 - [`batches/agentskills-created-2026-05-01-deterministic.json`](batches/agentskills-created-2026-05-01-deterministic.json)
 - [`batches/agentskills-created-2026-05-02-deterministic.json`](batches/agentskills-created-2026-05-02-deterministic.json)
+- [`batches/agentskills-created-2026-05-03-deterministic.json`](batches/agentskills-created-2026-05-03-deterministic.json)
 
-Current run report: [`runs/2026-08-09-agentskills-may-2026-05-02.md`](runs/2026-08-09-agentskills-may-2026-05-02.md).
+Current run report: [`runs/2026-08-09-agentskills-may-2026-05-03.md`](runs/2026-08-09-agentskills-may-2026-05-03.md). Retrospective: [`retrospectives/skills-index-20260809T054833Z.json`](retrospectives/skills-index-20260809T054833Z.json).
 
 ## Evidence boundary
 
@@ -120,4 +121,4 @@ Index collection only. No target repository README, `SKILL.md`, scripts, referen
 
 ## Next index action
 
-Continue the deterministic May partition with the `2026-05-03` exact single-day shard. Keep canonical totals frozen until historical reconciliation is complete.
+Continue the deterministic May partition with the `2026-05-04` exact single-day shard. Apply and measure `skills-index-action-001`; keep canonical totals frozen until historical reconciliation is complete.

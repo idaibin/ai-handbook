@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "topic": "skills",
+  "run_id": "skills-index-20260809T054833Z",
+  "batch_id": "agentskills-created-2026-05-03-deterministic",
+  "observed_at": "2026-08-09T05:48:33Z",
+  "method_version": "repository-research-v1.0",
+  "authority_basis": {
+    "repository": "idaibin/ai-handbook",
+    "branch": "main",
+    "commit": "d3ac6c30f181939a99f51b89aa3de0707a2344fc",
+    "prompt": "workflows/repository-research/prompts/index.md",
+    "topic_profile": "workflows/repository-research/topics/skills.toml"
+  },
+  "query": {
+    "id": "agentskills",
+    "text": "agentskills in:name,description created:2026-05-03..2026-05-03",
+    "shard": "2026-05-03",
+    "strategy": "created_date_then_page",
+    "per_page": 100,
+    "page_limit": 10
+  },
+  "pagination": {
+    "pages_requested": [1, 2],
+    "page_counts": [19, 0],
+    "terminal_page": 2,
+    "total_count": 19,
+    "incomplete_results": false,
+    "termination": "first_empty_page",
+    "independent_rechecks": [
+      {"per_page": 20, "page_counts": [19, 0]},
+      {"per_page": 33, "page_counts": [19, 0]}
+    ]
+  },
+  "totals": {
+    "search_hits": 19,
+    "normalized_unique": 19,
+    "internal_duplicates": 0,
+    "duplicates_against_existing_catalog_artifacts": 1,
+    "actual_new": 18,
+    "eligible": 0,
+    "held": 18,
+    "rejected": 1,
+    "ready_snapshot_candidates": 0
+  },
+  "classification_counts": {
+    "specification": 6,
+    "skill_collection": 6,
+    "single_skill_or_domain_package": 6,
+    "awesome_index": 0,
+    "skill_tooling": 0,
+    "adjacent_search_hit": 1,
+    "unclear_search_hit": 0
+  },
+  "evidence_boundary": "GitHub repository search, public repository About/Fork/Stars metadata, and independently resolved default-branch HEAD commits. Repository-body text was not used as classification evidence; no skill contract, script, reference, evaluation, source implementation, test, build, or runtime behavior was analyzed.",
+  "access_notes": [
+    "The connected repository-search result omitted description, fork lineage and star count, so those fields were verified from GitHub repository metadata pages.",
+    "GitHub repository pages can render README text; only About, Fork, Stars, archive state, identity and default-branch metadata were recorded or used.",
+    "All nineteen default-branch HEAD identities were resolved with git ls-remote without cloning target repositories."
+  ],
+  "repositories": [
+    {"repository_id":"1228126096","full_name":"Rik-li-abawua/agentskills","canonical_url":"https://github.com/Rik-li-abawua/agentskills","description":"Specification and documentation for Agent Skills","stars":0,"size_kb":633,"default_branch":"main","fork":true,"parent":"agentskills/agentskills","archived":false,"head_sha":"2d3e01f590f68bee2cb76a3200823e93b2cc9eaa","classification":"specification","provisional_status":"held","duplicate_against_existing_catalog_artifacts":true,"classification_reason":"Specification fork; below the 1000-star gate and not an independent primary source."},
+    {"repository_id":"1227687079","full_name":"Enzoanywhere/agentskills","canonical_url":"https://github.com/Enzoanywhere/agentskills","description":"Specification and documentation for Agent Skills","stars":0,"size_kb":633,"default_branch":"main","fork":true,"parent":"agentskills/agentskills","archived":false,"head_sha":"2d3e01f590f68bee2cb76a3200823e93b2cc9eaa","classification":"specification","provisional_status":"held","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Specification fork; below the 1000-star gate and not an independent primary source."},
+    {"repository_id":"1227715770","full_name":"mosjin/agentskills","canonical_url":"https://github.com/mosjin/agentskills","description":"Specification and documentation for Agent Skills","stars":0,"size_kb":633,"default_branch":"main","fork":true,"parent":"agentskills/agentskills","archived":false,"head_sha":"2d3e01f590f68bee2cb76a3200823e93b2cc9eaa","classification":"specification","provisional_status":"held","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Specification fork; below the 1000-star gate and not an independent primary source."},
+    {"repository_id":"1227666149","full_name":"u20024804/agentskills","canonical_url":"https://github.com/u20024804/agentskills","description":"Specification and documentation for Agent Skills","stars":0,"size_kb":633,"default_branch":"main","fork":true,"parent":"agentskills/agentskills","archived":false,"head_sha":"2d3e01f590f68bee2cb76a3200823e93b2cc9eaa","classification":"specification","provisional_status":"held","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Specification fork; below the 1000-star gate and not an independent primary source."},
+    {"repository_id":"1227682578","full_name":"zxy-mapper/agentskills","canonical_url":"https://github.com/zxy-mapper/agentskills","description":"Specification and documentation for Agent Skills","stars":0,"size_kb":633,"default_branch":"main","fork":true,"parent":"agentskills/agentskills","archived":false,"head_sha":"2d3e01f590f68bee2cb76a3200823e93b2cc9eaa","classification":"specification","provisional_status":"held","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Specification fork; below the 1000-star gate and not an independent primary source."},
+    {"repository_id":"1228070897","full_name":"GaoHuijian/agentskills","canonical_url":"https://github.com/GaoHuijian/agentskills","description":"Specification and documentation for Agent Skills","stars":0,"size_kb":633,"default_branch":"main","fork":true,"parent":"agentskills/agentskills","archived":false,"head_sha":"2d3e01f590f68bee2cb76a3200823e93b2cc9eaa","classification":"specification","provisional_status":"held","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Specification fork; below the 1000-star gate and not an independent primary source."},
+    {"repository_id":"1228017873","full_name":"difyz9/openclaw-runninghub-skills","canonical_url":"https://github.com/difyz9/openclaw-runninghub-skills","description":"OpenClaw AgentSkill: runninghub-skills","stars":0,"size_kb":84,"default_branch":"main","fork":true,"parent":"Arxchibobo/openclaw-runninghub-skills","archived":false,"head_sha":"da235de0e3830bcfc8128d017c9d2cd7b2bc1d88","classification":"single_skill_or_domain_package","provisional_status":"held","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Explicit single AgentSkill package; below the 1000-star gate."},
+    {"repository_id":"1227723831","full_name":"United-Cat-Foods/mandala-generator","canonical_url":"https://github.com/United-Cat-Foods/mandala-generator","description":"Sacred geometry mandala artwork generator — OpenClaw AgentSkill for AI image generation","stars":0,"size_kb":6,"default_branch":"main","fork":false,"parent":null,"archived":false,"head_sha":"c9800691e98347c4d2fb4c6e2ddaf782c5fc8366","classification":"single_skill_or_domain_package","provisional_status":"held","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Explicit single AgentSkill package; below the 1000-star gate and not an allowed low-star primary-source exception."},
+    {"repository_id":"1228335125","full_name":"ClumsyWizardHands/alliance-canvas","canonical_url":"https://github.com/ClumsyWizardHands/alliance-canvas","description":"Local Ollama-backed agent UI with AgentSkills, A2UI-style cards, workspaces and native tool-calling","stars":0,"size_kb":94,"default_branch":"main","fork":false,"parent":null,"archived":false,"head_sha":"62480ca406cd6e99a701632e80d70630ba369ec0","classification":"adjacent_search_hit","provisional_status":"rejected","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Generic agent UI that mentions AgentSkills; metadata does not identify a reusable skill package, specification or skill tooling unit."},
+    {"repository_id":"1227940541","full_name":"mizzobg/zephyr-agent-skills-claude-fix","canonical_url":"https://github.com/mizzobg/zephyr-agent-skills-claude-fix","description":"A complete catalog of Agent Skills for Zephyr RTOS development","stars":0,"size_kb":198,"default_branch":"main","fork":true,"parent":"beriberikix/zephyr-agent-skills","archived":false,"head_sha":"3903422bbf205d16b56645c8a145239bfd11c375","classification":"skill_collection","provisional_status":"held","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Domain skill catalog fork; below the 1000-star gate."},
+    {"repository_id":"1228124344","full_name":"lfzhangzhang-stack/html-ppt-skill","canonical_url":"https://github.com/lfzhangzhang-stack/html-ppt-skill","description":"HTML PPT Studio AgentSkill for building HTML presentations","stars":0,"size_kb":9791,"default_branch":"main","fork":true,"parent":"lewislulu/html-ppt-skill","archived":false,"head_sha":"f3a8435d3901697d5ac5e64d356c933637e43107","classification":"single_skill_or_domain_package","provisional_status":"held","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Explicit single AgentSkill fork; below the 1000-star gate."},
+    {"repository_id":"1227944789","full_name":"15116446660/html-ppt-skill","canonical_url":"https://github.com/15116446660/html-ppt-skill","description":"HTML PPT Studio AgentSkill for building HTML presentations","stars":0,"size_kb":9791,"default_branch":"main","fork":true,"parent":"lewislulu/html-ppt-skill","archived":false,"head_sha":"f3a8435d3901697d5ac5e64d356c933637e43107","classification":"single_skill_or_domain_package","provisional_status":"held","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Explicit single AgentSkill fork; below the 1000-star gate."},
+    {"repository_id":"1227951450","full_name":"Samuelink/html-ppt-skill","canonical_url":"https://github.com/Samuelink/html-ppt-skill","description":"HTML PPT Studio AgentSkill for building HTML presentations","stars":0,"size_kb":9791,"default_branch":"main","fork":true,"parent":"lewislulu/html-ppt-skill","archived":false,"head_sha":"f3a8435d3901697d5ac5e64d356c933637e43107","classification":"single_skill_or_domain_package","provisional_status":"held","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Explicit single AgentSkill fork; below the 1000-star gate."},
+    {"repository_id":"1227906385","full_name":"St3phZhang/html-ppt-skill","canonical_url":"https://github.com/St3phZhang/html-ppt-skill","description":"HTML PPT Studio AgentSkill for building HTML presentations","stars":0,"size_kb":9791,"default_branch":"main","fork":true,"parent":"lewislulu/html-ppt-skill","archived":false,"head_sha":"f3a8435d3901697d5ac5e64d356c933637e43107","classification":"single_skill_or_domain_package","provisional_status":"held","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Explicit single AgentSkill fork; below the 1000-star gate."},
+    {"repository_id":"1227707069","full_name":"ethanjones1132-lab/wondelskills","canonical_url":"https://github.com/ethanjones1132-lab/wondelskills","description":"Agent skills for Claude Code and other agentskills.io-compatible agents","stars":0,"size_kb":2174,"default_branch":"main","fork":true,"parent":"wondelai/skills","archived":false,"head_sha":"7c71a845071e8f994253db0d26c7e36fa90e2b5e","classification":"skill_collection","provisional_status":"held","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Multi-skill collection fork; below the 1000-star gate."},
+    {"repository_id":"1227916888","full_name":"giauphan/agent-skills","canonical_url":"https://github.com/giauphan/agent-skills","description":"Universal AI Agent Skills following the SKILL.md standard","stars":0,"size_kb":23,"default_branch":"main","fork":false,"parent":null,"archived":false,"head_sha":"eba40f8db845fa8f01742c7f11cb731cb97ac336","classification":"skill_collection","provisional_status":"held","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Multi-skill collection; below the 1000-star gate."},
+    {"repository_id":"1227682643","full_name":"richard-shan/Anthropic-Cybersecurity-Skills","canonical_url":"https://github.com/richard-shan/Anthropic-Cybersecurity-Skills","description":"Structured cybersecurity skills for AI agents using the agentskills.io standard","stars":0,"size_kb":10933,"default_branch":"main","fork":true,"parent":"mukul975/Anthropic-Cybersecurity-Skills","archived":false,"head_sha":"77d5d9d686c8e309a42b71565fb313b476e81965","classification":"skill_collection","provisional_status":"held","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Domain skill collection fork; below the 1000-star gate."},
+    {"repository_id":"1227655467","full_name":"xanster/Anthropic-Cybersecurity-Skills","canonical_url":"https://github.com/xanster/Anthropic-Cybersecurity-Skills","description":"Structured cybersecurity skills for AI agents using the agentskills.io standard","stars":0,"size_kb":10933,"default_branch":"main","fork":true,"parent":"mukul975/Anthropic-Cybersecurity-Skills","archived":false,"head_sha":"77d5d9d686c8e309a42b71565fb313b476e81965","classification":"skill_collection","provisional_status":"held","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Domain skill collection fork; below the 1000-star gate."},
+    {"repository_id":"1227838091","full_name":"dqlme/Anthropic-Cybersecurity-Skills","canonical_url":"https://github.com/dqlme/Anthropic-Cybersecurity-Skills","description":"Structured cybersecurity skills for AI agents using the agentskills.io standard","stars":0,"size_kb":10933,"default_branch":"main","fork":true,"parent":"mukul975/Anthropic-Cybersecurity-Skills","archived":false,"head_sha":"77d5d9d686c8e309a42b71565fb313b476e81965","classification":"skill_collection","provisional_status":"held","duplicate_against_existing_catalog_artifacts":false,"classification_reason":"Domain skill collection fork; below the 1000-star gate."}
+  ],
+  "content_fingerprint_clusters": [
+    {"head_sha":"2d3e01f590f68bee2cb76a3200823e93b2cc9eaa","repository_count":6,"classification":"specification"},
+    {"head_sha":"f3a8435d3901697d5ac5e64d356c933637e43107","repository_count":4,"classification":"single_skill_or_domain_package"},
+    {"head_sha":"77d5d9d686c8e309a42b71565fb313b476e81965","repository_count":3,"classification":"skill_collection"}
+  ]
+}

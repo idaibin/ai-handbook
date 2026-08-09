@@ -3,12 +3,22 @@
   "topic": "skills",
   "method_version": "repository-research-v1.0",
   "last_successful_run": {
-    "run_id": "2026-08-09-batch-058",
-    "mode": "deep-analysis",
-    "commit_sha": "c37b7c0099c6583707cb1003d8df7705ca8107fa",
-    "snapshot_id": null
+    "run_id": "skills-index-20260809T054833Z",
+    "mode": "index",
+    "commit_sha": "d3ac6c30f181939a99f51b89aa3de0707a2344fc",
+    "snapshot_id": "skills-agentskills-created-2026-05-03-20260809T054833Z"
   },
-  "ready_snapshot": null,
+  "last_deep_analysis_run": {
+    "run_id": "2026-08-09-batch-058",
+    "commit_sha": "c37b7c0099c6583707cb1003d8df7705ca8107fa"
+  },
+  "ready_snapshot": {
+    "snapshot_id": "skills-agentskills-created-2026-05-03-20260809T054833Z",
+    "source_commit": "d3ac6c30f181939a99f51b89aa3de0707a2344fc",
+    "status": "ready",
+    "path": "sources/catalog/snapshots/skills-agentskills-created-2026-05-03-20260809T054833Z.json",
+    "candidate_count": 0
+  },
   "counts": {
     "repository_identity_coverage": 580,
     "unique_content_deep_reviews": null,
@@ -16,6 +26,15 @@
     "new_analysis_reports": 0,
     "repository_scoped_skill_reports": 3088
   },
+  "index_counts": {
+    "canonical_repository_count": 2502,
+    "canonical_delta_asserted": 0,
+    "current_shard_actual_new": 18,
+    "duplicates_against_existing_catalog_artifacts": 1,
+    "eligible": 0,
+    "held": 18,
+    "rejected": 1
+  },
   "active_claims": [],
-  "updated_at": "2026-08-09"
+  "updated_at": "2026-08-09T05:48:33Z"
 }

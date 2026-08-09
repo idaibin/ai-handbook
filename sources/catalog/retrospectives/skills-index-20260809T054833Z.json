@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "topic": "skills",
+  "run_id": "skills-index-20260809T054833Z",
+  "method_version": "repository-research-v1.0",
+  "measurement_units": {
+    "planned": "page_limit",
+    "completed": "normalized_repository_records",
+    "held": "repository_records",
+    "failed": "repository_records",
+    "reused": "existing repository identities"
+  },
+  "result": {
+    "planned": 10,
+    "completed": 19,
+    "held": 18,
+    "failed": 0,
+    "reused": 1
+  },
+  "quality_gate": {
+    "search_hits": 19,
+    "actual_new": 18,
+    "duplicates": 1,
+    "eligible": 0,
+    "rejected": 1,
+    "below_minimum_stars": 18,
+    "failure_sample": "Six agentskills specification forks, four html-ppt-skill forks and three cybersecurity-skill forks repeated identical default-branch HEAD fingerprints; all topic-relevant hits remained below the 1000-star eligibility gate."
+  },
+  "previous_action": null,
+  "previous_retrospective": {
+    "status": "not_found",
+    "note": "This is the first Skills index retrospective under repository-research-v1.0; the preceding May 2 run predates the retrospective contract."
+  },
+  "next_action": {
+    "action_id": "skills-index-action-001",
+    "hypothesis": "Grouping same-parent repositories with an identical default-branch HEAD before provisional classification will reduce repeated classification work while preserving every repository identity.",
+    "metric": "In the next shard, report repository identities, fingerprint clusters, identities classified through a cluster, and manual spot-check disagreements.",
+    "rollback_condition": "Rollback cluster-assisted classification if any grouped repository has a different parent, different HEAD, or requires a different provisional classification after metadata verification."
+  }
+}
