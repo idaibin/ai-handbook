@@ -22,29 +22,29 @@ Canonical totals remain frozen while created-date partitions are reconciled with
 Verified persisted coverage:
 
 ```text
-2026-04-01 .. 2026-04-28
+2026-04-01 .. 2026-04-29
 per_page=100
-28 exact single-day shards with terminal pagination probes
+29 exact single-day shards with terminal pagination probes
 ```
 
-The `2026-04-28` shard returned `42` repositories on page 1 and `0` on page 2. Independent rechecks returned `20,20,2,0` with `per_page=20` and `33,9,0` with `per_page=33`. Case-insensitive `owner/repository` deduplication produced `42` unique identities and `0` internal duplicates.
+The `2026-04-29` shard returned `26` repositories on page 1 and `0` on page 2. Independent rechecks returned `20,6,0` with `per_page=20` and `26,0` with `per_page=33`. Case-insensitive `owner/repository` deduplication produced `26` unique identities and `0` internal duplicates.
 
-April staging now contains `1217` unique identities across `2026-04-01` through `2026-04-28`, with `0` cross-shard duplicates asserted under the established connector-search partition contract.
+April staging now contains `1243` unique identities across `2026-04-01` through `2026-04-29`, with `0` cross-shard duplicates asserted under the established connector-search partition contract.
 
 ### April provisional classification
 
 | Classification | Count |
 | --- | ---: |
-| `specification` | 8 |
-| `skill_collection` | 699 |
-| `single_skill_or_domain_package` | 399 |
+| `specification` | 13 |
+| `skill_collection` | 713 |
+| `single_skill_or_domain_package` | 406 |
 | `awesome_index` | 1 |
 | `skill_tooling` | 26 |
 | `adjacent_search_hit` | 83 |
 | `unclear_search_hit` | 1 |
-| **Total** | **1217** |
+| **Total** | **1243** |
 
-Classification remains repository-identity/name plus repository-metadata-only and provisional. Metadata descriptions/fork metadata were used only where the name was ambiguous; no target repository content was inspected. In the latest shard, `VoidWalkerAether/agentskills` is a cross-agent skill synchronization tool, `OMIXEC/agentskills-template` is a fork of the Agent Skills specification, `SwaroopMeher/personal-context` and `Swih/mistral-skill` are individual Agent Skills, and `amplience/figma-skills` is an explicit collection. `mythfoxtang/agentskills` has no repository description and remains `unclear_search_hit`.
+Classification remains repository-identity/name plus repository-metadata-only and provisional. Metadata descriptions/fork metadata were used only where the name was ambiguous; no target repository content was inspected. In the latest shard, `elagizi/agentskills`, `SabrinaLameiras/agentskills`, `chase-qi/agentskills`, `devzzk/agentskills`, and `gsdv/agentskills` are forks of `agentskills/agentskills` whose repository description is “Specification and documentation for Agent Skills”; `zunhuang/googleAgentskills` is a fork of `google/skills`; `CD22333/zephyr-agent-skills` describes a complete Zephyr RTOS Agent Skills catalog; `mi-24v/agent-skills` describes coding agent skills in the AgentSkills format; and `wky114/AnythingButLaw` describes a domain-focused Claude Code AgentSkill package.
 
 ### April artifacts
 
@@ -76,8 +76,9 @@ Classification remains repository-identity/name plus repository-metadata-only an
 - [`batches/agentskills-created-2026-04-26-deterministic.json`](batches/agentskills-created-2026-04-26-deterministic.json)
 - [`batches/agentskills-created-2026-04-27-deterministic.json`](batches/agentskills-created-2026-04-27-deterministic.json)
 - [`batches/agentskills-created-2026-04-28-deterministic.json`](batches/agentskills-created-2026-04-28-deterministic.json)
+- [`batches/agentskills-created-2026-04-29-deterministic.json`](batches/agentskills-created-2026-04-29-deterministic.json)
 
-Current run report: [`runs/2026-08-09-agentskills-april-2026-04-28.md`](runs/2026-08-09-agentskills-april-2026-04-28.md).
+Current run report: [`runs/2026-08-09-agentskills-april-2026-04-29.md`](runs/2026-08-09-agentskills-april-2026-04-29.md).
 
 ## Evidence boundary
 
@@ -85,4 +86,4 @@ Index collection only. No target repository README, `SKILL.md`, scripts, referen
 
 ## Next index action
 
-Continue with the `2026-04-29` exact single-day shard and keep canonical totals frozen until reconciliation is complete.
+Continue with the `2026-04-30` exact single-day shard and keep canonical totals frozen until reconciliation is complete.
