@@ -1,0 +1,1524 @@
+{
+  "schema_version": "1.0",
+  "topic": "agents",
+  "snapshot_id": "agents-agent-framework-20260809T151450Z",
+  "status": "ready",
+  "source_commit": "da9416532852bb8e8a5398b8bcfea6cb9d8ac6f1",
+  "source_batch": "sources/catalog/agents/batches/2026-08-09-agent-framework-first-partition.json",
+  "created_at": "2026-08-09T15:14:50Z",
+  "query": {
+    "id": "agent-framework",
+    "text": "AI agent framework stars:>=1000",
+    "shard": "first-partition",
+    "strategy": "stars_then_created_date",
+    "per_page": 100,
+    "page_limit": 10
+  },
+  "candidate_count": 94,
+  "candidates": [
+    {
+      "repository_id": "812975380",
+      "full_name": "agent0ai/agent-zero",
+      "canonical_url": "https://github.com/agent0ai/agent-zero",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "5ff106a2d489d17c2a3b378521a8f29fb29cf77d",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "5ff106a2d489d17c2a3b378521a8f29fb29cf77d",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable open agent framework with a Dockerized computer, browser, skills, plugins and projects."
+    },
+    {
+      "repository_id": "974445592",
+      "full_name": "microsoft/agent-framework",
+      "canonical_url": "https://github.com/microsoft/agent-framework",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "5eb3eb745e16324ac7bffb1dbe006d8f13c8d993",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "5eb3eb745e16324ac7bffb1dbe006d8f13c8d993",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Published Microsoft framework for building and orchestrating agents."
+    },
+    {
+      "repository_id": "680120071",
+      "full_name": "microsoft/autogen",
+      "canonical_url": "https://github.com/microsoft/autogen",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "027ecf0a379bcc1d09956d46d12d44a3ad9cee14",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "027ecf0a379bcc1d09956d46d12d44a3ad9cee14",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable multi-agent framework; README also exposes maintenance/migration status for later deep review."
+    },
+    {
+      "repository_id": "1112189620",
+      "full_name": "zai-org/Open-AutoGLM",
+      "canonical_url": "https://github.com/zai-org/Open-AutoGLM",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "86f55382982fb054e8fc98ca80609dff8a2cdc3c",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "86f55382982fb054e8fc98ca80609dff8a2cdc3c",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable mobile GUI agent with perception, planning, actions and human takeover."
+    },
+    {
+      "repository_id": "817354652",
+      "full_name": "TEN-framework/ten-framework",
+      "canonical_url": "https://github.com/TEN-framework/ten-framework",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "1b78cb725910d6f63389ef4ae69b182854d5b9d9",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "1b78cb725910d6f63389ef4ae69b182854d5b9d9",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable framework for real-time conversational and multimodal agents."
+    },
+    {
+      "repository_id": "818331198",
+      "full_name": "pydantic/pydantic-ai",
+      "canonical_url": "https://github.com/pydantic/pydantic-ai",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "fc6a3ac506513150e2016ee5ba9785d792795150",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "fc6a3ac506513150e2016ee5ba9785d792795150",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable production-oriented Python agent framework."
+    },
+    {
+      "repository_id": "946380199",
+      "full_name": "openai/openai-agents-python",
+      "canonical_url": "https://github.com/openai/openai-agents-python",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "e3d7c1727bf43761afbb7954651b7f908a973a3b",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "e3d7c1727bf43761afbb7954651b7f908a973a3b",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable provider-agnostic Agents SDK for multi-agent workflows."
+    },
+    {
+      "repository_id": "854337508",
+      "full_name": "alibaba/spring-ai-alibaba",
+      "canonical_url": "https://github.com/alibaba/spring-ai-alibaba",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "9aee0f1a86f59fcf284628a922d68ef71a4e2c85",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "9aee0f1a86f59fcf284628a922d68ef71a4e2c85",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable Java agent framework and workflow ecosystem."
+    },
+    {
+      "repository_id": "707441527",
+      "full_name": "livekit/agents",
+      "canonical_url": "https://github.com/livekit/agents",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "02569a40794645195bd92003431e5197ea413922",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "02569a40794645195bd92003431e5197ea413922",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable framework for realtime voice and multimodal agents."
+    },
+    {
+      "repository_id": "660551251",
+      "full_name": "FoundationAgents/MetaGPT",
+      "canonical_url": "https://github.com/FoundationAgents/MetaGPT",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "11cdf466d042aece04fc6cfd13b28e1a70341b1f",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "11cdf466d042aece04fc6cfd13b28e1a70341b1f",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable collaborative multi-agent framework."
+    },
+    {
+      "repository_id": "710601088",
+      "full_name": "crewAIInc/crewAI",
+      "canonical_url": "https://github.com/crewAIInc/crewAI",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "f7ba8e35212bbda82b44fefffea936f2673e0483",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "f7ba8e35212bbda82b44fefffea936f2673e0483",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable multi-agent automation framework with Crews and event-driven Flows."
+    },
+    {
+      "repository_id": "846579774",
+      "full_name": "i-am-bee/beeai-framework",
+      "canonical_url": "https://github.com/i-am-bee/beeai-framework",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "460c729002dc0f47c56c5b2c6fa050393666c3f7",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "460c729002dc0f47c56c5b2c6fa050393666c3f7",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable Python and TypeScript multi-agent framework."
+    },
+    {
+      "repository_id": "1179959183",
+      "full_name": "BuilderIO/agent-native",
+      "canonical_url": "https://github.com/BuilderIO/agent-native",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "40982a7fc0ff5423843827d058a3c11a4023d601",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "40982a7fc0ff5423843827d058a3c11a4023d601",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable agentic application framework with agent runtime, tools, memory, jobs and handoffs."
+    },
+    {
+      "repository_id": "967530387",
+      "full_name": "VoltAgent/voltagent",
+      "canonical_url": "https://github.com/VoltAgent/voltagent",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "9aedd4917795023a1ee17a29691f7a87865bdf2a",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "9aedd4917795023a1ee17a29691f7a87865bdf2a",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable agent engineering platform and runtime."
+    },
+    {
+      "repository_id": "29217054",
+      "full_name": "micro/go-micro",
+      "canonical_url": "https://github.com/micro/go-micro",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "master",
+      "head_sha": "77fc793d5bab3be2bbfaac2cbfa9ff2a4be711da",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "77fc793d5bab3be2bbfaac2cbfa9ff2a4be711da",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable Go agent harness with tools, memory, guardrails, workflows and protocols."
+    },
+    {
+      "repository_id": "1046864201",
+      "full_name": "Kocoro-lab/Shannon",
+      "canonical_url": "https://github.com/Kocoro-lab/Shannon",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "52cdd40621a9e882de2877d9d36a81d0403c2364",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "52cdd40621a9e882de2877d9d36a81d0403c2364",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable production agent platform with reliability-oriented runtime."
+    },
+    {
+      "repository_id": "114540126",
+      "full_name": "SciSharp/BotSharp",
+      "canonical_url": "https://github.com/SciSharp/BotSharp",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "master",
+      "head_sha": "e2f09cea0fa7818c1bddb13edfa08bc4b81f1cc8",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "e2f09cea0fa7818c1bddb13edfa08bc4b81f1cc8",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable AI agent application framework."
+    },
+    {
+      "repository_id": "832647441",
+      "full_name": "2FastLabs/agent-squad",
+      "canonical_url": "https://github.com/2FastLabs/agent-squad",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "31eccfeb0d546262d1d0ec2e2e5239186f8d2954",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "31eccfeb0d546262d1d0ec2e2e5239186f8d2954",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable multi-agent routing and orchestration framework."
+    },
+    {
+      "repository_id": "847717439",
+      "full_name": "raga-ai-hub/RagaAI-Catalyst",
+      "canonical_url": "https://github.com/raga-ai-hub/RagaAI-Catalyst",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "ab67893310891140211280a496402003e52cdab5",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "ab67893310891140211280a496402003e52cdab5",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Agent/LLM evaluation, tracing, guardrail and management infrastructure within the topic boundary."
+    },
+    {
+      "repository_id": "636922549",
+      "full_name": "OpenBMB/AgentVerse",
+      "canonical_url": "https://github.com/OpenBMB/AgentVerse",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "f90c4bd9680fdd3bcff8c52c9170911a59b23478",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "f90c4bd9680fdd3bcff8c52c9170911a59b23478",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable multi-LLM agent framework for task solving and simulation."
+    },
+    {
+      "repository_id": "839037098",
+      "full_name": "mastra-ai/mastra",
+      "canonical_url": "https://github.com/mastra-ai/mastra",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "d9d2881ede6dd6c023d144215fc812062aed0890",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "d9d2881ede6dd6c023d144215fc812062aed0890",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable TypeScript agent and workflow framework."
+    },
+    {
+      "repository_id": "552661142",
+      "full_name": "langchain-ai/langchain",
+      "canonical_url": "https://github.com/langchain-ai/langchain",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "master",
+      "head_sha": "d048fbe170573b6e7056b5ef5f78d8451e54abaf",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "d048fbe170573b6e7056b5ef5f78d8451e54abaf",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable agent engineering framework with tools and agent application components."
+    },
+    {
+      "repository_id": "743825398",
+      "full_name": "ageerle/ruoyi-ai",
+      "canonical_url": "https://github.com/ageerle/ruoyi-ai",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "9d439d1dcf1bc5ce8e370646d125d23ffe9cd15e",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "9d439d1dcf1bc5ce8e370646d125d23ffe9cd15e",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable multi-agent platform with supervisor orchestration and visual workflows."
+    },
+    {
+      "repository_id": "962134278",
+      "full_name": "Intelligent-Internet/ii-agent",
+      "canonical_url": "https://github.com/Intelligent-Internet/ii-agent",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "0e57985d3f6e5c8ea340418ed259665b8e86301d",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "0e57985d3f6e5c8ea340418ed259665b8e86301d",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable open-source general AI agent."
+    },
+    {
+      "repository_id": "676672661",
+      "full_name": "langchain-ai/langgraph",
+      "canonical_url": "https://github.com/langchain-ai/langgraph",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "d56666f7fbf0d380ad84cdf0cbe5aa48ab0cc086",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "d56666f7fbf0d380ad84cdf0cbe5aa48ab0cc086",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable long-running stateful-agent orchestration framework."
+    },
+    {
+      "repository_id": "542713154",
+      "full_name": "fetchai/uAgents",
+      "canonical_url": "https://github.com/fetchai/uAgents",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "cfdf3e2ad59e6192627e490a301a9c064f5a238b",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "cfdf3e2ad59e6192627e490a301a9c064f5a238b",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README identifies an autonomous AI-agent framework with agent creation, tasks, networking, and secure messaging."
+    },
+    {
+      "repository_id": "763795053",
+      "full_name": "lavague-ai/LaVague",
+      "canonical_url": "https://github.com/lavague-ai/LaVague",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "9024bb832c40291cd012916757f27ef60469b22d",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "9024bb832c40291cd012916757f27ef60469b22d",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README explicitly presents an open-source Web Agent framework with world-model planning and action execution."
+    },
+    {
+      "repository_id": "599338659",
+      "full_name": "cheshire-cat-ai/core",
+      "canonical_url": "https://github.com/cheshire-cat-ai/core",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "1493ce31301c4e6f14008d5e410ff7dcc3654eb7",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "1493ce31301c4e6f14008d5e410ff7dcc3654eb7",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README explicitly calls it a framework for learning, extending, and publishing AI agents."
+    },
+    {
+      "repository_id": "790704526",
+      "full_name": "agentuniverse-ai/agentUniverse",
+      "canonical_url": "https://github.com/agentuniverse-ai/agentUniverse",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "master",
+      "head_sha": "254ecd280f54c2d2de654bbe5373e9f947d2dedf",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "254ecd280f54c2d2de654bbe5373e9f947d2dedf",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README explicitly identifies a multi-agent framework and a collaborative-pattern factory."
+    },
+    {
+      "repository_id": "1147094660",
+      "full_name": "HKUDS/nanobot",
+      "canonical_url": "https://github.com/HKUDS/nanobot",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "55ecda275d40fa319856b1518bc0986f10f8ac41",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "55ecda275d40fa319856b1518bc0986f10f8ac41",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README explicitly identifies a personal AI-agent framework/runtime with tools, memory, subagents, and long-running automation."
+    },
+    {
+      "repository_id": "826170402",
+      "full_name": "elizaOS/eliza",
+      "canonical_url": "https://github.com/elizaOS/eliza",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "develop",
+      "head_sha": "c62762957415edac0c0d33559ee9e43e9ec37fed",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "c62762957415edac0c0d33559ee9e43e9ec37fed",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README explicitly identifies an open-source framework and runtime stack for autonomous AI agents."
+    },
+    {
+      "repository_id": "639195966",
+      "full_name": "kyegomez/swarms",
+      "canonical_url": "https://github.com/kyegomez/swarms",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "master",
+      "head_sha": "7f1703c19ce0dab0d1d431fc770884f63fbc5452",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "7f1703c19ce0dab0d1d431fc770884f63fbc5452",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README presents a framework for agent swarms and multi-agent orchestration."
+    },
+    {
+      "repository_id": "1027472552",
+      "full_name": "openonion/connectonion",
+      "canonical_url": "https://github.com/openonion/connectonion",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "c07a998bb6ad76776984e06fe09571e5613f99b6",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "c07a998bb6ad76776984e06fe09571e5613f99b6",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README presents a production-ready AI-agent framework with agent construction and tool execution."
+    },
+    {
+      "repository_id": "741100585",
+      "full_name": "langchain-ai/langgraphjs",
+      "canonical_url": "https://github.com/langchain-ai/langgraphjs",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "6ac60da74f6b9e29d20b111a7947ac3060f1d2dd",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "6ac60da74f6b9e29d20b111a7947ac3060f1d2dd",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README explicitly calls it a low-level orchestration framework for building stateful agents."
+    },
+    {
+      "repository_id": "736272311",
+      "full_name": "pipecat-ai/pipecat",
+      "canonical_url": "https://github.com/pipecat-ai/pipecat",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "cbd04ffe6afc6d29a1327ef0f7348a88870efa4d",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "cbd04ffe6afc6d29a1327ef0f7348a88870efa4d",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README explicitly supports single voice agents and multi-agent systems."
+    },
+    {
+      "repository_id": "963665823",
+      "full_name": "embabel/embabel-agent",
+      "canonical_url": "https://github.com/embabel/embabel-agent",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "d8407d42737410832a398c6713cf9dde3dafb6c9",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "d8407d42737410832a398c6713cf9dde3dafb6c9",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README presents Embabel as an agent framework with agent application APIs and orchestration."
+    },
+    {
+      "repository_id": "615510678",
+      "full_name": "camel-ai/camel",
+      "canonical_url": "https://github.com/camel-ai/camel",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "master",
+      "head_sha": "32fb32494897fe793538eb3e0f87b27116500179",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "32fb32494897fe793538eb3e0f87b27116500179",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README presents CAMEL as an agent framework for building and studying agent societies."
+    },
+    {
+      "repository_id": "931883414",
+      "full_name": "wrtnlabs/agentica",
+      "canonical_url": "https://github.com/wrtnlabs/agentica",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "dc91f4307a3f2ee25e1ee07cf48777fcd13b6b0d",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "dc91f4307a3f2ee25e1ee07cf48777fcd13b6b0d",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README explicitly presents Agentica as an AI function-calling framework with agent workflows."
+    },
+    {
+      "repository_id": "1197656406",
+      "full_name": "open-multi-agent/open-multi-agent",
+      "canonical_url": "https://github.com/open-multi-agent/open-multi-agent",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "f14708b30857106f6df928397daffda4c6821bba",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "f14708b30857106f6df928397daffda4c6821bba",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README explicitly presents multi-agent orchestration that runs in the user's own environment."
+    },
+    {
+      "repository_id": "575865240",
+      "full_name": "AstrBotDevs/AstrBot",
+      "canonical_url": "https://github.com/AstrBotDevs/AstrBot",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "master",
+      "head_sha": "30e20318cbaaa2e1ba57f3e0eee265d9ee98115c",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "30e20318cbaaa2e1ba57f3e0eee265d9ee98115c",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README explicitly presents a production-ready agent chatbot platform with tools, MCP, skills, sandboxing, and plugins."
+    },
+    {
+      "repository_id": "1165855406",
+      "full_name": "open-gitagent/opengap",
+      "canonical_url": "https://github.com/open-gitagent/opengap",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "d7a8e2edb54b942d6b4635cdd8b919ebd23e5da5",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "d7a8e2edb54b942d6b4635cdd8b919ebd23e5da5",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README explicitly describes the repository as an agent and provides an agent CLI/protocol implementation."
+    },
+    {
+      "repository_id": "640182997",
+      "full_name": "TransformerOptimus/SuperAGI",
+      "canonical_url": "https://github.com/TransformerOptimus/SuperAGI",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "c3c1982e7bd6a11cfed53c5a193ea502f924b1b6",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "c3c1982e7bd6a11cfed53c5a193ea502f924b1b6",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Root README explicitly identifies an open-source autonomous-agent framework with tools, memory, workflows, and concurrent agents."
+    },
+    {
+      "repository_id": "952018616",
+      "full_name": "magnitudedev/browser-agent",
+      "canonical_url": "https://github.com/magnitudedev/browser-agent",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "f1b587c4173d8242bdb551991de54e70c4d2faf3",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "f1b587c4173d8242bdb551991de54e70c4d2faf3",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README presents Magnitude as a browser-agent framework for autonomous web interaction."
+    },
+    {
+      "repository_id": "530655405",
+      "full_name": "superduper-io/superduper",
+      "canonical_url": "https://github.com/superduper-io/superduper",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "6d192e7bf255f913b445a44dc9486e7013ddc6bc",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "6d192e7bf255f913b445a44dc9486e7013ddc6bc",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README explicitly targets building database-integrated AI agents and applications."
+    },
+    {
+      "repository_id": "679017521",
+      "full_name": "AgentOps-AI/agentops",
+      "canonical_url": "https://github.com/AgentOps-AI/agentops",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "f8e907b92dabe47232978023fdcb01e2a7d4b752",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "f8e907b92dabe47232978023fdcb01e2a7d4b752",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Agent observability and developer tooling are explicitly included evaluation/production infrastructure."
+    },
+    {
+      "repository_id": "954528300",
+      "full_name": "mozilla-ai/any-agent",
+      "canonical_url": "https://github.com/mozilla-ai/any-agent",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "3e248d1c5a04d43f00589596d3fc580dbec64194",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "3e248d1c5a04d43f00589596d3fc580dbec64194",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable unified interface and evaluation infrastructure for multiple agent frameworks."
+    },
+    {
+      "repository_id": "956472076",
+      "full_name": "mcp-use/mcp-use",
+      "canonical_url": "https://github.com/mcp-use/mcp-use",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "b06cc3fe1beebcf1c044fe631bd4603bbc488d19",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "b06cc3fe1beebcf1c044fe631bd4603bbc488d19",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable MCP tool and connector infrastructure used by agent runtimes."
+    },
+    {
+      "repository_id": "1203558071",
+      "full_name": "TencentCloud/TencentDB-Agent-Memory",
+      "canonical_url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "feat/server_team",
+      "head_sha": "fe3230f176f1bf5832fee79d12494bbc2d19a8aa",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "fe3230f176f1bf5832fee79d12494bbc2d19a8aa",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable persistent memory infrastructure explicitly designed for agents."
+    },
+    {
+      "repository_id": "943088234",
+      "full_name": "confident-ai/deepteam",
+      "canonical_url": "https://github.com/confident-ai/deepteam",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "2a5588c8883716aa1e7899ddb19ee07ad7bcdf8d",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "2a5588c8883716aa1e7899ddb19ee07ad7bcdf8d",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable evaluation and red-team infrastructure for agent/LLM systems."
+    },
+    {
+      "repository_id": "782544882",
+      "full_name": "patched-codes/patchwork",
+      "canonical_url": "https://github.com/patched-codes/patchwork",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "21948cbec44d3b7aec30715923ac7a0cd3fb1155",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "21948cbec44d3b7aec30715923ac7a0cd3fb1155",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README explicitly describes a self-hosted CLI agent with reusable steps, prompts, and agentic patchflows."
+    },
+    {
+      "repository_id": "1213212865",
+      "full_name": "espressif/esp-claw",
+      "canonical_url": "https://github.com/espressif/esp-claw",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "master",
+      "head_sha": "9ba07d013329df480e34a1a59d1513ab783d8a52",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "9ba07d013329df480e34a1a59d1513ab783d8a52",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README explicitly identifies an AI Agent Framework for IoT Devices."
+    },
+    {
+      "repository_id": "276288252",
+      "full_name": "yomorun/yomo",
+      "canonical_url": "https://github.com/yomorun/yomo",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "a047116ae8d376de49289285608f704ee997298e",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "a047116ae8d376de49289285608f704ee997298e",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README explicitly identifies an LLM function-calling framework for building scalable, low-latency AI agents."
+    },
+    {
+      "repository_id": "914964527",
+      "full_name": "SolaceLabs/solace-agent-mesh",
+      "canonical_url": "https://github.com/SolaceLabs/solace-agent-mesh",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "00d3417e4a299cb40cc528bf4dc48fce833d4649",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "00d3417e4a299cb40cc528bf4dc48fce833d4649",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README explicitly identifies an open-source multi-agent framework with delegation, messaging, artifacts, and workflows."
+    },
+    {
+      "repository_id": "1122204033",
+      "full_name": "polyuiislab/infiAgent",
+      "canonical_url": "https://github.com/polyuiislab/infiAgent",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "cf6e04e60a3ed3b3107aebe5f4ed0af52893ed19",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "cf6e04e60a3ed3b3107aebe5f4ed0af52893ed19",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README explicitly identifies a domain-specific agent framework with hierarchical orchestration and long-horizon execution."
+    },
+    {
+      "repository_id": "1146153471",
+      "full_name": "openakita/openakita",
+      "canonical_url": "https://github.com/openakita/openakita",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "c42abf1a19d57d4c2c6842e8ea41023d416a7618",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "c42abf1a19d57d4c2c6842e8ea41023d416a7618",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确为开源多智能体AI助手与自治组织编排。"
+    },
+    {
+      "repository_id": "872550457",
+      "full_name": "video-db/Director",
+      "canonical_url": "https://github.com/video-db/Director",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "70e0b3dfdf59c679a25f4bea511e3cc4c5f2457f",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "70e0b3dfdf59c679a25f4bea511e3cc4c5f2457f",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确为可推理、编排视频任务的视频智能体框架。"
+    },
+    {
+      "repository_id": "675151062",
+      "full_name": "trypromptly/LLMStack",
+      "canonical_url": "https://github.com/trypromptly/LLMStack",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "701348426fadd0536de8b72536216a9c0365f25b",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "701348426fadd0536de8b72536216a9c0365f25b",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确为构建生成式AI智能体、工作流和聊天机器人的无代码平台。"
+    },
+    {
+      "repository_id": "1038251341",
+      "full_name": "darrenhinde/OpenAgentsControl",
+      "canonical_url": "https://github.com/darrenhinde/OpenAgentsControl",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "37ca233fa5597a5abb90cba73165deafffe0344f",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "37ca233fa5597a5abb90cba73165deafffe0344f",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确提供可编辑AI智能体、模式控制和审批门禁。"
+    },
+    {
+      "repository_id": "989917360",
+      "full_name": "ZHangZHengEric/Sage",
+      "canonical_url": "https://github.com/ZHangZHengEric/Sage",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "e446ae2757ce1122cdb1cc52be541a4da0637a68",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "e446ae2757ce1122cdb1cc52be541a4da0637a68",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确为Sage Agent Platform，面向可靠任务交付。"
+    },
+    {
+      "repository_id": "774497032",
+      "full_name": "MervinPraison/PraisonAI",
+      "canonical_url": "https://github.com/MervinPraison/PraisonAI",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "84752e77d8da4dcda352d040621351fe36ecbafd",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "84752e77d8da4dcda352d040621351fe36ecbafd",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确支持自治、自改进的单/多智能体与组织。"
+    },
+    {
+      "repository_id": "834688418",
+      "full_name": "InternLM/MindSearch",
+      "canonical_url": "https://github.com/InternLM/MindSearch",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "7952c5f8a956fe6a44228a6a7d528a35340e7c87",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "7952c5f8a956fe6a44228a6a7d528a35340e7c87",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README与变更记录明确包含基于Lagent的深度搜索智能体模块。"
+    },
+    {
+      "repository_id": "941562247",
+      "full_name": "neuron-core/neuron-ai",
+      "canonical_url": "https://github.com/neuron-core/neuron-ai",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "3.x",
+      "head_sha": "bd4d0c95e326f449a582b53c4ada2af6c59cbd23",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "bd4d0c95e326f449a582b53c4ada2af6c59cbd23",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确为PHP智能体创建与编排框架。"
+    },
+    {
+      "repository_id": "983515771",
+      "full_name": "trpc-group/trpc-agent-go",
+      "canonical_url": "https://github.com/trpc-group/trpc-agent-go",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "c6988c7ef0d511a656301121b011a3105d6ea784",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "c6988c7ef0d511a656301121b011a3105d6ea784",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确为生产级Go智能体系统框架，含多智能体协作。"
+    },
+    {
+      "repository_id": "793795224",
+      "full_name": "genkit-ai/genkit",
+      "canonical_url": "https://github.com/genkit-ai/genkit",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "9b9784e3c233b2132084dbc748360c2ec7c1ff7c",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "9b9784e3c233b2132084dbc748360c2ec7c1ff7c",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable AI application framework with first-class agent construction and orchestration."
+    },
+    {
+      "repository_id": "924568745",
+      "full_name": "crmne/ruby_llm",
+      "canonical_url": "https://github.com/crmne/ruby_llm",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "bfbb2d52399cfef1845cdd5f59a50a6d888e6361",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "bfbb2d52399cfef1845cdd5f59a50a6d888e6361",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确覆盖Agents、Tools、RAG与agentic workflows的Ruby框架。"
+    },
+    {
+      "repository_id": "863454901",
+      "full_name": "dynamiq-ai/dynamiq",
+      "canonical_url": "https://github.com/dynamiq-ai/dynamiq",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "b07ab0a4e371ffcd7f3cd463089c5d4f4fb0eb33",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "b07ab0a4e371ffcd7f3cd463089c5d4f4fb0eb33",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确为agentic AI编排框架并专长于LLM agents。"
+    },
+    {
+      "repository_id": "735469449",
+      "full_name": "tuya/TuyaOpen",
+      "canonical_url": "https://github.com/tuya/TuyaOpen",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "master",
+      "head_sha": "6153c9229d5b3c885547910c302ae2087f591a6d",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "6153c9229d5b3c885547910c302ae2087f591a6d",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确用于下一代AI-agent硬件及多模态AI-IoT智能体开发。"
+    },
+    {
+      "repository_id": "742326880",
+      "full_name": "agents-flex/agents-flex",
+      "canonical_url": "https://github.com/agents-flex/agents-flex",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "f32c28d32eb1046ec87237e215fd4628cad7cf47",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "f32c28d32eb1046ec87237e215fd4628cad7cf47",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确提供Java智能体运行时、工作流、子智能体与工具调用。"
+    },
+    {
+      "repository_id": "931705070",
+      "full_name": "guy-hartstein/company-research-agent",
+      "canonical_url": "https://github.com/guy-hartstein/company-research-agent",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "fc2f99085500c04655bd6501e5170207bfe2507e",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "fc2f99085500c04655bd6501e5170207bfe2507e",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确为生成公司研究报告的多智能体工具。"
+    },
+    {
+      "repository_id": "861892731",
+      "full_name": "PySpur-Dev/pyspur",
+      "canonical_url": "https://github.com/PySpur-Dev/pyspur",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "97b9856e49f227a52868b73493c23c43fb4de358",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "97b9856e49f227a52868b73493c23c43fb4de358",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确为可视化迭代、调试AI智能体的平台。"
+    },
+    {
+      "repository_id": "588992876",
+      "full_name": "griptape-ai/griptape",
+      "canonical_url": "https://github.com/griptape-ai/griptape",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "93fbd843afeff389bc21e728e593afaf6fcfd584",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "93fbd843afeff389bc21e728e593afaf6fcfd584",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README及项目定位为构建AI智能体与工作流的Python框架。"
+    },
+    {
+      "repository_id": "953656326",
+      "full_name": "letta-ai/agent-file",
+      "canonical_url": "https://github.com/letta-ai/agent-file",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "78212eb571e59e10b35b924375a997319b89c280",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "78212eb571e59e10b35b924375a997319b89c280",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确为序列化有状态AI智能体的开放文件格式。"
+    },
+    {
+      "repository_id": "982917344",
+      "full_name": "rinadelph/Agent-MCP",
+      "canonical_url": "https://github.com/rinadelph/Agent-MCP",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "13d98b2c9e770a97a77521e605e7e41db024852d",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "13d98b2c9e770a97a77521e605e7e41db024852d",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确为协调AI软件开发的多智能体协作协议与MCP服务。"
+    },
+    {
+      "repository_id": "221654678",
+      "full_name": "deepset-ai/haystack",
+      "canonical_url": "https://github.com/deepset-ai/haystack",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "e97e713ba5bcca254a305e71513ab15a2b0fe4bc",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "e97e713ba5bcca254a305e71513ab15a2b0fe4bc",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确支持生产级自主智能体、Agent工作流和工具调用。"
+    },
+    {
+      "repository_id": "984413599",
+      "full_name": "GH05TCREW/pentestagent",
+      "canonical_url": "https://github.com/GH05TCREW/pentestagent",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "b09a106557f5a83d3427a24c7058f930e39aac4d",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "b09a106557f5a83d3427a24c7058f930e39aac4d",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "README明确为AI渗透测试智能体并支持MCP。"
+    },
+    {
+      "repository_id": "1237174940",
+      "full_name": "simonlin1212/TradingAgents-astock",
+      "canonical_url": "https://github.com/simonlin1212/TradingAgents-astock",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "0badc3340c70fa0eb16e8cb527c5c32efacc7966",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "0badc3340c70fa0eb16e8cb527c5c32efacc7966",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable multi-agent framework for Chinese A-share trading research and decision workflows."
+    },
+    {
+      "repository_id": "1191814548",
+      "full_name": "hexo-ai/sia",
+      "canonical_url": "https://github.com/hexo-ai/sia",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "8c503030815fc69eb581f65c4ab02c1fc05062ec",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "8c503030815fc69eb581f65c4ab02c1fc05062ec",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Official implementation of a self-improving agent loop with harness and weight updates."
+    },
+    {
+      "repository_id": "672847735",
+      "full_name": "LLPhant/LLPhant",
+      "canonical_url": "https://github.com/LLPhant/LLPhant",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "0d90d8b8ba7983ee8c8b09acbb695239c3dc4b74",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "0d90d8b8ba7983ee8c8b09acbb695239c3dc4b74",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable GenAI framework with agent and tool abstractions, not only a chat UI."
+    },
+    {
+      "repository_id": "1266212515",
+      "full_name": "omnigent-ai/omnigent",
+      "canonical_url": "https://github.com/omnigent-ai/omnigent",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "de8aee826c48d632ce335a702f2cca2f6240a6b9",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "de8aee826c48d632ce335a702f2cca2f6240a6b9",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable orchestration meta-harness for multiple coding agents with policy and sandbox controls."
+    },
+    {
+      "repository_id": "1124754056",
+      "full_name": "samugit83/redamon",
+      "canonical_url": "https://github.com/samugit83/redamon",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "master",
+      "head_sha": "190ca015fa162952ea7118a946b4d244860119d8",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "190ca015fa162952ea7118a946b4d244860119d8",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable autonomous multi-agent security pipeline with human approval points."
+    },
+    {
+      "repository_id": "826643276",
+      "full_name": "kaiban-ai/KaibanJS",
+      "canonical_url": "https://github.com/kaiban-ai/KaibanJS",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "ef2edabbdd56c6fc7f05cf82b3e568ce469ffbb4",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "ef2edabbdd56c6fc7f05cf82b3e568ce469ffbb4",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable JavaScript framework for multi-agent tasks, teams and workflow orchestration."
+    },
+    {
+      "repository_id": "668481985",
+      "full_name": "ThousandBirdsInc/chidori",
+      "canonical_url": "https://github.com/ThousandBirdsInc/chidori",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "4bd624028cda6026b7040e57d94dc9c70096f46d",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "4bd624028cda6026b7040e57d94dc9c70096f46d",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable durable agent runtime with recorded side effects, replay, checkpoint and resume."
+    },
+    {
+      "repository_id": "650549146",
+      "full_name": "melih-unsal/DemoGPT",
+      "canonical_url": "https://github.com/melih-unsal/DemoGPT",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "aca748b7134549d6fa80c5c3a989779919697095",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "aca748b7134549d6fa80c5c3a989779919697095",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable framework and package for creating agents, tools and RAG-backed agent types."
+    },
+    {
+      "repository_id": "854776745",
+      "full_name": "hexabot-ai/Hexabot",
+      "canonical_url": "https://github.com/hexabot-ai/Hexabot",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "b396ea3de8ac19b78a1ab7829598d27d4bf3c2d5",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "b396ea3de8ac19b78a1ab7829598d27d4bf3c2d5",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable agentic workflow platform with tools, MCP, memory and RAG."
+    },
+    {
+      "repository_id": "1020430400",
+      "full_name": "Doriandarko/make-it-heavy",
+      "canonical_url": "https://github.com/Doriandarko/make-it-heavy",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "d293cce8b8546cc082fb94b21af5b7626521d810",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "d293cce8b8546cc082fb94b21af5b7626521d810",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable parallel multi-agent research and synthesis framework."
+    },
+    {
+      "repository_id": "976286833",
+      "full_name": "IBM/AssetOpsBench",
+      "canonical_url": "https://github.com/IBM/AssetOpsBench",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "e11d1c1b2022db0396364a6d66e24168955a3bb7",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "e11d1c1b2022db0396364a6d66e24168955a3bb7",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable framework for building, orchestrating and evaluating domain-specific agents."
+    },
+    {
+      "repository_id": "1123323771",
+      "full_name": "asklokesh/loki-mode",
+      "canonical_url": "https://github.com/asklokesh/loki-mode",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "7e32778f0af339c69817f5e4f59575db32524fe6",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "7e32778f0af339c69817f5e4f59575db32524fe6",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable spec-driven autonomous coding agent with explicit completion verification."
+    },
+    {
+      "repository_id": "747319327",
+      "full_name": "openlit/openlit",
+      "canonical_url": "https://github.com/openlit/openlit",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "ad20b7b4c282f5c19239937f3bb485ec380e772e",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "ad20b7b4c282f5c19239937f3bb485ec380e772e",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Agent/LLM observability, evaluation, guardrail and tracing infrastructure within topic scope."
+    },
+    {
+      "repository_id": "976095156",
+      "full_name": "JetBrains/koog",
+      "canonical_url": "https://github.com/JetBrains/koog",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "develop",
+      "head_sha": "10bba89b67929bab3617047a6a7c8d8cf3ff9185",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "10bba89b67929bab3617047a6a7c8d8cf3ff9185",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable Kotlin agent framework with published package and CI surfaces."
+    },
+    {
+      "repository_id": "1106580780",
+      "full_name": "vstorm-co/pydantic-deepagents",
+      "canonical_url": "https://github.com/vstorm-co/pydantic-deepagents",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "32b57ba6df24c744537b9b9080394ead6fc02c10",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "32b57ba6df24c744537b9b9080394ead6fc02c10",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable coding-agent CLI and reusable Python deep-agent framework."
+    },
+    {
+      "repository_id": "1199905418",
+      "full_name": "fujibee/agmsg",
+      "canonical_url": "https://github.com/fujibee/agmsg",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "4d3202d6c20e5f0f7bdcd900d777c458bc3fc119",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "4d3202d6c20e5f0f7bdcd900d777c458bc3fc119",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable local state and messaging infrastructure for coordinating CLI agents."
+    },
+    {
+      "repository_id": "788791942",
+      "full_name": "SylphAI-Inc/AdalFlow",
+      "canonical_url": "https://github.com/SylphAI-Inc/AdalFlow",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "810de99d86191b3aa0c939aa6d6d1a21977555aa",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "810de99d86191b3aa0c939aa6d6d1a21977555aa",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable agents SDK and optimization framework, including a coding-agent CLI."
+    },
+    {
+      "repository_id": "1214333415",
+      "full_name": "Core-Mate/OpenGUI",
+      "canonical_url": "https://github.com/Core-Mate/OpenGUI",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "7cf28b90866459e74300869766896f953761dd60",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "7cf28b90866459e74300869766896f953761dd60",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable mobile GUI agent framework with perception, planning and real-device actions."
+    },
+    {
+      "repository_id": "766445602",
+      "full_name": "BAAI-Agents/Cradle",
+      "canonical_url": "https://github.com/BAAI-Agents/Cradle",
+      "stars": null,
+      "stars_query_floor": 1000,
+      "default_branch": "main",
+      "head_sha": "d7752fccf890d8d3818cd1d435f3705f604a1339",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "d7752fccf890d8d3818cd1d435f3705f604a1339",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable foundation-agent framework for computer control via screenshots and input actions."
+    }
+  ]
+}

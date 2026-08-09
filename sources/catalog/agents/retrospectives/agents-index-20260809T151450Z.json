@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "topic": "agents",
+  "run_id": "agents-index-20260809T151450Z",
+  "method_version": "repository-research-v1.0",
+  "measurement_units": {
+    "planned": "page_limit",
+    "completed": "normalized_repository_records",
+    "held": "repository_records",
+    "failed": "repository_records",
+    "reused": "repository_records"
+  },
+  "result": {
+    "planned": 10,
+    "completed": 121,
+    "held": 6,
+    "failed": 0,
+    "reused": 0
+  },
+  "quality_gate": {
+    "search_hits": 121,
+    "duplicates": 0,
+    "eligible": 94,
+    "rejected": 21,
+    "non_eligible_rate": 0.2231,
+    "failure_sample": "The broad query matched awesome/skills collections, UI-only consumers, generic testing or rendering frameworks, and non-LLM agent semantics."
+  },
+  "previous_action": null,
+  "next_action": {
+    "action_id": "agent-index-action-001",
+    "hypothesis": "Requiring each eligible record to name an explicit execution marker from the root README (runtime, framework, CLI, loop, orchestration, memory, tool, or evaluation infrastructure) will reduce borderline classification drift in the coding-agent shard.",
+    "metric": "In the next index batch, 100% of eligible records include a named execution marker and deep review finds at most one repository without an executable agent asset.",
+    "rollback_condition": "Rollback the marker vocabulary if deep review finds two or more held/rejected repositories with first-class executable agent implementations that the marker set excluded."
+  }
+}

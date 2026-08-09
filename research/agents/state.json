@@ -2,14 +2,504 @@
   "schema_version": "1.0",
   "topic": "agents",
   "method_version": "repository-research-v1.0",
-  "last_successful_run": null,
-  "ready_snapshot": null,
+  "last_successful_run": {
+    "run_id": "agents-index-20260809T151450Z",
+    "mode": "index",
+    "commit_sha": "self",
+    "snapshot_id": "agents-agent-framework-20260809T151450Z"
+  },
+  "ready_snapshot": {
+    "snapshot_id": "agents-agent-framework-20260809T151450Z",
+    "source_commit": "da9416532852bb8e8a5398b8bcfea6cb9d8ac6f1",
+    "status": "ready",
+    "path": "sources/catalog/agents/snapshots/agents-agent-framework-20260809T151450Z.json",
+    "candidate_count": 94
+  },
   "counts": {
     "repository_identity_coverage": 0,
     "unique_content_deep_reviews": 0,
     "analyses_reused": 0,
     "new_analysis_reports": 0
   },
+  "index_counts": {
+    "canonical_repository_count": 121,
+    "eligible": 94,
+    "held": 6,
+    "rejected": 21
+  },
   "active_claims": [],
-  "updated_at": "2026-08-09"
+  "queue": [
+    {
+      "repository": "agent0ai/agent-zero",
+      "status": "pending",
+      "fixed_commit": "5ff106a2d489d17c2a3b378521a8f29fb29cf77d"
+    },
+    {
+      "repository": "microsoft/agent-framework",
+      "status": "pending",
+      "fixed_commit": "5eb3eb745e16324ac7bffb1dbe006d8f13c8d993"
+    },
+    {
+      "repository": "microsoft/autogen",
+      "status": "pending",
+      "fixed_commit": "027ecf0a379bcc1d09956d46d12d44a3ad9cee14"
+    },
+    {
+      "repository": "zai-org/Open-AutoGLM",
+      "status": "pending",
+      "fixed_commit": "86f55382982fb054e8fc98ca80609dff8a2cdc3c"
+    },
+    {
+      "repository": "TEN-framework/ten-framework",
+      "status": "pending",
+      "fixed_commit": "1b78cb725910d6f63389ef4ae69b182854d5b9d9"
+    },
+    {
+      "repository": "pydantic/pydantic-ai",
+      "status": "pending",
+      "fixed_commit": "fc6a3ac506513150e2016ee5ba9785d792795150"
+    },
+    {
+      "repository": "openai/openai-agents-python",
+      "status": "pending",
+      "fixed_commit": "e3d7c1727bf43761afbb7954651b7f908a973a3b"
+    },
+    {
+      "repository": "alibaba/spring-ai-alibaba",
+      "status": "pending",
+      "fixed_commit": "9aee0f1a86f59fcf284628a922d68ef71a4e2c85"
+    },
+    {
+      "repository": "livekit/agents",
+      "status": "pending",
+      "fixed_commit": "02569a40794645195bd92003431e5197ea413922"
+    },
+    {
+      "repository": "FoundationAgents/MetaGPT",
+      "status": "pending",
+      "fixed_commit": "11cdf466d042aece04fc6cfd13b28e1a70341b1f"
+    },
+    {
+      "repository": "crewAIInc/crewAI",
+      "status": "pending",
+      "fixed_commit": "f7ba8e35212bbda82b44fefffea936f2673e0483"
+    },
+    {
+      "repository": "i-am-bee/beeai-framework",
+      "status": "pending",
+      "fixed_commit": "460c729002dc0f47c56c5b2c6fa050393666c3f7"
+    },
+    {
+      "repository": "BuilderIO/agent-native",
+      "status": "pending",
+      "fixed_commit": "40982a7fc0ff5423843827d058a3c11a4023d601"
+    },
+    {
+      "repository": "VoltAgent/voltagent",
+      "status": "pending",
+      "fixed_commit": "9aedd4917795023a1ee17a29691f7a87865bdf2a"
+    },
+    {
+      "repository": "micro/go-micro",
+      "status": "pending",
+      "fixed_commit": "77fc793d5bab3be2bbfaac2cbfa9ff2a4be711da"
+    },
+    {
+      "repository": "Kocoro-lab/Shannon",
+      "status": "pending",
+      "fixed_commit": "52cdd40621a9e882de2877d9d36a81d0403c2364"
+    },
+    {
+      "repository": "SciSharp/BotSharp",
+      "status": "pending",
+      "fixed_commit": "e2f09cea0fa7818c1bddb13edfa08bc4b81f1cc8"
+    },
+    {
+      "repository": "2FastLabs/agent-squad",
+      "status": "pending",
+      "fixed_commit": "31eccfeb0d546262d1d0ec2e2e5239186f8d2954"
+    },
+    {
+      "repository": "raga-ai-hub/RagaAI-Catalyst",
+      "status": "pending",
+      "fixed_commit": "ab67893310891140211280a496402003e52cdab5"
+    },
+    {
+      "repository": "OpenBMB/AgentVerse",
+      "status": "pending",
+      "fixed_commit": "f90c4bd9680fdd3bcff8c52c9170911a59b23478"
+    },
+    {
+      "repository": "mastra-ai/mastra",
+      "status": "pending",
+      "fixed_commit": "d9d2881ede6dd6c023d144215fc812062aed0890"
+    },
+    {
+      "repository": "langchain-ai/langchain",
+      "status": "pending",
+      "fixed_commit": "d048fbe170573b6e7056b5ef5f78d8451e54abaf"
+    },
+    {
+      "repository": "ageerle/ruoyi-ai",
+      "status": "pending",
+      "fixed_commit": "9d439d1dcf1bc5ce8e370646d125d23ffe9cd15e"
+    },
+    {
+      "repository": "Intelligent-Internet/ii-agent",
+      "status": "pending",
+      "fixed_commit": "0e57985d3f6e5c8ea340418ed259665b8e86301d"
+    },
+    {
+      "repository": "langchain-ai/langgraph",
+      "status": "pending",
+      "fixed_commit": "d56666f7fbf0d380ad84cdf0cbe5aa48ab0cc086"
+    },
+    {
+      "repository": "fetchai/uAgents",
+      "status": "pending",
+      "fixed_commit": "cfdf3e2ad59e6192627e490a301a9c064f5a238b"
+    },
+    {
+      "repository": "lavague-ai/LaVague",
+      "status": "pending",
+      "fixed_commit": "9024bb832c40291cd012916757f27ef60469b22d"
+    },
+    {
+      "repository": "cheshire-cat-ai/core",
+      "status": "pending",
+      "fixed_commit": "1493ce31301c4e6f14008d5e410ff7dcc3654eb7"
+    },
+    {
+      "repository": "agentuniverse-ai/agentUniverse",
+      "status": "pending",
+      "fixed_commit": "254ecd280f54c2d2de654bbe5373e9f947d2dedf"
+    },
+    {
+      "repository": "HKUDS/nanobot",
+      "status": "pending",
+      "fixed_commit": "55ecda275d40fa319856b1518bc0986f10f8ac41"
+    },
+    {
+      "repository": "elizaOS/eliza",
+      "status": "pending",
+      "fixed_commit": "c62762957415edac0c0d33559ee9e43e9ec37fed"
+    },
+    {
+      "repository": "kyegomez/swarms",
+      "status": "pending",
+      "fixed_commit": "7f1703c19ce0dab0d1d431fc770884f63fbc5452"
+    },
+    {
+      "repository": "openonion/connectonion",
+      "status": "pending",
+      "fixed_commit": "c07a998bb6ad76776984e06fe09571e5613f99b6"
+    },
+    {
+      "repository": "langchain-ai/langgraphjs",
+      "status": "pending",
+      "fixed_commit": "6ac60da74f6b9e29d20b111a7947ac3060f1d2dd"
+    },
+    {
+      "repository": "pipecat-ai/pipecat",
+      "status": "pending",
+      "fixed_commit": "cbd04ffe6afc6d29a1327ef0f7348a88870efa4d"
+    },
+    {
+      "repository": "embabel/embabel-agent",
+      "status": "pending",
+      "fixed_commit": "d8407d42737410832a398c6713cf9dde3dafb6c9"
+    },
+    {
+      "repository": "camel-ai/camel",
+      "status": "pending",
+      "fixed_commit": "32fb32494897fe793538eb3e0f87b27116500179"
+    },
+    {
+      "repository": "wrtnlabs/agentica",
+      "status": "pending",
+      "fixed_commit": "dc91f4307a3f2ee25e1ee07cf48777fcd13b6b0d"
+    },
+    {
+      "repository": "open-multi-agent/open-multi-agent",
+      "status": "pending",
+      "fixed_commit": "f14708b30857106f6df928397daffda4c6821bba"
+    },
+    {
+      "repository": "AstrBotDevs/AstrBot",
+      "status": "pending",
+      "fixed_commit": "30e20318cbaaa2e1ba57f3e0eee265d9ee98115c"
+    },
+    {
+      "repository": "open-gitagent/opengap",
+      "status": "pending",
+      "fixed_commit": "d7a8e2edb54b942d6b4635cdd8b919ebd23e5da5"
+    },
+    {
+      "repository": "TransformerOptimus/SuperAGI",
+      "status": "pending",
+      "fixed_commit": "c3c1982e7bd6a11cfed53c5a193ea502f924b1b6"
+    },
+    {
+      "repository": "magnitudedev/browser-agent",
+      "status": "pending",
+      "fixed_commit": "f1b587c4173d8242bdb551991de54e70c4d2faf3"
+    },
+    {
+      "repository": "superduper-io/superduper",
+      "status": "pending",
+      "fixed_commit": "6d192e7bf255f913b445a44dc9486e7013ddc6bc"
+    },
+    {
+      "repository": "AgentOps-AI/agentops",
+      "status": "pending",
+      "fixed_commit": "f8e907b92dabe47232978023fdcb01e2a7d4b752"
+    },
+    {
+      "repository": "mozilla-ai/any-agent",
+      "status": "pending",
+      "fixed_commit": "3e248d1c5a04d43f00589596d3fc580dbec64194"
+    },
+    {
+      "repository": "mcp-use/mcp-use",
+      "status": "pending",
+      "fixed_commit": "b06cc3fe1beebcf1c044fe631bd4603bbc488d19"
+    },
+    {
+      "repository": "TencentCloud/TencentDB-Agent-Memory",
+      "status": "pending",
+      "fixed_commit": "fe3230f176f1bf5832fee79d12494bbc2d19a8aa"
+    },
+    {
+      "repository": "confident-ai/deepteam",
+      "status": "pending",
+      "fixed_commit": "2a5588c8883716aa1e7899ddb19ee07ad7bcdf8d"
+    },
+    {
+      "repository": "patched-codes/patchwork",
+      "status": "pending",
+      "fixed_commit": "21948cbec44d3b7aec30715923ac7a0cd3fb1155"
+    },
+    {
+      "repository": "espressif/esp-claw",
+      "status": "pending",
+      "fixed_commit": "9ba07d013329df480e34a1a59d1513ab783d8a52"
+    },
+    {
+      "repository": "yomorun/yomo",
+      "status": "pending",
+      "fixed_commit": "a047116ae8d376de49289285608f704ee997298e"
+    },
+    {
+      "repository": "SolaceLabs/solace-agent-mesh",
+      "status": "pending",
+      "fixed_commit": "00d3417e4a299cb40cc528bf4dc48fce833d4649"
+    },
+    {
+      "repository": "polyuiislab/infiAgent",
+      "status": "pending",
+      "fixed_commit": "cf6e04e60a3ed3b3107aebe5f4ed0af52893ed19"
+    },
+    {
+      "repository": "openakita/openakita",
+      "status": "pending",
+      "fixed_commit": "c42abf1a19d57d4c2c6842e8ea41023d416a7618"
+    },
+    {
+      "repository": "video-db/Director",
+      "status": "pending",
+      "fixed_commit": "70e0b3dfdf59c679a25f4bea511e3cc4c5f2457f"
+    },
+    {
+      "repository": "trypromptly/LLMStack",
+      "status": "pending",
+      "fixed_commit": "701348426fadd0536de8b72536216a9c0365f25b"
+    },
+    {
+      "repository": "darrenhinde/OpenAgentsControl",
+      "status": "pending",
+      "fixed_commit": "37ca233fa5597a5abb90cba73165deafffe0344f"
+    },
+    {
+      "repository": "ZHangZHengEric/Sage",
+      "status": "pending",
+      "fixed_commit": "e446ae2757ce1122cdb1cc52be541a4da0637a68"
+    },
+    {
+      "repository": "MervinPraison/PraisonAI",
+      "status": "pending",
+      "fixed_commit": "84752e77d8da4dcda352d040621351fe36ecbafd"
+    },
+    {
+      "repository": "InternLM/MindSearch",
+      "status": "pending",
+      "fixed_commit": "7952c5f8a956fe6a44228a6a7d528a35340e7c87"
+    },
+    {
+      "repository": "neuron-core/neuron-ai",
+      "status": "pending",
+      "fixed_commit": "bd4d0c95e326f449a582b53c4ada2af6c59cbd23"
+    },
+    {
+      "repository": "trpc-group/trpc-agent-go",
+      "status": "pending",
+      "fixed_commit": "c6988c7ef0d511a656301121b011a3105d6ea784"
+    },
+    {
+      "repository": "genkit-ai/genkit",
+      "status": "pending",
+      "fixed_commit": "9b9784e3c233b2132084dbc748360c2ec7c1ff7c"
+    },
+    {
+      "repository": "crmne/ruby_llm",
+      "status": "pending",
+      "fixed_commit": "bfbb2d52399cfef1845cdd5f59a50a6d888e6361"
+    },
+    {
+      "repository": "dynamiq-ai/dynamiq",
+      "status": "pending",
+      "fixed_commit": "b07ab0a4e371ffcd7f3cd463089c5d4f4fb0eb33"
+    },
+    {
+      "repository": "tuya/TuyaOpen",
+      "status": "pending",
+      "fixed_commit": "6153c9229d5b3c885547910c302ae2087f591a6d"
+    },
+    {
+      "repository": "agents-flex/agents-flex",
+      "status": "pending",
+      "fixed_commit": "f32c28d32eb1046ec87237e215fd4628cad7cf47"
+    },
+    {
+      "repository": "guy-hartstein/company-research-agent",
+      "status": "pending",
+      "fixed_commit": "fc2f99085500c04655bd6501e5170207bfe2507e"
+    },
+    {
+      "repository": "PySpur-Dev/pyspur",
+      "status": "pending",
+      "fixed_commit": "97b9856e49f227a52868b73493c23c43fb4de358"
+    },
+    {
+      "repository": "griptape-ai/griptape",
+      "status": "pending",
+      "fixed_commit": "93fbd843afeff389bc21e728e593afaf6fcfd584"
+    },
+    {
+      "repository": "letta-ai/agent-file",
+      "status": "pending",
+      "fixed_commit": "78212eb571e59e10b35b924375a997319b89c280"
+    },
+    {
+      "repository": "rinadelph/Agent-MCP",
+      "status": "pending",
+      "fixed_commit": "13d98b2c9e770a97a77521e605e7e41db024852d"
+    },
+    {
+      "repository": "deepset-ai/haystack",
+      "status": "pending",
+      "fixed_commit": "e97e713ba5bcca254a305e71513ab15a2b0fe4bc"
+    },
+    {
+      "repository": "GH05TCREW/pentestagent",
+      "status": "pending",
+      "fixed_commit": "b09a106557f5a83d3427a24c7058f930e39aac4d"
+    },
+    {
+      "repository": "simonlin1212/TradingAgents-astock",
+      "status": "pending",
+      "fixed_commit": "0badc3340c70fa0eb16e8cb527c5c32efacc7966"
+    },
+    {
+      "repository": "hexo-ai/sia",
+      "status": "pending",
+      "fixed_commit": "8c503030815fc69eb581f65c4ab02c1fc05062ec"
+    },
+    {
+      "repository": "LLPhant/LLPhant",
+      "status": "pending",
+      "fixed_commit": "0d90d8b8ba7983ee8c8b09acbb695239c3dc4b74"
+    },
+    {
+      "repository": "omnigent-ai/omnigent",
+      "status": "pending",
+      "fixed_commit": "de8aee826c48d632ce335a702f2cca2f6240a6b9"
+    },
+    {
+      "repository": "samugit83/redamon",
+      "status": "pending",
+      "fixed_commit": "190ca015fa162952ea7118a946b4d244860119d8"
+    },
+    {
+      "repository": "kaiban-ai/KaibanJS",
+      "status": "pending",
+      "fixed_commit": "ef2edabbdd56c6fc7f05cf82b3e568ce469ffbb4"
+    },
+    {
+      "repository": "ThousandBirdsInc/chidori",
+      "status": "pending",
+      "fixed_commit": "4bd624028cda6026b7040e57d94dc9c70096f46d"
+    },
+    {
+      "repository": "melih-unsal/DemoGPT",
+      "status": "pending",
+      "fixed_commit": "aca748b7134549d6fa80c5c3a989779919697095"
+    },
+    {
+      "repository": "hexabot-ai/Hexabot",
+      "status": "pending",
+      "fixed_commit": "b396ea3de8ac19b78a1ab7829598d27d4bf3c2d5"
+    },
+    {
+      "repository": "Doriandarko/make-it-heavy",
+      "status": "pending",
+      "fixed_commit": "d293cce8b8546cc082fb94b21af5b7626521d810"
+    },
+    {
+      "repository": "IBM/AssetOpsBench",
+      "status": "pending",
+      "fixed_commit": "e11d1c1b2022db0396364a6d66e24168955a3bb7"
+    },
+    {
+      "repository": "asklokesh/loki-mode",
+      "status": "pending",
+      "fixed_commit": "7e32778f0af339c69817f5e4f59575db32524fe6"
+    },
+    {
+      "repository": "openlit/openlit",
+      "status": "pending",
+      "fixed_commit": "ad20b7b4c282f5c19239937f3bb485ec380e772e"
+    },
+    {
+      "repository": "JetBrains/koog",
+      "status": "pending",
+      "fixed_commit": "10bba89b67929bab3617047a6a7c8d8cf3ff9185"
+    },
+    {
+      "repository": "vstorm-co/pydantic-deepagents",
+      "status": "pending",
+      "fixed_commit": "32b57ba6df24c744537b9b9080394ead6fc02c10"
+    },
+    {
+      "repository": "fujibee/agmsg",
+      "status": "pending",
+      "fixed_commit": "4d3202d6c20e5f0f7bdcd900d777c458bc3fc119"
+    },
+    {
+      "repository": "SylphAI-Inc/AdalFlow",
+      "status": "pending",
+      "fixed_commit": "810de99d86191b3aa0c939aa6d6d1a21977555aa"
+    },
+    {
+      "repository": "Core-Mate/OpenGUI",
+      "status": "pending",
+      "fixed_commit": "7cf28b90866459e74300869766896f953761dd60"
+    },
+    {
+      "repository": "BAAI-Agents/Cradle",
+      "status": "pending",
+      "fixed_commit": "d7752fccf890d8d3818cd1d435f3705f604a1339"
+    }
+  ],
+  "latest_deep_analysis": "research/agents/deep-analysis-latest.json",
+  "updated_at": "2026-08-09T15:14:50Z"
 }
