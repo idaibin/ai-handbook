@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "topic": "workflows",
+  "snapshot_id": "workflows-agent-workflow-20260809T053108Z",
+  "status": "ready",
+  "source_commit": "bbe085490398f64c0028f4352933038cfa47f41d",
+  "source_batch": "sources/catalog/workflows/batches/2026-08-09-agent-workflow-first-partition.json",
+  "created_at": "2026-08-09T05:31:08Z",
+  "query": {
+    "id": "agent-workflow",
+    "text": "agent workflow automation stars:>=1000",
+    "shard": "first-partition",
+    "strategy": "stars_then_created_date",
+    "per_page": 100,
+    "page_limit": 10
+  },
+  "candidate_count": 13,
+  "candidates": [
+    {
+      "repository_id": "573661753",
+      "full_name": "activepieces/activepieces",
+      "canonical_url": "https://github.com/activepieces/activepieces",
+      "stars": 23644,
+      "default_branch": "main",
+      "head_sha": "2cd7c61f302f88b5c24811ca480c0fceee602af5",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "2cd7c61f302f88b5c24811ca480c0fceee602af5",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Explicit AI workflow automation platform with agents and MCP."
+    },
+    {
+      "repository_id": "1147094660",
+      "full_name": "HKUDS/nanobot",
+      "canonical_url": "https://github.com/HKUDS/nanobot",
+      "stars": 46779,
+      "default_branch": "main",
+      "head_sha": "af52fbcbc43ee9b44bcdb1bb462c0db5c12f751d",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "af52fbcbc43ee9b44bcdb1bb462c0db5c12f751d",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Implemented AI agent framework explicitly advertising multi-agent workflows and automation."
+    },
+    {
+      "repository_id": "782544882",
+      "full_name": "patched-codes/patchwork",
+      "canonical_url": "https://github.com/patched-codes/patchwork",
+      "stars": 1571,
+      "default_branch": "main",
+      "head_sha": "21948cbec44d3b7aec30715923ac7a0cd3fb1155",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "21948cbec44d3b7aec30715923ac7a0cd3fb1155",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Agentic enterprise workflow framework with coding and DevOps scope."
+    },
+    {
+      "repository_id": "572570113",
+      "full_name": "triggerdotdev/trigger.dev",
+      "canonical_url": "https://github.com/triggerdotdev/trigger.dev",
+      "stars": 15949,
+      "default_branch": "main",
+      "head_sha": "90e8bd5c12056eb21c91513efb1233dff3b0fbd3",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "90e8bd5c12056eb21c91513efb1233dff3b0fbd3",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Build and deployment platform explicitly for AI agents and workflows."
+    },
+    {
+      "repository_id": "993376725",
+      "full_name": "lucaswalter/n8n-ai-automations",
+      "canonical_url": "https://github.com/lucaswalter/n8n-ai-automations",
+      "stars": 1582,
+      "default_branch": "main",
+      "head_sha": "57e1527902b8447e6cd3374d00237a34d3193e0b",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "57e1527902b8447e6cd3374d00237a34d3193e0b",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Repository declares executable n8n workflows and AI automation templates."
+    },
+    {
+      "repository_id": "1038251341",
+      "full_name": "darrenhinde/OpenAgentsControl",
+      "canonical_url": "https://github.com/darrenhinde/OpenAgentsControl",
+      "stars": 4701,
+      "default_branch": "main",
+      "head_sha": "37ca233fa5597a5abb90cba73165deafffe0344f",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "37ca233fa5597a5abb90cba73165deafffe0344f",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Plan, approval, execution, testing, review and validation coding workflow."
+    },
+    {
+      "repository_id": "854776745",
+      "full_name": "hexabot-ai/Hexabot",
+      "canonical_url": "https://github.com/hexabot-ai/Hexabot",
+      "stars": 1148,
+      "default_branch": "main",
+      "head_sha": "b396ea3de8ac19b78a1ab7829598d27d4bf3c2d5",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "b396ea3de8ac19b78a1ab7829598d27d4bf3c2d5",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "AI workflow automation runtime with workflows, actions and agents."
+    },
+    {
+      "repository_id": "910418754",
+      "full_name": "nanobrowser/nanobrowser",
+      "canonical_url": "https://github.com/nanobrowser/nanobrowser",
+      "stars": 13540,
+      "default_branch": "master",
+      "head_sha": "322384f8b4d48d8614343e51efca68c85e64f90b",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "322384f8b4d48d8614343e51efca68c85e64f90b",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable browser automation with multi-agent workflows."
+    },
+    {
+      "repository_id": "980205160",
+      "full_name": "enescingoz/awesome-n8n-templates",
+      "canonical_url": "https://github.com/enescingoz/awesome-n8n-templates",
+      "stars": 24544,
+      "default_branch": "main",
+      "head_sha": "2546df5f3da5ad12c9bbda4c51da39c3366c0d3e",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "2546df5f3da5ad12c9bbda4c51da39c3366c0d3e",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Metadata states 280+ ready-to-use workflow templates, not a links-only index."
+    },
+    {
+      "repository_id": "1158449837",
+      "full_name": "golutra/golutra",
+      "canonical_url": "https://github.com/golutra/golutra",
+      "stars": 3798,
+      "default_branch": "master",
+      "head_sha": "8b68a14183afa6ec26f9905f2a81cbd91ed1b35b",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "8b68a14183afa6ec26f9905f2a81cbd91ed1b35b",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Multi-agent orchestration with long-running workflows."
+    },
+    {
+      "repository_id": "626805178",
+      "full_name": "langgenius/dify",
+      "canonical_url": "https://github.com/langgenius/dify",
+      "stars": 151812,
+      "default_branch": "main",
+      "head_sha": "3f89a3c742e1ce64b2167f3fcf664947f2b7cf82",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "3f89a3c742e1ce64b2167f3fcf664947f2b7cf82",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Agentic workflows and RAG pipelines are explicit core capabilities."
+    },
+    {
+      "repository_id": "1065865385",
+      "full_name": "moazbuilds/CodeMachine-CLI",
+      "canonical_url": "https://github.com/moazbuilds/CodeMachine-CLI",
+      "stars": 2513,
+      "default_branch": "main",
+      "head_sha": "572def63eb808e95b18ccf6c69a13d7a13fe06fd",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "572def63eb808e95b18ccf6c69a13d7a13fe06fd",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Orchestrates coding agents into repeatable long-running workflows."
+    },
+    {
+      "repository_id": "1175857225",
+      "full_name": "skalesapp/skales",
+      "canonical_url": "https://github.com/skalesapp/skales",
+      "stars": 1594,
+      "default_branch": "main",
+      "head_sha": "69918acb15977d04a357f0871df415b2ae903249",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "69918acb15977d04a357f0871df415b2ae903249",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Autonomous multi-agent product with workflows and recurring tasks."
+    }
+  ]
+}

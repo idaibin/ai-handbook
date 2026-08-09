@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "topic": "workflows",
+  "run_id": "workflows-index-20260809T053108Z",
+  "method_version": "repository-research-v1.0",
+  "measurement_units": {
+    "planned": "page_limit",
+    "completed": "normalized_repository_records",
+    "held": "repository_records",
+    "failed": "repository_records",
+    "reused": "repository_records"
+  },
+  "result": {
+    "planned": 10,
+    "completed": 26,
+    "held": 7,
+    "failed": 0,
+    "reused": 0
+  },
+  "quality_gate": {
+    "search_hits": 26,
+    "duplicates": 0,
+    "eligible": 13,
+    "rejected": 6,
+    "non_eligible_rate": 0.5,
+    "failure_sample": "Skills-first and generic component repositories matched workflow wording without being Workflow implementations."
+  },
+  "previous_action": null,
+  "next_action": {
+    "action_id": "workflow-index-action-001",
+    "hypothesis": "Requiring an explicit executable workflow, pipeline, orchestration or automation asset in repository metadata before provisional eligibility will reduce topic contamination without promoting README claims to verified behavior.",
+    "metric": "Compare the next batch non_eligible_rate and audit all rejected items for executable-workflow false negatives.",
+    "rollback_condition": "Rollback if content evidence later shows that two or more metadata-rejected repositories contain first-class executable workflow definitions."
+  }
+}
