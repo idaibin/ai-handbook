@@ -16,35 +16,36 @@ Canonical totals remain frozen while created-date partitions are reconciled with
 | `2026-01` | 368 | complete |
 | `2026-02` | 402 | deterministic reconciliation complete |
 | `2026-03` | 831 | 31 daily shards complete; historical reconciliation pending |
+| `2026-04` | 1272 | 30 daily shards complete; historical reconciliation pending |
 
-## April 2026 partition — in progress
+## April 2026 partition — daily staging complete
 
 Verified persisted coverage:
 
 ```text
-2026-04-01 .. 2026-04-29
+2026-04-01 .. 2026-04-30
 per_page=100
-29 exact single-day shards with terminal pagination probes
+30 exact single-day shards with terminal pagination probes
 ```
 
-The `2026-04-29` shard returned `26` repositories on page 1 and `0` on page 2. Independent rechecks returned `20,6,0` with `per_page=20` and `26,0` with `per_page=33`. Case-insensitive `owner/repository` deduplication produced `26` unique identities and `0` internal duplicates.
+The `2026-04-30` shard returned `29` repositories on page 1 and `0` on page 2. Independent rechecks returned `20,9,0` with `per_page=20` and `29,0` with `per_page=33`. Case-insensitive `owner/repository` deduplication produced `29` unique identities and `0` internal duplicates.
 
-April staging now contains `1243` unique identities across `2026-04-01` through `2026-04-29`, with `0` cross-shard duplicates asserted under the established connector-search partition contract.
+April staging now contains `1272` unique identities across `2026-04-01` through `2026-04-30`, with `0` cross-shard duplicates asserted under the established connector-search partition contract.
 
 ### April provisional classification
 
 | Classification | Count |
 | --- | ---: |
-| `specification` | 13 |
-| `skill_collection` | 713 |
-| `single_skill_or_domain_package` | 406 |
+| `specification` | 24 |
+| `skill_collection` | 720 |
+| `single_skill_or_domain_package` | 411 |
 | `awesome_index` | 1 |
-| `skill_tooling` | 26 |
-| `adjacent_search_hit` | 83 |
-| `unclear_search_hit` | 1 |
-| **Total** | **1243** |
+| `skill_tooling` | 29 |
+| `adjacent_search_hit` | 85 |
+| `unclear_search_hit` | 2 |
+| **Total** | **1272** |
 
-Classification remains repository-identity/name plus repository-metadata-only and provisional. Metadata descriptions/fork metadata were used only where the name was ambiguous; no target repository content was inspected. In the latest shard, `elagizi/agentskills`, `SabrinaLameiras/agentskills`, `chase-qi/agentskills`, `devzzk/agentskills`, and `gsdv/agentskills` are forks of `agentskills/agentskills` whose repository description is “Specification and documentation for Agent Skills”; `zunhuang/googleAgentskills` is a fork of `google/skills`; `CD22333/zephyr-agent-skills` describes a complete Zephyr RTOS Agent Skills catalog; `mi-24v/agent-skills` describes coding agent skills in the AgentSkills format; and `wky114/AnythingButLaw` describes a domain-focused Claude Code AgentSkill package.
+Classification remains repository-identity/name plus repository-metadata-only and provisional. Metadata descriptions/fork metadata were used only where the name was ambiguous; no target repository content was inspected. In the latest shard, several generic `agentskills` repositories are forks of `agentskills/agentskills` and are therefore classified as `specification`; `Jethro7723/agentskills` is a fork of `obra/superpowers` whose metadata describes an agentic skills framework/software-development methodology; `codingr47/agentskills-framework-poc` describes a Rust AgentSkills framework implementation; `anatolykoptev/skillkit` describes a reference Go implementation of the agentskills.io standard; `Watermelon4000/typewriter-video` and `Nixer-2301/webpage-skill` describe single AgentSkill-compatible packages; `Nifflesvibe001/skills` is a fork of the Wondel.ai multi-skill collection; `wenni2005-ai/openclaw-skills` describes custom OpenClaw AgentSkills; `suhas-24/ai-engineering-2026` is an AI-engineering curriculum that mentions Agent Skills among many topics; and `dimayip/learn-agent-skills` is a learning workshop about the Agent Skills specification. `HenriqueGomesHub/agentskills` remains `unclear_search_hit` because repository metadata only says it is testing skill creation.
 
 ### April artifacts
 
@@ -77,8 +78,9 @@ Classification remains repository-identity/name plus repository-metadata-only an
 - [`batches/agentskills-created-2026-04-27-deterministic.json`](batches/agentskills-created-2026-04-27-deterministic.json)
 - [`batches/agentskills-created-2026-04-28-deterministic.json`](batches/agentskills-created-2026-04-28-deterministic.json)
 - [`batches/agentskills-created-2026-04-29-deterministic.json`](batches/agentskills-created-2026-04-29-deterministic.json)
+- [`batches/agentskills-created-2026-04-30-deterministic.json`](batches/agentskills-created-2026-04-30-deterministic.json)
 
-Current run report: [`runs/2026-08-09-agentskills-april-2026-04-29.md`](runs/2026-08-09-agentskills-april-2026-04-29.md).
+Current run report: [`runs/2026-08-09-agentskills-april-2026-04-30.md`](runs/2026-08-09-agentskills-april-2026-04-30.md).
 
 ## Evidence boundary
 
@@ -86,4 +88,4 @@ Index collection only. No target repository README, `SKILL.md`, scripts, referen
 
 ## Next index action
 
-Continue with the `2026-04-30` exact single-day shard and keep canonical totals frozen until reconciliation is complete.
+Begin the deterministic May partition with the `2026-05-01` exact single-day shard. Keep canonical totals frozen until historical reconciliation is complete.
