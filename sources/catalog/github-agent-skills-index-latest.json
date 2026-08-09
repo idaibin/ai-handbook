@@ -59,44 +59,44 @@
   ],
   "active_partition": {
     "partition": "2026-05",
-    "verified_date_range": "2026-05-01..2026-05-01",
-    "staged_unique": 25,
-    "deterministic_daily_shards": 1,
-    "persisted_terminal_probes": 1,
+    "verified_date_range": "2026-05-01..2026-05-02",
+    "staged_unique": 47,
+    "deterministic_daily_shards": 2,
+    "persisted_terminal_probes": 2,
     "persisted_terminal_probe_hits": 0,
     "reconciliation_complete": false,
     "classification_counts": {
-      "specification": 7,
-      "skill_collection": 6,
-      "single_skill_or_domain_package": 9,
+      "specification": 15,
+      "skill_collection": 18,
+      "single_skill_or_domain_package": 11,
       "awesome_index": 0,
       "skill_tooling": 1,
       "adjacent_search_hit": 1,
       "unclear_search_hit": 1
     },
-    "latest_artifact": "sources/catalog/batches/agentskills-created-2026-05-01-deterministic.json"
+    "latest_artifact": "sources/catalog/batches/agentskills-created-2026-05-02-deterministic.json"
   },
   "current_run": {
-    "date_range": "2026-05-01..2026-05-01",
+    "date_range": "2026-05-02..2026-05-02",
     "page_counts": [
-      25,
+      22,
       0
     ],
-    "raw_candidate_records": 25,
-    "unique": 25,
+    "raw_candidate_records": 22,
+    "unique": 22,
     "internal_duplicates": 0,
     "canonical_delta_asserted": 0,
     "classification_counts": {
-      "specification": 7,
-      "skill_collection": 6,
-      "single_skill_or_domain_package": 9,
+      "specification": 8,
+      "skill_collection": 12,
+      "single_skill_or_domain_package": 2,
       "awesome_index": 0,
-      "skill_tooling": 1,
-      "adjacent_search_hit": 1,
-      "unclear_search_hit": 1
+      "skill_tooling": 0,
+      "adjacent_search_hit": 0,
+      "unclear_search_hit": 0
     },
-    "artifact": "sources/catalog/batches/agentskills-created-2026-05-01-deterministic.json",
-    "run_report": "sources/catalog/runs/2026-08-09-agentskills-may-2026-05-01.md"
+    "artifact": "sources/catalog/batches/agentskills-created-2026-05-02-deterministic.json",
+    "run_report": "sources/catalog/runs/2026-08-09-agentskills-may-2026-05-02.md"
   },
   "march_2026_final_staging": {
     "verified_date_range": "2026-03-01..2026-03-31",
@@ -135,28 +135,28 @@
     "latest_artifact": "sources/catalog/batches/agentskills-created-2026-04-30-deterministic.json"
   },
   "may_2026_staging": {
-    "verified_date_range": "2026-05-01..2026-05-01",
-    "verified_daily_shards": 1,
+    "verified_date_range": "2026-05-01..2026-05-02",
+    "verified_daily_shards": 2,
     "per_page": 100,
-    "raw_candidate_records": 25,
-    "staged_unique": 25,
+    "raw_candidate_records": 47,
+    "staged_unique": 47,
     "duplicates": 0,
     "classification_counts": {
-      "specification": 7,
-      "skill_collection": 6,
-      "single_skill_or_domain_package": 9,
+      "specification": 15,
+      "skill_collection": 18,
+      "single_skill_or_domain_package": 11,
       "awesome_index": 0,
       "skill_tooling": 1,
       "adjacent_search_hit": 1,
       "unclear_search_hit": 1
     },
-    "latest_artifact": "sources/catalog/batches/agentskills-created-2026-05-01-deterministic.json"
+    "latest_artifact": "sources/catalog/batches/agentskills-created-2026-05-02-deterministic.json"
   },
   "verification": {
-    "pagination": "2026-05-01 page 1 returned 25 repositories with per_page=100; page 2 returned 0. Independent rechecks returned 20,5,0 with per_page=20 and 25,0 with per_page=33.",
-    "deduplication": "All 25 current-shard identities are distinct case-insensitively; the exact May 1 created-date shard is disjoint from completed April daily shards by creation date under the established connector-search partition contract.",
+    "pagination": "2026-05-02 page 1 returned 22 repositories with per_page=100; page 2 returned 0. Independent rechecks returned 20,2,0 with per_page=20 and 22,0 with per_page=33.",
+    "deduplication": "All 22 current-shard identities are distinct case-insensitively; exact May 1 and May 2 created-date shards are disjoint by repository creation date under the established connector-search partition contract.",
     "classification": "Provisional index-stage classification from repository identity/name and GitHub repository metadata only; no target repository content was used.",
     "content": "not_started"
   },
-  "next_index_action": "continue the deterministic May partition with the 2026-05-02 exact single-day shard; keep canonical totals frozen while historical reconciliation remains pending"
+  "next_index_action": "continue the deterministic May partition with the 2026-05-03 exact single-day shard; keep canonical totals frozen while historical reconciliation remains pending"
 }
