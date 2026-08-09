@@ -1,19 +1,19 @@
 {
   "schema_version": "1.0",
-  "latest_batch_id": "2026-08-09-batch-057",
-  "latest_batch_report": "research/agent-skills/batches/2026-08-09-batch-057-deep-analysis.md",
-  "latest_batch_progress": "research/agent-skills/batches/2026-08-09-batch-057-progress.json",
-  "latest_skill_report": "research/agent-skills/batches/2026-08-09-batch-057-skill-reports.md",
-  "repositories_structure_reviewed_total": 570,
+  "latest_batch_id": "2026-08-09-batch-058",
+  "latest_batch_report": "research/agent-skills/batches/2026-08-09-batch-058-deep-analysis.md",
+  "latest_batch_progress": "research/agent-skills/batches/2026-08-09-batch-058-progress.json",
+  "latest_skill_report": "research/agent-skills/batches/2026-08-09-batch-058-skill-reports.md",
+  "repositories_structure_reviewed_total": 580,
   "repository_scoped_skill_reports_total": 3088,
   "canonical_eligible_basis": 2088,
-  "remaining_estimate": 1518,
+  "remaining_estimate": 1508,
   "status": "structure-reviewed",
   "runtime_validation": "not_executed",
   "repository_skill_files_read_latest_batch": 10,
   "direct_skill_body_reviews_latest_batch": 3,
-  "new_repository_scoped_skill_reports_latest_batch": 1,
+  "new_repository_scoped_skill_reports_latest_batch": 0,
   "canonical_reconciliation": "pending",
   "observed_at": "2026-08-09",
-  "note": "Batch 057 completed ten qualified html-ppt repository identities only after live GitHub identity/Stars checks, fixed revision/tree capture, and direct README/SKILL content gates. Nine identities resolve to exact content previously reviewed: eight use c9b2a942.../bf96c77d... and one uses 656ebee6.../05d9ea03.... g199209/html-ppt-skill is a new content identity at tree 16a56bc7... with Skill blob f9737b38...; its four-commit evolution from the shared 9f99b12b ancestor introduces a fixed 1920x1080 design stage, runtime viewport scaling, overview-thumbnail scaling, and related CSS/template/reference changes. The fork preserves the progressive-disclosure SKILL/references/assets/templates/scripts structure but still contains manual inventory/documentation drift (31 layouts versus stale '30'; inherited README does not document fork-specific stage behavior). The tree has stored screenshot artifacts but no assertion-based visual comparator, browser E2E suite, or Skill behavioral eval; render.sh remains macOS-specific, hard-codes Chrome, and uses --no-sandbox. No repository scripts, tests, evals, builds, browser flows, package installs, presentation renders, screenshot comparisons, or network APIs were executed. Historical canonical reconciliation remains pending; the 1518 remaining estimate is arithmetic continuation from the frozen 2088 basis. Queue resumes at fjhua1/html-ppt-skill, still requiring identity/Stars/fixed-revision/content gating before completion accounting."
+  "note": "Batch 058 completed ten qualified html-ppt repository identities only after live GitHub identity/Stars checks, fixed revision/tree capture, and direct README/SKILL content gates. The ten identities collapse to three exact content identities already reviewed: tree 656ebee6.../Skill 05d9ea03... (three repositories, prior Batch 052), tree c9b2a942.../Skill bf96c77d... (five repositories, prior Batch 055), and presenter-mode tree c7a57a16.../Skill 0250b9ac... (two repositories, prior Batch 051). Therefore repository coverage increased by ten but no duplicate individual Skill report was added. Recursive tree inspection reconfirmed the progressive-disclosure SKILL/references/assets/templates/scripts architecture. Source-level drift remains: 31 layouts versus stale '30' prose in older content, and 15 presenter-mode full-deck templates versus stale '14' references in parts of the Skill/README. render.sh hard-codes the macOS Chrome path and uses --no-sandbox; stored screenshots are artifact evidence, not assertion-based visual tests. Presenter mode adds popup/iframe previews, speaker-script/timer cards, localStorage persistence, BroadcastChannel synchronization and postMessage navigation, but no automated browser E2E or dedicated Skill behavioral eval was found. No repository scripts, tests, evals, builds, browser flows, package installs, renders, screenshot comparisons, or network APIs were executed. Historical canonical reconciliation remains pending; the 1508 remaining estimate is arithmetic continuation from the frozen 2088 basis. Queue resumes at wonderbench/html-ppt-skill, which still requires full identity/Stars/fixed-revision/content gating before completion accounting."
 }
