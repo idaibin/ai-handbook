@@ -1,0 +1,41 @@
+schema_version = "1.0"
+slug = "skills"
+title = "Agent Skills"
+direction = "Reusable, triggerable Agent Skill packages, specifications, tooling and evaluations"
+status = "active"
+
+[batch]
+index_page_limit = 10
+deep_repository_target = 10
+deep_minimum_new_content = 3
+quality_over_quota = true
+
+[paths]
+index_root = "sources/catalog"
+research_root = "research/agent-skills"
+canonical_index = "sources/catalog/github-agent-skills-index-latest.json"
+deep_progress = "research/agent-skills/deep-analysis-latest.json"
+canonical_state = "research/agent-skills/state.json"
+
+[selection]
+include = ["SKILL.md or equivalent executable skill contract", "skill specification", "skill authoring, validation, registry or evaluation tooling"]
+exclude = ["prompt-only collections without a skill contract", "generic agent repository with no skill unit", "unrelated use of the word skill"]
+minimum_stars = 1000
+allow_low_star_primary_sources = true
+
+[[queries]]
+id = "agentskills"
+query = "agentskills in:name,description"
+shard_strategy = "created_date_then_page"
+
+[[queries]]
+id = "agent-skills"
+query = "agent skills in:name,description"
+shard_strategy = "created_date_then_page"
+
+[deep_read]
+required = ["README", "license", "recursive tree", "all relevant SKILL.md", "manifest", "scripts", "references", "evals or tests when present"]
+optional_runtime = ["validator", "targeted test", "representative skill invocation"]
+
+[evaluation]
+dimensions = ["trigger_contract", "progressive_disclosure", "tool_and_permission_boundary", "validation", "reuse_value", "production_readiness"]

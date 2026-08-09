@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Repository Research Canonical State",
+  "type": "object",
+  "required": ["schema_version", "topic", "method_version", "last_successful_run", "counts", "updated_at"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "topic": {"type": "string", "minLength": 1},
+    "method_version": {"type": "string", "minLength": 1},
+    "last_successful_run": {
+      "type": ["object", "null"],
+      "required": ["run_id", "mode", "commit_sha"],
+      "properties": {
+        "run_id": {"type": "string"},
+        "mode": {"enum": ["index", "deep-analysis"]},
+        "commit_sha": {"type": "string"},
+        "snapshot_id": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "ready_snapshot": {
+      "type": ["object", "null"],
+      "required": ["snapshot_id", "source_commit", "status"],
+      "properties": {
+        "snapshot_id": {"type": "string"},
+        "source_commit": {"type": "string"},
+        "status": {"const": "ready"}
+      },
+      "additionalProperties": true
+    },
+    "counts": {
+      "type": "object",
+      "required": ["repository_identity_coverage", "unique_content_deep_reviews"],
+      "properties": {
+        "repository_identity_coverage": {"type": "integer", "minimum": 0},
+        "unique_content_deep_reviews": {"type": ["integer", "null"], "minimum": 0},
+        "analyses_reused": {"type": "integer", "minimum": 0},
+        "new_analysis_reports": {"type": "integer", "minimum": 0},
+        "repository_scoped_skill_reports": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": true
+    },
+    "active_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim_id", "run_id", "snapshot_id", "claimed_at", "lease_expires_at"],
+        "additionalProperties": true
+      }
+    },
+    "updated_at": {"type": "string"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "topic": "workflows",
+  "method_version": "repository-research-v1.0",
+  "last_successful_run": null,
+  "ready_snapshot": null,
+  "counts": {
+    "repository_identity_coverage": 0,
+    "unique_content_deep_reviews": 0,
+    "analyses_reused": 0,
+    "new_analysis_reports": 0
+  },
+  "active_claims": [],
+  "updated_at": "2026-08-09"
+}

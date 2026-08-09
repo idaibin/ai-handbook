@@ -1,0 +1,41 @@
+schema_version = "1.0"
+slug = "agents"
+title = "AI Agents"
+direction = "Implemented autonomous or semi-autonomous agents, agent frameworks and coding agents"
+status = "active"
+
+[batch]
+index_page_limit = 10
+deep_repository_target = 10
+deep_minimum_new_content = 3
+quality_over_quota = true
+
+[paths]
+index_root = "sources/catalog/agents"
+research_root = "research/agents"
+canonical_index = "sources/catalog/agents/index-latest.json"
+deep_progress = "research/agents/deep-analysis-latest.json"
+canonical_state = "research/agents/state.json"
+
+[selection]
+include = ["implemented agent loop or orchestration", "coding or research agent", "multi-agent framework with executable code", "agent runtime, memory, tool or evaluation infrastructure"]
+exclude = ["chat UI with no agent loop", "prompt-only persona", "awesome list without implementation", "SDK merely named agent"]
+minimum_stars = 1000
+allow_low_star_primary_sources = true
+
+[[queries]]
+id = "agent-framework"
+query = "AI agent framework stars:>=1000"
+shard_strategy = "stars_then_created_date"
+
+[[queries]]
+id = "coding-agent"
+query = "coding agent stars:>=1000"
+shard_strategy = "stars_then_created_date"
+
+[deep_read]
+required = ["README", "license", "architecture", "agent loop entry", "model and tool routing", "memory or state", "permissions", "stop conditions", "failure recovery", "tests and evals"]
+optional_runtime = ["install", "smallest documented example", "targeted eval"]
+
+[evaluation]
+dimensions = ["agent_boundary", "context_and_state", "tool_and_permission_boundary", "stop_and_recovery", "verification", "concurrency_and_cost", "production_readiness"]

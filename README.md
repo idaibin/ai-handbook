@@ -80,6 +80,10 @@
 - `templates/`：来源和研究记录模板。
 - `workflows/`：AI Engineering System 的唯一权威工作流、存储规范、交接合同和评估。
 
+通用 GitHub 主题索引与深度分析流程见
+[`workflows/repository-research/`](workflows/repository-research/README.md)。它由主题配置驱动，
+当前覆盖 Skills、Agents 和 Workflows。
+
 ## 维护边界
 
 - GitHub 保存公开、结构化、可版本化的事实和规范。

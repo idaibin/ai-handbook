@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "topic": "workflows",
+  "status": "bootstrap",
+  "canonical_repository_count": 0,
+  "ready_snapshot": null,
+  "next_shard": "agent-workflow:first-partition",
+  "updated_at": "2026-08-09"
+}

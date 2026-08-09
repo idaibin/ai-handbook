@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Repository Research Batch Retrospective",
+  "type": "object",
+  "required": ["schema_version", "topic", "run_id", "method_version", "result", "previous_action", "next_action"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "topic": {"type": "string"},
+    "run_id": {"type": "string"},
+    "method_version": {"type": "string"},
+    "result": {
+      "type": "object",
+      "required": ["planned", "completed", "held", "failed", "reused"],
+      "additionalProperties": {"type": "integer", "minimum": 0}
+    },
+    "previous_action": {
+      "type": ["object", "null"],
+      "properties": {
+        "action_id": {"type": "string"},
+        "applied": {"type": "boolean"},
+        "metric_before": {},
+        "metric_after": {},
+        "decision": {"enum": ["keep", "rollback", "inconclusive", "not-applied"]}
+      },
+      "additionalProperties": true
+    },
+    "next_action": {
+      "type": ["object", "null"],
+      "properties": {
+        "action_id": {"type": "string"},
+        "hypothesis": {"type": "string"},
+        "metric": {"type": "string"},
+        "rollback_condition": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}

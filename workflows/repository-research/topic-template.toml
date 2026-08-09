@@ -1,0 +1,36 @@
+schema_version = "1.0"
+slug = "replace-me"
+title = "Replace Me"
+direction = "One sentence scope"
+status = "draft"
+
+[batch]
+index_page_limit = 10
+deep_repository_target = 10
+deep_minimum_new_content = 3
+quality_over_quota = true
+
+[paths]
+index_root = "sources/catalog/replace-me"
+research_root = "research/replace-me"
+canonical_index = "sources/catalog/replace-me/index-latest.json"
+deep_progress = "research/replace-me/deep-analysis-latest.json"
+canonical_state = "research/replace-me/state.json"
+
+[selection]
+include = ["Define observable inclusion evidence"]
+exclude = ["Define adjacent but out-of-scope cases"]
+minimum_stars = 0
+allow_low_star_primary_sources = true
+
+[[queries]]
+id = "primary"
+query = "replace with a reproducible GitHub repository query"
+shard_strategy = "created_date_then_page"
+
+[deep_read]
+required = ["README", "license", "tree", "topic-specific implementation files"]
+optional_runtime = ["tests", "build", "core happy path"]
+
+[evaluation]
+dimensions = ["research_value", "engineering_quality", "production_readiness", "maintenance"]

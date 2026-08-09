@@ -1,0 +1,46 @@
+schema_version = "1.0"
+slug = "workflows"
+title = "AI Engineering Workflows"
+direction = "Executable AI engineering, coding, research, evaluation and delivery workflows"
+status = "active"
+
+[batch]
+index_page_limit = 10
+deep_repository_target = 10
+deep_minimum_new_content = 3
+quality_over_quota = true
+
+[paths]
+index_root = "sources/catalog/workflows"
+research_root = "research/workflows"
+canonical_index = "sources/catalog/workflows/index-latest.json"
+deep_progress = "research/workflows/deep-analysis-latest.json"
+canonical_state = "research/workflows/state.json"
+
+[selection]
+include = ["executable workflow, state machine, DAG or automation", "AI coding validation or delivery pipeline", "research or evaluation workflow with explicit inputs and outputs", "agent orchestration with recoverable state"]
+exclude = ["generic CI with no AI component", "single prompt with no process", "diagram-only architecture", "awesome list without executable workflow"]
+minimum_stars = 1000
+allow_low_star_primary_sources = true
+
+[[queries]]
+id = "agent-workflow"
+query = "agent workflow automation stars:>=1000"
+shard_strategy = "stars_then_created_date"
+
+[[queries]]
+id = "ai-evaluation-workflow"
+query = "AI evaluation workflow stars:>=1000"
+shard_strategy = "stars_then_created_date"
+
+[[queries]]
+id = "coding-agent-pipeline"
+query = "coding agent pipeline stars:>=1000"
+shard_strategy = "stars_then_created_date"
+
+[deep_read]
+required = ["README", "license", "workflow definition", "entry and triggers", "inputs and outputs", "state transitions", "side effects", "retry and idempotency", "human approval", "tests or run evidence"]
+optional_runtime = ["workflow lint", "dry run", "smallest safe end-to-end path"]
+
+[evaluation]
+dimensions = ["trigger_and_contract", "state_and_resume", "idempotency", "side_effect_control", "human_gate", "observability", "validation", "reuse_value"]
