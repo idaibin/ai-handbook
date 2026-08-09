@@ -15,9 +15,9 @@
 
 | Topic | Index output | Deep-analysis output | Schedule lane |
 | --- | --- | --- | --- |
-| `skills` | `sources/catalog/` | `research/agent-skills/` | `:50` / `:00` |
-| `agents` | `sources/catalog/agents/` | `research/agents/` | `:10` / `:20` |
-| `workflows` | `sources/catalog/workflows/` | `research/workflows/` | `:30` / `:40` |
+| `skills` | `sources/catalog/` | `research/agent-skills/` | `:00` / `:10` |
+| `agents` | `sources/catalog/agents/` | `research/agents/` | `:20` / `:30` |
+| `workflows` | `sources/catalog/workflows/` | `research/workflows/` | `:40` / `:50` |
 
 ## 权威文件
 
@@ -44,7 +44,17 @@
 4. 只有两次手工试运行通过后，才创建两条定时任务；
 5. 定时任务引用 `main` 上的 prompt 与 topic 文件，不嵌入流程副本。
 
-Chat 定时任务适合可通过 Web、GitHub 或连接器完成的研究；需要持续浏览器会话、云服务器、依赖安装或运行验证时，使用 Work，并保持同一 topic 合同和 GitHub 写回格式。
+当前六条定时任务统一在 Work 执行，以便使用云浏览器、云服务器、依赖安装和运行验证；任务仍必须保持同一 topic 合同和 GitHub 写回格式。
+
+## Quota stop 与 Chat 恢复
+
+当第一方 usage 状态显示剩余额度低于 20%，或已用额度高于 99% 时，执行者先按 [process.md](process.md) 同步本次 task-owned 产物并验证远端 commit，再暂停全部六条任务。无法观测精确额度时必须标记 `quota_not_observable`，不能伪造阈值命中。
+
+额度恢复后，在 Chat 中发送以下指令：
+
+```text
+恢复 Repository Research 定时任务。先读取 idaibin/ai-handbook:main 的 workflows/repository-research/README.md、process.md、prompts/index.md、prompts/deep-analysis.md 和三个 topics/*.toml；核对六条任务仍全部暂停、main 上没有未解决的 active claim、canonical state/latest pointer/ready snapshot 一致，并读取当前第一方 usage 状态。只有 remaining_percentage >= 20 且 consumed_percentage <= 99 时，按 Asia/Tokyo 的 :00 Skills Index、:10 Skills Deep、:20 Agents Index、:30 Agents Deep、:40 Workflows Index、:50 Workflows Deep 恢复六条任务；否则保持暂停并报告精确原因。恢复后回读六条任务并报告 task ID、运行位置、schedule、enabled 状态和下一次运行时间。
+```
 
 ## 质量原则
 
