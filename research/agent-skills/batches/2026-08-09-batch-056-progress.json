@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "2026-08-09-batch-056",
+  "observed_at": "2026-08-09",
+  "status": "complete",
+  "review_state": "structure-reviewed",
+  "runtime_validation": "not_executed",
+  "source_queue": "sources/catalog/batches/agentskills-created-2026-04-16-deterministic.json",
+  "repositories_completed": 10,
+  "root_readmes_directly_read": 10,
+  "repository_skill_files_read": 10,
+  "direct_unique_skill_body_reviews": 3,
+  "direct_unique_git_trees": 3,
+  "new_repository_scoped_skill_reports": 0,
+  "repositories_structure_reviewed_total": 560,
+  "repository_scoped_skill_reports_total": 3087,
+  "canonical_eligible_basis": 2088,
+  "remaining_estimate": 1528,
+  "canonical_reconciliation": "pending",
+  "next_unresolved_candidate": "ZWONJAVA/html-ppt-skill",
+  "repositories": [
+    {
+      "repository": "LovisYuan/html-ppt-skill",
+      "stars_observed": 0,
+      "fixed_revision": "376dfe5e777c2bce28a7368a8355212451a3e33b",
+      "git_tree": "c9b2a942d2d5bb1639acf5fd943060ccba3f7cf3",
+      "skill_blob": "bf96c77d2a9882d903142229ae028e3eb8e361a4",
+      "content_gate": "README+SKILL+tree+script+reference",
+      "dedup_action": "reuse prior c9b2a942 report; no new Skill report"
+    },
+    {
+      "repository": "shirley6692026/html-ppt-skill",
+      "stars_observed": 0,
+      "fixed_revision": "376dfe5e777c2bce28a7368a8355212451a3e33b",
+      "git_tree": "c9b2a942d2d5bb1639acf5fd943060ccba3f7cf3",
+      "skill_blob": "bf96c77d2a9882d903142229ae028e3eb8e361a4",
+      "content_gate": "README+SKILL+tree+script+reference",
+      "dedup_action": "reuse prior c9b2a942 report; no new Skill report"
+    },
+    {
+      "repository": "aiwenForGit/html-ppt-skill",
+      "stars_observed": 0,
+      "fixed_revision": "376dfe5e777c2bce28a7368a8355212451a3e33b",
+      "git_tree": "c9b2a942d2d5bb1639acf5fd943060ccba3f7cf3",
+      "skill_blob": "bf96c77d2a9882d903142229ae028e3eb8e361a4",
+      "content_gate": "README+SKILL+tree+script+reference",
+      "dedup_action": "reuse prior c9b2a942 report; no new Skill report"
+    },
+    {
+      "repository": "wzk20/html-ppt-skill",
+      "stars_observed": 0,
+      "fixed_revision": "376dfe5e777c2bce28a7368a8355212451a3e33b",
+      "git_tree": "c9b2a942d2d5bb1639acf5fd943060ccba3f7cf3",
+      "skill_blob": "bf96c77d2a9882d903142229ae028e3eb8e361a4",
+      "content_gate": "README+SKILL+tree+script+reference",
+      "dedup_action": "reuse prior c9b2a942 report; no new Skill report"
+    },
+    {
+      "repository": "kayakool/html-ppt-skill",
+      "stars_observed": 0,
+      "fixed_revision": "9f99b12b1245b05e8db1c3efc9844a3961e041c0",
+      "git_tree": "656ebee6d1e4f3a6b3ea808ed32c5bc361b2fd11",
+      "skill_blob": "05d9ea037f9a664e9af53403222e7dac7bef6135",
+      "content_gate": "README+SKILL+tree+script+reference",
+      "dedup_action": "reuse prior 656ebee6 report; no new Skill report"
+    },
+    {
+      "repository": "Richard355168/html-ppt-skill",
+      "stars_observed": 0,
+      "fixed_revision": "f3a8435d3901697d5ac5e64d356c933637e43107",
+      "git_tree": "c7a57a16de00fb96b207188c4433630f1cde883e",
+      "skill_blob": "0250b9ac962e2673d8a1b2a88f5782ad0378aba5",
+      "content_gate": "README+SKILL+tree+script+presenter-reference",
+      "dedup_action": "reuse prior presenter-mode content report; no new Skill report"
+    },
+    {
+      "repository": "phinn/html-ppt-skill",
+      "stars_observed": 0,
+      "fixed_revision": "9f99b12b1245b05e8db1c3efc9844a3961e041c0",
+      "git_tree": "656ebee6d1e4f3a6b3ea808ed32c5bc361b2fd11",
+      "skill_blob": "05d9ea037f9a664e9af53403222e7dac7bef6135",
+      "content_gate": "README+SKILL+tree+script+reference",
+      "dedup_action": "reuse prior 656ebee6 report; no new Skill report"
+    },
+    {
+      "repository": "xingyun312/html-ppt-skill",
+      "stars_observed": 0,
+      "fixed_revision": "376dfe5e777c2bce28a7368a8355212451a3e33b",
+      "git_tree": "c9b2a942d2d5bb1639acf5fd943060ccba3f7cf3",
+      "skill_blob": "bf96c77d2a9882d903142229ae028e3eb8e361a4",
+      "content_gate": "README+SKILL+tree+script+reference",
+      "dedup_action": "reuse prior c9b2a942 report; no new Skill report"
+    },
+    {
+      "repository": "arwin-cc/html-ppt-skill",
+      "stars_observed": 0,
+      "fixed_revision": "376dfe5e777c2bce28a7368a8355212451a3e33b",
+      "git_tree": "c9b2a942d2d5bb1639acf5fd943060ccba3f7cf3",
+      "skill_blob": "bf96c77d2a9882d903142229ae028e3eb8e361a4",
+      "content_gate": "README+SKILL+tree+script+reference",
+      "dedup_action": "reuse prior c9b2a942 report; no new Skill report"
+    },
+    {
+      "repository": "zo0043/html-ppt-skill",
+      "stars_observed": 0,
+      "fixed_revision": "376dfe5e777c2bce28a7368a8355212451a3e33b",
+      "git_tree": "c9b2a942d2d5bb1639acf5fd943060ccba3f7cf3",
+      "skill_blob": "bf96c77d2a9882d903142229ae028e3eb8e361a4",
+      "content_gate": "README+SKILL+tree+script+reference",
+      "dedup_action": "reuse prior c9b2a942 report; no new Skill report"
+    }
+  ],
+  "notes": [
+    "All ten repository identities were independently content-gated; exact-tree reuse was applied only after those gates.",
+    "The ten identities collapse to three exact Git trees and three Skill blobs, all previously reported, so the cumulative Skill-report count does not increase.",
+    "Stored screenshot artifacts were inspected as repository evidence but not treated as reproduced execution or passing visual regression.",
+    "The shared render script hard-codes the macOS Chrome path, uses --no-sandbox, and is not a portable assertion-based browser validation gate.",
+    "No scripts, tests, evals, builds, browser flows, renders, package installs, network APIs, or screenshot comparisons were executed in this batch.",
+    "remaining_estimate is arithmetic continuation from the frozen canonical_eligible_basis; historical canonical reconciliation remains pending."
+  ]
+}
