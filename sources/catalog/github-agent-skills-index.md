@@ -22,29 +22,29 @@ Canonical totals remain frozen while created-date partitions are reconciled with
 Verified persisted coverage:
 
 ```text
-2026-04-01 .. 2026-04-27
+2026-04-01 .. 2026-04-28
 per_page=100
-27 exact single-day shards with terminal pagination probes
+28 exact single-day shards with terminal pagination probes
 ```
 
-The `2026-04-27` shard returned `31` repositories on page 1 and `0` on page 2. Independent rechecks returned `20,11,0` with `per_page=20` and `31,0` with `per_page=33`. Case-insensitive `owner/repository` deduplication produced `31` unique identities and `0` internal duplicates.
+The `2026-04-28` shard returned `42` repositories on page 1 and `0` on page 2. Independent rechecks returned `20,20,2,0` with `per_page=20` and `33,9,0` with `per_page=33`. Case-insensitive `owner/repository` deduplication produced `42` unique identities and `0` internal duplicates.
 
-April staging now contains `1175` unique identities across `2026-04-01` through `2026-04-27`, with `0` cross-shard duplicates asserted under the established connector-search partition contract.
+April staging now contains `1217` unique identities across `2026-04-01` through `2026-04-28`, with `0` cross-shard duplicates asserted under the established connector-search partition contract.
 
 ### April provisional classification
 
 | Classification | Count |
 | --- | ---: |
-| `specification` | 0 |
-| `skill_collection` | 688 |
-| `single_skill_or_domain_package` | 378 |
+| `specification` | 8 |
+| `skill_collection` | 699 |
+| `single_skill_or_domain_package` | 399 |
 | `awesome_index` | 1 |
-| `skill_tooling` | 25 |
+| `skill_tooling` | 26 |
 | `adjacent_search_hit` | 83 |
-| `unclear_search_hit` | 0 |
-| **Total** | **1175** |
+| `unclear_search_hit` | 1 |
+| **Total** | **1217** |
 
-Classification remains repository-identity/name plus repository-metadata-only and provisional. Metadata descriptions/topics were used only where the name was ambiguous; no target repository content was inspected.
+Classification remains repository-identity/name plus repository-metadata-only and provisional. Metadata descriptions/fork metadata were used only where the name was ambiguous; no target repository content was inspected. In the latest shard, `VoidWalkerAether/agentskills` is a cross-agent skill synchronization tool, `OMIXEC/agentskills-template` is a fork of the Agent Skills specification, `SwaroopMeher/personal-context` and `Swih/mistral-skill` are individual Agent Skills, and `amplience/figma-skills` is an explicit collection. `mythfoxtang/agentskills` has no repository description and remains `unclear_search_hit`.
 
 ### April artifacts
 
@@ -75,13 +75,14 @@ Classification remains repository-identity/name plus repository-metadata-only an
 - [`batches/agentskills-created-2026-04-25-deterministic.json`](batches/agentskills-created-2026-04-25-deterministic.json)
 - [`batches/agentskills-created-2026-04-26-deterministic.json`](batches/agentskills-created-2026-04-26-deterministic.json)
 - [`batches/agentskills-created-2026-04-27-deterministic.json`](batches/agentskills-created-2026-04-27-deterministic.json)
+- [`batches/agentskills-created-2026-04-28-deterministic.json`](batches/agentskills-created-2026-04-28-deterministic.json)
 
-Current run report: [`runs/2026-08-09-agentskills-april-2026-04-27.md`](runs/2026-08-09-agentskills-april-2026-04-27.md).
+Current run report: [`runs/2026-08-09-agentskills-april-2026-04-28.md`](runs/2026-08-09-agentskills-april-2026-04-28.md).
 
 ## Evidence boundary
 
-Index collection only. No target repository README, `SKILL.md`, scripts, references, evaluations, implementation code, or runtime behavior was inspected, and no repository was marked complete from metadata. Repository metadata such as descriptions/topics was used only for index-stage classification of ambiguous names.
+Index collection only. No target repository README, `SKILL.md`, scripts, references, evaluations, implementation code, or runtime behavior was inspected, and no repository was marked complete from metadata. Repository metadata such as descriptions/fork relationships was used only for index-stage classification of ambiguous names.
 
 ## Next index action
 
-Continue with the `2026-04-28` exact single-day shard and keep canonical totals frozen until reconciliation is complete.
+Continue with the `2026-04-29` exact single-day shard and keep canonical totals frozen until reconciliation is complete.
