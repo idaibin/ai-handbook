@@ -27,7 +27,167 @@
     "held": 8,
     "rejected": 7
   },
-  "active_claims": [],
+  "active_claims": [
+    {
+      "claim_id": "workflows-claim-20260809T154000Z",
+      "run_id": "workflows-deep-20260809T154000Z",
+      "snapshot_id": "workflows-ai-evaluation-workflow-20260809T063604Z",
+      "claimed_at": "2026-08-09T15:40:00Z",
+      "lease_expires_at": "2026-08-09T19:40:00Z",
+      "items": [
+        {
+          "repository_id": "626805178",
+          "full_name": "langgenius/dify",
+          "canonical_url": "https://github.com/langgenius/dify",
+          "stars": 151812,
+          "default_branch": "main",
+          "head_sha": "3f89a3c742e1ce64b2167f3fcf664947f2b7cf82",
+          "content_pointer": {
+            "type": "default_branch_head",
+            "sha": "3f89a3c742e1ce64b2167f3fcf664947f2b7cf82",
+            "content_body_inspected": false
+          },
+          "queue_status": "pending",
+          "classification_reason": "Carried forward: agentic workflows and RAG pipelines are explicit core capabilities."
+        },
+        {
+          "repository_id": "1065865385",
+          "full_name": "moazbuilds/CodeMachine-CLI",
+          "canonical_url": "https://github.com/moazbuilds/CodeMachine-CLI",
+          "stars": 2513,
+          "default_branch": "main",
+          "head_sha": "572def63eb808e95b18ccf6c69a13d7a13fe06fd",
+          "content_pointer": {
+            "type": "default_branch_head",
+            "sha": "572def63eb808e95b18ccf6c69a13d7a13fe06fd",
+            "content_body_inspected": false
+          },
+          "queue_status": "pending",
+          "classification_reason": "Carried forward: orchestrates coding agents into repeatable long-running workflows."
+        },
+        {
+          "repository_id": "1175857225",
+          "full_name": "skalesapp/skales",
+          "canonical_url": "https://github.com/skalesapp/skales",
+          "stars": 1594,
+          "default_branch": "main",
+          "head_sha": "69918acb15977d04a357f0871df415b2ae903249",
+          "content_pointer": {
+            "type": "default_branch_head",
+            "sha": "69918acb15977d04a357f0871df415b2ae903249",
+            "content_body_inspected": false
+          },
+          "queue_status": "pending",
+          "classification_reason": "Carried forward: autonomous multi-agent product with workflows and recurring tasks."
+        },
+        {
+          "repository_id": "1238606716",
+          "full_name": "rpamis/comet",
+          "canonical_url": "https://github.com/rpamis/comet",
+          "stars": 2673,
+          "default_branch": "master",
+          "head_sha": "2c9f36aeed6db0fdd30c28cb7a3e97fda47bdecf",
+          "content_pointer": {
+            "type": "default_branch_head",
+            "sha": "2c9f36aeed6db0fdd30c28cb7a3e97fda47bdecf",
+            "content_body_inspected": false
+          },
+          "queue_status": "pending",
+          "classification_reason": "Explicit harness that turns ideas into evaluated workflows."
+        },
+        {
+          "repository_id": "1235483809",
+          "full_name": "juanjuandog/FinSight-AI",
+          "canonical_url": "https://github.com/juanjuandog/FinSight-AI",
+          "stars": 1021,
+          "default_branch": "master",
+          "head_sha": "d31cec0b0dd40451aa5d35a357545094dc963a13",
+          "content_pointer": {
+            "type": "default_branch_head",
+            "sha": "d31cec0b0dd40451aa5d35a357545094dc963a13",
+            "content_body_inspected": false
+          },
+          "queue_status": "pending",
+          "classification_reason": "Executable research agent explicitly combining resilient workflows and evaluation."
+        },
+        {
+          "repository_id": "1085130367",
+          "full_name": "Ricky-7-Yan/intelligent-audit-system",
+          "canonical_url": "https://github.com/Ricky-7-Yan/intelligent-audit-system",
+          "stars": 1166,
+          "default_branch": "codex/enterprise-agent-optimization",
+          "head_sha": "d34262d981a5556265b88a1779747364b5492326",
+          "content_pointer": {
+            "type": "default_branch_head",
+            "sha": "d34262d981a5556265b88a1779747364b5492326",
+            "content_body_inspected": false
+          },
+          "queue_status": "pending",
+          "classification_reason": "Explicit governed workflow, evaluation harness, human review and delivery surfaces."
+        },
+        {
+          "repository_id": "684031003",
+          "full_name": "dataelement/bisheng",
+          "canonical_url": "https://github.com/dataelement/bisheng",
+          "stars": 11838,
+          "default_branch": "main",
+          "head_sha": "a3788115d71f4b5888a34fbe7e1f0f3f9f13784c",
+          "content_pointer": {
+            "type": "default_branch_head",
+            "sha": "a3788115d71f4b5888a34fbe7e1f0f3f9f13784c",
+            "content_body_inspected": false
+          },
+          "queue_status": "pending",
+          "classification_reason": "Executable GenAI workflow platform with evaluation and observability."
+        },
+        {
+          "repository_id": "983515771",
+          "full_name": "trpc-group/trpc-agent-go",
+          "canonical_url": "https://github.com/trpc-group/trpc-agent-go",
+          "stars": 1649,
+          "default_branch": "main",
+          "head_sha": "c6988c7ef0d511a656301121b011a3105d6ea784",
+          "content_pointer": {
+            "type": "default_branch_head",
+            "sha": "c6988c7ef0d511a656301121b011a3105d6ea784",
+            "content_body_inspected": false
+          },
+          "queue_status": "pending",
+          "classification_reason": "Agent runtime explicitly implementing graph workflows and evaluation."
+        },
+        {
+          "repository_id": "808203681",
+          "full_name": "EmbeddedLLM/JamAIBase",
+          "canonical_url": "https://github.com/EmbeddedLLM/JamAIBase",
+          "stars": 1104,
+          "default_branch": "main",
+          "head_sha": "3dfd842d2b1d9721ec86ecd22e7d7b1f91c6bf03",
+          "content_pointer": {
+            "type": "default_branch_head",
+            "sha": "3dfd842d2b1d9721ec86ecd22e7d7b1f91c6bf03",
+            "content_body_inspected": false
+          },
+          "queue_status": "pending",
+          "classification_reason": "Executable pipeline surface with explicit real-time evaluation."
+        },
+        {
+          "repository_id": "1274547830",
+          "full_name": "ray-r-ren/agent-apprenticeship",
+          "canonical_url": "https://github.com/ray-r-ren/agent-apprenticeship",
+          "stars": 1342,
+          "default_branch": "main",
+          "head_sha": "4beafff2ff41da7d97a4faee9b516ccde466fb4b",
+          "content_pointer": {
+            "type": "default_branch_head",
+            "sha": "4beafff2ff41da7d97a4faee9b516ccde466fb4b",
+            "content_body_inspected": false
+          },
+          "queue_status": "pending",
+          "classification_reason": "CLI-driven automated workflow loops with explicit mentor or human evaluation."
+        }
+      ]
+    }
+  ],
   "completed_claims": [
     {
       "claim_id": "workflows-deep-20260809T054129Z",
@@ -52,27 +212,107 @@
     }
   ],
   "deep_queue": [
-    {"repository":"activepieces/activepieces","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
-    {"repository":"HKUDS/nanobot","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
-    {"repository":"patched-codes/patchwork","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
-    {"repository":"triggerdotdev/trigger.dev","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
-    {"repository":"lucaswalter/n8n-ai-automations","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
-    {"repository":"darrenhinde/OpenAgentsControl","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
-    {"repository":"hexabot-ai/Hexabot","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
-    {"repository":"nanobrowser/nanobrowser","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
-    {"repository":"enescingoz/awesome-n8n-templates","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
-    {"repository":"golutra/golutra","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
-    {"repository":"langgenius/dify","status":"pending","fixed_commit":"3f89a3c742e1ce64b2167f3fcf664947f2b7cf82"},
-    {"repository":"moazbuilds/CodeMachine-CLI","status":"pending","fixed_commit":"572def63eb808e95b18ccf6c69a13d7a13fe06fd"},
-    {"repository":"skalesapp/skales","status":"pending","fixed_commit":"69918acb15977d04a357f0871df415b2ae903249"},
-    {"repository":"rpamis/comet","status":"pending","fixed_commit":"2c9f36aeed6db0fdd30c28cb7a3e97fda47bdecf"},
-    {"repository":"juanjuandog/FinSight-AI","status":"pending","fixed_commit":"d31cec0b0dd40451aa5d35a357545094dc963a13"},
-    {"repository":"Ricky-7-Yan/intelligent-audit-system","status":"pending","fixed_commit":"d34262d981a5556265b88a1779747364b5492326"},
-    {"repository":"dataelement/bisheng","status":"pending","fixed_commit":"a3788115d71f4b5888a34fbe7e1f0f3f9f13784c"},
-    {"repository":"trpc-group/trpc-agent-go","status":"pending","fixed_commit":"c6988c7ef0d511a656301121b011a3105d6ea784"},
-    {"repository":"EmbeddedLLM/JamAIBase","status":"pending","fixed_commit":"3dfd842d2b1d9721ec86ecd22e7d7b1f91c6bf03"},
-    {"repository":"ray-r-ren/agent-apprenticeship","status":"pending","fixed_commit":"4beafff2ff41da7d97a4faee9b516ccde466fb4b"}
+    {
+      "repository": "activepieces/activepieces",
+      "status": "analyzed",
+      "run_id": "workflows-deep-20260809T054129Z"
+    },
+    {
+      "repository": "HKUDS/nanobot",
+      "status": "analyzed",
+      "run_id": "workflows-deep-20260809T054129Z"
+    },
+    {
+      "repository": "patched-codes/patchwork",
+      "status": "analyzed",
+      "run_id": "workflows-deep-20260809T054129Z"
+    },
+    {
+      "repository": "triggerdotdev/trigger.dev",
+      "status": "analyzed",
+      "run_id": "workflows-deep-20260809T054129Z"
+    },
+    {
+      "repository": "lucaswalter/n8n-ai-automations",
+      "status": "analyzed",
+      "run_id": "workflows-deep-20260809T054129Z"
+    },
+    {
+      "repository": "darrenhinde/OpenAgentsControl",
+      "status": "analyzed",
+      "run_id": "workflows-deep-20260809T054129Z"
+    },
+    {
+      "repository": "hexabot-ai/Hexabot",
+      "status": "analyzed",
+      "run_id": "workflows-deep-20260809T054129Z"
+    },
+    {
+      "repository": "nanobrowser/nanobrowser",
+      "status": "analyzed",
+      "run_id": "workflows-deep-20260809T054129Z"
+    },
+    {
+      "repository": "enescingoz/awesome-n8n-templates",
+      "status": "analyzed",
+      "run_id": "workflows-deep-20260809T054129Z"
+    },
+    {
+      "repository": "golutra/golutra",
+      "status": "analyzed",
+      "run_id": "workflows-deep-20260809T054129Z"
+    },
+    {
+      "repository": "langgenius/dify",
+      "status": "pending",
+      "fixed_commit": "3f89a3c742e1ce64b2167f3fcf664947f2b7cf82"
+    },
+    {
+      "repository": "moazbuilds/CodeMachine-CLI",
+      "status": "pending",
+      "fixed_commit": "572def63eb808e95b18ccf6c69a13d7a13fe06fd"
+    },
+    {
+      "repository": "skalesapp/skales",
+      "status": "pending",
+      "fixed_commit": "69918acb15977d04a357f0871df415b2ae903249"
+    },
+    {
+      "repository": "rpamis/comet",
+      "status": "pending",
+      "fixed_commit": "2c9f36aeed6db0fdd30c28cb7a3e97fda47bdecf"
+    },
+    {
+      "repository": "juanjuandog/FinSight-AI",
+      "status": "pending",
+      "fixed_commit": "d31cec0b0dd40451aa5d35a357545094dc963a13"
+    },
+    {
+      "repository": "Ricky-7-Yan/intelligent-audit-system",
+      "status": "pending",
+      "fixed_commit": "d34262d981a5556265b88a1779747364b5492326"
+    },
+    {
+      "repository": "dataelement/bisheng",
+      "status": "pending",
+      "fixed_commit": "a3788115d71f4b5888a34fbe7e1f0f3f9f13784c"
+    },
+    {
+      "repository": "trpc-group/trpc-agent-go",
+      "status": "pending",
+      "fixed_commit": "c6988c7ef0d511a656301121b011a3105d6ea784"
+    },
+    {
+      "repository": "EmbeddedLLM/JamAIBase",
+      "status": "pending",
+      "fixed_commit": "3dfd842d2b1d9721ec86ecd22e7d7b1f91c6bf03"
+    },
+    {
+      "repository": "ray-r-ren/agent-apprenticeship",
+      "status": "pending",
+      "fixed_commit": "4beafff2ff41da7d97a4faee9b516ccde466fb4b"
+    }
   ],
   "latest_deep_analysis": "research/workflows/deep-analysis-latest.json",
-  "updated_at": "2026-08-09T06:36:04Z"
+  "updated_at": "2026-08-09T15:40:00Z"
 }
