@@ -27,7 +27,23 @@
     "held": 8,
     "rejected": 8
   },
-  "active_claims": [],
+  "active_claims": [
+    {
+      "claim_id": "workflows-claim-20260809T155500Z",
+      "run_id": "workflows-deep-20260809T155500Z",
+      "snapshot_id": "workflows-coding-agent-pipeline-20260809T155200Z",
+      "claimed_at": "2026-08-09T15:55:00Z",
+      "lease_expires_at": "2026-08-09T19:55:00Z",
+      "status": "in_progress",
+      "items": [
+        "calesthio/OpenMontage",
+        "alibaba/open-code-review",
+        "rocketride-org/rocketride-server",
+        "slothflowlabs/duckle",
+        "open-mercato/open-mercato"
+      ]
+    }
+  ],
   "completed_claims": [
     {
       "claim_id": "workflows-deep-20260809T054129Z",
@@ -215,5 +231,5 @@
     }
   ],
   "latest_deep_analysis": "research/workflows/deep-analysis-latest.json",
-  "updated_at": "2026-08-09T15:52:00Z"
+  "updated_at": "2026-08-09T15:55:00Z"
 }
