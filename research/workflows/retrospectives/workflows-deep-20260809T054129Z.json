@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "topic": "workflows",
+  "run_id": "workflows-deep-20260809T054129Z",
+  "method_version": "repository-research-v1.0",
+  "result": {
+    "planned": 10,
+    "completed": 10,
+    "held": 0,
+    "failed": 0,
+    "reused": 0
+  },
+  "quality_gate": {
+    "minimum_new_content": 3,
+    "new_content": 10,
+    "runtime_validated": 1,
+    "source_validated": 9,
+    "failure_sample": "golutra metadata advertised custom long-running workflows, but fixed-source review found durable chat/terminal dispatch rather than the advertised custom workflow-definition and template import/export implementation."
+  },
+  "previous_action": {
+    "action_id": "workflow-index-action-001",
+    "applied": true,
+    "applied_change": "All claimed items had explicit workflow, pipeline, orchestration or automation assets in metadata before provisional eligibility; deep review then tested those claims against fixed source.",
+    "metric_before": {"index_non_eligible_rate": 0.5},
+    "metric_after": {"deep_reviewed": 10, "no_executable_asset": 0, "deep_false_positive_rate": 0.0},
+    "decision": "keep"
+  },
+  "next_action": {
+    "action_id": "workflow-deep-action-001",
+    "hypothesis": "Assigning one implementation subtype before scoring will prevent durable engines, schedulers, template collections, prompt protocols and in-memory loops from being compared as equivalent without weakening the shared evidence gate.",
+    "metric": "In the next batch, 100% of reports receive exactly one evidence-backed subtype and zero conclusions attribute an engine-only property to a non-engine subtype.",
+    "rollback_condition": "Rollback the fixed subtype field if more than 20% of next-batch repositories require multiple incompatible primary subtypes; retain free-text architecture notes instead."
+  }
+}

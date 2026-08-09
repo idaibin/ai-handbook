@@ -3,9 +3,9 @@
   "topic": "workflows",
   "method_version": "repository-research-v1.0",
   "last_successful_run": {
-    "run_id": "workflows-index-20260809T053108Z",
-    "mode": "index",
-    "commit_sha": "bbe085490398f64c0028f4352933038cfa47f41d",
+    "run_id": "workflows-deep-20260809T054129Z",
+    "mode": "deep-analysis",
+    "commit_sha": "self",
     "snapshot_id": "workflows-agent-workflow-20260809T053108Z"
   },
   "ready_snapshot": {
@@ -16,10 +16,10 @@
     "candidate_count": 13
   },
   "counts": {
-    "repository_identity_coverage": 0,
-    "unique_content_deep_reviews": 0,
+    "repository_identity_coverage": 10,
+    "unique_content_deep_reviews": 10,
     "analyses_reused": 0,
-    "new_analysis_reports": 0
+    "new_analysis_reports": 10
   },
   "index_counts": {
     "canonical_repository_count": 26,
@@ -27,14 +27,15 @@
     "held": 7,
     "rejected": 6
   },
-  "active_claims": [
+  "active_claims": [],
+  "completed_claims": [
     {
       "claim_id": "workflows-deep-20260809T054129Z",
       "run_id": "workflows-deep-20260809T054129Z",
       "snapshot_id": "workflows-agent-workflow-20260809T053108Z",
       "claimed_at": "2026-08-09T05:41:29Z",
       "lease_expires_at": "2026-08-09T08:41:29Z",
-      "status": "in_progress",
+      "status": "completed",
       "items": [
         "activepieces/activepieces",
         "HKUDS/nanobot",
@@ -46,8 +47,25 @@
         "nanobrowser/nanobrowser",
         "enescingoz/awesome-n8n-templates",
         "golutra/golutra"
-      ]
+      ],
+      "completed_at": "2026-08-09T05:58:00Z"
     }
   ],
-  "updated_at": "2026-08-09T05:41:29Z"
+  "deep_queue": [
+    {"repository":"activepieces/activepieces","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
+    {"repository":"HKUDS/nanobot","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
+    {"repository":"patched-codes/patchwork","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
+    {"repository":"triggerdotdev/trigger.dev","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
+    {"repository":"lucaswalter/n8n-ai-automations","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
+    {"repository":"darrenhinde/OpenAgentsControl","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
+    {"repository":"hexabot-ai/Hexabot","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
+    {"repository":"nanobrowser/nanobrowser","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
+    {"repository":"enescingoz/awesome-n8n-templates","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
+    {"repository":"golutra/golutra","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
+    {"repository":"langgenius/dify","status":"pending","fixed_commit":"3f89a3c742e1ce64b2167f3fcf664947f2b7cf82"},
+    {"repository":"moazbuilds/CodeMachine-CLI","status":"pending","fixed_commit":"572def63eb808e95b18ccf6c69a13d7a13fe06fd"},
+    {"repository":"skalesapp/skales","status":"pending","fixed_commit":"69918acb15977d04a357f0871df415b2ae903249"}
+  ],
+  "latest_deep_analysis": "research/workflows/deep-analysis-latest.json",
+  "updated_at": "2026-08-09T05:58:00Z"
 }

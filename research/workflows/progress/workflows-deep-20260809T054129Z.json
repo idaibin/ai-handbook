@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "topic": "workflows",
+  "run_id": "workflows-deep-20260809T054129Z",
+  "snapshot_id": "workflows-agent-workflow-20260809T053108Z",
+  "claim_id": "workflows-deep-20260809T054129Z",
+  "status": "completed",
+  "started_at": "2026-08-09T05:41:29Z",
+  "completed_at": "2026-08-09T05:58:00Z",
+  "counts": {
+    "repositories_reviewed": 10,
+    "unique_contents_reviewed": 10,
+    "analyses_reused": 0,
+    "new_analysis_reports": 10,
+    "held": 0,
+    "failed": 0
+  },
+  "evidence_levels": {
+    "metadata_verified": 0,
+    "structure_reviewed": 0,
+    "source_validated": 9,
+    "runtime_validated": 1
+  },
+  "items": [
+    {"repository":"activepieces/activepieces","fixed_commit":"2cd7c61f302f88b5c24811ca480c0fceee602af5","content_id":"git-tree:640717fb80c71fad55c7db6ea463f533789b5587","status":"analyzed","evidence_level":"source_validated","topic_decision":"strong_fit","subtype":"durable-workflow-engine","report":"research/workflows/reports/activepieces-activepieces-2cd7c61.md"},
+    {"repository":"HKUDS/nanobot","fixed_commit":"af52fbcbc43ee9b44bcdb1bb462c0db5c12f751d","content_id":"git-tree:9a93ca77ee66b91515fab82e7a75c8a15e2dccb1","status":"analyzed","evidence_level":"source_validated","topic_decision":"fit","subtype":"scheduled-agent-turn","report":"research/workflows/reports/hkuds-nanobot-af52fbc.md"},
+    {"repository":"patched-codes/patchwork","fixed_commit":"21948cbec44d3b7aec30715923ac7a0cd3fb1155","content_id":"git-tree:62ece37211e8d9a6790b7e3e36f0b5a627ec8343","status":"analyzed","evidence_level":"source_validated","topic_decision":"fit","subtype":"linear-code-orchestration","report":"research/workflows/reports/patched-codes-patchwork-21948cb.md"},
+    {"repository":"triggerdotdev/trigger.dev","fixed_commit":"90e8bd5c12056eb21c91513efb1233dff3b0fbd3","content_id":"git-tree:f03c49578a950f431d32c0e8500ea91a3651e2cb","status":"analyzed","evidence_level":"source_validated","topic_decision":"strong_fit","subtype":"durable-task-runtime","report":"research/workflows/reports/triggerdotdev-trigger-dev-90e8bd5.md"},
+    {"repository":"lucaswalter/n8n-ai-automations","fixed_commit":"57e1527902b8447e6cd3374d00237a34d3193e0b","content_id":"git-tree:1dd43acf4ce9d2e7077782f3cb8b330057cae224","status":"analyzed","evidence_level":"source_validated","topic_decision":"fit","subtype":"workflow-template-collection","report":"research/workflows/reports/lucaswalter-n8n-ai-automations-57e1527.md"},
+    {"repository":"darrenhinde/OpenAgentsControl","fixed_commit":"37ca233fa5597a5abb90cba73165deafffe0344f","content_id":"git-tree:9ceb47db95cf21570f29244e5ab9c59a7610d312","status":"analyzed","evidence_level":"source_validated","topic_decision":"fit","subtype":"prompt-orchestrated-coding-workflow","report":"research/workflows/reports/darrenhinde-openagentscontrol-37ca233.md"},
+    {"repository":"hexabot-ai/Hexabot","fixed_commit":"b396ea3de8ac19b78a1ab7829598d27d4bf3c2d5","content_id":"git-tree:8bdbf11cfba3b8de559c0e4d9732d15d7598254f","status":"analyzed","evidence_level":"runtime_validated","runtime_scope":"core runner: 16 suites, 144 tests","topic_decision":"strong_fit","subtype":"durable-workflow-engine","report":"research/workflows/reports/hexabot-ai-hexabot-b396ea3.md"},
+    {"repository":"nanobrowser/nanobrowser","fixed_commit":"322384f8b4d48d8614343e51efca68c85e64f90b","content_id":"git-tree:46b20cf51f29ec5468fb68f20488b3b22dc836d9","status":"analyzed","evidence_level":"source_validated","topic_decision":"fit","subtype":"in-memory-agent-control-loop","report":"research/workflows/reports/nanobrowser-nanobrowser-322384f.md"},
+    {"repository":"enescingoz/awesome-n8n-templates","fixed_commit":"2546df5f3da5ad12c9bbda4c51da39c3366c0d3e","content_id":"git-tree:2fb909ecde2d384da2d209621f9b870955598bf3","status":"analyzed","evidence_level":"source_validated","topic_decision":"conditional_fit","subtype":"workflow-template-collection","report":"research/workflows/reports/enescingoz-awesome-n8n-templates-2546df5.md"},
+    {"repository":"golutra/golutra","fixed_commit":"8b68a14183afa6ec26f9905f2a81cbd91ed1b35b","content_id":"git-tree:b53350a0e5f9eae9835ce0d38c35fedbd36462e2","status":"analyzed","evidence_level":"source_validated","topic_decision":"partial_fit","subtype":"multi-agent-dispatch-orchestrator","report":"research/workflows/reports/golutra-golutra-8b68a14.md"}
+  ],
+  "next_candidate": {"repository":"langgenius/dify","fixed_commit":"3f89a3c742e1ce64b2167f3fcf664947f2b7cf82"}
+}

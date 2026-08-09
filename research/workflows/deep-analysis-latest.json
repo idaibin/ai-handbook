@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "topic": "workflows",
+  "run_id": "workflows-deep-20260809T054129Z",
+  "snapshot_id": "workflows-agent-workflow-20260809T053108Z",
+  "status": "completed",
+  "report": "research/workflows/batches/workflows-deep-20260809T054129Z.md",
+  "progress": "research/workflows/progress/workflows-deep-20260809T054129Z.json",
+  "dedup": "research/workflows/dedup/workflows-deep-20260809T054129Z.json",
+  "retrospective": "research/workflows/retrospectives/workflows-deep-20260809T054129Z.json",
+  "counts": {
+    "repositories_reviewed": 10,
+    "unique_contents_reviewed": 10,
+    "analyses_reused": 0,
+    "new_analysis_reports": 10
+  },
+  "next_candidate": {
+    "repository": "langgenius/dify",
+    "fixed_commit": "3f89a3c742e1ce64b2167f3fcf664947f2b7cf82"
+  },
+  "updated_at": "2026-08-09T05:58:00Z"
+}
