@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0",
+  "topic": "workflows",
+  "run_id": "workflows-index-20260809T155200Z",
+  "batch_id": "2026-08-09-coding-agent-pipeline-first-partition",
+  "observed_at": "2026-08-09T15:52:00Z",
+  "method_version": "repository-research-v1.0",
+  "authority_basis": {
+    "repository": "idaibin/ai-handbook",
+    "branch": "main",
+    "commit": "4f8e9c2208a4a4a0d0140f41e3c3a7cb57171022",
+    "prompt": "workflows/repository-research/prompts/index.md",
+    "topic_profile": "workflows/repository-research/topics/workflows.toml"
+  },
+  "query": {
+    "id": "coding-agent-pipeline",
+    "text": "coding agent pipeline stars:>=1000",
+    "shard": "first-partition",
+    "strategy": "stars_then_created_date",
+    "per_page": 100,
+    "page_limit": 10
+  },
+  "pagination": {
+    "pages_requested": [
+      1,
+      2
+    ],
+    "page_counts": [
+      6,
+      0
+    ],
+    "terminal_page": 2,
+    "termination": "first_empty_page"
+  },
+  "totals": {
+    "search_hits": 6,
+    "normalized_unique": 6,
+    "duplicates": 0,
+    "eligible": 5,
+    "held": 0,
+    "rejected": 1
+  },
+  "evidence_boundary": "GitHub repository search metadata, default-branch HEAD resolution and bounded root README qualification; unsupported connector fields remain null and descriptions are synthesized. No implementation, test, build or runtime behavior was validated.",
+  "repositories": [
+    {
+      "repository_id": "1195360525",
+      "full_name": "calesthio/OpenMontage",
+      "canonical_url": "https://github.com/calesthio/OpenMontage",
+      "description": "Open-source agentic video-production system whose coding-agent workflow performs research, scripting, asset generation, approval and rendering.",
+      "description_source": "root_readme_synthesized",
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "query_star_floor_verified": true,
+      "default_branch": "main",
+      "fork": null,
+      "archived": false,
+      "disabled": null,
+      "license": "AGPL-3.0",
+      "head_sha": "4eab34c5cfcccaa4f1970554928feccce73ee930",
+      "provisional_status": "eligible",
+      "matched_surface": "repository name/README: coding assistants drive production pipelines",
+      "execution_marker": "Python CLI, persisted project pipeline and storyboard approval gate",
+      "classification_reason": "Executable agentic production pipeline with explicit stages, approval gates and rendered output.",
+      "evidence_urls": [
+        "https://github.com/calesthio/OpenMontage",
+        "https://github.com/calesthio/OpenMontage/commit/4eab34c5cfcccaa4f1970554928feccce73ee930",
+        "https://github.com/calesthio/OpenMontage/blob/4eab34c5cfcccaa4f1970554928feccce73ee930/README.md"
+      ]
+    },
+    {
+      "repository_id": "1241960226",
+      "full_name": "alibaba/open-code-review",
+      "canonical_url": "https://github.com/alibaba/open-code-review",
+      "description": "AI-powered code-review CLI that reads Git diffs, invokes a tool-using agent and emits structured line-level review findings.",
+      "description_source": "root_readme_synthesized",
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "query_star_floor_verified": true,
+      "default_branch": "main",
+      "fork": null,
+      "archived": false,
+      "disabled": null,
+      "license": null,
+      "head_sha": "3c0f00a765488df84fb92f1748b3b11ea0a7f126",
+      "provisional_status": "eligible",
+      "matched_surface": "repository name/README: AI code-review workflow and CI latency benchmark",
+      "execution_marker": "published CLI with diff and full-file scan commands",
+      "classification_reason": "Executable AI coding validation workflow with explicit inputs and structured review outputs.",
+      "evidence_urls": [
+        "https://github.com/alibaba/open-code-review",
+        "https://github.com/alibaba/open-code-review/commit/3c0f00a765488df84fb92f1748b3b11ea0a7f126",
+        "https://github.com/alibaba/open-code-review/blob/3c0f00a765488df84fb92f1748b3b11ea0a7f126/README.md"
+      ]
+    },
+    {
+      "repository_id": "1155576139",
+      "full_name": "rocketride-org/rocketride-server",
+      "canonical_url": "https://github.com/rocketride-org/rocketride-server",
+      "description": "Open-source AI development environment and multithreaded runtime for portable JSON AI/ML pipelines.",
+      "description_source": "root_readme_synthesized",
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "query_star_floor_verified": true,
+      "default_branch": "develop",
+      "fork": null,
+      "archived": false,
+      "disabled": null,
+      "license": "MIT",
+      "head_sha": "da3f7abdf61ce06ea5732df624fa9546e46bbd52",
+      "provisional_status": "eligible",
+      "matched_surface": "README: AI pipeline builder, runtime, deployment and observability",
+      "execution_marker": "CLI/SDK plus self-hosted C++ pipeline runtime",
+      "classification_reason": "Executable AI pipeline platform with portable definitions, local/server execution and deployment surfaces.",
+      "evidence_urls": [
+        "https://github.com/rocketride-org/rocketride-server",
+        "https://github.com/rocketride-org/rocketride-server/commit/da3f7abdf61ce06ea5732df624fa9546e46bbd52",
+        "https://github.com/rocketride-org/rocketride-server/blob/da3f7abdf61ce06ea5732df624fa9546e46bbd52/README.md"
+      ]
+    },
+    {
+      "repository_id": "1177352914",
+      "full_name": "zubair-trabzada/ai-sales-team-claude",
+      "canonical_url": "https://github.com/zubair-trabzada/ai-sales-team-claude",
+      "description": "Claude Code skill bundle for sales research, qualification, outreach and PDF pipeline reports.",
+      "description_source": "root_readme_synthesized",
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "query_star_floor_verified": true,
+      "default_branch": "main",
+      "fork": null,
+      "archived": false,
+      "disabled": null,
+      "license": "MIT",
+      "head_sha": "efef8b8a4ce8c93d8d6b4af9d1423db38f0de2ce",
+      "provisional_status": "rejected",
+      "matched_surface": "README: Claude Code agents and sales pipeline reports",
+      "execution_marker": "installer, skills, agents and report scripts",
+      "classification_reason": "Executable, but its pipeline is a sales workflow rather than an AI engineering, coding, research-evaluation or delivery workflow.",
+      "evidence_urls": [
+        "https://github.com/zubair-trabzada/ai-sales-team-claude",
+        "https://github.com/zubair-trabzada/ai-sales-team-claude/commit/efef8b8a4ce8c93d8d6b4af9d1423db38f0de2ce",
+        "https://github.com/zubair-trabzada/ai-sales-team-claude/blob/efef8b8a4ce8c93d8d6b4af9d1423db38f0de2ce/README.md"
+      ]
+    },
+    {
+      "repository_id": "1245355924",
+      "full_name": "slothflowlabs/duckle",
+      "canonical_url": "https://github.com/slothflowlabs/duckle",
+      "description": "Local-first visual ELT pipeline studio with an on-device coding model that generates pipeline definitions and validates them for CI execution.",
+      "description_source": "root_readme_synthesized",
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "query_star_floor_verified": true,
+      "default_branch": "main",
+      "fork": null,
+      "archived": false,
+      "disabled": null,
+      "license": "MIT OR Apache-2.0",
+      "head_sha": "a726fdf9382e82a468a729dde9f120abb69a9ce9",
+      "provisional_status": "eligible",
+      "matched_surface": "README: AI assistant builds pipelines; runner validates and executes them in CI",
+      "execution_marker": "desktop/headless runner, schedules, CLI validation and pipeline execution",
+      "classification_reason": "Executable AI-assisted data-engineering workflow with portable DAG artifacts and validation paths.",
+      "evidence_urls": [
+        "https://github.com/slothflowlabs/duckle",
+        "https://github.com/slothflowlabs/duckle/commit/a726fdf9382e82a468a729dde9f120abb69a9ce9",
+        "https://github.com/slothflowlabs/duckle/blob/a726fdf9382e82a468a729dde9f120abb69a9ce9/README.md"
+      ]
+    },
+    {
+      "repository_id": "1054179260",
+      "full_name": "open-mercato/open-mercato",
+      "canonical_url": "https://github.com/open-mercato/open-mercato",
+      "description": "AI-engineering foundation framework with architecture-aware agent skills, spec-first development, testing and delivery workflows.",
+      "description_source": "root_readme_synthesized",
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "query_star_floor_verified": true,
+      "default_branch": "main",
+      "fork": null,
+      "archived": false,
+      "disabled": null,
+      "license": "MIT",
+      "head_sha": "8c6a83752b0c6717e086b40a9fd7aa8fa950be06",
+      "provisional_status": "eligible",
+      "matched_surface": "README: architecture-aware AI harness, autonomous skills and spec-first delivery",
+      "execution_marker": "installable application framework, agent skills, tests and developer commands",
+      "classification_reason": "Executable AI coding and delivery framework with explicit architecture, specs, tests and workflow hooks.",
+      "evidence_urls": [
+        "https://github.com/open-mercato/open-mercato",
+        "https://github.com/open-mercato/open-mercato/commit/8c6a83752b0c6717e086b40a9fd7aa8fa950be06",
+        "https://github.com/open-mercato/open-mercato/blob/8c6a83752b0c6717e086b40a9fd7aa8fa950be06/README.md"
+      ]
+    }
+  ]
+}

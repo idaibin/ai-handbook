@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "topic": "workflows",
+  "snapshot_id": "workflows-coding-agent-pipeline-20260809T155200Z",
+  "status": "ready",
+  "source_commit": "4f8e9c2208a4a4a0d0140f41e3c3a7cb57171022",
+  "source_batch": "sources/catalog/workflows/batches/2026-08-09-coding-agent-pipeline-first-partition.json",
+  "created_at": "2026-08-09T15:52:00Z",
+  "query": {
+    "id": "coding-agent-pipeline",
+    "text": "coding agent pipeline stars:>=1000",
+    "shard": "first-partition"
+  },
+  "candidate_count": 5,
+  "candidates": [
+    {
+      "repository_id": "1195360525",
+      "full_name": "calesthio/OpenMontage",
+      "canonical_url": "https://github.com/calesthio/OpenMontage",
+      "stars": null,
+      "query_star_floor_verified": true,
+      "default_branch": "main",
+      "head_sha": "4eab34c5cfcccaa4f1970554928feccce73ee930",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "4eab34c5cfcccaa4f1970554928feccce73ee930",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable agentic production pipeline with explicit stages, approval gates and rendered output.",
+      "matched_surface": "repository name/README: coding assistants drive production pipelines",
+      "execution_marker": "Python CLI, persisted project pipeline and storyboard approval gate"
+    },
+    {
+      "repository_id": "1241960226",
+      "full_name": "alibaba/open-code-review",
+      "canonical_url": "https://github.com/alibaba/open-code-review",
+      "stars": null,
+      "query_star_floor_verified": true,
+      "default_branch": "main",
+      "head_sha": "3c0f00a765488df84fb92f1748b3b11ea0a7f126",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "3c0f00a765488df84fb92f1748b3b11ea0a7f126",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable AI coding validation workflow with explicit inputs and structured review outputs.",
+      "matched_surface": "repository name/README: AI code-review workflow and CI latency benchmark",
+      "execution_marker": "published CLI with diff and full-file scan commands"
+    },
+    {
+      "repository_id": "1155576139",
+      "full_name": "rocketride-org/rocketride-server",
+      "canonical_url": "https://github.com/rocketride-org/rocketride-server",
+      "stars": null,
+      "query_star_floor_verified": true,
+      "default_branch": "develop",
+      "head_sha": "da3f7abdf61ce06ea5732df624fa9546e46bbd52",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "da3f7abdf61ce06ea5732df624fa9546e46bbd52",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable AI pipeline platform with portable definitions, local/server execution and deployment surfaces.",
+      "matched_surface": "README: AI pipeline builder, runtime, deployment and observability",
+      "execution_marker": "CLI/SDK plus self-hosted C++ pipeline runtime"
+    },
+    {
+      "repository_id": "1245355924",
+      "full_name": "slothflowlabs/duckle",
+      "canonical_url": "https://github.com/slothflowlabs/duckle",
+      "stars": null,
+      "query_star_floor_verified": true,
+      "default_branch": "main",
+      "head_sha": "a726fdf9382e82a468a729dde9f120abb69a9ce9",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "a726fdf9382e82a468a729dde9f120abb69a9ce9",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable AI-assisted data-engineering workflow with portable DAG artifacts and validation paths.",
+      "matched_surface": "README: AI assistant builds pipelines; runner validates and executes them in CI",
+      "execution_marker": "desktop/headless runner, schedules, CLI validation and pipeline execution"
+    },
+    {
+      "repository_id": "1054179260",
+      "full_name": "open-mercato/open-mercato",
+      "canonical_url": "https://github.com/open-mercato/open-mercato",
+      "stars": null,
+      "query_star_floor_verified": true,
+      "default_branch": "main",
+      "head_sha": "8c6a83752b0c6717e086b40a9fd7aa8fa950be06",
+      "content_pointer": {
+        "type": "default_branch_head",
+        "sha": "8c6a83752b0c6717e086b40a9fd7aa8fa950be06",
+        "content_body_inspected": false
+      },
+      "queue_status": "pending",
+      "classification_reason": "Executable AI coding and delivery framework with explicit architecture, specs, tests and workflow hooks.",
+      "matched_surface": "README: architecture-aware AI harness, autonomous skills and spec-first delivery",
+      "execution_marker": "installable application framework, agent skills, tests and developer commands"
+    }
+  ]
+}

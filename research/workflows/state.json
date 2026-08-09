@@ -3,17 +3,17 @@
   "topic": "workflows",
   "method_version": "repository-research-v1.0",
   "last_successful_run": {
-    "run_id": "workflows-deep-20260809T154000Z",
-    "mode": "deep-analysis",
+    "run_id": "workflows-index-20260809T155200Z",
+    "mode": "index",
     "commit_sha": "self",
-    "snapshot_id": "workflows-ai-evaluation-workflow-20260809T063604Z"
+    "snapshot_id": "workflows-coding-agent-pipeline-20260809T155200Z"
   },
   "ready_snapshot": {
-    "snapshot_id": "workflows-ai-evaluation-workflow-20260809T063604Z",
-    "source_commit": "14be7b4481ae708ea35ec908fdf18bfac6f2b22c",
+    "snapshot_id": "workflows-coding-agent-pipeline-20260809T155200Z",
+    "source_commit": "4f8e9c2208a4a4a0d0140f41e3c3a7cb57171022",
     "status": "ready",
-    "path": "sources/catalog/workflows/snapshots/workflows-ai-evaluation-workflow-20260809T063604Z.json",
-    "candidate_count": 10
+    "path": "sources/catalog/workflows/snapshots/workflows-coding-agent-pipeline-20260809T155200Z.json",
+    "candidate_count": 5
   },
   "counts": {
     "repository_identity_coverage": 20,
@@ -22,10 +22,10 @@
     "new_analysis_reports": 20
   },
   "index_counts": {
-    "canonical_repository_count": 35,
-    "eligible": 20,
+    "canonical_repository_count": 41,
+    "eligible": 25,
     "held": 8,
-    "rejected": 7
+    "rejected": 8
   },
   "active_claims": [],
   "completed_claims": [
@@ -182,8 +182,38 @@
       "status": "analyzed",
       "fixed_commit": "4beafff2ff41da7d97a4faee9b516ccde466fb4b",
       "run_id": "workflows-deep-20260809T154000Z"
+    },
+    {
+      "repository": "calesthio/OpenMontage",
+      "status": "pending",
+      "fixed_commit": "4eab34c5cfcccaa4f1970554928feccce73ee930",
+      "snapshot_id": "workflows-coding-agent-pipeline-20260809T155200Z"
+    },
+    {
+      "repository": "alibaba/open-code-review",
+      "status": "pending",
+      "fixed_commit": "3c0f00a765488df84fb92f1748b3b11ea0a7f126",
+      "snapshot_id": "workflows-coding-agent-pipeline-20260809T155200Z"
+    },
+    {
+      "repository": "rocketride-org/rocketride-server",
+      "status": "pending",
+      "fixed_commit": "da3f7abdf61ce06ea5732df624fa9546e46bbd52",
+      "snapshot_id": "workflows-coding-agent-pipeline-20260809T155200Z"
+    },
+    {
+      "repository": "slothflowlabs/duckle",
+      "status": "pending",
+      "fixed_commit": "a726fdf9382e82a468a729dde9f120abb69a9ce9",
+      "snapshot_id": "workflows-coding-agent-pipeline-20260809T155200Z"
+    },
+    {
+      "repository": "open-mercato/open-mercato",
+      "status": "pending",
+      "fixed_commit": "8c6a83752b0c6717e086b40a9fd7aa8fa950be06",
+      "snapshot_id": "workflows-coding-agent-pipeline-20260809T155200Z"
     }
   ],
   "latest_deep_analysis": "research/workflows/deep-analysis-latest.json",
-  "updated_at": "2026-08-09T15:45:28Z"
+  "updated_at": "2026-08-09T15:52:00Z"
 }

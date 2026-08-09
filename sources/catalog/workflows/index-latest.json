@@ -2,20 +2,20 @@
   "schema_version": "1.0",
   "topic": "workflows",
   "status": "active",
-  "canonical_repository_count": 35,
-  "eligible_count": 20,
+  "canonical_repository_count": 41,
+  "eligible_count": 25,
   "held_count": 8,
-  "rejected_count": 7,
-  "latest_run": "sources/catalog/workflows/runs/2026-08-09-ai-evaluation-workflow-first-partition.md",
-  "latest_batch": "sources/catalog/workflows/batches/2026-08-09-ai-evaluation-workflow-first-partition.json",
-  "latest_retrospective": "sources/catalog/workflows/retrospectives/workflows-index-20260809T063604Z.json",
+  "rejected_count": 8,
+  "latest_run": "sources/catalog/workflows/runs/2026-08-09-coding-agent-pipeline-first-partition.md",
+  "latest_batch": "sources/catalog/workflows/batches/2026-08-09-coding-agent-pipeline-first-partition.json",
+  "latest_retrospective": "sources/catalog/workflows/retrospectives/workflows-index-20260809T155200Z.json",
   "ready_snapshot": {
-    "snapshot_id": "workflows-ai-evaluation-workflow-20260809T063604Z",
-    "path": "sources/catalog/workflows/snapshots/workflows-ai-evaluation-workflow-20260809T063604Z.json",
+    "snapshot_id": "workflows-coding-agent-pipeline-20260809T155200Z",
+    "path": "sources/catalog/workflows/snapshots/workflows-coding-agent-pipeline-20260809T155200Z.json",
     "status": "ready",
-    "source_commit": "14be7b4481ae708ea35ec908fdf18bfac6f2b22c",
-    "candidate_count": 10
+    "source_commit": "4f8e9c2208a4a4a0d0140f41e3c3a7cb57171022",
+    "candidate_count": 5
   },
-  "next_shard": "coding-agent-pipeline:first-partition",
-  "updated_at": "2026-08-09T06:36:04Z"
+  "next_shard": "agent-workflow:second-partition",
+  "updated_at": "2026-08-09T15:52:00Z"
 }

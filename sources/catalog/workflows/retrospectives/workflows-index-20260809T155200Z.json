@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "topic": "workflows",
+  "run_id": "workflows-index-20260809T155200Z",
+  "method_version": "repository-research-v1.0",
+  "measurement_units": {
+    "planned": "page_limit",
+    "completed": "normalized_repository_records",
+    "held": "repository_records",
+    "failed": "repository_records",
+    "reused": "repository_records"
+  },
+  "result": {
+    "planned": 10,
+    "completed": 6,
+    "held": 0,
+    "failed": 0,
+    "reused": 0
+  },
+  "quality_gate": {
+    "search_hits": 6,
+    "duplicates": 0,
+    "eligible": 5,
+    "rejected": 1,
+    "non_eligible_rate": 0.1667,
+    "failure_sample": "ai-sales-team-claude matched coding-agent terminology but implements a sales pipeline outside the topic boundary."
+  },
+  "previous_action": {
+    "action_id": "workflow-index-action-002",
+    "applied": true,
+    "applied_change": "Every eligible record names both the metadata match surface and a concrete execution marker.",
+    "metric_before": {
+      "eligible_records_with_both_fields_rate": null
+    },
+    "metric_after": {
+      "eligible_records_with_both_fields_rate": 1,
+      "eligible": 5
+    },
+    "decision": "keep"
+  },
+  "next_action": {
+    "action_id": "workflow-index-action-003",
+    "hypothesis": "Requiring the workflow's primary output to be an engineering, coding, research-evaluation or delivery artifact will separate executable but topic-adjacent business workflows.",
+    "metric": "In the next batch, 100% of eligible records name a primary workflow output and deep review finds zero business-domain-only false positives.",
+    "rollback_condition": "Rollback the mandatory primary-output field if two or more held/rejected repositories expose first-class AI engineering workflows that the root README did not surface."
+  }
+}
