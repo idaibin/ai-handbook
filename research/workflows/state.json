@@ -3,17 +3,17 @@
   "topic": "workflows",
   "method_version": "repository-research-v1.0",
   "last_successful_run": {
-    "run_id": "workflows-deep-20260809T054129Z",
-    "mode": "deep-analysis",
+    "run_id": "workflows-index-20260809T063604Z",
+    "mode": "index",
     "commit_sha": "self",
-    "snapshot_id": "workflows-agent-workflow-20260809T053108Z"
+    "snapshot_id": "workflows-ai-evaluation-workflow-20260809T063604Z"
   },
   "ready_snapshot": {
-    "snapshot_id": "workflows-agent-workflow-20260809T053108Z",
-    "source_commit": "bbe085490398f64c0028f4352933038cfa47f41d",
+    "snapshot_id": "workflows-ai-evaluation-workflow-20260809T063604Z",
+    "source_commit": "14be7b4481ae708ea35ec908fdf18bfac6f2b22c",
     "status": "ready",
-    "path": "sources/catalog/workflows/snapshots/workflows-agent-workflow-20260809T053108Z.json",
-    "candidate_count": 13
+    "path": "sources/catalog/workflows/snapshots/workflows-ai-evaluation-workflow-20260809T063604Z.json",
+    "candidate_count": 10
   },
   "counts": {
     "repository_identity_coverage": 10,
@@ -22,10 +22,10 @@
     "new_analysis_reports": 10
   },
   "index_counts": {
-    "canonical_repository_count": 26,
-    "eligible": 13,
-    "held": 7,
-    "rejected": 6
+    "canonical_repository_count": 35,
+    "eligible": 20,
+    "held": 8,
+    "rejected": 7
   },
   "active_claims": [],
   "completed_claims": [
@@ -64,8 +64,15 @@
     {"repository":"golutra/golutra","status":"analyzed","run_id":"workflows-deep-20260809T054129Z"},
     {"repository":"langgenius/dify","status":"pending","fixed_commit":"3f89a3c742e1ce64b2167f3fcf664947f2b7cf82"},
     {"repository":"moazbuilds/CodeMachine-CLI","status":"pending","fixed_commit":"572def63eb808e95b18ccf6c69a13d7a13fe06fd"},
-    {"repository":"skalesapp/skales","status":"pending","fixed_commit":"69918acb15977d04a357f0871df415b2ae903249"}
+    {"repository":"skalesapp/skales","status":"pending","fixed_commit":"69918acb15977d04a357f0871df415b2ae903249"},
+    {"repository":"rpamis/comet","status":"pending","fixed_commit":"2c9f36aeed6db0fdd30c28cb7a3e97fda47bdecf"},
+    {"repository":"juanjuandog/FinSight-AI","status":"pending","fixed_commit":"d31cec0b0dd40451aa5d35a357545094dc963a13"},
+    {"repository":"Ricky-7-Yan/intelligent-audit-system","status":"pending","fixed_commit":"d34262d981a5556265b88a1779747364b5492326"},
+    {"repository":"dataelement/bisheng","status":"pending","fixed_commit":"a3788115d71f4b5888a34fbe7e1f0f3f9f13784c"},
+    {"repository":"trpc-group/trpc-agent-go","status":"pending","fixed_commit":"c6988c7ef0d511a656301121b011a3105d6ea784"},
+    {"repository":"EmbeddedLLM/JamAIBase","status":"pending","fixed_commit":"3dfd842d2b1d9721ec86ecd22e7d7b1f91c6bf03"},
+    {"repository":"ray-r-ren/agent-apprenticeship","status":"pending","fixed_commit":"4beafff2ff41da7d97a4faee9b516ccde466fb4b"}
   ],
   "latest_deep_analysis": "research/workflows/deep-analysis-latest.json",
-  "updated_at": "2026-08-09T05:58:00Z"
+  "updated_at": "2026-08-09T06:36:04Z"
 }

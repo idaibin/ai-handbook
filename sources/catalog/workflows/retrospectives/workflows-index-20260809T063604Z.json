@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "topic": "workflows",
+  "run_id": "workflows-index-20260809T063604Z",
+  "method_version": "repository-research-v1.0",
+  "measurement_units": {"planned":"page_limit","completed":"normalized_repository_records","held":"repository_records","failed":"repository_records","reused":"repository_records"},
+  "result": {"planned":10,"completed":9,"held":1,"failed":0,"reused":0},
+  "quality_gate": {"search_hits":9,"duplicates":0,"eligible":7,"rejected":1,"non_eligible_rate":0.2222,"failure_sample":"The query matched a paper-only awesome list and a protocol repository whose deeper runtime is not yet established."},
+  "previous_action": {
+    "action_id":"workflow-index-action-001",
+    "applied":true,
+    "metric_before":{"non_eligible_rate":0.5},
+    "metric_after":{"non_eligible_rate":0.2222,"eligible":7,"held":1,"rejected":1},
+    "decision":"keep"
+  },
+  "next_action": {
+    "action_id":"workflow-index-action-002",
+    "hypothesis":"Recording the metadata match surface and requiring an execution marker such as runtime, CLI, framework, platform or pipeline before eligibility will make ambiguous protocol and index matches reproducible without reading implementation code in the index lane.",
+    "metric":"In the next batch, 100% of eligible records name both the matched surface and an execution marker; deep review finds zero repositories with no executable asset.",
+    "rollback_condition":"Rollback the required execution-marker field if deep review finds two or more held/rejected records with first-class executable workflows that metadata could not expose."
+  }
+}
