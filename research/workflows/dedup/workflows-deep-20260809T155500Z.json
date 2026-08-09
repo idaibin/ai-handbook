@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "topic": "workflows",
+  "run_id": "workflows-deep-20260809T155500Z",
+  "identity_normalization": "case-insensitive owner/name",
+  "content_identity": "fixed git tree or fixed commit plus key blobs",
+  "repositories_reviewed": 5,
+  "unique_contents_reviewed": 5,
+  "analyses_reused": 0,
+  "mappings": [
+    {
+      "repository": "calesthio/OpenMontage",
+      "content_id": "github:calesthio/OpenMontage@4eab34c5cfcccaa4f1970554928feccce73ee930",
+      "analysis": "new"
+    },
+    {
+      "repository": "alibaba/open-code-review",
+      "content_id": "github:alibaba/open-code-review@3c0f00a765488df84fb92f1748b3b11ea0a7f126",
+      "analysis": "new"
+    },
+    {
+      "repository": "rocketride-org/rocketride-server",
+      "content_id": "f3c4de9c9ea098bbc864162539a38e294e9c8546",
+      "analysis": "new"
+    },
+    {
+      "repository": "slothflowlabs/duckle",
+      "content_id": "a5e54b6b0d3fca0b7b32e8ed9aac74bbebc53d50",
+      "analysis": "new"
+    },
+    {
+      "repository": "open-mercato/open-mercato",
+      "content_id": "git-tree:47f6b78e1492f6e63d72cf90a48457e2ff859d6a",
+      "analysis": "new"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "topic": "workflows",
+  "run_id": "workflows-deep-20260809T155500Z",
+  "method_version": "repository-research-v1.0",
+  "result": {
+    "planned": 5,
+    "completed": 5,
+    "held": 0,
+    "failed": 0,
+    "reused": 0
+  },
+  "quality_gate": {
+    "minimum_new_content": 3,
+    "new_content": 5,
+    "runtime_validated": 0,
+    "source_validated": 5,
+    "failure_sample": "open-mercato ships materially different monorepo and create-app copies of om-implement-spec; the latter omits the monorepo extension/core approval gate."
+  },
+  "previous_action": {
+    "action_id": "workflow-deep-action-002",
+    "applied": true,
+    "applied_change": "Retry, concurrency, iteration and approval controls were credited only when declaration and consumption paths were both traceable.",
+    "metric_before": {
+      "batches_with_mandatory_declaration_consumption_mapping": 0
+    },
+    "metric_after": {
+      "repositories_checked": 5,
+      "signature_only_controls_credited": 0,
+      "declaration_only_controls_reported_not_implemented": 3
+    },
+    "decision": "keep"
+  },
+  "next_action": {
+    "action_id": "workflow-deep-action-003",
+    "hypothesis": "Fingerprinting duplicated workflow definitions across install/scaffold contexts will expose governance drift before reuse scoring.",
+    "metric": "In the next batch, 100% of repositories with duplicated workflow assets receive a semantic divergence check; zero divergent approval or validation gates are described as portable.",
+    "rollback_condition": "Rollback mandatory copy comparison if more than 20% of apparent duplicates are generated artifacts whose canonical source and generation check are both verified."
+  }
+}

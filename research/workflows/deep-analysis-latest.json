@@ -1,19 +1,19 @@
 {
   "schema_version": "1.0",
   "topic": "workflows",
-  "run_id": "workflows-deep-20260809T154000Z",
-  "snapshot_id": "workflows-ai-evaluation-workflow-20260809T063604Z",
+  "run_id": "workflows-deep-20260809T155500Z",
+  "snapshot_id": "workflows-coding-agent-pipeline-20260809T155200Z",
   "status": "completed",
-  "report": "research/workflows/batches/workflows-deep-20260809T154000Z.md",
-  "progress": "research/workflows/progress/workflows-deep-20260809T154000Z.json",
-  "dedup": "research/workflows/dedup/workflows-deep-20260809T154000Z.json",
-  "retrospective": "research/workflows/retrospectives/workflows-deep-20260809T154000Z.json",
+  "report": "research/workflows/batches/workflows-deep-20260809T155500Z.md",
+  "progress": "research/workflows/progress/workflows-deep-20260809T155500Z.json",
+  "dedup": "research/workflows/dedup/workflows-deep-20260809T155500Z.json",
+  "retrospective": "research/workflows/retrospectives/workflows-deep-20260809T155500Z.json",
   "counts": {
-    "repositories_reviewed": 10,
-    "unique_contents_reviewed": 10,
+    "repositories_reviewed": 5,
+    "unique_contents_reviewed": 5,
     "analyses_reused": 0,
-    "new_analysis_reports": 10
+    "new_analysis_reports": 5
   },
   "next_candidate": null,
-  "updated_at": "2026-08-09T15:45:28Z"
+  "updated_at": "2026-08-09T16:01:00Z"
 }

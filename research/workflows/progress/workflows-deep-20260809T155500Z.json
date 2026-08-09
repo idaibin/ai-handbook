@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "topic": "workflows",
+  "run_id": "workflows-deep-20260809T155500Z",
+  "snapshot_id": "workflows-coding-agent-pipeline-20260809T155200Z",
+  "claim_id": "workflows-claim-20260809T155500Z",
+  "status": "completed",
+  "started_at": "2026-08-09T15:55:00Z",
+  "completed_at": "2026-08-09T16:01:00Z",
+  "counts": {
+    "repositories_reviewed": 5,
+    "unique_contents_reviewed": 5,
+    "analyses_reused": 0,
+    "new_analysis_reports": 5,
+    "held": 0,
+    "failed": 0
+  },
+  "evidence_levels": {
+    "metadata_verified": 0,
+    "structure_reviewed": 0,
+    "source_validated": 5,
+    "runtime_validated": 0
+  },
+  "items": [
+    {
+      "repository": "calesthio/OpenMontage",
+      "fixed_commit": "4eab34c5cfcccaa4f1970554928feccce73ee930",
+      "content_id": "github:calesthio/OpenMontage@4eab34c5cfcccaa4f1970554928feccce73ee930",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "strong_fit",
+      "subtype": "instruction_driven_checkpointed_media_production_pipeline",
+      "dimensions": {
+        "trigger_and_contract": 4,
+        "state_and_resume": 5,
+        "idempotency": 4,
+        "side_effect_control": 4,
+        "human_gate": 5,
+        "observability": 4,
+        "validation": 4,
+        "reuse_value": 4
+      },
+      "report": "research/workflows/reports/calesthio-openmontage-4eab34c.md"
+    },
+    {
+      "repository": "alibaba/open-code-review",
+      "fixed_commit": "3c0f00a765488df84fb92f1748b3b11ea0a7f126",
+      "content_id": "github:alibaba/open-code-review@3c0f00a765488df84fb92f1748b3b11ea0a7f126",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "strong_fit",
+      "subtype": "deterministic_concurrent_code_review_pipeline_with_resumable_file_checkpoints",
+      "dimensions": {
+        "trigger_and_contract": 5,
+        "state_and_resume": 5,
+        "idempotency": 5,
+        "side_effect_control": 4,
+        "human_gate": 1,
+        "observability": 5,
+        "validation": 5,
+        "reuse_value": 5
+      },
+      "report": "research/workflows/reports/alibaba-open-code-review-3c0f00a.md"
+    },
+    {
+      "repository": "rocketride-org/rocketride-server",
+      "fixed_commit": "da3f7abdf61ce06ea5732df624fa9546e46bbd52",
+      "content_id": "f3c4de9c9ea098bbc864162539a38e294e9c8546",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "fit",
+      "subtype": "bounded_parallel_wave_planning_agent",
+      "dimensions": {
+        "trigger_and_contract": 4,
+        "state_and_resume": 2,
+        "idempotency": 1,
+        "side_effect_control": 2,
+        "human_gate": 1,
+        "observability": 4,
+        "validation": 4,
+        "reuse_value": 4
+      },
+      "report": "research/workflows/reports/rocketride-org-rocketride-server-da3f7ab.md"
+    },
+    {
+      "repository": "slothflowlabs/duckle",
+      "fixed_commit": "a726fdf9382e82a468a729dde9f120abb69a9ce9",
+      "content_id": "a5e54b6b0d3fca0b7b32e8ed9aac74bbebc53d50",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "fit",
+      "subtype": "compiled_scheduled_data_pipeline_engine",
+      "dimensions": {
+        "trigger_and_contract": 5,
+        "state_and_resume": 4,
+        "idempotency": 3,
+        "side_effect_control": 3,
+        "human_gate": 1,
+        "observability": 5,
+        "validation": 5,
+        "reuse_value": 5
+      },
+      "report": "research/workflows/reports/slothflowlabs-duckle-a726fdf.md"
+    },
+    {
+      "repository": "open-mercato/open-mercato",
+      "fixed_commit": "8c6a83752b0c6717e086b40a9fd7aa8fa950be06",
+      "content_id": "git-tree:47f6b78e1492f6e63d72cf90a48457e2ff859d6a",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "fit",
+      "subtype": "skill-defined spec-to-code implementation workflow",
+      "dimensions": {
+        "trigger_and_contract": 4,
+        "state_and_resume": 3,
+        "idempotency": 2,
+        "side_effect_control": 4,
+        "human_gate": 4,
+        "observability": 3,
+        "validation": 4,
+        "reuse_value": 4
+      },
+      "report": "research/workflows/reports/open-mercato-open-mercato-8c6a837.md"
+    }
+  ],
+  "next_candidate": null
+}
