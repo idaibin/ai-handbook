@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "topic": "workflows",
+  "run_id": "workflows-deep-20260809T154000Z",
+  "method_version": "repository-research-v1.0",
+  "result": {
+    "planned": 10,
+    "completed": 10,
+    "held": 0,
+    "failed": 0,
+    "reused": 0
+  },
+  "quality_gate": {
+    "minimum_new_content": 3,
+    "new_content": 10,
+    "runtime_validated": 0,
+    "source_validated": 10,
+    "failure_sample": "agent-apprenticeship exposes max_iterations, max_parallel and retry_limit as controls, but fixed source implements at most one revision and does not consume max_parallel or retry_limit beyond the batch function signature."
+  },
+  "previous_action": {
+    "action_id": "workflow-deep-action-001",
+    "applied": true,
+    "applied_change": "Each repository received exactly one evidence-backed primary implementation subtype before scoring.",
+    "metric_before": {
+      "typed_reports": 0
+    },
+    "metric_after": {
+      "typed_reports": 10,
+      "multi_primary_conflicts": 0,
+      "engine_property_leaks": 0
+    },
+    "decision": "keep"
+  },
+  "next_action": {
+    "action_id": "workflow-deep-action-002",
+    "hypothesis": "Auditing whether declared operational controls are actually consumed by the execution path will prevent inert retry, concurrency, iteration and approval parameters from being scored as implemented behavior.",
+    "metric": "In the next batch, every reported retry/concurrency/iteration/approval control includes both its declaration path and consumption path; zero signature-only controls are credited as behavior.",
+    "rollback_condition": "Rollback the mandatory declaration-to-consumption mapping if more than 20% of controls are framework-injected and cannot be traced statically; retain them as Not verified instead."
+  }
+}

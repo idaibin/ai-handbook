@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "topic": "workflows",
+  "run_id": "workflows-deep-20260809T154000Z",
+  "identity_normalization": "case-insensitive owner/name",
+  "content_identity": "fixed git tree or fixed commit plus key blobs",
+  "repositories_reviewed": 10,
+  "unique_contents_reviewed": 10,
+  "analyses_reused": 0,
+  "mappings": [
+    {
+      "repository": "langgenius/dify",
+      "content_id": "github:langgenius/dify@3f89a3c742e1ce64b2167f3fcf664947f2b7cf82",
+      "analysis": "new"
+    },
+    {
+      "repository": "moazbuilds/CodeMachine-CLI",
+      "content_id": "github:moazbuilds/CodeMachine-CLI@572def63eb808e95b18ccf6c69a13d7a13fe06fd",
+      "analysis": "new"
+    },
+    {
+      "repository": "skalesapp/skales",
+      "content_id": "github:skalesapp/skales@69918acb15977d04a357f0871df415b2ae903249",
+      "analysis": "new"
+    },
+    {
+      "repository": "rpamis/comet",
+      "content_id": "git-tree:9be09217625966076edb204e871ff1d9fa49302e",
+      "analysis": "new"
+    },
+    {
+      "repository": "juanjuandog/FinSight-AI",
+      "content_id": "git-tree:9b8d8704b87241058166539dcc71353287bd9122",
+      "analysis": "new"
+    },
+    {
+      "repository": "Ricky-7-Yan/intelligent-audit-system",
+      "content_id": "git-tree:ea146932b2e764444535cf7076b925d342129516",
+      "analysis": "new"
+    },
+    {
+      "repository": "dataelement/bisheng",
+      "content_id": "git-tree:206b56261575fcf40e7ef6c65a77cfca9ed128a7",
+      "analysis": "new"
+    },
+    {
+      "repository": "trpc-group/trpc-agent-go",
+      "content_id": "git-tree:9ad51d7bc26700a6c0d71a24cfa2dbdd123da4ff",
+      "analysis": "new"
+    },
+    {
+      "repository": "EmbeddedLLM/JamAIBase",
+      "content_id": "git-tree:3a08a23dae6afea6d55ad9c44276aac04c5ad487",
+      "analysis": "new"
+    },
+    {
+      "repository": "ray-r-ren/agent-apprenticeship",
+      "content_id": "commit:4beafff2ff41da7d97a4faee9b516ccde466fb4b:keyblobs:2889dec0-3ed2a480-9a15a7d0-3d4024c2-1cf61842",
+      "analysis": "new"
+    }
+  ]
+}

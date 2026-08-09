@@ -1,0 +1,227 @@
+{
+  "schema_version": "1.0",
+  "topic": "workflows",
+  "run_id": "workflows-deep-20260809T154000Z",
+  "snapshot_id": "workflows-ai-evaluation-workflow-20260809T063604Z",
+  "claim_id": "workflows-claim-20260809T154000Z",
+  "status": "completed",
+  "started_at": "2026-08-09T15:40:00Z",
+  "completed_at": "2026-08-09T15:45:28Z",
+  "counts": {
+    "repositories_reviewed": 10,
+    "unique_contents_reviewed": 10,
+    "analyses_reused": 0,
+    "new_analysis_reports": 10,
+    "held": 0,
+    "failed": 0
+  },
+  "evidence_levels": {
+    "metadata_verified": 0,
+    "structure_reviewed": 0,
+    "source_validated": 10,
+    "runtime_validated": 0
+  },
+  "items": [
+    {
+      "repository": "langgenius/dify",
+      "fixed_commit": "3f89a3c742e1ce64b2167f3fcf664947f2b7cf82",
+      "content_id": "github:langgenius/dify@3f89a3c742e1ce64b2167f3fcf664947f2b7cf82",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "strong_fit",
+      "subtype": "persisted_event_queue_dag_with_hitl_pause",
+      "dimensions": {
+        "trigger_and_contract": 5,
+        "state_and_resume": 5,
+        "idempotency": 3,
+        "side_effect_control": 4,
+        "human_gate": 5,
+        "observability": 5,
+        "validation": 5,
+        "reuse_value": 3
+      },
+      "report": "research/workflows/reports/langgenius-dify-3f89a3c.md"
+    },
+    {
+      "repository": "moazbuilds/CodeMachine-CLI",
+      "fixed_commit": "572def63eb808e95b18ccf6c69a13d7a13fe06fd",
+      "content_id": "github:moazbuilds/CodeMachine-CLI@572def63eb808e95b18ccf6c69a13d7a13fe06fd",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "fit",
+      "subtype": "resumable_interactive_multi_agent_cli_state_machine",
+      "dimensions": {
+        "trigger_and_contract": 4,
+        "state_and_resume": 5,
+        "idempotency": 2,
+        "side_effect_control": 3,
+        "human_gate": 4,
+        "observability": 5,
+        "validation": 3,
+        "reuse_value": 5
+      },
+      "report": "research/workflows/reports/moazbuilds-codemachine-cli-572def6.md"
+    },
+    {
+      "repository": "skalesapp/skales",
+      "fixed_commit": "69918acb15977d04a357f0871df415b2ae903249",
+      "content_id": "github:skalesapp/skales@69918acb15977d04a357f0871df415b2ae903249",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "fit",
+      "subtype": "local_first_scheduled_autonomous_task_queue_with_hitl",
+      "dimensions": {
+        "trigger_and_contract": 4,
+        "state_and_resume": 4,
+        "idempotency": 3,
+        "side_effect_control": 3,
+        "human_gate": 5,
+        "observability": 4,
+        "validation": 2,
+        "reuse_value": 1
+      },
+      "report": "research/workflows/reports/skalesapp-skales-69918ac.md"
+    },
+    {
+      "repository": "rpamis/comet",
+      "fixed_commit": "2c9f36aeed6db0fdd30c28cb7a3e97fda47bdecf",
+      "content_id": "git-tree:9be09217625966076edb204e871ff1d9fa49302e",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "strong_fit",
+      "subtype": "checkpointed_guarded_skill_engine",
+      "dimensions": {
+        "trigger_and_contract": 4,
+        "state_and_resume": 5,
+        "idempotency": 4,
+        "side_effect_control": 4,
+        "human_gate": 4,
+        "observability": 5,
+        "validation": 5,
+        "reuse_value": 5
+      },
+      "report": "research/workflows/reports/rpamis-comet-2c9f36a.md"
+    },
+    {
+      "repository": "juanjuandog/FinSight-AI",
+      "fixed_commit": "d31cec0b0dd40451aa5d35a357545094dc963a13",
+      "content_id": "git-tree:9b8d8704b87241058166539dcc71353287bd9122",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "strong_fit",
+      "subtype": "leased_idempotent_async_research_pipeline",
+      "dimensions": {
+        "trigger_and_contract": 4,
+        "state_and_resume": 5,
+        "idempotency": 5,
+        "side_effect_control": 4,
+        "human_gate": 1,
+        "observability": 4,
+        "validation": 4,
+        "reuse_value": 5
+      },
+      "report": "research/workflows/reports/juanjuandog-finsight-ai-d31cec0.md"
+    },
+    {
+      "repository": "Ricky-7-Yan/intelligent-audit-system",
+      "fixed_commit": "d34262d981a5556265b88a1779747364b5492326",
+      "content_id": "git-tree:ea146932b2e764444535cf7076b925d342129516",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "strong_fit",
+      "subtype": "bounded_governed_multi_role_audit_agent_loop",
+      "dimensions": {
+        "trigger_and_contract": 5,
+        "state_and_resume": 4,
+        "idempotency": 2,
+        "side_effect_control": 4,
+        "human_gate": 4,
+        "observability": 5,
+        "validation": 5,
+        "reuse_value": 4
+      },
+      "report": "research/workflows/reports/ricky-7-yan-intelligent-audit-system-d34262d.md"
+    },
+    {
+      "repository": "dataelement/bisheng",
+      "fixed_commit": "a3788115d71f4b5888a34fbe7e1f0f3f9f13784c",
+      "content_id": "git-tree:206b56261575fcf40e7ef6c65a77cfca9ed128a7",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "strong_fit",
+      "subtype": "outbox-mediated durable human-approval state machine",
+      "dimensions": {
+        "trigger_and_contract": 4,
+        "state_and_resume": 4,
+        "idempotency": 3,
+        "side_effect_control": 4,
+        "human_gate": 5,
+        "observability": 4,
+        "validation": 4,
+        "reuse_value": 4
+      },
+      "report": "research/workflows/reports/dataelement-bisheng-a378811.md"
+    },
+    {
+      "repository": "trpc-group/trpc-agent-go",
+      "fixed_commit": "c6988c7ef0d511a656301121b011a3105d6ea784",
+      "content_id": "git-tree:9ad51d7bc26700a6c0d71a24cfa2dbdd123da4ff",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "strong_fit",
+      "subtype": "checkpointed interruptible Pregel-style agent graph runtime",
+      "dimensions": {
+        "trigger_and_contract": 5,
+        "state_and_resume": 5,
+        "idempotency": 4,
+        "side_effect_control": 3,
+        "human_gate": 4,
+        "observability": 5,
+        "validation": 5,
+        "reuse_value": 5
+      },
+      "report": "research/workflows/reports/trpc-group-trpc-agent-go-c6988c7.md"
+    },
+    {
+      "repository": "EmbeddedLLM/JamAIBase",
+      "fixed_commit": "3dfd842d2b1d9721ec86ecd22e7d7b1f91c6bf03",
+      "content_id": "git-tree:3a08a23dae6afea6d55ad9c44276aac04c5ad487",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "fit",
+      "subtype": "in-request dependency-DAG generative-table workflow executor",
+      "dimensions": {
+        "trigger_and_contract": 5,
+        "state_and_resume": 2,
+        "idempotency": 2,
+        "side_effect_control": 2,
+        "human_gate": 1,
+        "observability": 3,
+        "validation": 4,
+        "reuse_value": 4
+      },
+      "report": "research/workflows/reports/embeddedllm-jamaibase-3dfd842.md"
+    },
+    {
+      "repository": "ray-r-ren/agent-apprenticeship",
+      "fixed_commit": "4beafff2ff41da7d97a4faee9b516ccde466fb4b",
+      "content_id": "commit:4beafff2ff41da7d97a4faee9b516ccde466fb4b:keyblobs:2889dec0-3ed2a480-9a15a7d0-3d4024c2-1cf61842",
+      "status": "analyzed",
+      "evidence_level": "source_validated",
+      "topic_decision": "fit",
+      "subtype": "iterative-agent-evaluation-pipeline",
+      "dimensions": {
+        "trigger_and_contract": 4,
+        "state_and_resume": 4,
+        "idempotency": 2,
+        "side_effect_control": 2,
+        "human_gate": 3,
+        "observability": 4,
+        "validation": 5,
+        "reuse_value": 5
+      },
+      "report": "research/workflows/reports/ray-r-ren-agent-apprenticeship-4beafff.md"
+    }
+  ],
+  "next_candidate": null
+}
