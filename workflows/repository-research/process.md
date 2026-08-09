@@ -89,7 +89,35 @@
 
 可以并行读取彼此独立的仓库；canonical queue、latest pointer、累计状态和 GitHub 提交只能由主执行者串行更新。子代理只返回证据包，不直接争抢或覆盖共享状态。
 
-## 5. Stop conditions
+## 5. Usage quota gate
+
+每次运行必须在创建 query、领取 candidate 或启动 runtime validation 之前读取平台提供的第一方 usage 状态；长批次还要在索引 reconciliation 前、深度分析每组候选完成后复查。只接受可观测的精确数值和读取时间，不得从错误、延迟或体感推算额度。
+
+统一字段：
+
+- `remaining_percentage`：剩余额度百分比；
+- `consumed_percentage`：已用额度百分比；
+- `observed_at` 与 `source`：读取时间与第一方状态来源。
+
+任一条件成立即触发 `quota_stop`：
+
+- `remaining_percentage < 20`；
+- `consumed_percentage > 99`。
+
+若平台不暴露精确值，记录 `quota_not_observable`，不得声称门禁已验证；该状态本身不等同于额度不足，也不能伪造暂停原因。
+
+触发 `quota_stop` 后按以下顺序收尾：
+
+1. 不再创建 query、claim、子代理或外部运行；
+2. 将本次已产生的 task-owned 产物、claim 状态、canonical state、latest pointer 和 retrospective 完整写回；在途 item 必须结束为可恢复状态，不能静默遗留；
+3. 仅同步本研究流水线拥有的文件，不提交来源不明或无关工作区改动；
+4. 以原子 commit 推送到 `idaibin/ai-handbook:main`，并回读确认远端 commit、状态和指针一致；
+5. 暂停以下六条任务：Skills Repository Index、Skills Deep Analysis、Agents Repository Index、Agents Deep Analysis、Workflows Repository Index、Workflows Deep Analysis；
+6. 回复 quota 条件、精确观测值、观测时间/来源、同步 commit、六条任务的暂停结果，以及 README 中的 Chat 恢复指令。
+
+如果任务管理能力不可用，不能声称已暂停；必须完成可做的同步，并明确列出需要人工暂停的任务。
+
+## 6. Stop conditions
 
 遇到以下情况停止当前批次并保存可恢复状态：
 
