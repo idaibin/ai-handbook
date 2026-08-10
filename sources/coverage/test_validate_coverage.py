@@ -1,4 +1,5 @@
 import base64
+import builtins
 import copy
 import hashlib
 import sys
@@ -95,6 +96,61 @@ class CoverageContractTests(unittest.TestCase):
         else:
             schema = coverage.load_yaml(coverage.ROOT / "coverage.schema.yaml")
             self.assertTrue(list(jsonschema.Draft202012Validator(schema).iter_errors(batch(flat))))
+
+    def test_schema_errors_merge_semantic_and_structural_findings(self):
+        try:
+            import jsonschema  # noqa: F401
+        except ImportError:
+            self.skipTest("jsonschema is not installed")
+        item = source()
+        item["document_identity"] = 5
+        item["records"][0]["role"] = []
+        errors = coverage.schema_errors(batch(item, "legacy-v1"), coverage.ROOT / "coverage.schema.yaml", True)
+        joined = "\n".join(errors)
+        self.assertIn("role must be a non-empty string", joined)
+        self.assertIn("document_identity must be an identity object", joined)
+
+    def test_schema_errors_fallback_contract_without_jsonschema(self):
+        legacy_item = source(); legacy_item["document_identity"] = 5
+        legacy_empty_identity = source(); legacy_empty_identity["document_identity"] = {}
+        canonical_item = source(); canonical_item["document_identity"] = 5
+        child_identity = source(); child_identity["records"][0]["repo"] = "bad"
+        read_item = source(); read_item["records"][0]["search_evidence"] = 5
+        read_empty_evidence = source(); read_empty_evidence["records"][0]["search_evidence"] = {}
+        not_found_item = source()
+        not_found = not_found_item["records"][0]
+        not_found["status"] = "not_found"
+        not_found["path"] = []
+        not_found["search_evidence"] = {
+            "commit": "a" * 40,
+            "method_or_query": "searched complete repository tree",
+            "searched_paths_or_tree": ["repository tree"],
+            "result": "No role-specific document located",
+            "gap": "No fixed-commit file supplies this role",
+        }
+        cases = [
+            (batch(legacy_item, "legacy-v1"), True, "document_identity must be an identity object"),
+            (batch(legacy_empty_identity, "legacy-v1"), True, "document_identity missing required field 'source_id'"),
+            (batch(canonical_item), False, "document_identity is not allowed in canonical-v2"),
+            (batch(child_identity), False, "repo must be owner/name"),
+            (batch(read_item), False, "search_evidence must be an object"),
+            (batch(read_empty_evidence), False, "search_evidence missing required field 'commit'"),
+            (batch(not_found_item), False, "path must be a non-empty string"),
+        ]
+        original_import = builtins.__import__
+
+        def block_jsonschema(name, *args, **kwargs):
+            if name == "jsonschema":
+                raise ImportError("forced test absence")
+            return original_import(name, *args, **kwargs)
+
+        builtins.__import__ = block_jsonschema
+        try:
+            for data, legacy_allowed, expected in cases:
+                errors = coverage.schema_errors(data, coverage.ROOT / "coverage.schema.yaml", legacy_allowed)
+                self.assertIn(expected, "\n".join(errors))
+        finally:
+            builtins.__import__ = original_import
 
     def test_legacy_allowlist_requires_coverage_root_path(self):
         with tempfile.TemporaryDirectory() as directory:

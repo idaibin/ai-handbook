@@ -37,24 +37,99 @@ def non_placeholder(value: Any, minimum: int = 1) -> bool:
     return isinstance(value, str) and len(value.strip()) >= minimum and not PLACEHOLDER.fullmatch(value.strip())
 
 
+def _schema_error_parts(error: str) -> tuple[str, str] | None:
+    if not error.startswith("schema:"):
+        return None
+    where, separator, message = error.removeprefix("schema:").partition(": ")
+    return (where.strip(), message) if separator else None
+
+
+def _schema_field(path: str) -> str:
+    return re.sub(r"\[\d+\]$", "", path.rsplit(".", 1)[-1])
+
+
+def _schema_path_covers(parent: str, child: str) -> bool:
+    return parent == child or child.startswith(f"{parent}.") or child.startswith(f"{parent}[")
+
+
+def _jsonschema_error_is_covered(error: str, semantic_errors: list[str]) -> bool:
+    parts = _schema_error_parts(error)
+    if parts is None:
+        return False
+    path, message = parts
+    field = _schema_field(path)
+    for semantic in semantic_errors:
+        semantic_parts = _schema_error_parts(semantic)
+        if semantic_parts is None:
+            continue
+        semantic_path, semantic_message = semantic_parts
+        if "Additional properties are not allowed" in message:
+            if semantic_path == path and ("unknown field" in semantic_message or "is not allowed" in semantic_message):
+                return True
+            continue
+        if "is a required property" in message:
+            required = re.search(r"'([^']+)' is a required property", message)
+            if required and semantic_path == path and (
+                f"missing required field {required.group(1)!r}" in semantic_message
+                or f"requires {required.group(1)}" in semantic_message
+            ):
+                return True
+            continue
+        if not _schema_path_covers(semantic_path, path):
+            continue
+        if field and re.search(rf"(?<!\w){re.escape(field)}(?!\w)", semantic_message):
+            return True
+    return False
+
+
+def _schema_problem_leaves(problem: Any) -> list[Any]:
+    """Use the smallest oneOf/anyOf branch for stable, useful diagnostics."""
+    if not problem.context:
+        return [problem]
+    branches = [_schema_problem_leaves(child) for child in problem.context]
+    return min(branches, key=len)
+
+
+def _merge_schema_errors(semantic_errors: list[str], structural_errors: list[str]) -> list[str]:
+    """Keep fallback semantics and append independent structural findings once."""
+    merged: list[str] = []
+    seen: set[str] = set()
+    for error in semantic_errors:
+        if error in seen:
+            continue
+        seen.add(error)
+        merged.append(error)
+    for error in structural_errors:
+        if error in seen or _jsonschema_error_is_covered(error, semantic_errors):
+            continue
+        seen.add(error)
+        merged.append(error)
+    return merged
+
+
 def schema_errors(data: Any, schema_path: Path, legacy_allowed: bool) -> list[str]:
-    """Run jsonschema when installed; otherwise apply the same contract subset here.
+    """Run the shared semantic contract and safely merge structural findings.
 
     The fallback deliberately covers the conditional status requirements and closed
     fields. It is kept in this file so CLI behavior remains deterministic on hosts
-    without the optional jsonschema dependency.
+    without the optional jsonschema dependency. Its messages remain canonical;
+    jsonschema findings are appended only when they are not the same finding in
+    different wording. This preserves independent structural errors even when a
+    batch also has a fallback semantic error.
     """
+    semantic_errors = fallback_schema_errors(data, legacy_allowed)
     try:
         import jsonschema  # type: ignore
     except ImportError:
-        return fallback_schema_errors(data, legacy_allowed)
+        return semantic_errors
     schema = load_yaml(schema_path)
     result = []
     for problem in jsonschema.Draft202012Validator(schema).iter_errors(data):
-        result.append(f"schema: {problem.json_path or '$'}: {problem.message}")
+        for leaf in _schema_problem_leaves(problem):
+            result.append(f"schema: {leaf.json_path or '$'}: {leaf.message}")
     if isinstance(data, dict) and data.get("format_version") == "legacy-v1" and not legacy_allowed:
         result.append("schema: $: legacy-v1 batch is not in manifest legacy allowlist at coverage ROOT")
-    return result
+    return _merge_schema_errors(semantic_errors, result)
 
 
 def fallback_schema_errors(data: Any, legacy_allowed: bool) -> list[str]:
@@ -96,8 +171,14 @@ def fallback_schema_errors(data: Any, legacy_allowed: bool) -> list[str]:
             continue
         if not nested and version != "legacy-v1":
             err(errors, where, "canonical-v2 requires nested records")
-        for key in set(entry) - (allowed if nested else record_allowed_fields()):
+        unknown = set(entry) - (allowed if nested else record_allowed_fields())
+        if nested and version == "canonical-v2" and "document_identity" in unknown:
+            unknown.remove("document_identity")
+            err(errors, where, "document_identity is not allowed in canonical-v2")
+        for key in unknown:
             err(errors, where, f"unknown field {key!r}")
+        if "document_identity" in entry and nested:
+            validate_schema_identity(entry["document_identity"], f"{where}.document_identity", errors, "document_identity")
         for field in ("source_id", "repo", "commit_sha"):
             if not non_placeholder(entry.get(field)):
                 err(errors, where, f"missing {field}")
@@ -114,6 +195,46 @@ def record_allowed_fields() -> set[str]:
     return {"source_id", "repo", "commit_sha", "role", "status", "path", "git_blob_sha", "locator", "coverage", "atomic_claims", "boundaries_or_counterexamples", "not_verified", "search_evidence"}
 
 
+def validate_schema_identity(identity: Any, where: str, errors: list[str], label: str) -> None:
+    if not isinstance(identity, dict):
+        err(errors, where, f"{label} must be an identity object")
+        return
+    expected_fields = ("source_id", "repo", "commit_sha")
+    expected = set(expected_fields)
+    for key in set(identity) - expected:
+        err(errors, where, f"unknown field {key!r}")
+    for field in expected_fields:
+        if field not in identity:
+            err(errors, where, f"{label} missing required field {field!r}")
+    if "source_id" in identity and not non_placeholder(identity["source_id"]):
+        err(errors, where, f"{label}.source_id must be a non-empty string")
+    if "repo" in identity and (not isinstance(identity["repo"], str) or not re.fullmatch(r"[^/\s]+/[^/\s]+", identity["repo"])):
+        err(errors, where, f"{label}.repo must be owner/name")
+    if "commit_sha" in identity and (not isinstance(identity["commit_sha"], str) or not SHA.fullmatch(identity["commit_sha"])):
+        err(errors, where, f"{label}.commit_sha must be 40 lowercase hex characters")
+
+
+def validate_schema_search_evidence(evidence: Any, where: str, errors: list[str]) -> None:
+    if not isinstance(evidence, dict):
+        err(errors, where, "search_evidence must be an object")
+        return
+    expected_fields = ("commit", "method_or_query", "searched_paths_or_tree", "result", "gap")
+    expected = set(expected_fields)
+    for key in set(evidence) - expected:
+        err(errors, where, f"unknown field {key!r}")
+    for field in expected_fields:
+        if field not in evidence:
+            err(errors, where, f"search_evidence missing required field {field!r}")
+    if "commit" in evidence and (not isinstance(evidence["commit"], str) or not SHA.fullmatch(evidence["commit"])):
+        err(errors, where, "search_evidence.commit must be 40 lowercase hex characters")
+    for field in ("method_or_query", "result", "gap"):
+        if field in evidence and not non_placeholder(evidence[field], 8):
+            err(errors, where, f"search_evidence.{field} must be a specific string")
+    paths = evidence.get("searched_paths_or_tree")
+    if "searched_paths_or_tree" in evidence and (not isinstance(paths, list) or not paths or not all(non_placeholder(item, 2) for item in paths)):
+        err(errors, where, "search_evidence.searched_paths_or_tree must be a non-empty string array")
+
+
 def validate_schema_record(record: Any, where: str, errors: list[str], require_identity: bool) -> None:
     if not isinstance(record, dict):
         err(errors, where, "record must be an object")
@@ -123,9 +244,30 @@ def validate_schema_record(record: Any, where: str, errors: list[str], require_i
     for field in ("role", "status") + (("source_id", "repo", "commit_sha") if require_identity else ()):
         if field not in record:
             err(errors, where, f"missing required field {field!r}")
-    status = record.get("status")
     if not isinstance(record.get("role"), str) or not record["role"]:
         err(errors, where, "role must be a non-empty string")
+    for field in ("source_id", "repo", "commit_sha"):
+        if field not in record:
+            continue
+        if field == "source_id" and not non_placeholder(record[field]):
+            err(errors, where, "source_id must be a non-empty string")
+        elif field == "repo" and (not isinstance(record[field], str) or not re.fullmatch(r"[^/\s]+/[^/\s]+", record[field])):
+            err(errors, where, "repo must be owner/name")
+        elif field == "commit_sha" and (not isinstance(record[field], str) or not SHA.fullmatch(record[field])):
+            err(errors, where, "commit_sha must be 40 lowercase hex characters")
+    for field in ("path", "locator", "coverage"):
+        if field in record and not non_placeholder(record[field]):
+            err(errors, where, f"{field} must be a non-empty string")
+    if "git_blob_sha" in record and (not isinstance(record["git_blob_sha"], str) or not SHA.fullmatch(record["git_blob_sha"])):
+        err(errors, where, "git_blob_sha must be 40 lowercase hex characters")
+    for field in ("atomic_claims", "boundaries_or_counterexamples", "not_verified"):
+        if field in record:
+            value = record[field]
+            if not isinstance(value, list) or not value or not all(non_placeholder(item) for item in value):
+                err(errors, where, f"{field} must be a non-empty string array")
+    if "search_evidence" in record:
+        validate_schema_search_evidence(record["search_evidence"], f"{where}.search_evidence", errors)
+    status = record.get("status")
     if not isinstance(status, str):
         err(errors, where, "status must be a string")
         return
@@ -133,15 +275,6 @@ def validate_schema_record(record: Any, where: str, errors: list[str], require_i
         for field in ("path", "git_blob_sha", "locator", "coverage", "atomic_claims", "boundaries_or_counterexamples", "not_verified"):
             if field not in record:
                 err(errors, where, f"status read_at_fixed_commit requires {field}")
-        for field in ("path", "locator", "coverage"):
-            if field in record and not non_placeholder(record[field]):
-                err(errors, where, f"{field} must be a non-empty string")
-        if "git_blob_sha" in record and (not isinstance(record["git_blob_sha"], str) or not SHA.fullmatch(record["git_blob_sha"])):
-            err(errors, where, "git_blob_sha must be 40 lowercase hex characters")
-        for field in ("atomic_claims", "boundaries_or_counterexamples", "not_verified"):
-            value = record.get(field)
-            if field in record and (not isinstance(value, list) or not value or not all(non_placeholder(item) for item in value)):
-                err(errors, where, f"{field} must be a non-empty string array")
     elif status == "not_found" and "search_evidence" not in record:
         err(errors, where, "status not_found requires search_evidence")
     elif status not in {"read_at_fixed_commit", "not_found", "read"}:
