@@ -73,7 +73,7 @@
 
 ## 目录
 
-- `maps/`：能力地图和知识关系。
+- `maps/`：能力地图和知识关系；当前包括 [`AI Engineering Map`](maps/ai-engineering-map.md) 和 [`Codex 配置与协作知识图`](maps/codex-configuration-collaboration-map.md)。
 - `roadmap/`：以产出和门禁驱动的学习路径。
 - `sources/`：候选来源、固定阅读证据和来源治理。
 - `experiments/`：固定输入、oracle、baseline/treatment、运行结果与应用案例。
