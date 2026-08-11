@@ -13,6 +13,7 @@ repositories:
       - workflow_governance
       - cross_repository_handoffs
       - promotion_and_deprecation_decisions
+      - public_knowledge_schema_and_export
     does_not_own:
       - production_skill_packages
       - realtime_feed_records
@@ -26,12 +27,29 @@ repositories:
       - feed_schema_and_validation
       - feed_presentation
       - ingestion_implementation
+      - knowledge_candidate_event_identity
     routine_change_policy: write_data_using_current_contract
     architecture_change_triggers:
       - schema_change
       - new_ingestion_adapter
       - routing_or_presentation_change
       - storage_or_api_change
+
+  idaibin/blog:
+    role: public_static_knowledge_projection
+    owns:
+      - public_routes
+      - bilingual_presentation
+      - static_search_and_navigation
+      - backlinks_and_local_graph_view
+      - seo_rss_and_sitemap
+      - public_changelog
+      - redirects_and_canonical_urls
+    does_not_own:
+      - knowledge_evidence_and_promotion
+      - private_handbook_state
+      - realtime_feed_records
+      - runtime_cross_repository_reads
 
   idaibin/knowledge-distillation:
     role: public_knowledge_output

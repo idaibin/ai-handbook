@@ -1,6 +1,6 @@
 # AI Engineering System Workflow
 
-- **Version:** `0.2.0`
+- **Version:** `0.3.0`
 - **Status:** active
 - **Canonical owner:** `idaibin/ai-handbook`
 - **Canonical path:** `workflows/ai-engineering-system/`
@@ -128,6 +128,7 @@ GitHub 元数据、Stars、搜索摘要或 README 标题不能替代源码、测
 | --- | --- |
 | 实时产品、开源、科技或金融事件 | `feeds-hub` |
 | 课程、文章、知识卡、图像/视频知识内容包 | `knowledge-distillation` |
+| 已批准的公开知识节点和关系 | `blog`，通过固定版本的公开导出 |
 | 稳定、重复、可执行的方法 | `idaibin/skills` |
 | 具体代码、配置和项目测试 | 对应目标项目仓库 |
 | 来源、知识图谱、实验、审计和晋级决策 | `ai-handbook` |
@@ -214,6 +215,7 @@ AI 可以提出修改和生成候选补丁，但不能自己降低证据标准�
 - [`source-management.md`](source-management.md)：来源发现、筛选和维护。
 - [`storage-policy.md`](storage-policy.md)：GitHub、Drive、Library、Sheets 的存储边界。
 - [`skill-validation.md`](skill-validation.md)：候选 Skill 的真实项目验证。
+- [`knowledge-publication.md`](knowledge-publication.md)：`feeds-hub → ai-handbook → blog` 的内容重构、公开导出与迁移合同。
 - [`handoffs/`](handoffs/)：跨仓库交接合同。
 - [`evals/routing.yaml`](evals/routing.yaml)：路由和边界回归案例。
 - [`chatgpt-project-instructions.md`](chatgpt-project-instructions.md)：ChatGPT Work 项目指令版本。

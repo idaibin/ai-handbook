@@ -1,7 +1,7 @@
 schema_version: "1.0"
 workflow:
   id: ai-engineering-system
-  version: 0.2.0
+  version: 0.3.0
   status: active
   canonical_repository: idaibin/ai-handbook
   canonical_path: workflows/ai-engineering-system
@@ -118,6 +118,7 @@ stages:
     routes:
       realtime_event: idaibin/feeds-hub
       knowledge_output: idaibin/knowledge-distillation
+      public_knowledge_projection: idaibin/blog
       executable_capability: idaibin/skills
       project_change: target_repository
       research_and_governance: idaibin/ai-handbook

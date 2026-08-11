@@ -1,6 +1,6 @@
 schema_version: "1.0"
 eval_suite: ai_engineering_system_routing
-workflow_version: 0.2.0
+workflow_version: 0.3.0
 cases:
   - id: official_product_release
     input:
@@ -78,3 +78,24 @@ cases:
       stop_new_research_claims: true
       preserve_local_result: true
       require_reauthorization: true
+
+  - id: verified_public_knowledge_node
+    input:
+      type: public_knowledge_projection
+      visibility: public
+      evidence_gate_passed: true
+    expected:
+      canonical_owner: idaibin/ai-handbook
+      presentation_owner: idaibin/blog
+      delivery_mode: build_time_pinned_snapshot
+      automatic_publish: false
+
+  - id: realtime_feed_knowledge_candidate
+    input:
+      type: realtime_event
+      promoted: false
+    expected:
+      event_identity_owner: idaibin/feeds-hub
+      research_candidate_owner: idaibin/ai-handbook
+      public_blog_route: false
+      automatic_handbook_source_write: false

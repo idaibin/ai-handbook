@@ -1,4 +1,4 @@
-# AI Engineering Handbook v0.2
+# AI Engineering Handbook v0.3
 
 `ai-handbook` 是个人 AI Engineering System 的**学习与治理控制面**。它负责维护来源、研究、知识图谱、实验、应用证据、跨仓库路由和自我迭代规范；它不是课程收藏夹，也不替代下游代码或内容仓库。
 
@@ -17,6 +17,7 @@
 | `idaibin/ai-handbook` | 来源目录、研究队列、知识图谱、实验、应用证据、工作流治理和晋级决策 | 不保存所有大型原始资产，不直接拥有生产 Skill |
 | `idaibin/feeds-hub` | 实时信息的数据记录、去重、校验和展示 | 不承担长期知识蒸馏；普通事件更新不应触发架构改造 |
 | `idaibin/knowledge-distillation` | Knowledge IR、课程、文章、知识卡片、图片/视频知识内容包及对外知识输出 | 不拥有生产执行 Skill；实际执行能力由 Skills 或目标工具承担 |
+| `idaibin/blog` | 已批准公开知识的双语静态投影、阅读与导航 | 不裁决证据，不读取私有 Handbook 或实时 Feed 运行时 |
 | `idaibin/skills` | 可触发、可执行、可测试的稳定能力 | 不保存大规模来源、课程正文和研究历史 |
 | 目标项目仓库 | 项目代码、项目规范、真实构建与运行证据 | 不替代跨项目学习与方法治理 |
 | ChatGPT Work | 研究、编排、审查和任务入口 | 不替代 GitHub 的版本化权威状态 |
@@ -52,6 +53,7 @@
 ```text
 实时事件                  → feeds-hub
 知识性对外内容            → knowledge-distillation
+已批准公开知识节点与关系  → blog（固定版本的构建期导出）
 稳定、可执行能力          → idaibin/skills
 项目代码和项目级验证      → 对应项目仓库
 研究、证据、实验与决策    → ai-handbook
@@ -80,6 +82,9 @@
 - `templates/`：来源和研究记录模板。
 - `workflows/`：AI Engineering System 的唯一权威工作流、存储规范、交接合同和评估。
 
+三仓库内容重构、公开知识模型和迁移边界见
+[`knowledge-publication.md`](workflows/ai-engineering-system/knowledge-publication.md)。
+
 通用 GitHub 主题索引与深度分析流程见
 [`workflows/repository-research/`](workflows/repository-research/README.md)。它由主题配置驱动，
 当前覆盖 Skills、Agents 和 Workflows。
@@ -92,4 +97,4 @@
 - Google Sheets 可以作为筛选和运营视图，但不得成为唯一任务状态或研究证据来源。
 - 自动化可以发现、去重、校验和生成候选；不能自动提升证据等级、发布生产 Skill 或把局部成功宣称为生产完成。
 
-当前规范版本：`ai-engineering-system v0.2.0`。
+当前规范版本：`ai-engineering-system v0.3.0`。
