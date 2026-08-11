@@ -19,6 +19,22 @@
 | `agents` | `sources/catalog/agents/` | `research/agents/` | `:20` / `:30` |
 | `workflows` | `sources/catalog/workflows/` | `research/workflows/` | `:40` / `:50` |
 
+## 当前阶段门禁
+
+截至 2026-08-11，数量驱动的索引与顺序深研已阶段性收口：
+
+| Topic | Stage status | Allowed next work |
+| --- | --- | --- |
+| `skills` | `paused` | 历史 content identity reconciliation、证据等级清点、采用映射 |
+| `agents` | `paused_after_source_sample` | 仅由真实实验暴露的机制缺口触发，单次最多 10 个定向候选 |
+| `workflows` | `closed_for_current_sample` | 蒸馏现有模式并执行 declaration-to-consumption、checkpoint/side-effect、permission 实验 |
+
+三类主题的现有目录、队列、固定版本和报告全部保留；`active_claims` 为空。
+没有明确工程问题、应用目标和验收方式时，不恢复批量扫描。
+
+阶段结论、恢复条件、反馈格式和下一阶段验收合同见
+[`research/stage-reviews/2026-08-11-repository-research-stage-closure.md`](../../research/stage-reviews/2026-08-11-repository-research-stage-closure.md)。
+
 ## 权威文件
 
 - [`process.md`](process.md)：状态、证据、去重、复盘和提交规则。
@@ -44,8 +60,7 @@
 4. 只有两次手工试运行通过后，才创建两条定时任务；
 5. 定时任务引用 `main` 上的 prompt 与 topic 文件，不嵌入流程副本。
 
-当前六条定时任务保持暂停。默认由当前 Work 会话按 topic 合同手动连续执行，以便使用云浏览器、云服务器、依赖安装和运行验证；每批仍必须保持相同的 GitHub 写回格式并在所属会话汇报。
-
+当前六条定时任务保持暂停。默认执行方式也已暂停批量研究；只有满足当前阶段门禁后，才由 Work 会话按 topic 合同手动执行。每批仍必须保持相同的 GitHub 写回格式并在所属会话汇报。
 
 ## 质量原则
 
