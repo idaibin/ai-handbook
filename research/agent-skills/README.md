@@ -6,9 +6,16 @@ Research catalog for GitHub repositories related to AI Skills, Agent Skills, ski
 
 ## Current Status
 
-- Discovery: in progress
-- Verification: in progress
-- Repository write: enabled
+- Stage: paused as of 2026-08-11.
+- Discovery: paused.
+- Sequential deep analysis: paused.
+- Active claims: none.
+- Repository write: enabled only for reconciliation, synthesis, experiments and explicit corrections.
+
+The catalog and historical reports are retained. Broad scanning must not resume until
+historical content-identity reconciliation, runtime-evidence inventory and adoption
+mapping can measure marginal value. See the
+[repository research stage closure](../stage-reviews/2026-08-11-repository-research-stage-closure.md).
 
 ## Verified Candidates
 
@@ -47,7 +54,11 @@ Statuses:
 
 ## Next Steps
 
-- Expand candidates above 1000 stars
-- Create per-repository analysis files
-- Compare patterns with idaibin/skills
-- Update knowledge graph
+1. Reconcile repository identity with unique content identity across historical reports.
+2. Inventory actual runtime-validated evidence and downgrade unsupported aggregate claims.
+3. Map reusable patterns to current adoption in `idaibin/skills`.
+4. Distill only the permission, declaration-to-consumption, checkpoint/side-effect,
+   semantic-drift and evidence-promotion patterns selected by the stage closure.
+5. Run controlled and real-project experiments before promoting any new production Skill.
+
+Do not expand candidates or resume the remaining sequential queue during this stage.
