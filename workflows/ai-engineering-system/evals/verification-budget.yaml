@@ -1,0 +1,75 @@
+schema_version: "1.0"
+evaluation:
+  id: verification-budget
+  workflow_version: 0.4.0-candidate.1
+  purpose: prevent both default full builds and under-validation
+  cases:
+    - id: markdown_copy_only
+      change: "Edit prose in one Markdown file"
+      claim: "The document is well-formed and the intended text changed"
+      expected_level: V0
+      expected_checks:
+        - diff_review
+        - targeted_markdown_or_link_check_if_available
+      full_repository_build: false
+
+    - id: local_style_token
+      change: "Change a local component color value without shared tokens or behavior"
+      claim: "The source change is scoped correctly"
+      expected_level: V0
+      optional_when_visual_result_is_claimed:
+        - targeted_browser_check
+      full_repository_build: false
+
+    - id: pure_function_logic
+      change: "Modify one pure function with existing focused tests"
+      claim: "The changed behavior and nearby regressions are covered"
+      expected_level: V1
+      expected_checks:
+        - related_unit_tests
+      full_repository_build: false
+
+    - id: public_type_or_export
+      change: "Modify a public type or package export"
+      claim: "Affected consumers still compile and pass tests"
+      expected_level: V2
+      expected_checks:
+        - affected_package_typecheck_or_build
+        - affected_tests
+      full_repository_build: false
+
+    - id: api_database_auth
+      change: "Modify an API, database migration, authentication, permissions, or external-service path"
+      claim: "The integration behaves correctly in its target runtime"
+      expected_level: V3
+      expected_checks:
+        - targeted_runtime_or_integration_test
+      full_repository_build: false
+
+    - id: user_interaction
+      change: "Modify click behavior, routing, responsive layout, or browser-specific behavior"
+      claim: "The user-visible flow works in a browser"
+      expected_level: V4
+      expected_checks:
+        - targeted_browser_or_e2e_flow
+      full_repository_build: false
+
+    - id: workspace_root_change
+      change: "Modify root dependencies, lockfile, compiler, build tool, or workspace configuration"
+      claim: "The repository remains buildable across the affected graph"
+      expected_level: V2
+      expected_checks:
+        - affected_graph_build
+      full_repository_build: true
+
+    - id: failed_targeted_check
+      change: "A scoped change whose selected check fails or leaves impact ambiguous"
+      expected_action: escalate_one_level_with_reason
+      full_repository_build: conditional
+
+  invariants:
+    - choose_by_claim_risk_and_boundary_not_line_count
+    - start_with_lowest_check_that_can_falsify_the_claim
+    - stop_when_evidence_is_sufficient
+    - do_not_add_higher_layers_only_for_confidence
+    - report_skipped_layers_and_residual_gaps
