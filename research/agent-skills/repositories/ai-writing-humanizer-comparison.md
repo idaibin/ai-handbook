@@ -4,6 +4,8 @@
 状态：固定版本审查完成；生产 Skill 已选择性更新  
 原始线索：[X 帖子](https://x.com/i/status/2087181801458716889)
 
+后续真实对照实验：[`experiments/human-writing/2026-08-13-four-skill-benchmark/`](../../../experiments/human-writing/2026-08-13-four-skill-benchmark/README.md)。该实验保存十个固定来源案例、四个 Skill 的四十份盲测输出、三名匿名评委的逐例评分和可重跑聚合脚本；其结论替代本报告中仅有的四个代表性黑盒用例，后者不再作为横向排名证据。
+
 ## 结论
 
 帖子图片中的十项并不是十个同类、独立、经过验证的写作 Skill。固定 Git tree 审查后：

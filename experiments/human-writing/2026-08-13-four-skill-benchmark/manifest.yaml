@@ -1,0 +1,50 @@
+experiment_id: human-writing-four-skill-benchmark-2026-08-13
+status: completed_pilot
+date: 2026-08-13
+canonical_workflow:
+  repository: idaibin/ai-handbook
+  commit: fb101496f52bbc1a403f825c8825622c080b3a42
+  files:
+    - workflows/ai-engineering-system/README.md
+    - workflows/ai-engineering-system/skill-validation.md
+    - workflows/ai-engineering-system/storage-policy.md
+corpus:
+  repository: idaibin/ai-handbook
+  commit: 325c9daeb34df0abaee8f4efa8e715a6f0547887
+  cases: 10
+  controlled_degradations: 6
+  unchanged_negative_controls: 4
+skills:
+  human-writing:
+    repository: idaibin/skills
+    commit: aa73fec2f8630886b7d60b066f1de4deff96b60a
+    path: skills/human-writing
+  humanizer:
+    repository: blader/humanizer
+    commit: 523374dee72d67c7b2b5f858ea0094ffda49c3ac
+    path: .
+  humanizer-zh:
+    repository: op7418/Humanizer-zh
+    commit: 91f3d394db8419c20d67ebe22a96cf8fee0a404b
+    path: .
+  stop-slop:
+    repository: hardikpandya/stop-slop
+    commit: 8da1f030185bdfe8471220585162991eaeb970e9
+    path: .
+execution:
+  runs_per_skill: 1
+  generation_agents: 4
+  blind_judges: 3
+  judge_mapping_seed: 20260813
+  judge_positioning: three independent Latin-rotated packets; each skill occupies each position 4-5 times across 18 repair judgments
+  model_context: Codex Work Mode agents with fresh contexts
+  model_id: not_exposed_by_runtime
+  sampling_parameters: not_exposed_by_runtime
+  detector_score_used: false
+invalidated_pilots:
+  - reason: reference text was visible to generators
+  - reason: list-format instruction was ambiguous
+  - reason: generator packet exposed degraded/control labels and source paths
+  - reason: judges shared the same candidate order
+  - reason: judge rubric lacked operational score anchors
+  - note: invalidated outputs and judgments are excluded from saved results
