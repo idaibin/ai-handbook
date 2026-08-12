@@ -126,3 +126,16 @@ Sheets 只作为运营视图或人工筛选界面。唯一仓库数、状态和�
 - 写入失败：保存本地/仓库结果，记录待同步状态，不重复研究。
 
 任何连接错误都不能被解释成“数据为空”或“研究完成”。
+
+## 7. GitHub Push 失败时的 Drive 兜底
+
+代码与版本化文档仍以 GitHub commit 为权威。push 失败且有已验证成果时，Google Drive 可以保存灾难恢复副本，但不能替代远端交付。
+
+- 已 commit 的变更导出为 Git bundle，不散装上传源码；
+- 报告、截图、录屏和其他非 Git 资产按“仓库 / 任务或分支”持续保存；
+- 每个恢复目录保存 manifest，记录 basis、branch、完整 commit SHA、验证状态、资产 SHA-256、失败原因和同步状态；
+- 上传后读取 metadata 确认文件存在；
+- 后续 AI 先读取 manifest，恢复、校验并重新 push；
+- GitHub 远端完整 SHA 未核验前，状态保持 `not_persisted` / `write_failed`。
+
+具体流程与目录格式见 [`delivery-recovery.md`](delivery-recovery.md)。

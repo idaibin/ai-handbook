@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.0 — 2026-08-12
+
+- 将 AI Engineering Lab 的 Purpose、Scope、Evidence First、Reality Over Theory、Research Quality、Real Validation、Anti Optimization Loop、输出和产物规则集中为权威 `operating-principles.md`。
+- 增加按任务类型最小加载 policy、workflow、instruction 和 Prompt 的 `task-routing.md`。
+- 将 ChatGPT Project Instructions 收缩为远端启动入口，删除重复规范。
+- 增加独立分支、阶段 commit/push、Git bundle、Google Drive 灾难恢复、manifest 和重新同步流程。
+- 增加任务上下文路由与 GitHub push 失败恢复的回归案例。
+
 ## 0.3.0 — 2026-08-11
 
 - 明确 `feeds-hub`、`ai-handbook`、`blog` 保持独立，只重构内容模型、晋级门禁和数据合同。

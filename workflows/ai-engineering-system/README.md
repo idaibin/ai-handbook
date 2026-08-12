@@ -1,11 +1,22 @@
 # AI Engineering System Workflow
 
-- **Version:** `0.3.0`
+- **Version:** `0.4.0`
 - **Status:** active
 - **Canonical owner:** `idaibin/ai-handbook`
 - **Canonical path:** `workflows/ai-engineering-system/`
 
 本目录是个人 AI Engineering System 的唯一权威工作流。ChatGPT Work、下游仓库和自动化任务只保存当前版本指针或本仓库定义的交接合同，不复制整套规范。
+
+## 0. 启动与任务路由
+
+执行重要任务前：
+
+1. 记录当前 `ai-handbook` 完整 commit SHA；
+2. 必须读取 [`operating-principles.md`](operating-principles.md)；
+3. 根据 [`task-routing.md`](task-routing.md) 只加载匹配任务的 policy、workflow、instruction 和 prompt；
+4. 当前用户明确要求优先；无法读取必须文件时停止修改和外部写入。
+
+`chatgpt-project-instructions.md` 只保存上述远端入口，不再复制本目录规范。
 
 ## 1. 目标
 
@@ -209,11 +220,14 @@ AI 可以提出修改和生成候选补丁，但不能自己降低证据标准�
 
 ## 7. 关联文件
 
+- [`operating-principles.md`](operating-principles.md)：项目目标、范围、证据原则、反优化循环、输出与产物规则。
+- [`task-routing.md`](task-routing.md)：按任务类型加载最小必要规则和 Prompt。
 - [`workflow.yaml`](workflow.yaml)：机器可读流程。
 - [`ownership.yaml`](ownership.yaml)：仓库职责。
 - [`state-model.yaml`](state-model.yaml)：状态与证据模型。
 - [`source-management.md`](source-management.md)：来源发现、筛选和维护。
 - [`storage-policy.md`](storage-policy.md)：GitHub、Drive、Library、Sheets 的存储边界。
+- [`delivery-recovery.md`](delivery-recovery.md)：独立分支、阶段提交、push、Drive 兜底与恢复。
 - [`skill-validation.md`](skill-validation.md)：候选 Skill 的真实项目验证。
 - [`knowledge-publication.md`](knowledge-publication.md)：`feeds-hub → ai-handbook → blog` 的内容重构、公开导出与迁移合同。
 - [`handoffs/`](handoffs/)：跨仓库交接合同。

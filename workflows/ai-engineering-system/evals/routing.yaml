@@ -1,7 +1,41 @@
 schema_version: "1.0"
 eval_suite: ai_engineering_system_routing
-workflow_version: 0.3.0
+workflow_version: 0.4.0
 cases:
+  - id: repository_deep_analysis_context
+    input:
+      type: github_repository_deep_analysis
+    expected:
+      always_load: operating-principles.md
+      policy: source-management.md
+      workflow: ../repository-research/README.md
+      prompt: ../repository-research/prompts/deep-analysis.md
+      load_unrelated_prompts: false
+
+  - id: code_change_without_task_prompt
+    input:
+      type: project_change
+      matching_prompt_present: false
+    expected:
+      always_load: operating-principles.md
+      policy: delivery-recovery.md
+      require_target_repository_instructions: true
+      invent_or_reuse_unrelated_prompt: false
+
+  - id: github_push_failure_after_validation
+    input:
+      type: external_write
+      target: github
+      operation: push
+      result: failed
+      verified_commit_present: true
+    expected:
+      export_git_bundle: true
+      backup_owner: google_drive
+      require_manifest_and_sha256: true
+      remote_status: not_persisted
+      claim_remote_delivery_complete: false
+
   - id: official_product_release
     input:
       type: realtime_event
