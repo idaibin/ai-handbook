@@ -1,8 +1,8 @@
 schema_version: "1.0"
 workflow:
   id: ai-engineering-system
-  version: 0.3.0
-  status: active
+  version: 0.4.0-candidate.1
+  status: candidate
   canonical_repository: idaibin/ai-handbook
   canonical_path: workflows/ai-engineering-system
 
@@ -14,6 +14,7 @@ principles:
   - repository_owned_facts
   - fail_closed_external_writes
   - controlled_self_improvement
+  - minimum_sufficient_verification
 
 lanes:
   continuous_discovery:
@@ -101,6 +102,11 @@ stages:
 
   - id: validate
     owner: ai-handbook
+    verification_budget:
+      policy: verification-budget.md
+      start_at_lowest_falsifiable_level: true
+      default_full_repository_build: false
+      escalation_requires_reason: true
     evidence_progression:
       - static_or_declared
       - local_deterministic
