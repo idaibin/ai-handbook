@@ -1,7 +1,7 @@
 # AI Engineering System Workflow
 
-- **Version:** `0.3.0`
-- **Status:** active
+- **Version:** `0.4.0-candidate.1`
+- **Status:** candidate
 - **Canonical owner:** `idaibin/ai-handbook`
 - **Canonical path:** `workflows/ai-engineering-system/`
 
@@ -122,6 +122,8 @@ GitHub 元数据、Stars、搜索摘要或 README 标题不能替代源码、测
 
 较低层证据不能提升为较高层完成声明。
 
+修改完成进入验证前，必须按 [`verification-budget.md`](verification-budget.md) 从能够证伪当前主张的最低层开始；只有满足升级条件才进入构建、运行时或浏览器验证。完整构建不是小改动的默认动作。
+
 ### Stage 6 — Route
 
 | 产物类型 | 目标 |
@@ -215,7 +217,9 @@ AI 可以提出修改和生成候选补丁，但不能自己降低证据标准�
 - [`source-management.md`](source-management.md)：来源发现、筛选和维护。
 - [`storage-policy.md`](storage-policy.md)：GitHub、Drive、Library、Sheets 的存储边界。
 - [`skill-validation.md`](skill-validation.md)：候选 Skill 的真实项目验证。
+- [`verification-budget.md`](verification-budget.md)：修改完成后的最小充分验证与升级条件。
 - [`knowledge-publication.md`](knowledge-publication.md)：`feeds-hub → ai-handbook → blog` 的内容重构、公开导出与迁移合同。
 - [`handoffs/`](handoffs/)：跨仓库交接合同。
 - [`evals/routing.yaml`](evals/routing.yaml)：路由和边界回归案例。
+- [`evals/verification-budget.yaml`](evals/verification-budget.yaml)：验证预算回归案例。
 - [`chatgpt-project-instructions.md`](chatgpt-project-instructions.md)：ChatGPT Work 项目指令版本。
