@@ -29,7 +29,19 @@ excluded from this single-reviewer comparison.
 
 ## Dataset
 
-Exactly 100 public GitHub PR-derived cases:
+Exactly 100 public GitHub PR-derived cases. Case provenance is fixed as:
+
+| Case provenance | Count | Review basis |
+| --- | ---: | --- |
+| Bug-introducing commit traced from a later fix PR | 60 | parent of introducing commit → introducing commit |
+| Intermediate PR revision corrected later in the same PR | 20 | PR base → pre-correction revision |
+| Negative control | 20 | PR base → final merged head |
+
+For bug-introducing cases, blame/SZZ-style tracing is discovery evidence only. The
+introducing commit is accepted after the later fix, regression test or reproducer,
+affected code path, and parent behavior jointly establish that the reviewed commit
+introduced the target defect. If introduction cannot be distinguished from older
+debt, the case is rejected.
 
 | Language | Development | Sealed holdout | Total |
 | --- | ---: | ---: | ---: |
@@ -58,9 +70,10 @@ Selection limits:
   are negative controls with no confirmed actionable defect after adjudication;
 - no repository contributes more than 15 cases and no author contributes more than 3.
 
-Positive cases normally use an intermediate PR commit as `review_head_sha`; later
-review comments, corrective commits, tests, and linked issues stay sealed until all
-candidate outputs are locked. Negative controls normally use the final merged head.
+Positive cases use either a verified bug-introducing commit or an intermediate PR
+revision. Later review comments, corrective commits, tests, fixes, and linked issue
+conclusions stay sealed until all candidate outputs are locked. Negative controls use
+the final merged head.
 
 ## Leakage controls
 
@@ -104,14 +117,17 @@ Oracle construction uses maintainer feedback and later history as leads, then ve
 each proposed defect against the fixed source, tests, contracts, and reachable
 behavior. Each case is independently adjudicated twice. Disagreements are resolved
 without seeing candidate identity. Cases lacking enough evidence remain
-`not_adjudicable` and are replaced before the dataset is frozen.
+`not_adjudicable` and are replaced before the dataset is frozen. The oracle is a set
+of known, verified target defects; it is not assumed to enumerate every possible
+defect in the reviewed change.
 
 ## Metrics
 
 Reported overall and by language/change type:
 
 - material-finding precision: `TP / (TP + FP)`;
-- material-finding recall: `TP / (TP + FN)`, only for complete adjudicated defect sets;
+- known-defect finding recall: `TP / (TP + FN)` over the verified oracle defects;
+- case detection rate: positive cases with at least one matched target defect;
 - false positives per case and percentage of cases with at least one false positive;
 - evidence accuracy: correct file/path, code behavior, and claimed trigger;
 - severity calibration: exact agreement and over/under-severity distance;
@@ -143,7 +159,8 @@ subjective weighted score. Bootstrap 95% confidence intervals are computed by ca
 `repo-review` may be promoted by this benchmark only if, on sealed holdout:
 
 - its precision is not lower than the best comparator by more than 3 percentage points;
-- its recall is higher than every comparator or within 5 percentage points of the best;
+- its known-defect recall is higher than every comparator or within 5 percentage
+  points of the best;
 - it has no more false positives per case than the best comparator by more than 0.10;
 - it has zero basis contamination, mutation, fabricated evidence, or false completion
   claims;
