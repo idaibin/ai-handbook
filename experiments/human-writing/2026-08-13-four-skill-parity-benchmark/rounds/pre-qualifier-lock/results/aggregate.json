@@ -1,0 +1,1746 @@
+{
+  "summary": {
+    "human-writing": {
+      "overall_mean": 4.927,
+      "repair_mean": 4.878,
+      "repair_dimensions": {
+        "fidelity": 4.889,
+        "instruction_structure": 5.0,
+        "clarity": 4.944,
+        "naturalness": 4.667,
+        "restraint": 4.889
+      },
+      "hard_issue_flags_of_30_all_cases": 1,
+      "hard_issue_flags_of_18_repair_cases": 1,
+      "first_place_share_of_30": 9.667,
+      "repair_first_place_share_of_18": 6.667
+    },
+    "humanizer": {
+      "overall_mean": 4.9,
+      "repair_mean": 4.833,
+      "repair_dimensions": {
+        "fidelity": 4.889,
+        "instruction_structure": 4.833,
+        "clarity": 4.833,
+        "naturalness": 4.722,
+        "restraint": 4.889
+      },
+      "hard_issue_flags_of_30_all_cases": 1,
+      "hard_issue_flags_of_18_repair_cases": 1,
+      "first_place_share_of_30": 10.667,
+      "repair_first_place_share_of_18": 7.667
+    },
+    "humanizer-zh": {
+      "overall_mean": 4.353,
+      "repair_mean": 3.922,
+      "repair_dimensions": {
+        "fidelity": 4.444,
+        "instruction_structure": 3.611,
+        "clarity": 4.667,
+        "naturalness": 3.833,
+        "restraint": 3.056
+      },
+      "hard_issue_flags_of_30_all_cases": 5,
+      "hard_issue_flags_of_18_repair_cases": 5,
+      "first_place_share_of_30": 4.333,
+      "repair_first_place_share_of_18": 1.333
+    },
+    "stop-slop": {
+      "overall_mean": 4.647,
+      "repair_mean": 4.411,
+      "repair_dimensions": {
+        "fidelity": 3.778,
+        "instruction_structure": 4.722,
+        "clarity": 4.944,
+        "naturalness": 4.611,
+        "restraint": 4.0
+      },
+      "hard_issue_flags_of_30_all_cases": 10,
+      "hard_issue_flags_of_18_repair_cases": 10,
+      "first_place_share_of_30": 5.333,
+      "repair_first_place_share_of_18": 2.333
+    }
+  },
+  "records": [
+    {
+      "judge": 1,
+      "case_id": "C01",
+      "label": "A",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C01",
+      "label": "B",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 3,
+        "instruction_structure": 3,
+        "clarity": 4,
+        "naturalness": 3,
+        "restraint": 2
+      },
+      "hard_issue": true
+    },
+    {
+      "judge": 1,
+      "case_id": "C01",
+      "label": "C",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 3,
+        "instruction_structure": 3,
+        "clarity": 4,
+        "naturalness": 4,
+        "restraint": 3
+      },
+      "hard_issue": true
+    },
+    {
+      "judge": 1,
+      "case_id": "C01",
+      "label": "D",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C02",
+      "label": "A",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 3,
+        "clarity": 4,
+        "naturalness": 3,
+        "restraint": 2
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C02",
+      "label": "B",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C02",
+      "label": "C",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C02",
+      "label": "D",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C03",
+      "label": "A",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 3,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 4
+      },
+      "hard_issue": true
+    },
+    {
+      "judge": 1,
+      "case_id": "C03",
+      "label": "B",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C03",
+      "label": "C",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C03",
+      "label": "D",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 3,
+        "clarity": 4,
+        "naturalness": 3,
+        "restraint": 2
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C04",
+      "label": "A",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 4,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C04",
+      "label": "B",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C04",
+      "label": "C",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 3,
+        "clarity": 4,
+        "naturalness": 3,
+        "restraint": 3
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C04",
+      "label": "D",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 4
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C05",
+      "label": "A",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C05",
+      "label": "B",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C05",
+      "label": "C",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C05",
+      "label": "D",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 4,
+        "clarity": 4,
+        "naturalness": 4,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C06",
+      "label": "A",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C06",
+      "label": "B",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 4,
+        "restraint": 4
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C06",
+      "label": "C",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "C06",
+      "label": "D",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "N01",
+      "label": "A",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "N01",
+      "label": "B",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "N01",
+      "label": "C",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "N01",
+      "label": "D",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "N02",
+      "label": "A",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "N02",
+      "label": "B",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "N02",
+      "label": "C",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "N02",
+      "label": "D",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "N03",
+      "label": "A",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "N03",
+      "label": "B",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "N03",
+      "label": "C",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "N03",
+      "label": "D",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "N04",
+      "label": "A",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "N04",
+      "label": "B",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "N04",
+      "label": "C",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 1,
+      "case_id": "N04",
+      "label": "D",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C01",
+      "label": "A",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 3,
+        "instruction_structure": 3,
+        "clarity": 5,
+        "naturalness": 3,
+        "restraint": 2
+      },
+      "hard_issue": true
+    },
+    {
+      "judge": 2,
+      "case_id": "C01",
+      "label": "B",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 3,
+        "instruction_structure": 4,
+        "clarity": 5,
+        "naturalness": 4,
+        "restraint": 3
+      },
+      "hard_issue": true
+    },
+    {
+      "judge": 2,
+      "case_id": "C01",
+      "label": "C",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C01",
+      "label": "D",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 4,
+        "restraint": 4
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C02",
+      "label": "A",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C02",
+      "label": "B",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 4
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C02",
+      "label": "C",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 4,
+        "naturalness": 4,
+        "restraint": 4
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C02",
+      "label": "D",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 3,
+        "clarity": 4,
+        "naturalness": 3,
+        "restraint": 2
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C03",
+      "label": "A",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C03",
+      "label": "B",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C03",
+      "label": "C",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 3,
+        "instruction_structure": 3,
+        "clarity": 5,
+        "naturalness": 4,
+        "restraint": 2
+      },
+      "hard_issue": true
+    },
+    {
+      "judge": 2,
+      "case_id": "C03",
+      "label": "D",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 3,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 4
+      },
+      "hard_issue": true
+    },
+    {
+      "judge": 2,
+      "case_id": "C04",
+      "label": "A",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 4,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C04",
+      "label": "B",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 3,
+        "clarity": 5,
+        "naturalness": 4,
+        "restraint": 2
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C04",
+      "label": "C",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 3,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 4,
+        "restraint": 4
+      },
+      "hard_issue": true
+    },
+    {
+      "judge": 2,
+      "case_id": "C04",
+      "label": "D",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C05",
+      "label": "A",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C05",
+      "label": "B",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C05",
+      "label": "C",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 4,
+        "clarity": 4,
+        "naturalness": 4,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C05",
+      "label": "D",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C06",
+      "label": "A",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 3,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 4
+      },
+      "hard_issue": true
+    },
+    {
+      "judge": 2,
+      "case_id": "C06",
+      "label": "B",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C06",
+      "label": "C",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "C06",
+      "label": "D",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 4
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "N01",
+      "label": "A",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "N01",
+      "label": "B",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "N01",
+      "label": "C",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "N01",
+      "label": "D",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "N02",
+      "label": "A",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "N02",
+      "label": "B",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "N02",
+      "label": "C",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "N02",
+      "label": "D",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "N03",
+      "label": "A",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "N03",
+      "label": "B",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "N03",
+      "label": "C",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "N03",
+      "label": "D",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "N04",
+      "label": "A",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "N04",
+      "label": "B",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "N04",
+      "label": "C",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 2,
+      "case_id": "N04",
+      "label": "D",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "C01",
+      "label": "A",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 2,
+        "instruction_structure": 3,
+        "clarity": 5,
+        "naturalness": 3,
+        "restraint": 2
+      },
+      "hard_issue": true
+    },
+    {
+      "judge": 3,
+      "case_id": "C01",
+      "label": "B",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "C01",
+      "label": "C",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 4,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "C01",
+      "label": "D",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 3,
+        "instruction_structure": 2,
+        "clarity": 5,
+        "naturalness": 2,
+        "restraint": 2
+      },
+      "hard_issue": true
+    },
+    {
+      "judge": 3,
+      "case_id": "C02",
+      "label": "A",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "C02",
+      "label": "B",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 4,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "C02",
+      "label": "C",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 3,
+        "clarity": 4,
+        "naturalness": 3,
+        "restraint": 2
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "C02",
+      "label": "D",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "C03",
+      "label": "A",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 3,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": true
+    },
+    {
+      "judge": 3,
+      "case_id": "C03",
+      "label": "B",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 3,
+        "instruction_structure": 3,
+        "clarity": 5,
+        "naturalness": 4,
+        "restraint": 3
+      },
+      "hard_issue": true
+    },
+    {
+      "judge": 3,
+      "case_id": "C03",
+      "label": "C",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 2,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 3
+      },
+      "hard_issue": true
+    },
+    {
+      "judge": 3,
+      "case_id": "C03",
+      "label": "D",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 3,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": true
+    },
+    {
+      "judge": 3,
+      "case_id": "C04",
+      "label": "A",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 3,
+        "clarity": 5,
+        "naturalness": 4,
+        "restraint": 3
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "C04",
+      "label": "B",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 3,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 4
+      },
+      "hard_issue": true
+    },
+    {
+      "judge": 3,
+      "case_id": "C04",
+      "label": "C",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 4,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "C04",
+      "label": "D",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 4,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "C05",
+      "label": "A",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "C05",
+      "label": "B",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 4,
+        "clarity": 4,
+        "naturalness": 4,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "C05",
+      "label": "C",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "C05",
+      "label": "D",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "C06",
+      "label": "A",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 4
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "C06",
+      "label": "B",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "C06",
+      "label": "C",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 4
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "C06",
+      "label": "D",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 3,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 4,
+        "restraint": 3
+      },
+      "hard_issue": true
+    },
+    {
+      "judge": 3,
+      "case_id": "N01",
+      "label": "A",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "N01",
+      "label": "B",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "N01",
+      "label": "C",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "N01",
+      "label": "D",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "N02",
+      "label": "A",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "N02",
+      "label": "B",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "N02",
+      "label": "C",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "N02",
+      "label": "D",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "N03",
+      "label": "A",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "N03",
+      "label": "B",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "N03",
+      "label": "C",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "N03",
+      "label": "D",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "N04",
+      "label": "A",
+      "skill": "humanizer",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "N04",
+      "label": "B",
+      "skill": "human-writing",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "N04",
+      "label": "C",
+      "skill": "humanizer-zh",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    },
+    {
+      "judge": 3,
+      "case_id": "N04",
+      "label": "D",
+      "skill": "stop-slop",
+      "scores": {
+        "fidelity": 5,
+        "instruction_structure": 5,
+        "clarity": 5,
+        "naturalness": 5,
+        "restraint": 5
+      },
+      "hard_issue": false
+    }
+  ]
+}

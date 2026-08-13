@@ -1,0 +1,56 @@
+diff --git a/skills/human-writing/SKILL.md b/skills/human-writing/SKILL.md
+index 5c4b92c..afd92be 100644
+--- a/skills/human-writing/SKILL.md
++++ b/skills/human-writing/SKILL.md
+@@ -47,7 +47,7 @@ Do not use for translation-only work, fiction or poetry, imitation of a living a
+ Hard requirements:
+ 
+ - Never invent experience, incidents, users, metrics, dates, versions, benchmarks, quotations, testimonials, results, rankings, or attribution.
+-- Preserve uncertainty, modality, claim status, actor role, and exact commands, paths, flags, identifiers, versions, code, and numeric ranges.
++- Preserve uncertainty, modality, claim status, actor role, and scope-bearing qualifiers such as `mainly`, `usually`, `often`, `only`, `at least`, priority, and degree. Preserve exact commands, paths, flags, identifiers, versions, code, and numeric ranges.
+ - Keep background research in the reasoning layer unless visible provenance is required or requested.
+ - Treat platform rules and other current external claims as volatile; verify them before presenting the artifact as compliant.
+ - Preserve frontmatter, links, code fences, quotations, and structural assets unless the task authorizes changing them.
+diff --git a/skills/human-writing/references/eval-cases.md b/skills/human-writing/references/eval-cases.md
+index 37f6ac0..c554a34 100644
+--- a/skills/human-writing/references/eval-cases.md
++++ b/skills/human-writing/references/eval-cases.md
+@@ -57,6 +57,7 @@ the actual output; package validation alone does not establish writing quality.
+ | Iterative edit | New material is integrated into the cumulative artifact | The result exposes instruction history or append-only seams |
+ | Semantic-unit list | A main assertion stays with the condition, limit, exception, reason, or consequence needed to interpret it | Related clauses become orphaned bullets or the reader must reconstruct one claim across several items |
+ | Independent checklist | Parallel checks or steps remain separate when each stands alone | The rewrite merges distinct actions merely to reduce the item count |
++| Scope-bearing qualifier | Frequency, priority, exclusivity, extent, and lower-bound terms survive paraphrase and restructuring | A short qualifier such as `主要`, `通常`, `优先`, `仅`, or `至少` disappears and silently broadens or strengthens the claim |
+ | Legitimate surface form | A real correction, passive construction, three-item list, dash, or rhetorical question remains when it is the clearest supported form | A token-level anti-AI rule rewrites or deletes it without reader benefit |
+ | Semantic compression | Supported observation, mechanism, and judgment are separated when a slogan or metaphor obscures their status | The rewrite invents a mechanism or upgrades interpretation into fact |
+ | Edit permission | Diagnosis depth, rewrite intensity, and authorized scope remain separate | A local sentence edit silently restructures sections or deletes unique claims |
+@@ -128,3 +129,17 @@ Prompt:
+ Pass: return two bullets because the before-course and after-course actions occur at different stages and can be executed independently.
+ 
+ Reject: merge both actions merely because they concern the same course lifecycle, or drop either time boundary.
++
++### Qualifier lock during grouping
++
++Source:
++
++> 该恢复机制主要处理短时网络中断，通常不承担跨日任务的状态保存；必要时，调用方仍需自行持久化记录。
++
++Prompt:
++
++> 不增删事实，改成每项表达一个完整结论的条目列表。只返回成品。
++
++Pass: keep `主要`, `通常`, and the conditional caller responsibility while grouping the limitation with the responsibility it leaves to the caller.
++
++Reject: drop either qualifier, turn `通常不承担` into `不承担`, detach the caller duty, or invent a causal relation not stated by the source.
+diff --git a/skills/human-writing/references/fact-integrity.md b/skills/human-writing/references/fact-integrity.md
+index bc1bda3..7c9295e 100644
+--- a/skills/human-writing/references/fact-integrity.md
++++ b/skills/human-writing/references/fact-integrity.md
+@@ -118,7 +118,7 @@ Classify material claims as observed past, current state, committed plan, intend
+ 
+ When delegation matters, preserve who proposes, executes, checks, recommends, approves, accepts, or publishes. AI drafting, implementation, checking, or preliminary validation does not imply final approval, acceptance, publication, or accountability. Preserve the supplied authority model and do not invent an approver when none is established.
+ 
+-Modal terms are evidence-bearing. Preserve distinctions such as `我认为`, `可能`, `可以`, `应尽量`, `目标是`, `正在`, and `已经`. A smoother sentence that drops one of these terms may silently promote a principle into a guarantee, a capability into observed behavior, or a candidate into a commitment.
++Modal and scope-bearing terms are evidence-bearing. Preserve distinctions such as `我认为`, `可能`, `可以`, `应尽量`, `目标是`, `正在`, and `已经`, plus frequency, priority, exclusivity, extent, and lower-bound qualifiers such as `mainly`, `usually`, `often`, `first`, `only`, and `at least`. A smoother sentence that drops one of these terms may silently promote a principle into a guarantee, a capability into observed behavior, a primary use into an exclusive use, or a candidate into a commitment. During the fidelity pass, compare these short qualifiers explicitly; do not assume that retaining the surrounding noun and verb preserves scope.
+ 
+ ## Whole-Artifact And Internal-Consistency Audit
+ 

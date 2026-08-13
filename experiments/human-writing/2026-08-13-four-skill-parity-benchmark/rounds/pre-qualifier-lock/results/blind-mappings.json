@@ -1,0 +1,188 @@
+{
+  "1": {
+    "C01": {
+      "A": "human-writing",
+      "B": "humanizer-zh",
+      "C": "stop-slop",
+      "D": "humanizer"
+    },
+    "C02": {
+      "A": "humanizer-zh",
+      "B": "stop-slop",
+      "C": "humanizer",
+      "D": "human-writing"
+    },
+    "C03": {
+      "A": "stop-slop",
+      "B": "humanizer",
+      "C": "human-writing",
+      "D": "humanizer-zh"
+    },
+    "C04": {
+      "A": "humanizer",
+      "B": "human-writing",
+      "C": "humanizer-zh",
+      "D": "stop-slop"
+    },
+    "C05": {
+      "A": "human-writing",
+      "B": "humanizer-zh",
+      "C": "stop-slop",
+      "D": "humanizer"
+    },
+    "C06": {
+      "A": "humanizer-zh",
+      "B": "stop-slop",
+      "C": "humanizer",
+      "D": "human-writing"
+    },
+    "N01": {
+      "A": "stop-slop",
+      "B": "humanizer",
+      "C": "human-writing",
+      "D": "humanizer-zh"
+    },
+    "N02": {
+      "A": "humanizer",
+      "B": "human-writing",
+      "C": "humanizer-zh",
+      "D": "stop-slop"
+    },
+    "N03": {
+      "A": "human-writing",
+      "B": "humanizer-zh",
+      "C": "stop-slop",
+      "D": "humanizer"
+    },
+    "N04": {
+      "A": "humanizer-zh",
+      "B": "stop-slop",
+      "C": "humanizer",
+      "D": "human-writing"
+    }
+  },
+  "2": {
+    "C01": {
+      "A": "humanizer-zh",
+      "B": "stop-slop",
+      "C": "humanizer",
+      "D": "human-writing"
+    },
+    "C02": {
+      "A": "stop-slop",
+      "B": "humanizer",
+      "C": "human-writing",
+      "D": "humanizer-zh"
+    },
+    "C03": {
+      "A": "humanizer",
+      "B": "human-writing",
+      "C": "humanizer-zh",
+      "D": "stop-slop"
+    },
+    "C04": {
+      "A": "human-writing",
+      "B": "humanizer-zh",
+      "C": "stop-slop",
+      "D": "humanizer"
+    },
+    "C05": {
+      "A": "humanizer-zh",
+      "B": "stop-slop",
+      "C": "humanizer",
+      "D": "human-writing"
+    },
+    "C06": {
+      "A": "stop-slop",
+      "B": "humanizer",
+      "C": "human-writing",
+      "D": "humanizer-zh"
+    },
+    "N01": {
+      "A": "humanizer",
+      "B": "human-writing",
+      "C": "humanizer-zh",
+      "D": "stop-slop"
+    },
+    "N02": {
+      "A": "human-writing",
+      "B": "humanizer-zh",
+      "C": "stop-slop",
+      "D": "humanizer"
+    },
+    "N03": {
+      "A": "humanizer-zh",
+      "B": "stop-slop",
+      "C": "humanizer",
+      "D": "human-writing"
+    },
+    "N04": {
+      "A": "stop-slop",
+      "B": "humanizer",
+      "C": "human-writing",
+      "D": "humanizer-zh"
+    }
+  },
+  "3": {
+    "C01": {
+      "A": "stop-slop",
+      "B": "humanizer",
+      "C": "human-writing",
+      "D": "humanizer-zh"
+    },
+    "C02": {
+      "A": "humanizer",
+      "B": "human-writing",
+      "C": "humanizer-zh",
+      "D": "stop-slop"
+    },
+    "C03": {
+      "A": "human-writing",
+      "B": "humanizer-zh",
+      "C": "stop-slop",
+      "D": "humanizer"
+    },
+    "C04": {
+      "A": "humanizer-zh",
+      "B": "stop-slop",
+      "C": "humanizer",
+      "D": "human-writing"
+    },
+    "C05": {
+      "A": "stop-slop",
+      "B": "humanizer",
+      "C": "human-writing",
+      "D": "humanizer-zh"
+    },
+    "C06": {
+      "A": "humanizer",
+      "B": "human-writing",
+      "C": "humanizer-zh",
+      "D": "stop-slop"
+    },
+    "N01": {
+      "A": "human-writing",
+      "B": "humanizer-zh",
+      "C": "stop-slop",
+      "D": "humanizer"
+    },
+    "N02": {
+      "A": "humanizer-zh",
+      "B": "stop-slop",
+      "C": "humanizer",
+      "D": "human-writing"
+    },
+    "N03": {
+      "A": "stop-slop",
+      "B": "humanizer",
+      "C": "human-writing",
+      "D": "humanizer-zh"
+    },
+    "N04": {
+      "A": "humanizer",
+      "B": "human-writing",
+      "C": "humanizer-zh",
+      "D": "stop-slop"
+    }
+  }
+}

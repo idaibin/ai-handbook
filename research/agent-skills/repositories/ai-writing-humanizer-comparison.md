@@ -8,6 +8,8 @@
 
 针对对照实验暴露的语义单元拆分问题，另见[`语义单元后续实验`](../../../experiments/human-writing/2026-08-13-semantic-unit-followup/README.md)。该实验保留旧版/候选的重复运行、冻结 holdout、逐题裁决和所有探索性失败；结论仅为测得改善且仍有随机性，不支持升为 `stable`。
 
+最终同基准复测见[`四技能追平实验`](../../../experiments/human-writing/2026-08-13-four-skill-parity-benchmark/README.md)。该实验保存语义单元版、限定词预检失败、压缩契约复审和发布候选的原始结果；最终固定输出盲评测得 `human-writing` 4.789、Humanizer-zh 4.467，并且前者没有语义 hard issue。该结果支持“固定语料上达到同等水平”，不支持跨模型或跨文体的稳定领先。原始轮未暴露模型身份，后续轮使用 `gpt-5.6-sol`，所以跨轮分数变化不能单独归因于 Skill 修改。
+
 ## 结论
 
 帖子图片中的十项并不是十个同类、独立、经过验证的写作 Skill。固定 Git tree 审查后：
