@@ -48,5 +48,5 @@ comparison_basis:
   saved_intermediate_round: rounds/pre-qualifier-lock
   only_human_writing_changed_from_saved_intermediate: true
   final_human_writing_generation_is_fresh: true
-  comparison_outputs_reused_from_fixed_immediately_preceding_round: true
+  comparison_outputs_reused_from_earlier_fixed_same_model_generation: true
   all_final_judgments_are_fresh: true
