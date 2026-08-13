@@ -1,0 +1,117 @@
+schema_version: source-locks/v1
+date_basis: '2026-08-13'
+selection_seed: human-writing-corpus-v1-2026-08-13
+sources:
+  writingbench:
+    status: materialized
+    upstream: https://github.com/X-PLUG/WritingBench.git
+    revision: ae2d5176449b7b769815482641d35926f26793eb
+    path: benchmark_query/benchmark_all.jsonl
+    blob: 2d04c2d4c82f8c2d615e963393c7808f64b97129
+    content_sha256: 18fee37c645166eb2e206b36366b2e354265b1e4201db2c86e759e825eaddcbe
+    license: Apache-2.0
+    license_locator: https://github.com/X-PLUG/WritingBench/blob/ae2d5176449b7b769815482641d35926f26793eb/LICENSE
+    redistribution: review_required
+    attribution: X-PLUG/WritingBench at ae2d5176449b7b769815482641d35926f26793eb, Apache-2.0
+    third_party_material_review: required_before_publication
+    expected_rows: 1000
+    fields: [index, domain1, domain2, lang, query, checklist]
+  govreport:
+    status: locked_not_materialized
+    upstream: https://huggingface.co/datasets/ccdv/govreport-summarization
+    revision: 4e21184e01ae8017e2c036e180fe5e541fef60a0
+    dataset_version: '1.0.0'
+    content_sha256: null
+    license: CC-BY-4.0
+    license_locator: https://gov-report-data.github.io/
+    redistribution: allowed
+    expected_rows: 19463
+    fields: [id, report, summary]
+  dolly_15k:
+    status: locked_not_materialized
+    upstream: https://huggingface.co/datasets/databricks/databricks-dolly-15k
+    revision: bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a
+    dataset_version: '1.0'
+    content_sha256: null
+    license: CC-BY-SA-3.0
+    license_locator: https://huggingface.co/datasets/databricks/databricks-dolly-15k/blob/bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a/README.md
+    redistribution: allowed
+    expected_rows: 15011
+    fields: [instruction, context, response, category]
+  github_docs:
+    status: locked_not_materialized
+    upstream: https://github.com/github/docs.git
+    revision: 729fe5d6b03b2c9a01e91a8d203b4b4c349d300b
+    content_sha256: null
+    license: CC-BY-4.0
+    license_locator: https://github.com/github/docs/blob/729fe5d6b03b2c9a01e91a8d203b4b4c349d300b/LICENSE
+    redistribution: allowed
+    fields: [path, frontmatter, title, body]
+    include_paths: [content, data, assets]
+  mdn_content:
+    status: locked_not_materialized
+    upstream: https://github.com/mdn/content.git
+    revision: 8a10694edf44bde124fa8f18af65651855f632dc
+    content_sha256: null
+    license: CC-BY-SA-2.5-or-later
+    license_locator: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license
+    redistribution: allowed
+    fields: [path, frontmatter, title, body, code_blocks]
+    note: Prose and code blocks have different license rules; materialization must split them.
+  ntsb_aviation:
+    status: locked_not_materialized
+    upstream: https://data.ntsb.gov/avdata
+    revision: avall-2026-07-01
+    content_sha256: null
+    license: US-Public-Domain
+    license_locator: https://www.ntsb.gov/about/Policies/Pages/Policies.aspx
+    redistribution: allowed
+    fields: [event_id, narrative, probable_cause, findings]
+    note: Exclude text explicitly identified as third-party copyrighted material.
+  ifeval:
+    status: locked_not_materialized
+    upstream: https://huggingface.co/datasets/google/IFEval
+    revision: 966cd89545d6b6acfd7638bc708b98261ca58e84
+    content_sha256: null
+    license: Apache-2.0
+    license_locator: https://huggingface.co/datasets/google/IFEval/blob/966cd89545d6b6acfd7638bc708b98261ca58e84/README.md
+    redistribution: allowed
+    expected_rows: 541
+    fields: [key, prompt, instruction_id_list, kwargs]
+  natural_instructions:
+    status: locked_not_materialized
+    upstream: https://github.com/allenai/natural-instructions.git
+    revision: e0fd31052b21acea5bd95fb00253e1ee1f5d8259
+    release: v2.8
+    content_sha256: null
+    license: Apache-2.0
+    license_locator: https://github.com/allenai/natural-instructions/blob/e0fd31052b21acea5bd95fb00253e1ee1f5d8259/LICENSE
+    redistribution: review_required
+    expected_tasks: 1616
+    fields: [Definition, Positive_Examples, Negative_Examples, Instances]
+  govuk_content:
+    status: locked_not_materialized
+    upstream: https://content-api.publishing.service.gov.uk/
+    revision: snapshot-2026-08-13
+    content_sha256: null
+    license: OGL-UK-3.0
+    license_locator: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+    redistribution: review_required
+    fields: [content_id, document_type, public_updated_at, title, details]
+    note: Hash every item and exclude personal data, logos and identified third-party content.
+  openai_cookbook:
+    status: locked_not_materialized
+    upstream: https://github.com/openai/openai-cookbook.git
+    revision: 4a85c3018d20ceef48bf7549450c567896501bf9
+    content_sha256: null
+    license: MIT
+    license_locator: https://github.com/openai/openai-cookbook/blob/4a85c3018d20ceef48bf7549450c567896501bf9/LICENSE
+    redistribution: review_required
+    fields: [path, metadata, prose_cells]
+excluded_sources:
+  aeslc_enron:
+    reason: unknown license and personal/confidential-looking email content
+  x_twitter_text:
+    reason: text redistribution and deletion/access state are not stable
+  writing_preference_bench:
+    reason: conflicting Apache-2.0 metadata, ODC-BY body text, and research-use wording

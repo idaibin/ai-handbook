@@ -1,0 +1,77 @@
+experiment_id: human-writing-large-scale-benchmark-2026-08-13
+status: corpus_construction
+date_basis: 2026-08-13
+canonical_workflow:
+  repository: idaibin/ai-handbook
+  commit: 864ec7e30e139d18e45cae1d136c295129e1c872
+  path: workflows/ai-engineering-system
+design:
+  families: 12
+  cases_per_family: 100
+  development_cases_per_family: 80
+  development_batch_size: 10
+  sealed_holdout_cases_per_family: 20
+  skills: 4
+  judges_per_case: 3
+  final_headline_cases: 240
+skills:
+  human-writing:
+    repository: idaibin/skills
+    commit: 07d5a6bd21ff69d4bda5cc52b6cb316bbf80506c
+    tree: 43293945fda8a3a8b60f6cd2cd5488033fd6a6bb
+  humanizer:
+    repository: blader/humanizer
+    commit: 523374dee72d67c7b2b5f858ea0094ffda49c3ac
+  humanizer-zh:
+    repository: op7418/Humanizer-zh
+    commit: 91f3d394db8419c20d67ebe22a96cf8fee0a404b
+  stop-slop:
+    repository: hardikpandya/stop-slop
+    commit: 8da1f030185bdfe8471220585162991eaeb970e9
+sources:
+  writingbench:
+    repository: X-PLUG/WritingBench
+    commit: ae2d5176449b7b769815482641d35926f26793eb
+    path: benchmark_query/benchmark_all.jsonl
+    blob: 2d04c2d4c82f8c2d615e963393c7808f64b97129
+    license: Apache-2.0
+    inspected_rows: 1000
+    languages:
+      en: 555
+      zh: 445
+    use: broad generation and query-specific criteria candidate pool
+  additional_sources:
+    status: locked_not_materialized
+    required_for:
+      - source_grounded_rewrite
+      - summarization_and_synthesis
+      - task_delegation_and_planning
+      - collaboration_communication
+      - incident_and_operational_writing
+execution:
+  generation_model: fixed_before_first_batch
+  judge_model_families: exactly_three_distinct
+  judge_providers: at_least_two
+  sampling_parameters: fixed_and_recorded_if_exposed
+  detector_score_used: false
+  holdout_access: sealed_until_final_skill_freeze
+  state: corpus_wave_01_candidate_smoke_50
+corpus:
+  case_schema: case/v2
+  materialized_cases: 50
+  materialized_families: 5
+  deferred_families:
+    - F02
+    - F03
+    - F05
+    - F06
+    - F07
+    - F09
+    - F11
+  case_commitments: corpus/case-commitments.json
+  plan_slots: corpus/plan-slots.json
+  unmaterialized_plan_slots_are_case_commitments: false
+  publication_blocked_pending_third_party_review: true
+claims:
+  large_scale_result_available: false
+  parity_or_superiority_claim_allowed: false

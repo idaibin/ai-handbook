@@ -1,0 +1,66 @@
+{
+  "schema_version": "corpus-report/v1",
+  "status": "candidate_smoke_test_materialized",
+  "target_cases": 1200,
+  "materialized_cases": 50,
+  "pending_cases": 1150,
+  "materialized_wave": "local candidate smoke test; no family validity claim",
+  "case_file": "cases.wave-01.jsonl",
+  "case_file_distribution": "local_only_untracked_pending_third_party_review",
+  "rebuild_command": "WRITINGBENCH_PATH=/absolute/path/benchmark_all.jsonl python corpus/build_corpus.py --writingbench-path $WRITINGBENCH_PATH",
+  "case_commitments_file": "case-commitments.json",
+  "plan_slots_file": "plan-slots.json",
+  "case_file_sha256": "964d25802fee0846fdcc7499df5c500ecf812e41b2fda8444438a4d78e787ff9",
+  "family_counts": {
+    "F01": 10,
+    "F04": 10,
+    "F08": 10,
+    "F10": 10,
+    "F12": 10
+  },
+  "language_counts": {
+    "en": 25,
+    "zh": 25
+  },
+  "source_states": {
+    "writingbench": "materialized",
+    "govreport": "locked_not_materialized",
+    "dolly_15k": "locked_not_materialized",
+    "github_docs": "locked_not_materialized",
+    "mdn_content": "locked_not_materialized",
+    "ntsb_aviation": "locked_not_materialized",
+    "ifeval": "locked_not_materialized",
+    "natural_instructions": "locked_not_materialized",
+    "govuk_content": "locked_not_materialized",
+    "openai_cookbook": "locked_not_materialized"
+  },
+  "gates": {
+    "writingbench_hash": "pass",
+    "required_fields": "pass",
+    "case_schema_shape": "pass",
+    "materialized_exact_and_near_duplicate": {
+      "status": "pass",
+      "algorithm": "normalized-token-5gram-jaccard/v1",
+      "threshold": 0.92,
+      "comparisons": 1225,
+      "maximum_similarity": 0.004537
+    },
+    "cross_split_duplicate": "pending_holdout_not_materialized",
+    "holdout_prompt_exposure": "pass",
+    "source_lock_binding": "pass",
+    "plan_source_quotas": "pass",
+    "holdout_source_and_language_plan": "pass",
+    "third_party_redistribution_review": "pending_blocking_publication"
+  },
+  "selection_rejections": {
+    "near_duplicates_before_final_selection": 0,
+    "details": []
+  },
+  "limitations": [
+    "Only 50 WritingBench candidate smoke-test cases are materialized; construct validity is not claimed.",
+    "Deferred families: F02, F03, F05, F06, F07, F09, F11.",
+    "The 1150 remaining entries are plan slots, not case commitments.",
+    "Cross-split near-duplicate validation cannot complete until sealed holdout materialization.",
+    "Non-WritingBench sources remain locked but byte-level hashing and selection are pending."
+  ]
+}

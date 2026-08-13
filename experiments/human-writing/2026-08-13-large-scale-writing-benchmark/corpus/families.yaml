@@ -1,0 +1,98 @@
+schema_version: corpus-families/v1
+cases_per_family: 100
+development_cases: 80
+holdout_cases: 20
+first_wave_cases_per_family: 10
+language_target_per_100: {zh: 50, en: 50}
+near_duplicate_threshold: 0.92
+families:
+  F01:
+    name: AI and ML research writing
+    operation: draft
+    output_form: AI/ML research artifact
+    source_plan: {writingbench: 60, openai_cookbook: 20, mdn_content: 20}
+    writingbench:
+      domain1: [Academic & Engineering]
+      domain2: [Paper Outline, Abstract, Introduction, Contributions, Literature Review, Research Proposal]
+      query_regex: 'AI|artificial intelligence|machine learning|deep learning|neural|大模型|人工智能|机器学习|深度学习|神经网络'
+  F02:
+    name: Software engineering
+    operation: draft
+    output_form: engineering document
+    source_plan: {writingbench: 50, github_docs: 30, mdn_content: 20}
+    first_wave_status: deferred_no_fit
+    first_wave_reason: WritingBench technical-document labels include non-software engineering; strict bilingual software filters do not yield five cases per language.
+  F03:
+    name: Source-grounded rewrite
+    operation: rewrite
+    output_form: source-grounded rewrite
+    source_plan: {govreport: 40, github_docs: 30, mdn_content: 30}
+    first_wave_status: deferred_no_fit
+    first_wave_reason: WritingBench does not expose a reliable source/draft boundary for rewrite evaluation.
+  F04:
+    name: Blog and long-form article
+    operation: draft
+    output_form: long-form article
+    source_plan: {writingbench: 60, govuk_content: 20, github_docs: 20}
+    writingbench:
+      domain1: [Advertising & Marketing, Literature & Arts]
+      domain2: [Personal Blog, Marketing Commentary, Book Review, Film/TV Review, Prose]
+  F05:
+    name: Social post and thread
+    operation: adapt
+    output_form: social post
+    source_plan: {writingbench: 60, govuk_content: 40}
+    first_wave_status: deferred_no_fit
+    first_wave_reason: The Social Media Content subdomain has only two Chinese rows; slogans, promotional copy and greetings are not substituted for posts or threads.
+  F06:
+    name: Summarization and synthesis
+    operation: summarize
+    output_form: summary
+    source_plan: {govreport: 80, govuk_content: 20}
+    first_wave_status: deferred_no_fit
+    first_wave_reason: WritingBench has no standardized instruction/source boundary for atomic-claim summary gates.
+  F07:
+    name: Task delegation and planning
+    operation: structure
+    output_form: task brief
+    source_plan: {dolly_15k: 60, natural_instructions: 40}
+    first_wave_status: deferred_no_fit
+    first_wave_reason: Planning documents are not equivalent to delegated task briefs with owner/input/output/done conditions.
+  F08:
+    name: Product and business writing
+    operation: draft
+    output_form: product or business document
+    source_plan: {writingbench: 60, github_docs: 20, govuk_content: 20}
+    writingbench:
+      domain1: [Finance & Business]
+      domain2: [Product Proposal, User Research, Market Analysis, Market Research, Investment Analysis, Risk Management]
+  F09:
+    name: Collaboration communication
+    operation: adapt
+    output_form: collaboration message
+    source_plan: {writingbench: 50, dolly_15k: 30, govuk_content: 20}
+    first_wave_status: deferred_no_fit
+    first_wave_reason: Strict email, message, handoff and feedback filters do not yield five cases per language; reports and generic evaluations are not substituted.
+  F10:
+    name: Tutorial and education
+    operation: structure
+    output_form: tutorial or teaching material
+    source_plan: {writingbench: 40, mdn_content: 30, github_docs: 30}
+    writingbench:
+      domain1: [Education, Academic & Engineering]
+      domain2: [Lesson Plan, Curriculum Design, Teaching Materials, Educational Consulting, Coursework, Technical Documentation]
+  F11:
+    name: Incident and operational writing
+    operation: structure
+    output_form: incident or operational report
+    source_plan: {ntsb_aviation: 80, govuk_content: 20}
+    first_wave_status: deferred_no_fit
+    first_wave_reason: Generic reports do not establish incident chronology, evidence, cause uncertainty, and corrective actions.
+  F12:
+    name: Marketing and public copy
+    operation: draft
+    output_form: marketing copy
+    source_plan: {writingbench: 70, govuk_content: 30}
+    writingbench:
+      domain1: [Advertising & Marketing]
+      domain2: [Product Description, Promotional Copy, Brand Story, Sales Letter, Promotional Voiceover, Travel Guide]

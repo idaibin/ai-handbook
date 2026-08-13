@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/idaibin/ai-handbook/schemas/human-writing-judgment-v1.json",
+  "title": "Anonymous writing judgment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "judge_id", "provider", "model_family", "model_revision", "judge_prompt_sha256", "context_id", "packet_sha256", "cases"],
+  "properties": {
+    "schema_version": {"const": "judgment/v1"},
+    "judge_id": {"type": "string", "minLength": 1},
+    "provider": {"type": "string", "minLength": 1},
+    "model_family": {"type": "string", "minLength": 1},
+    "model_revision": {"type": "string", "minLength": 1},
+    "judge_prompt_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "context_id": {"type": "string", "minLength": 1},
+    "packet_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "cases": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["case_id", "candidates", "ranking"],
+        "properties": {
+          "case_id": {"type": "string", "minLength": 1},
+          "candidates": {
+            "type": "array", "minItems": 4, "maxItems": 4,
+            "items": {
+              "type": "object", "additionalProperties": false,
+              "required": ["label", "scores", "task_specific", "hard_issues", "evidence"],
+              "properties": {
+                "label": {"enum": ["A", "B", "C", "D"]},
+                "scores": {
+                  "type": "object", "additionalProperties": false,
+                  "required": ["fidelity", "instruction_structure", "clarity", "naturalness", "restraint"],
+                  "properties": {
+                    "fidelity": {"type": "integer", "minimum": 1, "maximum": 5},
+                    "instruction_structure": {"type": "integer", "minimum": 1, "maximum": 5},
+                    "clarity": {"type": "integer", "minimum": 1, "maximum": 5},
+                    "naturalness": {"type": "integer", "minimum": 1, "maximum": 5},
+                    "restraint": {"type": "integer", "minimum": 1, "maximum": 5}
+                  }
+                },
+                "task_specific": {
+                  "type": "array", "minItems": 1, "maxItems": 8,
+                  "items": {
+                    "type": "object", "additionalProperties": false,
+                    "required": ["criterion_id", "score"],
+                    "properties": {
+                      "criterion_id": {"type": "string", "minLength": 1},
+                      "score": {"type": "integer", "minimum": 1, "maximum": 5}
+                    }
+                  }
+                },
+                "hard_issues": {
+                  "type": "array",
+                  "items": {
+                    "type": "object", "additionalProperties": false,
+                    "required": ["type", "claim", "evidence", "material"],
+                    "properties": {
+                      "type": {"enum": ["omission", "addition", "scope", "modality", "actor", "status", "safety", "instruction"]},
+                      "claim": {"type": "string", "minLength": 1},
+                      "evidence": {"type": "string", "minLength": 1},
+                      "material": {"type": "boolean"}
+                    }
+                  }
+                },
+                "evidence": {"type": "string", "minLength": 1}
+              }
+            }
+          },
+          "ranking": {
+            "type": "array", "minItems": 1, "maxItems": 4,
+            "items": {
+              "type": "array", "minItems": 1, "maxItems": 4,
+              "items": {"enum": ["A", "B", "C", "D"]},
+              "uniqueItems": true
+            }
+          }
+        }
+      }
+    }
+  }
+}
