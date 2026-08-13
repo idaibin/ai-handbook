@@ -50,8 +50,13 @@ sources:
       - incident_and_operational_writing
 execution:
   generation_model: fixed_before_first_batch
-  judge_model_families: exactly_three_distinct
-  judge_providers: at_least_two
+  cost_policy: no_paid_api_or_paid_human_review
+  public_evaluation_basis:
+    - writingbench
+    - ifeval
+    - inspect_evals
+  judge_contexts: three_anonymous_current_environment_contexts
+  cross_provider_claim_allowed: false
   sampling_parameters: fixed_and_recorded_if_exposed
   detector_score_used: false
   holdout_access: sealed_until_final_skill_freeze

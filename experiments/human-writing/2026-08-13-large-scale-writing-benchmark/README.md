@@ -107,6 +107,14 @@ Raw third-party corpora may remain source-addressed rather than copied when redi
 
 ## Evaluation protocol
 
+This run uses only public evaluation resources and the current ChatGPT/Codex
+entitlement. It does not call paid APIs or hire paid reviewers. The public basis is
+[WritingBench](https://github.com/X-PLUG/WritingBench),
+[IFEval](https://github.com/google-research/google-research/tree/master/instruction_following_eval),
+and the open-source [Inspect Evals](https://github.com/UKGovernmentBEIS/inspect_evals)
+implementations. Public benchmark websites provide tasks, methods, code, and reference
+reports; they do not execute this four-Skill comparison for us.
+
 Each case has hard gates and quality criteria.
 
 Hard gates fail independently of prose preference:
@@ -117,7 +125,7 @@ Hard gates fail independently of prose preference:
 - no unsupported personal experience, metric, result, attribution, or authority;
 - exact no-op where the prompt explicitly requires preserving an already-effective artifact.
 
-Anonymous judges score fidelity, instruction/structure, clarity, naturalness, restraint, and task-specific criteria with frozen 1/3/5 anchors. Candidate positions use seeded balanced permutations. Every batch has at least three independent judge contexts; ties split first share. Hard-issue text is parsed separately from numeric quality.
+Anonymous judges score fidelity, instruction/structure, clarity, naturalness, restraint, and task-specific criteria with frozen 1/3/5 anchors. Candidate positions use seeded balanced permutations. Every batch has three fresh judge contexts; ties split first share. These are isolated contexts in one available environment, not independent providers. Hard-issue text is parsed separately from numeric quality.
 
 The headline report includes paired per-case differences, bootstrap 95% confidence intervals, win/tie/loss counts, hard-issue rates, and family macro-average. `human-writing` reaches parity with a comparison Skill only when:
 

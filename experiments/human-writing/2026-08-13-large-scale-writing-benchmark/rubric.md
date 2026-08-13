@@ -207,17 +207,18 @@ Length, extra headings, bullets, bold text, confident tone, and apparent detail 
 independent evidence of quality. Reference overlap is diagnostic only; alternative
 wording may receive full credit when it preserves content and satisfies the task.
 
-## 7. Position and human-review handling
+## 7. Position and review-calibration handling
 
 Judges must follow the seeded anonymous mapping supplied by the evaluator. At least 20%
 of cases receive a fresh swapped-order evaluation. If preference reverses after the
 swap, mark the pair/case `position_inconsistent`; do not average the contradiction into
 a confident win.
 
-Human reviewers apply the same leaves and hard gates. They must remain blinded to Skill
-identity and automated preference. Two independent reviews are required for selected
-cases, with a third adjudicator for material disagreement. Holdout review starts only
-after both holdout waves and all automated artifacts are locked.
+Fresh agent review contexts apply the same leaves and hard gates. They must remain
+blinded to Skill identity and automated preference. Two separate reviews are required
+for selected cases, with a third context adjudicating material disagreement. Holdout
+review starts only after both holdout waves and all automated artifacts are locked.
+This calibration is not evidence of human review or cross-provider independence.
 
 ## 8. Aggregation eligibility
 

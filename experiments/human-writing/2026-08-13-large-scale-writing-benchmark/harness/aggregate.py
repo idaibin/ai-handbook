@@ -98,19 +98,19 @@ def aggregate_bundles(bundles,gate_reports,root=ROOT,mode="development_partial",
         if not completion or completion.get("to")!="completed": raise ValidationError("completed holdout state lacks completion artifact commitment")
         completion_evidence=completion.get("evidence",{})
         expected_calibration={"schema_version","reviewed_case_ids","reviewer_records","disagreement_case_ids","adjudications","pairwise_agreement","weighted_kappa","position_consistency","calibration_sha256"}
-        if not isinstance(human_calibration,dict) or set(human_calibration)!=expected_calibration or hash_without(human_calibration,"calibration_sha256")!=human_calibration.get("calibration_sha256"): raise ValidationError("headline requires hash-valid human calibration report")
+        if not isinstance(human_calibration,dict) or set(human_calibration)!=expected_calibration or hash_without(human_calibration,"calibration_sha256")!=human_calibration.get("calibration_sha256"): raise ValidationError("headline requires hash-valid review calibration report")
         reviewed=human_calibration["reviewed_case_ids"]
-        if human_calibration["schema_version"]!="human-calibration/v1" or len(reviewed)<24 or len(reviewed)!=len(set(reviewed)) or len(human_calibration["reviewer_records"])<2 or human_calibration["pairwise_agreement"]<.75 or human_calibration["weighted_kappa"]<.50 or human_calibration["position_consistency"]<.90: raise ValidationError("human calibration completion thresholds not met")
-        if any(sum(case.startswith(f"F{i:02d}-H") for case in reviewed)<2 for i in range(1,13)): raise ValidationError("human calibration requires at least two reviewed cases per family")
+        if human_calibration["schema_version"]!="human-calibration/v1" or len(reviewed)<24 or len(reviewed)!=len(set(reviewed)) or len(human_calibration["reviewer_records"])<2 or human_calibration["pairwise_agreement"]<.75 or human_calibration["weighted_kappa"]<.50 or human_calibration["position_consistency"]<.90: raise ValidationError("review calibration completion thresholds not met")
+        if any(sum(case.startswith(f"F{i:02d}-H") for case in reviewed)<2 for i in range(1,13)): raise ValidationError("review calibration requires at least two reviewed cases per family")
         reviewer_ids=set()
         for record in human_calibration["reviewer_records"]:
-            if set(record)!={"reviewer_id","reviewed_case_ids","review_sha256"} or record["reviewer_id"] in reviewer_ids or set(record["reviewed_case_ids"])!=set(reviewed) or not re.fullmatch(r"[0-9a-f]{64}",record["review_sha256"]): raise ValidationError("human calibration reviewer record invalid")
+            if set(record)!={"reviewer_id","reviewed_case_ids","review_sha256"} or record["reviewer_id"] in reviewer_ids or set(record["reviewed_case_ids"])!=set(reviewed) or not re.fullmatch(r"[0-9a-f]{64}",record["review_sha256"]): raise ValidationError("review calibration record invalid")
             reviewer_ids.add(record["reviewer_id"])
         adjudicated={item["case_id"] for item in human_calibration["adjudications"] if set(item)=={"case_id","adjudicator_id","decision_sha256"} and re.fullmatch(r"[0-9a-f]{64}",item["decision_sha256"])}
-        if adjudicated!=set(human_calibration["disagreement_case_ids"]): raise ValidationError("human calibration disagreements require exact adjudication records")
+        if adjudicated!=set(human_calibration["disagreement_case_ids"]): raise ValidationError("review calibration disagreements require exact adjudication records")
         if splits!={"holdout"} or len(cases)!=240 or bootstrap_samples!=10000: raise ValidationError("headline requires complete 240-case holdout and 10000 bootstrap")
         if {sum(c.startswith(f"F{i:02d}-H") for c in cases) for i in range(1,13)}!={20}: raise ValidationError("headline needs 20 cases per family")
-        if set(reviewed)-cases: raise ValidationError("human calibration reviewed unknown holdout cases")
+        if set(reviewed)-cases: raise ValidationError("review calibration reviewed unknown holdout cases")
         actual_digest=complete_evidence_digest(bundles,gate_reports,swap_bundles or [],swap_gate_reports or [])
         if completion_evidence.get("case_ids_sha256")!=sha256_value(sorted(cases)) or completion_evidence.get("complete_240_case_artifact_sha256")!=actual_digest: raise ValidationError("holdout completion artifact/case commitment mismatch")
     rev=defaultdict(set)
@@ -182,7 +182,7 @@ def aggregate_bundles(bundles,gate_reports,root=ROOT,mode="development_partial",
         position["position_inconsistent_cases"]=sorted(cid for cid in swapped if base_leaders.get(cid)!=swap_leaders.get(cid))
     elif mode=="holdout_headline": raise ValidationError("headline requires swapped-order audit")
     todos=[]
-    if mode=="holdout_headline": todos.append("TODO: independently verify each reviewer_records.review_sha256 against the external blinded human-review artifact before publication; scaffold validation currently verifies shape, coverage, and digest syntax only.")
+    if mode=="holdout_headline": todos.append("TODO: verify each reviewer_records.review_sha256 against its blinded fresh-context review artifact before publication; this run does not claim human or cross-provider validation.")
     result={"schema_version":"aggregate/v2","mode":mode,"headline_eligible":mode=="holdout_headline","experiment_id":experiment,"batches":len(bundles),"cases":len(cases),"case_skill_rows":len(case_rows),"input_evidence_sha256":base_evidence_digest(bundles,gate_reports),"score_weights":WEIGHTS,"judge_aggregation":"median","summary":summary,"comparisons":comparisons,"position_audit":position,"publication_todos":todos}; result["aggregate_sha256"]=sha256_value(result); return result
 def main():
     p=argparse.ArgumentParser(); p.add_argument("--root",type=Path,default=ROOT); p.add_argument("--bundle",type=Path,action="append",required=True); p.add_argument("--gate-report",type=Path,action="append",required=True); p.add_argument("--swap-bundle",type=Path,action="append"); p.add_argument("--swap-gate-report",type=Path,action="append"); p.add_argument("--mode",choices=["development_partial","holdout_headline"],default="development_partial"); p.add_argument("--bootstrap-samples",type=int,default=10000); p.add_argument("--holdout-state",type=Path); p.add_argument("--human-calibration",type=Path); p.add_argument("--output",type=Path,required=True); a=p.parse_args()

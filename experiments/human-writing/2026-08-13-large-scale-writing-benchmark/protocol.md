@@ -47,7 +47,7 @@ wave manifest before any output is generated.
 After each complete 120-case development wave:
 
 1. validate artifacts and deterministic gates;
-2. finish anonymous judging and the required human review;
+2. finish anonymous judging and the required fresh-context review calibration;
 3. publish a failure taxonomy with exact case evidence;
 4. save twelve `family_slice` Reviews, each covering exactly the family's ten cases,
    then one unique `global_wave` decision covering their exact 120-case union;
@@ -161,13 +161,13 @@ valid answer.
 
 ## 7. Anonymous judge protocol
 
-Each case receives three independent judge evaluations. The required configuration is
-three distinct model families from at least two providers, with exact model revisions
-and prompts recorded. A single provider/model family in three contexts is not a
-cross-model evaluation and cannot satisfy the completion gate. If the required models
-are unavailable, execution pauses or the limitation is explicitly approved and human
-review is expanded to at least 20%; the result cannot be described as independently
-cross-model verified.
+Each case receives three anonymous judge evaluations in separate fresh contexts using
+the current ChatGPT/Codex entitlement. No paid API, paid evaluator, or paid human
+review is required or permitted for this run. Exact exposed model/runtime revisions
+and prompts are recorded; unavailable model metadata is recorded as `unknown` rather
+than inferred. These contexts reduce direct carry-over but are not independent model
+families or providers. The result must therefore be described as a fixed-environment
+comparison, never as independently cross-model or cross-provider verified.
 
 Judges see anonymous candidates `A-D`; they do not see Skill names, commits, stars,
 development history, prior scores, or expected rankings. Candidate positions are
@@ -178,32 +178,32 @@ evidence spans, and a complete ranking with ties allowed.
 At least 20% of cases, stratified by family and split, receive a swapped-order audit.
 The candidate order is reversed in a fresh judge context without revealing the first
 decision. A reversed preference is marked position-inconsistent and cannot be forced
-into a win; it enters human review. Holdout swap results remain sealed with all other
+into a win; it enters review calibration. Holdout swap results remain sealed with all other
 holdout evidence.
 
 The parser fails unless every expected candidate appears exactly once per judge/case,
 all scores are in range, mappings are bijective, rankings are complete, and hard-issue
 records are parseable.
 
-## 8. Human review
+## 8. Review calibration
 
-For each development wave, sample at least 12 cases (10%), stratified to include at
-least one case from every family. Add all deterministic/semantic hard issues, swapped-
-order reversals, high judge disagreements, malformed artifacts, and cases near a
-decision boundary.
+For each development wave, review at least 12 cases (10%) in fresh blinded agent
+contexts, stratified to include at least one case from every family. Add all
+deterministic/semantic hard issues, swapped-order reversals, high judge disagreements,
+malformed artifacts, and cases near a decision boundary.
 
 After the complete holdout is locked, review at least 24 holdout cases (10%), with at
-least two cases per family, plus all mandatory escalations. Two blinded reviewers
-independently inspect all four outputs for each selected case. A third reviewer
-adjudicates disagreements. Reviewers see the task, source evidence, constraints, and
-rubric, but not Skill identities or automated preferences.
+least two cases per family, plus all mandatory escalations. Two fresh blinded agent
+contexts independently inspect all four outputs for each selected case. A third fresh
+context adjudicates disagreements. Reviewers see the task, source evidence,
+constraints, and rubric, but not Skill identities or automated preferences.
 
-Report pairwise human agreement, weighted Cohen's kappa for ordinal leaves, judge-human
-preference agreement, and position consistency. The operational calibration targets
-are at least 75% judge-human pairwise agreement, weighted kappa at least 0.50, and 90%
-position consistency. These are experiment thresholds, not universal standards. If a
-target fails, automated preference claims are blocked until the disagreement is
-resolved or the result is explicitly limited to descriptive evidence.
+Report inter-context agreement, weighted Cohen's kappa for ordinal leaves, and
+position consistency. The operational calibration targets are at least 75% pairwise
+agreement, weighted kappa at least 0.50, and 90% position consistency. These are
+experiment thresholds, not universal standards. They do not establish human
+preference alignment. If a target fails, preference claims are blocked until the
+disagreement is resolved or the result is explicitly limited to descriptive evidence.
 
 ## 9. Aggregation and uncertainty
 
@@ -252,12 +252,12 @@ Stop or pause optimization when any condition holds:
   change;
 - a proposed change causes a critical fidelity regression; revert it;
 - corpus, judge, or mapping integrity fails; repair before continuing;
-- 80% of the approved budget is consumed before holdout starts; preserve the sealed
-  holdout rather than shrinking it;
-- a required cross-model judge or human-calibration gate is unavailable.
+- 80% of the available ChatGPT/Codex entitlement is consumed before holdout starts;
+  preserve the sealed holdout rather than shrinking it;
+- the current-entitlement judge contexts or review-calibration gate are unavailable.
 
 The experiment completes only after all 4,800 base outputs, 240 holdout three-judge
-records, position audits, human reviews, bootstrap results, exact revisions, manifests,
+records, position audits, fresh-context reviews, bootstrap results, exact revisions, manifests,
 and an independent integrity review are durably accessible. Until then, no large-scale
 parity or superiority claim is valid.
 

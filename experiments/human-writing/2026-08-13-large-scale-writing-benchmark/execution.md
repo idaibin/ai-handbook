@@ -24,9 +24,10 @@ The minimum generation and development-loop gap is now implemented:
 | accepted `human-writing` revision used by the next wave | hash-verified execution state transition |
 
 This is provider-neutral infrastructure, not evidence that any benchmark generation
-has run. No production adapter, credentials, 1,200-case corpus, judge workers, or
-human reviewers are bundled. Until those inputs exist, the large-scale result remains
-unavailable.
+has run. No production adapter, 1,200-case corpus, or judge workers are bundled. This
+run may use only the current ChatGPT/Codex entitlement: paid APIs and paid human
+review are outside scope. Until the remaining inputs exist, the large-scale result
+remains unavailable.
 
 ## Generation adapter contract
 
@@ -115,8 +116,9 @@ The following are external work, not implemented results:
 1. materialize and license-review all 1,200 cases;
 2. create and verify the four exact Skill snapshot bundles;
 3. configure a generation adapter and freeze its model contract;
-4. dispatch the three required cross-family judges and preserve their judgment files;
-5. obtain the required blinded human Review and adjudication artifacts;
+4. dispatch three fresh anonymous judge contexts in the current environment and
+   preserve their judgment files;
+5. obtain the required blinded agent Review and adjudication artifacts;
 6. persist large raw evidence as GitHub release assets or another content-addressed
    object store while keeping hashes and retrieval metadata in GitHub.
 

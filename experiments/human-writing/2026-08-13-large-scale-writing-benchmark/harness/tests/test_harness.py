@@ -16,7 +16,7 @@ from validate_review import validate_review, validate_wave_reviews
 SKILLS=["human-writing","humanizer","humanizer-zh","stop-slop"]
 REVS={s:str(i+1)*40 for i,s in enumerate(SKILLS)}
 GEN={"model_provider":"fixture-provider","model_family":"fixture-generator","model_revision":"fixture-v1","system_prompt_sha256":"a"*64,"decoding":{"temperature":0},"tool_access":"none","token_limit":4096,"retry_policy":"none"}
-JUDGES={"J01":("provider-a","family-a"),"J02":("provider-a","family-b"),"J03":("provider-b","family-c")}
+JUDGES={"J01":("current-entitlement","current-model"),"J02":("current-entitlement","current-model"),"J03":("current-entitlement","current-model")}
 def unlocked(revision):
     s={"schema_version":"holdout-state/v1","experiment_id":"e","state":"unlocked","candidate_revision":revision,"candidate_tree":"2"*40,"corpus_commitment_sha256":"a"*64,"events":[]}; s["state_sha256"]=sha256_value(s); return s
 def headline_evidence(case_ids,base,g,swap,sg):
@@ -79,10 +79,8 @@ class BlindJudgeGate(unittest.TestCase):
     with self.assertRaisesRegex(ValidationError,"task_id"): build_blind_bundle(self.cs,self.out,SKILLS,"fixture-exp","b",plan=bad_plan)
  def test_judge_metadata_diversity(self):
     js=[judgment(x) for x in self.packets]; validate_judge_diversity(js)
-    js[2]["provider"]="provider-a"
-    with self.assertRaisesRegex(ValidationError,"two providers"): validate_judge_diversity(js)
-    js=[judgment(x) for x in self.packets]; js[2]["model_family"]="family-a"
-    with self.assertRaisesRegex(ValidationError,"three distinct model families"): validate_judge_diversity(js)
+    js[2]["context_id"]=js[1]["context_id"]
+    with self.assertRaisesRegex(ValidationError,"three distinct contexts"): validate_judge_diversity(js)
  def test_schema_packet_and_hard_cap(self):
     j=judgment(self.packets[0]); validate_judgment(j,self.packets[0]); j["cases"][0]["candidates"][0]["hard_issues"]=[{"type":"scope","claim":"x","evidence":"y","material":False}]
     with self.assertRaisesRegex(ValidationError,"cap fidelity"): validate_judgment(j,self.packets[0])
