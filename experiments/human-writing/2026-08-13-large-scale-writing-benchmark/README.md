@@ -147,6 +147,10 @@ A weak batch score alone is not authorization to change the Skill. A change requ
 
 Full scope is at least 4,800 generated artifacts before retries, plus anonymous judgments. It is a multi-stage experiment, not one interactive turn. The harness must support content-addressed artifacts, resumable jobs, immutable batch manifests, atomic state transitions, and fail-closed validation before aggregation.
 
+The provider-neutral generation dispatcher, immutable receipt store, resume/accounting
+logic, and development Review state machine are documented in [execution.md](execution.md).
+Their presence does not mean that the production corpus or model runs have completed.
+
 GitHub is the durable evidence store for manifests, prompts permitted for redistribution, hashes, scripts, scores, review records, and compact artifacts. Large raw corpora or output bundles may be stored as release assets or external content-addressed objects, but GitHub must retain their checksums and retrieval contract. Google Drive is not the canonical benchmark store.
 
 ## Completion contract

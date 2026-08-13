@@ -23,10 +23,10 @@ per source, not inferred from a hosting platform.
 | Source ID | Fixed version | Rows / fields used | License | Redistribution | Intended use | Current state |
 | --- | --- | --- | --- | --- | --- | --- |
 | `writingbench` | commit `ae2d5176449b7b769815482641d35926f26793eb`, blob `2d04c2d4c82f8c2d615e963393c7808f64b97129` | 1,000; `index`, `domain1`, `domain2`, `lang`, `query`, `checklist` | Apache-2.0 | review required before publishing embedded material | bilingual broad writing prompts and per-case criteria | 50 candidate cases materialized locally |
-| `govreport` | Hugging Face revision `4e21184e01ae8017e2c036e180fe5e541fef60a0`; dataset release 1.0 | 17,517 train / 973 validation / 973 test; `id`, `report`, `summary` | CC BY 4.0 | allowed with attribution | long source-grounded summaries and rewrites | locked, bytes pending |
-| `dolly_15k` | revision `bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a`, dataset version 1.0 | 15,011; `instruction`, `context`, `response`, `category` | CC BY-SA 3.0 | allowed with attribution and ShareAlike | human-authored instructions, handoffs, collaboration briefs | locked, bytes pending |
-| `github_docs` | commit `729fe5d6b03b2c9a01e91a8d203b4b4c349d300b` | Markdown front matter, path, title, body | CC BY 4.0 for `assets`, `content`, `data`; MIT for code | allowed with attribution | product and technical documentation, tutorial adaptation | locked, bytes pending |
-| `mdn_content` | commit `8a10694edf44bde124fa8f18af65651855f632dc` | Markdown front matter, path, title, body; code blocks separated | CC BY-SA 2.5+ for prose; CC0/MIT rules for code examples | allowed only with per-part attribution | technical explanations and tutorials | locked, bytes pending |
+| `govreport` | Hugging Face revision `4e21184e01ae8017e2c036e180fe5e541fef60a0`; dataset release 1.0 | 17,517 train / 973 validation / 973 test; `id`, `report`, `summary` | CC BY 4.0 | allowed with attribution | long source-grounded summaries and rewrites | 200-row test slice downloaded, hashed, selector implemented |
+| `dolly_15k` | revision `bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a`, dataset version 1.0 | 15,011; `instruction`, `context`, `response`, `category` | CC BY-SA 3.0 | allowed with attribution and ShareAlike | human-authored instructions, handoffs, collaboration briefs | full JSONL downloaded, hashed, selector implemented |
+| `github_docs` | commit `729fe5d6b03b2c9a01e91a8d203b4b4c349d300b` | Markdown front matter, path, title, body | CC BY 4.0 for `assets`, `content`, `data`; MIT for code | source-specific review required | product and technical documentation, tutorial adaptation | archive downloaded and hashed; reader removes fenced code only |
+| `mdn_content` | commit `8a10694edf44bde124fa8f18af65651855f632dc` | Markdown front matter, path, title, body | CC BY-SA 2.5+ for prose; CC0/MIT rules for code examples | source-specific review required | technical explanations and tutorials | archive downloaded and hashed; reader removes fenced code only |
 | `ntsb_aviation` | official `avall.zip` snapshot dated 2026-07-01 | event ID, narrative, probable cause, findings and coded event fields | US federal public domain for NTSB-authored material | allowed; exclude identified third-party text | incident and operational writing | locator locked, bytes pending |
 | `ifeval` | Hugging Face revision `966cd89545d6b6acfd7638bc708b98261ca58e84` | 541; `key`, `prompt`, `instruction_id_list`, `kwargs` | Apache-2.0 | allowed with notice | deterministic constraint overlays and format gates | locked, bytes pending |
 | `natural_instructions` | release tag `v2.8`, commit `e0fd31052b21acea5bd95fb00253e1ee1f5d8259` | 1,616 task definitions; definition and instance input/output fields | Apache-2.0 | allowed with notice, subject to task-source metadata | task-spec diversity and instruction structure | locked, bytes pending |
@@ -77,6 +77,30 @@ that review completes, `review_required` is the controlling redistribution statu
 
 The local smoke test is a real, runnable 50-case WritingBench candidate pool, not the completed
 1,200-case corpus. F02, F03, F05, F06, F07, F09 and F11 were removed rather than filled
-with construct-invalid prompts. GovReport, Dolly, GitHub Docs, MDN, NTSB, IFEval and the other locked
-sources still require byte-level acquisition, hashing, field validation, license notice
-generation and deterministic selection before their planned slots can be emitted.
+with construct-invalid prompts. Acquired sources still require source-to-case
+construction, bilingual construct review, license notice generation and deterministic
+selection before their planned slots can be emitted. Sources not listed in the
+acquisition checkpoint remain byte-level pending.
+
+## 2026-08-13 acquisition checkpoint
+
+Byte acquisition is no longer the main blocker. Exact artifacts were downloaded and
+hash-locked for WritingBench, a 200-row GovReport test slice, Dolly 15K, IFEval,
+GitHub Docs, MDN Content, Natural Instructions, OpenAI Cookbook, and the three current
+NHTSA SGO incident CSV files. `corpus/acquisition-report.json` records byte sizes and
+hashes; raw archives remain gitignored cache inputs.
+
+`corpus/source_selectors.py` now implements hash-checked readers for WritingBench,
+GovReport, Dolly, GitHub Docs, MDN and NHTSA. It removes fenced Markdown code, never
+exposes reference responses, selects latest NHTSA report versions, and rejects
+CBI-marked NHTSA narratives. It is not a full Markdown parser: inline code and indented
+code can remain in GitHub Docs and MDN excerpts. Those two sources therefore stay
+blocked on source-specific prose/code license review before any case is materialized.
+
+This does **not** change the corpus completion count: 50 schema-valid smoke cases are
+still materialized. The missing work is now source-to-case construction, bilingual
+construct review, deterministic family allocation, and sealed holdout creation—not
+download availability. Natural Instructions and OpenAI Cookbook remain downloaded but
+unselected pending item-level provenance review. NHTSA reporting-entity narratives
+remain `locator_only` because publication by a federal agency does not make private
+submissions federal public-domain works.

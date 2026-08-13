@@ -20,6 +20,11 @@ def complete_evidence_digest(base_bundles,base_gates,swap_bundles,swap_gates)->s
     if not evidence["base"] or not evidence["swapped"]: raise ValidationError("complete evidence requires base and swapped artifacts")
     return sha256_value(evidence)
 
+def base_evidence_digest(base_bundles,base_gates)->str:
+    evidence={"schema_version":"base-evidence/v1","base":_artifact_rows("base",base_bundles,base_gates)}
+    if not evidence["base"]: raise ValidationError("base evidence requires at least one artifact bundle")
+    return sha256_value(evidence)
+
 def completion_evidence(candidate_revision:str,case_ids:set[str],base_bundles,base_gates,swap_bundles,swap_gates)->dict[str,str]:
     return {"complete_240_case_artifact_sha256":complete_evidence_digest(base_bundles,base_gates,swap_bundles,swap_gates),
             "case_ids_sha256":sha256_value(sorted(case_ids)),"candidate_revision":candidate_revision}

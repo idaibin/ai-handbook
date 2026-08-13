@@ -1,0 +1,30 @@
+{
+  "schema_version": "corpus-acquisition-report/v1",
+  "date_basis": "2026-08-13",
+  "status": "source_bytes_acquired_selectors_implemented_full_corpus_not_materialized",
+  "target_cases": 1200,
+  "materialized_cases": 50,
+  "candidate_sources": {
+    "writingbench": {"bytes": 14726077, "rows": 1000, "sha256": "18fee37c645166eb2e206b36366b2e354265b1e4201db2c86e759e825eaddcbe"},
+    "govreport_test": {"bytes": 10951668, "rows": 200, "sha256": "c5c962c492697a03bde8d2987198b8523bc5094491f994519b1819c6b93d7131"},
+    "dolly_15k": {"bytes": 13085339, "rows": 15011, "sha256": "2df9083338b4abd6bceb5635764dab5d833b393b55759dffb0959b6fcbf794ec"},
+    "ifeval": {"bytes": 207111, "rows": 541, "sha256": "6a85310ca8ce15eff755aa08a3a4ff931c7e273e7515ebb3c492ea85fd8288f2"},
+    "github_docs": {"bytes": 158012675, "archive_files": 13433, "sha256": "d448db1b1b638c95920addd62f6795153a0716e99ce8f1cab0d86fd719bd8c01"},
+    "mdn_content": {"bytes": 57601882, "archive_files": 16279, "sha256": "9cdad5982f9df85768bac6986ca88b761193a86312e79f2094d94e4525cd9483"},
+    "natural_instructions": {"bytes": 959303236, "archive_files": 1662, "sha256": "54a0a1e12da2e081985a40566cb8489b9b885ce3eb5df11dbc137521bae7e7fa"},
+    "openai_cookbook": {"bytes": 762155630, "archive_files": 3099, "sha256": "b413fa66a55f703e2ff4f33b63d5f5cc0737c2d48937d5f2f7beb998456db5aa"},
+    "nhtsa_incidents": {"bytes": 3901260, "files": 3, "combined_manifest_sha256": "c55e4fd7a6f4892a3092534f4edde428318700ec58509fa64e206cb3af19d9dd"}
+  },
+  "implemented_selectors": ["writingbench", "govreport", "dolly_15k", "github_docs", "mdn_content", "nhtsa_incidents"],
+  "blocking_gaps": [
+    "The full 1,200-case family allocator and bilingual transformation/translation layer are not implemented.",
+    "F02, F03, F05, F06, F07, F09 and F11 still have zero schema-valid cases; source bytes alone are not cases.",
+    "English-only source records require independent bilingual construct review before deriving Chinese cases.",
+    "GitHub Docs and MDN cleanup removes fenced code only; inline and indented code can remain, so source-specific prose/code license review blocks case materialization.",
+    "NHTSA narratives are submitted by reporting entities, so they remain locator-only; CBI-marked rows are excluded.",
+    "Holdout encryption and commitments must be produced only after all selectors and case contracts pass review.",
+    "Natural Instructions is downloaded but not selected because task-source metadata requires per-task licensing review.",
+    "OpenAI Cookbook is downloaded but not selected because per-file third-party inclusion review is pending."
+  ],
+  "completion_claim": false
+}

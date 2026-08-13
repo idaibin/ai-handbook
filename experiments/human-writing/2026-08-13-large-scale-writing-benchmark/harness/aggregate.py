@@ -8,7 +8,7 @@ from typing import Any
 from blind import verify_position_balance
 from common import DIMENSIONS, ROOT, ValidationError, hash_without, read_json, sha256_value, write_json
 from deterministic_gates import validate_gate_report
-from evidence import complete_evidence_digest
+from evidence import base_evidence_digest, complete_evidence_digest
 from validate_judgments import validate_judge_diversity, validate_judgment
 
 WEIGHTS={"fidelity":.30,"task_specific":.20,"instruction_structure":.15,"clarity":.10,"naturalness":.15,"restraint":.10}
@@ -183,7 +183,7 @@ def aggregate_bundles(bundles,gate_reports,root=ROOT,mode="development_partial",
     elif mode=="holdout_headline": raise ValidationError("headline requires swapped-order audit")
     todos=[]
     if mode=="holdout_headline": todos.append("TODO: independently verify each reviewer_records.review_sha256 against the external blinded human-review artifact before publication; scaffold validation currently verifies shape, coverage, and digest syntax only.")
-    result={"schema_version":"aggregate/v2","mode":mode,"headline_eligible":mode=="holdout_headline","experiment_id":experiment,"batches":len(bundles),"cases":len(cases),"case_skill_rows":len(case_rows),"score_weights":WEIGHTS,"judge_aggregation":"median","summary":summary,"comparisons":comparisons,"position_audit":position,"publication_todos":todos}; result["aggregate_sha256"]=sha256_value(result); return result
+    result={"schema_version":"aggregate/v2","mode":mode,"headline_eligible":mode=="holdout_headline","experiment_id":experiment,"batches":len(bundles),"cases":len(cases),"case_skill_rows":len(case_rows),"input_evidence_sha256":base_evidence_digest(bundles,gate_reports),"score_weights":WEIGHTS,"judge_aggregation":"median","summary":summary,"comparisons":comparisons,"position_audit":position,"publication_todos":todos}; result["aggregate_sha256"]=sha256_value(result); return result
 def main():
     p=argparse.ArgumentParser(); p.add_argument("--root",type=Path,default=ROOT); p.add_argument("--bundle",type=Path,action="append",required=True); p.add_argument("--gate-report",type=Path,action="append",required=True); p.add_argument("--swap-bundle",type=Path,action="append"); p.add_argument("--swap-gate-report",type=Path,action="append"); p.add_argument("--mode",choices=["development_partial","holdout_headline"],default="development_partial"); p.add_argument("--bootstrap-samples",type=int,default=10000); p.add_argument("--holdout-state",type=Path); p.add_argument("--human-calibration",type=Path); p.add_argument("--output",type=Path,required=True); a=p.parse_args()
     state=read_json(a.holdout_state) if a.holdout_state else None; calibration=read_json(a.human_calibration) if a.human_calibration else None

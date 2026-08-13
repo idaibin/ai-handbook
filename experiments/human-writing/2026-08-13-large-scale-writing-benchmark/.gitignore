@@ -1,0 +1,2 @@
+# Adapter stderr may contain credentials or provider diagnostics. Never commit it.
+/evidence/restricted-logs/

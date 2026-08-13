@@ -17,47 +17,58 @@ sources:
     expected_rows: 1000
     fields: [index, domain1, domain2, lang, query, checklist]
   govreport:
-    status: locked_not_materialized
+    status: materialized_candidate_pool
     upstream: https://huggingface.co/datasets/ccdv/govreport-summarization
     revision: 4e21184e01ae8017e2c036e180fe5e541fef60a0
     dataset_version: '1.0.0'
-    content_sha256: null
+    artifact: corpus/.cache/govreport-test-200.json
+    content_sha256: c5c962c492697a03bde8d2987198b8523bc5094491f994519b1819c6b93d7131
+    materialized_rows: 200
+    materialization_locator: https://datasets-server.huggingface.co/rows?dataset=ccdv/govreport-summarization&config=document&split=test&offset={0,100}&length=100
     license: CC-BY-4.0
     license_locator: https://gov-report-data.github.io/
     redistribution: allowed
     expected_rows: 19463
     fields: [id, report, summary]
   dolly_15k:
-    status: locked_not_materialized
+    status: materialized_candidate_pool
     upstream: https://huggingface.co/datasets/databricks/databricks-dolly-15k
     revision: bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a
     dataset_version: '1.0'
-    content_sha256: null
+    artifact: corpus/.cache/dolly.jsonl
+    content_sha256: 2df9083338b4abd6bceb5635764dab5d833b393b55759dffb0959b6fcbf794ec
     license: CC-BY-SA-3.0
     license_locator: https://huggingface.co/datasets/databricks/databricks-dolly-15k/blob/bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a/README.md
     redistribution: allowed
     expected_rows: 15011
     fields: [instruction, context, response, category]
   github_docs:
-    status: locked_not_materialized
+    status: materialized_candidate_pool
     upstream: https://github.com/github/docs.git
     revision: 729fe5d6b03b2c9a01e91a8d203b4b4c349d300b
-    content_sha256: null
+    artifact: corpus/.cache/github-docs.tar.gz
+    content_sha256: d448db1b1b638c95920addd62f6795153a0716e99ce8f1cab0d86fd719bd8c01
     license: CC-BY-4.0
     license_locator: https://github.com/github/docs/blob/729fe5d6b03b2c9a01e91a8d203b4b4c349d300b/LICENSE
-    redistribution: allowed
+    redistribution: review_required
     fields: [path, frontmatter, title, body]
     include_paths: [content, data, assets]
+    markdown_code_handling: fenced_code_removed_only
+    source_specific_license_review: required_before_case_materialization
+    note: Inline code and indented code can remain after the current Markdown cleanup; review each selected excerpt before materialization.
   mdn_content:
-    status: locked_not_materialized
+    status: materialized_candidate_pool
     upstream: https://github.com/mdn/content.git
     revision: 8a10694edf44bde124fa8f18af65651855f632dc
-    content_sha256: null
+    artifact: corpus/.cache/mdn-content.tar.gz
+    content_sha256: 9cdad5982f9df85768bac6986ca88b761193a86312e79f2094d94e4525cd9483
     license: CC-BY-SA-2.5-or-later
     license_locator: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license
-    redistribution: allowed
+    redistribution: review_required
     fields: [path, frontmatter, title, body, code_blocks]
-    note: Prose and code blocks have different license rules; materialization must split them.
+    markdown_code_handling: fenced_code_removed_only
+    source_specific_license_review: required_before_case_materialization
+    note: Prose and code have different license rules. The current cleanup removes fenced code only; inline and indented code can remain, so every selected excerpt requires source-specific review before materialization.
   ntsb_aviation:
     status: locked_not_materialized
     upstream: https://data.ntsb.gov/avdata
@@ -68,22 +79,38 @@ sources:
     redistribution: allowed
     fields: [event_id, narrative, probable_cause, findings]
     note: Exclude text explicitly identified as third-party copyrighted material.
+  nhtsa_incidents:
+    status: materialized_candidate_pool
+    upstream: https://www.nhtsa.gov/laws-regulations/standing-general-order-crash-reporting
+    revision: sgo-third-amendment-data-through-2026-06-15
+    content_sha256: c55e4fd7a6f4892a3092534f4edde428318700ec58509fa64e206cb3af19d9dd
+    files:
+      nhtsa-ads.csv: 6b0d8ab03b6029523c457339808946369ed5f01db070872fffe31ebe8f4e89f3
+      nhtsa-adas.csv: 3c6494d8fc5fdb81e532ddf83f571b3e1434f4df4da8386f4dee4698b53e154d
+      nhtsa-other.csv: c933eb65708fd78a6d9bd93d51b8d3f1a4055163ea46de71b57a7a46d53e5c9d
+    license: US-Public-Domain
+    license_locator: https://www.nhtsa.gov/about-nhtsa/policies-regulations
+    redistribution: locator_only
+    fields: [Report ID, Report Version, Report Month, Report Year, State, Narrative]
+    note: Reporting-entity narratives are not presumed US government works; keep locator-only and exclude CBI-marked rows.
   ifeval:
-    status: locked_not_materialized
+    status: materialized_auxiliary
     upstream: https://huggingface.co/datasets/google/IFEval
     revision: 966cd89545d6b6acfd7638bc708b98261ca58e84
-    content_sha256: null
+    artifact: corpus/.cache/ifeval.jsonl
+    content_sha256: 6a85310ca8ce15eff755aa08a3a4ff931c7e273e7515ebb3c492ea85fd8288f2
     license: Apache-2.0
     license_locator: https://huggingface.co/datasets/google/IFEval/blob/966cd89545d6b6acfd7638bc708b98261ca58e84/README.md
     redistribution: allowed
     expected_rows: 541
     fields: [key, prompt, instruction_id_list, kwargs]
   natural_instructions:
-    status: locked_not_materialized
+    status: downloaded_not_selected
     upstream: https://github.com/allenai/natural-instructions.git
     revision: e0fd31052b21acea5bd95fb00253e1ee1f5d8259
     release: v2.8
-    content_sha256: null
+    artifact: corpus/.cache/natural-instructions.tar.gz
+    content_sha256: 54a0a1e12da2e081985a40566cb8489b9b885ce3eb5df11dbc137521bae7e7fa
     license: Apache-2.0
     license_locator: https://github.com/allenai/natural-instructions/blob/e0fd31052b21acea5bd95fb00253e1ee1f5d8259/LICENSE
     redistribution: review_required
@@ -100,10 +127,11 @@ sources:
     fields: [content_id, document_type, public_updated_at, title, details]
     note: Hash every item and exclude personal data, logos and identified third-party content.
   openai_cookbook:
-    status: locked_not_materialized
+    status: downloaded_not_selected
     upstream: https://github.com/openai/openai-cookbook.git
     revision: 4a85c3018d20ceef48bf7549450c567896501bf9
-    content_sha256: null
+    artifact: corpus/.cache/openai-cookbook.tar.gz
+    content_sha256: b413fa66a55f703e2ff4f33b63d5f5cc0737c2d48937d5f2f7beb998456db5aa
     license: MIT
     license_locator: https://github.com/openai/openai-cookbook/blob/4a85c3018d20ceef48bf7549450c567896501bf9/LICENSE
     redistribution: review_required

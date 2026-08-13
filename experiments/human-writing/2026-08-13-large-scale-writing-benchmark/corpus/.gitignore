@@ -1,2 +1,5 @@
 # Raw prompts remain local until per-case third-party-material review is complete.
 cases.wave-01.jsonl
+.cache/
+holdout.key
+cases.holdout.decrypted.jsonl
