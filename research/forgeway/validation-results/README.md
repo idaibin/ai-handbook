@@ -1,5 +1,8 @@
 # Forgeway 验证结果与边界
 
+下表中的 `project-delivery-system@<commit>` 保留对应证据产生时的历史仓库 slug；当前
+canonical repository 是 `idaibin/forgeway`。
+
 本页是历史验证索引，不是 Forgeway 的运行时结果，也不把“源码存在”写成“完整
 交付完成”。每条记录都保留基线、证据类型和未验证项。
 

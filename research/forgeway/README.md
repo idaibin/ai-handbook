@@ -9,7 +9,7 @@
 这组文档记录“为什么收口到 Forgeway”以及当时能证明到哪一步。它不复制 Forgeway
 当前的 standards、schemas、workflows、templates 或 Skill 实现，也不为运行中的
 Forgeway 提供执行输入。Forgeway 的当前产品事实仍由
-`project-delivery-system` 仓库中的产品、标准、合同和 runtime 文档负责；本目录只
+`idaibin/forgeway` 仓库中的产品、标准、合同和 runtime 文档负责；本目录只
 保存研究、历史、决策背景和验证边界。
 
 ## 研究范围与证据规则
@@ -41,8 +41,9 @@ Forgeway 提供执行输入。Forgeway 的当前产品事实仍由
 
 ## 固定来源
 
-以下是本研究实际使用的主要来源。`project-delivery-system` 在本地仍是该仓库的目录
-名；这只是位置事实，不改变当前产品名称为 Forgeway 的结论。
+以下是本研究实际使用的主要来源。表中的 `project-delivery-system` 是这些 commit
+产生时的仓库 slug；当前 canonical repository 是 `idaibin/forgeway`，本地目录为
+`/Users/daibin/Codex/repos/forgeway`。历史标签保留旧 slug 以准确归属原始证据。
 
 | 来源 | 时间 / 基线 | 用途 |
 | --- | --- | --- |

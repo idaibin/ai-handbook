@@ -3,6 +3,9 @@
 本时间线按本地 Git 的可读 commit 编排。它描述源码和文档如何变化，不声称每个阶段
 都已经在真实项目中运行成功。
 
+下文 `project-delivery-system@<commit>` 是对应历史 commit 产生时的仓库 slug 与证据
+标签；当前 canonical repository 已改名为 `idaibin/forgeway`。
+
 ## 1. Platform Spec 脚手架
 
 **基线：** `project-delivery-system@6c5f234a8d3a7a3d46dca3a086bb8b3b6d55b348`，

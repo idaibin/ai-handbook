@@ -2,11 +2,11 @@
 
 ## 研究对象
 
-这里的“Platform Spec”指当前 `project-delivery-system` Git 历史中的初始阶段，固定
-基线为：
+这里的“Platform Spec”指当前 Forgeway Git 历史中的初始阶段；该阶段产生时仓库 slug
+仍为 `project-delivery-system`。固定基线为：
 
 ```text
-repository: /Users/daibin/Codex/repos/project-delivery-system
+repository: /Users/daibin/Codex/repos/forgeway
 commit: 6c5f234a8d3a7a3d46dca3a086bb8b3b6d55b348
 date: 2026-08-09 08:53 +08:00
 tree: README.md plus docs/ (five Markdown files)

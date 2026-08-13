@@ -1,5 +1,8 @@
 # Project Delivery System（PDS）历史
 
+本文件中的 `project-delivery-system@<commit>` 是 PDS 阶段产生时的历史仓库 slug 与
+证据标签；当前 canonical repository 是 `idaibin/forgeway`。
+
 ## 阶段定义
 
 PDS 是 Platform Spec 脚手架之后、Forgeway 品牌收口之前的产品阶段。主要固定来源：
