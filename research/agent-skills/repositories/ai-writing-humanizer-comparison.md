@@ -6,6 +6,8 @@
 
 后续真实对照实验：[`experiments/human-writing/2026-08-13-four-skill-benchmark/`](../../../experiments/human-writing/2026-08-13-four-skill-benchmark/README.md)。该实验保存十个固定来源案例、四个 Skill 的四十份盲测输出、三名匿名评委的逐例评分和可重跑聚合脚本；其结论替代本报告中仅有的四个代表性黑盒用例，后者不再作为横向排名证据。
 
+针对对照实验暴露的语义单元拆分问题，另见[`语义单元后续实验`](../../../experiments/human-writing/2026-08-13-semantic-unit-followup/README.md)。该实验保留旧版/候选的重复运行、冻结 holdout、逐题裁决和所有探索性失败；结论仅为测得改善且仍有随机性，不支持升为 `stable`。
+
 ## 结论
 
 帖子图片中的十项并不是十个同类、独立、经过验证的写作 Skill。固定 Git tree 审查后：

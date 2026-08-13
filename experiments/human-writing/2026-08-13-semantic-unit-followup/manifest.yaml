@@ -1,0 +1,38 @@
+experiment: human-writing-semantic-unit-followup
+date: 2026-08-13
+repositories:
+  ai_handbook:
+    repository: idaibin/ai-handbook
+    policy_basis: fb101496f52bbc1a403f825c8825622c080b3a42
+    experiment_branch: research/human-writing-semantic-unit-followup
+    experiment_commit: pending-publication
+  skills:
+    repository: idaibin/skills
+    baseline_commit: aa73fec2f8630886b7d60b066f1de4deff96b60a
+    baseline_tree: fba2a3cc569c99a15c24ea4e0c0b92067bd44eb0
+    candidate_branch: feat/human-writing-semantic-units
+    candidate_commit_local: 23b47664e3077c8324167e928df58e0d5398add1
+    candidate_commit_remote: aeb4a29e4f3646806542a5eb3891a44b91138f82
+    candidate_tree: 0a06fc4c122bd095cd6527c6102ed20239c26ffd
+runtime:
+  model: gpt-5.6-sol
+  reasoning_effort: high
+  isolated_fresh_contexts: true
+  temperature: not_exposed
+  seed: not_exposed
+holdout:
+  input_sha256: b76da422a60a5bfb76d6d3aa3cf731d15f29715ba8419c9347d5594269ef839f
+  criteria_sha256: 9a37bc7f9e3b01c420f9cf4cf8e15adf55398dee528a58df212f31c8d28d6434
+  baseline_passes: 9
+  candidate_passes: 14
+  decisions_per_variant: 18
+  candidate_revision: not_retained
+  evidence_class: observational_only
+closure:
+  baseline_commit: aa73fec2f8630886b7d60b066f1de4deff96b60a
+  candidate_commit: aeb4a29e4f3646806542a5eb3891a44b91138f82
+  baseline_passes: 3
+  candidate_passes: 13
+  decisions_per_variant: 18
+  preregistered: false
+status: pilot
