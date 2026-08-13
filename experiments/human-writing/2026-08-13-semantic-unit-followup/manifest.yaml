@@ -5,7 +5,7 @@ repositories:
     repository: idaibin/ai-handbook
     policy_basis: fb101496f52bbc1a403f825c8825622c080b3a42
     experiment_branch: research/human-writing-semantic-unit-followup
-    experiment_commit: pending-publication
+    experiment_snapshot_commit: 686402678b7da522ccf6c6cdd4d1c0be8abf6a88
   skills:
     repository: idaibin/skills
     baseline_commit: aa73fec2f8630886b7d60b066f1de4deff96b60a
