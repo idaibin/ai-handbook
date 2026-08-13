@@ -60,7 +60,9 @@ debt, the case is rejected.
 
 Selection limits:
 
-- 20-800 non-generated changed lines and no more than 30 changed files;
+- 5-800 non-generated changed lines and no more than 30 changed files;
+- size strata are fixed to 30 small cases (5-49 lines), 40 medium cases (50-199),
+  and 30 large cases (200-800), distributed across development and holdout;
 - immutable base and review-head SHAs must remain fetchable;
 - repository guidance and the smallest necessary caller/contract context must be
   available at the review head;
