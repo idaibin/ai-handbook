@@ -82,6 +82,7 @@
 - `experiments/`：固定输入、oracle、baseline/treatment、运行结果与应用案例。
 - `templates/`：来源和研究记录模板。
 - `workflows/`：AI Engineering System 的唯一权威工作流、存储规范、交接合同和评估。
+  当前图片设计流程见 [`workflows/image-design/`](workflows/image-design/README.md)。
 
 三仓库内容重构、公开知识模型和迁移边界见
 [`knowledge-publication.md`](workflows/ai-engineering-system/knowledge-publication.md)。

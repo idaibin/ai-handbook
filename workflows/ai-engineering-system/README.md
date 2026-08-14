@@ -216,6 +216,7 @@ AI 可以提出修改和生成候选补丁，但不能自己降低证据标准�
 - [`storage-policy.md`](storage-policy.md)：GitHub、Drive、Library、Sheets 的存储边界。
 - [`skill-validation.md`](skill-validation.md)：候选 Skill 的真实项目验证。
 - [`knowledge-publication.md`](knowledge-publication.md)：`feeds-hub → ai-handbook → blog` 的内容重构、公开导出与迁移合同。
+- [`../image-design/`](../image-design/README.md)：本地 UI 规范、生图、候选审查、组件实现与浏览器验收流程。
 - [`handoffs/`](handoffs/)：跨仓库交接合同。
 - [`evals/routing.yaml`](evals/routing.yaml)：路由和边界回归案例。
 - [`chatgpt-project-instructions.md`](chatgpt-project-instructions.md)：ChatGPT Work 项目指令版本。
