@@ -1,0 +1,36 @@
+domains:
+  - id: ai-engineering
+    name: AI Engineering
+    description: AI capability engineering including agents, skills, tools, workflows and evaluation.
+    capabilities:
+      - agent
+      - skills
+      - plugins
+      - mcp
+      - workflow
+      - harness
+      - evaluation
+
+  - id: ai-creative-media
+    name: AI Creative & Media
+    description: AI generated content and media production.
+    capabilities:
+      - image
+      - photography
+      - design
+      - video
+      - animation
+      - comic
+      - audio
+
+  - id: ai-product-experience
+    name: AI Product Experience
+    description: AI product design and user-facing experience.
+    capabilities:
+      - web
+      - desktop
+      - mobile
+      - ui
+      - ux
+      - design-system
+      - ai-interface
