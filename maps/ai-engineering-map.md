@@ -1,59 +1,235 @@
-# AI Engineering Map v0.2
+# AI Engineering Map v0.3
 
-## 能力地图
+## Purpose
 
-| 层 | Input | Output | 最低证据 | 典型失败 |
-| --- | --- | --- | --- | --- |
-| 0. 问题定义 | 用户任务、项目缺口、约束 | 可测目标、范围、失败条件 | 需求卡 + 反例 | 目标只有“研究一下”或“做个 Agent” |
-| 1. 来源发现 | 用户地址、Stars、搜索、官方索引 | 去重后的候选来源 | canonical identity + 来源角色 | 把链接数量当学习进度 |
-| 2. 阅读与汇总 | 固定版本主来源 | 原子结论、边界、冲突和开放问题 | locator + 阅读范围 | 搜索摘要或 README 标题替代阅读 |
-| 3. 知识图谱与方案 | 来源支持结论、项目上下文 | 概念关系、模式、方案和实践假设 | 事实/推断/假设分层 | AI 自动补全无证据节点 |
-| 4. 最小实验 | 可证伪假设、固定 fixture | baseline/treatment、oracle、结果 | 环境、命令、输入、输出 | 只展示单次成功或 mock 当运行时 |
-| 5. 评估与可靠性 | 失败案例、测试集、预算 | 可重复评估与边界结论 | 指标、阈值、负例、回归 | 没有 Non-Trigger 或失败判据 |
-| 6. 真实应用 | 已验证方法、目标仓库 | 代码或工作流变更、项目证据 | 固定 commit、构建测试、Review | 静态检查替代集成或部署 |
-| 7. 输出与复用 | 已验证知识和应用反馈 | Feed、知识产品、Skill、工程规范 | 回链证据 + 新任务复用 | 未经验证内容直接固化 |
+AI Engineering 研究如何让 AI 能力成为可组合、可验证、可复用的工程能力。
 
-## 系统路径
+核心问题：
 
-```text
-持续发现 ───────→ Source Inbox ──────┐
-                                      │ Pull
-真实项目缺口 / 用户委派 ──────────────┤
-                                      ▼
-固定阅读 → 汇总 → 知识图谱 → 实验 → 真实应用 → Review
-                                      │
-                 ┌────────────────────┼────────────────────┐
-                 ▼                    ▼                    ▼
-             feeds-hub      knowledge-distillation    idaibin/skills
-             实时信息          知识性对外输出            执行能力
-                 └────────────────────┬────────────────────┘
-                                      ▼
-                               实际反馈回 ai-handbook
-```
+> How AI works, acts and integrates into engineering systems.
 
-## 阶段门禁
+该领域不关注单一模型排名，而关注稳定能力、系统设计和真实验证。
+
+---
+
+## Capability Map
 
 ```text
-Gate 0：目标、Input、Output、范围和失败条件明确
-Gate 1：来源身份、版本和实际阅读范围可复核
-Gate 2：结论、边界、反例和未验证项分开记录
-Gate 3：实验可复跑，oracle 与失败判据冻结
-Gate 4：目标项目构建、测试或运行证据满足主张
-Gate 5：下游路由正确，权限和证据没有升级
-Gate 6：新任务复用或明确记录不适用、降级和回滚
+AI Engineering
+
+├── Model Capability
+│   ├── Reasoning
+│   ├── Generation
+│   ├── Multimodal
+│   └── Context Handling
+│
+├── Agent System
+│   ├── Agent Loop
+│   ├── Planning
+│   ├── Tool Calling
+│   ├── Memory
+│   └── Delegation
+│
+├── Skill System
+│   ├── Capability Packaging
+│   ├── Instruction Design
+│   ├── Trigger Rules
+│   └── Validation
+│
+├── Tool Integration
+│   ├── MCP
+│   ├── Plugins
+│   ├── APIs
+│   └── External Services
+│
+├── Workflow Engineering
+│   ├── Task Routing
+│   ├── Human Approval
+│   ├── State Management
+│   └── Automation
+│
+├── Harness Engineering
+│   ├── Environment Control
+│   ├── Context Injection
+│   ├── Evaluation Loop
+│   └── Safety Boundary
+│
+└── Evaluation
+    ├── Benchmark
+    ├── Fixture
+    ├── Regression
+    └── Production Evidence
 ```
 
-任何 Gate 未满足时，回到上一个有证据的层级，按缺口补来源、实验或项目验证；不以课程进度、Star 数或累计行数替代门禁。
+---
 
-## 仓库关系
+## Core Workflow
 
-| 对象 | 进入条件 | 权威产物 | 退出或反馈条件 |
-| --- | --- | --- | --- |
-| `ai-handbook` Source | 出现知识或信息缺口 | 来源卡、阅读证据、知识关系 | 已筛选、研究、淘汰或过期 |
-| `ai-handbook` Experiment | 存在可证伪假设 | fixture、oracle、运行结果、Review | 通过、失败或保留未验证边界 |
-| `feeds-hub` | 形成已核验实时事件 | Feed 数据记录 | 更正、过期或长期知识提升 |
-| `knowledge-distillation` | 有可追溯知识输入 | IR、课程、文章、卡片、媒体知识内容 | 发布、修订或反馈证据缺口 |
-| `idaibin/skills` | 方法稳定、可执行且有正负例 | 独立 Skill 包和行为评估 | pilot、stable、revise 或 deprecated |
-| 目标项目仓库 | 需要真实实现或运行验证 | 代码、测试、运行和部署事实 | 结果回链 Handbook |
+```text
+Problem Definition
+        ↓
+Capability Selection
+        ↓
+Source Research
+        ↓
+Knowledge Model
+        ↓
+Prototype
+        ↓
+Evaluation
+        ↓
+Real Project Integration
+        ↓
+Feedback
+```
 
-`ai-handbook` 是学习和治理控制面；`feeds-hub` 是实时信息输出；`knowledge-distillation` 是知识性对外输出；`skills` 是执行接口；目标项目是工程事实和运行证据所有者。
+---
+
+## Agent System Model
+
+```text
+User Intent
+    ↓
+Planning
+    ↓
+Tool Selection
+    ↓
+Execution
+    ↓
+Observation
+    ↓
+Artifact
+    ↓
+Review / Approval
+    ↓
+Commit
+```
+
+重点研究：
+
+- Agent architecture
+- Tool boundary
+- Permission model
+- State tracking
+- Human-in-the-loop
+
+---
+
+## Skill Model
+
+Skill 是稳定可复用能力的封装。
+
+标准生命周期：
+
+```text
+Research
+ ↓
+Pattern
+ ↓
+Skill Prototype
+ ↓
+Behavior Evaluation
+ ↓
+Stable Skill
+ ↓
+Maintenance
+```
+
+进入 `idaibin/skills` 前必须具备：
+
+- 明确输入输出；
+- 可重复执行；
+- 正负例；
+- 验证证据。
+
+---
+
+## MCP / Plugin / Tool Model
+
+关注：
+
+```text
+AI Model
+    ↓
+Tool Interface
+    ↓
+Permission Boundary
+    ↓
+External Capability
+    ↓
+Result Artifact
+```
+
+研究重点：
+
+- 接入方式
+- 权限控制
+- 数据边界
+- 错误恢复
+- 可观察性
+
+---
+
+## Harness Engineering
+
+Harness 负责提供 AI 执行环境。
+
+包括：
+
+- Context Assembly
+- Repository Access
+- Tool Configuration
+- Memory Strategy
+- Evaluation Hooks
+- Execution Constraints
+
+目标：
+
+让 AI 在确定环境中稳定完成任务。
+
+---
+
+## Evaluation Model
+
+任何 AI Engineering 能力必须区分：
+
+| 层级 | 证据 |
+| --- | --- |
+| Concept | 理论和文档 |
+| Prototype | 小规模实验 |
+| Validated | 可重复验证 |
+| Production | 真实项目证据 |
+
+评估关注：
+
+- Correctness
+- Reliability
+- Cost
+- Latency
+- Maintainability
+- Failure Boundary
+
+---
+
+## Related Projects
+
+当前关联：
+
+- `idaibin/skills`
+- `idaibin/forgeway`
+- `idaibin/feeds-hub`
+- `idaibin/rustzen-admin`
+
+---
+
+## Future Research
+
+后续逐步完善：
+
+- Agent Framework
+- Skill Ecosystem
+- MCP Ecosystem
+- Harness Patterns
+- AI Coding Workflow
+- Multi-Agent System
+- Evaluation Infrastructure
