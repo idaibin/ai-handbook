@@ -12,6 +12,10 @@ Provide a provider-neutral route for turning an idea or product requirement into
 
 This workflow is not a model catalogue. It separates creative intent, executable production, artifact evidence, and review.
 
+## Current ownership
+
+Forgeway is the mandatory lifecycle coordinator for both domains. Product UI and Creative outputs are recorded as `urn:forgeway:audience-artifact:v1` records; provider-specific generators, renderers and editors are replaceable capabilities. GitHub stores contracts and metadata, while private/large binaries remain in Google Drive. A separate Creative repository and a standalone Product UI Skill are not approved by default.
+
 ## Domain routing
 
 ### Creative & Media
@@ -132,6 +136,10 @@ High-level catalogues and model aggregators are discovery sources, not automatic
 - Do not replace existing project design systems automatically.
 - Do not make provider-specific API calls part of the core workflow before cost, access, licensing, and reproducibility are verified.
 - Do not promote this experimental workflow to a stable standard until it has been run on at least one real creative asset and one real product UI change.
+
+## Forgeway handoff
+
+Before generation, resolve the accepted Requirement plus Product UI authority or Creative brief. After generation, register exact hashes, dimensions/duration, provenance and opaque asset references. Apply class-specific review Gates and require publication readback. Product UI images remain candidates until interaction/browser evidence exists; event updates require factual sources and expiry.
 
 ## Promotion gate
 

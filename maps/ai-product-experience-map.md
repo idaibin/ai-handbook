@@ -116,4 +116,4 @@ Initial related projects:
 - rustzen-admin
 - feeds-hub
 
-Project relationships are managed through Registry.
+Project relationships are managed through Registry. Forgeway governs Product UI direction previews through the shared Audience-facing Artifact lifecycle, while target repositories remain authoritative for DESIGN.md, UI specs, components, implementation and browser/runtime evidence.

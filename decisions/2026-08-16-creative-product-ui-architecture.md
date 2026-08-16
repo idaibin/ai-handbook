@@ -1,123 +1,61 @@
 # Creative and Product UI Architecture Decision
 
 - Date: 2026-08-16
-- Status: Accepted for pilot
-- Scope: AI Creative & Media and Product UI design
-- Evidence basis: 19 public GitHub repositories, current architecture baseline, and six ImageGen pilot outputs
+- Corrected: 2026-08-17
+- Status: Accepted v1 implementation slice
+- Supersedes: the earlier same-day proposal for a separate `creative-workflows` repository
+- Evidence: 19 open-source repository benchmarks, six generated visual fixtures, Forgeway contract tests, GitHub commit `591a6ae12cc7ba246a3fec30db324aec24c3312f`, and Google Drive asset readback
 
 ## Decision
 
-### Creative
+Forgeway is the unified governance and delivery plane for Product UI and user-facing Creative content.
 
-Create a separate engineering repository, tentatively named `creative-workflows`.
+Creative includes image, photography, video, audio, poster and time-sensitive event updates such as sports/event briefs. Product UI includes visual directions, prototypes and implementation previews. Both are Audience-facing Artifacts because the end user sees or hears them.
 
-It owns:
+Forgeway owns Requirement/brief/spec references, artifact identity and versions, capability handoff, provenance, evidence, review, approval, publication and readback state. It does not store media bytes, provider credentials, target design tokens or target implementation truth.
 
-- provider-neutral creative briefs and artifact contracts;
-- style packs and prompt specifications;
-- storyboard, image, video, audio, and post-processing pipelines;
-- provider adapters;
-- deterministic renderers such as Remotion;
-- validation scripts and reproducible examples;
-- metadata, provenance, and review-package schemas.
+- Google Drive stores private and large source media, masters, variants and exports.
+- Target product repositories own their `DESIGN.md`, UI specs, components, implementation and runtime evidence.
+- Generation, editing, rendering, audio/video and browser capabilities remain replaceable Skills/adapters selected at runtime.
+- ai-handbook owns the cross-project map, Registry and this decision record.
 
-It does not own:
+## Why this supersedes the earlier decision
 
-- large generated media;
-- private source material;
-- provider credentials;
-- general-purpose Agent Skills;
-- project-specific product UI specifications.
+The earlier proposal confused execution dependency isolation with lifecycle ownership. Media runtimes can remain isolated adapters without creating a second orchestration product. Product UI and Creative share intent, style, version, provenance, evidence and publication semantics; duplicating those across repositories would create competing asset states.
 
-Large and private artifacts remain in Google Drive. Stable reusable execution entrypoints may later be published as thin Skills in `idaibin/skills`.
+They do not share one quality model. Forgeway applies class-specific Gates:
 
-Reason: Creative production has its own runtime dependencies, media pipelines, model/provider volatility, renderers, metadata, and validation requirements. Keeping it inside `ai-handbook` would turn governance into implementation; keeping it inside `forgeway` would couple software delivery to media-generation dependencies.
+- Product UI: target visual authority, states, responsiveness, accessibility and browser/desktop evidence when implementation is claimed.
+- Creative: brief fidelity, cross-format style consistency, technical quality, rights/safety and channel fitness.
+- Event updates: factual source closure and validity deadline.
+- Publication: target-specific readback evidence.
 
-### Product UI
+## Validated slice
 
-Do not create a standalone Product UI repository at this stage.
+The v1 contract accepted:
 
-Use three ownership layers:
+- one Creative set with portrait, square and landscape variants bound to one style contract;
+- three Forgeway Product UI direction candidates;
+- a reusable metadata template.
 
-1. `forgeway` owns the UI Spec contract, artifact lineage, status transitions, evidence references, and delivery gates.
-2. `idaibin/skills` owns a provider-neutral `product-ui` execution Skill after the pilot is verified.
-3. Each product repository owns its actual `DESIGN.md`, tokens, components, screenshots, Storybook, and implementation evidence.
+It rejected:
 
-The Product UI Skill should execute:
+- embedded binary payloads;
+- Creative kinds under Product UI class;
+- reviewed content without Evidence;
+- event updates without factual sources and expiry;
+- publication without target readback.
 
-Context -> UX flow -> design system -> visual directions -> selected target -> UI Spec -> implementation handoff -> browser verification -> review evidence.
+The Product UI candidates remain `generated`, not selected or reviewed. Static images do not prove interaction, responsive behavior, accessibility or implementation. The Creative style is provisional after one image campaign; video, audio, photography and repeated campaign tests remain required before stable brand promotion.
 
-Reason: Product UI is inseparable from product intent, component availability, repository conventions, runtime behavior, and implementation evidence. A separate repository would duplicate design-system facts and encourage screenshot-only design. Putting all instructions into UI Spec would overload the artifact contract with execution behavior. The correct split is contract in Forgeway, execution in a Skill, implementation facts in the target project.
+## Storage routing
 
-## Shared boundary
+GitHub uses opaque `asset://` identities plus hashes and metadata. The current private binary set is stored at:
 
-Creative and Product UI share a `Style Contract`, not a repository.
+`AI Engineering Lab/20-Media/Forgeway-Audience-Artifact-v1`
 
-Minimum shared fields:
+Private Drive URLs and credentials are not committed.
 
-- style_id and version;
-- palette and semantic roles;
-- typography;
-- spacing and grid;
-- materials and imagery rules;
-- motion principles;
-- prohibited patterns;
-- required output sizes;
-- verification checklist;
-- provenance.
+## Promotion rule
 
-Creative may consume a product Style Contract to generate campaign assets. Product UI may consume the same contract to keep UI and launch media visually coherent.
-
-## Pilot evidence
-
-Six images were generated with one visual baseline:
-
-- warm ivory base;
-- graphite structure;
-- muted vermilion signal;
-- fog-gray dividers;
-- precise grid;
-- tactile paper and restrained translucent layers.
-
-Three Creative outputs covered portrait, square, and landscape formats. Three Product UI outputs covered artifact navigation, visual comparison, and evidence-led document layouts.
-
-Observed result:
-
-- palette, materials, grid, and focal signal remained coherent across all outputs;
-- the style translated into product UI without requiring neon gradients or generic glassmorphism;
-- Product UI remained readable and implementable;
-- generated microcopy and dates are not reliable enough to become specifications without structured source data;
-- images verify visual direction only, not runtime behavior, accessibility, or implementation fidelity.
-
-## Promotion gates
-
-### Creative repository
-
-Create the repository after these are fixed:
-
-- repository name;
-- Style Contract v0.1;
-- Creative Brief schema;
-- Asset Manifest schema;
-- one deterministic image workflow;
-- one Remotion workflow;
-- output and review-package routing to Drive;
-- at least one executable validation script.
-
-### Product UI Skill
-
-Promote to `idaibin/skills` only after:
-
-- one visual direction is selected;
-- its UI Spec is represented in Forgeway;
-- one real project implements the selected target;
-- browser and responsive evidence are recorded;
-- failure recovery is exercised;
-- the Skill produces less duplication than project-local instructions.
-
-## Rejected alternatives
-
-- Put Creative inside ai-handbook: rejected because implementation dependencies and generated artifacts do not belong in the knowledge-governance repository.
-- Put Creative inside Forgeway: rejected because media generation is an optional production domain, not a core software-delivery dependency.
-- Put Product UI entirely in UI Spec: rejected because an artifact contract should describe required outcomes, not carry the whole execution method.
-- Create a Product UI repository now: rejected because no independent runtime or durable source of truth has been demonstrated.
+Do not create a separate Creative repository or Product UI Skill merely to organize content. Split only if executable runtime ownership, release cadence and non-Forgeway consumers are demonstrated. Until then, Forgeway coordinates replaceable capabilities through the Audience-facing Artifact workflow.

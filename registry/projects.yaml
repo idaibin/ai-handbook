@@ -26,12 +26,15 @@ projects:
     status: active
     domains:
       - ai-engineering
+      - ai-creative-media
       - ai-product-experience
     github:
       repository: idaibin/forgeway
     tags:
       - agent-workflow
       - artifact-system
+      - audience-artifacts
+      - creative-delivery
 
   - id: rustzen-admin
     type: product

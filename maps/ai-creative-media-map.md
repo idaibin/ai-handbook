@@ -114,6 +114,6 @@ Evaluation should consider:
 
 ## Related Projects
 
-No production project is currently assigned.
+- forgeway — unified brief/spec, generation handoff, rendition metadata, evidence, review and publication lifecycle for audience-facing Creative content.
 
-Future experiments and projects should be linked through Registry.
+Large/private media remains in Google Drive and is linked through Registry. Generator and renderer implementations remain replaceable capabilities rather than knowledge authority.

@@ -1,4 +1,27 @@
-relationships: []
+relationships:
+  - from:
+      type: project
+      id: forgeway
+    to:
+      type: asset
+      id: forgeway-creative-style-validation-v1
+    relation: indexes-asset
+
+  - from:
+      type: project
+      id: forgeway
+    to:
+      type: asset
+      id: forgeway-product-ui-directions-v1
+    relation: indexes-asset
+
+  - from:
+      type: workflow
+      id: ai-creative-product-experience
+    to:
+      type: project
+      id: forgeway
+    relation: uses
 
 # Controlled relationship verbs:
 # - uses
@@ -8,12 +31,3 @@ relationships: []
 # - distills-into
 # - depends-on
 # - derived-from
-
-# Example:
-# - from:
-#     type: research
-#     id: character-consistency
-#   to:
-#     type: experiment
-#     id: comic-exp-001
-#   relation: tested-by
