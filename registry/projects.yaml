@@ -1,0 +1,58 @@
+projects:
+  - id: ai-handbook
+    type: framework
+    status: active
+    domains:
+      - ai-engineering
+    github:
+      repository: idaibin/ai-handbook
+    tags:
+      - knowledge-system
+      - governance
+
+  - id: skills
+    type: library
+    status: active
+    domains:
+      - ai-engineering
+    github:
+      repository: idaibin/skills
+    tags:
+      - agent-skills
+      - workflow
+
+  - id: forgeway
+    type: product
+    status: active
+    domains:
+      - ai-engineering
+      - ai-product-experience
+    github:
+      repository: idaibin/forgeway
+    tags:
+      - agent-workflow
+      - artifact-system
+
+  - id: rustzen-admin
+    type: product
+    status: active
+    domains:
+      - ai-engineering
+      - ai-product-experience
+    github:
+      repository: idaibin/rustzen-admin
+    tags:
+      - desktop
+      - local-first
+
+  - id: feeds-hub
+    type: product
+    status: active
+    domains:
+      - ai-engineering
+      - ai-product-experience
+    github:
+      repository: idaibin/feeds-hub
+    tags:
+      - information-system
+      - ai-feed
