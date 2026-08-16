@@ -1,0 +1,17 @@
+assets: []
+
+# Asset references only.
+# Large files and private materials remain in Google Drive.
+# Example:
+#
+# - id: comic-exp-001
+#   type: media-bundle
+#   storage:
+#     provider: google-drive
+#     path: 30-Experiments/AI-Creative/comic-exp-001
+#   privacy: private
+#   metadata:
+#     engine: null
+#     version: null
+#     cost: null
+#     hash: null
