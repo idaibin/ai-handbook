@@ -1,0 +1,19 @@
+relationships: []
+
+# Controlled relationship verbs:
+# - uses
+# - implements
+# - tested-by
+# - indexes-asset
+# - distills-into
+# - depends-on
+# - derived-from
+
+# Example:
+# - from:
+#     type: research
+#     id: character-consistency
+#   to:
+#     type: experiment
+#     id: comic-exp-001
+#   relation: tested-by
