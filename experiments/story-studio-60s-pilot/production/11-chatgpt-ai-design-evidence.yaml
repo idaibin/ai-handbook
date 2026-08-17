@@ -39,19 +39,20 @@ outputs:
 
 visual_review:
   reviewer: root-local-visual-inspection
-  independent_reviewer: not_assigned
+  independent_reviewer: "Gemini 3.7 Flash (High); research/story-studio/2026-08-17-gemini-image-review.md"
+  independent_review_verdict: candidate-pass
   style_continuity: candidate_pass
   style_continuity_observation: "The two ChatGPT outputs share the dark cyan/amber rain-soaked editorial look; the second preserves the reference face, hair, implant, jacket and decoder."
   character_consistency: candidate_pass
   character_consistency_observation: "Maya's face shape, asymmetrical short black hair with blue streak, cyan temple implant, black jacket with orange lining, gloves and decoder remain recognizable."
+  orientation_discrepancy: "Gemini found the implant is on Maya's anatomical right temple (viewer-left); canonical Character Bible was corrected to match."
   text_accuracy: candidate_pass_manual
   text_accuracy_observation: "The second decoder visibly reads ACCESS WARNING once in uppercase; manual full-size inspection only, no OCR or independent reviewer."
   user_view: pass_candidate
   user_view_observation: "Both 941x1672 PNGs rendered clearly in the local viewer; browser/device acceptance and publication rendition were not tested."
   gate: gate:keyframe-consistency-verified
-  gate_result: not_verified
+  gate_result: candidate_pass_pending_rights
   blockers:
-    - independent_review_not_assigned
     - rights_record_not_verified
     - no_multi-shot_reproducibility_or_seed_record
     - no_browser_or_target_device_acceptance

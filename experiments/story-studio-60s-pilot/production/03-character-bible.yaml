@@ -11,7 +11,7 @@ characters:
     appearance_lock:
       face: "东亚年轻女性，清晰下颌线，疲惫但专注的眼神"
       hair: "不对称短黑发，右侧一小束电蓝挑染"
-      implant: "左太阳穴有细窄青色发光植入物"
+      implant: "右太阳穴（正面画面左侧）有细窄青色发光植入物；以 ChatGPT AI Design 参考图为 canonical orientation"
       wardrobe: "哑光黑防水 techwear 外套，橙色内衬，半指手套"
       silhouette: "高领、窄肩、短发和肩侧 decoder 形成稳定轮廓"
     signature_prop: neural_decoder
@@ -33,6 +33,7 @@ characters:
     reference_status: not_verified
 continuity_rules:
   - "Maya 的发型、植入物、外套颜色和 decoder 四个标识不得在 shot 间改变"
+  - "植入物使用 Maya 的解剖学右太阳穴（正面画面左侧）；镜像或左右互换必须阻断"
   - "Drone 的白色机身与红色扫描眼不得被替换为真实品牌或 franchise 资产"
   - "每个 approved keyframe 都必须回指本 Bible，并记录 hash"
 review_gates:

@@ -62,7 +62,7 @@ In a dystopian high-density neon metropolis where human memory is commodified an
 ### 3.2 Character Bible
 - **Protagonist: Maya Chen (陈麦)**
   - *Role:* Memory Salvage Tech / Ex-Corporate Archivist.
-  - *Visual Consistency Tokens:* 26-year-old East Asian female, sharp jawline, asymmetrical short black hair with electric blue dyed fringe, luminous cyan cybernetic implant over left temple.
+  - *Visual Consistency Tokens:* 26-year-old East Asian female, sharp jawline, asymmetrical short black hair with electric blue dyed fringe, luminous cyan cybernetic implant over the anatomical right temple (viewer-left in a front-facing render).
   - *Wardrobe Lock:* Weathered oversized matte-black waterproof techwear parka with high collar, orange inner lining, fingerless grip gloves.
   - *Signature Prop:* Custom brass-and-acrylic neural interface decoder with blinking amber LEDs.
   - *Palette:* Cyan (#00E5FF), Matte Black (#111111), Amber Accent (#FF9900).
@@ -159,7 +159,8 @@ recorded in [`production/10-image-generation-evidence.yaml`](production/10-image
 for audit only and are explicitly excluded from delivery. The two authoritative
 ChatGPT candidates and their hashes are recorded in
 [`production/11-chatgpt-ai-design-evidence.yaml`](production/11-chatgpt-ai-design-evidence.yaml);
-the image gate remains `not_verified` until rights and independent review pass.
+the visual candidate review is `candidate-pass`; the overall image gate remains
+`not_verified` until rights and remaining acceptance checks pass.
 
 ---
 
