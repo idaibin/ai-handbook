@@ -85,6 +85,9 @@ def validate_story_studio_pilot(root: Path, route_ids: set[str], projects: dict[
         raise RegistryError("story studio pilot: image surface must be chatgpt-ai-design")
     if generation_policy.get("codex_direct_image_generation") != "forbidden":
         raise RegistryError("story studio pilot: Codex direct image generation must be forbidden")
+    candidate_evidence = plan_path.parent / "production" / "11-chatgpt-ai-design-evidence.yaml"
+    if not candidate_evidence.is_file():
+        raise RegistryError("story studio pilot: ChatGPT AI Design candidate evidence is required")
 
     roles = plan.get("roles")
     if not isinstance(roles, dict) or not roles:

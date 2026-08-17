@@ -66,6 +66,9 @@ def validate_task_plan(plan_path: Path) -> dict[str, Any]:
         raise PilotValidationError("task plan: image_surface must be chatgpt-ai-design")
     if generation_policy.get("codex_direct_image_generation") != "forbidden":
         raise PilotValidationError("task plan: codex direct image generation must be forbidden")
+    candidate_evidence = plan_path.parent / "production" / "11-chatgpt-ai-design-evidence.yaml"
+    if not candidate_evidence.is_file():
+        raise PilotValidationError("task plan: ChatGPT AI Design candidate evidence is required")
 
     roles = data.get("roles")
     if not isinstance(roles, dict) or not roles:

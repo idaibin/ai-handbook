@@ -2,7 +2,7 @@
 
 - **Experiment ID:** `story-studio-60s-pilot`
 - **Product System:** Story Studio (`media-production-system`)
-- **Status:** `not_verified` (Plan and validation contract; historical Codex image probes are explicitly excluded; no approved image, repository, video/audio runtime or production workflow claimed)
+- **Status:** `not_verified` (Plan and validation contract plus two ChatGPT AI Design candidate outputs; historical Codex probes are excluded; no approved image, repository, video/audio runtime or production workflow claimed)
 - **Fixture:** synthetic fictional story; not a real event, person or production
 - **Authority:** `idaibin/ai-handbook/architecture/AI-ENGINEERING-LAB-ARCHITECTURE.md`
 - **Effective Date:** 2026-08-17
@@ -16,7 +16,7 @@ This document defines the complete end-to-end production specification for a 60-
 > [!IMPORTANT]
 > **Honest Verification Boundary:**
 > - This package is an **experiment-only design, prompt template library, and machine-readable task plan**.
-> - Two PNG image attempts exist only as excluded historical Codex direct-generation probes; they are not approved, not authoritative and cannot satisfy the image gate.
+> - Two historical Codex PNG probes are excluded; two ChatGPT AI Design PNG candidates are received but not approved by the independent image gate.
 > - **No video clips, audio tracks, subtitles or master render** have been generated or rendered.
 > - **No Story Studio repository** or execution runtime has been created.
 > - The 60-second pilot has **NOT** been run, passed, or verified in production.
@@ -143,10 +143,10 @@ TITLE CARD: CYBER-ECHOES: THE LAST SIGNAL — EPISODE 2 NEXT.
 
 ## 7. Character & Scene Reference Requirements
 
-- **Maya Character Reference Sheet:** Historical probes exist under
-  [`production/reference/`](production/reference/), but no approved reference exists.
-  The next authoritative attempt must be generated in ChatGPT AI Design and carry
-  session/model/prompt/rights/output metadata.
+- **Maya Character Reference Sheet:** Two candidate outputs from ChatGPT AI Design
+  now exist under [`production/reference/`](production/reference/) with conversation,
+  prompt, output hashes and visible completion evidence. No approved reference
+  exists until independent review and rights checks close.
 - **Environment Anchor Sheet:** The Sector 7 alley palette and composition rules are
   specified, but the reference asset and reproducibility parameters remain
   `not_verified` until an actual generation attempt is recorded.
@@ -154,10 +154,12 @@ TITLE CARD: CYBER-ECHOES: THE LAST SIGNAL — EPISODE 2 NEXT.
 ### 7.1 Image-generation policy and evidence
 
 Image generation is centralized in ChatGPT AI Design. Direct image generation in
-Codex is forbidden for this task. The two historical probes and their hashes are
+Codex is forbidden for this task. The historical probes and their hashes are
 recorded in [`production/10-image-generation-evidence.yaml`](production/10-image-generation-evidence.yaml)
-for audit only and are explicitly excluded from delivery. No image gate can pass
-until a ChatGPT AI Design export is received, hashed, rights-checked and reviewed.
+for audit only and are explicitly excluded from delivery. The two authoritative
+ChatGPT candidates and their hashes are recorded in
+[`production/11-chatgpt-ai-design-evidence.yaml`](production/11-chatgpt-ai-design-evidence.yaml);
+the image gate remains `not_verified` until rights and independent review pass.
 
 ---
 

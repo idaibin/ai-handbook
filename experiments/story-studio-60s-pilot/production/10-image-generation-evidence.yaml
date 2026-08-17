@@ -5,6 +5,7 @@ purpose: "Historical Codex direct-image probes retained for audit only; excluded
 provider: codex-built-in-imagegen
 policy_disposition: forbidden_surface
 authoritative_attempts: []
+superseded_by: production/11-chatgpt-ai-design-evidence.yaml
 model: not_exposed
 execution_date: "2026-08-17"
 attempts:

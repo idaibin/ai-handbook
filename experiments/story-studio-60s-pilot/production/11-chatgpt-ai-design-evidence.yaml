@@ -1,0 +1,57 @@
+schema_version: "1.0"
+artifact_id: story-studio-chatgpt-ai-design-evidence-v1
+status: candidate_pending_review
+provider: chatgpt
+project: AI Design
+project_id: g-p-6a7a70ed5ab08191b4d48f9139e1696c
+surface: ChatGPT Images / Create image
+transport: codex-in-app-browser
+conversation_id: 6a82e2cd-ca9c-83e9-a93a-2da4a0d5304f
+conversation_url: https://chatgpt.com/g/g-p-6a7a70ed5ab08191b4d48f9139e1696c-ai-design/c/6a82e2cd-ca9c-83e9-a93a-2da4a0d5304f
+visible_model: "Pro; response showed Pro thinking (underlying model not independently exposed)"
+mode_evidence: "Create image pill and provider-owned generated-image container were visible in the same conversation."
+completion_evidence: "Each response ended with a named generated-image button, the stop control disappeared, and the composer returned."
+rights_basis: synthetic-fiction-original; no living artist, franchise, brand, real-person or third-party reference
+rights_status: not_verified
+
+outputs:
+  - operation_order: 1
+    prompt_record: production/reference/prompts/chatgpt-ai-design-maya-reference-v1.txt
+    prompt_sha256: 7d0ff2b71674a9918f8d811306ac2802bfd5aba97e2733ef6fd152788547f954
+    provider_output_id: file_0000000044f08206a5cac422141eeb19
+    page_asset_id: 746c77624511d70d
+    provider_output_label: "Rainlit Cyberpunk Data Runner"
+    exported_path: production/reference/chatgpt-ai-design-maya-reference-v1.png
+    output_sha256: c1ff2fe80f0be268ec0e6f9693c24a038863aa1c3248cfb3ffb62466cfb1e77f
+    dimensions: 941x1672
+    media_type: image/png
+  - operation_order: 2
+    prompt_record: production/reference/prompts/chatgpt-ai-design-maya-shot-02-v1.txt
+    prompt_sha256: 849fff7e9cdf6f8091ed43a39ecdc1d763b5db8a836369b617cb58193c2bcae2
+    provider_output_id: file_000000006ce481fa81973bb53902d98a
+    page_asset_id: 4f22dd236438cde4
+    provider_output_label: "Rainy Cyberpunk Alley Operative"
+    exported_path: production/reference/chatgpt-ai-design-maya-shot-02-v1.png
+    output_sha256: 220bf23ed14f061c49de3455a319267bd6a3e40bb7cc0be650aff3b69bf4f894
+    dimensions: 941x1672
+    media_type: image/png
+    input_reference_sha256: c1ff2fe80f0be268ec0e6f9693c24a038863aa1c3248cfb3ffb62466cfb1e77f
+
+visual_review:
+  reviewer: root-local-visual-inspection
+  independent_reviewer: not_assigned
+  style_continuity: candidate_pass
+  style_continuity_observation: "The two ChatGPT outputs share the dark cyan/amber rain-soaked editorial look; the second preserves the reference face, hair, implant, jacket and decoder."
+  character_consistency: candidate_pass
+  character_consistency_observation: "Maya's face shape, asymmetrical short black hair with blue streak, cyan temple implant, black jacket with orange lining, gloves and decoder remain recognizable."
+  text_accuracy: candidate_pass_manual
+  text_accuracy_observation: "The second decoder visibly reads ACCESS WARNING once in uppercase; manual full-size inspection only, no OCR or independent reviewer."
+  user_view: pass_candidate
+  user_view_observation: "Both 941x1672 PNGs rendered clearly in the local viewer; browser/device acceptance and publication rendition were not tested."
+  gate: gate:keyframe-consistency-verified
+  gate_result: not_verified
+  blockers:
+    - independent_review_not_assigned
+    - rights_record_not_verified
+    - no_multi-shot_reproducibility_or_seed_record
+    - no_browser_or_target_device_acceptance

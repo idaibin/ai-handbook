@@ -13,6 +13,7 @@ generation_policy:
   codex_direct_image_generation: forbidden
   authoritative_output: "Only a ChatGPT AI Design export with prompt/session/model/rights metadata may enter the keyframe review gate."
   existing_codex_probe_disposition: excluded_non_authoritative
+  latest_candidate_evidence: production/11-chatgpt-ai-design-evidence.yaml
 
 roles:
   accountable_producer: Owns scope, budget, rights, final stop/go and publication authorization.
