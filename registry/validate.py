@@ -30,7 +30,7 @@ MANDATORY_PILOT_GATES = {
 }
 
 REQUIRED_PILOT_OUTPUTS = {
-    "05-keyframe-image-production": {"approved_keyframe_sha256s", "image_probe_records", "image_review_evidence"},
+    "05-keyframe-image-production": {"approved_keyframe_sha256s", "image_probe_records", "image_review_evidence", "ai_design_export_record"},
     "06-image-to-video-production": {"rendered_video_sha256s", "clip_probe_records", "motion_continuity_review"},
     "07-voice-music-and-effects-production": {"audio_sha256s", "loudness_and_peak_probe"},
     "08-subtitles-and-edit-timeline": {"subtitle_srt", "forced_alignment_json", "edit_timeline", "timeline_sync_review"},
@@ -78,6 +78,14 @@ def validate_story_studio_pilot(root: Path, route_ids: set[str], projects: dict[
     if plan.get("claimed_execution") is not False:
         raise RegistryError("story studio pilot: claimed_execution must remain false")
 
+    generation_policy = plan.get("generation_policy")
+    if not isinstance(generation_policy, dict):
+        raise RegistryError("story studio pilot: generation_policy is required")
+    if generation_policy.get("image_surface") != "chatgpt-ai-design":
+        raise RegistryError("story studio pilot: image surface must be chatgpt-ai-design")
+    if generation_policy.get("codex_direct_image_generation") != "forbidden":
+        raise RegistryError("story studio pilot: Codex direct image generation must be forbidden")
+
     roles = plan.get("roles")
     if not isinstance(roles, dict) or not roles:
         raise RegistryError("story studio pilot: accountable roles are required")
@@ -113,6 +121,8 @@ def validate_story_studio_pilot(root: Path, route_ids: set[str], projects: dict[
         missing_outputs = REQUIRED_PILOT_OUTPUTS.get(stage_id, set()) - set(stage.get("outputs", []))
         if missing_outputs:
             raise RegistryError(f"story studio pilot stage {stage_id}: missing verifiable outputs {sorted(missing_outputs)}")
+        if stage_id == "05-keyframe-image-production" and "generation_surface_not_chatgpt_ai_design" not in stop_conditions:
+            raise RegistryError("story studio pilot stage 05: ChatGPT AI Design surface stop condition is required")
 
     missing = MANDATORY_PILOT_GATES - declared_gates
     if missing:

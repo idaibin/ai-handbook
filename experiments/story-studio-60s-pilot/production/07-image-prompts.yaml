@@ -2,6 +2,9 @@ schema_version: "1.0"
 artifact_id: story-studio-image-prompts-v1
 status: not_verified
 adapter: provider-neutral-image-adapter
+required_surface: chatgpt-ai-design
+forbidden_surface: codex-direct-image-generation
+authoritative_export_requirements: [chatgpt_session_id, model, prompt_hash, reference_hashes, output_sha256, rights_record, probe]
 input_refs:
   - production/02-world-bible.yaml
   - production/03-character-bible.yaml

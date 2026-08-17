@@ -30,7 +30,7 @@ MANDATORY_GATES = [
 ]
 
 REQUIRED_ARTIFACT_OUTPUTS = {
-    "05-keyframe-image-production": {"approved_keyframe_pngs", "approved_keyframe_sha256s", "image_probe_records", "image_review_evidence"},
+    "05-keyframe-image-production": {"approved_keyframe_pngs", "approved_keyframe_sha256s", "image_probe_records", "image_review_evidence", "ai_design_export_record"},
     "06-image-to-video-production": {"rendered_video_clips", "rendered_video_sha256s", "clip_probe_records", "motion_continuity_review"},
     "07-voice-music-and-effects-production": {"audio_sha256s", "loudness_and_peak_probe", "pronunciation_and_mix_review"},
     "08-subtitles-and-edit-timeline": {"subtitle_srt", "forced_alignment_json", "edit_timeline", "subtitle_text_review", "timeline_sync_review"},
@@ -58,6 +58,14 @@ def validate_task_plan(plan_path: Path) -> dict[str, Any]:
 
     if data.get("claimed_execution") is not False:
         raise PilotValidationError("task plan: claimed_execution must be false")
+
+    generation_policy = data.get("generation_policy")
+    if not isinstance(generation_policy, dict):
+        raise PilotValidationError("task plan: generation_policy is required")
+    if generation_policy.get("image_surface") != "chatgpt-ai-design":
+        raise PilotValidationError("task plan: image_surface must be chatgpt-ai-design")
+    if generation_policy.get("codex_direct_image_generation") != "forbidden":
+        raise PilotValidationError("task plan: codex direct image generation must be forbidden")
 
     roles = data.get("roles")
     if not isinstance(roles, dict) or not roles:
@@ -95,6 +103,8 @@ def validate_task_plan(plan_path: Path) -> dict[str, Any]:
         missing_outputs = required_outputs - set(stage.get("outputs", []))
         if missing_outputs:
             raise PilotValidationError(f"stage {stage_id}: missing verifiable outputs {sorted(missing_outputs)}")
+        if stage_id == "05-keyframe-image-production" and "generation_surface_not_chatgpt_ai_design" not in stop_conditions:
+            raise PilotValidationError("stage 05: ChatGPT AI Design surface stop condition is required")
 
     gates_summary = set(data.get("gates_summary", []))
     missing_mandatory = set(MANDATORY_GATES) - declared_gates

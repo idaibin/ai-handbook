@@ -7,6 +7,13 @@ status: not_verified
 execution_mode: plan_and_validation_contract_only
 claimed_execution: false
 
+generation_policy:
+  image_surface: chatgpt-ai-design
+  required: true
+  codex_direct_image_generation: forbidden
+  authoritative_output: "Only a ChatGPT AI Design export with prompt/session/model/rights metadata may enter the keyframe review gate."
+  existing_codex_probe_disposition: excluded_non_authoritative
+
 roles:
   accountable_producer: Owns scope, budget, rights, final stop/go and publication authorization.
   story_writer: Owns positioning, world, characters, episode plan and script.
@@ -22,6 +29,7 @@ not_verified:
   - provider_and_model_selection
   - generation_rights_and_voice_permissions
   - image_and_video_generation
+  - chatgpt_ai_design_image_generation
   - audio_generation_and_mix
   - subtitle_and_timeline_render
   - master_playback
@@ -78,10 +86,10 @@ stages:
     name: Keyframe image production and consistency review
     owner: visual_operator
     review_owner: independent_reviewer
-    inputs: [shot_list, storyboard_frames_or_layout, character_bible, visual_reference_requirements]
-    outputs: [image_attempt_records, approved_keyframe_pngs, approved_keyframe_sha256s, image_probe_records, image_review_evidence]
+    inputs: [shot_list, storyboard_frames_or_layout, character_bible, visual_reference_requirements, chatgpt_ai_design_generation_record]
+    outputs: [image_attempt_records, approved_keyframe_pngs, approved_keyframe_sha256s, image_probe_records, image_review_evidence, ai_design_export_record]
     gates: [gate:keyframe-consistency-verified]
-    stop_conditions: [missing_attempt_metadata, character_drift, unreadable_required_text, dimensions_or_aspect_drift, image_review_failed]
+    stop_conditions: [generation_surface_not_chatgpt_ai_design, missing_attempt_metadata, character_drift, unreadable_required_text, dimensions_or_aspect_drift, image_review_failed]
     evidence_level: not_verified
     verified: false
 

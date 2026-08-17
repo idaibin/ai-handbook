@@ -1,12 +1,15 @@
 schema_version: "1.0"
 artifact_id: story-studio-image-generation-evidence-v1
-status: not_verified
-purpose: "Two bounded image-generation attempts for style, continuity and exact-copy inspection; not an approved keyframe set."
-provider: openai-built-in-imagegen
+status: excluded_non_authoritative
+purpose: "Historical Codex direct-image probes retained for audit only; excluded from Story Studio delivery after the ChatGPT AI Design-only policy was adopted."
+provider: codex-built-in-imagegen
+policy_disposition: forbidden_surface
+authoritative_attempts: []
 model: not_exposed
 execution_date: "2026-08-17"
 attempts:
   - attempt_id: imagegen-maya-reference-v1
+    disposition: excluded_non_authoritative
     mode: generate
     prompt_record: production/reference/prompts/maya-reference-v1.txt
     prompt_record_sha256: 07c6a6ee66e712df9d956e4b18eb27eca69269f6b8a9499d0a10e53fd1499bca
@@ -16,6 +19,7 @@ attempts:
     dimensions: 941x1672
     media_type: image/png
   - attempt_id: imagegen-maya-shot-02-v1
+    disposition: excluded_non_authoritative
     mode: generate-with-reference
     prompt_record: production/reference/prompts/maya-shot-02-v1.txt
     prompt_record_sha256: 3cda022c68da4a84e8ecc389e60a6719b307aeae87e964e9b9902499a52b96de
@@ -29,17 +33,19 @@ attempts:
 visual_review:
   reviewer: root-local-visual-inspection
   independent_reviewer: not_assigned
-  style_continuity: candidate_pass
-  style_continuity_observation: "Both frames preserve the dark cyan/amber rain-soaked editorial look and tactile grain; this is a two-frame candidate result, not a production consistency guarantee."
-  character_consistency: candidate_pass
-  character_consistency_observation: "Face shape, short black hair with blue streak, left-temple cyan implant, black jacket with orange lining, gloves and decoder remain recognizable across the two frames."
-  text_accuracy: candidate_pass_manual
-  text_accuracy_observation: "The decoder display visibly reads ACCESS WARNING once in uppercase; this was checked visually at full-size, not by OCR or a second reviewer."
-  user_view: pass_candidate
-  user_view_observation: "Both files are vertical 941x1672 PNGs and render clearly in the local image viewer; no browser/mobile/device acceptance test was run."
+  style_continuity: excluded
+  style_continuity_observation: "The two historical probes were visually inspected, but this observation is not releasable because the generation surface was forbidden."
+  character_consistency: excluded
+  character_consistency_observation: "The two historical probes are not eligible for the keyframe gate."
+  text_accuracy: excluded
+  text_accuracy_observation: "The visible copy was inspected historically, but no text-accuracy acceptance may be claimed from a forbidden surface."
+  user_view: excluded
+  user_view_observation: "Local rendering was observed historically; no user-view acceptance may be claimed."
   gate: gate:keyframe-consistency-verified
   gate_result: not_verified
   blockers:
+    - chatgpt_ai_design_generation_not_run
+    - codex_direct_probe_forbidden
     - independent_review_not_assigned
     - no_multi-shot_batch_or_seed_reproducibility_record
     - no_video_motion_or_audio_attempt
