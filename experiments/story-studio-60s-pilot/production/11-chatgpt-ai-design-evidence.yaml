@@ -1,6 +1,6 @@
 schema_version: "1.0"
 artifact_id: story-studio-chatgpt-ai-design-evidence-v1
-status: candidate_pass_pending_rights
+status: revise_pending
 provider: chatgpt
 project: AI Design
 project_id: g-p-6a7a70ed5ab08191b4d48f9139e1696c
@@ -42,6 +42,7 @@ visual_review:
   reviewer: root-local-visual-inspection
   independent_reviewer: "Gemini 3.7 Flash (High); research/story-studio/2026-08-17-gemini-image-review.md"
   independent_review_verdict: candidate-pass
+  grok_review: "research/story-studio/2026-08-17-grok-image-review.md; verdict=revise"
   style_continuity: candidate_pass
   style_continuity_observation: "The two ChatGPT outputs share the dark cyan/amber rain-soaked editorial look; the second preserves the reference face, hair, implant, jacket and decoder."
   character_consistency: candidate_pass
@@ -52,9 +53,11 @@ visual_review:
   user_view: pass_candidate
   user_view_observation: "Both 941x1672 PNGs rendered clearly in the local viewer; browser/device acceptance and publication rendition were not tested."
   gate: gate:keyframe-consistency-verified
-  gate_result: candidate_pass_pending_rights
+  gate_result: revise_pending
   reproducibility_record: conversational_reference_hash_chain
   reproducibility_status: not_verified
   blockers:
     - rights_record_not_verified
+    - grok_revision_required
+    - multi_angle_reference_missing
     - no_browser_or_target_device_acceptance

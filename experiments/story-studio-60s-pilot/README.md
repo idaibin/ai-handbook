@@ -159,8 +159,9 @@ recorded in [`production/10-image-generation-evidence.yaml`](production/10-image
 for audit only and are explicitly excluded from delivery. The two authoritative
 ChatGPT candidates and their hashes are recorded in
 [`production/11-chatgpt-ai-design-evidence.yaml`](production/11-chatgpt-ai-design-evidence.yaml);
-the visual candidate review is `candidate-pass`; the overall image gate remains
-`not_verified` until rights and remaining acceptance checks pass.
+Gemini's visual candidate review is `candidate-pass`, while Grok's realism review
+is `revise`; the overall image gate is `revise_pending` until the attention-risk
+revision, rights and remaining acceptance checks pass.
 
 ---
 
