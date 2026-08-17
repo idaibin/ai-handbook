@@ -7,12 +7,12 @@ assets:
       - ai-creative-media
     storage:
       provider: google-drive
-      path: 20-Media/Forgeway-Audience-Artifact-v1
+      path: 03_Createway/Templates
     privacy: private
     metadata:
       originating_contract: urn:forgeway:audience-artifact:v1
       target_product: createway
-      migration_status: pending-createway-contract
+      migration_status: drive-owner-path-applied-createway-contract-pending
       style_status: provisional
       members:
         - name: creative-portrait-v1.png
@@ -30,7 +30,7 @@ assets:
       - ai-product-experience
     storage:
       provider: google-drive
-      path: 20-Media/Forgeway-Audience-Artifact-v1
+      path: 05_Forgeway/Designs
     privacy: private
     metadata:
       contract: urn:forgeway:audience-artifact:v1
@@ -43,3 +43,27 @@ assets:
           sha256: ee442777e02f4dfdc49d473a12276b797b11409776015742015c9afe0dc0bc43
         - name: product-ui-evidence-desk-v1.png
           sha256: 40ef66117a9840fe694cd52513b374cd3ceb2d464c2bcc81fd3e6ba3f3237696
+
+  - id: ai-engineering-drive-product-layout
+    type: workspace-layout
+    status: applied-readback-verified
+    domains:
+      - ai-engineering
+    storage:
+      provider: google-drive
+      path: AI Engineering Lab
+    privacy: private
+    metadata:
+      observed_at: "2026-08-17"
+      preserves_existing_file_ids: true
+      readback_verified: true
+      revalidation_owner: ai-handbook-governance
+      refresh_condition: before-drive-mutation-or-architecture-delivery
+      folders:
+        - name: 00_Root
+        - name: 01_Shared
+        - name: 02_feeds-hub
+        - name: 03_Createway
+        - name: 04_Story-Studio
+        - name: 05_Forgeway
+        - name: 99_Archive

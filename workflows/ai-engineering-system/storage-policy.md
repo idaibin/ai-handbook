@@ -1,6 +1,6 @@
 # Storage And Canonicality Policy
 
-本文件定义 GitHub、Google Drive、ChatGPT Library、Project Sources 和 Google Sheets 的职责。当前变更只建立规范，不创建外部目录。
+本文件定义 GitHub、Google Drive、ChatGPT Library、Project Sources 和 Google Sheets 的职责。当前 Drive 目录已按产品系统迁移并回读；目录存在不代表对应产品已实现。
 
 ## 1. 权威存储矩阵
 
@@ -33,28 +33,49 @@ GitHub 中保存：
 - 密钥、Token、Cookie 或账号信息；
 - 无必要的大型二进制和重复生成资产。
 
-## 3. Google Drive 规划目录
+## 3. Google Drive 当前目录
 
-以下是后续安装时建议创建的目录；本规范提交本身不创建它们：
+以下目录已于 2026-08-17 建立并回读。现有资产按 owner 移动且保留 Google
+Drive file ID；旧结构保存在 `99_Archive/`：
+
+重验 owner 为 `ai-handbook` governance。每次 Drive 结构写入或架构交付前必须
+重新列出根目录和受影响 owner 目录；GitHub 只保存逻辑路径和状态，不保存私有
+Drive URL 或 folder ID。
 
 ```text
 AI Engineering Lab/
-├── 00-Inbox/
-├── 10-Sources/
-│   ├── Public-Snapshots/
-│   ├── Private-Licensed/
-│   ├── Courses/
-│   └── Papers-And-Books/
-├── 20-Media/
-│   ├── Images/
-│   ├── Video/
-│   └── Audio/
-├── 30-Datasets/
-├── 40-Exports/
-│   ├── Sheets/
-│   ├── Reports/
-│   └── Review-Packages/
-└── 90-Archive/
+├── 00_Root/
+│   ├── README — AI Engineering Lab Drive
+│   ├── AI Engineering Registry
+│   └── Inbox/
+├── 01_Shared/
+│   ├── Knowledge-System/
+│   ├── Writing-System/
+│   ├── Visual-System/
+│   ├── Workflow-System/
+│   └── Evaluation-System/
+├── 02_feeds-hub/
+│   ├── Sources/
+│   ├── Feeds/
+│   ├── Research/
+│   └── Insights/
+├── 03_Createway/
+│   ├── Articles/
+│   ├── Social/
+│   └── Templates/
+├── 04_Story-Studio/
+│   ├── IP/
+│   ├── Characters/
+│   ├── Scripts/
+│   ├── Storyboards/
+│   ├── Media/
+│   └── Courses/
+├── 05_Forgeway/
+│   ├── Specs/
+│   ├── Designs/
+│   ├── Reviews/
+│   └── Delivery-Evidence/
+└── 99_Archive/
 ```
 
 命名规则：
@@ -69,6 +90,13 @@ AI Engineering Lab/
 ai-handbook__snapshot__github-source-catalog__2026-08-03__v01.xlsx
 knowledge-distillation__output__lesson-001-cards__2026-08-03__v02.zip
 ```
+
+迁移边界：
+
+- 原 `10-Sources` 保留 ID 并成为 `02_feeds-hub/Sources`；Daily Feed 快照进入 `Feeds`；Deep Research Docs 进入 `Research`。
+- Forgeway Creative 历史图片进入 `03_Createway/Templates`，Product UI 图片进入 `05_Forgeway/Designs`，原始哈希与历史合同不改写。
+- Review Packages 进入 `01_Shared/Evaluation-System`；Repository Snapshots 与旧空结构进入 `99_Archive`。
+- Story Studio 目录目前为空资产结构；Pilot media、成本、质量和发布仍为 `Not verified`。
 
 GitHub 中只保存类似以下索引：
 

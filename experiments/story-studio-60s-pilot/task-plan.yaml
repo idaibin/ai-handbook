@@ -1,0 +1,154 @@
+schema_version: "1.0"
+plan_id: story-studio-60s-pilot
+title: Story Studio 60-Second Pilot Experiment Plan
+route: media-production-system
+product_owner: story-studio
+status: not_verified
+execution_mode: plan_and_validation_contract_only
+claimed_execution: false
+
+roles:
+  accountable_producer: Owns scope, budget, rights, final stop/go and publication authorization.
+  story_writer: Owns positioning, world, characters, episode plan and script.
+  storyboard_director: Owns shot decomposition, camera language and storyboard approval candidate.
+  visual_operator: Owns reproducible image and image-to-video attempts and artifact metadata.
+  audio_operator: Owns dialogue, narration, music, effects and loudness evidence.
+  editor: Owns subtitle timing, timeline, render and technical probes.
+  independent_reviewer: Reviews fixed artifact hashes; does not generate the reviewed attempt.
+  publisher: Owns one named channel write and target readback.
+  analyst: Owns actual cost, quality and audience-feedback records.
+
+not_verified:
+  - provider_and_model_selection
+  - generation_rights_and_voice_permissions
+  - image_and_video_generation
+  - audio_generation_and_mix
+  - subtitle_and_timeline_render
+  - master_playback
+  - external_publication
+  - cost_and_quality_results
+  - audience_metrics
+
+stages:
+  - id: 01-positioning-rights-and-hook
+    name: Story positioning, source/rights boundary and hook
+    owner: story_writer
+    review_owner: accountable_producer
+    inputs: [raw_idea, target_audience_profile, target_channels, source_basis, rights_policy]
+    outputs: [story_positioning_brief, source_and_rights_record, retention_hook_spec, narrative_arc_60s]
+    gates: [gate:story-positioning-complete, gate:source-and-rights-resolved]
+    stop_conditions: [missing_source_basis, unresolved_generation_or_voice_rights, missing_3s_hook, undefined_target_audience, runtime_exceeds_60s]
+    evidence_level: not_verified
+    verified: false
+
+  - id: 02-world-and-character-bible
+    name: World and character consistency basis
+    owner: story_writer
+    review_owner: accountable_producer
+    inputs: [story_positioning_brief, source_and_rights_record]
+    outputs: [world_bible, character_bible, location_and_prop_bible, visual_reference_requirements]
+    gates: [gate:world-character-bible-locked]
+    stop_conditions: [character_identity_ambiguous, world_rules_undefined, reference_rights_unresolved]
+    evidence_level: not_verified
+    verified: false
+
+  - id: 03-episode-script-and-pacing
+    name: Episode plan and timestamped 60-second script
+    owner: story_writer
+    review_owner: accountable_producer
+    inputs: [story_positioning_brief, world_bible, character_bible]
+    outputs: [episode_plan, timestamped_60s_script, dialogue_narration_word_count, emotional_beat_sheet]
+    gates: [gate:script-timed-and-approved]
+    stop_conditions: [spoken_words_exceed_limit, missing_midpoint_turn, unresolved_ending_hook, duration_not_60s]
+    evidence_level: not_verified
+    verified: false
+
+  - id: 04-shotlist-and-storyboard
+    name: Shot list and storyboard
+    owner: storyboard_director
+    review_owner: independent_reviewer
+    inputs: [timestamped_60s_script, character_bible, location_and_prop_bible, aspect_ratio_spec]
+    outputs: [shot_list, storyboard_frames_or_layout, camera_and_motion_spec, shot_duration_sum]
+    gates: [gate:storyboard-approved]
+    stop_conditions: [shot_duration_sum_not_60s, camera_motion_unspecified, framing_incompatible_with_target, visual_discontinuity_unresolved]
+    evidence_level: not_verified
+    verified: false
+
+  - id: 05-keyframe-image-production
+    name: Keyframe image production and consistency review
+    owner: visual_operator
+    review_owner: independent_reviewer
+    inputs: [shot_list, storyboard_frames_or_layout, character_bible, visual_reference_requirements]
+    outputs: [image_attempt_records, approved_keyframe_pngs, approved_keyframe_sha256s, image_probe_records, image_review_evidence]
+    gates: [gate:keyframe-consistency-verified]
+    stop_conditions: [missing_attempt_metadata, character_drift, unreadable_required_text, dimensions_or_aspect_drift, image_review_failed]
+    evidence_level: not_verified
+    verified: false
+
+  - id: 06-image-to-video-production
+    name: Image-to-video motion production and continuity review
+    owner: visual_operator
+    review_owner: independent_reviewer
+    inputs: [approved_keyframe_pngs, approved_keyframe_sha256s, camera_and_motion_spec, shot_list]
+    outputs: [video_attempt_records, rendered_video_clips, rendered_video_sha256s, clip_probe_records, motion_continuity_review]
+    gates: [gate:motion-video-continuity-verified]
+    stop_conditions: [missing_approved_keyframe, severe_morphing, camera_direction_mismatch, clip_probe_failed, clip_duration_mismatch]
+    evidence_level: not_verified
+    verified: false
+
+  - id: 07-voice-music-and-effects-production
+    name: Voice, narration, music and sound-effects production
+    owner: audio_operator
+    review_owner: independent_reviewer
+    inputs: [timestamped_60s_script, character_bible, shot_list, voice_and_music_rights_record]
+    outputs: [audio_attempt_records, rendered_dialogue_tracks, rendered_narration_track, rendered_music_and_sfx_tracks, audio_sha256s, loudness_and_peak_probe, pronunciation_and_mix_review]
+    gates: [gate:audio-sync-and-voice-approved]
+    stop_conditions: [voice_permission_unresolved, pronunciation_failed, dialogue_masked_by_music, clipping_detected, audio_duration_mismatch]
+    evidence_level: not_verified
+    verified: false
+
+  - id: 08-subtitles-and-edit-timeline
+    name: Subtitle timing and multi-track edit timeline
+    owner: editor
+    review_owner: independent_reviewer
+    inputs: [rendered_video_clips, rendered_video_sha256s, rendered_dialogue_tracks, rendered_narration_track, rendered_music_and_sfx_tracks, timestamped_60s_script]
+    outputs: [subtitle_srt, subtitle_timing_json, edit_timeline, subtitle_text_review, timeline_sync_review]
+    gates: [gate:subtitles-and-edit-timeline-closed]
+    stop_conditions: [subtitle_copy_mismatch, reading_speed_exceeded, safe_zone_overlap, track_sync_mismatch]
+    evidence_level: not_verified
+    verified: false
+
+  - id: 09-master-render-and-playback
+    name: Master render, probe, playback and quality audit
+    owner: editor
+    review_owner: independent_reviewer
+    inputs: [edit_timeline, subtitle_srt, rendered_video_clips, rendered_dialogue_tracks, rendered_narration_track, rendered_music_and_sfx_tracks]
+    outputs: [master_mp4, master_sha256, ffprobe_record, frame_contact_sheet, full_playback_record, quality_review_evidence]
+    gates: [gate:master-render-inspected]
+    stop_conditions: [master_missing, hash_missing, container_or_codec_failed, audio_video_desync, subtitle_render_failed, full_playback_not_completed]
+    evidence_level: not_verified
+    verified: false
+
+  - id: 10-publication-feedback-and-accounting
+    name: Publication readback, feedback and actual cost-quality ledger
+    owner: publisher
+    review_owner: accountable_producer
+    inputs: [master_mp4, master_sha256, target_channel_contract, publication_authorization]
+    outputs: [publication_receipt, target_readback_record, actual_cost_ledger, quality_score_record, audience_feedback_record, next_episode_change_request]
+    gates: [gate:publication-readback-and-cost-quality-logged]
+    stop_conditions: [publication_not_authorized, target_readback_failed, published_hash_or_rendition_mismatch, actual_cost_missing, feedback_source_missing]
+    evidence_level: not_verified
+    verified: false
+
+gates_summary:
+  - gate:story-positioning-complete
+  - gate:source-and-rights-resolved
+  - gate:world-character-bible-locked
+  - gate:script-timed-and-approved
+  - gate:storyboard-approved
+  - gate:keyframe-consistency-verified
+  - gate:motion-video-continuity-verified
+  - gate:audio-sync-and-voice-approved
+  - gate:subtitles-and-edit-timeline-closed
+  - gate:master-render-inspected
+  - gate:publication-readback-and-cost-quality-logged

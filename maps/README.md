@@ -1,9 +1,13 @@
-# Domain Maps
+# AI Engineering Lab Maps
 
-AI Engineering Lab currently uses three research domains:
+Current execution, product system and capability Maps:
 
-- `ai-engineering-map.md` — AI capability engineering.
-- `ai-creative-media-map.md` — AI generated content and media workflows.
-- `ai-product-experience-map.md` — AI product design and user experience.
+- `shared-ai-capabilities-map.md` — five reusable AI capability systems (Knowledge, Writing, Visual, Workflow, Evaluation);
+- `knowledge-intelligence-system-map.md` — feeds-hub (Sources → Feeds → Research → Insights);
+- `content-output-system-map.md` — Createway Content Creation (Knowledge → Writing → Visual Enhancement → Publishing), retaining its stable route id;
+- `media-production-system-map.md` — Story Studio (IP → Character → Script → Storyboard → Media Asset → Distribution);
+- `product-delivery-system-map.md` — Forgeway (Requirement → Spec → Design → Development → Verification → Delivery).
 
-Domain maps define stable capability boundaries. Products, models and tools should be tracked through Registry and research records.
+The older `ai-engineering`, `ai-creative-media` and `ai-product-experience` Maps are
+historical capability-domain entrypoints. They remain queryable but do not select a
+Task route or own product artifacts.

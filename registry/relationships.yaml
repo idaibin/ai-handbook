@@ -1,10 +1,26 @@
 relationships:
   - from:
       type: product
+      id: feeds-hub
+    to:
+      type: route
+      id: knowledge-intelligence-system
+    relation: implements
+
+  - from:
+      type: product
       id: createway
     to:
       type: route
       id: content-output-system
+    relation: implements
+
+  - from:
+      type: product
+      id: story-studio
+    to:
+      type: route
+      id: media-production-system
     relation: implements
 
   - from:
@@ -36,7 +52,7 @@ relationships:
       id: feeds-hub
     to:
       type: route
-      id: content-output-system
+      id: knowledge-intelligence-system
     relation: uses
 
   - from:

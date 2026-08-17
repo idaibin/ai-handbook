@@ -20,14 +20,22 @@ repositories:
       - large_private_source_files
 
   idaibin/feeds-hub:
-    role: realtime_intelligence_output
+    role: knowledge_and_intelligence_product
     owns:
       - feed_event_records
       - event_deduplication
       - feed_schema_and_validation
       - feed_presentation
       - ingestion_implementation
+      - source_grounded_research_reports
+      - source_grounded_insights
       - knowledge_candidate_event_identity
+    does_not_own:
+      - durable_knowledge_ir_promotion
+      - authored_marketing_content
+      - final_content_publishing
+      - course_production
+      - video_production
     routine_change_policy: write_data_using_current_contract
     architecture_change_triggers:
       - schema_change
@@ -81,6 +89,18 @@ repositories:
       - course_material
       - general_research_history
 
+  idaibin/forgeway:
+    role: product_delivery_system
+    owns:
+      - product_delivery_contracts
+      - delivery_graph_and_artifact_identity
+      - selected_visual_source_evidence
+      - review_and_delivery_receipts
+    does_not_own:
+      - createway_content_artifacts
+      - story_studio_ip_or_media_assets
+      - target_repository_source_truth
+
   target_repository:
     role: project_fact_and_runtime_owner
     owns:
@@ -90,6 +110,41 @@ repositories:
       - project_tests
       - target_runtime_evidence
       - deployment_evidence
+
+product_systems:
+  feeds-hub:
+    route: knowledge-intelligence-system
+    status: active_feed_research_insights_runtime_not_verified
+    artifact_authority:
+      - source_and_event_identity
+      - feeds
+      - source_grounded_research_reports
+      - source_grounded_insights
+      - knowledge_candidates
+  createway:
+    route: content-output-system
+    status: architecture_defined_repository_not_created
+    artifact_authority:
+      - content_briefs_and_drafts
+      - authored_publication_packages
+      - content_view_styles
+      - publication_receipts_and_feedback
+  story-studio:
+    route: media-production-system
+    status: architecture_defined_runtime_not_verified
+    artifact_authority:
+      - ip_world_character_and_timeline
+      - scripts_and_storyboards
+      - continuity_references
+      - visual_audio_media_masters
+      - media_production_evidence
+  forgeway:
+    route: product-delivery-system
+    status: active
+    artifact_authority:
+      - product_delivery_artifacts
+      - verification_and_review_evidence
+      - delivery_receipts
 
 workspaces:
   chatgpt_work:

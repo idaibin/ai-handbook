@@ -1,7 +1,7 @@
 schema_version: "1.0"
 workflow:
   id: ai-engineering-system
-  version: 0.3.0
+  version: 1.0.0
   status: active
   canonical_repository: idaibin/ai-handbook
   canonical_path: workflows/ai-engineering-system
@@ -14,6 +14,26 @@ principles:
   - repository_owned_facts
   - fail_closed_external_writes
   - controlled_self_improvement
+
+task_routing:
+  cardinality: exactly_one
+  routes:
+    knowledge-intelligence-system:
+      owner: idaibin/feeds-hub
+      outcome: source_grounded_intelligence
+    content-output-system:
+      owner: createway
+      outcome: audience_facing_authored_content
+      compatibility: stable_v2_id_narrowed_for_createway
+    media-production-system:
+      owner: story-studio
+      outcome: story_ip_visual_audio_media
+      implementation_status: not_verified
+    product-delivery-system:
+      owner: idaibin/forgeway
+      outcome: verified_software_delivery
+  shared_capabilities_are_routes: false
+  composition: fixed_artifact_handoff_between_single_route_tasks
 
 lanes:
   continuous_discovery:
@@ -117,6 +137,9 @@ stages:
     owner: ai-handbook
     routes:
       realtime_event: idaibin/feeds-hub
+      source_grounded_research: idaibin/feeds-hub
+      authored_content: createway_or_authorized_publish_target
+      narrative_media: story_studio_or_bounded_drive_experiment
       knowledge_output: idaibin/knowledge-distillation
       public_knowledge_projection: idaibin/blog
       executable_capability: idaibin/skills

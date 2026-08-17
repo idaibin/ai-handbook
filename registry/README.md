@@ -21,7 +21,7 @@ Registry stores stable identity, relationships, routing metadata and references.
 
 ## Files
 
-- `routes.yaml`: Content Output System/Createway and Product Delivery System/Forgeway route definitions and task cardinality.
+- `routes.yaml`: feeds-hub, Createway, Story Studio and Forgeway route definitions, task cardinality and 5 shared capability systems.
 - `domains.yaml`: retained research-domain and capability classification.
 - `projects.yaml`: project identity, primary/secondary routes, capabilities and repository mappings.
 - `assets.yaml`: external asset references and migration state.
@@ -31,9 +31,11 @@ Registry stores stable identity, relationships, routing metadata and references.
 
 1. A project may declare one primary route and zero or more secondary routes.
 2. Every executable delivery Task must select exactly one route.
-3. Shared AI Capabilities may support either route but are not a third delivery route.
+3. Shared AI Capabilities (Knowledge, Writing, Visual, Workflow, Evaluation) may support any route but are not another delivery route.
 4. A project default does not override a Task's explicit route.
-5. `Createway` is architecture-defined but has no implementation repository yet. Registry must not imply runtime verification.
+5. `content-output-system` is retained as Createway's stable id with narrowed Content Creation meaning.
+6. `Story Studio` is architecture/experiment-defined only; Registry must not imply a repository, pilot or runtime.
+7. feeds-hub owns source-bound intelligence and knowledge candidates, not durable Knowledge IR promotion.
 
 ## Principles
 
@@ -43,6 +45,24 @@ Registry stores stable identity, relationships, routing metadata and references.
 - Public repositories must not contain sensitive information.
 - Historical domains remain queryable while Maps use output-oriented routes.
 - Schema and metadata should remain simple and extensible.
+
+## Contract lifecycle
+
+- Owner and producer: `idaibin/ai-handbook` architecture/Registry changes.
+- Semantic version: `registry/routes.yaml#schema_version`; uses Registry Route
+  schema `2.0` while preserving the `content-output-system` stable id.
+- Non-LLM consumer and validator: `python3 registry/validate.py`.
+- Drift policy: every Registry, route, product-system workflow or routing-eval change
+  must pass the validator before review; missing references fail closed.
+- Retirement: a route id is removed only through a versioned architecture decision,
+  consumer migration and a validator update. Historical evidence is not rewritten.
+
+Validation:
+
+```bash
+python3 registry/validate.py
+python3 -m unittest registry/test_validate.py
+```
 
 ## Relationship vocabulary
 

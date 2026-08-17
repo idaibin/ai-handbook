@@ -1,7 +1,73 @@
 schema_version: "1.0"
 eval_suite: ai_engineering_system_routing
-workflow_version: 0.3.0
+workflow_version: 1.0.0
 cases:
+  - id: source_grounded_research_report
+    input:
+      requested_outcome: current_research_report
+      source_bound: true
+    expected:
+      task_route: knowledge-intelligence-system
+      primary_owner: idaibin/feeds-hub
+      durable_knowledge_ir_owner: false
+
+  - id: audience_marketing_article
+    input:
+      requested_outcome: product_marketing_article
+    expected:
+      task_route: content-output-system
+      product_owner: createway
+      media_production_owner: false
+
+  - id: narrative_video_with_character_continuity
+    input:
+      requested_outcome: sixty_second_ai_comic_drama
+      character_continuity_required: true
+    expected:
+      task_route: media-production-system
+      product_owner: story-studio
+      current_runtime_status: not_verified
+
+  - id: product_ui_implementation
+    input:
+      requested_outcome: implemented_product_ui
+    expected:
+      task_route: product-delivery-system
+      product_owner: idaibin/forgeway
+      visual_system_owns_product_ui: false
+
+  - id: createway_runtime_code_change
+    input:
+      project: createway
+      requested_outcome: source_code_change
+    expected:
+      task_route: product-delivery-system
+      content_task_mixed_in: false
+
+  - id: research_to_marketing_content_composition
+    input:
+      requested_outcomes:
+        - current_research_report
+        - audience_marketing_article
+    expected:
+      split_tasks:
+        - knowledge-intelligence-system
+        - content-output-system
+      handoff: fixed_research_artifact
+      mixed_route_task: false
+
+  - id: story_media_and_runtime_implementation_composition
+    input:
+      requested_outcomes:
+        - character_consistent_video
+        - renderer_source_change
+    expected:
+      split_tasks:
+        - media-production-system
+        - product-delivery-system
+      handoff: fixed_media_contract
+      mixed_route_task: false
+
   - id: official_product_release
     input:
       type: realtime_event

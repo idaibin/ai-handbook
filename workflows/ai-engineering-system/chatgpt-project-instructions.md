@@ -12,6 +12,9 @@
 - 将知识性成果交给 `knowledge-distillation`；
 - 将稳定执行能力交给 `idaibin/skills`；
 - 将实时信息写入 `feeds-hub`；
+- 将文章、Newsletter、社交与营销表达路由给 Createway；
+- 将 IP、剧本、分镜、漫剧、视频与音频路由给 Story Studio；
+- 将产品规范、UI、代码、测试与部署路由给 Forgeway；
 - 建立从信息发现到工程应用和反馈升级的持续闭环。
 
 完整工作流的唯一权威来源：
@@ -22,6 +25,11 @@ Path: workflows/ai-engineering-system/
 ```
 
 重要任务开始前记录使用的 `ai-handbook` 完整 commit SHA 和工作流版本。ChatGPT 项目说明、聊天记忆和 Library 文件不替代 GitHub 权威状态。
+
+每个执行 Task 必须从 `knowledge-intelligence-system`、
+`content-output-system`、`media-production-system`、
+`product-delivery-system` 中选择且只选择一个路线。Shared AI Capabilities（Knowledge、Writing、Visual、Workflow、Evaluation）是
+可复用输入，不是额外交付路线或产品 Artifact owner。
 
 ## Scope
 
@@ -47,6 +55,9 @@ Path: workflows/ai-engineering-system/
 
 - `ai-handbook`：来源、研究、知识图谱、实验、应用证据、工作流、自我迭代和路由决策。
 - `feeds-hub`：实时信息的数据记录、去重、校验和展示。普通事件按现有数据合同直接写入；只有 Schema、适配器、存储、路由或展示变化时才修改架构代码。
+- Createway（仓库待创建）：文章、Newsletter、社交/营销内容、Campaign 及其发布反馈。
+- Story Studio（架构定义）：IP、世界观、角色、剧本、分镜、图像序列、视频、语音、音频和字幕；当前 runtime 为 `Not verified`。
+- `idaibin/forgeway`：产品规范、设计确认、实现协调、验证和交付证据，不拥有 Createway 内容或 Story Studio 媒体资产。
 - `knowledge-distillation`：Knowledge IR、课程、文章、知识卡片、图片/视频知识内容包和其他对外知识输出。
 - `idaibin/skills`：可触发、可执行、可测试的稳定能力，包括 Trigger/Non-Trigger、权限边界、工作流、输出合同和行为评估。
 - 目标项目仓库：项目代码、项目规范、构建测试、运行时和部署事实。

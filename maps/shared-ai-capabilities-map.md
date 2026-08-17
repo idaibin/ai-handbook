@@ -1,69 +1,73 @@
-# Shared AI Capabilities Map v1.0
+# Shared AI Capabilities Map
 
 - Status: active
-- Architecture: AI Engineering Lab v2.0
-- Role: reusable capabilities shared by Createway and Forgeway
+- Role: reusable inputs for feeds-hub, Createway, Story Studio and Forgeway
 
-## Purpose
+## Boundary
 
-Shared AI Capabilities describe what the Lab can use. They do not form a third delivery route and do not own Content or Product outputs.
-
-## Capability map
+Shared AI Capabilities define reusable methods, schemas and evaluations. They are not
+user-facing products, do not own final artifacts and do not form another delivery
+route.
 
 ```text
 Shared AI Capabilities
-├── Model
-├── Agent
-├── Skill
-├── Tool / MCP / Plugin
-├── Context / Memory / RAG
-├── Workflow / Automation
-├── Evaluation / Verification
-├── Knowledge / Research
-└── Design System
-    ├── Design Tokens
-    ├── Content View
-    └── Product View
+├── Knowledge System
+│   ├── source-management
+│   ├── extraction / summarization
+│   ├── knowledge-card / retrieval
+│   └── citation
+├── Writing System
+│   ├── structure / style / tone
+│   ├── editing / fact-checking
+│   └── human-writing / evaluation
+├── Visual System
+│   ├── prompt-schema / composition
+│   ├── style and reference methods
+│   └── visual evaluation
+├── Workflow System
+│   ├── composable orchestration patterns
+│   └── handoff contracts
+└── Evaluation System
+    ├── quality review / benchmark methods
+    ├── regression cases
+    └── human feedback loops
 ```
 
-## Design System boundary
+Audio and Agent capabilities remain product-local or future capabilities (such as
+Story Studio media experiment voice/audio contracts and Forgeway/Skills agent execution
+patterns), not top-level current shared systems.
 
-### Design Tokens
+## Consumer/authority rule
 
-Shared primitives and semantic roles that may be referenced by either view. A token becomes authoritative only inside its owning product or content contract.
+| Shared capability | Example consumers | Product-owned authority remains with |
+| --- | --- | --- |
+| Knowledge System | feeds-hub, Createway, Story Studio, Forgeway | source/report/brief/product owner |
+| Writing System | reports, articles, scripts, product specs | feeds-hub, Createway, Story Studio or Forgeway |
+| Visual System | feed graphics, covers, story frames, UI directions | the corresponding product route |
+| Workflow System | all products as needed | selected Task route and product lifecycle |
+| Evaluation System | all products | named reviewer and owning acceptance gate |
 
-### Content View
+A shared asset needs a real consumer, version, validator and drift policy. Availability
+does not justify a new Skill, select a route or override product-specific facts.
 
-Supports Createway outputs:
+## Visual System boundary
 
-- poster and social templates;
-- image and photography direction;
-- video visual and motion rules;
-- content typography, composition and channel variants.
+The shared visual prompt vocabulary may describe subject, environment, style,
+composition, camera, lighting, color, emotion, references and negative constraints.
+It does not own:
 
-### Product View
-
-Supports Forgeway and target product repositories:
-
-- UI tokens;
-- components and interaction states;
-- `ui-spec` selected-source direction and page/component UI contracts;
-- target-owned React/Tauri/Web implementation and design-system adapters;
-- responsive, keyboard, failure-state and accessibility evidence;
-- versioned browser-report consumers that bind runtime evidence to the delivered result.
-
-`ui-spec` owns reusable UI semantics; it does not own a target project's tokens,
-components or source. A Forgeway Product UI module remains internal when Forgeway is
-the only real consumer. A framework adapter does not justify a separate shared Skill.
-Images, video, audio, posters and other content-production outputs remain in
-Createway's Content View route.
-
-Content View and Product View may share selected tokens, but neither silently overrides the other.
+- Createway Content View styles and publication templates;
+- Story Studio character, scene and continuity references;
+- Forgeway or target-repository Product View/UI tokens and components;
+- feeds-hub event/source identity.
 
 ## Use rule
 
-A Task first selects exactly one delivery route, then resolves only the Shared AI Capabilities required by that route. Capability availability does not select or widen the route.
+A Task selects exactly one route first, then consumes only the shared capabilities
+needed for that outcome. Shared results are inputs; the owning product records the
+final artifact, review and release evidence.
 
 ## Historical source
 
-This Map succeeds `ai-engineering-map.md`. The old Map remains as a historical capability-domain entry.
+This Map succeeds `ai-engineering-map.md` and prior capability maps. Historical domain
+Maps remain navigation evidence, not execution authority.

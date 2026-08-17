@@ -1,4 +1,7 @@
-> Historical combined workflow. Superseded by the Createway Content Output System and Forgeway Product Delivery System Maps plus `registry/routes.yaml`. Retained as experiment history; do not use it to assign a mixed-route Task.
+> Historical combined workflow. Superseded by the Createway Content Creation, Story
+> Studio Media Production and Forgeway Product Delivery Maps plus
+> `registry/routes.yaml`. Retained as experiment history; do not use it to assign a
+> mixed-route Task.
 
 # AI Creative & Product Experience Workflow
 

@@ -1,73 +1,58 @@
-# Content Output System Map v1.0
+# Content Creation System Map
 
-- Status: active
+- Stable route id: `content-output-system`
+- Status: architecture-defined; implementation not verified
 - Product: Createway
-- Product implementation: defined; repository not created
-- Architecture: AI Engineering Lab v2.0
+- Lifecycle: `Knowledge → Writing → Visual Enhancement → Publishing`
 
 ## Outcome
 
-Turn an idea, source or event into reviewed content that can be published and observed.
+Turn knowledge, an idea or product information into audience-facing authored content
+that is reviewed, published and observed.
 
 ```text
-Intent
-  ↓
-Brief
-  ↓
-Research / Source Grounding
-  ↓
-Create
-  ↓
-Edit / Compose
-  ↓
-Review
-  ↓
-Publish
-  ↓
-Feedback
+Knowledge → Writing → Visual Enhancement → Publishing
+(Idea → Brief → Outline → Draft → Human-style Rewrite → Review → Publish → Feedback)
 ```
 
-## Output types
+## Owned outputs
 
-- article and long-form writing;
-- image and photography;
-- poster and graphic design;
-- video and animation;
-- audio;
-- comic and motion comic;
-- social/community content;
-- factual or time-sensitive event updates.
-
-## Core artifacts
-
-- Content Intent;
-- Creative Brief;
-- Source/Factual Basis;
-- Style Contract — Content View;
-- Script, shotlist or storyboard;
-- source, master and rendition metadata;
-- review evidence;
+- blog/article and newsletter;
+- X, 小红书 and other social content;
+- product-marketing content and campaigns;
+- supporting covers, posters and editorial graphics;
 - publication receipt and feedback.
 
-Large/private binaries remain in Google Drive. GitHub stores contracts, workflow and non-sensitive metadata only.
+## Boundary
+
+Createway owns text and lightweight text+visual publishing outputs. It may consume
+feeds-hub research/insights plus shared Knowledge, Writing and Visual systems.
+
+Createway does not own source/event identity, complex video, IP management,
+long-lived hierarchical media assets, Story Studio narrative media/IP, Product UI or
+software delivery.
+
+Narrative image sequences, comics, animation, video, voice and audio select
+`media-production-system`. A Createway runtime/code change selects
+`product-delivery-system` as a separate Task.
 
 ## Gates
 
-- source and rights boundary resolved;
-- output format and channel requirements satisfied;
-- style and continuity reviewed;
-- factual content grounded and time-bounded where applicable;
-- publication claimed only with target readback;
-- feedback changes future briefs or workflows.
+- source, rights and audience boundary resolved;
+- exact copy and factual claims reviewed;
+- Content View style contract applied;
+- target format and channel constraints satisfied;
+- publication claimed only after target readback;
+- feedback attaches to a later brief without rewriting the published artifact.
 
-## Task route rule
+## Compatibility
 
-A content Task selects `content-output-system` even when its project also uses Forgeway. Coding a renderer, API or product page is a separate Product Delivery Task.
+The route id remains `content-output-system` because current Registry, workflow and
+handoff consumers use it. The architecture narrows its product meaning to Createway
+Content Creation instead of silently renaming a live contract.
 
 ## Current state
 
-Createway is accepted as the product name and route owner. Its repository, runtime contract and release lifecycle are not yet implemented. The earlier Creative pilot produced under Forgeway remains historical evidence and is marked for migration, not runtime proof of Createway.
-
-## Historical source
-
-This Map succeeds `ai-creative-media-map.md`.
+Createway is architecture-defined. No remote repository, merged runtime, external
+publication adapter or production release is currently verified. The Forgeway
+Creative pilot remains historical evidence, not Createway authority.

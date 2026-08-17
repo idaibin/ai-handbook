@@ -1,5 +1,9 @@
 # AI Engineering Lab Output-Oriented Architecture v2.0
 
+> Historical decision. Superseded by
+> [`2026-08-17-ai-engineering-lab-product-systems.md`](./2026-08-17-ai-engineering-lab-product-systems.md).
+> The stable v2 route ids remain compatibility inputs to the product systems architecture.
+
 - Date: 2026-08-17
 - Status: Accepted
 - Scope: AI Engineering Lab architecture, Maps and Registry routing

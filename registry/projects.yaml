@@ -37,12 +37,15 @@ projects:
     status: defined
     route:
       primary: content-output-system
+      secondary:
+        - product-delivery-system
     domains:
       - ai-engineering
       - ai-creative-media
     capabilities:
       - content-workflow
       - content-artifact
+      - writing
       - design-system-content-view
       - publication
       - content-verification
@@ -50,6 +53,30 @@ projects:
       - content-output-system
       - architecture-defined
       - repository-not-created
+
+  - id: story-studio
+    type: product
+    status: architecture-defined
+    route:
+      primary: media-production-system
+      secondary:
+        - product-delivery-system
+    domains:
+      - ai-engineering
+      - ai-creative-media
+    capabilities:
+      - ip-world-building
+      - character-continuity
+      - script
+      - storyboard
+      - visual-production
+      - audio-production
+      - media-verification
+    tags:
+      - media-production-system
+      - architecture-defined
+      - repository-not-created
+      - runtime-not-verified
 
   - id: forgeway
     type: product
@@ -101,19 +128,22 @@ projects:
     type: product
     status: active
     route:
-      primary: content-output-system
+      primary: knowledge-intelligence-system
       secondary:
         - product-delivery-system
     domains:
       - ai-engineering
-      - ai-creative-media
+      - ai-knowledge-intelligence
       - ai-product-experience
     capabilities:
-      - content-pipeline
+      - intelligence-pipeline
       - feed-system
+      - source-grounded-research
+      - knowledge-candidate
       - web-application
     github:
       repository: idaibin/feeds-hub
     tags:
       - information-system
       - ai-feed
+      - research-runtime-not-verified

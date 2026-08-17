@@ -1,31 +1,92 @@
-schema_version: "1.0"
+schema_version: "2.0"
 
 routes:
+  - id: knowledge-intelligence-system
+    name: Knowledge & Intelligence System
+    product:
+      id: feeds-hub
+      name: feeds-hub
+      implementation_status: active-feed-research-runtime-not-verified
+      github:
+        repository: idaibin/feeds-hub
+    purpose: Turn external sources and events into source-grounded, time-bounded intelligence and insights.
+    outputs:
+      - feed-event
+      - source-record
+      - research-report
+      - intelligence-record
+      - knowledge-candidate
+    lifecycle:
+      - collect
+      - normalize
+      - analyze
+      - verify
+      - publish-intelligence
+      - handoff-candidate
+
   - id: content-output-system
-    name: Content Output System
+    name: Content Creation System
+    compatibility:
+      retained_id_from: AI Engineering Lab v2.0
+      narrowed_for: Createway Content Creation
     product:
       id: createway
       name: Createway
       implementation_status: defined
-    purpose: Turn ideas and source material into reviewed, publishable content.
+    purpose: Turn knowledge, ideas and product information into reviewed audience-facing content.
     outputs:
       - article
-      - image
-      - photography
-      - video
-      - audio
-      - poster
-      - comic
+      - blog
+      - newsletter
       - social-content
-      - event-update
+      - product-marketing-content
+      - campaign
+      - content-image
+      - poster
     lifecycle:
-      - intent
+      - idea
       - brief
-      - creation
-      - editing
+      - outline
+      - draft
+      - human-style-rewrite
       - review
       - publication
       - feedback
+
+  - id: media-production-system
+    name: Media Production System
+    product:
+      id: story-studio
+      name: Story Studio
+      implementation_status: architecture-defined
+    purpose: Turn an IP or story basis into coherent reviewed visual and audio media.
+    outputs:
+      - world-bible
+      - character-bible
+      - episode-plan
+      - script
+      - storyboard
+      - character-reference
+      - scene-reference
+      - image-sequence
+      - comic
+      - animation
+      - video
+      - voice
+      - audio
+      - subtitle
+    lifecycle:
+      - idea
+      - world-character-basis
+      - episode-plan
+      - script
+      - storyboard
+      - visual-generation
+      - motion-editing
+      - audio
+      - subtitle
+      - review
+      - publication
 
   - id: product-delivery-system
     name: Product Delivery System
@@ -65,7 +126,18 @@ execution_rules:
     secondary: zero-or-more
   task_route:
     cardinality: exactly-one
-    rule: A task must select content-output-system or product-delivery-system before execution.
+    allowed:
+      - knowledge-intelligence-system
+      - content-output-system
+      - media-production-system
+      - product-delivery-system
+    rule: A task selects exactly one product route; cross-system work uses explicit artifact handoffs.
   shared_capabilities:
     role: reusable-input
-    rule: Shared AI Capabilities support a selected route but are not a third delivery route.
+    systems:
+      - knowledge-system
+      - writing-system
+      - visual-system
+      - workflow-system
+      - evaluation-system
+    rule: Shared AI Capabilities support a selected route but do not own product artifacts or form another route.

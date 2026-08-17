@@ -1,35 +1,23 @@
-# Product Delivery System Map v1.0
+# Product Delivery System Map
 
+- Stable route id: `product-delivery-system`
 - Status: active
 - Product: Forgeway
 - Product implementation: active
-- Architecture: AI Engineering Lab v2.0
+- Lifecycle: `Requirement → Spec → Design → Development → Verification → Delivery`
 
 ## Outcome
 
 Turn product intent into verified software delivery.
 
 ```text
-Intent
-  ↓
-Product Definition
-  ↓
-Requirement
-  ↓
-Solution / UI / Data / Interface
-  ↓
-Task
-  ↓
-Implementation
-  ↓
-Verification / Review
-  ↓
-Delivery / Runtime Readback
+Requirement → Spec → Design → Development → Verification → Delivery
+(Intent → Specification → Visual Source → Design → Confirmation → Implementation → Verification → Review → Delivery)
 ```
 
 ## Product scope
 
-- product strategy and requirements;
+- product strategy, requirements and specifications;
 - architecture, domain, data and interfaces;
 - UX, UI and Product View design systems;
 - web, desktop and mobile implementation;
@@ -38,12 +26,16 @@ Delivery / Runtime Readback
 
 ## Authority boundary
 
-Forgeway owns cross-project delivery coordination, artifact identity, handoff, evidence and Gates. Target repositories remain authoritative for product facts, `DESIGN.md`, source, tests, configuration and runtime truth.
+Forgeway owns cross-project delivery coordination, artifact identity, handoff,
+evidence and Gates. Target repositories remain authoritative for product facts,
+`DESIGN.md`, source, tests, configuration and runtime truth.
 
 For Product UI, `ui-spec` remains the reusable selected-source and UI-contract
 capability. The target repository owns its design tokens, components and implemented
 source. Forgeway may own an internal UI module only when Forgeway itself is the real
 non-LLM consumer; this does not create another shared Skill or design authority.
+
+Forgeway does not own Createway content creation or Story Studio media production.
 
 ## Product UI delivery
 
@@ -78,7 +70,9 @@ page text cannot advance the browser Gate.
 
 ## Task route rule
 
-A software engineering Task selects `product-delivery-system` even when the product's primary route is Createway. Content generation performed by the product is a separate Createway Task.
+A software engineering Task selects `product-delivery-system` even when the product's
+primary route is feeds-hub, Createway or Story Studio. Authored content and narrative
+media remain separate Createway or Story Studio Tasks.
 
 ## Related projects
 

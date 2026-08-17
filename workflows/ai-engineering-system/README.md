@@ -1,6 +1,6 @@
 # AI Engineering System Workflow
 
-- **Version:** `0.4.0`
+- **Version:** `1.0.0`
 - **Status:** active
 - **Canonical owner:** `idaibin/ai-handbook`
 - **Canonical path:** `workflows/ai-engineering-system/`
@@ -72,10 +72,12 @@
 
 先记录稳定对象 ID、原始地址、来源时间和触发原因。进入执行前，按照 `registry/routes.yaml` 为当前 Task 选择且只选择一个交付路线：
 
-- `content-output-system` / Createway：文章、图片、视频、音频、海报、社区内容、赛事速递等内容产出；
+- `knowledge-intelligence-system` / feeds-hub：来源、事件、Feed、时效研究报告和 Knowledge Candidate；
+- `content-output-system` / Createway：文章、Newsletter、社交/营销内容、Campaign 及其发布视觉；
+- `media-production-system` / Story Studio：IP、剧本、分镜、图像序列、漫画、动画、视频、语音、音频和字幕；
 - `product-delivery-system` / Forgeway：产品规范、UI、API、数据库、代码、测试、部署等软件交付。
 
-项目可以配置 primary/secondary routes，但单个 Task 不得混合路线。Shared AI Capabilities 只支持已选路线，不构成第三路线。
+项目可以配置 primary/secondary routes，但单个 Task 不得混合路线。Shared AI Capabilities（Knowledge、Writing、Visual、Workflow、Evaluation）只支持已选路线，不构成额外交付路线。
 
 ### Stage 1 — Normalize
 
@@ -131,7 +133,8 @@ Product UI 按 `Product Intent → Product Spec → UI Direction → UI Spec →
 Implementation → Browser Verification → Review → Delivery` 收口。实现和浏览器验证是
 两个独立门禁；浏览器证据至少覆盖 UI Spec 指定的 viewport、响应式/overflow、键盘与
 focus、适用失败状态、console 和可访问性。Forgeway 页面只能消费 Delivery Graph
-投影，不能根据展示文本自行推进 Gate。图片、视频、音频和海报等生产仍路由 Createway。
+投影，不能根据展示文本自行推进 Gate。文章封面、海报和营销视觉路由
+Createway；叙事图像序列、漫画、动画、视频、语音和音频路由 Story Studio。
 
 ### Stage 6 — Route
 
@@ -139,14 +142,16 @@ Task 在 Stage 0 已选定一个交付路线，Stage 6 只决定该路线内的 
 
 | Task 路线 | 产物类型 | 目标 |
 | --- | --- | --- |
-| Createway | 实时产品、开源、科技或金融内容 | `feeds-hub` 数据层或授权发布目标 |
-| Createway | 课程、文章、知识卡、图像/视频知识内容包 | `knowledge-distillation` 或 Drive 媒体资产层 |
-| Createway | 已批准的公开知识节点和关系 | `blog`，通过固定版本的公开导出 |
-| Forgeway | 稳定、重复、可执行的方法 | `idaibin/skills` |
+| feeds-hub | 来源、事件、Feed、时效研究与 Knowledge Candidate | `idaibin/feeds-hub` |
+| Createway | 文章、Newsletter、社交/营销内容与 Campaign | Createway 合同或授权发布目标；仓库创建前不得伪造 repository owner |
+| Story Studio | 世界观、角色、剧本、分镜、图像序列、漫剧、视频和音频 | Story Studio 合同或 Drive 实验资产；仓库和运行时仍为 `Not verified` |
+| 现有知识输出 | 课程、知识卡、Knowledge IR 和已批准公开知识 | `knowledge-distillation` / `blog`，直到显式迁移改变权威 |
+| 任一路线的能力候选 | 稳定、重复、可执行的方法 | 独立晋级验证后进入 `idaibin/skills` |
 | Forgeway | 具体代码、配置、项目规范和测试 | 对应目标项目仓库 |
 | 任一路线的治理记录 | 来源、知识图谱、实验、审计和晋级决策 | `ai-handbook` |
 
-若一个请求同时包含内容产出和软件变更，拆为两个有依赖关系的 Task，不得把两个路线合并成一个执行合同。
+若一个请求同时包含情报、内容、媒体或软件交付中的多个结果，拆为有固定
+Artifact 依赖的单路线 Task，不得合并成一个执行合同。
 
 ### Stage 7 — Observe And Improve
 
@@ -224,7 +229,8 @@ AI 可以提出修改和生成候选补丁，但不能自己降低证据标准�
 
 ## 7. 关联文件
 
-- [`../../registry/routes.yaml`](../../registry/routes.yaml)：Createway/Forgeway 路线与单 Task 路由约束。
+- [`../../registry/routes.yaml`](../../registry/routes.yaml)：四个产品系统路线、稳定 ID 与单 Task 路由约束。
+- [`../../architecture/AI-ENGINEERING-LAB-ARCHITECTURE.md`](../../architecture/AI-ENGINEERING-LAB-ARCHITECTURE.md)：Workspace Map、产品边界、共享能力和迁移规则。
 - [`workflow.yaml`](workflow.yaml)：机器可读流程。
 - [`ownership.yaml`](ownership.yaml)：仓库职责。
 - [`state-model.yaml`](state-model.yaml)：状态与证据模型。

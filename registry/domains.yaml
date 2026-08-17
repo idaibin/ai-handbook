@@ -16,7 +16,9 @@ domains:
   - id: ai-creative-media
     name: AI Creative & Media
     status: retained-classification
-    successor_map: content-output-system-map
+    successor_maps:
+      - content-output-system-map
+      - media-production-system-map
     description: AI-assisted content and media production capability classification.
     capabilities:
       - writing
@@ -27,6 +29,19 @@ domains:
       - animation
       - comic
       - audio
+
+  - id: ai-knowledge-intelligence
+    name: AI Knowledge & Intelligence
+    status: active-classification
+    successor_map: knowledge-intelligence-system-map
+    description: Source-grounded feeds, research reports, intelligence records and knowledge candidates.
+    capabilities:
+      - collection
+      - normalization
+      - source-grounding
+      - research-report
+      - intelligence
+      - knowledge-candidate
 
   - id: ai-product-experience
     name: AI Product Experience

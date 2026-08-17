@@ -1,4 +1,4 @@
-# AI Engineering Handbook v0.3
+# AI Engineering Handbook
 
 `ai-handbook` 是个人 AI Engineering System 的**学习与治理控制面**。它负责维护来源、研究、知识图谱、实验、应用证据、跨仓库路由和自我迭代规范；它不是课程收藏夹，也不替代下游代码或内容仓库。
 
@@ -15,7 +15,10 @@
 | 对象 | 权威职责 | 不承担的职责 |
 | --- | --- | --- |
 | `idaibin/ai-handbook` | 来源目录、研究队列、知识图谱、实验、应用证据、工作流治理和晋级决策 | 不保存所有大型原始资产，不直接拥有生产 Skill |
-| `idaibin/feeds-hub` | 实时信息的数据记录、去重、校验和展示 | 不承担长期知识蒸馏；普通事件更新不应触发架构改造 |
+| `idaibin/feeds-hub` | 实时信息的数据记录、去重、校验和展示，时效研究与 Insights（运行时未验证） | 不承担长期知识蒸馏；普通事件更新不应触发架构改造；不承担内容出版、课程与视频生产 |
+| Createway（仓库待创建） | 文本与轻量图文出版物（文章、Newsletter、社交/营销内容、Campaign 及发布反馈） | 不承担复杂视频、IP 管理、长期分层媒体资产、Product UI 或软件交付 |
+| Story Studio（架构/实验定义） | IP、世界观、角色、剧本、分镜、图像序列、视频、语音、音频和字幕资产 | 不伪报仓库、运行时、60 秒 Pilot 已通过或生产能力已存在 |
+| `idaibin/forgeway` | 产品规范、设计确认、实现协调、验证和交付证据 | 不承担 Createway 内容或 Story Studio 媒体资产 |
 | `idaibin/knowledge-distillation` | Knowledge IR、课程、文章、知识卡片、图片/视频知识内容包及对外知识输出 | 不拥有生产执行 Skill；实际执行能力由 Skills 或目标工具承担 |
 | `idaibin/blog` | 已批准公开知识的双语静态投影、阅读与导航 | 不裁决证据，不读取私有 Handbook 或实时 Feed 运行时 |
 | `idaibin/skills` | 可触发、可执行、可测试的稳定能力 | 不保存大规模来源、课程正文和研究历史 |
@@ -48,7 +51,36 @@
 
 候选池可以很大；深度研究必须小批次、按问题 Pull，不以仓库数量或 Star 数替代学习质量。
 
-## 输出路由
+## 顶层架构与输出路由
+
+AI Engineering Lab 包含 5 个共享能力系统、4 个产品系统与 2 个支撑资产：
+
+```text
+AI Engineering Lab
+
+Shared AI Capabilities
+├── Knowledge System
+├── Writing System
+├── Visual System
+├── Workflow System
+└── Evaluation System
+
+Product Systems
+├── feeds-hub: Sources → Feeds → Research → Insights
+├── Createway: Knowledge → Writing → Visual Enhancement → Publishing
+├── Story Studio: IP → Character → Script → Storyboard → Media Asset → Distribution
+└── Forgeway: Requirement → Spec → Design → Development → Verification → Delivery
+
+Supporting Assets
+├── ai-handbook: verified methods, stable standards and reusable experience
+└── skills: repeatable executable capabilities with inputs, outputs and validation
+```
+
+每个 Task 只选择一个产品路线；跨系统工作通过固定 Artifact 交接。完整
+Workspace Map 见
+[`architecture/AI-ENGINEERING-LAB-ARCHITECTURE.md`](architecture/AI-ENGINEERING-LAB-ARCHITECTURE.md)。
+
+现有仓库和存储的 canonical destination 继续遵守以下规则：
 
 ```text
 实时事件                  → feeds-hub
@@ -75,7 +107,7 @@
 
 ## 目录
 
-- `maps/`：能力地图和知识关系；当前包括 [`AI Engineering Map`](maps/ai-engineering-map.md) 和 [`Codex 配置与协作知识图`](maps/codex-configuration-collaboration-map.md)。
+- `maps/`：能力地图和知识关系；当前包括 [`AI Engineering Map`](maps/ai-engineering-map.md) 和各系统 Map。
 - `research/forgeway/`：Forgeway 从 Platform Spec、PDS 到单一现行产品的演进、设计决策与验证边界；仅作历史研究，不是运行时权威。
 - `roadmap/`：以产出和门禁驱动的学习路径。
 - `sources/`：候选来源、固定阅读证据和来源治理。
@@ -99,4 +131,4 @@
 - Google Sheets 可以作为筛选和运营视图，但不得成为唯一任务状态或研究证据来源。
 - 自动化可以发现、去重、校验和生成候选；不能自动提升证据等级、发布生产 Skill 或把局部成功宣称为生产完成。
 
-当前规范版本：`ai-engineering-system v0.3.0`。
+当前规范版本：`ai-engineering-system v1.0.0`。

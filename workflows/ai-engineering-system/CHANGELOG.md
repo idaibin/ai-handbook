@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 — 2026-08-17
+
+- 采用 AI Engineering Lab 的 Shared / feeds-hub / Createway / Story Studio / Forgeway 产品系统架构。
+- 新增 `knowledge-intelligence-system` 与 `media-production-system`，保留并收窄 `content-output-system` 稳定 ID。
+- 明确 Knowledge、Writing、Visual、Workflow、Evaluation 5 个系统只提供共享能力，不拥有产品 Artifact。
+- 保留 `knowledge-distillation` 的现有 Knowledge IR 权威，并同步应用和回读 Drive 产品系统目录。
+
 ## 0.3.0 — 2026-08-11
 
 - 明确 `feeds-hub`、`ai-handbook`、`blog` 保持独立，只重构内容模型、晋级门禁和数据合同。
