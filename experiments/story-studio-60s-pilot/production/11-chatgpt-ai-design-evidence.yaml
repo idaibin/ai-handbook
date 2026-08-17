@@ -52,7 +52,8 @@ visual_review:
   user_view_observation: "Both 941x1672 PNGs rendered clearly in the local viewer; browser/device acceptance and publication rendition were not tested."
   gate: gate:keyframe-consistency-verified
   gate_result: candidate_pass_pending_rights
+  reproducibility_record: conversational_reference_hash_chain
+  reproducibility_status: not_verified
   blockers:
     - rights_record_not_verified
-    - no_multi-shot_reproducibility_or_seed_record
     - no_browser_or_target_device_acceptance
