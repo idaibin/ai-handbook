@@ -1,6 +1,6 @@
 schema_version: "1.0"
 artifact_id: story-studio-chatgpt-ai-design-evidence-v1
-status: candidate_pending_review
+status: candidate_pass_pending_rights
 provider: chatgpt
 project: AI Design
 project_id: g-p-6a7a70ed5ab08191b4d48f9139e1696c
