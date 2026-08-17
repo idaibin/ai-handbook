@@ -47,8 +47,16 @@ Supports Forgeway and target product repositories:
 
 - UI tokens;
 - components and interaction states;
-- React/Tauri design-system implementation;
-- responsive and accessibility evidence.
+- `ui-spec` selected-source direction and page/component UI contracts;
+- target-owned React/Tauri/Web implementation and design-system adapters;
+- responsive, keyboard, failure-state and accessibility evidence;
+- versioned browser-report consumers that bind runtime evidence to the delivered result.
+
+`ui-spec` owns reusable UI semantics; it does not own a target project's tokens,
+components or source. A Forgeway Product UI module remains internal when Forgeway is
+the only real consumer. A framework adapter does not justify a separate shared Skill.
+Images, video, audio, posters and other content-production outputs remain in
+Createway's Content View route.
 
 Content View and Product View may share selected tokens, but neither silently overrides the other.
 

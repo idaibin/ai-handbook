@@ -40,9 +40,11 @@ routes:
       - requirement
       - product-specification
       - ui-specification
+      - product-ui
       - architecture
       - implementation
       - test-evidence
+      - browser-verification-evidence
       - release
     lifecycle:
       - intent

@@ -64,12 +64,16 @@ projects:
       - workflow
       - artifact
       - design-system-product-view
+      - product-ui
+      - delivery-graph
+      - browser-verification
       - verification
     github:
       repository: idaibin/forgeway
     tags:
       - product-delivery-system
       - artifact-system
+      - browser-verified-product-ui
 
   - id: rustzen-admin
     type: product

@@ -127,6 +127,12 @@ GitHub 元数据、Stars、搜索摘要或 README 标题不能替代源码、测
 
 较低层证据不能提升为较高层完成声明。
 
+Product UI 按 `Product Intent → Product Spec → UI Direction → UI Spec →
+Implementation → Browser Verification → Review → Delivery` 收口。实现和浏览器验证是
+两个独立门禁；浏览器证据至少覆盖 UI Spec 指定的 viewport、响应式/overflow、键盘与
+focus、适用失败状态、console 和可访问性。Forgeway 页面只能消费 Delivery Graph
+投影，不能根据展示文本自行推进 Gate。图片、视频、音频和海报等生产仍路由 Createway。
+
 ### Stage 6 — Route
 
 Task 在 Stage 0 已选定一个交付路线，Stage 6 只决定该路线内的 canonical destination：
