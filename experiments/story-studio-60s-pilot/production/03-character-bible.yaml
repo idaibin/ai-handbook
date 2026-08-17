@@ -1,0 +1,40 @@
+schema_version: "1.0"
+artifact_id: story-studio-character-bible-v1
+status: not_verified
+characters:
+  - id: maya-chen
+    name: "Maya Chen / 陈麦"
+    role: protagonist
+    age: 26
+    desire: "找出记忆清除的真相并保存亡伴侣的证据"
+    flaw: "习惯独自承担风险，不愿及时求助"
+    appearance_lock:
+      face: "东亚年轻女性，清晰下颌线，疲惫但专注的眼神"
+      hair: "不对称短黑发，右侧一小束电蓝挑染"
+      implant: "左太阳穴有细窄青色发光植入物"
+      wardrobe: "哑光黑防水 techwear 外套，橙色内衬，半指手套"
+      silhouette: "高领、窄肩、短发和肩侧 decoder 形成稳定轮廓"
+    signature_prop: neural_decoder
+    voice_direction: "年轻、克制、急促时不失清晰；具体声音 provider/权利未选择"
+    reference_status: not_verified
+  - id: partner-recording
+    name: "亡伴侣的录音"
+    role: offscreen-voice
+    appearance_lock: none
+    voice_direction: "低声、带有限带宽失真；必须使用有权利的合成或录音"
+    reference_status: not_verified
+  - id: hunter-drone-unit-9
+    name: "Hunter Drone Unit 9"
+    role: antagonist-system
+    appearance_lock:
+      body: "哑光白四旋翼，中央红色扫描眼"
+      behavior: "先扫描、再锁定、最后撞击进入"
+    voice_direction: none
+    reference_status: not_verified
+continuity_rules:
+  - "Maya 的发型、植入物、外套颜色和 decoder 四个标识不得在 shot 间改变"
+  - "Drone 的白色机身与红色扫描眼不得被替换为真实品牌或 franchise 资产"
+  - "每个 approved keyframe 都必须回指本 Bible，并记录 hash"
+review_gates:
+  - gate:world-character-bible-locked
+  - gate:keyframe-consistency-verified

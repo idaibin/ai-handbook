@@ -2,7 +2,7 @@
 
 - **Experiment ID:** `story-studio-60s-pilot`
 - **Product System:** Story Studio (`media-production-system`)
-- **Status:** `not_verified` (Plan and validation contract only; no media generated, no repository created, no production workflow claimed)
+- **Status:** `not_verified` (Plan and validation contract plus two bounded image attempts; no repository, video/audio runtime or production workflow claimed)
 - **Fixture:** synthetic fictional story; not a real event, person or production
 - **Authority:** `idaibin/ai-handbook/architecture/AI-ENGINEERING-LAB-ARCHITECTURE.md`
 - **Effective Date:** 2026-08-17
@@ -16,7 +16,8 @@ This document defines the complete end-to-end production specification for a 60-
 > [!IMPORTANT]
 > **Honest Verification Boundary:**
 > - This package is an **experiment-only design, prompt template library, and machine-readable task plan**.
-> - **Zero media files** (images, video clips, audio tracks, subtitles) have been generated or rendered.
+> - Two PNG image attempts were generated only for a bounded style/continuity/text inspection; no image is approved as a production keyframe.
+> - **No video clips, audio tracks, subtitles or master render** have been generated or rendered.
 > - **No Story Studio repository** or execution runtime has been created.
 > - The 60-second pilot has **NOT** been run, passed, or verified in production.
 > - All stages remain explicitly marked `not_verified` in `task-plan.yaml`.
@@ -142,12 +143,20 @@ TITLE CARD: CYBER-ECHOES: THE LAST SIGNAL — EPISODE 2 NEXT.
 
 ## 7. Character & Scene Reference Requirements
 
-- **Maya Character Reference Sheet:** Front, 3/4 and profile images will be generated,
-  reviewed and identified by artifact hash at execution time. No seed or reference
-  image currently exists.
+- **Maya Character Reference Sheet:** One 3/4 reference and one SHOT_02 image attempt
+  exist under [`production/reference/`](production/reference/); both are hashed and
+  manually inspected, but the independent review gate is still open.
 - **Environment Anchor Sheet:** The Sector 7 alley palette and composition rules are
   specified, but the reference asset and reproducibility parameters remain
   `not_verified` until an actual generation attempt is recorded.
+
+### 7.1 Bounded image-generation evidence
+
+The two attempts and their hashes are recorded in
+[`production/10-image-generation-evidence.yaml`](production/10-image-generation-evidence.yaml).
+The local visual check found a candidate style/character match and visibly correct
+`ACCESS WARNING` copy in the second frame. This is not OCR, device acceptance,
+multi-shot reproducibility, independent review or a passed keyframe gate.
 
 ---
 

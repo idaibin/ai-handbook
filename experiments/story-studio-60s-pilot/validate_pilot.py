@@ -33,7 +33,7 @@ REQUIRED_ARTIFACT_OUTPUTS = {
     "05-keyframe-image-production": {"approved_keyframe_pngs", "approved_keyframe_sha256s", "image_probe_records", "image_review_evidence"},
     "06-image-to-video-production": {"rendered_video_clips", "rendered_video_sha256s", "clip_probe_records", "motion_continuity_review"},
     "07-voice-music-and-effects-production": {"audio_sha256s", "loudness_and_peak_probe", "pronunciation_and_mix_review"},
-    "08-subtitles-and-edit-timeline": {"subtitle_srt", "edit_timeline", "subtitle_text_review", "timeline_sync_review"},
+    "08-subtitles-and-edit-timeline": {"subtitle_srt", "forced_alignment_json", "edit_timeline", "subtitle_text_review", "timeline_sync_review"},
     "09-master-render-and-playback": {"master_mp4", "master_sha256", "ffprobe_record", "full_playback_record", "quality_review_evidence"},
     "10-publication-feedback-and-accounting": {"publication_receipt", "target_readback_record", "actual_cost_ledger", "quality_score_record"},
 }

@@ -1,0 +1,117 @@
+schema_version: "1.0"
+artifact_id: story-studio-storyboard-v1
+status: not_verified
+aspect_ratio: "9:16"
+target_duration_seconds: 60
+shots:
+  - id: SHOT_01
+    window: "00:00-00:03"
+    size: extreme-close-up
+    camera: macro-static
+    action: "红色扫描警告映在 Maya 左眼"
+    emotion: alarm
+    audio_cue: scanner-chirp
+    image_prompt_ref: image-shot-01
+    motion_prompt_ref: motion-shot-01
+  - id: SHOT_02
+    window: "00:03-00:08"
+    size: close-up
+    camera: slow-tilt-up
+    action: "Maya 在雨中输入 decoder 指令"
+    emotion: controlled-fear
+    audio_cue: rain-and-breath
+    image_prompt_ref: image-shot-02
+    motion_prompt_ref: motion-shot-02
+  - id: SHOT_03
+    window: "00:08-00:15"
+    size: wide
+    camera: slow-dolly-back
+    action: "雨巷、排气孔蒸汽和巡逻灯构成暴露感"
+    emotion: isolation
+    audio_cue: distant-drone
+    image_prompt_ref: image-shot-03
+    motion_prompt_ref: motion-shot-03
+  - id: SHOT_04
+    window: "00:15-00:20"
+    size: medium
+    camera: tracking
+    action: "Maya 进入工作间并锁门"
+    emotion: urgency
+    audio_cue: door-lock
+    image_prompt_ref: image-shot-04
+    motion_prompt_ref: motion-shot-04
+  - id: SHOT_05
+    window: "00:20-00:26"
+    size: medium-close-up
+    camera: push-in
+    action: "青色波形照亮 Maya 的眼睛"
+    emotion: recognition
+    audio_cue: hologram-whoosh
+    image_prompt_ref: image-shot-05
+    motion_prompt_ref: motion-shot-05
+  - id: SHOT_06
+    window: "00:26-00:32"
+    size: close-up
+    camera: slow-roll
+    action: "神经波形展开，声音开始清晰"
+    emotion: dread
+    audio_cue: voice-entry
+    image_prompt_ref: image-shot-06
+    motion_prompt_ref: motion-shot-06
+  - id: SHOT_07
+    window: "00:32-00:38"
+    size: extreme-close-up
+    camera: static
+    action: "Maya 的手握紧神经片段"
+    emotion: disbelief
+    audio_cue: low-hum
+    image_prompt_ref: image-shot-07
+    motion_prompt_ref: motion-shot-07
+  - id: SHOT_08
+    window: "00:38-00:45"
+    size: wide
+    camera: quick-pan-left
+    action: "红色搜索光扫过雨窗"
+    emotion: hunted
+    audio_cue: drone-approach
+    image_prompt_ref: image-shot-08
+    motion_prompt_ref: motion-shot-08
+  - id: SHOT_09
+    window: "00:45-00:50"
+    size: medium-close-up
+    camera: low-angle-push-in
+    action: "无人机撞破窗户，碎片飞入工作间"
+    emotion: shock
+    audio_cue: glass-impact
+    image_prompt_ref: image-shot-09
+    motion_prompt_ref: motion-shot-09
+  - id: SHOT_10
+    window: "00:50-00:55"
+    size: close-up
+    camera: tracking-dolly
+    action: "Maya 的手按下 EMP"
+    emotion: decision
+    audio_cue: charge-whine
+    image_prompt_ref: image-shot-10
+    motion_prompt_ref: motion-shot-10
+  - id: SHOT_11
+    window: "00:55-00:58"
+    size: wide
+    camera: rapid-zoom
+    action: "EMP 白光覆盖房间"
+    emotion: rupture
+    audio_cue: discharge
+    image_prompt_ref: image-shot-11
+    motion_prompt_ref: motion-shot-11
+  - id: SHOT_12
+    window: "00:58-01:00"
+    size: title-card
+    camera: static
+    action: "黑场与 Episode 2 文案"
+    emotion: unresolved
+    audio_cue: ringing-tail
+    image_prompt_ref: image-shot-12
+    motion_prompt_ref: motion-shot-12
+review_gates:
+  - gate:storyboard-approved
+  - gate:source-and-rights-resolved

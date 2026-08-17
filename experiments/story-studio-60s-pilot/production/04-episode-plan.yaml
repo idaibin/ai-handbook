@@ -1,0 +1,29 @@
+schema_version: "1.0"
+artifact_id: story-studio-episode-plan-v1
+status: not_verified
+season_context:
+  season: 1
+  arc: "Maya 在身份被抹除前追查 Memory Vault"
+episode:
+  number: 1
+  title: "神经回声"
+  duration_seconds: 60
+  scene_count: 3
+  climax_window: "00:45-00:55"
+  cliffhanger_window: "00:55-01:00"
+scenes:
+  - id: scene-01
+    window: "00:00-00:15"
+    location: sector-7-rain-alley
+    purpose: hook-and-setup
+  - id: scene-02
+    window: "00:15-00:45"
+    location: maya-hacker-den
+    purpose: reveal-and-escalation
+  - id: scene-03
+    window: "00:45-01:00"
+    location: maya-hacker-den
+    purpose: breach-climax-and-cliffhanger
+next_episode_question: "EMP 后的黑场里，Maya 保存下来的记忆究竟是谁的？"
+review_gates:
+  - gate:script-timed-and-approved

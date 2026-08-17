@@ -1,0 +1,12 @@
+Use case: illustration-story
+Asset type: Story Studio character reference sheet, pilot fixture only
+Primary request: Create a clean three-quarter character reference portrait of Maya Chen, an original fictional protagonist for a cyberpunk suspense short drama.
+Scene/backdrop: neutral dark studio background with subtle rain texture, no story action.
+Subject: 26-year-old East Asian woman, sharp jawline, tired but focused eyes, asymmetrical short black hair with one small electric-blue streak on the right, narrow cyan cybernetic implant at the left temple, matte-black waterproof techwear jacket with orange inner lining, fingerless gloves, brass-edged acrylic neural decoder held near the shoulder.
+Style/medium: cinematic 2D editorial illustration with tactile grain, restrained cyberpunk realism, coherent graphic-novel lighting; original design, no franchise imitation.
+Composition/framing: vertical 9:16, head-to-waist three-quarter portrait, silhouette and wardrobe clearly readable, generous margin around the figure.
+Lighting/mood: soft cyan key with restrained amber rim, calm and controlled.
+Color palette: deep blue-black, cyan, muted amber, small electric-blue accent.
+Text (verbatim): none.
+Constraints: preserve the same face, hair, implant, jacket silhouette, orange lining, gloves, and decoder as locked continuity tokens for later frames.
+Avoid: extra limbs, face drift, costume changes, logos, watermark, readable random text, oversaturated neon, resemblance to any existing character or living creator.

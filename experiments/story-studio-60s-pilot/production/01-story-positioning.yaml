@@ -1,0 +1,47 @@
+schema_version: "1.0"
+artifact_id: story-studio-60s-positioning-v1
+status: not_verified
+synthetic_fixture: true
+title: "赛博回声：最后的信号"
+logline: "在记忆被商品化的霓虹都市，一名记忆回收工程师解开亡伴侣留下的神经片段，发现中央记忆库正在实时抹除城市居民。"
+audience:
+  primary: "18-35 岁、喜欢科幻悬疑和短视频叙事的移动端观众"
+  desired_response: "在前三秒理解危险，在结尾产生追看下一集的动机"
+genre:
+  primary: science-fiction
+  secondary: suspense
+  tone: "压迫、克制、快速升级；不模仿具体在世创作者"
+platform_contract:
+  aspect_ratio: "9:16"
+  duration_seconds: 60
+  candidate_channels: [tiktok, youtube-shorts, douyin, bilibili]
+  final_target: not_verified
+hook:
+  window: "00:00-00:03"
+  visual: "眼部生物扫描器跳出红色严重警告，雨声被短促数字噪声切断"
+  question: "为什么一个已经死亡的人会向她发出警告？"
+beats:
+  - window: "00:03-00:15"
+    beat: setup
+    action: "Maya 在雨巷解码神经片段并躲避巡逻灯"
+  - window: "00:15-00:30"
+    beat: escalation
+    action: "片段中的声音与亡伴侣吻合，猎杀无人机启动"
+  - window: "00:30-00:45"
+    beat: midpoint-reveal
+    action: "声音警告：Maya 已在下一批清除名单上"
+  - window: "00:45-00:55"
+    beat: climax
+    action: "无人机撞破窗户，红色锁定线覆盖 Maya"
+  - window: "00:55-01:00"
+    beat: cliffhanger
+    action: "Maya 触发 EMP，画面黑场，只留下碎玻璃和耳鸣"
+rights_and_source_basis:
+  source_type: synthetic-fiction
+  source_basis: "user-provided AI comic workflow example plus Story Studio pilot fixture"
+  third_party_characters: false
+  third_party_voice_or_music: not_selected
+  rights_status: not_verified
+review_gates:
+  - gate:story-positioning-complete
+  - gate:source-and-rights-resolved

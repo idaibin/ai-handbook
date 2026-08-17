@@ -1,0 +1,50 @@
+schema_version: "1.0"
+artifact_id: story-studio-video-motion-prompts-v1
+status: not_verified
+adapter: provider-neutral-image-to-video-adapter
+input_refs:
+  - production/06-storyboard.yaml
+  - production/07-image-prompts.yaml
+required_output:
+  media_type: video/mp4-or-declared-container
+  required_metadata: [attempt_id, adapter_version, input_keyframe_sha256, output_sha256, duration, dimensions, fps, codec, probe]
+  review: [motion-continuity, character-consistency, camera-direction, artifact-scan]
+global_motion_negative: [face-morphing, limb-dissolve, costume-change, object-hallucination, camera-jump, text-warp, watermark]
+shots:
+  - id: motion-shot-01
+    shot_id: SHOT_01
+    motion: "scanner light pulses twice; pupil tightens once; camera remains macro-static"
+  - id: motion-shot-02
+    shot_id: SHOT_02
+    motion: "slow tilt upward from decoder hands to Maya's eye; rain and breath move subtly"
+  - id: motion-shot-03
+    shot_id: SHOT_03
+    motion: "slow dolly backward; steam rises; distant search light sweeps once"
+  - id: motion-shot-04
+    shot_id: SHOT_04
+    motion: "tracking move follows Maya through the doorway; lock closes; no face change"
+  - id: motion-shot-05
+    shot_id: SHOT_05
+    motion: "camera pushes toward Maya's eyes; holographic waveform expands slowly"
+  - id: motion-shot-06
+    shot_id: SHOT_06
+    motion: "waveform rotates one quarter turn; cyan light flickers with the voice"
+  - id: motion-shot-07
+    shot_id: SHOT_07
+    motion: "fingers tighten once around the shard; tiny amber LED blinks"
+  - id: motion-shot-08
+    shot_id: SHOT_08
+    motion: "quick pan left follows the red searchlight across the window"
+  - id: motion-shot-09
+    shot_id: SHOT_09
+    motion: "drone advances through the window; glass travels outward; camera push-in stays continuous"
+  - id: motion-shot-10
+    shot_id: SHOT_10
+    motion: "camera tracks the hand to the EMP trigger; charge glow rises without changing hand anatomy"
+  - id: motion-shot-11
+    shot_id: SHOT_11
+    motion: "white EMP wave expands once; fragments pause then move outward; cut before morphing"
+  - id: motion-shot-12
+    shot_id: SHOT_12
+    motion: "title card remains static for two seconds; no generated pseudo-copy"
+review_gates: [gate:motion-video-continuity-verified, gate:source-and-rights-resolved]

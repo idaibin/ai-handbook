@@ -1,0 +1,13 @@
+Use case: illustration-story
+Asset type: Story Studio SHOT_02 keyframe, pilot fixture only
+Primary request: Generate a vertical 9:16 rainy neon alley keyframe featuring the exact same original character as the supplied reference image.
+Input images: Image 1: character reference; preserve Maya's face, asymmetrical short black hair with the small electric-blue streak, narrow cyan left-temple implant, matte-black waterproof techwear jacket with orange lining, fingerless gloves, and brass-edged acrylic neural decoder.
+Scene/backdrop: Sector 7 brutalist rain alley at night, wet asphalt, sparse cyan reflections, steam from a vent, distant red search light.
+Subject: Maya crouched beside a vent, typing on the same neural decoder; her silhouette and continuity tokens must remain recognizable from the reference.
+Style/medium: match the reference image's tactile cinematic cyberpunk editorial realism, restrained grain and contrast; original design, no franchise imitation.
+Composition/framing: 9:16 vertical, close-to-medium shot, decoder and face both readable, leave clean upper-left negative space.
+Lighting/mood: cyan key light, restrained amber practical light, red warning rim, controlled fear.
+Color palette: deep blue-black, cyan, muted amber, small red warning accent.
+Text (verbatim): "ACCESS WARNING" only, uppercase, correctly spelled, placed once on a simple rectangular decoder display; no other readable text.
+Constraints: preserve character identity and wardrobe from Image 1; keep the exact text legible and unwarped; no logos or watermark.
+Avoid: face drift, costume change, extra limbs, unreadable pseudo-text, extra words, random signage, oversaturated neon, camera distortion.

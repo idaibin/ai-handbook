@@ -1,0 +1,41 @@
+schema_version: "1.0"
+artifact_id: story-studio-audio-plan-v1
+status: not_verified
+adapter: provider-neutral-audio-adapter
+canonical_text_ref: production/05-episode-01-script.md
+rights:
+  voice_consent: not_verified
+  music_license: not_verified
+  sfx_license: not_verified
+  provider_and_model: not_selected
+stems:
+  A1_dialogue_voice:
+    source: Maya and partner dialogue from approved script
+    target: "48 kHz stereo; dialogue remains intelligible over music"
+  A2_bgm:
+    progression:
+      - window: "00:00-00:20"
+        cue: "low synthetic tension pulse"
+      - window: "00:20-00:45"
+        cue: "restrained arpeggio building toward reveal"
+      - window: "00:45-00:55"
+        cue: "industrial impact and controlled distortion"
+      - window: "00:55-01:00"
+        cue: "abrupt ducking, discharge tail and ringing"
+  A3_sfx:
+    cues:
+      - ["00:00.5", scanner-chirp, "-4 dB target, actual not_verified"]
+      - ["00:15.2", door-lock, "-6 dB target, actual not_verified"]
+      - ["00:21.0", hologram-whoosh, "-8 dB target, actual not_verified"]
+      - ["00:46.0", glass-impact-and-drone, "mix target not_verified"]
+      - ["00:54.8", emp-charge-and-discharge, "mix target not_verified"]
+subtitle_interface:
+  asr: Whisper candidate for reconciliation only
+  forced_alignment: WhisperX candidate for word-level timestamps
+  canonical_text: approved screenplay, not ASR output
+  outputs: [subtitle_srt, forced_alignment_json]
+quality_gates:
+  - gate:audio-sync-and-voice-approved
+  - gate:subtitles-and-edit-timeline-closed
+  - gate:source-and-rights-resolved
+  - required_probe: ffmpeg-ebur128-and-peak

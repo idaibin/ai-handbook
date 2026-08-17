@@ -1,0 +1,54 @@
+schema_version: "1.0"
+artifact_id: story-studio-image-prompts-v1
+status: not_verified
+adapter: provider-neutral-image-adapter
+input_refs:
+  - production/02-world-bible.yaml
+  - production/03-character-bible.yaml
+  - production/06-storyboard.yaml
+output_contract:
+  media_type: image/png
+  dimensions: 1080x1920
+  required_metadata: [attempt_id, adapter_version, reference_hashes, prompt_hash, output_sha256, probe]
+  review: [style-continuity, character-consistency, text-accuracy, technical-quality]
+global_positive: "vertical cinematic cyberpunk frame, tactile grain, restrained cyan and amber signals, coherent 9:16 composition, no franchise imitation"
+global_negative: [face-drift, costume-change, extra-limbs, unreadable-text, random-logo, watermark, oversaturated-hdr]
+shots:
+  - id: image-shot-01
+    shot_id: SHOT_01
+    prompt: "Maya's left eye in extreme close-up, red biometric warning reflected in the iris, cyan implant edge, rain highlights, high contrast, no extra UI text"
+    required_copy: ["ACCESS WARNING"]
+  - id: image-shot-02
+    shot_id: SHOT_02
+    prompt: "Maya typing on a brass-edged acrylic neural decoder in a rain-soaked alley, black techwear sleeve and orange lining visible, controlled fear"
+  - id: image-shot-03
+    shot_id: SHOT_03
+    prompt: "wide Sector 7 brutalist rain alley, steam vent, sparse cyan reflections, a red search light far behind Maya, strong negative space"
+  - id: image-shot-04
+    shot_id: SHOT_04
+    prompt: "Maya entering a cramped hacker den, decoder close to body, rain window behind, old terminal and cyan light, no readable microtext"
+  - id: image-shot-05
+    shot_id: SHOT_05
+    prompt: "cyan holographic waveform illuminating Maya's locked face, consistent short black hair and temple implant, medium close-up"
+  - id: image-shot-06
+    shot_id: SHOT_06
+    prompt: "rotating neural waveform and a small copied memory shard above the terminal, Maya's silhouette in the background, restrained cyan and amber"
+  - id: image-shot-07
+    shot_id: SHOT_07
+    prompt: "Maya's gloved hands gripping the acrylic neural shard, brass edge and three contact pins visible, shallow depth of field"
+  - id: image-shot-08
+    shot_id: SHOT_08
+    prompt: "rain-streaked hacker-den window crossed by a red searchlight, Maya reflected at the edge, hunted atmosphere"
+  - id: image-shot-09
+    shot_id: SHOT_09
+    prompt: "matte-white four-rotor hunter drone breaking through a rain window, crimson scan eye, Maya recoiling in foreground, safe non-gory action"
+  - id: image-shot-10
+    shot_id: SHOT_10
+    prompt: "Maya's palm pressing a compact EMP trigger on a dark desk, cyan charge lines and amber indicator, decisive close-up"
+  - id: image-shot-11
+    shot_id: SHOT_11
+    prompt: "white EMP flash expanding through the hacker den, silhouettes and fragments frozen for a readable action beat, no extra text"
+  - id: image-shot-12
+    shot_id: SHOT_12
+    prompt: "near-black title card with a restrained cyan rule and exact copy: THE NEURAL ECHO · EPISODE 2 NEXT; no additional words"
+review_gates: [gate:keyframe-consistency-verified, gate:source-and-rights-resolved]

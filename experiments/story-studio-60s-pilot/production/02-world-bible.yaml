@@ -1,0 +1,34 @@
+schema_version: "1.0"
+artifact_id: story-studio-world-bible-v1
+status: not_verified
+world:
+  name: "Sector 7 / Neo-Kowloon"
+  time: 2089
+  premise: "记忆被许可、交易并由中央 Vault 管理；未经授权的记忆会被清除"
+  technology:
+    memory_storage: "可插拔神经片段与云端记忆 Vault"
+    surveillance: "无人机、红色生物扫描、全城身份索引"
+    interface_language: "简短英文警告 + 无障碍图形符号；不依赖不可读的伪文字"
+  society_rules:
+    - "记忆访问需要身份权限，权限失效会触发追踪"
+    - "中央 Vault 可以撤销个人记忆，但不能阻止离线神经片段被复制"
+    - "猎杀无人机的红色扫描线是可识别的危险信号"
+locations:
+  - id: sector-7-rain-alley
+    purpose: "建立孤立、暴露和时间压力"
+    fixed_visuals: [wet-asphalt, brutalist-vents, cyan-reflections, sparse-amber-signals]
+  - id: maya-hacker-den
+    purpose: "解码、揭示、被突破"
+    fixed_visuals: [old-terminal, acrylic-decoder, rain-window, cyan-hologram]
+props:
+  neural_decoder:
+    continuity_tokens: [brass-edge, acrylic-shell, amber-led, three-contact-pins]
+  hunter_drone:
+    continuity_tokens: [matte-white-body, four-rotors, crimson-scan-eye]
+visual_system:
+  palette: ["#121820", "#38C7D9", "#FF6B35", "#F3EFE4"]
+  style: "documentary cyberpunk editorial; tactile grain; no protected franchise imitation"
+  negative: [extra-limbs, face-drift, unreadable-text, invented-logo, watermark, random-costume-change]
+review_gates:
+  - gate:world-character-bible-locked
+  - gate:source-and-rights-resolved

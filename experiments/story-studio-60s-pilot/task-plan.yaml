@@ -112,7 +112,7 @@ stages:
     owner: editor
     review_owner: independent_reviewer
     inputs: [rendered_video_clips, rendered_video_sha256s, rendered_dialogue_tracks, rendered_narration_track, rendered_music_and_sfx_tracks, timestamped_60s_script]
-    outputs: [subtitle_srt, subtitle_timing_json, edit_timeline, subtitle_text_review, timeline_sync_review]
+    outputs: [subtitle_srt, forced_alignment_json, subtitle_timing_json, edit_timeline, subtitle_text_review, timeline_sync_review]
     gates: [gate:subtitles-and-edit-timeline-closed]
     stop_conditions: [subtitle_copy_mismatch, reading_speed_exceeded, safe_zone_overlap, track_sync_mismatch]
     evidence_level: not_verified
