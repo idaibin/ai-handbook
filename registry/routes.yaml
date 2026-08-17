@@ -39,7 +39,9 @@ routes:
     outputs:
       - requirement
       - product-specification
+      - visual-source-evidence
       - ui-specification
+      - ui-confirmation-evidence
       - product-ui
       - architecture
       - implementation
@@ -49,7 +51,9 @@ routes:
     lifecycle:
       - intent
       - specification
+      - visual-source
       - design
+      - confirmation
       - implementation
       - verification
       - review
