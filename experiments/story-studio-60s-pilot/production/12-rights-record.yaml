@@ -1,0 +1,32 @@
+schema_version: "1.0"
+artifact_id: story-studio-rights-record-v1
+status: not_verified
+source_basis:
+  type: synthetic-fiction
+  title: "赛博回声：最后的信号"
+  user_supplied_third_party_assets: false
+  real_people_or_likenesses: false
+  franchise_or_brand_elements: false
+  living_artist_style_request: false
+generated_assets:
+  provider: ChatGPT AI Design
+  project: AI Design
+  conversation_id: 6a82e2cd-ca9c-83e9-a93a-2da4a0d5304f
+  outputs:
+    - production/reference/chatgpt-ai-design-maya-reference-v1.png
+    - production/reference/chatgpt-ai-design-maya-shot-02-v1.png
+  provider_terms_or_commercial_clearance: not_verified
+  training_data_or_model_provenance: not_verified
+other_media:
+  voice: not_selected
+  music: not_selected
+  sound_effects: not_selected
+publication:
+  authorization: not_verified
+  target_channel: not_selected
+  disposition: blocked_until_rights_review
+review_owner: accountable_producer
+stop_conditions:
+  - provider_terms_not_verified
+  - image_rights_not_verified
+  - publication_authorization_missing

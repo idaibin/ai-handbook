@@ -13,6 +13,7 @@ mode_evidence: "Create image pill and provider-owned generated-image container w
 completion_evidence: "Each response ended with a named generated-image button, the stop control disappeared, and the composer returned."
 rights_basis: synthetic-fiction-original; no living artist, franchise, brand, real-person or third-party reference
 rights_status: not_verified
+rights_record: production/12-rights-record.yaml
 
 outputs:
   - operation_order: 1
