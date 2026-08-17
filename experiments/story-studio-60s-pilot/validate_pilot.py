@@ -69,6 +69,11 @@ def validate_task_plan(plan_path: Path) -> dict[str, Any]:
     candidate_evidence = plan_path.parent / "production" / "11-chatgpt-ai-design-evidence.yaml"
     if not candidate_evidence.is_file():
         raise PilotValidationError("task plan: ChatGPT AI Design candidate evidence is required")
+    video_backend = data.get("video_backend")
+    if not isinstance(video_backend, dict) or video_backend.get("orchestrator") != "comfyui":
+        raise PilotValidationError("task plan: ComfyUI video_backend contract is required")
+    if video_backend.get("web_ui_start") != "forbidden_for_validation":
+        raise PilotValidationError("task plan: ComfyUI Web UI must remain forbidden for validation")
 
     roles = data.get("roles")
     if not isinstance(roles, dict) or not roles:

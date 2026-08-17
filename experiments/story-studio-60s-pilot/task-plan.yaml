@@ -15,6 +15,14 @@ generation_policy:
   existing_codex_probe_disposition: excluded_non_authoritative
   latest_candidate_evidence: production/11-chatgpt-ai-design-evidence.yaml
 
+video_backend:
+  orchestrator: comfyui
+  runtime_path: /Users/daibin/Codex/.codex/comfyui-runtime/story-studio-20260817
+  workflow_evidence: research/story-studio/2026-08-17-comfyui-workflow-review.md
+  web_ui_start: forbidden_for_validation
+  queue_history_output: not_verified
+  model_weights: not_verified
+
 roles:
   accountable_producer: Owns scope, budget, rights, final stop/go and publication authorization.
   story_writer: Owns positioning, world, characters, episode plan and script.

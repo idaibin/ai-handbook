@@ -163,6 +163,17 @@ Gemini's visual candidate review is `candidate-pass`, while Grok's realism revie
 is `revise`; the overall image gate is `revise_pending` until the attention-risk
 revision, rights and remaining acceptance checks pass.
 
+### 7.2 ComfyUI backend verification
+
+ComfyUI is installed in the isolated runtime
+`/Users/daibin/Codex/.codex/comfyui-runtime/story-studio-20260817`. The first
+headless pass downloaded and hashed 12 traceable candidates and validated five
+original JSON files. The official Wan2.1 graph reached core node/model-input
+validation; Kijai wrapper graphs failed headless custom-node registration because
+of a `PromptServer.instance` dependency. No Web UI, queue/history/output or video
+generation was run. See [`research/story-studio/2026-08-17-comfyui-workflow-review.md`](../../research/story-studio/2026-08-17-comfyui-workflow-review.md)
+and the task evidence under `.codex/reviews/`.
+
 ---
 
 ## 8. Concrete Prompt Templates

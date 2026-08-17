@@ -88,6 +88,11 @@ def validate_story_studio_pilot(root: Path, route_ids: set[str], projects: dict[
     candidate_evidence = plan_path.parent / "production" / "11-chatgpt-ai-design-evidence.yaml"
     if not candidate_evidence.is_file():
         raise RegistryError("story studio pilot: ChatGPT AI Design candidate evidence is required")
+    video_backend = plan.get("video_backend")
+    if not isinstance(video_backend, dict) or video_backend.get("orchestrator") != "comfyui":
+        raise RegistryError("story studio pilot: ComfyUI video_backend contract is required")
+    if video_backend.get("web_ui_start") != "forbidden_for_validation":
+        raise RegistryError("story studio pilot: ComfyUI Web UI must remain forbidden for validation")
 
     roles = plan.get("roles")
     if not isinstance(roles, dict) or not roles:
