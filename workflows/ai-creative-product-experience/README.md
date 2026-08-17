@@ -1,7 +1,9 @@
+> Historical combined workflow. Superseded by the Createway Content Output System and Forgeway Product Delivery System Maps plus `registry/routes.yaml`. Retained as experiment history; do not use it to assign a mixed-route Task.
+
 # AI Creative & Product Experience Workflow
 
 - Version: v0.1
-- Status: Experimental
+- Status: Historical / superseded
 - Effective date: 2026-08-16
 - Scope: AI Creative & Media and AI Product Experience
 - Authority: ai-handbook workflow; project-specific facts and current user instructions override this document.

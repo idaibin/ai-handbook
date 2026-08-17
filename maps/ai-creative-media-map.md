@@ -1,3 +1,5 @@
+> Historical capability-domain Map. Current successor: [`content-output-system-map.md`](./content-output-system-map.md), owned by the Createway route. Retained for evolution history; it no longer selects Task execution.
+
 # AI Creative & Media Map v0.1
 
 ## Purpose

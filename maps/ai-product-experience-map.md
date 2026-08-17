@@ -1,3 +1,5 @@
+> Historical capability-domain Map. Current successor: [`product-delivery-system-map.md`](./product-delivery-system-map.md), owned by the Forgeway route. Retained for evolution history; it no longer selects Task execution.
+
 # AI Product Experience Map v0.1
 
 ## Purpose

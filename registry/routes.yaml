@@ -1,0 +1,65 @@
+schema_version: "1.0"
+
+routes:
+  - id: content-output-system
+    name: Content Output System
+    product:
+      id: createway
+      name: Createway
+      implementation_status: defined
+    purpose: Turn ideas and source material into reviewed, publishable content.
+    outputs:
+      - article
+      - image
+      - photography
+      - video
+      - audio
+      - poster
+      - comic
+      - social-content
+      - event-update
+    lifecycle:
+      - intent
+      - brief
+      - creation
+      - editing
+      - review
+      - publication
+      - feedback
+
+  - id: product-delivery-system
+    name: Product Delivery System
+    product:
+      id: forgeway
+      name: Forgeway
+      implementation_status: active
+      github:
+        repository: idaibin/forgeway
+    purpose: Turn product intent into verified software delivery.
+    outputs:
+      - requirement
+      - product-specification
+      - ui-specification
+      - architecture
+      - implementation
+      - test-evidence
+      - release
+    lifecycle:
+      - intent
+      - specification
+      - design
+      - implementation
+      - verification
+      - review
+      - delivery
+
+execution_rules:
+  project_routes:
+    primary: exactly-one
+    secondary: zero-or-more
+  task_route:
+    cardinality: exactly-one
+    rule: A task must select content-output-system or product-delivery-system before execution.
+  shared_capabilities:
+    role: reusable-input
+    rule: Shared AI Capabilities support a selected route but are not a third delivery route.

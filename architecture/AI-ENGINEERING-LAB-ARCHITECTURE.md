@@ -1,176 +1,122 @@
 # AI Engineering Lab Architecture Specification
 
-- Version: v1.0
+- Version: v2.0
 - Status: Baseline
-- Effective date: 2026-08-16
-- Scope: AI Engineering Lab workspace, ai-handbook governance, GitHub project repositories, and Google Drive private assets
-- Authority: This document defines the architecture baseline. It does not replace the current user instruction, the ai-handbook workflow README, or repository-specific runtime facts.
+- Effective date: 2026-08-17
+- Authority: current AI Engineering Lab output-oriented architecture
 
 ## 1. Positioning
 
-AI Engineering Lab is the total workspace for a personal AI Engineering System. It coordinates research, knowledge, experiments, engineering implementation, product delivery, and commercial validation.
+AI Engineering Lab is the total workspace for research, reusable AI capabilities, content production, software product delivery and commercial validation.
 
-It is not a single GitHub repository and not a standalone knowledge base. It is a shared context, research, experiment, asset, and project-coordination space.
+```text
+AI Engineering Lab
+├── Shared AI Capabilities
+├── Content Output System
+│   └── Createway
+└── Product Delivery System
+    └── Forgeway
+```
 
-Target loop: AI capability research -> knowledge distillation -> experiment -> engineering implementation -> product delivery -> commercial value.
+The architecture is organized by final output, not by parallel research domains.
 
-## 2. Authority and storage boundaries
+## 2. Output systems
 
-The system uses three complementary layers. They are not three copies of the same content.
+### Content Output System — Createway
 
-| Layer | System | Authority | Stores | Must not become |
-|---|---|---|---|---|
-| Private workspace | Google Drive / AI Engineering Lab | private process and asset source | raw sources, research packages, media, project material, review packages, exports | code repository or public knowledge authority |
-| Governance and knowledge | GitHub / idaibin/ai-handbook | versioned public workflow, schema, maps, decisions, distilled knowledge | maps, Registry contracts, standards, workflows, research summaries, decision records | large media store or secret store |
-| Engineering delivery | GitHub project repositories | code and runtime engineering truth | code, schemas, tests, CI, releases, deployment-facing docs | cross-project knowledge center |
+Outcome: turn an idea, source or event into reviewed, publishable content.
 
-Conflict rule: current user instructions have highest priority; then the current ai-handbook workflow and Registry contract; then repository-specific verified runtime facts; then Drive process records. A historical report cannot override current repository or production evidence.
+Scope includes writing, images, photography, posters, video, animation, audio, comics, social/community content and event updates.
 
-## 3. Google Drive workspace
+Lifecycle:
 
-Root workspace: AI Engineering Lab.
+`Intent → Brief → Source Grounding → Create → Edit → Review → Publish → Feedback`
 
-Initial folders: 00-Inbox, 10-Sources, 20-Media, 30-Datasets, 40-Exports, and 90-Archive.
+Createway is architecture-defined. No implementation repository or runtime is currently verified.
 
-Create 40-Projects, 50-Experiments, and 70-Knowledge-Outputs only when a real asset requires them. Do not create empty directory trees in advance.
+### Product Delivery System — Forgeway
 
-Drive stores private or large assets: source material, images, video, audio, design files, datasets, review packages, and exports. Every durable asset referenced by GitHub must have an asset_id, canonical Drive URL or file ID, access classification, and sync status.
+Outcome: turn product intent into verified software delivery.
 
-## 4. ai-handbook role
+Scope includes product definition, requirements, UX/UI, architecture, domain/data/interface design, tasks, implementation, tests, review, release and runtime readback.
 
-Repository: idaibin/ai-handbook.
+Lifecycle:
 
-ai-handbook is the governance and knowledge layer for AI Engineering Lab. It owns maps and navigation; Registry contracts and cross-system index; research methods and summaries; workflows and standards; decision records; and distilled reusable knowledge.
+`Intent → Specification → Design → Implementation → Verification → Review → Delivery`
 
-It does not own private source files, large media, credentials, customer data, or unverified project claims.
+Forgeway is implemented in `idaibin/forgeway`.
 
-Expected structure: maps/, registry/, research/, experiments/, workflows/, standards/, decisions/.
+## 3. Shared AI Capabilities
 
-The authoritative workflow entrypoint remains workflows/ai-engineering-system/README.md. Before important work, read that entrypoint and record the exact commit SHA.
+Shared capabilities include Model, Agent, Skill, Tool/MCP/Plugin, Context/Memory/RAG, Workflow/Automation, Evaluation/Verification, Knowledge/Research and Design System.
 
-## 5. Three research domains
+Design System is layered:
 
-### AI Engineering
+```text
+Design System
+├── Design Tokens
+├── Content View
+└── Product View
+```
 
-How AI systems work and how to engineer with them: Model, Agent, Skill, Plugin, MCP, Tool, Harness, Workflow, Memory, Context, RAG, Evaluation, and Automation.
+Content View supports templates and visual rules for content outputs. Product View supports UI tokens, components and React/Tauri product implementation. Shared capabilities never become a third delivery route.
 
-Outputs: reusable Skills, Agent methods, workflows, engineering standards, and verification methods.
+## 4. Task routing
 
-### AI Creative & Media
+A project has one primary route and may have secondary routes. A Task must select exactly one route before execution.
 
-How AI produces digital content assets: Image, Photography, Graphic Design, Poster, Social Content, Video, Animation, Comic, Digital Human, Audio, and 3D.
+- Content creation, editing, packaging and publication use `content-output-system`.
+- Product specification, APIs, databases, UI implementation, tests and deployment use `product-delivery-system`.
+- A mixed project such as feeds-hub uses both at project level, but each Task remains single-route.
 
-The primary unit is a content-production workflow, not a model list: Idea -> Script -> Storyboard -> Generation -> Editing -> Publish -> Feedback.
+## 5. Authority and storage
 
-### AI Product Experience
+| Layer | Authority |
+| --- | --- |
+| Google Drive / AI Engineering Lab | private sources, media binaries, datasets, masters, review packages and exports |
+| GitHub / ai-handbook | architecture, Registry, Maps, workflows, standards, research summaries and decisions |
+| GitHub project repositories | code, project-native specifications, tests, releases and runtime-facing facts |
 
-How AI becomes a real product: Product Strategy, UX, UI, Web, Desktop, Mobile, Design System, Prototype, Frontend, AI Interface, Data Visualization, and Growth.
-
-The key product transition is: Intent -> Plan -> Execution -> Artifact -> Review -> Commit.
-
-Domains are classification and routing dimensions. A project may belong to more than one domain, but each relationship must be explicit in Registry.
+GitHub and Drive are complementary authorities, not mirrors. Public repositories must not contain credentials, private links, customer material or large media binaries.
 
 ## 6. Registry
 
-Registry is the machine-readable routing and indexing layer. It is not a fourth knowledge repository and must not duplicate complete GitHub or Drive content.
+Registry separates:
 
-It answers where an object is; what domain it belongs to; which repository or Drive asset is authoritative; what it relates to; and its lifecycle and sync state.
+- `routes`: how a Task executes;
+- `capabilities`: what reusable abilities it uses;
+- `domains`: retained classification and historical compatibility;
+- `projects`, `assets` and `relationships`: identity and references.
 
-Minimum object requirements: stable id; type; human-readable name; canonical source reference; domain or project relationship; status; updated_at; evidence or provenance reference; and sync_status where cross-system references exist.
+`routes.yaml` is the current route authority. `projects.yaml` records project defaults and capabilities. Task route selection overrides a project default for that Task without changing the project mapping.
 
-Current logical collections: domains, projects, assets, and relationships.
+## 7. Maps
 
-Allowed relationship types: uses, implements, tested-by, indexes-asset, distills-into, depends-on, and derived-from.
+Current Maps:
 
-Registry rules:
+- `shared-ai-capabilities-map.md`;
+- `content-output-system-map.md`;
+- `product-delivery-system-map.md`.
 
-1. A new durable object must be registered or explicitly declared out of scope.
-2. A Registry entry points to the source; it does not copy the source body.
-3. Unknown, historical, and verified states must not be collapsed into one status.
-4. A path is not a stable identity; use a repository path plus commit SHA or a canonical Drive file ID/URL.
-5. Existing Registry records are updated in place. Do not create parallel registries.
+Prior domain Maps remain as historical entrypoints with successor references. They no longer select execution.
 
-The existing Google Drive AI Engineering Registry is a current operational registry record and must be reconciled with the GitHub Registry contract rather than replaced by another spreadsheet.
+## 8. Migration state
 
-## 7. Project mapping
+The earlier Creative pilot implemented under Forgeway remains historical evidence. Its binaries stay in Drive and hashes stay in Registry. Governance moves to Createway; the originating Forgeway contract is marked pending migration rather than silently rewritten.
 
-| Project | Primary domains | Responsibility |
-|---|---|---|
-| idaibin/skills | AI Engineering | reusable Skills, Agent capabilities, and workflows |
-| idaibin/forgeway | AI Engineering; AI Product Experience | AI-native software delivery, artifact workflow, and product engineering |
-| idaibin/rustzen-admin | AI Product Experience; AI Engineering | local-first desktop UX and macOS product experience |
-| idaibin/feeds-hub | AI Product Experience; AI Engineering; AI Creative & Media | information product, feed system, AI-assisted content processing and display |
+No Createway repository, empty Drive hierarchy or runtime contract is created until a real implementation Task and consumer require it.
 
-Repository-specific facts remain authoritative for implementation and runtime behavior.
+## 9. Maintenance sequence
 
-## 8. AI task routing
+Read this baseline → read `workflows/ai-engineering-system/README.md` at an exact commit → query Registry → select one Task route → load only required capabilities and project/Drive assets → execute and verify → update affected references and readback.
 
-For a task that concerns AI Engineering Lab or a registered project:
+## 10. Constraints
 
-1. Read the ai-handbook workflow entrypoint and exact baseline SHA.
-2. Read the Registry entry or query the smallest relevant Registry slice.
-3. Determine the relevant domain and project.
-4. Read the domain Map and project repository entry.
-5. Resolve only the required GitHub files and Drive assets.
-6. Execute the task under the applicable workflow.
-7. Record evidence, update Registry references, and sync only affected records.
-
-AI agents must not blindly scan every repository or treat the entire Drive workspace as a knowledge source. Direct repository inspection is allowed when the task is explicitly repository-scoped and the authoritative workflow permits it.
-
-## 9. Security and publication
-
-Never publish to GitHub: API keys, tokens, cookies, credentials, account information; private access-granting links; customer or private source material; copyrighted source text beyond permitted excerpts; or large media assets.
-
-Drive is the default location for private sources, media, experiments, and review packages. Before publishing any derived result, check secrets, privacy, copyright, and whether the artifact is actually a distilled engineering fact.
-
-## 10. Synchronization protocol
-
-GitHub is the versioned authority for code, contracts, workflows, and distilled public knowledge. Drive is the private authority for raw material and large assets. Neither side is a mirror of the other.
-
-For a cross-system change:
-
-1. Identify the source object and target object.
-2. Update the authoritative source first.
-3. Update Registry metadata and relationship edges.
-4. Add canonical references, commit SHA or Drive file ID, and timestamp.
-5. Verify target readback.
-6. Record synced, partial, or write_failed with the next action.
-
-Do not silently overwrite an existing record. Preserve historical evidence, but mark obsolete claims as historical or archived.
-
-## 11. Current state
-
-Verified baseline decisions: AI Engineering Lab is the single total workspace; GitHub, Drive, and ai-handbook boundaries are defined; Registry is the routing/index layer; three research domains are defined; skills, forgeway, rustzen-admin, and feeds-hub have explicit domain mappings; and no additional parallel Lab or Registry should be created.
-
-Not yet complete: full domain Maps; complete knowledge graphs; tool and model registries; domain case libraries; experiment asset catalog; and reusable practice workflows for all domains.
-
-These are backlog items, not evidence that the architecture baseline is incomplete.
-
-## 12. Phased roadmap
-
-Phase 1 — Stabilize foundation: maintain Registry contracts, Maps entrypoints, Drive routing, and authority rules.
-
-Phase 2 — Build domain Maps: expand the three Maps only from verified research and actual project needs.
-
-Phase 3 — Build knowledge graph: add capabilities, tools, models, cases, workflows, evaluations, and typed relationships.
-
-Phase 4 — Validate in real projects: use skills, forgeway, rustzen-admin, feeds-hub, and future projects as validation environments. Promote a Skill or Workflow only after reproducible evidence.
-
-## 13. Maintenance constraints
-
-1. Do not create a parallel Lab.
-2. Do not duplicate GitHub and Drive bodies.
-3. Do not make a project repository the knowledge center.
-4. Do not create large empty directory structures.
-5. Register every new durable cross-system object.
-6. Build Maps before expanding graph detail.
-7. Validate before promoting a Skill or Workflow.
-8. Keep Verified, Inference, Historical, and Not verified claims distinct.
-9. Do not use a design proposal or build result as proof of runtime success.
-10. Prefer the smallest change that closes the current verified gap.
-
-## 14. Maintenance entrypoint
-
-Read this baseline -> read ai-handbook/workflows/ai-engineering-system/README.md -> record baseline SHA -> query Registry -> resolve the smallest relevant sources -> execute and verify -> update affected Registry records -> sync GitHub and Drive readback.
-
-This document is the architecture baseline and maintenance contract. It is not a substitute for current repository code, current production evidence, or the latest user instruction.
+1. Do not create a parallel Lab or Registry.
+2. Do not duplicate GitHub and Drive content.
+3. Do not let project repositories become the knowledge center.
+4. Do not create empty repository or Drive structures.
+5. Keep one route per Task.
+6. Preserve domains for classification, not execution.
+7. Distinguish defined architecture, implemented capability and verified runtime evidence.
+8. Validate before promoting a Skill, Workflow or product runtime.

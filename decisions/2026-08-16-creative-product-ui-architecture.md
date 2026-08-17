@@ -1,8 +1,11 @@
 # Creative and Product UI Architecture Decision
 
+> Historical decision. Superseded by [`2026-08-17-output-oriented-architecture-v2.md`](./2026-08-17-output-oriented-architecture-v2.md). Product UI remains under Forgeway; Creative governance moves to Createway. Existing Forgeway Creative artifacts are migration evidence, not current ownership authority.
+
+
 - Date: 2026-08-16
 - Corrected: 2026-08-17
-- Status: Accepted v1 implementation slice
+- Status: Superseded by AI Engineering Lab Output-Oriented Architecture v2.0
 - Supersedes: the earlier same-day proposal for a separate `creative-workflows` repository
 - Evidence: 19 open-source repository benchmarks, six generated visual fixtures, Forgeway contract tests, GitHub commit `591a6ae12cc7ba246a3fec30db324aec24c3312f`, and Google Drive asset readback
 

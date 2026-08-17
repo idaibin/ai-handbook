@@ -4,6 +4,12 @@ projects:
     status: active
     domains:
       - ai-engineering
+    capabilities:
+      - knowledge-governance
+      - registry
+      - research
+      - workflow
+      - decision-record
     github:
       repository: idaibin/ai-handbook
     tags:
@@ -15,33 +21,68 @@ projects:
     status: active
     domains:
       - ai-engineering
+    capabilities:
+      - agent
+      - skill
+      - workflow
+      - evaluation
     github:
       repository: idaibin/skills
     tags:
       - agent-skills
-      - workflow
+      - shared-capabilities
+
+  - id: createway
+    type: product
+    status: defined
+    route:
+      primary: content-output-system
+    domains:
+      - ai-engineering
+      - ai-creative-media
+    capabilities:
+      - content-workflow
+      - content-artifact
+      - design-system-content-view
+      - publication
+      - content-verification
+    tags:
+      - content-output-system
+      - architecture-defined
+      - repository-not-created
 
   - id: forgeway
     type: product
     status: active
+    route:
+      primary: product-delivery-system
     domains:
       - ai-engineering
-      - ai-creative-media
       - ai-product-experience
+    capabilities:
+      - agent
+      - workflow
+      - artifact
+      - design-system-product-view
+      - verification
     github:
       repository: idaibin/forgeway
     tags:
-      - agent-workflow
+      - product-delivery-system
       - artifact-system
-      - audience-artifacts
-      - creative-delivery
 
   - id: rustzen-admin
     type: product
     status: active
+    route:
+      primary: product-delivery-system
     domains:
       - ai-engineering
       - ai-product-experience
+    capabilities:
+      - desktop-application
+      - local-first
+      - product-ui
     github:
       repository: idaibin/rustzen-admin
     tags:
@@ -51,9 +92,18 @@ projects:
   - id: feeds-hub
     type: product
     status: active
+    route:
+      primary: content-output-system
+      secondary:
+        - product-delivery-system
     domains:
       - ai-engineering
+      - ai-creative-media
       - ai-product-experience
+    capabilities:
+      - content-pipeline
+      - feed-system
+      - web-application
     github:
       repository: idaibin/feeds-hub
     tags:

@@ -1,3 +1,5 @@
+> Historical capability-domain Map. Current successor: [`shared-ai-capabilities-map.md`](./shared-ai-capabilities-map.md). Retained for evolution history and domain queries; it no longer selects Task execution.
+
 # AI Engineering Map v0.3
 
 ## Purpose

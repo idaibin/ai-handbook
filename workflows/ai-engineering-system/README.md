@@ -1,6 +1,6 @@
 # AI Engineering System Workflow
 
-- **Version:** `0.3.0`
+- **Version:** `0.4.0`
 - **Status:** active
 - **Canonical owner:** `idaibin/ai-handbook`
 - **Canonical path:** `workflows/ai-engineering-system/`
@@ -66,11 +66,16 @@
 
 ## 3. 标准阶段
 
-### Stage 0 — Intake
+### Stage 0 — Intake And Route
 
 输入可以是用户提供的地址、GitHub Stars、自动发现结果、项目缺口或实时事件。
 
-输出：稳定对象 ID、原始地址、来源时间和触发原因。
+先记录稳定对象 ID、原始地址、来源时间和触发原因。进入执行前，按照 `registry/routes.yaml` 为当前 Task 选择且只选择一个交付路线：
+
+- `content-output-system` / Createway：文章、图片、视频、音频、海报、社区内容、赛事速递等内容产出；
+- `product-delivery-system` / Forgeway：产品规范、UI、API、数据库、代码、测试、部署等软件交付。
+
+项目可以配置 primary/secondary routes，但单个 Task 不得混合路线。Shared AI Capabilities 只支持已选路线，不构成第三路线。
 
 ### Stage 1 — Normalize
 
@@ -124,14 +129,18 @@ GitHub 元数据、Stars、搜索摘要或 README 标题不能替代源码、测
 
 ### Stage 6 — Route
 
-| 产物类型 | 目标 |
-| --- | --- |
-| 实时产品、开源、科技或金融事件 | `feeds-hub` |
-| 课程、文章、知识卡、图像/视频知识内容包 | `knowledge-distillation` |
-| 已批准的公开知识节点和关系 | `blog`，通过固定版本的公开导出 |
-| 稳定、重复、可执行的方法 | `idaibin/skills` |
-| 具体代码、配置和项目测试 | 对应目标项目仓库 |
-| 来源、知识图谱、实验、审计和晋级决策 | `ai-handbook` |
+Task 在 Stage 0 已选定一个交付路线，Stage 6 只决定该路线内的 canonical destination：
+
+| Task 路线 | 产物类型 | 目标 |
+| --- | --- | --- |
+| Createway | 实时产品、开源、科技或金融内容 | `feeds-hub` 数据层或授权发布目标 |
+| Createway | 课程、文章、知识卡、图像/视频知识内容包 | `knowledge-distillation` 或 Drive 媒体资产层 |
+| Createway | 已批准的公开知识节点和关系 | `blog`，通过固定版本的公开导出 |
+| Forgeway | 稳定、重复、可执行的方法 | `idaibin/skills` |
+| Forgeway | 具体代码、配置、项目规范和测试 | 对应目标项目仓库 |
+| 任一路线的治理记录 | 来源、知识图谱、实验、审计和晋级决策 | `ai-handbook` |
+
+若一个请求同时包含内容产出和软件变更，拆为两个有依赖关系的 Task，不得把两个路线合并成一个执行合同。
 
 ### Stage 7 — Observe And Improve
 
@@ -209,6 +218,7 @@ AI 可以提出修改和生成候选补丁，但不能自己降低证据标准�
 
 ## 7. 关联文件
 
+- [`../../registry/routes.yaml`](../../registry/routes.yaml)：Createway/Forgeway 路线与单 Task 路由约束。
 - [`workflow.yaml`](workflow.yaml)：机器可读流程。
 - [`ownership.yaml`](ownership.yaml)：仓库职责。
 - [`state-model.yaml`](state-model.yaml)：状态与证据模型。

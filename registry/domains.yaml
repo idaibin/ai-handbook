@@ -1,6 +1,8 @@
 domains:
   - id: ai-engineering
     name: AI Engineering
+    status: retained-classification
+    successor_map: shared-ai-capabilities-map
     description: AI capability engineering including agents, skills, tools, workflows and evaluation.
     capabilities:
       - agent
@@ -13,8 +15,11 @@ domains:
 
   - id: ai-creative-media
     name: AI Creative & Media
-    description: AI generated content and media production.
+    status: retained-classification
+    successor_map: content-output-system-map
+    description: AI-assisted content and media production capability classification.
     capabilities:
+      - writing
       - image
       - photography
       - design
@@ -25,7 +30,9 @@ domains:
 
   - id: ai-product-experience
     name: AI Product Experience
-    description: AI product design and user-facing experience.
+    status: retained-classification
+    successor_map: product-delivery-system-map
+    description: AI product design and user-facing product experience capability classification.
     capabilities:
       - web
       - desktop
@@ -34,3 +41,6 @@ domains:
       - ux
       - design-system
       - ai-interface
+
+# Domains remain available for classification and historical queries.
+# Execution is selected through registry/routes.yaml.

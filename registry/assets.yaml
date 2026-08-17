@@ -1,7 +1,8 @@
 assets:
   - id: forgeway-creative-style-validation-v1
     type: media-bundle
-    status: reviewed
+    status: historical-pilot
+    route: content-output-system
     domains:
       - ai-creative-media
     storage:
@@ -9,7 +10,9 @@ assets:
       path: 20-Media/Forgeway-Audience-Artifact-v1
     privacy: private
     metadata:
-      contract: urn:forgeway:audience-artifact:v1
+      originating_contract: urn:forgeway:audience-artifact:v1
+      target_product: createway
+      migration_status: pending-createway-contract
       style_status: provisional
       members:
         - name: creative-portrait-v1.png
@@ -22,6 +25,7 @@ assets:
   - id: forgeway-product-ui-directions-v1
     type: ui-direction-bundle
     status: generated
+    route: product-delivery-system
     domains:
       - ai-product-experience
     storage:
@@ -30,6 +34,7 @@ assets:
     privacy: private
     metadata:
       contract: urn:forgeway:audience-artifact:v1
+      target_product: forgeway
       selection_status: not-selected
       members:
         - name: product-ui-artifact-rail-v1.png

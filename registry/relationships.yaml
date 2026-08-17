@@ -1,7 +1,23 @@
 relationships:
   - from:
-      type: project
+      type: product
+      id: createway
+    to:
+      type: route
+      id: content-output-system
+    relation: implements
+
+  - from:
+      type: product
       id: forgeway
+    to:
+      type: route
+      id: product-delivery-system
+    relation: implements
+
+  - from:
+      type: project
+      id: createway
     to:
       type: asset
       id: forgeway-creative-style-validation-v1
@@ -16,11 +32,19 @@ relationships:
     relation: indexes-asset
 
   - from:
-      type: workflow
-      id: ai-creative-product-experience
-    to:
       type: project
-      id: forgeway
+      id: feeds-hub
+    to:
+      type: route
+      id: content-output-system
+    relation: uses
+
+  - from:
+      type: project
+      id: feeds-hub
+    to:
+      type: route
+      id: product-delivery-system
     relation: uses
 
 # Controlled relationship verbs:
