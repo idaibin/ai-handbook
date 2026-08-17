@@ -7,8 +7,8 @@
 - ComfyUI: `0d80858061b511bd38c8cef4c235ef8e01040822`
 - Python: `3.14.6`; torch: `2.13.0`
 - host: Mac Studio M2 Ultra, 64 GB unified memory, arm64; MPS available, CUDA unavailable
-- execution boundary: no `main.py`, no Web UI, no backend service queue, no video output
-- current result: `partial / not_verified`
+- execution boundary: no `main.py`/Web UI; low-resolution in-process backend dry-run only
+- current result: `partial`
 
 完整原始证据保存在本地任务包：
 `/Users/daibin/Codex/.codex/reviews/story-studio-comfyui-20260817/`，其中包括
@@ -41,7 +41,30 @@ Liblib 的页面证据不被升级为“可复现 JSON”。
   转换后的 KSampler widget 顺序/类型不匹配。证明了核心图可加载，不证明可生成。
 - Kijai I2V/Phantom：安装 wrapper 后尝试注册；无服务上下文导入在
   `latent_preview.py` 读取 `PromptServer.instance` 时失败，依赖节点未注册。
-- `/prompt` 队列提交、`/history`、输出读取、ffprobe 和视频生成：`Not verified`。
+- 初始 14B/类 wrapper 候选的 HTTP `/prompt`、`/history` 和输出读取仍为
+  `Not verified`；本次不启动 Web UI。
+
+## Follow-up: official Wan2.1 Fun InP 1.3B dry-run
+
+- Original template: `official-wan21-fun-inp-1.3b.json`, SHA-256
+  `fcaa86b3cd82e7a0bb808949f8a1756fc2d3525a8e71f26f80651c4373c16579`.
+- API-format validation copy: `official-wan21-fun-inp-1.3b-api.json`, SHA-256
+  `0cbb0a3fed1be4d9d3489b21d576c57056f55d58c23979448d89b22900bef943`.
+- Official model source: `Comfy-Org/Wan_2.1_ComfyUI_repackaged`, Apache-2.0
+  model-card label; four exact 1.3B Fun InP weights were downloaded and hashed,
+  total expected bytes `11,382,899,603`; no 14B weight was downloaded.
+- Input: ChatGPT AI Design SHOT_02 candidate, center-cropped/resized to 320×512;
+  adapted input SHA-256 `197fa637bc00cb7b2e1878e496c98b76ba557bd4ae55efaddb69d1a574d00935`.
+  The same frame was used as start/end only as a dry-run fixture.
+- Backend: in-process `PromptQueue.put`/`get`, `validate_prompt=true`, 2 steps,
+  320×512, 9 frames, 16 fps; `history` returned success and output file.
+- Output: `shot02-fun-inp-dry-run_00001_.mp4`, H.264 High, yuv420p, 320×512,
+  0.5625 seconds, 9 frames; SHA-256
+  `ae9f39311dbf60b34ce159464ce65fa1dedf7755a7f06be940be4412f169d788`.
+- This proves a bounded backend dry-run only. It does not prove 1080×1920,
+  production duration, motion continuity, rights, final keyframe approval or
+  publication readiness. HTTP `/history` was intentionally not used because no
+  server/Web UI was started.
 
 ## Story Studio adapter contract
 
@@ -74,7 +97,5 @@ Wan/Phantom/ComfyUI 已完成视频生成。
 
 ## Next minimum action
 
-在同一隔离 runtime 中选择一个原生 Wan JSON，取得其精确模型文件，导出
-API-format graph，然后做一次低分辨率 SHOT_02 queue/history/output 闭环。
-若 custom node、模型许可、输入 hash、尺寸或 probe 不满足，立即停止；不把
-第三方 JSON 自动沉淀为生产标准。
+低分辨率 dry-run 已完成。下一步是单独授权的生产尺寸/更长 SHOT_02 尝试，
+并先关闭权利与连续性 Review；当前仍不得把该片段写成生产视频或最终门禁通过。

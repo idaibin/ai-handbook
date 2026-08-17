@@ -168,10 +168,11 @@ revision, rights and remaining acceptance checks pass.
 ComfyUI is installed in the isolated runtime
 `/Users/daibin/Codex/.codex/comfyui-runtime/story-studio-20260817`. The first
 headless pass downloaded and hashed 12 traceable candidates and validated five
-original JSON files. The official Wan2.1 graph reached core node/model-input
-validation; Kijai wrapper graphs failed headless custom-node registration because
-of a `PromptServer.instance` dependency. No Web UI, queue/history/output or video
-generation was run. See [`research/story-studio/2026-08-17-comfyui-workflow-review.md`](../../research/story-studio/2026-08-17-comfyui-workflow-review.md)
+original JSON files. A selected official Wan2.1 Fun InP 1.3B graph completed one
+320×512, 9-frame in-process backend dry-run with queue/history/output and ffprobe;
+Kijai wrapper graphs failed headless custom-node registration because of a
+`PromptServer.instance` dependency. No Web UI was started; production-size,
+long-duration video remains not verified. See [`research/story-studio/2026-08-17-comfyui-workflow-review.md`](../../research/story-studio/2026-08-17-comfyui-workflow-review.md)
 and the task evidence under `.codex/reviews/`.
 
 ---
