@@ -1,158 +1,83 @@
-schema_version: story-studio/visual-research-registry/v1
-artifact_id: banchao-ep01-visual-research-registry-v1
+schema_version: story-studio/visual-research-registry/v1.1
+artifact_id: banchao-ep01-visual-research-registry-v1.1
 status: triage_complete_research_gate_open
 project_id: banchao
 episode_id: EP01
-created_at_utc: '2026-08-18T14:40:00Z'
-scope: EP01 visual research flags only; no media generation and no canonical promotion
-source_refs:
-- artifact: banchao-ep01-current-status.json
-  sha256: 083886366e8632b2417aaa4768f8c4e27cc55e0c8f5aec4f03c56e87fd55b4aa
-  role: previous_authoritative_state_revision_1
-- artifact: ep01-yongshu-screenplay-v1.1.md
-  sha256: a2ba6bb8cbd094ea65c3cdcdb0e341929f479fb9cbcfe0b2cbdc4c36bad02f0e
-  role: frozen_screenplay
-- artifact: ep01-shot-list-v1.yaml
-  sha256: b622bf79a5c3a24a06b93f2c5070525aaf15a0f5b05d7ffa9e4180e257fdb091
-  role: direct_flag_to_shot_mapping
-- artifact: ep01-asset-manifest-increment-v1.yaml
-  sha256: 994625a2502cef1360107f19aec75e08610455fe8dd70dffe3e446b6f0f5671a
-  role: asset_to_shot_mapping
-- artifact: ep01-continuity-contract-v1.yaml
-  sha256: cd3ff0e9657a35b404d3eeb181e36d2f1ba3c73d8e374029819ef17cf0b5480e
-  role: continuity_and_uncertainty_rules
-- artifact: ep01-reference-asset-plan-v1.yaml
-  sha256: 69a08dc2459926c0b33704691d3043ab057d8ef4677dca9ac7f7002bf8e92b7f
-  role: original_19_flag_set
-- artifact: ep01-world-background-validation-v1.1.md
-  sha256: b29cb1188ede5ce598ed045c8ce772eb94be9d07bfc48104d51bbf6f529aacb2
-  role: validated_textual_boundary_and_visual_tbd_scope
+as_of_utc: '2026-08-18T15:00:00Z'
+scope: EP01 visual-research gate only; no media generation or canonical promotion
+authority:
+  current_status: banchao-ep01-current-status.json
+  source_contracts:
+  - ep01-yongshu-screenplay-v1.1.md
+  - ep01-shot-list-v1.yaml
+  - ep01-asset-manifest-increment-v1.yaml
+  - ep01-continuity-contract-v1.yaml
+  - ep01-reference-asset-plan-v1.yaml
+  - ep01-world-background-validation-v1.1.md
+  rule: Flag disposition controls production gates; it does not convert adaptation choices or candidate images into historical evidence.
 disposition_legend:
-  resolved_by_evidence: The flag is closed because source contracts prove it is an alias or aggregate dependency; this does not assert historical authenticity unless historical_claim_resolved=true.
-  bounded_as_exploratory: The element may remain only inside an explicit adaptation boundary with constrained visibility and no historical claim.
-  excluded_from_frame: The element is removed from visible production scope; off-screen narrative function may remain.
-  deferred_out_of_pilot: The element is removed from EP01 pilot scope and may be reconsidered later.
-impact_propagation_rule:
-  method: conservative_union
-  definition: affected shots are the union of direct open_research_flags and shots covered by the reusable character/location/prop asset that carries the same uncertainty
-  limitation: This is a contract-level dependency analysis, not a historical or image-quality review.
-triage_summary:
-  total_flags: 19
-  closed_flags_count: 7
-  open_flags_count: 12
-  closed_by_disposition:
-    resolved_by_evidence: 2
-    bounded_as_exploratory: 3
-    excluded_from_frame: 2
-    deferred_out_of_pilot: 0
-  open_by_priority:
-    P0: 7
-    P1: 5
-  p0_open_flags:
-  - room_architecture
-  - shared_copying_space_layout
-  - early_eastern_han_clothing
-  - writing_surface_material
-  - brush_form
-  - brush_pouch_material
-  - temporary_residence_layout
-  p1_open_flags:
-  - writing_batch_format
-  - official_space_architecture
-  - official_desk_form
-  - official_document_material
-  - doorway_architecture
-  gate_status: open_blocking
+  resolved_by_evidence: alias/dependency normalization only unless historical_claim_resolved=true
+  bounded_as_exploratory: explicit adaptation boundary with no historical claim
+  excluded_from_frame: uncertain element removed from visible scope
+  deferred_out_of_pilot: element removed from EP01 pilot scope
+summary:
+  total: 19
+  closed: 7
+  open: 12
+  p0_open: 7
+  p1_open: 5
   media_generated: false
   canonical_assets_promoted: 0
-closure_rule: Every original flag must have state=closed and one allowed disposition before the visual research gate can pass. Alias/aggregate normalization may close an independent flag, but affected shots still inherit any open canonical dependency.
-minimum_visual_canon_rule: All seven P0 flags must be closed before minimum Visual Canon selection. The five P1 flags must also be closed before the full 14-shot storyboard can be locked.
+gate_rules:
+  minimum_visual_canon: close all seven P0 flags
+  storyboard_lock: also close all five P1 flags
+  keyframe_video: remain blocked until storyboard and animatic gates pass
 flags:
 - flag_id: room_architecture
   category: location_architecture
   state: open
-  disposition: null
   priority: P0
   direct_shot_ids:
   - EP01_SHOT_01
   affected_asset_ids:
   - EP01_ASSET_LOC_LUOYANG_COPYING_SPACE
-  effective_shot_ids:
-  - EP01_SHOT_01
-  - EP01_SHOT_02
-  - EP01_SHOT_03
-  - EP01_SHOT_04
-  - EP01_SHOT_05
-  - EP01_SHOT_06
-  - EP01_SHOT_07
-  - EP01_SHOT_08
-  - EP01_SHOT_09
-  - EP01_SHOT_10
+  disposition: null
   minimum_visual_canon_dependency: true
-  external_research_required: true
-  research_question: EP01 洛阳室内空间应保留哪些可证实的东汉早期建筑构件，哪些结构细节必须抽象或避免？
-  allowed_until_closed: 仅使用低细节、非制度化的室内占位构图，不展示可识别的斗拱、屋顶等级、彩画或宫殿陈设。
-  forbidden_claims:
-  - 把候选场景图中的建筑细节写成东汉洛阳的已证事实
-  - 在关键帧提示词中锁定未经来源支持的建筑构件
-  evidence_requirements:
-  - 东汉时期考古建筑遗址或权威发掘报告
-  - 博物馆/研究机构对东汉建筑构件的说明
-  - 能明确区分汉代与后世建筑定式的材料
+  research_scope: 东汉早期普通室内可见构件与必须抽象的后世定式
+  temporary_rule: 只用低细节普通室内；不锁定斗拱、等级屋顶、彩画或宫殿陈设。
+  evidence_needed:
+  - 东汉建筑遗址/发掘报告
+  - 博物馆或研究机构说明
 - flag_id: shared_copying_space_layout
   category: location_layout
   state: open
-  disposition: null
   priority: P0
   direct_shot_ids:
   - EP01_SHOT_07
   affected_asset_ids:
   - EP01_ASSET_LOC_LUOYANG_COPYING_SPACE
   - EP01_ASSET_CHAR_UNNAMED_SCRIBE
-  effective_shot_ids:
-  - EP01_SHOT_01
-  - EP01_SHOT_02
-  - EP01_SHOT_03
-  - EP01_SHOT_04
-  - EP01_SHOT_05
-  - EP01_SHOT_06
-  - EP01_SHOT_07
-  - EP01_SHOT_08
-  - EP01_SHOT_09
-  - EP01_SHOT_10
+  disposition: null
   minimum_visual_canon_dependency: true
-  external_research_required: true
-  research_question: “为官佣书”在 EP01 中应表现为家庭内工作、官署附属抄写空间还是抽象共享劳动空间，现有史料能支持到什么程度？
-  allowed_until_closed: Storyboard 只保留同一室内劳动空间、案前与侧后方同僚的相对位置，不定义机构名称和完整平面。
-  forbidden_claims:
-  - 把共享抄书房当作《后汉书》明确记载
-  - 根据候选图反推真实官署或作坊布局
-  evidence_requirements:
-  - 班超“为官佣书”语义与制度背景的权威注释
-  - 汉代书写劳动、官府文书生产或相关图像/出土材料
-  - 无法确定时形成明确的改编边界
+  research_scope: “为官佣书”可支持的劳动空间类型及共享空间改编边界
+  temporary_rule: 只保留案前、同僚侧后方和单一劳动空间关系；不命名机构或复原完整平面。
+  evidence_needed:
+  - “为官佣书”权威注释
+  - 汉代书写劳动/官文书生产资料
 - flag_id: room_to_gate_spatial_relation
   category: spatial_relation
   state: closed
-  disposition: excluded_from_frame
   priority: P2
   direct_shot_ids:
   - EP01_SHOT_09
   affected_asset_ids:
   - EP01_ASSET_LOC_LUOYANG_COPYING_SPACE
-  effective_shot_ids:
-  - EP01_SHOT_09
-  minimum_visual_canon_dependency: false
-  external_research_required: false
-  decision_basis: 剧本与 Shot List 已把“城门方向”定义为叙事视线轴，并明确城门不可见或只作方向。
-  production_rule: 画面只表现班超从案面抬眼看向画外；不建立房间到城门的可测距离、方位或视线穿透关系。
-  forbidden_claims:
-  - 展示可识别洛阳城门
-  - 声称抄书空间与某一城门存在确定位置关系
+  disposition: excluded_from_frame
+  decision_basis: 剧本只要求画外方向；不建立房间到城门的可测关系。
+  production_rule: 仅用抬眼、停顿与画外钟声表达向外。
 - flag_id: early_eastern_han_clothing
   category: costume
   state: open
-  disposition: null
   priority: P0
   direct_shot_ids:
   - EP01_SHOT_05
@@ -165,34 +90,16 @@ flags:
   - EP01_BLUEPRINT_CHAR_BAN_MOTHER
   - EP01_BLUEPRINT_CHAR_BAN_GU
   - EP01_BLUEPRINT_CHAR_UNNAMED_SCRIBE
-  effective_shot_ids:
-  - EP01_SHOT_01
-  - EP01_SHOT_02
-  - EP01_SHOT_03
-  - EP01_SHOT_04
-  - EP01_SHOT_05
-  - EP01_SHOT_06
-  - EP01_SHOT_07
-  - EP01_SHOT_08
-  - EP01_SHOT_09
-  - EP01_SHOT_10
-  - EP01_SHOT_11
+  disposition: null
   minimum_visual_canon_dependency: true
-  external_research_required: true
-  research_question: 永平五年前后洛阳普通文士、家庭成员和低辨识度抄书同僚可采用哪些有证据支持的服装层级、领型、袖型、束带与发式范围？
-  allowed_until_closed: 现有角色图继续保持 candidate_not_canonical；仅保留人物身份、层级顺序和低饱和配色，不把衣着细节写成史实。
-  forbidden_claims:
-  - 使用后世官服定式
-  - 依据 AI 候选图确定东汉服制
-  - 把班固表现为已穿特定官阶服饰
-  evidence_requirements:
-  - 东汉墓葬图像、俑或出土服饰相关权威资料
+  research_scope: 永平五年前后普通文士、家庭成员与抄书同僚的服装/发式范围
+  temporary_rule: 候选图继续非 canonical；只保留身份层级、穿着层序和低饱和配色。
+  evidence_needed:
+  - 东汉墓葬图像、俑或出土服饰
   - 博物馆/考古机构说明
-  - 能够区分身份层级但不虚构精确官服制度的证据范围
 - flag_id: clothing_and_room_shape
   category: aggregate_dependency
   state: closed
-  disposition: resolved_by_evidence
   priority: P2
   direct_shot_ids:
   - EP01_SHOT_06
@@ -200,31 +107,16 @@ flags:
   - EP01_ASSET_CHAR_BAN_CHAO
   - EP01_ASSET_CHAR_BAN_GU
   - EP01_ASSET_LOC_LUOYANG_COPYING_SPACE
-  effective_shot_ids:
-  - EP01_SHOT_01
-  - EP01_SHOT_02
-  - EP01_SHOT_03
-  - EP01_SHOT_04
-  - EP01_SHOT_05
-  - EP01_SHOT_06
-  - EP01_SHOT_07
-  - EP01_SHOT_08
-  - EP01_SHOT_09
-  - EP01_SHOT_10
-  - EP01_SHOT_11
-  minimum_visual_canon_dependency: false
-  external_research_required: false
-  decision_basis: 该 flag 不是独立物质文化问题，而是 early_eastern_han_clothing 与 room_architecture 的组合依赖；来源合同已能完成依赖归一化。
-  resolution_type: dependency_normalization
+  disposition: resolved_by_evidence
+  decision_basis: 该项是服装与室内建筑的聚合依赖，不是独立史实问题。
+  production_rule: 继承 early_eastern_han_clothing 与 room_architecture 门禁。
   gate_inherits_from:
   - early_eastern_han_clothing
   - room_architecture
   historical_claim_resolved: false
-  production_rule: 不再为该组合项单独检索或单独关门；SHOT_06 的生产门禁继承两个规范化子项。
 - flag_id: writing_surface_material
   category: writing_material
   state: open
-  disposition: null
   priority: P0
   direct_shot_ids:
   - EP01_SHOT_01
@@ -233,88 +125,47 @@ flags:
   - EP01_SHOT_10
   affected_asset_ids:
   - EP01_ASSET_PROP_WRITING_SET
-  effective_shot_ids:
-  - EP01_SHOT_01
-  - EP01_SHOT_02
-  - EP01_SHOT_03
-  - EP01_SHOT_04
-  - EP01_SHOT_05
-  - EP01_SHOT_06
-  - EP01_SHOT_07
-  - EP01_SHOT_08
-  - EP01_SHOT_09
-  - EP01_SHOT_10
+  disposition: null
   minimum_visual_canon_dependency: true
-  external_research_required: true
-  research_question: 班超在洛阳“为官佣书”时，画面可采用简牍、木牍、缣帛或纸张中的哪些材料，何种表述最符合现有证据且不把争议定格为事实？
-  allowed_until_closed: 不做材料纹理特写，不生成可读正文；Storyboard 可用无材质占位面表示书写表面。
-  forbidden_claims:
-  - 未经证据锁定纸张或竹木简
-  - 生成可读伪史料文字
-  - 用现代册页/线装书表现
-  evidence_requirements:
-  - 东汉早期书写材料的出土证据和年代说明
-  - 关于官府文书载体的权威研究或博物馆说明
-  - 对纸、简牍、木牍、缣帛适用边界的明确记录
+  research_scope: 佣书场景可用的简牍、木牍、缣帛或纸张边界
+  temporary_rule: 不做材料纹理特写，不显示可读正文，不使用现代册页/线装书。
+  evidence_needed:
+  - 东汉早期书写材料出土证据
+  - 官府文书载体研究
 - flag_id: writing_batch_format
   category: writing_work_batch
   state: open
-  disposition: null
   priority: P1
   direct_shot_ids:
   - EP01_SHOT_04
   affected_asset_ids:
   - EP01_ASSET_PROP_WRITING_SET
-  effective_shot_ids:
-  - EP01_SHOT_03
-  - EP01_SHOT_04
+  disposition: null
   minimum_visual_canon_dependency: false
-  external_research_required: true
-  research_question: 剧本“还差两卷”应通过何种非现代、非可读文字的工作量视觉表达，才能避免把“卷”误画成后世书册？
-  allowed_until_closed: 只以未完成工作量、重复书写表面或模糊堆叠表达，不显示可数的现代册本。
-  forbidden_claims:
-  - 把“两卷”表现为两本现代书
-  - 让画面中的卷数成为可核验历史制度事实
-  evidence_requirements:
-  - 汉代“卷”与书写载体关系的权威解释
-  - 汉代文书编联、卷束或存放方式的图像/出土证据
-  - 无法精确时的抽象表达方案
+  research_scope: “还差两卷”的非现代、非册页化工作量表达
+  temporary_rule: 用模糊堆叠或未完成工作量表达，不出现两本现代书。
+  evidence_needed:
+  - 汉代“卷”语义解释
+  - 编联、卷束或存放证据
 - flag_id: brush_form
   category: writing_tool
   state: open
-  disposition: null
   priority: P0
   direct_shot_ids:
   - EP01_SHOT_01
   - EP01_SHOT_08
   affected_asset_ids:
   - EP01_ASSET_PROP_WRITING_SET
-  effective_shot_ids:
-  - EP01_SHOT_01
-  - EP01_SHOT_02
-  - EP01_SHOT_03
-  - EP01_SHOT_04
-  - EP01_SHOT_05
-  - EP01_SHOT_06
-  - EP01_SHOT_07
-  - EP01_SHOT_08
-  - EP01_SHOT_09
-  - EP01_SHOT_10
+  disposition: null
   minimum_visual_canon_dependency: true
-  external_research_required: true
-  research_question: 东汉早期书写毛笔的笔杆长度、笔头连接、握持和磨损特征可锁定到什么范围？
-  allowed_until_closed: 只显示普通长杆书写工具的低细节轮廓，不放大笔头结构。
-  forbidden_claims:
-  - 把 AI 候选图的笔具结构当作出土形制
-  - 使用现代钢笔、铅笔、硬笔或明显现代毛笔附件
-  evidence_requirements:
-  - 有明确年代的汉代出土毛笔或博物馆藏品说明
-  - 考古报告或权威器物图录
-  - 能支持握持和比例范围的材料
+  research_scope: 东汉早期毛笔的比例、笔头连接、握持与磨损范围
+  temporary_rule: 只显示普通长杆书写工具轮廓，不放大笔头结构。
+  evidence_needed:
+  - 有明确年代的汉代出土毛笔
+  - 考古报告或器物图录
 - flag_id: brush_pouch_material
   category: continuity_prop_material
   state: open
-  disposition: null
   priority: P0
   direct_shot_ids:
   - EP01_SHOT_02
@@ -322,249 +173,150 @@ flags:
   affected_asset_ids:
   - EP01_ASSET_PROP_BRUSH_POUCH
   - EP01_REF_PROP_BRUSH_POUCH
-  effective_shot_ids:
-  - EP01_SHOT_02
-  - EP01_SHOT_05
-  - EP01_SHOT_07
-  - EP01_SHOT_08
-  - EP01_SHOT_09
-  - EP01_SHOT_10
-  - EP01_SHOT_13
+  disposition: null
   minimum_visual_canon_dependency: true
-  external_research_required: true
-  research_question: 持续出现的“笔囊”应采用何种可证实或明确改编的容器类型、材料和闭合方式，才能在近景中保持一致？
-  allowed_until_closed: 候选笔囊只作为形状和位置参考，材质、缝线、扣件与颜色不进入确定性 Prompt。
-  forbidden_claims:
-  - 把现有候选笔囊写成东汉标准制式
-  - 在连续性镜头间改变为军旅装备或现代笔袋
-  evidence_requirements:
-  - 汉代笔套、笔管、文具容器或相关出土器物资料
-  - 若无直接证据，记录为明确的生产改编并限定可见细节
+  research_scope: 贯穿镜头的笔囊/笔具容器类型、材质与闭合方式
+  temporary_rule: 候选笔囊仅作形状/位置参考；材质、缝线和扣件不锁定。
+  evidence_needed:
+  - 汉代笔套/笔管/文具容器资料
+  - 无直接证据时的明确改编边界
 - flag_id: pouch_material
   category: alias_dependency
   state: closed
-  disposition: resolved_by_evidence
   priority: P2
   direct_shot_ids:
   - EP01_SHOT_13
   affected_asset_ids:
   - EP01_ASSET_PROP_BRUSH_POUCH
   - EP01_REF_PROP_BRUSH_POUCH
-  effective_shot_ids:
-  - EP01_SHOT_02
-  - EP01_SHOT_05
-  - EP01_SHOT_07
-  - EP01_SHOT_08
-  - EP01_SHOT_09
-  - EP01_SHOT_10
-  - EP01_SHOT_13
-  minimum_visual_canon_dependency: false
-  external_research_required: false
-  decision_basis: SHOT_13 的 pouch 与贯穿全片的 PROP_BRUSH_POUCH 为同一连续性道具，来源合同支持别名归一化。
-  resolution_type: alias_normalization
+  disposition: resolved_by_evidence
+  decision_basis: SHOT_13 pouch 与贯穿全片的笔囊为同一道具别名。
+  production_rule: 继承 brush_pouch_material，不建立第二套材质研究。
   canonical_flag_id: brush_pouch_material
-  gate_inherits_from:
-  - brush_pouch_material
   historical_claim_resolved: false
-  production_rule: 不再创建第二套 pouch 材质研究；SHOT_13 继承 brush_pouch_material 的最终决定。
 - flag_id: family_money_pouch_form
   category: synthetic_prop
   state: closed
-  disposition: bounded_as_exploratory
   priority: P2
   direct_shot_ids:
   - EP01_SHOT_03
   affected_asset_ids:
   - PROP_FAMILY_MONEY_POUCH
-  effective_shot_ids:
-  - EP01_SHOT_03
-  - EP01_SHOT_04
-  minimum_visual_canon_dependency: false
-  external_research_required: false
-  decision_basis: 剧本明确具体钱袋为[V]合成细节；该物件不是历史事实承载物。
-  production_rule: 只允许在画面边缘或手部遮挡下出现一个低辨识度软质小包，不展示钱币、材质纹理、结绳或标准形制；不能成为剧情信息主载体。
-  forbidden_claims:
-  - 把该钱袋宣传为班家实物或东汉标准钱袋
-  - 出现可识别现代拉链、硬币钱包或货币文字
+  disposition: bounded_as_exploratory
+  decision_basis: 具体钱袋属于剧本[V]合成细节。
+  production_rule: 只在边缘低辨识度出现，不展示钱币、材质或标准形制。
 - flag_id: official_space_architecture
   category: official_location_architecture
   state: open
-  disposition: null
   priority: P1
   direct_shot_ids:
   - EP01_SHOT_12
   affected_asset_ids:
   - EP01_ASSET_PROP_OFFICIAL_DOCUMENT_DESK
-  effective_shot_ids:
-  - EP01_SHOT_11
-  - EP01_SHOT_12
-  - EP01_SHOT_13
+  disposition: null
   minimum_visual_canon_dependency: false
-  external_research_required: true
-  research_question: 兰台令史段落需要展示到什么程度的官署室内环境，才能表明职位变化而不虚构兰台具体空间？
-  allowed_until_closed: Storyboard 只用案面、负空间和色调 match cut，不展示完整官署平面或等级化建筑。
-  forbidden_claims:
-  - 把抽象官署空间标为真实兰台复原
-  - 加入未经证据支持的徽记、牌匾、宫殿陈设
-  evidence_requirements:
-  - 东汉官署/宫署建筑的权威资料
-  - 兰台职掌与空间证据的明确边界
-  - 若无足够证据则形成抽象转场方案
+  research_scope: 兰台段落可展示的官署环境范围与抽象转场边界
+  temporary_rule: 只用案面、负空间和色调转场，不展示完整官署平面或等级标识。
+  evidence_needed:
+  - 东汉官署/宫署建筑资料
+  - 兰台职掌与空间证据边界
 - flag_id: official_desk_form
   category: official_furniture
   state: open
-  disposition: null
   priority: P1
   direct_shot_ids:
   - EP01_SHOT_11
   affected_asset_ids:
   - EP01_ASSET_PROP_OFFICIAL_DOCUMENT_DESK
-  effective_shot_ids:
-  - EP01_SHOT_11
-  - EP01_SHOT_12
-  - EP01_SHOT_13
+  disposition: null
   minimum_visual_canon_dependency: false
-  external_research_required: true
-  research_question: 官署案面与佣书案之间可使用哪些有证据支持的形制差异，同时维持 match cut？
-  allowed_until_closed: 只保留低矮案面、文书占位和空案负空间，不展示复杂榫卯、纹饰或等级标识。
-  forbidden_claims:
-  - 使用明清式书案或现代桌椅
-  - 通过家具形制虚构官阶
-  evidence_requirements:
-  - 汉代家具、案、几的出土实物/画像/权威图录
-  - 与书写行为和官署场景相关的可追溯资料
+  research_scope: 官署案面与佣书案的可证实差异及 match cut 规则
+  temporary_rule: 只保留低矮案面、文书占位与空案，不展示复杂纹饰或现代桌椅。
+  evidence_needed:
+  - 汉代案、几实物或画像
+  - 书写行为相关资料
 - flag_id: official_document_material
   category: official_writing_material
   state: open
-  disposition: null
   priority: P1
   direct_shot_ids:
   - EP01_SHOT_11
   affected_asset_ids:
   - EP01_ASSET_PROP_OFFICIAL_DOCUMENT_DESK
-  effective_shot_ids:
-  - EP01_SHOT_11
-  - EP01_SHOT_12
-  - EP01_SHOT_13
+  disposition: null
   minimum_visual_canon_dependency: false
-  external_research_required: true
-  research_question: 兰台任职/免官转场中的官署文书应采用何种材料和封检层级，且不生成可读罪名或伪史料？
-  allowed_until_closed: 仅显示无可读文字的文书轮廓或被压住的一角，不做材料近摄。
-  forbidden_claims:
-  - 生成可读任命、免官或罪名文书
-  - 使用现代纸张、公文夹、印刷格式
-  evidence_requirements:
-  - 东汉官文书载体与封检的出土资料
-  - 博物馆或考古机构的文书实物说明
-  - 与 writing_surface_material 的一致性规则
+  research_scope: 任职/免官转场的官署文书材料与封检边界
+  temporary_rule: 仅显示无可读文字的文书轮廓，不做材料近摄或伪造任免文书。
+  evidence_needed:
+  - 东汉官文书载体与封检资料
+  - 博物馆/考古机构实物说明
 - flag_id: doorway_architecture
   category: doorway
   state: open
-  disposition: null
   priority: P1
   direct_shot_ids:
   - EP01_SHOT_05
   affected_asset_ids:
   - EP01_ASSET_LOC_LUOYANG_COPYING_SPACE
-  effective_shot_ids:
-  - EP01_SHOT_05
-  - EP01_SHOT_06
-  - EP01_SHOT_09
-  - EP01_SHOT_13
+  disposition: null
   minimum_visual_canon_dependency: false
-  external_research_required: true
-  research_question: SHOT_05 的门边构图应保留哪些可证实的门框、门扇和门槛特征，哪些后世定式必须排除？
-  allowed_until_closed: 仅使用简单垂直开口和明暗边界；不展示门钉、彩绘、等级纹饰或完整门楼。
-  forbidden_claims:
-  - 把候选图门框当作东汉洛阳标准门式
-  - 使用明显明清门窗、格扇或现代门件
-  evidence_requirements:
-  - 汉代建筑门构件、画像砖/石或遗址资料
-  - 能支持普通室内门口而非宫门的材料
+  research_scope: 普通室内门框、门扇、门槛范围与后世定式排除
+  temporary_rule: 只用简单垂直开口与明暗边界，不展示格扇、门钉或等级纹饰。
+  evidence_needed:
+  - 汉代门构件、画像砖/石或遗址
+  - 普通室内门口资料
 - flag_id: door_gap_and_wind_visualization
   category: editorial_effect
   state: closed
-  disposition: bounded_as_exploratory
   priority: P2
   direct_shot_ids:
   - EP01_SHOT_13
   affected_asset_ids:
   - EP01_ASSET_PROP_OFFICIAL_DOCUMENT_DESK
   - EP01_ASSET_LOC_LUOYANG_COPYING_SPACE
-  effective_shot_ids:
-  - EP01_SHOT_13
-  minimum_visual_canon_dependency: false
-  external_research_required: false
-  decision_basis: 剧本明确风从门缝吹入属于[A]叙事改编，不承担建筑史事实。
-  production_rule: 用文书一角轻微移动、低强度气流声或光线变化表达；门缝本体可不入画，不模拟可识别的建筑气密结构。
-  forbidden_claims:
-  - 把气流方向解释为真实空间测绘
-  - 使用超自然粒子或夸张风暴效果
+  disposition: bounded_as_exploratory
+  decision_basis: 门缝风属于[A]叙事改编，不承担建筑史事实。
+  production_rule: 用文书轻动、低强度气流声或光线变化表达，门缝可不入画。
 - flag_id: luoyang_gate_visibility
   category: offscreen_location
   state: closed
-  disposition: excluded_from_frame
   priority: P2
   direct_shot_ids:
   - EP01_SHOT_09
   affected_asset_ids:
   - EP01_ASSET_LOC_LUOYANG_COPYING_SPACE
-  effective_shot_ids:
-  - EP01_SHOT_09
-  minimum_visual_canon_dependency: false
-  external_research_required: false
-  decision_basis: 剧本和 Shot List 均要求不展示现代城市或宏大宫阙，并允许城门不可见。
-  production_rule: 城门完全保持画外，仅通过视线、停顿和 distant_gate_bell 表达“向外”的方向。
-  forbidden_claims:
-  - 展示或命名具体洛阳城门
-  - 把任何生成建筑当作已考据城门复原
+  disposition: excluded_from_frame
+  decision_basis: 剧本与 Shot List 均允许城门不可见。
+  production_rule: 城门保持画外，不展示或命名具体洛阳城门。
 - flag_id: temporary_residence_layout
   category: domestic_layout
   state: open
-  disposition: null
   priority: P0
   direct_shot_ids:
   - EP01_SHOT_03
   affected_asset_ids:
   - EP01_ASSET_LOC_LUOYANG_COPYING_SPACE
   - EP01_ASSET_CHAR_BAN_MOTHER
-  effective_shot_ids:
-  - EP01_SHOT_03
-  - EP01_SHOT_04
-  - EP01_SHOT_05
-  - EP01_SHOT_06
+  disposition: null
   minimum_visual_canon_dependency: true
-  external_research_required: true
-  research_question: 史料只支持“随母到洛阳、为官佣书以供养”，EP01 的家庭与抄书空间应合并还是分离，怎样标注才能避免伪造班氏住处？
-  allowed_until_closed: Storyboard 可把母亲置于同一抽象劳动空间边缘，但不得宣称为班氏真实住宅复原。
-  forbidden_claims:
-  - 锁定班氏洛阳住址、房间数量或完整平面
-  - 把候选场景中的家庭陈设写成史实
-  evidence_requirements:
-  - 《后汉书》相关注释与班氏洛阳活动背景
-  - 汉代普通居住/工作空间的权威资料
-  - 无法确定时的“合并场景”改编声明
+  research_scope: 家庭与佣书空间合并/分离的改编边界，避免伪造班氏住处
+  temporary_rule: 母亲可置于抽象劳动空间边缘，但不得宣称为班氏真实住宅。
+  evidence_needed:
+  - 《后汉书》相关注释
+  - 汉代普通居住/工作空间资料
 - flag_id: seat_removal_visualization
   category: editorial_transition
   state: closed
-  disposition: bounded_as_exploratory
   priority: P2
   direct_shot_ids:
   - EP01_SHOT_12
   affected_asset_ids:
   - EP01_ASSET_PROP_OFFICIAL_DOCUMENT_DESK
-  effective_shot_ids:
-  - EP01_SHOT_12
-  minimum_visual_canon_dependency: false
-  external_research_required: false
-  decision_basis: 剧本只需表达“又因事免官”，并明确不虚构罪名或程序；移走席位是[A]视觉压缩。
-  production_rule: 只允许用空案、消失的个人物件或留白表示职位终止；不表演具体撤席仪式、惩罚流程或官署程序。
-  forbidden_claims:
-  - 把空案画面解释为真实免官仪式
-  - 虚构拘捕、审判、罪名或羞辱性处置
+  disposition: bounded_as_exploratory
+  decision_basis: 移走席位只是“免官”的[A]视觉压缩。
+  production_rule: 只用空案、个人物件消失或留白，不虚构仪式、罪名或程序。
 next_legal_action:
   action_id: RESEARCH_AND_RESOLVE_EP01_P0_VISUAL_FLAGS
-  description: Collect source-grounded visual evidence and explicit adaptation bounds for the seven P0 flags, then update this registry without generating new media.
   target_flags:
   - room_architecture
   - shared_copying_space_layout
