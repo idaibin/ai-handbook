@@ -1,9 +1,9 @@
-schema_version: story-studio/visual-research-registry/v1.1
-artifact_id: banchao-ep01-visual-research-registry-v1.1
-status: triage_complete_research_gate_open
+schema_version: story-studio/visual-research-registry/v1.2
+artifact_id: banchao-ep01-visual-research-registry-v1.2
+status: p0_closed_minimum_visual_canon_review_ready_p1_open
 project_id: banchao
 episode_id: EP01
-as_of_utc: '2026-08-18T15:00:00Z'
+as_of_utc: '2026-08-18T15:45:09Z'
 scope: EP01 visual-research gate only; no media generation or canonical promotion
 authority:
   current_status: banchao-ep01-current-status.json
@@ -22,48 +22,70 @@ disposition_legend:
   deferred_out_of_pilot: element removed from EP01 pilot scope
 summary:
   total: 19
-  closed: 7
-  open: 12
-  p0_open: 7
+  closed: 14
+  open: 5
+  p0_open: 0
   p1_open: 5
+  closed_by_disposition:
+    resolved_by_evidence: 3
+    bounded_as_exploratory: 9
+    excluded_from_frame: 2
+    deferred_out_of_pilot: 0
   media_generated: false
   canonical_assets_promoted: 0
+  minimum_visual_canon_gate: ready_for_departmental_selection_not_approved
 gate_rules:
-  minimum_visual_canon: close all seven P0 flags
-  storyboard_lock: also close all five P1 flags
-  keyframe_video: remain blocked until storyboard and animatic gates pass
+  minimum_visual_canon: ready_for_departmental_selection because all seven P0 flags are closed
+  single_view_crops: blocked until a Visual Canon version is approved
+  rough_previs: allowed after the minimum Visual Canon brief is approved
+  storyboard_lock: close all five P1 flags and approve Visual Canon
+  keyframe_video: remain blocked until storyboard and 105-second animatic gates pass
 flags:
 - flag_id: room_architecture
   category: location_architecture
-  state: open
+  state: closed
   priority: P0
   direct_shot_ids:
   - EP01_SHOT_01
   affected_asset_ids:
   - EP01_ASSET_LOC_LUOYANG_COPYING_SPACE
-  disposition: null
+  disposition: bounded_as_exploratory
   minimum_visual_canon_dependency: true
   research_scope: 东汉早期普通室内可见构件与必须抽象的后世定式
-  temporary_rule: 只用低细节普通室内；不锁定斗拱、等级屋顶、彩画或宫殿陈设。
-  evidence_needed:
-  - 东汉建筑遗址/发掘报告
-  - 博物馆或研究机构说明
+  decision_basis: 时代建筑模型可支持“东汉普通建筑体量”的宽泛参照，但没有证据复原洛阳佣书室内。
+  production_rule: 采用 composite_set（复合布景）和低细节普通室内：只锁定工作案、人物动线、一个画外/边缘采光开口；不锁定完整平面、斗拱、等级屋顶、彩画、宫殿陈设或具体洛阳建筑。
+  evidence_refs:
+  - SRC_HHS47_BAN_CHAO
+  - SRC_MET_EASTERN_HAN_HOUSE
+  department_notes:
+    production_design: Set Plan 只画 A工作区/B同僚区/C家庭阈限区，不标注真实班氏住宅或官署名称。
+    cinematography: 以中近景、插入镜头和有限景深减少未经证实的建筑曝光；建立镜头只说明劳动空间，不做城市复原。
+    lighting: 使用 motivated soft side light，光源保持画外；可用 negative fill 塑造手部与面部，不显示不受支持的窗式。
+    vfx: 仅做 invisible cleanup、伪文字和现代元素清理；不得扩建宏大洛阳背景。
+  p0_decision_artifact: banchao-ep01-p0-visual-research-decision-v1.yaml
 - flag_id: shared_copying_space_layout
   category: location_layout
-  state: open
+  state: closed
   priority: P0
   direct_shot_ids:
   - EP01_SHOT_07
   affected_asset_ids:
   - EP01_ASSET_LOC_LUOYANG_COPYING_SPACE
   - EP01_ASSET_CHAR_UNNAMED_SCRIBE
-  disposition: null
+  disposition: bounded_as_exploratory
   minimum_visual_canon_dependency: true
   research_scope: “为官佣书”可支持的劳动空间类型及共享空间改编边界
-  temporary_rule: 只保留案前、同僚侧后方和单一劳动空间关系；不命名机构或复原完整平面。
-  evidence_needed:
-  - “为官佣书”权威注释
-  - 汉代书写劳动/官文书生产资料
+  decision_basis: 史料支持“为官佣书”及书写劳动，不支持共享抄书房、官署附属作坊或家庭内佣书的确定布局。
+  production_rule: 把场景定义为“洛阳佣书复合空间”，而非历史复原；Blocking 固定为班超主工作轴、无名同僚侧后方低辨识度轴、母亲在家庭阈限/画面边缘。无机构牌匾、完整工位阵列或制度化作坊陈设。
+  evidence_refs:
+  - SRC_HHS47_BAN_CHAO
+  - SRC_IHP_HAN_WOODEN_SLIPS_LIFECYCLE
+  department_notes:
+    director: 人物关系通过 blocking 和 eyeline 表达：班超被工作压住，同僚形成社会压力，母亲代表家庭责任。
+    production_design: 空间只服务叙事功能，不声称真实制度空间。
+    cinematography: Coverage 采用一张受控地理镜头、班超主近景、同僚反应和手部 inserts；不使用夸张广角展示未证平面。
+    continuity: 固定三人的轴线、出入口方向和案面位置，Storyboard 时锁定 180-degree line。
+  p0_decision_artifact: banchao-ep01-p0-visual-research-decision-v1.yaml
 - flag_id: room_to_gate_spatial_relation
   category: spatial_relation
   state: closed
@@ -77,7 +99,7 @@ flags:
   production_rule: 仅用抬眼、停顿与画外钟声表达向外。
 - flag_id: early_eastern_han_clothing
   category: costume
-  state: open
+  state: closed
   priority: P0
   direct_shot_ids:
   - EP01_SHOT_05
@@ -90,13 +112,21 @@ flags:
   - EP01_BLUEPRINT_CHAR_BAN_MOTHER
   - EP01_BLUEPRINT_CHAR_BAN_GU
   - EP01_BLUEPRINT_CHAR_UNNAMED_SCRIBE
-  disposition: null
+  disposition: bounded_as_exploratory
   minimum_visual_canon_dependency: true
   research_scope: 永平五年前后普通文士、家庭成员与抄书同僚的服装/发式范围
-  temporary_rule: 候选图继续非 canonical；只保留身份层级、穿着层序和低饱和配色。
-  evidence_needed:
-  - 东汉墓葬图像、俑或出土服饰
-  - 博物馆/考古机构说明
+  decision_basis: 东汉人物俑和纺织图像可提供时代轮廓、层叠衣着与织物存在的宽泛参照，但不能确定班超、班固、班母和佣书同僚的精确服制或发式。
+  production_rule: 建立 Costume Plot v1：四人均为素朴层叠轮廓、低饱和灰褐色系、无官阶纹章；班超以磨损、墨迹和松弛层次表现劳作，班固更整洁但不穿后世官服，班母克制朴素，无名同僚保持低辨识度。发式只锁定稳定 silhouette，不宣称精确制度。
+  evidence_refs:
+  - SRC_MET_EASTERN_HAN_MAN
+  - SRC_MET_EASTERN_HAN_WOMAN
+  - SRC_NMC_EASTERN_HAN_TEXTILE_STONE
+  department_notes:
+    costume: 先做 silhouette/value test，再做细节；记录 Costume Continuity 和 ageing/distressing。
+    hair_makeup: 四视图保持发际、发髻轮廓和面部结构一致；不加后世冠帽或华丽饰物。
+    lighting: 在冷灰土褐 Show Look 下进行 costume camera test，确保人物依靠明度、磨损和轮廓区分而非高饱和颜色。
+    director: 服装服务身份与处境，不把历史准确性转化为“更华丽”。
+  p0_decision_artifact: banchao-ep01-p0-visual-research-decision-v1.yaml
 - flag_id: clothing_and_room_shape
   category: aggregate_dependency
   state: closed
@@ -116,7 +146,7 @@ flags:
   historical_claim_resolved: false
 - flag_id: writing_surface_material
   category: writing_material
-  state: open
+  state: closed
   priority: P0
   direct_shot_ids:
   - EP01_SHOT_01
@@ -125,13 +155,20 @@ flags:
   - EP01_SHOT_10
   affected_asset_ids:
   - EP01_ASSET_PROP_WRITING_SET
-  disposition: null
+  disposition: bounded_as_exploratory
   minimum_visual_canon_dependency: true
   research_scope: 佣书场景可用的简牍、木牍、缣帛或纸张边界
-  temporary_rule: 不做材料纹理特写，不显示可读正文，不使用现代册页/线装书。
-  evidence_needed:
-  - 东汉早期书写材料出土证据
-  - 官府文书载体研究
+  decision_basis: 汉代书写工具和竹木简有直接出土证据；但材料多来自边塞，且不能证明班超在洛阳佣书时具体使用哪一种载体。
+  production_rule: EP01 以无可读文字的窄幅竹/木质 slip-like surfaces 作为保守视觉表达；不使用现代纸张、册页、线装书或白色打印纸，不对竹/木种类、尺寸标准和班超个人使用作确定陈述。材料近景只表现墨线、磨损和工作量。
+  evidence_refs:
+  - SRC_IHP_HAN_WRITING_EQUIPMENT
+  - SRC_IHP_HAN_WOODEN_SLIPS_LIFECYCLE
+  department_notes:
+    props: 制作/生成 Hero Writing Surface Sheet，包含正面、侧面、成束和散置状态；禁止可读正文。
+    cinematography: ECU 只拍笔尖、墨线和手指，不让材质特写承担未经证实的考古陈述。
+    editorial: wooden_slip_tap 作为节奏 cue，实际音色待 Foley/spotting，不在当前阶段生成。
+    vfx: 清除伪文字和不一致的简牍数量。
+  p0_decision_artifact: banchao-ep01-p0-visual-research-decision-v1.yaml
 - flag_id: writing_batch_format
   category: writing_work_batch
   state: open
@@ -149,23 +186,32 @@ flags:
   - 编联、卷束或存放证据
 - flag_id: brush_form
   category: writing_tool
-  state: open
+  state: closed
   priority: P0
   direct_shot_ids:
   - EP01_SHOT_01
   - EP01_SHOT_08
   affected_asset_ids:
   - EP01_ASSET_PROP_WRITING_SET
-  disposition: null
+  disposition: resolved_by_evidence
   minimum_visual_canon_dependency: true
   research_scope: 东汉早期毛笔的比例、笔头连接、握持与磨损范围
-  temporary_rule: 只显示普通长杆书写工具轮廓，不放大笔头结构。
-  evidence_needed:
-  - 有明确年代的汉代出土毛笔
-  - 考古报告或器物图录
+  decision_basis: 有明确年代的汉代出土毛笔提供约23厘米木杆、夹毫缚扎髹漆的实物参照，可建立生产安全的通用形制；不证明班超持有同型笔。
+  production_rule: Hero Brush v1 采用细长木质笔杆、约23厘米比例参照、简洁笔头连接和低装饰表面；禁止现代金属箍、塑料件、钢笔/铅笔结构、夸张书法大笔或可识别品牌。
+  evidence_refs:
+  - SRC_IHP_HAN_WRITING_BRUSH
+  - SRC_IHP_HAN_WRITING_EQUIPMENT
+  department_notes:
+    props: 建立 Hero Prop model sheet、scale reference、磨损状态和可替换副本版本。
+    director: SHOT_10 的“放下—拾起—不再落字”需要 hand choreography，笔的位置和旋转必须可连续。
+    cinematography: Macro/insert 使用短景深但保持笔尖、手指和接触点可读；不把镜头变成器物广告。
+    continuity: 记录笔尖朝向、墨量、手部位置、案面落点和每个 take 的动作阶段。
+  p0_decision_artifact: banchao-ep01-p0-visual-research-decision-v1.yaml
+  historical_claim_scope: general_han_brush_form_only
+  biographical_ownership_verified: false
 - flag_id: brush_pouch_material
   category: continuity_prop_material
-  state: open
+  state: closed
   priority: P0
   direct_shot_ids:
   - EP01_SHOT_02
@@ -173,13 +219,20 @@ flags:
   affected_asset_ids:
   - EP01_ASSET_PROP_BRUSH_POUCH
   - EP01_REF_PROP_BRUSH_POUCH
-  disposition: null
+  disposition: bounded_as_exploratory
   minimum_visual_canon_dependency: true
   research_scope: 贯穿镜头的笔囊/笔具容器类型、材质与闭合方式
-  temporary_rule: 候选笔囊仅作形状/位置参考；材质、缝线和扣件不锁定。
-  evidence_needed:
-  - 汉代笔套/笔管/文具容器资料
-  - 无直接证据时的明确改编边界
+  decision_basis: 当前来源不能证明东汉存在与候选图相同的标准“笔囊”材质和闭合方式；该物件主要是全片连续性与主题锚点。
+  production_rule: 保留 PROP_BRUSH_POUCH 作为明确的[A/V] continuity prop：视觉实现为无装饰、低辨识度、柔软包裹/套状容器；不锁定皮革、金属扣、刺绣、流苏或标准制式，不宣传为东汉标准文具。
+  evidence_refs:
+  - SRC_HHS47_BAN_CHAO
+  - SRC_IHP_HAN_WRITING_BRUSH
+  department_notes:
+    props: 建立 pouch 状态图：系腰、案边、被手触碰、SHOT_13 转场；只允许一个 approved silhouette。
+    costume: 固定在班超服装同一侧和相近高度，不随镜头漂移成军旅装备。
+    continuity: 记录磨损、折痕、系带长度和与 Hero Brush 的装入方向。
+    vfx: 如生成模型改变材质或附件，以 cleanup/replace 纠正，不新增装饰。
+  p0_decision_artifact: banchao-ep01-p0-visual-research-decision-v1.yaml
 - flag_id: pouch_material
   category: alias_dependency
   state: closed
@@ -290,20 +343,27 @@ flags:
   production_rule: 城门保持画外，不展示或命名具体洛阳城门。
 - flag_id: temporary_residence_layout
   category: domestic_layout
-  state: open
+  state: closed
   priority: P0
   direct_shot_ids:
   - EP01_SHOT_03
   affected_asset_ids:
   - EP01_ASSET_LOC_LUOYANG_COPYING_SPACE
   - EP01_ASSET_CHAR_BAN_MOTHER
-  disposition: null
+  disposition: bounded_as_exploratory
   minimum_visual_canon_dependency: true
   research_scope: 家庭与佣书空间合并/分离的改编边界，避免伪造班氏住处
-  temporary_rule: 母亲可置于抽象劳动空间边缘，但不得宣称为班氏真实住宅。
-  evidence_needed:
-  - 《后汉书》相关注释
-  - 汉代普通居住/工作空间资料
+  decision_basis: 史料支持班超随母至洛阳并佣书养家，但不支持班氏住址、房间数量、家庭陈设或工作与居住是否同处。
+  production_rule: 将剧本中的“班氏暂居处”在生产命名上改为“洛阳佣书复合空间（Composite Set）”：家庭压力通过母亲在阈限区、钱袋和对白进入，不展示住宅外景、卧具、厨房或完整家庭平面；不得宣传为班氏住宅复原。
+  evidence_refs:
+  - SRC_HHS47_BAN_CHAO
+  - SRC_MET_EASTERN_HAN_HOUSE
+  department_notes:
+    writing_story: 场景合并保持[A/V]标记；不新增家庭史事实。
+    director: 母亲不需要穿越完整住宅，只在同一视觉单元边缘完成情绪与信息功能。
+    production_design: A工作区/B同僚区/C家庭阈限区可在同一复合布景内被 camera cheat，但连续性图必须固定。
+    editorial: 通过 match on action、eyeline 和声音桥维持空间可信，不用额外 establishing shot 解释虚构平面。
+  p0_decision_artifact: banchao-ep01-p0-visual-research-decision-v1.yaml
 - flag_id: seat_removal_visualization
   category: editorial_transition
   state: closed
@@ -316,18 +376,28 @@ flags:
   decision_basis: 移走席位只是“免官”的[A]视觉压缩。
   production_rule: 只用空案、个人物件消失或留白，不虚构仪式、罪名或程序。
 next_legal_action:
-  action_id: RESEARCH_AND_RESOLVE_EP01_P0_VISUAL_FLAGS
-  target_flags:
-  - room_architecture
-  - shared_copying_space_layout
-  - early_eastern_han_clothing
-  - writing_surface_material
-  - brush_form
-  - brush_pouch_material
-  - temporary_residence_layout
-  prohibited_before_gate_pass:
-  - promote_candidate_assets_to_canonical
+  action_id: HOD_REVIEW_AND_SELECT_MINIMUM_VISUAL_CANON
+  description: Review candidate reference images and character blueprints against the Director/Production Design/Camera/Lighting/Costume/Props/Continuity brief; select, revise or reject anchors. No keyframe/video generation.
+  input_artifact: banchao-ep01-minimum-visual-canon-brief-v1.yaml
+  p1_flags_still_open:
+  - writing_batch_format
+  - official_space_architecture
+  - official_desk_form
+  - official_document_material
+  - doorway_architecture
+  prohibited_before_visual_canon_approval:
   - generate_single_view_crops
+  - promote_assets_without_HOD_review
   - generate_keyframes
   - generate_video
-  - generate_audio
+  - generate_final_audio
+evidence_artifacts:
+- artifact: banchao-ep01-p0-visual-research-decision-v1.yaml
+  sha256: a1582c05fafb7b20ea0a9cb4bc18d71fb603dddd28389747adb851ac55a8a9a5
+  role: p0_decisions
+- artifact: banchao-ep01-minimum-visual-canon-brief-v1.yaml
+  sha256: 0d60b9be2533bbbc9c2edd98878e57df44b5c5175c744f0d5f84c78250e745b9
+  role: minimum_visual_canon_review_brief
+- artifact: story-studio-film-department-gate-matrix-v1.yaml
+  sha256: 98c071edce1b329aca86f8bc0cad3d04bd8b68d35655ce6552150a7d4cc35290
+  role: industrial_department_gate_baseline
