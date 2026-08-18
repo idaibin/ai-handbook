@@ -1,0 +1,41 @@
+schema_version: story-studio/visual-research-registry/v1.3
+artifact_id: banchao-ep01-visual-research-registry-v1.3
+status: pass_all_19_flags_closed
+project_id: banchao
+episode_id: EP01
+as_of_utc: '2026-08-18T19:45:00Z'
+decision_refs:
+- artifact: banchao-ep01-p0-visual-research-decision-v1.yaml
+  sha256: a1582c05fafb7b20ea0a9cb4bc18d71fb603dddd28389747adb851ac55a8a9a5
+  flags_closed: 7
+- artifact: banchao-ep01-p1-visual-research-decision-v1.yaml
+  sha256: 3b31c6afbd6a53124b800fcd5dadf5d04652ae00faaa75b416852e4485017fe2
+  flags_closed: 5
+summary:
+  total_flags: 19
+  closed_flags: 19
+  open_flags: 0
+  visual_research_gate: pass
+  canonical_assets_promoted: 0
+p1_dispositions:
+- flag_id: writing_batch_format
+  disposition: bounded_as_exploratory
+- flag_id: official_space_architecture
+  disposition: excluded_from_frame
+- flag_id: official_desk_form
+  disposition: bounded_as_exploratory
+- flag_id: official_document_material
+  disposition: resolved_by_evidence
+  historical_claim_scope: general_han_official_document_handling_only
+- flag_id: doorway_architecture
+  disposition: excluded_from_frame
+format_contract:
+  artifact: banchao-ep01-production-format-contract-v1.yaml
+  sha256: 0b6406cdd79b5b76694c40f809cdf3835fad20ab839c2909bf928b0827f6ca7f
+  active_format: 16:9 / 1920x1080
+gate_rules:
+  visual_canon: revise_required after HOD Round 2
+  single_view_crops: blocked
+  storyboard_lock: blocked
+  keyframe_video: blocked until Storyboard and 105-second Animatic pass
+next_legal_action: Round-3 LookDev Work Order, then Dailies/HOD Review Round 3.
