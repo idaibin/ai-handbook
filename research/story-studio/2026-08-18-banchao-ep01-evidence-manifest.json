@@ -1,8 +1,13 @@
 {
-  "schema_version": "story-studio/public-evidence-manifest/v1",
+  "schema_version": "story-studio/public-evidence-manifest/v1.1",
   "project_id": "banchao",
   "episode_id": "EP01",
-  "status": "candidate_assets_verified_keyframe_gate_blocked",
+  "evidence_scope": "public_sanitized_ep01_preproduction_evidence",
+  "current_status_ref": {
+    "artifact": "banchao-ep01-current-status.json",
+    "sha256": "083886366e8632b2417aaa4768f8c4e27cc55e0c8f5aec4f03c56e87fd55b4aa",
+    "authority": "single_current_state_source"
+  },
   "screenplay": {
     "artifact": "ep01-yongshu-screenplay-v1.1.md",
     "sha256": "a2ba6bb8cbd094ea65c3cdcdb0e341929f479fb9cbcfe0b2cbdc4c36bad02f0e"
@@ -22,18 +27,114 @@
     "video_allowed": false
   },
   "candidate_media": [
-    {"asset_id": "EP01_REF_CHAR_BAN_CHAO", "kind": "reference", "dimensions": "1024x1536", "sha256": "3eb309b7aff6e384e4ef6a4b2350690fb8c40c114b8c14df3eb5f254fad2230c", "status": "candidate_not_canonical"},
-    {"asset_id": "EP01_REF_CHAR_BAN_MOTHER", "kind": "reference", "dimensions": "1024x1536", "sha256": "a1a68ae72ef69838906da269ada808a6eb32c3fc0f92d2416bf1e88b8f620de6", "status": "candidate_not_canonical"},
-    {"asset_id": "EP01_REF_CHAR_BAN_GU", "kind": "reference", "dimensions": "1024x1536", "sha256": "e7279ca83925580f79dc2745ed2681cf1a71b7243e8fc384699f58c8f60ad2d2", "status": "candidate_not_canonical"},
-    {"asset_id": "EP01_REF_CHAR_UNNAMED_SCRIBE", "kind": "reference", "dimensions": "1024x1536", "sha256": "afbe9d39f65eb48298fdb060d2f7ea1f308e61ac2c1f0550ae964880825e0e91", "status": "candidate_not_canonical"},
-    {"asset_id": "EP01_REF_LOC_LUOYANG_COPYING_SPACE", "kind": "reference", "dimensions": "1024x1536", "sha256": "0d0497ea3e9bd7acebbab434ec28232ac311caedc868b3428ac8db65d1ace794", "status": "candidate_not_canonical"},
-    {"asset_id": "EP01_REF_PROP_WRITING_SET", "kind": "reference", "dimensions": "1024x1536", "sha256": "aed4e0fc726b7fb6a538d727917b66d5b9b060d02e9d45d586cfd351734c28e7", "status": "candidate_not_canonical"},
-    {"asset_id": "EP01_REF_PROP_BRUSH_POUCH", "kind": "reference", "dimensions": "1024x1536", "sha256": "78f1bcc2b008f752e3fa63dc30057e3972ad71f260ace8ac8c31a86be1b0fad5", "status": "candidate_not_canonical"},
-    {"asset_id": "EP01_REF_PROP_OFFICIAL_DOCUMENT_DESK", "kind": "reference", "dimensions": "1024x1536", "sha256": "3f87684f93c5eca4784002a83cff1885a293dff13eeeb3ae4ebb130ae4536389", "status": "candidate_not_canonical"},
-    {"asset_id": "EP01_BLUEPRINT_CHAR_BAN_CHAO", "kind": "blueprint", "dimensions": "1536x1024", "sha256": "c16a66cc65022e3df83ee409b3b47f8fa03685ed8359e7f64e1da9427e3f711a", "views": ["front", "three_quarter", "profile", "back"], "status": "candidate_not_canonical"},
-    {"asset_id": "EP01_BLUEPRINT_CHAR_BAN_MOTHER", "kind": "blueprint", "dimensions": "1536x1024", "sha256": "ab976092cca8a2744dfe0c9109e4aead6961c266e02567b527195ad858bb2c1c", "views": ["front", "three_quarter", "profile", "back"], "status": "candidate_not_canonical"},
-    {"asset_id": "EP01_BLUEPRINT_CHAR_BAN_GU", "kind": "blueprint", "dimensions": "1536x1024", "sha256": "95d8bd3d1b4e36491980ab64b6b30e0bad79783007dbcd658efa652bd3a23430", "views": ["front", "three_quarter", "profile", "back"], "status": "candidate_not_canonical"},
-    {"asset_id": "EP01_BLUEPRINT_CHAR_UNNAMED_SCRIBE", "kind": "blueprint", "dimensions": "1536x1024", "sha256": "c89f0f38f3be50ebdc3b065642d03577fb9bf2e00139a235bd8dcf742cba5e3d", "views": ["front", "three_quarter", "profile", "back"], "status": "candidate_not_canonical"}
+    {
+      "asset_id": "EP01_REF_CHAR_BAN_CHAO",
+      "kind": "reference",
+      "dimensions": "1024x1536",
+      "sha256": "3eb309b7aff6e384e4ef6a4b2350690fb8c40c114b8c14df3eb5f254fad2230c",
+      "status": "candidate_not_canonical"
+    },
+    {
+      "asset_id": "EP01_REF_CHAR_BAN_MOTHER",
+      "kind": "reference",
+      "dimensions": "1024x1536",
+      "sha256": "a1a68ae72ef69838906da269ada808a6eb32c3fc0f92d2416bf1e88b8f620de6",
+      "status": "candidate_not_canonical"
+    },
+    {
+      "asset_id": "EP01_REF_CHAR_BAN_GU",
+      "kind": "reference",
+      "dimensions": "1024x1536",
+      "sha256": "e7279ca83925580f79dc2745ed2681cf1a71b7243e8fc384699f58c8f60ad2d2",
+      "status": "candidate_not_canonical"
+    },
+    {
+      "asset_id": "EP01_REF_CHAR_UNNAMED_SCRIBE",
+      "kind": "reference",
+      "dimensions": "1024x1536",
+      "sha256": "afbe9d39f65eb48298fdb060d2f7ea1f308e61ac2c1f0550ae964880825e0e91",
+      "status": "candidate_not_canonical"
+    },
+    {
+      "asset_id": "EP01_REF_LOC_LUOYANG_COPYING_SPACE",
+      "kind": "reference",
+      "dimensions": "1024x1536",
+      "sha256": "0d0497ea3e9bd7acebbab434ec28232ac311caedc868b3428ac8db65d1ace794",
+      "status": "candidate_not_canonical"
+    },
+    {
+      "asset_id": "EP01_REF_PROP_WRITING_SET",
+      "kind": "reference",
+      "dimensions": "1024x1536",
+      "sha256": "aed4e0fc726b7fb6a538d727917b66d5b9b060d02e9d45d586cfd351734c28e7",
+      "status": "candidate_not_canonical"
+    },
+    {
+      "asset_id": "EP01_REF_PROP_BRUSH_POUCH",
+      "kind": "reference",
+      "dimensions": "1024x1536",
+      "sha256": "78f1bcc2b008f752e3fa63dc30057e3972ad71f260ace8ac8c31a86be1b0fad5",
+      "status": "candidate_not_canonical"
+    },
+    {
+      "asset_id": "EP01_REF_PROP_OFFICIAL_DOCUMENT_DESK",
+      "kind": "reference",
+      "dimensions": "1024x1536",
+      "sha256": "3f87684f93c5eca4784002a83cff1885a293dff13eeeb3ae4ebb130ae4536389",
+      "status": "candidate_not_canonical"
+    },
+    {
+      "asset_id": "EP01_BLUEPRINT_CHAR_BAN_CHAO",
+      "kind": "blueprint",
+      "dimensions": "1536x1024",
+      "sha256": "c16a66cc65022e3df83ee409b3b47f8fa03685ed8359e7f64e1da9427e3f711a",
+      "views": [
+        "front",
+        "three_quarter",
+        "profile",
+        "back"
+      ],
+      "status": "candidate_not_canonical"
+    },
+    {
+      "asset_id": "EP01_BLUEPRINT_CHAR_BAN_MOTHER",
+      "kind": "blueprint",
+      "dimensions": "1536x1024",
+      "sha256": "ab976092cca8a2744dfe0c9109e4aead6961c266e02567b527195ad858bb2c1c",
+      "views": [
+        "front",
+        "three_quarter",
+        "profile",
+        "back"
+      ],
+      "status": "candidate_not_canonical"
+    },
+    {
+      "asset_id": "EP01_BLUEPRINT_CHAR_BAN_GU",
+      "kind": "blueprint",
+      "dimensions": "1536x1024",
+      "sha256": "95d8bd3d1b4e36491980ab64b6b30e0bad79783007dbcd658efa652bd3a23430",
+      "views": [
+        "front",
+        "three_quarter",
+        "profile",
+        "back"
+      ],
+      "status": "candidate_not_canonical"
+    },
+    {
+      "asset_id": "EP01_BLUEPRINT_CHAR_UNNAMED_SCRIBE",
+      "kind": "blueprint",
+      "dimensions": "1536x1024",
+      "sha256": "c89f0f38f3be50ebdc3b065642d03577fb9bf2e00139a235bd8dcf742cba5e3d",
+      "views": [
+        "front",
+        "three_quarter",
+        "profile",
+        "back"
+      ],
+      "status": "candidate_not_canonical"
+    }
   ],
   "external_review": {
     "provider": "google-antigravity",
@@ -41,7 +142,6 @@
     "effective_model": "Not verified",
     "review_status": "pass_candidate_shape_identity_only",
     "scope": "character_blueprint_image_review_only",
-    "keyframe_gate": "blocked",
     "unresolved_visual_research_flags": 19
   },
   "public_sync": {
