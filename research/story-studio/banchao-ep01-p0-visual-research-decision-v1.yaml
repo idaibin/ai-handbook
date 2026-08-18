@@ -1,0 +1,214 @@
+schema_version: story-studio/p0-visual-research-decision/v1
+artifact_id: banchao-ep01-p0-visual-research-decision-v1
+status: pass_with_bounded_adaptations
+project_id: banchao
+episode_id: EP01
+generated_at_utc: '2026-08-18T15:45:09Z'
+scope: Close the seven P0 visual-research flags sufficiently for minimum Visual Canon departmental review; do not approve Canon or generate media.
+historical_boundary: Material-culture evidence supports period-safe ranges or analogues, not ownership by Ban Chao, an exact Luoyang reconstruction, or a literal historical portrait.
+industrial_review_model:
+  review_type: HOD_pre_lookdev_review
+  departments:
+  - directing
+  - historical_research
+  - production_design
+  - cinematography
+  - lighting
+  - costume
+  - hair_makeup
+  - props
+  - continuity
+  - vfx
+  - editorial
+  - sound
+  decision_rule: A flag may close through evidence, explicit adaptation bounds, exclusion or deferral. Creative preference alone cannot close a historical flag.
+source_ledger:
+- source_id: SRC_HHS47_BAN_CHAO
+  kind: primary_historical_text
+  title: 《后汉书》卷四十七《班超传》
+  supports:
+  - 随母至洛阳
+  - 家贫
+  - 为官佣书以供养
+  - 投笔
+  - 兰台令史
+  - 免官
+  does_not_support:
+  - 班氏洛阳住宅平面
+  - 共享抄书房布局
+  - 具体服装发式
+  - 班超使用的书写材料与笔囊形制
+- source_id: SRC_MET_EASTERN_HAN_HOUSE
+  kind: dated_period_analogue
+  title: The Met — House with Courtyard, Eastern Han, 1st–early 3rd century
+  url: https://www.metmuseum.org/art/collection/search/49517
+  supports:
+  - 东汉墓葬中存在建筑/院落模型，可作为时代建筑体量的宽泛参照
+  limitations:
+  - 墓葬明器
+  - 不是洛阳佣书空间
+  - 不证明室内布局或班氏住处
+- source_id: SRC_MET_EASTERN_HAN_MAN
+  kind: dated_period_analogue
+  title: The Met — Figure of a man, Eastern Han, 1st–2nd century
+  url: https://www.metmuseum.org/art/collection/search/52551
+  supports:
+  - 东汉男性人物宽泛轮廓参照
+  limitations:
+  - 墓葬陶俑
+  - 身份和地区不等同于班超或洛阳佣书人
+- source_id: SRC_MET_EASTERN_HAN_WOMAN
+  kind: dated_period_analogue
+  title: The Met — Figure of a woman, Eastern Han, 1st–2nd century
+  url: https://www.metmuseum.org/art/collection/search/52552
+  supports:
+  - 东汉女性人物宽泛轮廓参照
+  limitations:
+  - 墓葬陶俑
+  - 不证明班母具体服饰或发式
+- source_id: SRC_NMC_EASTERN_HAN_TEXTILE_STONE
+  kind: dated_period_image
+  title: 中国国家博物馆 — 纺织画像石拓片
+  url: https://www.chnmuseum.cn/zp/zpml/gjwxbt/202010/t20201012_247847.shtml
+  supports:
+  - 东汉时期纺织生产和绢帛存在
+  limitations:
+  - 齐鲁豪强家庭场景
+  - 不证明洛阳普通家庭服装层级
+- source_id: SRC_IHP_HAN_WRITING_BRUSH
+  kind: dated_object
+  title: Academia Sinica IHP Museum — Han Writing Brush
+  url: https://museum.sinica.edu.tw/en/exhibition/93/item/1047/
+  supports:
+  - 约23.2厘米木质笔杆
+  - 纵向剖分夹入笔毫
+  - 细绳缚扎并髹漆
+  - 汉代书写工具包括笔、墨、砚、书刀和简牍
+  limitations:
+  - 居延出土
+  - 不能证明班超持有同一制式
+- source_id: SRC_IHP_HAN_WRITING_EQUIPMENT
+  kind: museum_collection_record
+  title: Academia Sinica IHP Museum — Writing Brush collection record
+  url: https://museum.sinica.edu.tw/en/collection/20/item/366/
+  supports:
+  - 汉代书写者使用毛笔和竹木简等器具
+  - 一件出土毛笔长23.0厘米
+  limitations:
+  - 边塞遗址材料不能直接复原洛阳城市劳动空间
+- source_id: SRC_IHP_HAN_WOODEN_SLIPS_LIFECYCLE
+  kind: museum_exhibition_research
+  title: Academia Sinica IHP Museum — Life Cycle of Han Dynasty Wooden Slips
+  url: https://museum.sinica.edu.tw/en/exhibitions/93/
+  supports:
+  - 竹木简制作、书写、编联、收纳与再利用的工作流程参照
+  limitations:
+  - 主题为边塞简牍
+  - 低案和工作方式仅作广义汉代参照
+decisions:
+- flag_id: room_architecture
+  decision: closed
+  disposition: bounded_as_exploratory
+  evidence_refs:
+  - SRC_HHS47_BAN_CHAO
+  - SRC_MET_EASTERN_HAN_HOUSE
+  evidence_conclusion: 时代建筑模型可支持“东汉普通建筑体量”的宽泛参照，但没有证据复原洛阳佣书室内。
+  production_rule: 采用 composite_set（复合布景）和低细节普通室内：只锁定工作案、人物动线、一个画外/边缘采光开口；不锁定完整平面、斗拱、等级屋顶、彩画、宫殿陈设或具体洛阳建筑。
+  department_notes:
+    production_design: Set Plan 只画 A工作区/B同僚区/C家庭阈限区，不标注真实班氏住宅或官署名称。
+    cinematography: 以中近景、插入镜头和有限景深减少未经证实的建筑曝光；建立镜头只说明劳动空间，不做城市复原。
+    lighting: 使用 motivated soft side light，光源保持画外；可用 negative fill 塑造手部与面部，不显示不受支持的窗式。
+    vfx: 仅做 invisible cleanup、伪文字和现代元素清理；不得扩建宏大洛阳背景。
+- flag_id: shared_copying_space_layout
+  decision: closed
+  disposition: bounded_as_exploratory
+  evidence_refs:
+  - SRC_HHS47_BAN_CHAO
+  - SRC_IHP_HAN_WOODEN_SLIPS_LIFECYCLE
+  evidence_conclusion: 史料支持“为官佣书”及书写劳动，不支持共享抄书房、官署附属作坊或家庭内佣书的确定布局。
+  production_rule: 把场景定义为“洛阳佣书复合空间”，而非历史复原；Blocking 固定为班超主工作轴、无名同僚侧后方低辨识度轴、母亲在家庭阈限/画面边缘。无机构牌匾、完整工位阵列或制度化作坊陈设。
+  department_notes:
+    director: 人物关系通过 blocking 和 eyeline 表达：班超被工作压住，同僚形成社会压力，母亲代表家庭责任。
+    production_design: 空间只服务叙事功能，不声称真实制度空间。
+    cinematography: Coverage 采用一张受控地理镜头、班超主近景、同僚反应和手部 inserts；不使用夸张广角展示未证平面。
+    continuity: 固定三人的轴线、出入口方向和案面位置，Storyboard 时锁定 180-degree line。
+- flag_id: early_eastern_han_clothing
+  decision: closed
+  disposition: bounded_as_exploratory
+  evidence_refs:
+  - SRC_MET_EASTERN_HAN_MAN
+  - SRC_MET_EASTERN_HAN_WOMAN
+  - SRC_NMC_EASTERN_HAN_TEXTILE_STONE
+  evidence_conclusion: 东汉人物俑和纺织图像可提供时代轮廓、层叠衣着与织物存在的宽泛参照，但不能确定班超、班固、班母和佣书同僚的精确服制或发式。
+  production_rule: 建立 Costume Plot v1：四人均为素朴层叠轮廓、低饱和灰褐色系、无官阶纹章；班超以磨损、墨迹和松弛层次表现劳作，班固更整洁但不穿后世官服，班母克制朴素，无名同僚保持低辨识度。发式只锁定稳定 silhouette，不宣称精确制度。
+  department_notes:
+    costume: 先做 silhouette/value test，再做细节；记录 Costume Continuity 和 ageing/distressing。
+    hair_makeup: 四视图保持发际、发髻轮廓和面部结构一致；不加后世冠帽或华丽饰物。
+    lighting: 在冷灰土褐 Show Look 下进行 costume camera test，确保人物依靠明度、磨损和轮廓区分而非高饱和颜色。
+    director: 服装服务身份与处境，不把历史准确性转化为“更华丽”。
+- flag_id: writing_surface_material
+  decision: closed
+  disposition: bounded_as_exploratory
+  evidence_refs:
+  - SRC_IHP_HAN_WRITING_EQUIPMENT
+  - SRC_IHP_HAN_WOODEN_SLIPS_LIFECYCLE
+  evidence_conclusion: 汉代书写工具和竹木简有直接出土证据；但材料多来自边塞，且不能证明班超在洛阳佣书时具体使用哪一种载体。
+  production_rule: EP01 以无可读文字的窄幅竹/木质 slip-like surfaces 作为保守视觉表达；不使用现代纸张、册页、线装书或白色打印纸，不对竹/木种类、尺寸标准和班超个人使用作确定陈述。材料近景只表现墨线、磨损和工作量。
+  department_notes:
+    props: 制作/生成 Hero Writing Surface Sheet，包含正面、侧面、成束和散置状态；禁止可读正文。
+    cinematography: ECU 只拍笔尖、墨线和手指，不让材质特写承担未经证实的考古陈述。
+    editorial: wooden_slip_tap 作为节奏 cue，实际音色待 Foley/spotting，不在当前阶段生成。
+    vfx: 清除伪文字和不一致的简牍数量。
+- flag_id: brush_form
+  decision: closed
+  disposition: resolved_by_evidence
+  evidence_refs:
+  - SRC_IHP_HAN_WRITING_BRUSH
+  - SRC_IHP_HAN_WRITING_EQUIPMENT
+  historical_claim_scope: general_han_brush_form_only
+  biographical_ownership_verified: false
+  evidence_conclusion: 有明确年代的汉代出土毛笔提供约23厘米木杆、夹毫缚扎髹漆的实物参照，可建立生产安全的通用形制；不证明班超持有同型笔。
+  production_rule: Hero Brush v1 采用细长木质笔杆、约23厘米比例参照、简洁笔头连接和低装饰表面；禁止现代金属箍、塑料件、钢笔/铅笔结构、夸张书法大笔或可识别品牌。
+  department_notes:
+    props: 建立 Hero Prop model sheet、scale reference、磨损状态和可替换副本版本。
+    director: SHOT_10 的“放下—拾起—不再落字”需要 hand choreography，笔的位置和旋转必须可连续。
+    cinematography: Macro/insert 使用短景深但保持笔尖、手指和接触点可读；不把镜头变成器物广告。
+    continuity: 记录笔尖朝向、墨量、手部位置、案面落点和每个 take 的动作阶段。
+- flag_id: brush_pouch_material
+  decision: closed
+  disposition: bounded_as_exploratory
+  evidence_refs:
+  - SRC_HHS47_BAN_CHAO
+  - SRC_IHP_HAN_WRITING_BRUSH
+  evidence_conclusion: 当前来源不能证明东汉存在与候选图相同的标准“笔囊”材质和闭合方式；该物件主要是全片连续性与主题锚点。
+  production_rule: 保留 PROP_BRUSH_POUCH 作为明确的[A/V] continuity prop：视觉实现为无装饰、低辨识度、柔软包裹/套状容器；不锁定皮革、金属扣、刺绣、流苏或标准制式，不宣传为东汉标准文具。
+  department_notes:
+    props: 建立 pouch 状态图：系腰、案边、被手触碰、SHOT_13 转场；只允许一个 approved silhouette。
+    costume: 固定在班超服装同一侧和相近高度，不随镜头漂移成军旅装备。
+    continuity: 记录磨损、折痕、系带长度和与 Hero Brush 的装入方向。
+    vfx: 如生成模型改变材质或附件，以 cleanup/replace 纠正，不新增装饰。
+- flag_id: temporary_residence_layout
+  decision: closed
+  disposition: bounded_as_exploratory
+  evidence_refs:
+  - SRC_HHS47_BAN_CHAO
+  - SRC_MET_EASTERN_HAN_HOUSE
+  evidence_conclusion: 史料支持班超随母至洛阳并佣书养家，但不支持班氏住址、房间数量、家庭陈设或工作与居住是否同处。
+  production_rule: 将剧本中的“班氏暂居处”在生产命名上改为“洛阳佣书复合空间（Composite Set）”：家庭压力通过母亲在阈限区、钱袋和对白进入，不展示住宅外景、卧具、厨房或完整家庭平面；不得宣传为班氏住宅复原。
+  department_notes:
+    writing_story: 场景合并保持[A/V]标记；不新增家庭史事实。
+    director: 母亲不需要穿越完整住宅，只在同一视觉单元边缘完成情绪与信息功能。
+    production_design: A工作区/B同僚区/C家庭阈限区可在同一复合布景内被 camera cheat，但连续性图必须固定。
+    editorial: 通过 match on action、eyeline 和声音桥维持空间可信，不用额外 establishing shot 解释虚构平面。
+result:
+  p0_total: 7
+  p0_closed: 7
+  resolved_by_evidence: 1
+  bounded_as_exploratory: 6
+  minimum_visual_canon_gate: ready_for_departmental_selection_not_approved
+  single_view_crop_gate: blocked_until_visual_canon_approved
+  storyboard: rough_previs_allowed_but_full_lock_blocked_by_5_p1_flags
+  keyframe_video_audio: blocked
+  media_generated: false
+  canonical_assets_promoted: 0
+next_action: Run Director + Production Designer + DoP + Costume + Props + Historical Research + Continuity HOD review on the minimum Visual Canon brief, then select or revise anchor assets.
