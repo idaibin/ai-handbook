@@ -1,0 +1,323 @@
+schema_version: story-studio/minimum-visual-canon-hod-review/v1.2
+artifact_id: banchao-ep01-minimum-visual-canon-hod-review-v1
+status: revise_required
+project_id: banchao
+episode_id: EP01
+review_round: 1
+reviewed_at_utc: '2026-08-18T15:40:00Z'
+scope: Sanitized native-resolution HOD LookDev review of 8 references and 4 blueprints. Full department notes remain private in Drive.
+review_panel:
+- director
+- historical_research
+- production_designer
+- director_of_photography
+- lighting_lead
+- costume_hair_makeup
+- prop_master
+- script_supervisor
+- vfx_supervisor
+- editor
+- production_rights
+methodology:
+  native_resolution_pixel_review: true
+  hash_integrity_check: 12/12 pass
+  contract_comparison: true
+  new_media_generated: false
+  historical_authentication_of_images: false
+cross_department_findings:
+  directing: Ban Chao and Ban Mother provide useful restrained performance components. Ban Gu and the unnamed scribe references repeat the protagonist’s writing action and weaken role differentiation.
+  historical_research: All images remain fictional candidates. Generic period mood cannot be converted into exact clothing, room, furniture, document or biography claims.
+  production_design: 'The reference set and prop images overuse generic “ancient study” cues: grid windows, blinds, dense shelving, ornate furniture, paper/codex stacks and decorative containers. The approved Composite Set requires far less detail.'
+  cinematography: All portrait references are 2:3, not 9:16 scene frames, and mostly repeat the same desk close-up rather than provide coverage. The mother reference reverses the key-light side relative to the male references.
+  lighting: Low-key side light is useful as mood, but shared-scene key direction is inconsistent. Official desk and pouch references contain significant crushed blacks and need readability tests.
+  costume_hair_makeup: The blueprints are structurally useful but share patterned robes, ribbons and footwear, flattening character hierarchy. They need a plain matte Costume Plot and simpler hair silhouettes.
+  props: Writing reference mixes incompatible/ambiguous materials and pseudo-text. Hero Brush, Writing Surface and Brush Pouch must be split into controlled model sheets.
+  continuity: Blueprints contain handheld props and accessories that create avoidable state drift. Base turnarounds should be neutral and prop-free.
+  vfx: Wholesale reuse would create high cleanup costs for pseudo-text, modern/late-period cues, props and architecture. Replacement is cheaper than repair for five rejected assets.
+  editorial: The assets do not prove screen geography, blocking, eyelines or shot rhythm. They cannot substitute for Storyboard/Previs/Animatic.
+  rights: Exact model and usage/publication rights remain unknown; no selected component is publication-ready.
+decision_summary:
+  total_assets_reviewed: 12
+  select_component_only: 2
+  revise: 5
+  reject: 5
+  full_assets_approved_for_canon: 0
+  canonical_assets_promoted: 0
+  visual_canon_outcome: revise
+  rights_gate: unknown_blocking_publication
+asset_reviews:
+- asset_id: EP01_REF_CHAR_BAN_CHAO
+  kind: character_reference
+  source_sha256: 3eb309b7aff6e384e4ef6a4b2350690fb8c40c114b8c14df3eb5f254fad2230c
+  dimensions: 1024x1536
+  decision: select_component_only
+  canonical: false
+  production_ready: false
+  retention: null
+  defer_until: null
+  rationale: Face, restrained performance and hand-wear are useful; costume, set, writing materials and 2:3 full-frame composition are not Canon-safe.
+  selected_components:
+  - face identity direction
+  - restrained inward performance
+  - ink-stained working hands
+  - low-saturation worn texture
+  excluded_components:
+  - exact hairstyle and costume
+  - paper/codex-like writing surfaces
+  - background shelves/windows
+  - full-frame composition as a 9:16 shot
+  - current brush/desk dressing
+  required_actions:
+  - carry face/performance direction into Ban Chao Blueprint v2
+  - run identity match against v2 under neutral light
+  - do not crop or publish this frame as Canon
+- asset_id: EP01_REF_CHAR_BAN_MOTHER
+  kind: character_reference
+  source_sha256: a1a68ae72ef69838906da269ada808a6eb32c3fc0f92d2416bf1e88b8f620de6
+  dimensions: 1024x1536
+  decision: select_component_only
+  canonical: false
+  production_ready: false
+  retention: null
+  defer_until: null
+  rationale: Face and restrained concern are useful; lighting reverses the shared key direction and costume/set/props remain unapproved.
+  selected_components:
+  - face identity direction
+  - restrained concern and dignity
+  - age texture without glamour
+  - plain low-saturation value range
+  excluded_components:
+  - right-side key direction
+  - exact hair ornament
+  - patterned/structured robe details
+  - paper/codex-like desk props
+  - background architecture
+  required_actions:
+  - carry face/performance direction into Ban Mother Blueprint v2
+  - test under the common camera-left Lighting Bible
+  - remove decorative hair/costume specificity
+- asset_id: EP01_REF_CHAR_BAN_GU
+  kind: character_reference
+  source_sha256: e7279ca83925580f79dc2745ed2681cf1a71b7243e8fc384699f58c8f60ad2d2
+  dimensions: 1024x1536
+  decision: reject
+  canonical: false
+  production_ready: false
+  retention: failed_lookdev_evidence_only
+  defer_until: null
+  rationale: 'Reject: repeats Ban Chao’s labour action and visual identity instead of the door-side older-brother beat.'
+  selected_components: []
+  excluded_components:
+  - full asset as identity, performance, costume, props, lighting or set reference
+  required_actions:
+  - replace with Ban Gu Blueprint v2 and later a door-side lookdev test
+  - do not use this reference in prompt image conditioning
+- asset_id: EP01_REF_CHAR_UNNAMED_SCRIBE
+  kind: character_reference
+  source_sha256: afbe9d39f65eb48298fdb060d2f7ea1f308e61ac2c1f0550ae964880825e0e91
+  dimensions: 1024x1536
+  decision: reject
+  canonical: false
+  production_ready: false
+  retention: failed_lookdev_evidence_only
+  defer_until: null
+  rationale: 'Reject: hero framing, distinctive headband and lead-level contrast violate the low-distinction supporting role.'
+  selected_components: []
+  excluded_components:
+  - full asset as identity, costume, lighting, prop or scene reference
+  required_actions:
+  - replace with a simpler supporting-character Blueprint v2
+  - keep the character off-center and lower contrast in later scene tests
+- asset_id: EP01_REF_LOC_LUOYANG_COPYING_SPACE
+  kind: location_reference
+  source_sha256: 0d0497ea3e9bd7acebbab434ec28232ac311caedc868b3428ac8db65d1ace794
+  dimensions: 1024x1536
+  decision: reject
+  canonical: false
+  production_ready: false
+  retention: mood_reference_only
+  defer_until: null
+  rationale: 'Reject as set/layout: generic later-period study cues, dense dressing and visible apertures conflict with the simplified Composite Set.'
+  selected_components:
+  - general depth layering
+  - worn matte wood mood
+  - soft directional-light atmosphere
+  excluded_components:
+  - architectural layout
+  - grid windows and blinds
+  - shelving/workshop density
+  - hanging object/signage
+  - paper/scroll set dressing
+  required_actions:
+  - replace with a simplified Set Plan and blockout before any photoreal styleframe
+  - retain only mood/depth/light references, never the architecture
+- asset_id: EP01_REF_PROP_WRITING_SET
+  kind: prop_reference
+  source_sha256: aed4e0fc726b7fb6a538d727917b66d5b9b060d02e9d45d586cfd351734c28e7
+  dimensions: 1024x1536
+  decision: reject
+  canonical: false
+  production_ready: false
+  retention: null
+  defer_until: null
+  rationale: 'Reject: mixed paper/codex/scroll/slip forms, pseudo-text and excessive objects violate the separated Hero Prop system.'
+  selected_components: []
+  excluded_components:
+  - full writing set
+  - current brush
+  - paper sheets/scroll
+  - codex-like stacks
+  - ornate cylindrical case
+  required_actions:
+  - replace with separate Hero Brush, Writing Surface and Ink/Support prop sheets
+  - one asset ID per sheet; no mixed moodboard
+- asset_id: EP01_REF_PROP_BRUSH_POUCH
+  kind: prop_reference
+  source_sha256: 78f1bcc2b008f752e3fa63dc30057e3972ad71f260ace8ac8c31a86be1b0fad5
+  dimensions: 1024x1536
+  decision: revise
+  canonical: false
+  production_ready: false
+  retention: null
+  defer_until: null
+  rationale: 'Revise: worn soft-wrap silhouette is useful, but bead/tassel, closure, material and scale must be redesigned.'
+  selected_components:
+  - worn soft-wrap/sleeve concept
+  - compact dark silhouette
+  - tactile matte wear
+  excluded_components:
+  - bead/tassel
+  - decorative double-flap specificity
+  - unverified material claim
+  - current tie configuration
+  - background writing materials
+  required_actions:
+  - produce Brush Pouch Sheet v2 with open/closed/worn states
+  - remove decorative hardware and ambiguous materials
+  - camera test against dark costume
+- asset_id: EP01_REF_PROP_OFFICIAL_DOCUMENT_DESK
+  kind: prop_location_reference
+  source_sha256: 3f87684f93c5eca4784002a83cff1885a293dff13eeeb3ae4ebb130ae4536389
+  dimensions: 1024x1536
+  decision: reject
+  canonical: false
+  production_ready: false
+  retention: failed_lookdev_evidence_only
+  defer_until: P1_visual_research_closure
+  rationale: 'Reject/defer: ornate office, paper stacks and furniture are blocked by the five open P1 flags.'
+  selected_components: []
+  excluded_components:
+  - full asset as official-space, furniture, document, lighting or set reference
+  required_actions:
+  - defer replacement until five P1 flags are closed
+  - replace with minimal official-desk transition sheet, not a full ornate office
+- asset_id: EP01_BLUEPRINT_CHAR_BAN_CHAO
+  kind: character_blueprint
+  source_sha256: c16a66cc65022e3df83ee409b3b47f8fa03685ed8359e7f64e1da9427e3f711a
+  dimensions: 1536x1024
+  decision: revise
+  canonical: false
+  production_ready: false
+  retention: null
+  defer_until: null
+  rationale: 'Revise: face/body and four-view identity are usable; patterned robe, hair ribbons, footwear and embedded props are not.'
+  selected_components:
+  - face structure
+  - body proportion
+  - four-view identity continuity
+  - pre-career non-military state
+  excluded_components:
+  - patterned outer robe
+  - exact hair ribbons
+  - book-like hand prop
+  - current brush form
+  - footwear specificity
+  required_actions:
+  - generate Ban Chao Blueprint v2 with same face identity
+  - plain matte layers, no patterned robe, no handheld book/brush
+  - separate hand-wear/action sheet after Canon
+- asset_id: EP01_BLUEPRINT_CHAR_BAN_MOTHER
+  kind: character_blueprint
+  source_sha256: ab976092cca8a2744dfe0c9109e4aead6961c266e02567b527195ad858bb2c1c
+  dimensions: 1536x1024
+  decision: revise
+  canonical: false
+  production_ready: false
+  retention: null
+  defer_until: null
+  rationale: 'Revise: face/age and four-view structure are usable; costume pattern, apron specificity and decorative hair require simplification.'
+  selected_components:
+  - face structure
+  - age range
+  - body proportion
+  - four-view identity continuity
+  excluded_components:
+  - repeated fabric pattern
+  - apron-like frontal specificity
+  - decorative hair ribbons
+  - footwear specificity
+  required_actions:
+  - generate Ban Mother Blueprint v2 with same face identity
+  - plain layered costume, simple stable bun, no decorative ribbons/patterns
+- asset_id: EP01_BLUEPRINT_CHAR_BAN_GU
+  kind: character_blueprint
+  source_sha256: 95d8bd3d1b4e36491980ab64b6b30e0bad79783007dbcd658efa652bd3a23430
+  dimensions: 1536x1024
+  decision: revise
+  canonical: false
+  production_ready: false
+  retention: null
+  defer_until: null
+  rationale: 'Revise: broader face is usable; wardrobe/props are too close to Ban Chao and do not support the threshold role.'
+  selected_components:
+  - broader older-brother face direction
+  - upright posture
+  - four-view identity continuity
+  excluded_components:
+  - near-identical Ban Chao wardrobe
+  - patterned robe
+  - brush and book-like props
+  - hair ornament specificity
+  - same value hierarchy as Ban Chao
+  required_actions:
+  - generate Ban Gu Blueprint v2 retaining broader face identity
+  - cleaner prop-free silhouette distinct from Ban Chao
+  - verify side-by-side family resemblance without identity collapse
+- asset_id: EP01_BLUEPRINT_CHAR_UNNAMED_SCRIBE
+  kind: character_blueprint
+  source_sha256: c89f0f38f3be50ebdc3b065642d03577fb9bf2e00139a235bd8dcf742cba5e3d
+  dimensions: 1536x1024
+  decision: revise
+  canonical: false
+  production_ready: false
+  retention: null
+  defer_until: null
+  rationale: 'Revise: four-view structure is usable; pouch, accessories and contrast make the supporting character too distinctive.'
+  selected_components:
+  - rounder/less heroic face direction
+  - four-view consistency
+  - shorter supporting-character silhouette
+  excluded_components:
+  - waist pouch
+  - same patterned robe family
+  - distinctive hair ribbons/topknot
+  - lead-level facial contrast
+  - footwear specificity
+  required_actions:
+  - generate Unnamed Scribe Blueprint v2 with reduced distinction
+  - remove pouch and head accessory
+  - review in three-character identity lineup after individual assets are complete
+gate_decision:
+  G05_LOOKDEV_VISUAL_CANON: revise_required
+  minimum_visual_canon_approved: false
+  single_view_crop_gate: blocked
+  rough_previs_gate: blocked_until_visual_canon_approval
+  full_storyboard_lock: blocked_by_visual_canon_and_5_p1_flags
+  keyframe_video_audio: blocked
+next_legal_action:
+  action_id: RESEARCH_AND_CLOSE_EP01_P1_FLAGS
+  description: Close writing_batch_format, official_space_architecture, official_desk_form, official_document_material and doorway_architecture; then execute the approved LookDev Revision Work Order without generating keyframes or video.
+private_detail:
+  artifact: banchao__evidence__minimum-visual-canon-hod-review-detail__2026-08-19__v01.yaml
+  sha256: b48dd0eafed3166fca36079a81cf450e857433975cebc39fe35476f762c03da5
+  location: private Google Drive evidence folder
