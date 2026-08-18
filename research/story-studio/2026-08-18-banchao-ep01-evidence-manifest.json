@@ -1,11 +1,11 @@
 {
-  "schema_version": "story-studio/public-evidence-manifest/v1.2",
+  "schema_version": "story-studio/public-evidence-manifest/v1.3",
   "project_id": "banchao",
   "episode_id": "EP01",
   "evidence_scope": "public_sanitized_ep01_preproduction_evidence",
   "current_status_ref": {
     "artifact": "banchao-ep01-current-status.json",
-    "sha256": "9a6884eb11017f3a56385760e142496ef503d6c9d5fb81569eda8ee67f8fa000",
+    "sha256": "6cfd654ddde8b9228b3b232f5f9daff633365f616b644faee52dfccbb5d2a373",
     "authority": "single_current_state_source"
   },
   "screenplay": {
@@ -142,26 +142,43 @@
     "effective_model": "Not verified",
     "review_status": "pass_candidate_shape_identity_only",
     "scope": "character_blueprint_image_review_only",
-    "unresolved_visual_research_flags": 12,
+    "unresolved_visual_research_flags": 5,
     "visual_research_flags_total": 19,
-    "visual_research_flags_disposed": 7,
-    "keyframe_gate": "blocked"
+    "visual_research_flags_disposed": 14,
+    "keyframe_gate": "blocked",
+    "visual_canon_gate": "ready_for_departmental_selection_not_approved"
   },
   "public_sync": {
     "private_media_and_full_evidence": "Google Drive private folder",
     "public_repository": "sanitized index and hashes only",
     "third_party_code_or_model_weights": "not uploaded",
-    "media_generated_in_registry_step": false
+    "media_generated_in_registry_step": false,
+    "media_generated_in_p0_step": false
   },
   "visual_research_registry": {
     "artifact": "banchao-ep01-visual-research-registry-v1.yaml",
-    "sha256": "7c4443700a8d4268190ca5b1e6e52c85b41a3d4b49a2dac26d2cb4a0f2153d38",
-    "validation": "pass_static_triage_complete",
+    "sha256": "f1bfda9133801cc011d2ce88b8e9d6bb96d54eab0157c8df2cc027457d20acfd",
+    "validation": "pass_static_p0_closed_p1_open",
+    "schema_version": "story-studio/visual-research-registry/v1.2",
     "total_flags": 19,
-    "closed_flags": 7,
-    "open_flags": 12,
-    "p0_open_flags": 7,
-    "p1_open_flags": 5,
-    "schema_version": "story-studio/visual-research-registry/v1.1"
+    "closed_flags": 14,
+    "open_flags": 5,
+    "p0_open_flags": 0,
+    "p1_open_flags": 5
+  },
+  "p0_visual_research_decision": {
+    "artifact": "banchao-ep01-p0-visual-research-decision-v1.yaml",
+    "sha256": "a1582c05fafb7b20ea0a9cb4bc18d71fb603dddd28389747adb851ac55a8a9a5",
+    "result": "pass_with_bounded_adaptations"
+  },
+  "minimum_visual_canon_brief": {
+    "artifact": "banchao-ep01-minimum-visual-canon-brief-v1.yaml",
+    "sha256": "0d60b9be2533bbbc9c2edd98878e57df44b5c5175c744f0d5f84c78250e745b9",
+    "status": "departmental_review_ready_not_canonical"
+  },
+  "film_department_gate_matrix": {
+    "artifact": "workflows/story-studio/story-studio-film-department-gate-matrix-v1.yaml",
+    "sha256": "98c071edce1b329aca86f8bc0cad3d04bd8b68d35655ce6552150a7d4cc35290",
+    "status": "workflow_baseline"
   }
 }
