@@ -1,0 +1,204 @@
+schema_version: story-studio/p1-visual-research-decision/v1
+artifact_id: banchao-ep01-p1-visual-research-decision-v1
+status: pass_with_evidence_and_bounded_adaptations
+project_id: banchao
+episode_id: EP01
+generated_at_utc: '2026-08-18T18:48:04Z'
+scope: Close the five P1 flags for LookDev Revision Round 2 and full Storyboard planning; no Canon approval, keyframe or video
+  approval.
+historical_boundary: Evidence supports general Han document production, binding, sealing and broad architectural analogues;
+  it does not reconstruct the exact Lan Terrace office, Ban Chao desk, doorway or appointment/dismissal document.
+industrial_review_model:
+  review_type: HOD_previs_and_lookdev_dependency_review
+  departments:
+  - writing_story
+  - historical_research
+  - production_design
+  - props
+  - cinematography
+  - lighting
+  - continuity
+  - editorial
+  - vfx
+  - sound
+  decision_rule: Evidence defines safe ranges; unsupported specificity is bounded, excluded from frame or deferred.
+source_ledger:
+- source_id: SRC_IHP_BINDING_REPLICA
+  kind: museum_research_replica
+  title: The Binding of Wooden Slips (replica)
+  url: https://museum.sinica.edu.tw/en/exhibition/93/item/1043/
+  supports:
+  - Han slip volumes could be bound with hemp cords
+  - 23 cm blank slips used in the replica
+  limitations:
+  - replica based on excavated practices
+  - does not define Ban Chao commission batch size or Luoyang office format
+- source_id: SRC_IHP_LIFECYCLE
+  kind: museum_exhibition_research
+  title: The Life Cycle of Han Dynasty Wooden Slips
+  url: https://museum.sinica.edu.tw/en/exhibitions/93/
+  supports:
+  - writing, binding and storage workflow
+  - bound volumes could be rolled, tagged, placed in bags/cases or hung/stored
+  - low table is a likely general writing posture context
+  limitations:
+  - frontier materials and general Han practice
+  - does not reconstruct Lan Terrace architecture or furniture
+- source_id: SRC_IHP_77_SLIP_VOLUME
+  kind: dated_object
+  title: Monthly and Seasonal Records of Military Supplies, 93–95 CE
+  url: https://museum.sinica.edu.tw/en/exhibition/93/item/33/
+  supports:
+  - an Eastern Han bound official record survives with 77 wooden slips and four strings
+  limitations:
+  - frontier military register
+  - not a Lan Terrace appointment or dismissal document
+- source_id: SRC_IHP_SEALING_STRIPS
+  kind: dated_object
+  title: Sealing Strips Affixed to Bound Volumes
+  url: https://museum.sinica.edu.tw/en/collection/20/item/1031/
+  supports:
+  - wooden sealing strips with groove, clay and stamped seal were used for document delivery and confidentiality
+  limitations:
+  - 37 BCE example
+  - not the exact EP01 document
+- source_id: SRC_IHP_SEALING_SLIPS_MATERIALS
+  kind: dated_object_group
+  title: Sealing Slips for Writing Materials
+  url: https://museum.sinica.edu.tw/en/exhibition/93/item/1039/
+  supports:
+  - Han records refer to slips, double-column slips and binding cords with quantities and lengths
+  limitations:
+  - frontier supply context
+  - not an office desk reconstruction
+- source_id: SRC_MET_EASTERN_HAN_HOUSE
+  kind: dated_period_analogue
+  title: House with Courtyard, Eastern Han
+  url: https://www.metmuseum.org/art/collection/search/49517
+  supports:
+  - Eastern Han funerary architectural models provide broad massing analogues
+  limitations:
+  - burial model
+  - not an official office or interior doorway reconstruction
+- source_id: SRC_SMITHSONIAN_HAN_GATE_MODEL
+  kind: dated_period_analogue
+  title: Funerary model of a gate, Han dynasty
+  url: https://www.si.edu/object/funerary-model-gate%3Afsg_F1923.20a-c
+  supports:
+  - Han funerary models include a rectangular gate opening between towers
+  limitations:
+  - funerary gate, not an ordinary interior doorway
+  - cannot justify ornament, proportions or exact construction
+- source_id: SRC_AIC_HAN_TOMB_DOORS
+  kind: dated_period_analogue
+  title: Pair of Tomb Chamber Doors, Western Han
+  url: https://www.artic.edu/artworks/12786/pair-of-tomb-chamber-doors
+  supports:
+  - Han door, pillar and lintel elements survive in tomb architecture
+  limitations:
+  - tomb chamber entrance
+  - not an Eastern Han ordinary room door or Lan Terrace threshold
+decisions:
+- flag_id: writing_batch_format
+  decision: closed
+  disposition: bounded_as_exploratory
+  evidence_refs:
+  - SRC_IHP_BINDING_REPLICA
+  - SRC_IHP_LIFECYCLE
+  - SRC_IHP_77_SLIP_VOLUME
+  evidence_conclusion: Han texts could be assembled as cord-bound slip volumes, but “还差两卷” does not identify an exact physical
+    batch size or binding stage.
+  production_rule: 'Represent the remaining work as exactly two visually distinct work units: one small tied slip fascicle
+    and one unfinished aligned group. They communicate workload, not two modern books or a proven historical commission format.
+    No readable writing.'
+  department_notes:
+    writing_story: Keep the dialogue as dramatic compression [A]; do not add a narrator claim about book manufacture.
+    props: Use one controlled fascicle silhouette and one unfinished group; record counts and cord state in the Prop Continuity
+      Log.
+    cinematography: Show in a brief insert or edge-of-frame composition; avoid a didactic inventory shot.
+    editorial: The two units support the pressure beat in SHOT_04 and must not create a new explanatory scene.
+    vfx: Remove pseudo-text and accidental extra bundles.
+- flag_id: official_space_architecture
+  decision: closed
+  disposition: excluded_from_frame
+  evidence_refs:
+  - SRC_MET_EASTERN_HAN_HOUSE
+  evidence_conclusion: General Eastern Han architecture is evidenced, but no source in this package supports a specific Lan
+    Terrace office interior.
+  production_rule: 'Do not show or reconstruct the official room. SHOT_11–13 use a shallow abstract work zone: tabletop/low
+    working plane, controlled neutral wall or darkness, and ordered negative space. No palace markers, plaque, courtyard,
+    window system or complete floor plan.'
+  department_notes:
+    production_design: Treat the official sequence as a minimal set extension, not a new location build.
+    cinematography: Use match framing and shallow depth to keep architecture out of frame.
+    lighting: Differentiate status through cleaner controlled light and negative space, not decorative practicals.
+    vfx: No macro architecture extension; cleanup only.
+- flag_id: official_desk_form
+  decision: closed
+  disposition: bounded_as_exploratory
+  evidence_refs:
+  - SRC_IHP_LIFECYCLE
+  evidence_conclusion: General Han writing practice supports a low working context, but the exact Lan Terrace desk form is
+    not evidenced.
+  production_rule: Use the same low working-plane geometry as the labour desk so the editorial Match Cut reads; the official
+    version is cleaner, less worn and more ordered. Do not show legs, joinery, ornate lacquer, carved motifs or rank-coded
+    furniture.
+  department_notes:
+    production_design: Create one minimal low-plane model sheet with labour and official surface states.
+    props: Surface wear, edge profile and document placement are the only controlled differences.
+    editorial: SHOT_10→11 match on brush/hand/work-plane geometry; SHOT_12 removes personal occupancy rather than staging
+      a ceremony.
+    lighting: Keep edge readability without turning the desk into a product shot.
+- flag_id: official_document_material
+  decision: closed
+  disposition: resolved_by_evidence
+  historical_claim_scope: general_han_official_document_handling_only
+  biographical_document_verified: false
+  evidence_refs:
+  - SRC_IHP_77_SLIP_VOLUME
+  - SRC_IHP_SEALING_STRIPS
+  - SRC_IHP_SEALING_SLIPS_MATERIALS
+  - SRC_IHP_LIFECYCLE
+  evidence_conclusion: Han official records, bound wooden-slip volumes, cords and sealing strips are directly evidenced; the
+    exact appointment or dismissal document for Ban Chao is not.
+  production_rule: Use a generic bound wooden-slip packet and/or one sealing strip as an unreadable official-document cue.
+    No appointment text, dismissal reason, names, seal legend or readable pseudo-history. The sealing strip may be present
+    but its impression remains indistinct.
+  department_notes:
+    props: Build one controlled generic official packet with fixed cord and sealing-strip state.
+    historical_research: Label the asset general Han official document handling, never “Ban Chao appointment document”.
+    cinematography: Avoid close focus on seal or text; the object supports status transition only.
+    continuity: Record bound/unbound, cord, strip and desk position across SHOT_11–13.
+    vfx: Remove readable marks and duplicated seals.
+- flag_id: doorway_architecture
+  decision: closed
+  disposition: excluded_from_frame
+  evidence_refs:
+  - SRC_SMITHSONIAN_HAN_GATE_MODEL
+  - SRC_AIC_HAN_TOMB_DOORS
+  evidence_conclusion: Han gate and tomb-door analogues exist, but they do not justify a specific ordinary interior doorway
+    for EP01.
+  production_rule: The doorway itself stays mostly out of frame. Use only a plain vertical timber edge, threshold shadow and
+    motivated light boundary for Ban Gu’s door-side silhouette. No grid lattice, decorative door leaf, studs, painted lintel,
+    gatehouse or measured reconstruction.
+  department_notes:
+    production_design: Define a camera-facing threshold cheat, not a full architectural asset.
+    cinematography: Use the edge as a compositional frame and eyeline anchor; preserve the 180-degree line.
+    lighting: The threshold motivates the side-light direction without revealing a speculative opening system.
+    continuity: Lock edge side, shadow direction and Ban Gu mark for SHOT_05/06/09/13.
+result:
+  p1_total: 5
+  p1_closed: 5
+  all_visual_flags_total: 19
+  all_visual_flags_closed: 19
+  resolved_by_evidence: 1
+  bounded_as_exploratory: 2
+  excluded_from_frame: 2
+  visual_research_gate: pass
+  visual_canon_gate: revise_required_round2_pending
+  storyboard_lock: blocked_until_visual_canon_round2_approval
+  keyframe_video_audio: blocked
+  media_generated_in_this_decision: false
+  canonical_assets_promoted: 0
+next_action: Write these rules into the active LookDev Work Order and ingest existing 16:9 pre-gate attempts as quarantined
+  Takes for Dailies Review.
