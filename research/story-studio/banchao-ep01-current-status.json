@@ -1,442 +1,131 @@
 {
   "schema_version": "story-studio/current-status/v1",
   "status_id": "banchao-ep01-current-status",
-  "status_revision": 4,
+  "status_revision": 5,
   "authority": {
     "role": "single_current_state_source",
     "scope": {
       "project_id": "banchao",
       "episode_id": "EP01"
     },
-    "as_of_utc": "2026-08-18T15:40:00Z",
-    "rule": "Only this file determines the current workflow stage and gate state. State claims in other artifacts are human-readable projections or historical snapshots. Their content evidence and hashes remain valid unless explicitly superseded."
+    "as_of_utc": "2026-08-18T19:45:00Z",
+    "rule": "This file alone determines current workflow stage and gates; other state claims are projections or historical snapshots."
   },
-  "evidence_classification": {
-    "verified_facts": [
-      "Full-life Story Bible, character trajectory, and 24-episode working baseline are present.",
-      "EP01 screenplay v1.1 is the validated frozen screenplay input.",
-      "Shot List contains 14 unique shots and totals exactly 105 seconds.",
-      "Eight candidate references and four character blueprints were fetched at native resolution and their SHA-256 values matched the evidence manifest.",
-      "Minimum Visual Canon HOD Review round 1 reviewed all 12 assets: 2 select_component_only, 5 revise, and 5 reject.",
-      "No complete candidate asset passed G05 Visual Canon approval; zero assets were promoted to Canon.",
-      "Seven P0 visual-research flags remain closed and five P1 flags remain open.",
-      "No storyboard, animatic, keyframe, video, or final audio production output exists."
-    ],
-    "workflow_decisions": [
-      "G05 LookDev/Visual Canon review outcome is revise_required.",
-      "Ban Chao and Ban Mother references are retained only as face/performance components, not as full-frame Canon assets.",
-      "All four character blueprints require clean prop-free v2 revisions; location, writing set, Ban Gu portrait, scribe portrait and official desk are rejected for Canon use.",
-      "Brush pouch reference requires a simplified v2 prop sheet.",
-      "The five P1 flags must close before executing the complete LookDev Revision Work Order and before full Storyboard Lock.",
-      "Single-view crops, keyframes, video and final audio remain prohibited."
-    ],
-    "not_verified": [
-      "Exact ChatGPT image model and version.",
-      "Image rights and usage restrictions for production or publication.",
-      "AGY effective model identity.",
-      "Quality, speed, and cost of any video or audio provider for this project."
-    ]
-  },
-  "source_priority": [
-    {
-      "rank": 1,
-      "source": "this_file",
-      "applies_to": "current workflow state and gate decisions"
-    },
-    {
-      "rank": 2,
-      "source": "canonical_or_frozen_artifacts",
-      "applies_to": "story and production content"
-    },
-    {
-      "rank": 3,
-      "source": "evidence_manifests_and_hashes",
-      "applies_to": "artifact identity and integrity"
-    },
-    {
-      "rank": 4,
-      "source": "events.jsonl",
-      "applies_to": "append-only execution history"
-    },
-    {
-      "rank": 5,
-      "source": "historical_snapshot_documents",
-      "applies_to": "past state only"
-    }
-  ],
   "project": {
     "project_id": "banchao",
     "series_title": "《班超：定远》",
     "episode_id": "EP01",
     "episode_title": "《佣书》",
     "format": {
-      "aspect_ratio": "9:16",
+      "aspect_ratio": "16:9",
+      "working_resolution": "1920x1080",
       "target_duration_seconds": 105
     },
-    "series_working_baseline": {
-      "chapters": 6,
-      "episodes": 24,
-      "episode_duration_range_seconds": [
-        90,
-        120
-      ]
-    }
+    "shot_count": 14
   },
-  "narrative_baseline": {
-    "status": "complete_working_baseline",
-    "canonical_bible": {
-      "artifact": "banchao-first-step-v1-freeze.md",
-      "sha256": "fe52a7017eb774413b2c5dbe51aa9dd522e8b624dc567ef95f1ce1a289b766c0",
-      "role": "current_working_narrative_baseline"
+  "verified": {
+    "narrative_baseline": "complete_working_baseline",
+    "screenplay": "frozen_validated_input",
+    "visual_research": "19/19 closed",
+    "P1": "5/5 closed",
+    "lookdev_round2": "8 Takes normalized and reviewed",
+    "dailies_round2": {
+      "select": 0,
+      "revise": 6,
+      "reject": 2
     },
-    "full_trajectory": {
-      "artifact": "banchao__ip__full-trajectory__2026-08-18__v01.md",
-      "status": "completed"
-    },
-    "episode_treatment": {
-      "artifact": "banchao__script__24-episode-treatment__2026-08-18__v01.md",
-      "status": "completed_working_baseline",
-      "chapters": 6,
-      "episodes": 24
-    },
-    "screenplay": {
-      "artifact": "ep01-yongshu-screenplay-v1.1.md",
-      "sha256": "a2ba6bb8cbd094ea65c3cdcdb0e341929f479fb9cbcfe0b2cbdc4c36bad02f0e",
-      "lifecycle": "frozen_validated_input"
-    }
+    "HOD_round2": "revise_required",
+    "canonical_assets": 0,
+    "single_view": 0,
+    "storyboard": 0,
+    "animatic": 0,
+    "keyframes": 0,
+    "video": 0,
+    "final_audio": 0
   },
-  "production_baseline": {
+  "not_verified": [
+    "exact ChatGPT image model/version",
+    "image usage/publication rights",
+    "AGY effective model",
+    "video/audio provider quality, speed and cost"
+  ],
+  "artifacts": {
+    "format_contract": {
+      "artifact": "banchao-ep01-production-format-contract-v1.yaml",
+      "sha256": "0b6406cdd79b5b76694c40f809cdf3835fad20ab839c2909bf928b0827f6ca7f"
+    },
     "shot_list": {
-      "artifact": "ep01-shot-list-v1.yaml",
-      "sha256": "b622bf79a5c3a24a06b93f2c5070525aaf15a0f5b05d7ffa9e4180e257fdb091",
-      "validation": "pass_static",
-      "shot_count": 14,
-      "duration_seconds": 105
+      "artifact": "ep01-shot-list-v1.1.yaml",
+      "sha256": "17c9cc91eac282d9d025013186180bafd22782a2e4fce2783af99f68ad0551d3"
     },
-    "asset_manifest_increment": {
-      "artifact": "ep01-asset-manifest-increment-v1.yaml",
-      "sha256": "994625a2502cef1360107f19aec75e08610455fe8dd70dffe3e446b6f0f5671a",
-      "validation": "pass_static"
-    },
-    "continuity_contract": {
-      "artifact": "ep01-continuity-contract-v1.yaml",
-      "sha256": "cd3ff0e9657a35b404d3eeb181e36d2f1ba3c73d8e374029819ef17cf0b5480e",
-      "validation": "pass_static",
-      "anchor_count": 10,
-      "edge_count": 13
-    },
-    "reference_asset_plan": {
-      "artifact": "ep01-reference-asset-plan-v1.yaml",
-      "sha256": "69a08dc2459926c0b33704691d3043ab057d8ef4677dca9ac7f7002bf8e92b7f",
-      "validation": "candidate_media_verified_research_gate_open"
+    "continuity": {
+      "artifact": "ep01-continuity-contract-v1.1.yaml",
+      "sha256": "901d16bd439b675b918fcfae2a7dd682f8ade2d91589d3755ac1a0849a9bb7b4"
     },
     "visual_research_registry": {
-      "artifact": "banchao-ep01-visual-research-registry-v1.yaml",
-      "sha256": "f1bfda9133801cc011d2ce88b8e9d6bb96d54eab0157c8df2cc027457d20acfd",
-      "validation": "pass_static_p0_closed_p1_open",
-      "schema_version": "story-studio/visual-research-registry/v1.2",
-      "total_flags": 19,
-      "closed_flags_count": 14,
-      "open_flags_count": 5
+      "artifact": "banchao-ep01-visual-research-registry-v1.3.yaml",
+      "sha256": "ff141d5cd117c6e92486d16b327b637cefae0cc36f5bf98fd1f6c19b1160c17a"
     },
-    "p0_visual_research_decision": {
-      "artifact": "banchao-ep01-p0-visual-research-decision-v1.yaml",
-      "sha256": "a1582c05fafb7b20ea0a9cb4bc18d71fb603dddd28389747adb851ac55a8a9a5",
-      "validation": "pass_with_bounded_adaptations",
-      "p0_total": 7,
-      "p0_closed": 7
+    "p1_decision": {
+      "artifact": "banchao-ep01-p1-visual-research-decision-v1.yaml",
+      "sha256": "3b31c6afbd6a53124b800fcd5dadf5d04652ae00faaa75b416852e4485017fe2"
     },
-    "minimum_visual_canon_brief": {
-      "artifact": "banchao-ep01-minimum-visual-canon-brief-v1.yaml",
-      "sha256": "0d60b9be2533bbbc9c2edd98878e57df44b5c5175c744f0d5f84c78250e745b9",
-      "status": "departmental_review_ready_not_canonical"
+    "visual_canon_brief": {
+      "artifact": "banchao-ep01-minimum-visual-canon-brief-v1.1.yaml",
+      "sha256": "2a7a73a17d1a3748a521f1a6e088942f3c77a80873589cb55c344e0236a7c0e2"
     },
-    "film_department_gate_matrix": {
-      "artifact": "story-studio-film-department-gate-matrix-v1.yaml",
-      "sha256": "98c071edce1b329aca86f8bc0cad3d04bd8b68d35655ce6552150a7d4cc35290",
-      "status": "workflow_baseline"
+    "dailies_round2": {
+      "artifact": "banchao-ep01-lookdev-dailies-review-round2-v1.yaml",
+      "sha256": "54c92e6765e565f844dc696985bce5b9adf92bc8a46f7a624bceaa43889aaa92"
     },
-    "minimum_visual_canon_hod_review": {
-      "artifact": "banchao-ep01-minimum-visual-canon-hod-review-v1.yaml",
-      "sha256": "9e12aac52cb454a51e66978c6f989c95ce11b6f3d4484a1c191995c6c909d476",
-      "status": "revise_required",
-      "assets_reviewed": 12,
-      "select_component_only": 2,
-      "revise": 5,
-      "reject": 5,
-      "canonical_assets_promoted": 0,
-      "private_detail_sha256": "b48dd0eafed3166fca36079a81cf450e857433975cebc39fe35476f762c03da5"
+    "HOD_round2": {
+      "artifact": "banchao-ep01-minimum-visual-canon-hod-review-round2-v1.yaml",
+      "sha256": "804349f04f4916d7bfd251672c9b44a6ab75107aa1e39e2d5c95ebd5cb263396"
     },
-    "lookdev_revision_work_order": {
-      "artifact": "banchao-ep01-lookdev-revision-work-order-v1.yaml",
-      "sha256": "2129d863a10c5924beae4c92fe3003ad8b71a4ff7f55b0cc4f979c43a5319df8",
-      "status": "ready_after_p1_closure_no_generation_executed",
-      "work_items": 9
-    }
-  },
-  "status_dimensions": {
-    "reference_assets": {
-      "count": 8,
-      "lifecycle": "candidate",
-      "media_integrity": "pass",
-      "historical_review": "pending",
-      "rights_gate": "unknown",
-      "canonical": false
-    },
-    "character_blueprints": {
-      "count": 4,
-      "views_each": [
-        "front",
-        "three_quarter",
-        "profile",
-        "back"
-      ],
-      "lifecycle": "candidate",
-      "media_integrity": "pass",
-      "identity_review": "pass_candidate_shape_identity_only",
-      "historical_review": "pending",
-      "rights_gate": "unknown",
-      "canonical": false
-    },
-    "single_view_crops": {
-      "count": 0,
-      "lifecycle": "not_started",
-      "gate": "blocked"
-    },
-    "storyboard": {
-      "frame_count": 0,
-      "lifecycle": "not_started"
-    },
-    "animatic": {
-      "count": 0,
-      "lifecycle": "not_started"
-    },
-    "keyframes": {
-      "count": 0,
-      "lifecycle": "not_started",
-      "gate": "blocked"
-    },
-    "video": {
-      "count": 0,
-      "lifecycle": "not_started",
-      "gate": "blocked"
-    },
-    "audio": {
-      "count": 0,
-      "lifecycle": "not_started"
-    },
-    "minimum_visual_canon": {
-      "lifecycle": "hod_review_complete_revise_required",
-      "approved_version": null,
-      "canonical_assets_promoted": 0,
-      "assets_reviewed": 12,
-      "select_component_only": 2,
-      "revise": 5,
-      "reject": 5,
-      "selected_components_are_canonical": false,
-      "rights_gate": "unknown"
-    },
-    "lookdev_revision_round": {
-      "lifecycle": "work_order_ready_blocked_by_5_p1_flags",
-      "generation_attempts": 0,
-      "new_media_count": 0,
+    "round3_work_order": {
+      "artifact": "banchao-ep01-lookdev-revision-work-order-v1.2.yaml",
+      "sha256": "b1b103b7d20fee0876a0d5eea6be41f40ce9ef9792e19c781dca81a9f128e565",
       "work_items": 9
     }
   },
   "gates": {
     "visual_research": {
-      "status": "p0_closed_p1_open",
-      "registry_artifact": "banchao-ep01-visual-research-registry-v1.yaml",
-      "registry_sha256": "f1bfda9133801cc011d2ce88b8e9d6bb96d54eab0157c8df2cc027457d20acfd",
-      "total_flags_count": 19,
-      "closed_flags_count": 14,
-      "unresolved_flags_count": 5,
-      "p0_unresolved_flags": [],
-      "p1_unresolved_flags": [
-        "writing_batch_format",
-        "official_space_architecture",
-        "official_desk_form",
-        "official_document_material",
-        "doorway_architecture"
-      ],
-      "closure_rule": "Every flag remains evidence-supported, bounded, excluded or deferred; P1 must close before full Storyboard Lock."
+      "status": "pass",
+      "open_flags": 0
     },
     "visual_canon": {
-      "status": "revise_required",
-      "review_artifact": "banchao-ep01-minimum-visual-canon-hod-review-v1.yaml",
-      "review_sha256": "9e12aac52cb454a51e66978c6f989c95ce11b6f3d4484a1c191995c6c909d476",
-      "decision_summary": {
-        "select_component_only": 2,
-        "revise": 5,
-        "reject": 5,
-        "full_assets_approved": 0
-      },
-      "next_entry_condition": "close_5_p1_flags_then_execute_lookdev_revision_work_order_and_repeat_HOD_review"
+      "status": "revise_required_after_HOD_round2",
+      "approved_assets": 0
     },
-    "single_view_crop": {
-      "status": "blocked",
-      "reason": "no_character_blueprint_is_canonical"
+    "single_view_crops": {
+      "status": "blocked"
     },
     "storyboard": {
-      "status": "blocked",
-      "rough_previs_entry_condition": "revised_minimum_visual_canon_approved",
-      "full_lock_entry_condition": "revised_visual_canon_approved_and_5_p1_flags_closed"
+      "status": "blocked"
     },
     "animatic": {
-      "status": "not_started",
-      "entry_condition": "14-shot_storyboard_complete_and_locked"
+      "status": "not_started"
     },
-    "keyframe": {
-      "status": "blocked",
-      "entry_condition": "105-second_animatic_pass"
+    "keyframes": {
+      "status": "blocked"
     },
     "video": {
-      "status": "blocked",
-      "entry_condition": "keyframe_pilot_pass"
+      "status": "blocked"
     },
     "audio": {
-      "status": "functional_placeholders_only",
-      "entry_condition": "scratch_audio_during_animatic; final_sound_after_picture_lock"
+      "status": "scratch_later_final_not_started"
     }
   },
   "workflow": {
-    "current_stage": {
-      "id": "08_visual_research_and_canon",
-      "status": "hod_review_complete_revise_required_5_p1_open"
-    },
-    "stages": [
-      {
-        "id": "01_project_and_research",
-        "status": "complete"
-      },
-      {
-        "id": "02_story_bible",
-        "status": "complete"
-      },
-      {
-        "id": "03_series_and_episode_structure",
-        "status": "complete_working_baseline"
-      },
-      {
-        "id": "04_ep01_screenplay",
-        "status": "validated"
-      },
-      {
-        "id": "05_scene_beat_shot_planning",
-        "status": "validated_static_scene_and_beat_ids_pending"
-      },
-      {
-        "id": "06_asset_and_continuity_contracts",
-        "status": "validated_static"
-      },
-      {
-        "id": "07_candidate_visual_development",
-        "status": "complete_candidate_layer"
-      },
-      {
-        "id": "08_visual_research_and_canon",
-        "status": "hod_review_round1_revise_required_5_p1_open"
-      },
-      {
-        "id": "09_storyboard_animatic_and_media_generation",
-        "status": "not_started"
-      },
-      {
-        "id": "10_audio_post_and_master",
-        "status": "not_started"
-      }
-    ],
-    "next_legal_action": "research_and_close_5_p1_visual_flags",
-    "planned_sequence": [
-      "research_and_close_5_p1_visual_flags",
-      "update_lookdev_revision_work_order_with_p1_rules",
-      "generate_revised_character_location_and_prop_lookdev_assets_as_separate_attempts",
-      "run_dailies_and_HOD_review_round2",
-      "approve_or_revise_minimum_visual_canon",
-      "derive_single_view_assets_after_canon_approval",
-      "create_14-shot_storyboard_with_blocking_coverage_lighting_vfx_and_sound_notes",
-      "create_and_review_105-second_animatic_with_scratch_audio",
-      "generate_three_shot_keyframes",
-      "generate_one_video_take_for_EP01_SHOT_10"
-    ],
-    "prohibited_actions": [
-      "do_not_promote_any_round1_candidate_asset_to_canonical",
-      "do_not_use_rejected_assets_as_image_conditioning_except_explicit_mood-only components",
-      "do_not_generate_single_view_crops_before_revised_blueprints_pass_HOD_review",
-      "do_not_lock_storyboard_while_5_p1_flags_are_open",
-      "do_not_generate_keyframes_or_video_before_animatic_pass",
-      "do_not_treat_face/performance component selection as rights clearance",
-      "do_not_claim_unrun providers, model identity, cost or quality as verified"
+    "current_stage": "08_visual_research_and_canon",
+    "status": "visual_research_pass_HOD_round2_revise_required",
+    "next_legal_action": "execute_9_item_round3_lookdev_work_order_then_Dailies_and_HOD_round3",
+    "prohibited": [
+      "single-view crops before character Canon",
+      "Storyboard Lock before Visual Canon",
+      "Keyframes/Video before Animatic pass",
+      "relabel legacy source bytes as 16:9",
+      "claim model/rights or Ban Chao-specific official objects as verified"
     ]
-  },
-  "reviews_and_rights": {
-    "agy_blueprint_review": {
-      "requested_model": "claude-opus-4-6-thinking",
-      "effective_model": "Not verified",
-      "scope": "character_blueprint_image_review_only",
-      "result": "pass_candidate_shape_identity_only",
-      "artifact_sha256": "40c208df76db421b8b0c4b5fcfd3ff2077dd8db346c98fdc66e34455b7c8f2b3"
-    },
-    "chatgpt_image_provider": {
-      "surface": "ChatGPT Chat Pro / AI Design",
-      "exact_model": "Not verified",
-      "rights_usage": "Not verified"
-    }
-  },
-  "sync_snapshot": {
-    "github": {
-      "repository": "idaibin/ai-handbook",
-      "branch": "agent/story-studio-banchao-sync-20260818",
-      "base_verified_commit": "cc34b198d8fd5e7c79eddf62331a5da9bda3e8e6",
-      "main_modified": false,
-      "pull_request_created": false,
-      "public_policy": "sanitized_status_hashes_and_evidence_only",
-      "latest_verified_before_registry_step": "c16ca9bd2b14208e5dcacc21b25d68882a16a85d",
-      "latest_verified_before_hod_review": "a0259bd1e41e4a67e6fd4a9ac08b98c109d4d951"
-    },
-    "drive_base_snapshot": {
-      "folder_title": "EP01-preproduction-candidates-2026-08-18",
-      "verified_file_count_before_registry_step": 46,
-      "png_count": 12,
-      "document_count_before_registry_step": 34,
-      "shared": false,
-      "verified_file_count_before_hod_review": 53,
-      "document_count_before_hod_review": 41
-    },
-    "local_evidence": {
-      "event_log_lines_before_status_authority_step": 72,
-      "worktree_clean": "verified_by_existing_local_evidence_not_reexecuted_in_this_chat",
-      "event_log_lines_before_visual_registry_step": 74,
-      "event_log_lines_before_hod_review": 78
-    }
-  },
-  "supersession": [
-    {
-      "artifact": "banchao-series-bible-first-plan.md",
-      "current_role": "historical_plan",
-      "superseded_by": "banchao-first-step-v1-freeze.md"
-    },
-    {
-      "artifact": "banchao__contract__provider-and-production-route__2026-08-18__v01.md",
-      "current_role": "historical_snapshot_and_provider-neutral_route_reference",
-      "superseded_state_claims": [
-        "shot_list_not_started",
-        "continuity_contract_not_started"
-      ],
-      "superseded_by": "banchao-ep01-current-status.json"
-    },
-    {
-      "artifact": "banchao__script__ep01-yongshu__2026-08-18__v01.1.md",
-      "current_role": "frozen_validated_screenplay_content",
-      "superseded_state_claims": [
-        "document_header_draft_ready_for_review"
-      ],
-      "superseded_by": "banchao-ep01-current-status.json"
-    },
-    {
-      "artifact": "old_five_episode_plan",
-      "current_role": "first_chapter_pilot_cut_only",
-      "superseded_by": "six_chapter_twenty_four_episode_working_baseline"
-    }
-  ]
+  }
 }
