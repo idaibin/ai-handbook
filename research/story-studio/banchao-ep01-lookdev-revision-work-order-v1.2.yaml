@@ -1,0 +1,44 @@
+schema_version: story-studio/lookdev-revision-work-order/v1.2
+artifact_id: banchao-ep01-lookdev-revision-work-order-v1.2
+status: ready_not_executed
+project_id: banchao
+episode_id: EP01
+created_at_utc: '2026-08-18T19:45:00Z'
+inputs:
+  hod_round2:
+    artifact: banchao-ep01-minimum-visual-canon-hod-review-round2-v1.yaml
+    sha256: 804349f04f4916d7bfd251672c9b44a6ab75107aa1e39e2d5c95ebd5cb263396
+  dailies_round2:
+    artifact: banchao-ep01-lookdev-dailies-review-round2-v1.yaml
+    sha256: 54c92e6765e565f844dc696985bce5b9adf92bc8a46f7a624bceaa43889aaa92
+  format_contract:
+    artifact: banchao-ep01-production-format-contract-v1.yaml
+    sha256: 0b6406cdd79b5b76694c40f809cdf3835fad20ab839c2909bf928b0827f6ca7f
+execution_rules:
+- one asset ID per request
+- 1920x1080 16:9
+- character turnarounds prop-free
+- every output is a Take with full metadata
+- Dailies Round 3 before HOD Round 3
+- no Canon promotion through generation alone
+- no single-view crop, Storyboard Lock, Keyframe, Video or final Audio
+work_items:
+- id: CHAR_BAN_CHAO_TAKE02
+  change: pattern-free plain costume; remove long hair ties; preserve face/body
+- id: CHAR_BAN_MOTHER_TAKE02
+  change: plain matte layers; clearer values; preserve face/age/bun
+- id: CHAR_BAN_GU_TAKE02
+  change: stronger older-brother differentiation; plain costume; no ribbon/props
+- id: CHAR_UNNAMED_SCRIBE_TAKE02
+  change: lower-distinction silhouette, coarse plain fabric, no decorative hair/hero prop
+- id: SETPLAN_TAKE02
+  change: three-zone blockout; one hero desk; minimum furniture; doorway mostly off-frame; no paper/codex
+- id: HERO_BRUSH_TAKE02
+  change: single consistent slender wood form; no ferrule/rings/brand/oversized head
+- id: WRITING_SURFACE_TAKE02
+  change: flat slips; exactly one tied fascicle + one unfinished aligned group + one hero insert
+- id: BRUSH_POUCH_TAKE02
+  change: plain textile wrap/sleeve; one tie and one brush; no pockets/hardware/labels
+- id: OFFICIAL_DESK_DOCUMENT_PACKET_TAKE01
+  change: minimal low working plane + generic unreadable bound slip packet/sealing strip; no full office
+next_action: Generate 9 controlled Takes; stop before downstream production.
