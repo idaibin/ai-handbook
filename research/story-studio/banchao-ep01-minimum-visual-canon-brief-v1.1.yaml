@@ -1,0 +1,189 @@
+schema_version: story-studio/minimum-visual-canon-brief/v1.1
+artifact_id: banchao-ep01-minimum-visual-canon-brief-v1.1
+status: revision_round2_input_not_canonical
+project_id: banchao
+episode_id: EP01
+generated_at_utc: '2026-08-18T18:48:04Z'
+input_refs:
+  screenplay:
+    artifact: ep01-yongshu-screenplay-v1.1.md
+    sha256: a2ba6bb8cbd094ea65c3cdcdb0e341929f479fb9cbcfe0b2cbdc4c36bad02f0e
+  shot_list:
+    artifact: ep01-shot-list-v1.1.yaml
+    sha256: 950b60b25c5eadbcb30f456deddd67483b7c075ff66518047a03e79cdada9cde
+  p0_decision:
+    artifact: banchao-ep01-p0-visual-research-decision-v1.yaml
+    sha256: a1582c05fafb7b20ea0a9cb4bc18d71fb603dddd28389747adb851ac55a8a9a5
+  film_workflow:
+    artifact: story-studio-film-department-gate-matrix-v1.yaml
+    sha256: 98c071edce1b329aca86f8bc0cad3d04bd8b68d35655ce6552150a7d4cc35290
+  visual_research_registry:
+    artifact: banchao-ep01-visual-research-registry-v1.yaml
+    integrity: verified_by_current_status_and_sync_receipt
+  p1_decision:
+    artifact: banchao-ep01-p1-visual-research-decision-v1.yaml
+    sha256: 3b31c6afbd6a53124b800fcd5dadf5d04652ae00faaa75b416852e4485017fe2
+  format_contract:
+    artifact: banchao-ep01-production-format-contract-v1.yaml
+    sha256: 0b6406cdd79b5b76694c40f809cdf3835fad20ab839c2909bf928b0827f6ca7f
+director_treatment:
+  dramatic_intent: 英雄不是从豪言开始，而是从重复劳动、家计压力和一次无法收回的选择开始。
+  visual_thesis: 笔既是生计的负担，也是班超主动选择命运的动作道具。
+  performance_direction: 克制、内收，不表演“少年英雄气”；情绪通过手部、停顿、呼吸、视线和动作节拍累积。
+  rhythm: 前半重复与压缩，投笔段暂时抽空环境声，后半用案面和空位做 match cut，把升迁与免官压成代价。
+production_design_bible:
+  set_type: composite_set_not_historical_reconstruction
+  set_label: 洛阳佣书复合空间
+  blocking_zones:
+    A_work_axis: 班超、Hero Brush、书写表面；视觉和叙事中心。
+    B_social_pressure_axis: 无名同僚侧后方；低辨识度，不与班超争夺轮廓。
+    C_family_threshold_axis: 班母在边缘/阈限进入；表达家庭责任，不建立完整住宅。
+  architecture_rule: 低细节普通室内和一个画外/边缘采光方向；无宫殿、牌匾、后世格扇、等级纹饰或完整洛阳复原。
+  palette:
+  - cool_gray
+  - earth_brown
+  - ink_black
+  - muted_skin_tones
+  texture:
+  - worn_wood_like_surfaces
+  - matte_textile
+  - subtle_ink_and_hand_wear
+  set_dressing_rule: 只保留叙事必需案面、书写材料、笔囊和少量无标识容器；背景不堆砌“古风”装饰。
+  official_sequence_rule: SHOT_11–13 exclude full official architecture; use a shallow abstract work zone and minimal low
+    working-plane Match Cut.
+  doorway_rule: Doorway remains mostly out of frame; only a plain vertical edge, threshold shadow and motivated-light boundary
+    are permitted.
+cinematography_bible:
+  format: 16:9 / 1920x1080
+  virtual_lens_intent:
+    macro_insert: 笔尖、墨线、手部；exact focal length not locked until camera test.
+    normal_perspective: 对话和两人关系，避免极端广角变形。
+    short_telephoto_isolation: 投笔前后的班超近景和社会压力压缩。
+  camera_movement: 以静态、微弱 push-in 和受控 pan 为主；不使用无动机环绕、无人机感、快速摇移或英雄式升格。
+  coverage_plan:
+  - one restrained geography frame
+  - controlled two-shots
+  - character close-ups
+  - hand/prop inserts
+  - reaction/selective eyeline shots
+  blocking_and_axis: Storyboard 前锁定主出入口方向、eyeline 和 180-degree line；同一动作不跨轴漂移。
+  composition: 横屏以左右空间、前后层次、门边框景与案面水平线表现压迫和人物关系；为字幕与后续版本保留安全区，但不牺牲手部、Hero Brush、Eyeline 和 Blocking。
+lighting_bible:
+  intent: low-key but readable labour interior
+  key_source: motivated soft side light from an off-screen opening; the exact window/door form remains unseen.
+  fill_control: negative fill or controlled falloff shapes face and hands; no arbitrary rim light.
+  continuity: single consistent key direction across SHOT_01–10; time-of-day does not jump.
+  practical_rule: No decorative practical light is introduced unless screenplay/production design later justifies it.
+  test_requirement: Camera/light test must confirm hand readability, costume value separation, ink visibility and no crushed
+    facial detail.
+costume_hair_makeup_bible:
+  costume_plot:
+    CHAR_BAN_CHAO: plain layered silhouette, visibly worn and ink-marked, restrained earth-grey value.
+    CHAR_BAN_GU: cleaner silhouette and finish than Ban Chao, but no later-dynasty official uniform or rank insignia.
+    CHAR_BAN_MOTHER: restrained plain layered silhouette; no ornate jewellery or exact status claim.
+    CHAR_UNNAMED_SCRIBE: low-distinction supporting silhouette, visually subordinate to Ban Chao.
+  hair_rule: Keep approved face/hair silhouette stable across views; no elaborate later-dynasty headwear or unverified fixed
+    hairstyle claim.
+  makeup_continuity: Ban Chao hand ink, callus/wear and fatigue are continuity anchors; avoid glamorized skin treatment.
+  test_requirement: Costume and hair/makeup test under the Lighting Bible and Show Look before Canon approval.
+property_bible:
+  PROP_HERO_BRUSH:
+    form: slender wooden shaft using an approximately 23 cm Han reference scale; simple bristle connection, no modern ferrule.
+    status: evidence_bounded_general_han_form_not_biographical_object
+    continuity:
+    - tip_direction
+    - ink_load
+    - hand_position
+    - table_contact_point
+    - wear_state
+  PROP_WRITING_SURFACE:
+    form: narrow bamboo/wood slip-like surfaces without readable text; exact material/specification not claimed.
+    status: bounded_period_safe_representation
+    forbidden:
+    - modern loose paper
+    - codex
+    - thread-bound book
+    - printed layout
+    - readable pseudo-historical text
+    batch_rule: 'SHOT_04 uses two distinct workload units: one tied fascicle-like bundle and one unfinished aligned group;
+      not two modern books.'
+  PROP_BRUSH_POUCH:
+    form: plain soft wrap/sleeve with one approved silhouette; no metal fittings, embroidery, tassels or standard-form claim.
+    status: adaptation_continuity_prop
+    continuity:
+    - body_side
+    - height
+    - folds
+    - tie_length
+    - brush_insertion_direction
+  PROP_OFFICIAL_DOCUMENT_PACKET:
+    form: generic bound wooden-slip packet and/or unreadable sealing strip
+    status: evidence_supported_general_Han_handling_not_Ban_Chao_specific
+    forbidden:
+    - readable appointment or dismissal text
+    - names or seal legend
+    - paper codex
+    - ornate document box
+action_and_performance:
+  stunt_department: not_required_for_EP01
+  action_previs: not_required
+  hand_action_choreography: required for writing, placing brush, picking it up and stopping before the next stroke.
+  performance_continuity: Director and Script Supervisor record action phase, hand, gaze, breath and prop orientation for
+    every take.
+vfx_bible:
+  scope:
+  - invisible_cleanup
+  - pseudo_text_removal
+  - modern_object_removal
+  - identity_or_prop_continuity_repairs_if_approved
+  out_of_scope:
+  - macro_Luoyang_reconstruction
+  - spectacle_particles
+  - unmotivated_environment_extensions
+  turnover_rule: Final VFX only after Picture Lock; early tests may use temporary comps clearly marked temp.
+editorial_sound_previs:
+  storyboard_rule: Full 14-shot Storyboard may proceed only after LookDev Dailies and HOD Review Round 2 approve a revised
+    Visual Canon; all 5 P1 flags are now closed.
+  animatic_rule: 14 shots must time to exactly 105 seconds with scratch dialogue and functional sound cues before keyframes.
+  sound_prelay:
+  - brush_scrape
+  - wooden_slip_tap
+  - room_silence
+  - distant_gate_bell
+  sound_status: functional placeholders only; no final audio generated.
+  spotting_later: After Picture Lock, conduct a spotting session for dialogue, ambience, Foley, SFX and score.
+show_look_and_qc:
+  show_look_status: candidate_not_locked
+  look: cool grey / earth brown / low saturation / restrained contrast; avoid generic teal-orange blockbuster grade.
+  dailies_qc:
+  - 16:9 exact 1920x1080 working frame and safe area
+  - identity consistency
+  - hand/prop integrity
+  - lighting direction
+  - costume value separation
+  - pseudo-text
+  - modern elements
+  - hash and attempt metadata
+  colour_pipeline: Use one versioned viewing transform for lookdev, dailies and final grade; the colourist may refine after
+    Picture Lock.
+hod_review:
+  required_approvals:
+  - director
+  - historical_research
+  - production_designer
+  - director_of_photography
+  - gaffer_or_lighting_lead
+  - costume_hair_makeup
+  - prop_master
+  - script_supervisor
+  - vfx_supervisor
+  - editor
+  current_result: ready_for_review_not_approved
+  approval_outcomes:
+  - approve_v1
+  - revise
+  - blocked
+  rights_gate: unknown_separate_blocker_for_publication
+  canonical_assets_promoted: 0
+next_legal_action: Ingest the 16:9 LookDev revision attempts as quarantined Takes, validate metadata and run Dailies Review;
+  no Canon promotion before HOD Review Round 2.
