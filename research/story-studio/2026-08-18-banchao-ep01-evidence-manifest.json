@@ -1,11 +1,11 @@
 {
-  "schema_version": "story-studio/public-evidence-manifest/v1.3",
+  "schema_version": "story-studio/public-evidence-manifest/v1.4",
   "project_id": "banchao",
   "episode_id": "EP01",
   "evidence_scope": "public_sanitized_ep01_preproduction_evidence",
   "current_status_ref": {
     "artifact": "banchao-ep01-current-status.json",
-    "sha256": "6cfd654ddde8b9228b3b232f5f9daff633365f616b644faee52dfccbb5d2a373",
+    "sha256": "d630151de395f68d4964d4eb7e5ff97d84eea23c8da705a105d4d3d867006ecd",
     "authority": "single_current_state_source"
   },
   "screenplay": {
@@ -146,14 +146,22 @@
     "visual_research_flags_total": 19,
     "visual_research_flags_disposed": 14,
     "keyframe_gate": "blocked",
-    "visual_canon_gate": "ready_for_departmental_selection_not_approved"
+    "visual_canon_gate": "revise_required",
+    "hod_assets_reviewed": 12,
+    "hod_decision_counts": {
+      "select_component_only": 2,
+      "revise": 5,
+      "reject": 5,
+      "full_assets_approved": 0
+    }
   },
   "public_sync": {
     "private_media_and_full_evidence": "Google Drive private folder",
     "public_repository": "sanitized index and hashes only",
     "third_party_code_or_model_weights": "not uploaded",
     "media_generated_in_registry_step": false,
-    "media_generated_in_p0_step": false
+    "media_generated_in_p0_step": false,
+    "media_generated_in_hod_review_step": false
   },
   "visual_research_registry": {
     "artifact": "banchao-ep01-visual-research-registry-v1.yaml",
@@ -180,5 +188,19 @@
     "artifact": "workflows/story-studio/film-department-gate-matrix-v1.yaml",
     "sha256": "98c071edce1b329aca86f8bc0cad3d04bd8b68d35655ce6552150a7d4cc35290",
     "status": "workflow_baseline"
+  },
+  "minimum_visual_canon_hod_review": {
+    "artifact": "banchao-ep01-minimum-visual-canon-hod-review-v1.yaml",
+    "sha256": "9e12aac52cb454a51e66978c6f989c95ce11b6f3d4484a1c191995c6c909d476",
+    "status": "revise_required",
+    "assets_reviewed": 12,
+    "canonical_assets_promoted": 0,
+    "private_detail_sha256": "b48dd0eafed3166fca36079a81cf450e857433975cebc39fe35476f762c03da5"
+  },
+  "lookdev_revision_work_order": {
+    "artifact": "banchao-ep01-lookdev-revision-work-order-v1.yaml",
+    "sha256": "2129d863a10c5924beae4c92fe3003ad8b71a4ff7f55b0cc4f979c43a5319df8",
+    "status": "ready_after_p1_closure_no_generation_executed",
+    "work_items": 9
   }
 }
