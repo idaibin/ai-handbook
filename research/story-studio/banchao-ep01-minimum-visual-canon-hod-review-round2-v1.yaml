@@ -1,0 +1,53 @@
+schema_version: story-studio/minimum-visual-canon-hod-review/v2
+artifact_id: banchao-ep01-minimum-visual-canon-hod-review-round2-v1
+status: revise_required
+project_id: banchao
+episode_id: EP01
+review_round: 2
+reviewed_at_utc: '2026-08-18T19:45:00Z'
+review_panel:
+- director
+- historical_research
+- production_designer
+- director_of_photography
+- lighting_lead
+- costume_hair_makeup
+- prop_master
+- script_supervisor
+- vfx_supervisor
+- editor
+- production_rights
+inputs:
+  dailies:
+    artifact: banchao-ep01-lookdev-dailies-review-round2-v1.yaml
+    sha256: 54c92e6765e565f844dc696985bce5b9adf92bc8a46f7a624bceaa43889aaa92
+  format_contract:
+    artifact: banchao-ep01-production-format-contract-v1.yaml
+    sha256: 0b6406cdd79b5b76694c40f809cdf3835fad20ab839c2909bf928b0827f6ca7f
+decision_summary:
+  attempts_reviewed: 8
+  approve: 0
+  revise: 6
+  reject: 2
+  missing_required_asset: 1
+  canonical_assets_promoted: 0
+  visual_canon_outcome: revise_required
+blocking_items:
+- 4 pattern-free character revisions
+- simplified three-zone Set Plan
+- new Hero Brush
+- corrected Writing Surface
+- new simple Brush Pouch
+- first minimal Official Desk + Document Packet
+- common Camera/Lighting/Show Look test
+- rights/model verification
+gates:
+  visual_research: pass_all_19_flags_closed
+  visual_canon: revise_required
+  single_view_crops: blocked
+  storyboard: blocked
+  animatic: not_started
+  keyframes: blocked
+  video: blocked
+  final_audio: not_started
+next_action: Execute Round-3 LookDev Work Order, then Dailies Round 3 and HOD Review Round 3.
