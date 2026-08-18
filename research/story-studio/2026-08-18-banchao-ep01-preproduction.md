@@ -2,10 +2,12 @@
 
 - `document_role`: `human_readable_projection`
 - `authoritative_state`: [`banchao-ep01-current-status.json`](./banchao-ep01-current-status.json)
-- `authoritative_state_sha256`: `083886366e8632b2417aaa4768f8c4e27cc55e0c8f5aec4f03c56e87fd55b4aa`
-- `as_of_utc`: `2026-08-18T14:09:06Z`
+- `authoritative_state_sha256`: `9782588091946344fcad0c794d39486f4e06b8d7edecc6cbaac9d1b65ec4303f`
+- `visual_research_registry`: [`banchao-ep01-visual-research-registry-v1.yaml`](./banchao-ep01-visual-research-registry-v1.yaml)
+- `visual_research_registry_sha256`: `1af33c9e56c80caaeb7f094458c37f21ece525c08d1e56f662506c878177e480`
+- `as_of_utc`: `2026-08-18T14:40:00Z`
 
-本文件只提供人类可读投影。**当前阶段、门禁和下一合法动作以 `banchao-ep01-current-status.json` 为唯一真相源。** 其他旧文档中的状态字段按其生成时间视为历史快照；其内容证据和哈希仍然保留。
+本文件只提供人类可读投影。**当前阶段、门禁和下一合法动作以 `banchao-ep01-current-status.json` 为唯一真相源。**
 
 ## 当前结论
 
@@ -13,54 +15,60 @@
 narrative_baseline_complete
 + ep01_static_preproduction_validated
 + candidate_visual_assets_verified
-+ visual_research_gate_open
-+ visual_canon_gate_blocked
-+ keyframe_and_video_gate_blocked
++ visual_research_registry_complete
++ 7_flags_disposed
++ 12_flags_open
++ visual_canon_keyframe_video_blocked
 ```
 
-| 阶段 | 状态 | 说明 |
-|---|---|---|
-| 全传 Story Bible / 人物轨迹 / 24 集工作基线 | `complete_working_baseline` | 6 篇章 × 4 集；旧 5 集仅作为第一章试剪 |
-| EP01《佣书》剧本 | `frozen_validated_input` | v1.1，SHA-256 `a2ba6bb8cbd094ea65c3cdcdb0e341929f479fb9cbcfe0b2cbdc4c36bad02f0e` |
-| Shot List | `pass_static` | 14 个唯一镜头，总时长 105 秒 |
-| Asset Manifest / Continuity Contract | `pass_static` | 10 个连续性 anchors、13 条 edges |
-| 候选参考图 | `candidate` | 8 张，非 canonical |
-| 角色四视图蓝图 | `candidate` | 4 张；AGY 仅通过形态、四视图和身份一致性复核 |
-| 视觉考据 | `open` | 19 项 flags 未处置 |
-| Visual Canon | `blocked` | 尚未选择最小视觉权威资产 |
-| 单视图、Storyboard、Animatic、关键帧、视频、音频 | `not_started / blocked` | 不得跨越当前门禁 |
+| 项目 | 状态 |
+|---|---|
+| 全传 Story Bible / 人物轨迹 / 24 集基线 | `complete_working_baseline` |
+| EP01 剧本 | `frozen_validated_input` |
+| Shot List | `14 shots / 105 seconds / pass_static` |
+| 候选参考图与四视图 | `8 + 4 / candidate_not_canonical` |
+| Visual Research Registry | `19/19 registered / pass_static` |
+| 已处置 flags | `7` |
+| 仍开放 flags | `12`（P0: 7，P1: 5） |
+| Visual Canon / 单视图 / Storyboard lock / Keyframe / Video | `blocked` |
 
-## 当前唯一合法下一步
+## 本步已处置
+
+| Flag | Disposition |
+|---|---|
+| `room_to_gate_spatial_relation` | `excluded_from_frame` |
+| `clothing_and_room_shape` | `resolved_by_evidence` |
+| `pouch_material` | `resolved_by_evidence` |
+| `family_money_pouch_form` | `bounded_as_exploratory` |
+| `door_gap_and_wind_visualization` | `bounded_as_exploratory` |
+| `luoyang_gate_visibility` | `excluded_from_frame` |
+| `seat_removal_visualization` | `bounded_as_exploratory` |
+
+其中 `clothing_and_room_shape` 与 `pouch_material` 只是依赖/别名归一化，不代表其历史形制已被证明；对应镜头继续继承规范化后的开放 flags。
+
+## 当前开放项
+
+**P0，最小 Visual Canon 前必须关闭：**
+
+`room_architecture`、`shared_copying_space_layout`、`early_eastern_han_clothing`、`writing_surface_material`、`brush_form`、`brush_pouch_material`、`temporary_residence_layout`
+
+**P1，14 镜 Storyboard 锁定前必须关闭：**
+
+`writing_batch_format`、`official_space_architecture`、`official_desk_form`、`official_document_material`、`doorway_architecture`
+
+## 下一合法动作
 
 ```text
-建立 EP01 Visual Research Registry
-→ 对 19 项 flags 逐项选择：
-   resolved_by_evidence / bounded_as_exploratory /
-   excluded_from_frame / deferred_out_of_pilot
+收集并核对 7 个 P0 flags 的一手或权威视觉证据
+→ 回写 Registry 的 evidence_refs 与 disposition
+→ 不生成新图片、关键帧、视频或音频
 ```
-
-完成后才进入：
-
-```text
-最小 Visual Canon
-→ 单视图派生资产
-→ 14 镜 Storyboard
-→ 105 秒 Animatic
-→ 3 张关键帧
-→ EP01_SHOT_10 单镜视频验证
-```
-
-## 历史快照边界
-
-- `banchao-series-bible-first-plan.md`：旧规划稿，不是当前 Bible。
-- `banchao__contract__provider-and-production-route__2026-08-18__v01.md`：保留 provider-neutral 路线价值，其中 `Shot List / Continuity not_started` 已被当前状态覆盖。
-- `ep01-yongshu-screenplay-v1.1.md`：剧本内容继续作为冻结输入；旧头部状态不再决定当前生命周期。
-- 旧 5 集规划：仅作为第一章试剪，不再代表班超全传。
 
 ## 公开证据入口
 
 - [唯一当前状态](./banchao-ep01-current-status.json)
+- [Visual Research Registry](./banchao-ep01-visual-research-registry-v1.yaml)
 - [EP01 公开资产证据清单](./2026-08-18-banchao-ep01-evidence-manifest.json)
 - [工作流来源矩阵](./2026-08-18-workflow-source-matrix.md)
 
-完整合同、Prompt、AGY 原始结果、事件日志和 12 张候选 PNG 继续保存在私有 Drive 证据目录。ChatGPT 图像精确模型、使用权利、AGY effective model，以及任何视频 provider 的质量、成本和速度仍为 `Not verified`。
+完整合同、Prompt、事件日志和 12 张候选 PNG 继续保存在私有 Drive。ChatGPT 图像精确模型、使用权利、AGY effective model，以及任何视频 provider 的质量、成本和速度仍为 `Not verified`。
