@@ -5,7 +5,7 @@
   "evidence_scope": "public_sanitized_ep01_preproduction_evidence",
   "current_status_ref": {
     "artifact": "banchao-ep01-current-status.json",
-    "sha256": "d630151de395f68d4964d4eb7e5ff97d84eea23c8da705a105d4d3d867006ecd",
+    "sha256": "8c7962401a8c927a712a54c4dc27b9c88d28a06c6fe34d1fd1928d1e9efd4ef7",
     "authority": "single_current_state_source"
   },
   "screenplay": {
