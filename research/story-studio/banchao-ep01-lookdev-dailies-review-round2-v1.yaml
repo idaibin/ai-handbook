@@ -1,0 +1,54 @@
+schema_version: story-studio/lookdev-dailies-review/v1
+artifact_id: banchao-ep01-lookdev-dailies-review-round2-v1
+status: revise_required
+project_id: banchao
+episode_id: EP01
+review_round: 2
+reviewed_at_utc: '2026-08-18T19:45:00Z'
+scope: 8 quarantined LookDev Takes reviewed at normalized 1920x1080; full private notes and attempt metadata remain in Drive.
+inputs:
+  visual_canon_brief:
+    artifact: banchao-ep01-minimum-visual-canon-brief-v1.1.yaml
+    sha256: 2a7a73a17d1a3748a521f1a6e088942f3c77a80873589cb55c344e0236a7c0e2
+  p1_decision:
+    artifact: banchao-ep01-p1-visual-research-decision-v1.yaml
+    sha256: 3b31c6afbd6a53124b800fcd5dadf5d04652ae00faaa75b416852e4485017fe2
+  review_board_private_sha256: 4b5146ab8a0a46eb551b1a4e218d01018994878372d4c15af7abd8b4d704dbc4
+technical_qc:
+  normalized_dimensions: 8/8 exact 1920x1080
+  aspect_ratio: '16:9'
+  normalization: no crop / no stretch / neutral matte padding
+  provider_native_integrity: 8/8 hashes preserved
+  exact_model: Not verified
+  rights_usage: Not verified
+decision_summary:
+  select: 0
+  revise: 6
+  reject: 2
+  canonical_promoted: 0
+asset_decisions:
+- asset_id: EP01_BLUEPRINT_CHAR_BAN_CHAO_V2
+  decision: revise
+  reason: patterned robe and long hair ties remain
+- asset_id: EP01_BLUEPRINT_CHAR_BAN_MOTHER_V2
+  decision: revise
+  reason: patterned fabric and compressed garment values remain
+- asset_id: EP01_BLUEPRINT_CHAR_BAN_GU_V2
+  decision: revise
+  reason: insufficient differentiation from Ban Chao; pattern/ribbon remain
+- asset_id: EP01_BLUEPRINT_CHAR_UNNAMED_SCRIBE_V2
+  decision: revise
+  reason: still too hero-like and patterned
+- asset_id: EP01_SETPLAN_LOC_LUOYANG_COPYING_SPACE_V1
+  decision: revise
+  reason: useful axes but overbuilt room, furniture and doorway detail
+- asset_id: EP01_PROP_HERO_BRUSH_SHEET_V1
+  decision: reject
+  reason: modern ferrule-like bands and inconsistent forms
+- asset_id: EP01_PROP_WRITING_SURFACE_SHEET_V1
+  decision: revise
+  reason: cylindrical bundles, uncontrolled count, P1 two-unit rule absent
+- asset_id: EP01_PROP_BRUSH_POUCH_SHEET_V2
+  decision: reject
+  reason: modern roll-up case, pockets, multiple tools and material certainty
+next_action: Generate only Round-3 replacement/new Takes, then Dailies Round 3.
