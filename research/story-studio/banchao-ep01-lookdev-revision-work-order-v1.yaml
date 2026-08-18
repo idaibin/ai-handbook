@@ -1,0 +1,246 @@
+schema_version: story-studio/lookdev-revision-work-order/v1
+artifact_id: banchao-ep01-lookdev-revision-work-order-v1
+status: ready_after_p1_closure_no_generation_executed
+project_id: banchao
+episode_id: EP01
+created_at_utc: '2026-08-18T15:40:00Z'
+inputs:
+  hod_review:
+    artifact: banchao-ep01-minimum-visual-canon-hod-review-v1.yaml
+    sha256: 9e12aac52cb454a51e66978c6f989c95ce11b6f3d4484a1c191995c6c909d476
+    private_detail_sha256: b48dd0eafed3166fca36079a81cf450e857433975cebc39fe35476f762c03da5
+  minimum_visual_canon_brief:
+    artifact: banchao-ep01-minimum-visual-canon-brief-v1.yaml
+    sha256: 0d60b9be2533bbbc9c2edd98878e57df44b5c5175c744f0d5f84c78250e745b9
+industrial_phase: Look Development Revision Round 2
+execution_rules:
+- One asset ID per generation request; no multi-asset moodboard output.
+- Character base turnarounds are prop-free; performance and hand-prop action sheets are separate.
+- Every generated attempt is a Take with provider/model/version/input refs/time/cost/hash.
+- Dailies review compares identity, costume, prop, camera/light and continuity before selection.
+- No output becomes Canon through generation alone; G05 HOD approval remains required.
+- No keyframe, motion, video or final audio generation in this work order.
+blocking_dependencies:
+  P1_flags:
+  - writing_batch_format
+  - official_space_architecture
+  - official_desk_form
+  - official_document_material
+  - doorway_architecture
+  rights_gate: unknown_separate_blocker_for_publication
+work_items:
+- work_item_id: LOOKDEV_CHAR_BAN_CHAO_BLUEPRINT_V2
+  owner_departments:
+  - directing
+  - costume_hair_makeup
+  - historical_research
+  - continuity
+  - ai_production_engineering
+  output_asset_id: EP01_BLUEPRINT_CHAR_BAN_CHAO_V2
+  generation_shape: one character / one four-view landscape sheet
+  reuse_components:
+  - approved face structure
+  - body proportion
+  - pre-career non-military identity
+  required_changes:
+  - plain matte layered costume
+  - remove patterned robe
+  - simplify hair ties
+  - no handheld props in base turnaround
+  - distinct from Ban Gu while preserving family resemblance
+  acceptance:
+  - front/three-quarter/profile/back identity match
+  - neutral relaxed stance
+  - stable hair mass and layer order
+  - no readable text or modern/later-period objects
+  - camera/light test pending
+- work_item_id: LOOKDEV_CHAR_BAN_MOTHER_BLUEPRINT_V2
+  owner_departments:
+  - directing
+  - costume_hair_makeup
+  - historical_research
+  - continuity
+  - ai_production_engineering
+  output_asset_id: EP01_BLUEPRINT_CHAR_BAN_MOTHER_V2
+  generation_shape: one character / one four-view landscape sheet
+  reuse_components:
+  - approved face/age direction
+  - body proportion
+  - restrained dignity
+  required_changes:
+  - plain layered costume
+  - remove repeated patterns/apron specificity
+  - simple stable bun
+  - no decorative ribbons or handheld props
+  acceptance:
+  - identity match to selected face component
+  - stable four-view silhouette
+  - no glamour styling
+  - readable value separation under common Show Look
+- work_item_id: LOOKDEV_CHAR_BAN_GU_BLUEPRINT_V2
+  owner_departments:
+  - directing
+  - costume_hair_makeup
+  - historical_research
+  - continuity
+  - ai_production_engineering
+  output_asset_id: EP01_BLUEPRINT_CHAR_BAN_GU_V2
+  generation_shape: one character / one four-view landscape sheet
+  reuse_components:
+  - broader older-brother face from blueprint v1
+  - upright posture
+  required_changes:
+  - cleaner but non-official plain costume
+  - remove brush/book props
+  - simplify hair ornament
+  - stronger differentiation from Ban Chao
+  acceptance:
+  - clear older-brother identity at 320px
+  - family resemblance without face collapse
+  - door-side silhouette usable
+  - no rank insignia
+- work_item_id: LOOKDEV_CHAR_UNNAMED_SCRIBE_BLUEPRINT_V2
+  owner_departments:
+  - directing
+  - costume_hair_makeup
+  - continuity
+  - ai_production_engineering
+  output_asset_id: EP01_BLUEPRINT_CHAR_UNNAMED_SCRIBE_V2
+  generation_shape: one character / one four-view landscape sheet
+  reuse_components:
+  - rounder lower-distinction face direction
+  - supporting-character body scale
+  required_changes:
+  - remove headband/ribbons
+  - remove waist pouch
+  - simpler plain costume
+  - lower-distinction silhouette and texture
+  - no hero prop
+  acceptance:
+  - does not compete with Ban Chao
+  - distinct from both brothers
+  - stable identity across four views
+  - no military or modern identity
+- work_item_id: LOOKDEV_LOC_COMPOSITE_SET_PLAN_V1
+  owner_departments:
+  - production_design
+  - directing
+  - cinematography
+  - lighting
+  - continuity
+  - vfx
+  output_asset_id: EP01_SETPLAN_LOC_LUOYANG_COPYING_SPACE_V1
+  generation_shape: one set / top-down plan plus simple three-quarter blockout; not a photoreal historical reconstruction
+  reuse_components:
+  - depth layering mood
+  - worn matte wood value
+  - off-screen soft-side-light concept
+  required_changes:
+  - A work axis / B social pressure axis / C family threshold
+  - one controlled off-screen opening direction
+  - minimal set dressing
+  - no grid-window specification
+  - no dense shelving/workshop institution
+  - no city reconstruction
+  acceptance:
+  - 180-degree line and eyelines explicit
+  - SHOT_01–10 blocking supported
+  - lighting direction consistent
+  - camera cheat documented
+  - P1 doorway rule incorporated before approval
+- work_item_id: LOOKDEV_PROP_HERO_BRUSH_SHEET_V1
+  owner_departments:
+  - props
+  - historical_research
+  - directing
+  - cinematography
+  - continuity
+  output_asset_id: EP01_PROP_HERO_BRUSH_SHEET_V1
+  generation_shape: one prop / side, detail, scale and wear-state sheet
+  reuse_components:
+  - general Han approximately 23 cm slender wood-shaft evidence range
+  required_changes:
+  - simple bristle connection
+  - no modern ferrule/plastic/brand
+  - neutral background
+  - clean scale reference
+  - writing/placed/picked-up action states
+  acceptance:
+  - supports SHOT_01/02/08/10 macro inserts
+  - tip direction and contact point defined
+  - no readable text
+  - hand choreography notes linked
+- work_item_id: LOOKDEV_PROP_WRITING_SURFACE_SHEET_V1
+  owner_departments:
+  - props
+  - historical_research
+  - cinematography
+  - continuity
+  - vfx
+  output_asset_id: EP01_PROP_WRITING_SURFACE_SHEET_V1
+  generation_shape: one prop family / single, grouped, bundled and worn states
+  reuse_components:
+  - narrow bamboo/wood slip-like conservative representation
+  required_changes:
+  - remove paper/codex/scroll ambiguity
+  - no readable pseudo-text
+  - control bundle count and wear
+  - separate hero insert state from background quantity
+  acceptance:
+  - macro-readable without false historical claim
+  - consistent across SHOT_01–10
+  - VFX pseudo-text risk minimized
+  - P1 writing-batch decision incorporated before final approval
+- work_item_id: LOOKDEV_PROP_BRUSH_POUCH_SHEET_V2
+  owner_departments:
+  - props
+  - costume_hair_makeup
+  - continuity
+  - historical_research
+  - cinematography
+  output_asset_id: EP01_PROP_BRUSH_POUCH_SHEET_V2
+  generation_shape: one prop / open, closed, worn, waist and desk states
+  reuse_components:
+  - compact worn soft-wrap silhouette
+  required_changes:
+  - remove bead/tassel
+  - one plain tie system
+  - no material certainty
+  - define brush insertion direction and scale
+  - dark-costume edge readability
+  acceptance:
+  - one approved silhouette
+  - SHOT_02/05/07/08/09/10/13 state chart
+  - no military resemblance
+  - camera/light test pass
+- work_item_id: LOOKDEV_OFFICIAL_DESK_DEFERRED
+  owner_departments:
+  - historical_research
+  - production_design
+  - props
+  - editorial
+  - lighting
+  output_asset_id: EP01_PROP_OFFICIAL_DOCUMENT_DESK_V2
+  generation_shape: deferred — no generation in current round
+  reuse_components: []
+  required_changes:
+  - close official-space, desk and document P1 flags first
+  - design minimal Match Cut transition rather than full ornate office
+  acceptance:
+  - P1 decisions linked
+  - visual relation to labour desk explicit
+  - no ornate late-period furniture/paper stacks
+  - supports SHOT_11–13 only
+post_generation_review:
+  required_artifacts:
+  - Attempt Manifest
+  - Dailies Contact Review
+  - Identity Comparison Review
+  - Costume/Prop Continuity Check
+  - Camera/Lighting Test Notes
+  decision_vocabulary:
+  - select
+  - revise
+  - reject
+  visual_canon_approval: separate HOD decision after revision outputs pass
+next_action_before_execution: Close the five P1 visual-research flags and update this work order with their production rules.
