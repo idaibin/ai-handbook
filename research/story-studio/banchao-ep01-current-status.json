@@ -1,14 +1,14 @@
 {
   "schema_version": "story-studio/current-status/v1",
   "status_id": "banchao-ep01-current-status",
-  "status_revision": 3,
+  "status_revision": 4,
   "authority": {
     "role": "single_current_state_source",
     "scope": {
       "project_id": "banchao",
       "episode_id": "EP01"
     },
-    "as_of_utc": "2026-08-18T15:45:09Z",
+    "as_of_utc": "2026-08-18T15:40:00Z",
     "rule": "Only this file determines the current workflow stage and gate state. State claims in other artifacts are human-readable projections or historical snapshots. Their content evidence and hashes remain valid unless explicitly superseded."
   },
   "evidence_classification": {
@@ -16,19 +16,19 @@
       "Full-life Story Bible, character trajectory, and 24-episode working baseline are present.",
       "EP01 screenplay v1.1 is the validated frozen screenplay input.",
       "Shot List contains 14 unique shots and totals exactly 105 seconds.",
-      "Asset Manifest and Continuity Contract passed static YAML/hash validation.",
-      "Eight reference images and four four-view character blueprints exist as candidate_not_canonical media.",
-      "AGY review passed candidate shape, four-view separation, and identity consistency only.",
-      "The seven P0 visual-research flags have explicit evidence or adaptation dispositions; five P1 flags remain open.",
-      "A reusable industrial film-department gate matrix and a minimum Visual Canon review brief are present.",
-      "No storyboard, animatic, keyframe, video, or audio production output exists."
+      "Eight candidate references and four character blueprints were fetched at native resolution and their SHA-256 values matched the evidence manifest.",
+      "Minimum Visual Canon HOD Review round 1 reviewed all 12 assets: 2 select_component_only, 5 revise, and 5 reject.",
+      "No complete candidate asset passed G05 Visual Canon approval; zero assets were promoted to Canon.",
+      "Seven P0 visual-research flags remain closed and five P1 flags remain open.",
+      "No storyboard, animatic, keyframe, video, or final audio production output exists."
     ],
     "workflow_decisions": [
-      "All seven P0 visual-research flags are closed through one evidence-bounded general Han form and six explicit adaptation bounds; this does not prove exact Ban Chao belongings or an exact Luoyang reconstruction.",
-      "Minimum Visual Canon is ready for cross-department HOD selection but has not been approved.",
-      "Rough thumbnail previs may begin only after the minimum Visual Canon brief is approved; full Storyboard Lock remains blocked by five P1 flags.",
-      "Single-view crops, keyframes, video and final audio remain prohibited until their downstream gates pass.",
-      "Industrial film department artifacts and approvals are now mandatory at every subsequent Story Studio gate."
+      "G05 LookDev/Visual Canon review outcome is revise_required.",
+      "Ban Chao and Ban Mother references are retained only as face/performance components, not as full-frame Canon assets.",
+      "All four character blueprints require clean prop-free v2 revisions; location, writing set, Ban Gu portrait, scribe portrait and official desk are rejected for Canon use.",
+      "Brush pouch reference requires a simplified v2 prop sheet.",
+      "The five P1 flags must close before executing the complete LookDev Revision Work Order and before full Storyboard Lock.",
+      "Single-view crops, keyframes, video and final audio remain prohibited."
     ],
     "not_verified": [
       "Exact ChatGPT image model and version.",
@@ -155,6 +155,23 @@
       "artifact": "story-studio-film-department-gate-matrix-v1.yaml",
       "sha256": "98c071edce1b329aca86f8bc0cad3d04bd8b68d35655ce6552150a7d4cc35290",
       "status": "workflow_baseline"
+    },
+    "minimum_visual_canon_hod_review": {
+      "artifact": "banchao-ep01-minimum-visual-canon-hod-review-v1.yaml",
+      "sha256": "9e12aac52cb454a51e66978c6f989c95ce11b6f3d4484a1c191995c6c909d476",
+      "status": "revise_required",
+      "assets_reviewed": 12,
+      "select_component_only": 2,
+      "revise": 5,
+      "reject": 5,
+      "canonical_assets_promoted": 0,
+      "private_detail_sha256": "b48dd0eafed3166fca36079a81cf450e857433975cebc39fe35476f762c03da5"
+    },
+    "lookdev_revision_work_order": {
+      "artifact": "banchao-ep01-lookdev-revision-work-order-v1.yaml",
+      "sha256": "2129d863a10c5924beae4c92fe3003ad8b71a4ff7f55b0cc4f979c43a5319df8",
+      "status": "ready_after_p1_closure_no_generation_executed",
+      "work_items": 9
     }
   },
   "status_dimensions": {
@@ -209,10 +226,21 @@
       "lifecycle": "not_started"
     },
     "minimum_visual_canon": {
-      "lifecycle": "review_ready_not_approved",
+      "lifecycle": "hod_review_complete_revise_required",
       "approved_version": null,
       "canonical_assets_promoted": 0,
-      "required_review": "Director + Historical Research + Production Design + DoP + Lighting + Costume/HMU + Props + Continuity + VFX + Editorial"
+      "assets_reviewed": 12,
+      "select_component_only": 2,
+      "revise": 5,
+      "reject": 5,
+      "selected_components_are_canonical": false,
+      "rights_gate": "unknown"
+    },
+    "lookdev_revision_round": {
+      "lifecycle": "work_order_ready_blocked_by_5_p1_flags",
+      "generation_attempts": 0,
+      "new_media_count": 0,
+      "work_items": 9
     }
   },
   "gates": {
@@ -234,18 +262,25 @@
       "closure_rule": "Every flag remains evidence-supported, bounded, excluded or deferred; P1 must close before full Storyboard Lock."
     },
     "visual_canon": {
-      "status": "ready_for_departmental_selection_not_approved",
-      "input_artifact": "banchao-ep01-minimum-visual-canon-brief-v1.yaml",
-      "required_outcome": "approve_v1 | revise | blocked"
+      "status": "revise_required",
+      "review_artifact": "banchao-ep01-minimum-visual-canon-hod-review-v1.yaml",
+      "review_sha256": "9e12aac52cb454a51e66978c6f989c95ce11b6f3d4484a1c191995c6c909d476",
+      "decision_summary": {
+        "select_component_only": 2,
+        "revise": 5,
+        "reject": 5,
+        "full_assets_approved": 0
+      },
+      "next_entry_condition": "close_5_p1_flags_then_execute_lookdev_revision_work_order_and_repeat_HOD_review"
     },
     "single_view_crop": {
       "status": "blocked",
-      "reason": "minimum_visual_canon_not_approved"
+      "reason": "no_character_blueprint_is_canonical"
     },
     "storyboard": {
-      "status": "rough_previs_pending_visual_canon_approval_full_lock_blocked",
-      "rough_previs_entry_condition": "minimum_visual_canon_approved",
-      "full_lock_entry_condition": "minimum_visual_canon_approved_and_5_p1_flags_closed"
+      "status": "blocked",
+      "rough_previs_entry_condition": "revised_minimum_visual_canon_approved",
+      "full_lock_entry_condition": "revised_visual_canon_approved_and_5_p1_flags_closed"
     },
     "animatic": {
       "status": "not_started",
@@ -261,13 +296,13 @@
     },
     "audio": {
       "status": "functional_placeholders_only",
-      "entry_condition": "animatic_audio_timing_defined_for_scratch; final_sound_after_picture_lock"
+      "entry_condition": "scratch_audio_during_animatic; final_sound_after_picture_lock"
     }
   },
   "workflow": {
     "current_stage": {
       "id": "08_visual_research_and_canon",
-      "status": "p0_closed_minimum_visual_canon_review_ready"
+      "status": "hod_review_complete_revise_required_5_p1_open"
     },
     "stages": [
       {
@@ -300,7 +335,7 @@
       },
       {
         "id": "08_visual_research_and_canon",
-        "status": "p0_closed_5_p1_open_hod_review_ready"
+        "status": "hod_review_round1_revise_required_5_p1_open"
       },
       {
         "id": "09_storyboard_animatic_and_media_generation",
@@ -311,24 +346,27 @@
         "status": "not_started"
       }
     ],
-    "next_legal_action": "hod_review_and_select_minimum_visual_canon",
+    "next_legal_action": "research_and_close_5_p1_visual_flags",
     "planned_sequence": [
-      "hod_review_and_select_minimum_visual_canon",
-      "research_or_bound_5_p1_visual_flags",
-      "derive_front_and_three_quarter_single_view_assets_after_canon_approval",
-      "create_14-shot_storyboard_with_blocking_coverage_lighting_and_vfx_notes",
+      "research_and_close_5_p1_visual_flags",
+      "update_lookdev_revision_work_order_with_p1_rules",
+      "generate_revised_character_location_and_prop_lookdev_assets_as_separate_attempts",
+      "run_dailies_and_HOD_review_round2",
+      "approve_or_revise_minimum_visual_canon",
+      "derive_single_view_assets_after_canon_approval",
+      "create_14-shot_storyboard_with_blocking_coverage_lighting_vfx_and_sound_notes",
       "create_and_review_105-second_animatic_with_scratch_audio",
       "generate_three_shot_keyframes",
-      "generate_one_video_take_for_EP01_SHOT_10",
-      "review_dailies_and_select_or_revise"
+      "generate_one_video_take_for_EP01_SHOT_10"
     ],
     "prohibited_actions": [
-      "do_not_mark_candidate_assets_canonical_without_HOD_review",
-      "do_not_generate_single_view_crops_before_visual_canon_approval",
+      "do_not_promote_any_round1_candidate_asset_to_canonical",
+      "do_not_use_rejected_assets_as_image_conditioning_except_explicit_mood-only components",
+      "do_not_generate_single_view_crops_before_revised_blueprints_pass_HOD_review",
       "do_not_lock_storyboard_while_5_p1_flags_are_open",
       "do_not_generate_keyframes_or_video_before_animatic_pass",
-      "do_not_treat_period_analogues_as_exact_Ban_Chao_objects_or_Luoyang_reconstruction",
-      "do_not_claim_unrun_providers_models_cost_or_quality_as_verified"
+      "do_not_treat_face/performance component selection as rights clearance",
+      "do_not_claim_unrun providers, model identity, cost or quality as verified"
     ]
   },
   "reviews_and_rights": {
@@ -353,19 +391,23 @@
       "main_modified": false,
       "pull_request_created": false,
       "public_policy": "sanitized_status_hashes_and_evidence_only",
-      "latest_verified_before_registry_step": "c16ca9bd2b14208e5dcacc21b25d68882a16a85d"
+      "latest_verified_before_registry_step": "c16ca9bd2b14208e5dcacc21b25d68882a16a85d",
+      "latest_verified_before_hod_review": "a0259bd1e41e4a67e6fd4a9ac08b98c109d4d951"
     },
     "drive_base_snapshot": {
       "folder_title": "EP01-preproduction-candidates-2026-08-18",
       "verified_file_count_before_registry_step": 46,
       "png_count": 12,
       "document_count_before_registry_step": 34,
-      "shared": false
+      "shared": false,
+      "verified_file_count_before_hod_review": 53,
+      "document_count_before_hod_review": 41
     },
     "local_evidence": {
       "event_log_lines_before_status_authority_step": 72,
       "worktree_clean": "verified_by_existing_local_evidence_not_reexecuted_in_this_chat",
-      "event_log_lines_before_visual_registry_step": 74
+      "event_log_lines_before_visual_registry_step": 74,
+      "event_log_lines_before_hod_review": 78
     }
   },
   "supersession": [
