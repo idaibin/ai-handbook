@@ -32,6 +32,7 @@
 | 史料研究 | Gemini Deep Research、Notebook、ChatGPT | 找资料、交叉验证、整理来源 | `declared_not_verified` |
 | Story Bible | Codex + Qwen3.8-Max | 人物、世界观、时间线、事实标记 | Codex 本地文本已验证；Qwen 路由 `Not verified` |
 | 剧本与分镜 | GPT / Qwen3.8-Max | 剧情结构、镜头拆解 | EP01 剧本 v1.1 已验证；具体 provider `Not verified` |
+| 研发与 Agent 辅助 | 阿里 Token Plan（Qwen/DeepSeek/GLM 等候选） | 研究整理、结构化提示词、工具协作；不替代成片 provider | 仅声明路线；套餐、模型路由与合规边界 `Not verified` |
 | 角色关键帧 | Google Flow、Nano Banana、Wan2.7 Image | 角色、服装、场景、道具 | 候选接口；未生成本项目关键帧 |
 | 核心镜头 | Flow + Veo 3.1 | 高质量情绪镜头、摄影机运动 | 候选接口；未调用/未验证 |
 | 批量普通镜头 | Wan2.7、HappyHorse、其他视频 API | 过场、补镜、低成本批量镜头 | 候选接口；未调用/未验证 |
@@ -39,7 +40,7 @@
 | 后期 | 剪辑工具 | 字幕、节奏、调色、声音 | 工具未选定；未开始 |
 | 资产管理 | Codex + GitHub/Drive | 版本、提示词、引用、生成记录 | GitHub/Drive 路由已验证 |
 
-模型可替换字段保持为：`provider`、`model`、`version`、`workflow_ref`、`input_ref`、`output_probe`、`rights_ref`。
+阿里 Token Plan 在本合同中只作为研发/Agent 协作候选，不是 Google Flow/Veo 的替代声明；真正批量媒体生产仍需单独的 provider/API 合同和运行证据。模型可替换字段保持为：`provider`、`model`、`version`、`workflow_ref`、`input_ref`、`output_probe`、`rights_ref`。
 
 ## 3. EP01 最小生产链
 
@@ -75,4 +76,3 @@ EP01 剧本 v1.1
 ## 5. 下一最小动作
 
 进入 EP01 的下一阶段：先生成并审查 `Shot List`，再建立 `Asset Manifest` 和 `Continuity Contract`。本阶段不扩写 EP02，不生成关键帧，不生成视频，不改变现有 Bible。
-
