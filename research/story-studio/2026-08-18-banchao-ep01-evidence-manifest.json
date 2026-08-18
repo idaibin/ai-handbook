@@ -177,7 +177,7 @@
     "status": "departmental_review_ready_not_canonical"
   },
   "film_department_gate_matrix": {
-    "artifact": "workflows/story-studio/story-studio-film-department-gate-matrix-v1.yaml",
+    "artifact": "workflows/story-studio/film-department-gate-matrix-v1.yaml",
     "sha256": "98c071edce1b329aca86f8bc0cad3d04bd8b68d35655ce6552150a7d4cc35290",
     "status": "workflow_baseline"
   }
