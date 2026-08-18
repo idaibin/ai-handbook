@@ -1,206 +1,61 @@
 {
-  "schema_version": "story-studio/public-evidence-manifest/v1.4",
+  "schema_version": "story-studio/public-evidence-manifest/v1.5",
   "project_id": "banchao",
   "episode_id": "EP01",
-  "evidence_scope": "public_sanitized_ep01_preproduction_evidence",
+  "evidence_scope": "public_sanitized_step5",
   "current_status_ref": {
     "artifact": "banchao-ep01-current-status.json",
-    "sha256": "8c7962401a8c927a712a54c4dc27b9c88d28a06c6fe34d1fd1928d1e9efd4ef7",
+    "sha256": "b74458b25f9f497ba860d9e58b92400c879a3cfd9ce962bc3278d2f17026a783",
     "authority": "single_current_state_source"
   },
-  "screenplay": {
-    "artifact": "ep01-yongshu-screenplay-v1.1.md",
-    "sha256": "a2ba6bb8cbd094ea65c3cdcdb0e341929f479fb9cbcfe0b2cbdc4c36bad02f0e"
+  "active_format": {
+    "artifact": "banchao-ep01-production-format-contract-v1.yaml",
+    "sha256": "0b6406cdd79b5b76694c40f809cdf3835fad20ab839c2909bf928b0827f6ca7f",
+    "format": "16:9 / 1920x1080"
   },
-  "shot_list": {
-    "artifact": "ep01-shot-list-v1.yaml",
-    "sha256": "b622bf79a5c3a24a06b93f2c5070525aaf15a0f5b05d7ffa9e4180e257fdb091",
-    "shot_count": 14,
-    "duration_seconds": 105
+  "visual_research": {
+    "registry": "banchao-ep01-visual-research-registry-v1.3.yaml",
+    "registry_sha256": "ff141d5cd117c6e92486d16b327b637cefae0cc36f5bf98fd1f6c19b1160c17a",
+    "total": 19,
+    "closed": 19,
+    "open": 0,
+    "p1_decision_sha256": "3b31c6afbd6a53124b800fcd5dadf5d04652ae00faaa75b416852e4485017fe2"
   },
-  "candidate_media_policy": {
-    "provider": "ChatGPT Chat Pro / AI Design",
-    "model": "Not verified",
-    "rights_usage": "Not verified",
-    "canonical": false,
-    "keyframes_allowed": false,
-    "video_allowed": false
-  },
-  "candidate_media": [
-    {
-      "asset_id": "EP01_REF_CHAR_BAN_CHAO",
-      "kind": "reference",
-      "dimensions": "1024x1536",
-      "sha256": "3eb309b7aff6e384e4ef6a4b2350690fb8c40c114b8c14df3eb5f254fad2230c",
-      "status": "candidate_not_canonical"
+  "lookdev_round2": {
+    "attempts": 8,
+    "normalized": "8 x 1920x1080",
+    "dailies": {
+      "artifact": "banchao-ep01-lookdev-dailies-review-round2-v1.yaml",
+      "sha256": "54c92e6765e565f844dc696985bce5b9adf92bc8a46f7a624bceaa43889aaa92",
+      "select": 0,
+      "revise": 6,
+      "reject": 2
     },
-    {
-      "asset_id": "EP01_REF_CHAR_BAN_MOTHER",
-      "kind": "reference",
-      "dimensions": "1024x1536",
-      "sha256": "a1a68ae72ef69838906da269ada808a6eb32c3fc0f92d2416bf1e88b8f620de6",
-      "status": "candidate_not_canonical"
-    },
-    {
-      "asset_id": "EP01_REF_CHAR_BAN_GU",
-      "kind": "reference",
-      "dimensions": "1024x1536",
-      "sha256": "e7279ca83925580f79dc2745ed2681cf1a71b7243e8fc384699f58c8f60ad2d2",
-      "status": "candidate_not_canonical"
-    },
-    {
-      "asset_id": "EP01_REF_CHAR_UNNAMED_SCRIBE",
-      "kind": "reference",
-      "dimensions": "1024x1536",
-      "sha256": "afbe9d39f65eb48298fdb060d2f7ea1f308e61ac2c1f0550ae964880825e0e91",
-      "status": "candidate_not_canonical"
-    },
-    {
-      "asset_id": "EP01_REF_LOC_LUOYANG_COPYING_SPACE",
-      "kind": "reference",
-      "dimensions": "1024x1536",
-      "sha256": "0d0497ea3e9bd7acebbab434ec28232ac311caedc868b3428ac8db65d1ace794",
-      "status": "candidate_not_canonical"
-    },
-    {
-      "asset_id": "EP01_REF_PROP_WRITING_SET",
-      "kind": "reference",
-      "dimensions": "1024x1536",
-      "sha256": "aed4e0fc726b7fb6a538d727917b66d5b9b060d02e9d45d586cfd351734c28e7",
-      "status": "candidate_not_canonical"
-    },
-    {
-      "asset_id": "EP01_REF_PROP_BRUSH_POUCH",
-      "kind": "reference",
-      "dimensions": "1024x1536",
-      "sha256": "78f1bcc2b008f752e3fa63dc30057e3972ad71f260ace8ac8c31a86be1b0fad5",
-      "status": "candidate_not_canonical"
-    },
-    {
-      "asset_id": "EP01_REF_PROP_OFFICIAL_DOCUMENT_DESK",
-      "kind": "reference",
-      "dimensions": "1024x1536",
-      "sha256": "3f87684f93c5eca4784002a83cff1885a293dff13eeeb3ae4ebb130ae4536389",
-      "status": "candidate_not_canonical"
-    },
-    {
-      "asset_id": "EP01_BLUEPRINT_CHAR_BAN_CHAO",
-      "kind": "blueprint",
-      "dimensions": "1536x1024",
-      "sha256": "c16a66cc65022e3df83ee409b3b47f8fa03685ed8359e7f64e1da9427e3f711a",
-      "views": [
-        "front",
-        "three_quarter",
-        "profile",
-        "back"
-      ],
-      "status": "candidate_not_canonical"
-    },
-    {
-      "asset_id": "EP01_BLUEPRINT_CHAR_BAN_MOTHER",
-      "kind": "blueprint",
-      "dimensions": "1536x1024",
-      "sha256": "ab976092cca8a2744dfe0c9109e4aead6961c266e02567b527195ad858bb2c1c",
-      "views": [
-        "front",
-        "three_quarter",
-        "profile",
-        "back"
-      ],
-      "status": "candidate_not_canonical"
-    },
-    {
-      "asset_id": "EP01_BLUEPRINT_CHAR_BAN_GU",
-      "kind": "blueprint",
-      "dimensions": "1536x1024",
-      "sha256": "95d8bd3d1b4e36491980ab64b6b30e0bad79783007dbcd658efa652bd3a23430",
-      "views": [
-        "front",
-        "three_quarter",
-        "profile",
-        "back"
-      ],
-      "status": "candidate_not_canonical"
-    },
-    {
-      "asset_id": "EP01_BLUEPRINT_CHAR_UNNAMED_SCRIBE",
-      "kind": "blueprint",
-      "dimensions": "1536x1024",
-      "sha256": "c89f0f38f3be50ebdc3b065642d03577fb9bf2e00139a235bd8dcf742cba5e3d",
-      "views": [
-        "front",
-        "three_quarter",
-        "profile",
-        "back"
-      ],
-      "status": "candidate_not_canonical"
+    "hod": {
+      "artifact": "banchao-ep01-minimum-visual-canon-hod-review-round2-v1.yaml",
+      "sha256": "804349f04f4916d7bfd251672c9b44a6ab75107aa1e39e2d5c95ebd5cb263396",
+      "status": "revise_required",
+      "canonical_promoted": 0
     }
+  },
+  "round3": {
+    "artifact": "banchao-ep01-lookdev-revision-work-order-v1.2.yaml",
+    "sha256": "b1b103b7d20fee0876a0d5eea6be41f40ce9ef9792e19c781dca81a9f128e565",
+    "work_items": 9,
+    "executed": false
+  },
+  "private_evidence": "Google Drive private folder",
+  "legacy_candidate_inventory_commit": "aa8ae64e231ed4df078a15868b9f3d1e445e52ac",
+  "not_verified": [
+    "exact model",
+    "usage/publication rights"
   ],
-  "external_review": {
-    "provider": "google-antigravity",
-    "requested_model": "claude-opus-4-6-thinking",
-    "effective_model": "Not verified",
-    "review_status": "pass_candidate_shape_identity_only",
-    "scope": "character_blueprint_image_review_only",
-    "unresolved_visual_research_flags": 5,
-    "visual_research_flags_total": 19,
-    "visual_research_flags_disposed": 14,
-    "keyframe_gate": "blocked",
-    "visual_canon_gate": "revise_required",
-    "hod_assets_reviewed": 12,
-    "hod_decision_counts": {
-      "select_component_only": 2,
-      "revise": 5,
-      "reject": 5,
-      "full_assets_approved": 0
-    }
-  },
-  "public_sync": {
-    "private_media_and_full_evidence": "Google Drive private folder",
-    "public_repository": "sanitized index and hashes only",
-    "third_party_code_or_model_weights": "not uploaded",
-    "media_generated_in_registry_step": false,
-    "media_generated_in_p0_step": false,
-    "media_generated_in_hod_review_step": false
-  },
-  "visual_research_registry": {
-    "artifact": "banchao-ep01-visual-research-registry-v1.yaml",
-    "sha256": "f1bfda9133801cc011d2ce88b8e9d6bb96d54eab0157c8df2cc027457d20acfd",
-    "validation": "pass_static_p0_closed_p1_open",
-    "schema_version": "story-studio/visual-research-registry/v1.2",
-    "total_flags": 19,
-    "closed_flags": 14,
-    "open_flags": 5,
-    "p0_open_flags": 0,
-    "p1_open_flags": 5
-  },
-  "p0_visual_research_decision": {
-    "artifact": "banchao-ep01-p0-visual-research-decision-v1.yaml",
-    "sha256": "a1582c05fafb7b20ea0a9cb4bc18d71fb603dddd28389747adb851ac55a8a9a5",
-    "result": "pass_with_bounded_adaptations"
-  },
-  "minimum_visual_canon_brief": {
-    "artifact": "banchao-ep01-minimum-visual-canon-brief-v1.yaml",
-    "sha256": "0d60b9be2533bbbc9c2edd98878e57df44b5c5175c744f0d5f84c78250e745b9",
-    "status": "departmental_review_ready_not_canonical"
-  },
-  "film_department_gate_matrix": {
-    "artifact": "workflows/story-studio/film-department-gate-matrix-v1.yaml",
-    "sha256": "98c071edce1b329aca86f8bc0cad3d04bd8b68d35655ce6552150a7d4cc35290",
-    "status": "workflow_baseline"
-  },
-  "minimum_visual_canon_hod_review": {
-    "artifact": "banchao-ep01-minimum-visual-canon-hod-review-v1.yaml",
-    "sha256": "9e12aac52cb454a51e66978c6f989c95ce11b6f3d4484a1c191995c6c909d476",
-    "status": "revise_required",
-    "assets_reviewed": 12,
-    "canonical_assets_promoted": 0,
-    "private_detail_sha256": "b48dd0eafed3166fca36079a81cf450e857433975cebc39fe35476f762c03da5"
-  },
-  "lookdev_revision_work_order": {
-    "artifact": "banchao-ep01-lookdev-revision-work-order-v1.yaml",
-    "sha256": "2129d863a10c5924beae4c92fe3003ad8b71a4ff7f55b0cc4f979c43a5319df8",
-    "status": "ready_after_p1_closure_no_generation_executed",
-    "work_items": 9
+  "downstream_counts": {
+    "single_view": 0,
+    "storyboard": 0,
+    "animatic": 0,
+    "keyframes": 0,
+    "video": 0,
+    "final_audio": 0
   }
 }
