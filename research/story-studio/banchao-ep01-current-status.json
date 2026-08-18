@@ -1,14 +1,14 @@
 {
   "schema_version": "story-studio/current-status/v1",
   "status_id": "banchao-ep01-current-status",
-  "status_revision": 1,
+  "status_revision": 2,
   "authority": {
     "role": "single_current_state_source",
     "scope": {
       "project_id": "banchao",
       "episode_id": "EP01"
     },
-    "as_of_utc": "2026-08-18T14:09:06Z",
+    "as_of_utc": "2026-08-18T14:40:00Z",
     "rule": "Only this file determines the current workflow stage and gate state. State claims in other artifacts are human-readable projections or historical snapshots. Their content evidence and hashes remain valid unless explicitly superseded."
   },
   "evidence_classification": {
@@ -19,12 +19,14 @@
       "Asset Manifest and Continuity Contract passed static YAML/hash validation.",
       "Eight reference images and four four-view character blueprints exist as candidate_not_canonical media.",
       "AGY review passed candidate shape, four-view separation, and identity consistency only.",
-      "Nineteen visual research flags remain unresolved.",
+      "Visual Research Registry v1 covers all 19 original flags; 7 have source-grounded dispositions and 12 remain open.",
       "No storyboard, animatic, keyframe, video, or audio production output exists."
     ],
     "workflow_decisions": [
-      "The current stage is visual research and minimum Visual Canon selection.",
-      "Single-view crops, keyframes, and video remain blocked until visual research flags are resolved or explicitly bounded.",
+      "The current stage remains visual research and minimum Visual Canon selection.",
+      "Seven flags are closed by contract normalization, explicit visual bounding, or exclusion from frame; these decisions do not create new historical claims.",
+      "The remaining twelve flags stay blocking; the seven P0 flags must be resolved before minimum Visual Canon selection.",
+      "Single-view crops, storyboard lock, keyframes, video, and audio remain prohibited until their entry gates pass.",
       "Storyboard and animatic must precede production keyframes in the full EP01 workflow."
     ],
     "not_verified": [
@@ -126,6 +128,14 @@
       "artifact": "ep01-reference-asset-plan-v1.yaml",
       "sha256": "69a08dc2459926c0b33704691d3043ab057d8ef4677dca9ac7f7002bf8e92b7f",
       "validation": "candidate_media_verified_research_gate_open"
+    },
+    "visual_research_registry": {
+      "artifact": "banchao-ep01-visual-research-registry-v1.yaml",
+      "sha256": "1af33c9e56c80caaeb7f094458c37f21ece525c08d1e56f662506c878177e480",
+      "validation": "pass_static_triage_complete",
+      "total_flags": 19,
+      "closed_flags_count": 7,
+      "open_flags_count": 12
     }
   },
   "status_dimensions": {
@@ -182,42 +192,85 @@
   },
   "gates": {
     "visual_research": {
-      "status": "open",
-      "unresolved_flags_count": 19,
+      "status": "open_triaged",
+      "registry_artifact": "banchao-ep01-visual-research-registry-v1.yaml",
+      "registry_sha256": "1af33c9e56c80caaeb7f094458c37f21ece525c08d1e56f662506c878177e480",
+      "total_flags_count": 19,
+      "closed_flags_count": 7,
+      "unresolved_flags_count": 12,
       "unresolved_flags": [
         "room_architecture",
         "shared_copying_space_layout",
-        "room_to_gate_spatial_relation",
         "early_eastern_han_clothing",
-        "clothing_and_room_shape",
         "writing_surface_material",
         "writing_batch_format",
         "brush_form",
         "brush_pouch_material",
-        "pouch_material",
-        "family_money_pouch_form",
         "official_space_architecture",
         "official_desk_form",
         "official_document_material",
         "doorway_architecture",
-        "door_gap_and_wind_visualization",
-        "luoyang_gate_visibility",
-        "temporary_residence_layout",
-        "seat_removal_visualization"
+        "temporary_residence_layout"
       ],
-      "closure_rule": "Every flag must be resolved by evidence, bounded as exploratory, excluded from frame, or deferred outside the EP01 pilot. Unresolved flags cannot be converted into deterministic prompts."
+      "closed_flags": [
+        {
+          "flag_id": "room_to_gate_spatial_relation",
+          "disposition": "excluded_from_frame"
+        },
+        {
+          "flag_id": "clothing_and_room_shape",
+          "disposition": "resolved_by_evidence"
+        },
+        {
+          "flag_id": "pouch_material",
+          "disposition": "resolved_by_evidence"
+        },
+        {
+          "flag_id": "family_money_pouch_form",
+          "disposition": "bounded_as_exploratory"
+        },
+        {
+          "flag_id": "door_gap_and_wind_visualization",
+          "disposition": "bounded_as_exploratory"
+        },
+        {
+          "flag_id": "luoyang_gate_visibility",
+          "disposition": "excluded_from_frame"
+        },
+        {
+          "flag_id": "seat_removal_visualization",
+          "disposition": "bounded_as_exploratory"
+        }
+      ],
+      "p0_unresolved_flags": [
+        "room_architecture",
+        "shared_copying_space_layout",
+        "early_eastern_han_clothing",
+        "writing_surface_material",
+        "brush_form",
+        "brush_pouch_material",
+        "temporary_residence_layout"
+      ],
+      "p1_unresolved_flags": [
+        "writing_batch_format",
+        "official_space_architecture",
+        "official_desk_form",
+        "official_document_material",
+        "doorway_architecture"
+      ],
+      "closure_rule": "Every original flag must be closed with resolved_by_evidence, bounded_as_exploratory, excluded_from_frame, or deferred_out_of_pilot. Alias/aggregate closures inherit open canonical dependencies."
     },
     "visual_canon": {
       "status": "blocked",
-      "reason": "visual_research_gate_open"
+      "reason": "12_visual_research_flags_open_including_7_p0"
     },
     "single_view_crop": {
       "status": "blocked",
-      "reason": "minimum_visual_canon_not_selected"
+      "reason": "minimum_visual_canon_not_selected_7_p0_flags_open"
     },
     "storyboard": {
       "status": "not_started",
-      "entry_condition": "minimum_visual_canon_selected"
+      "entry_condition": "minimum_visual_canon_selected_after_7_p0_flags_closed; full lock requires all 12 open flags closed"
     },
     "animatic": {
       "status": "not_started",
@@ -239,7 +292,7 @@
   "workflow": {
     "current_stage": {
       "id": "08_visual_research_and_canon",
-      "status": "in_progress"
+      "status": "in_progress_registry_complete"
     },
     "stages": [
       {
@@ -272,7 +325,7 @@
       },
       {
         "id": "08_visual_research_and_canon",
-        "status": "in_progress"
+        "status": "in_progress_registry_complete_12_flags_open"
       },
       {
         "id": "09_storyboard_animatic_and_media_generation",
@@ -283,9 +336,10 @@
         "status": "not_started"
       }
     ],
-    "next_legal_action": "create_ep01_visual_research_registry_and_dispose_all_19_flags",
+    "next_legal_action": "research_and_resolve_7_p0_visual_flags",
     "planned_sequence": [
-      "resolve_or_bound_19_visual_research_flags",
+      "research_and_resolve_7_p0_visual_flags",
+      "research_or_bound_5_p1_visual_flags",
       "select_minimum_visual_canon",
       "derive_front_and_three_quarter_single_view_assets",
       "create_14-shot_storyboard",
@@ -296,7 +350,9 @@
     "prohibited_actions": [
       "do_not_mark_candidate_assets_canonical",
       "do_not_generate_single_view_crops_before_minimum_visual_canon",
+      "do_not_lock_storyboard_while_p1_visual_flags_are_open",
       "do_not_generate_keyframes_or_video_while_visual_research_gate_is_open",
+      "do_not_treat_contract_normalization_as_historical_evidence",
       "do_not_treat_the_old_five_episode_plan_as_the_full_biography",
       "do_not_claim_unrun_providers_models_cost_or_quality_as_verified"
     ]
@@ -322,18 +378,20 @@
       "base_verified_commit": "cc34b198d8fd5e7c79eddf62331a5da9bda3e8e6",
       "main_modified": false,
       "pull_request_created": false,
-      "public_policy": "sanitized_status_hashes_and_evidence_only"
+      "public_policy": "sanitized_status_hashes_and_evidence_only",
+      "latest_verified_before_registry_step": "c16ca9bd2b14208e5dcacc21b25d68882a16a85d"
     },
     "drive_base_snapshot": {
       "folder_title": "EP01-preproduction-candidates-2026-08-18",
-      "verified_file_count": 44,
+      "verified_file_count_before_registry_step": 46,
       "png_count": 12,
-      "document_contract_prompt_evidence_count": 32,
+      "document_count_before_registry_step": 34,
       "shared": false
     },
     "local_evidence": {
       "event_log_lines_before_status_authority_step": 72,
-      "worktree_clean": "verified_by_existing_local_evidence_not_reexecuted_in_this_chat"
+      "worktree_clean": "verified_by_existing_local_evidence_not_reexecuted_in_this_chat",
+      "event_log_lines_before_visual_registry_step": 74
     }
   },
   "supersession": [
