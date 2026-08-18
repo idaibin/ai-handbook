@@ -2,7 +2,7 @@
 
 - `document_role`: `human_readable_projection`
 - `authoritative_state`: `banchao-ep01-current-status.json`
-- `authoritative_state_sha256`: `d630151de395f68d4964d4eb7e5ff97d84eea23c8da705a105d4d3d867006ecd`
+- `authoritative_state_sha256`: `8c7962401a8c927a712a54c4dc27b9c88d28a06c6fe34d1fd1928d1e9efd4ef7`
 - `hod_review`: `banchao-ep01-minimum-visual-canon-hod-review-v1.yaml`
 - `hod_review_sha256`: `9e12aac52cb454a51e66978c6f989c95ce11b6f3d4484a1c191995c6c909d476`
 - `lookdev_revision_work_order`: `banchao-ep01-lookdev-revision-work-order-v1.yaml`
