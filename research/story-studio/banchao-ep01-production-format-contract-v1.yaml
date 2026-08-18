@@ -1,0 +1,34 @@
+schema_version: story-studio/production-format-contract/v1
+artifact_id: banchao-ep01-production-format-contract-v1
+status: active
+project_id: banchao
+episode_id: EP01
+effective_at_utc: '2026-08-18T18:48:04Z'
+decision: All active EP01 LookDev, Storyboard, Animatic, Keyframe and Video outputs use 16:9.
+active_format:
+  aspect_ratio: '16:9'
+  working_resolution: 1920x1080
+  delivery_resolution: 1920x1080
+  optional_high_resolution: 3840x2160
+  duration_seconds: 105
+  shot_count: 14
+asset_rules:
+  new_visual_assets: 16:9 only
+  character_turnaround_sheets: 1920x1080 landscape
+  prop_and_set_sheets: 1920x1080 landscape
+  storyboard_and_keyframes: 1920x1080
+  video_clips: 1920x1080 unless a later delivery contract explicitly supersedes this file
+  legacy_candidates: Preserve original bytes and dimensions as historical evidence; do not relabel them as 16:9.
+normalization:
+  method: preserve source aspect ratio; fit inside 1920x1080; add minimal neutral matte padding; no crop; no stretch
+  source_preservation: retain provider-native source hash and derivative hash
+  eligibility: Only normalized derivatives enter Dailies comparison for the active 16:9 pipeline.
+supersedes_active_format_claims:
+- EP01 active 9:16 production format
+- 9:16 references in current status, shot-list active pointer, continuity active pointer and Minimum Visual Canon Brief
+does_not_rewrite:
+- historical event logs
+- round-1 HOD review observations about original 2:3 and 3:2 candidate assets
+- provider-native image dimensions
+change_control: A future aspect-ratio change requires a new versioned format contract and impact review across Shot List,
+  Continuity, Storyboard, VFX, Editorial and Delivery.
