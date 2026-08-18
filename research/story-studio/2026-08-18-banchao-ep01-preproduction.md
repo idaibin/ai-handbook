@@ -2,10 +2,10 @@
 
 - `document_role`: `human_readable_projection`
 - `authoritative_state`: [`banchao-ep01-current-status.json`](./banchao-ep01-current-status.json)
-- `authoritative_state_sha256`: `9782588091946344fcad0c794d39486f4e06b8d7edecc6cbaac9d1b65ec4303f`
+- `authoritative_state_sha256`: `9a6884eb11017f3a56385760e142496ef503d6c9d5fb81569eda8ee67f8fa000`
 - `visual_research_registry`: [`banchao-ep01-visual-research-registry-v1.yaml`](./banchao-ep01-visual-research-registry-v1.yaml)
-- `visual_research_registry_sha256`: `1af33c9e56c80caaeb7f094458c37f21ece525c08d1e56f662506c878177e480`
-- `as_of_utc`: `2026-08-18T14:40:00Z`
+- `visual_research_registry_sha256`: `7c4443700a8d4268190ca5b1e6e52c85b41a3d4b49a2dac26d2cb4a0f2153d38`
+- `as_of_utc`: `2026-08-18T15:00:00Z`
 
 本文件只提供人类可读投影。**当前阶段、门禁和下一合法动作以 `banchao-ep01-current-status.json` 为唯一真相源。**
 
