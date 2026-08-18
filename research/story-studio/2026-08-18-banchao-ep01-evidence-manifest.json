@@ -5,7 +5,7 @@
   "evidence_scope": "public_sanitized_ep01_preproduction_evidence",
   "current_status_ref": {
     "artifact": "banchao-ep01-current-status.json",
-    "sha256": "9782588091946344fcad0c794d39486f4e06b8d7edecc6cbaac9d1b65ec4303f",
+    "sha256": "9a6884eb11017f3a56385760e142496ef503d6c9d5fb81569eda8ee67f8fa000",
     "authority": "single_current_state_source"
   },
   "screenplay": {
@@ -155,12 +155,13 @@
   },
   "visual_research_registry": {
     "artifact": "banchao-ep01-visual-research-registry-v1.yaml",
-    "sha256": "1af33c9e56c80caaeb7f094458c37f21ece525c08d1e56f662506c878177e480",
+    "sha256": "7c4443700a8d4268190ca5b1e6e52c85b41a3d4b49a2dac26d2cb4a0f2153d38",
     "validation": "pass_static_triage_complete",
     "total_flags": 19,
     "closed_flags": 7,
     "open_flags": 12,
     "p0_open_flags": 7,
-    "p1_open_flags": 5
+    "p1_open_flags": 5,
+    "schema_version": "story-studio/visual-research-registry/v1.1"
   }
 }
