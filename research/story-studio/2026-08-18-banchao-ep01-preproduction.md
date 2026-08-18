@@ -2,65 +2,47 @@
 
 - `document_role`: `human_readable_projection`
 - `authoritative_state`: `banchao-ep01-current-status.json`
-- `authoritative_state_sha256`: `6cfd654ddde8b9228b3b232f5f9daff633365f616b644faee52dfccbb5d2a373`
-- `visual_research_registry`: `banchao-ep01-visual-research-registry-v1.yaml`
-- `visual_research_registry_sha256`: `f1bfda9133801cc011d2ce88b8e9d6bb96d54eab0157c8df2cc027457d20acfd`
-- `film_department_gate_matrix`: `workflows/story-studio/film-department-gate-matrix-v1.yaml`
-- `film_department_gate_matrix_sha256`: `98c071edce1b329aca86f8bc0cad3d04bd8b68d35655ce6552150a7d4cc35290`
-- `as_of_utc`: `2026-08-18T15:45:09Z`
+- `authoritative_state_sha256`: `d630151de395f68d4964d4eb7e5ff97d84eea23c8da705a105d4d3d867006ecd`
+- `hod_review`: `banchao-ep01-minimum-visual-canon-hod-review-v1.yaml`
+- `hod_review_sha256`: `9e12aac52cb454a51e66978c6f989c95ce11b6f3d4484a1c191995c6c909d476`
+- `lookdev_revision_work_order`: `banchao-ep01-lookdev-revision-work-order-v1.yaml`
+- `lookdev_revision_work_order_sha256`: `2129d863a10c5924beae4c92fe3003ad8b71a4ff7f55b0cc4f979c43a5319df8`
+- `as_of_utc`: `2026-08-18T15:40:00Z`
 
-本文件只提供人类可读投影。当前阶段、门禁和下一合法动作以 `banchao-ep01-current-status.json` 为唯一真相源。
+当前阶段、门禁和下一合法动作以唯一状态 JSON 为准。
 
 ## 当前结论
 
 ```text
-narrative_baseline_complete
-+ ep01_static_preproduction_validated
-+ candidate_visual_assets_verified
-+ p0_visual_research_closed
-+ 5_p1_flags_open
-+ minimum_visual_canon_HOD_review_ready_not_approved
-+ single_view_storyboard_lock_keyframe_video_blocked
+P0 visual research: 7/7 closed
+P1 visual research: 5 open
+HOD Review round 1: revise required
+12 assets reviewed: 2 component-select / 5 revise / 5 reject
+Full canonical asset approvals: 0
+Storyboard / Animatic / Keyframe / Video: blocked or not started
 ```
 
-| 项目 | 状态 |
-|---|---|
-| EP01 剧本 / Shot List | `frozen validated / 14 shots / 105 seconds` |
-| 候选参考图与四视图 | `8 + 4 / candidate_not_canonical` |
-| Visual Research | `19 total / 14 closed / 5 P1 open` |
-| P0 | `7/7 closed` |
-| Minimum Visual Canon | `HOD review ready / not approved` |
-| Single-view crops | `blocked` |
-| Storyboard | `rough previs waits for Canon approval; full lock blocked by 5 P1` |
-| Animatic / Keyframe / Video | `not started / blocked` |
+## HOD Review 主要发现
 
-## 工业电影部门门禁已引入
+- 班超与班母参考图只保留脸部、表演和部分质感方向；完整画面不进入 Canon。
+- 四张蓝图的身份结构可作为修订输入，但共同存在花纹衣袍、发饰、鞋履和手持道具过度锁定问题，全部需要 v2。
+- 班固参考图与班超过于相似且错误重复佣书动作；无名抄书人参考图过于主角化，两者拒绝。
+- 场景参考图使用过多格窗、竹帘、密集书架和“古风书房”陈设，拒绝为布景/空间 Canon，只保留光线和纵深气氛。
+- Writing Set 混合竹木简、纸张/卷轴、册页/书本、伪文字和多种容器，拒绝；Hero Brush、Writing Surface、Brush Pouch 必须分别设计。
+- Brush Pouch 可保留磨损软包轮廓，但必须删除珠饰/流苏并建立 open/closed/worn 状态。
+- Official Desk 因 5 个 P1 考据项仍开放而拒绝并延后。
 
-后续每一步不再只生成 Prompt，而是要求对应部门产物与签核：
+## 工业电影部门结论
 
-- 编剧/导演：`Director Treatment`、Scene/Beat、Blocking、Coverage；
-- 美术/置景/道具：`Production Design Bible`、Set Plan、Property List；
-- 摄影/灯光：virtual lens、camera test、Lighting Bible、motivated light；
-- 服装/妆发：Costume Plot、camera/light test、continuity book；
-- 动作/VFX：Action Previs（需要时）、VFX Breakdown、Turnover；
-- 场记/剪辑：continuity log、Storyboard、Animatic、Dailies、Picture Lock；
-- 声音/调色/后期：Spotting、Foley/ADR、Show Look、Conform、Master QC。
-
-## P0 结果
-
-- `brush_form`：以汉代约 23 cm 出土毛笔建立通用形制范围；不证明班超本人用同型笔。
-- 其余 6 项以明确改编边界关闭：复合布景、共享劳动区、人物服装轮廓、书写表面、笔囊和家庭阈限均不得宣传为精确历史复原。
-- 所有候选图片仍为 `candidate_not_canonical`，本步未生成任何新图片、关键帧、视频或音频。
-
-## 当前开放的 5 个 P1
-
-`writing_batch_format`、`official_space_architecture`、`official_desk_form`、`official_document_material`、`doorway_architecture`
+`G05 LookDev & Visual Canon` 当前为 `revise_required`。本轮完成的是 HOD LookDev Review，不是 Canon 批准。后续修订仍需导演、历史研究、美术、摄影、灯光、服装妆发、道具、场记、VFX、剪辑和权利共同复核。
 
 ## 下一合法动作
 
 ```text
-Director + Historical Research + Production Designer + DoP + Lighting + Costume/HMU + Props + Continuity + VFX + Editor
-→ 对 Minimum Visual Canon Brief 做 HOD Review
-→ 逐项 select / revise / reject 当前 8 张参考图与 4 张蓝图
-→ 不生成关键帧或视频
+关闭 5 个 P1 flags
+→ 将结论写回 LookDev Revision Work Order
+→ 分资产生成 v2 LookDev Takes
+→ Dailies + HOD Review Round 2
 ```
+
+在此之前，不裁切单视图，不生成关键帧、视频或最终音频。
