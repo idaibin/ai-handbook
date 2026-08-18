@@ -8,7 +8,7 @@
       "project_id": "banchao",
       "episode_id": "EP01"
     },
-    "as_of_utc": "2026-08-18T14:40:00Z",
+    "as_of_utc": "2026-08-18T15:00:00Z",
     "rule": "Only this file determines the current workflow stage and gate state. State claims in other artifacts are human-readable projections or historical snapshots. Their content evidence and hashes remain valid unless explicitly superseded."
   },
   "evidence_classification": {
@@ -131,11 +131,13 @@
     },
     "visual_research_registry": {
       "artifact": "banchao-ep01-visual-research-registry-v1.yaml",
-      "sha256": "1af33c9e56c80caaeb7f094458c37f21ece525c08d1e56f662506c878177e480",
+      "sha256": "7c4443700a8d4268190ca5b1e6e52c85b41a3d4b49a2dac26d2cb4a0f2153d38",
       "validation": "pass_static_triage_complete",
       "total_flags": 19,
       "closed_flags_count": 7,
-      "open_flags_count": 12
+      "open_flags_count": 12,
+      "github_blob_sha": "7db4e5a895f594cc529211142747a36138a0dc2d",
+      "schema_version": "story-studio/visual-research-registry/v1.1"
     }
   },
   "status_dimensions": {
@@ -194,7 +196,7 @@
     "visual_research": {
       "status": "open_triaged",
       "registry_artifact": "banchao-ep01-visual-research-registry-v1.yaml",
-      "registry_sha256": "1af33c9e56c80caaeb7f094458c37f21ece525c08d1e56f662506c878177e480",
+      "registry_sha256": "7c4443700a8d4268190ca5b1e6e52c85b41a3d4b49a2dac26d2cb4a0f2153d38",
       "total_flags_count": 19,
       "closed_flags_count": 7,
       "unresolved_flags_count": 12,
