@@ -1,0 +1,26 @@
+schema: story-studio/world-foundation-decision
+decision_id: banchao-world-foundation-decision
+decision: approve_working_baseline_conditions_recorded
+decision_timestamp_utc: '2026-08-19T08:45:00Z'
+scope: Internal series development and research routing only.
+review_mode: user_delegated_ai_assisted_independent_review_pass
+approver: USER_DELEGATED_PRODUCER_DIRECTOR_PROXY
+human_signoff_separately_recorded: false
+evidence_refs:
+- banchao-narrative-authority-package.yaml
+- banchao-source-ledger.yaml
+- banchao__ip__full-trajectory__2026-08-18__v01.md
+- banchao__script__24-episode-treatment__2026-08-18__v01.md
+- banchao__evidence__ep01-world-background-validation__2026-08-18__v01.1.md
+findings:
+- All 24 episodes are mapped to six production Region families and reusable Location IDs.
+- Political entities retain independent agency and are explicitly not modern-state equivalents.
+- Travel/communication/logistics constraints are defined without inventing exact coordinates or journey times.
+- Ban Chao has six continuity CharacterStates; supporting characters have activation rules.
+- Regional LookDev tests are specified but no Styleframe or VisualCanon is approved.
+conditions:
+- Exact archaeology, coordinates, language, costume, architecture, tack, weapons and route-season details remain episode/asset-specific research.
+- Regional candidate images remain internal_candidate_only.
+- This decision does not authorize Storyboard, ShotKeyframe or video.
+- EP01 Round3 Phase A remains the next currently authorized media test track.
+next_action: Integrate the series world foundation into EP01 Phase A prompts and later create six regional Styleframe tests as a separate G05 support track.
