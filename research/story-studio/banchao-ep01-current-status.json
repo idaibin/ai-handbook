@@ -1,10 +1,10 @@
 {
   "schema": "story-studio/current-status",
   "status_id": "banchao-ep01-current-status",
-  "status_revision": 12,
+  "status_revision": 13,
   "authority": {
     "role": "single_current_state_source",
-    "as_of_utc": "2026-08-19T12:30:00Z",
+    "as_of_utc": "2026-08-19T14:12:30Z",
     "rule": "Stable file directly replaced; no parallel v2/v3 state files."
   },
   "project": {
@@ -28,7 +28,7 @@
     "G03": "approve_conditions_recorded",
     "G04": "approve_internal_candidate_only",
     "G05": "approve_rule_level_visual_direction_conditions_recorded",
-    "G06": "entry_allowed_not_started"
+    "G06": "entered_storyboard_ready"
   },
   "readiness": {
     "NarrativeCanon": "approved_working_baseline_conditions_recorded",
@@ -66,7 +66,7 @@
   },
   "workflow": {
     "current_stage_id": "STAGE_06_STORYBOARD_LAYOUT_ANIMATIC",
-    "next_legal_action": "Begin EP01 14-shot / 27-panel Storyboard using approved brief and provisional asset annotations.",
+    "next_legal_action": "Create EP01 14-shot / 27-panel Storyboard, then Storyboard Dailies and Layout/Previs review.",
     "storyboard_entry_condition": "met",
     "notification_trigger": "met: 文本前置与 G05 已通过，可以进入分镜阶段。",
     "prohibited": [
@@ -83,16 +83,6 @@
     "public/commercial third-party rights clearance",
     "video/audio provider quality speed and cost"
   ],
-  "public_refs": {
-    "glossary_sha256": "e9bb52ce689e5c1a2b8b510684ec18ffc573b8eceb387b1f3cd307ef28e752d3",
-    "artifact_map_sha256": "9c122aeb4ddd235a4e7015940c8aa289f1fbc390c8e246f061d9f10e178f57af",
-    "gap_register_sha256": "d9267e559c956ad81ae8b67774ee756a43cea70cfe891f15ef8ef9d9b158e361",
-    "G05_decision_sha256": "2b27bce497add9bcdfea4944380ba1862aa7f7116bdd42701deee992c74df62a",
-    "storyboard_text_decision_sha256": "76fdd8da056d651a4c3354cfd45fccfdcdef8ee43138b05a616b62344f904b05",
-    "validation_sha256": "694450ca6b5072041e12966ac9e1c6cef49976c64615a4b0b6c0c2449ce9455d",
-    "visual_canon_rules_sha256": "b186d6b0972b4660fdf347d5fc7124bc6f344db8cdb87fd4cb131cd0765ab219",
-    "preproduction_projection_sha256": "bb566030d2fd026df4951ee0581a0278b96aed60242f38d760dbc51620676746"
-  },
   "lookdev_batch03": {
     "provider_conformance": "contact_sheet_nonconformance_repeated",
     "selected_component_refs": 3,
@@ -105,5 +95,21 @@
     "rules_artifact": "banchao-ep01-visual-canon-rules.yaml",
     "provider_exception": "derived crops are review evidence, not native production assets",
     "G07_asset_build_required": true
+  },
+  "series_visual_scope": {
+    "detailed_map_now": false,
+    "narrative_topology_foundation": "8 regions / 25 Location IDs / 24 Episode rows",
+    "generic_western_regions_style": false,
+    "region_specific_lookdev_by_episode": true,
+    "thirty_six_individual_portraits_now": false,
+    "ensemble_foundation": "banchao-thirty-six-companions-ensemble-foundation.yaml",
+    "unit_bible_before_first_central_use": true
+  },
+  "artifact_refs": {
+    "visual_canon_rules": "banchao-ep01-visual-canon-rules.yaml",
+    "selected_component_manifest": "banchao-ep01-selected-component-styleframes-manifest.json",
+    "storyboard_entry_decision": "banchao-ep01-storyboard-entry-decision.yaml",
+    "series_visual_scope_decision": "banchao-series-visual-development-scope-decision.yaml",
+    "thirty_six_companions_foundation": "banchao-thirty-six-companions-ensemble-foundation.yaml"
   }
 }
