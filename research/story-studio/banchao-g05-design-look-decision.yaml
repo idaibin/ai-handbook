@@ -1,8 +1,9 @@
 schema: story-studio/gate-decision
 gate_id: G05_DESIGN_LOOK_APPROVAL
-decision: revise
-decision_timestamp_utc: '2026-08-19T11:45:00Z'
-decision_scope: EP01 Round3 Phase A Batch02 and Storyboard text readiness; internal candidate workflow only
+decision: approve
+decision_qualification: approve_rule_level_visual_direction_conditions_recorded
+decision_timestamp_utc: '2026-08-19T12:30:00Z'
+decision_scope: EP01 Storyboard entry; internal candidate workflow only
 owner: directing_and_visual_hod_panel
 reviewers:
 - historical_research
@@ -18,26 +19,32 @@ reviewers:
 approver: USER_DELEGATED_DIRECTOR_HOD_PROXY
 human_signoff_separately_recorded: false
 evidence_refs:
-- banchao-ep01-lookdev-batch02-review-package.yaml
+- banchao-ep01-visual-canon-rules.yaml
+- banchao-ep01-selected-component-styleframes-manifest.json
 - banchao-ep01-storyboard-preproduction-text-package.yaml
-- banchao-ep01-storyboard-text-readiness-detail.yaml
+- banchao-ep01-storyboard-text-readiness-decision.yaml
 findings:
-- All Storyboard textual prerequisites are complete.
-- Batch02 still violates one-asset-per-native-attempt contract.
-- Character and Composite Set remain revise; Hero Prop remains reject.
-- VisualCanon is not approved; Storyboard execution remains blocked.
+- Storyboard textual prerequisites are complete.
+- ShowLook, character/costume direction, spatial staging, camera intent and lighting direction are sufficiently stable for Storyboard.
+- Provider-native separation failed repeatedly; derived components are accepted only as visual-direction evidence.
+- Architecture, dressing, exact character design and Hero Prop geometry remain noncanonical and move to G07 Asset Build & Technical Validation.
 dailies_summary:
-  select: 0
-  revise: 2
-  reject: 1
-  canonical_assets_promoted: 0
-visual_canon: false
+  approved_rule_groups: 3
+  selected_component_refs: 3
+  production_assets_approved: 0
+visual_canon:
+  status: approved_rule_level_selected_components
+  production_asset_canon: false
+storyboard_entry_allowed: true
 production_ready: false
 publication_ready: false
-next_legal_action: Generate three separate native Phase A Batch03 Styleframes, then Dailies and repeat G05 review.
+conditions:
+- Storyboard must use simplified placeholders and annotate provisional Character, Set and Prop details.
+- No noncanonical lattice, pseudo-writing or brush geometry may be treated as historical fact.
+- G07 must create and test native production assets before Shot Production.
+- ScratchAudio must be recorded before G06 TimedAnimatic lock.
+next_legal_action: Begin EP01 14-shot / 27-panel Storyboard using the approved Storyboard Brief and rule-level VisualCanon.
 prohibited:
-- Storyboard execution
-- Layout/Previs execution
-- ShotKeyframe/video
-- Phase B asset production
+- ShotKeyframe/video before G06 TimedAnimatic lock
+- Phase B production-asset promotion before G07 validation
 - public/commercial use
