@@ -1,0 +1,30 @@
+schema: story-studio/layout-previs-review
+artifact_id: banchao-ep01-layout-previs-review
+status: approve_silent_animatic_proxy_conditions_recorded
+project_id: banchao
+episode_id: EP01
+reviewed_at_utc: '2026-08-19T16:25:00Z'
+inputs:
+- banchao-ep01-storyboard-panel-manifest.yaml
+- banchao-ep01-storyboard-dailies-review.yaml
+- banchao-ep01-blocking-coverage-plan.yaml
+- banchao-ep01-layout-previs-techvis-plan.yaml
+checks:
+  shot_order_14: pass
+  panel_order_27: pass
+  duration_total_105: pass
+  A_B_C_geography: pass
+  reverse_pair_axis: pass
+  screen_right_westward_gaze: pass
+  SHOT_10_action_phases: pass
+  SHOT_11_match_cut: pass_abstract
+  title_card_handoff: pass
+decision: approve_silent_animatic_proxy
+G06_timed_animatic_lock: blocked_pending_scratch_dialogue_and_audio_review
+next_legal_action: Assemble 105-second silent animatic proxy, then record ScratchDialogue and perform TimedAnimatic review.
+prohibited:
+- Production ShotKeyframe
+- video generation
+- production asset promotion
+- public/commercial release
+rights_status: internal_candidate_only
