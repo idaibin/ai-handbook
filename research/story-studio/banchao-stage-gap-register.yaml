@@ -1,71 +1,32 @@
 schema: story-studio/project-stage-gap-register
 artifact_id: banchao-stage-gap-register
-status: g01_g04_and_world_foundation_approved_g05_open
+status: storyboard_text_ready_g05_visual_open
 project_id: banchao
-as_of_utc: '2026-08-19T08:50:00Z'
+as_of_utc: '2026-08-19T11:45:00Z'
 summary:
-  p0_gap_count_original: 9
-  gates_approved: 4
-  remaining_current_gate_count: 1
-  remaining_gate: G05_DESIGN_LOOK_APPROVAL
-  round3_phase_a: authorized_not_executed
-  round3_phase_b: blocked_until_G05_phase_a_review
-  series_world_regions_defined: 8
-  series_location_ids_defined: 25
-  episode_location_maps: 24
-  future_world_research_tasks: 10
-  episode_foundation_rows: 24
-  ban_chao_major_states: 6
+  G01_G04: approved_with_conditions
+  G05: revise
+  remaining_text_gap_count: 0
+  remaining_visual_gate_count: 1
+  storyboard_text_ready: true
+  storyboard_execution_ready: false
+  planned_storyboard_panels: 27
 gaps:
-- gap_id: GAP_SERIES_FORMAT_AUTHORITY
-  status: closed_by_approved_gate_or_bounded_condition
-  artifact: banchao-development-greenlight-package.yaml
-  next: Conditions tracked downstream; not a current blocker.
-- gap_id: GAP_CREATIVE_GREENLIGHT_PACKAGE
-  status: closed_by_approved_gate_or_bounded_condition
-  artifact: banchao-development-greenlight-package.yaml
-  next: Conditions tracked downstream; not a current blocker.
-- gap_id: GAP_SOURCE_LEDGER
-  status: closed_by_approved_gate_or_bounded_condition
-  artifact: banchao-source-ledger.yaml
-  next: Conditions tracked downstream; not a current blocker.
-- gap_id: GAP_NARRATIVE_AUTHORITY_NORMALIZATION
-  status: closed_by_approved_gate_or_bounded_condition
-  artifact: banchao-narrative-authority-package.yaml
-  next: Conditions tracked downstream; not a current blocker.
-- gap_id: GAP_EP01_SCRIPT_LOCK
-  status: closed_by_approved_gate_or_bounded_condition
-  artifacts:
-  - banchao-ep01-screenplay.md
-  - banchao-ep01-script-lock-package.yaml
-  next: Conditions tracked downstream; not a current blocker.
-- gap_id: GAP_HOD_BREAKDOWN
-  status: closed_by_approved_gate_or_bounded_condition
-  artifact: banchao-ep01-hod-breakdown-package.yaml
-  next: Conditions tracked downstream; not a current blocker.
-- gap_id: GAP_RIGHTS_PROVENANCE
-  status: closed_by_approved_gate_or_bounded_condition
-  artifact: banchao-rights-provenance-package.yaml
-  next: Conditions tracked downstream; not a current blocker.
-- gap_id: GAP_LOOKDEV_INPUTS
-  status: closed_by_approved_gate_or_bounded_condition
-  artifacts:
-  - banchao-ep01-lookdev-input-package.yaml
-  - banchao-ep01-round3-lookdev-work-order.yaml
-  next: Conditions tracked downstream; not a current blocker.
+- gap_id: GAP_G01_G04_FOUNDATION
+  status: closed
+- gap_id: GAP_SERIES_WORLD_FOUNDATION
+  status: closed_internal_foundation
+- gap_id: GAP_EP01_STORYBOARD_TEXT
+  status: closed
+  artifact: banchao-ep01-storyboard-preproduction-text-package.yaml
+- gap_id: GAP_SCRATCH_AUDIO_RECORDING
+  status: open_nonblocking_for_initial_storyboard
+  required_before: G06_TIMED_ANIMATIC_LOCK
 - gap_id: GAP_VISUAL_CANON
   status: open_gate_revise
-  next: Run authorized Round3 Phase A tests, Dailies, then G05 HOD decision.
-- gap_id: GAP_SERIES_WORLD_LOCATION_FOUNDATION
-  status: closed_by_approved_internal_foundation
-  artifacts:
-  - banchao-world-foundation-package.yaml
-  - banchao-location-bible.yaml
-  - banchao-episode-foundation-matrix.yaml
-  next: Episode-specific location evidence and G05 approval remain downstream conditions.
-- gap_id: GAP_CHARACTER_LIFESPAN_STATES
-  status: closed_by_approved_internal_foundation
-  artifact: banchao-character-state-bible.yaml
-  next: State-specific Character VisualCanon remains downstream.
-current_legal_action: Resume EP01 Round3 Phase A three controlled tests using the approved World/Location/Character foundations; no bulk Phase B assets.
-artifact_storage_rule: 'Full packages: private Google Drive. Sanitized Gate decisions/status: public GitHub.'
+  next: Phase A Batch03 three separate native Styleframes -> Dailies -> G05 HOD review
+- gap_id: GAP_STORYBOARD_ENTRY
+  status: blocked_by_G05_visual_only
+  notification: 'When G05 approve, tell user: 文本前置与 G05 已通过，可以进入分镜阶段。'
+current_legal_action: Phase A Batch03; no Storyboard execution until G05 approve.
+rights_posture: internal_candidate_only
