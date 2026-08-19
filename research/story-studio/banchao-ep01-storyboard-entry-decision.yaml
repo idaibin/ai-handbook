@@ -1,0 +1,27 @@
+schema: story-studio/storyboard-entry-decision
+artifact_id: banchao-ep01-storyboard-entry-decision
+status: ready_to_start
+project_id: banchao
+episode_id: EP01
+as_of_utc: '2026-08-19T13:30:00Z'
+text_artifacts_complete: true
+visual_direction_gate: G05 approve_rule_level_visual_direction_conditions_recorded
+scene_count: 3
+beat_count: 8
+shot_count: 14
+planned_storyboard_panels: 27
+duration_seconds: 105
+technical_format:
+  aspect_ratio: '16:9'
+  resolution: 1920x1080
+  frame_rate_fps: 24
+  audio: 48kHz/24-bit working
+storyboard_execution_allowed: true
+G06: entered_storyboard_ready
+conditions:
+- Use rule-level VisualCanon and placeholder policy.
+- Do not create production ShotKeyframes or video before TimedAnimatic Lock.
+- Record panel IDs, Shot IDs, screen direction, eyelines, blocking and duration.
+- ScratchDialogue recording remains required before TimedAnimatic approval.
+next_legal_action: Create the 27 Storyboard Panels, then run Storyboard Dailies and Layout/Previs review.
+rights_status: internal_candidate_only
