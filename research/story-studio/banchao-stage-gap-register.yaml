@@ -1,15 +1,16 @@
 schema: story-studio/project-stage-gap-register
 artifact_id: banchao-stage-gap-register
-status: storyboard_text_ready_g05_visual_open
+status: storyboard_entry_ready_g07_assets_pending
 project_id: banchao
-as_of_utc: '2026-08-19T11:45:00Z'
+as_of_utc: '2026-08-19T12:30:00Z'
 summary:
   G01_G04: approved_with_conditions
-  G05: revise
+  G05: approve_rule_level_visual_direction_conditions_recorded
+  G06: entry_allowed_not_started
   remaining_text_gap_count: 0
-  remaining_visual_gate_count: 1
+  remaining_storyboard_entry_blockers: 0
   storyboard_text_ready: true
-  storyboard_execution_ready: false
+  storyboard_execution_ready: true
   planned_storyboard_panels: 27
 gaps:
 - gap_id: GAP_G01_G04_FOUNDATION
@@ -18,15 +19,19 @@ gaps:
   status: closed_internal_foundation
 - gap_id: GAP_EP01_STORYBOARD_TEXT
   status: closed
-  artifact: banchao-ep01-storyboard-preproduction-text-package.yaml
+- gap_id: GAP_VISUAL_DIRECTION
+  status: closed_rule_level_selected_components
+  artifact: banchao-ep01-visual-canon-rules.yaml
+- gap_id: GAP_PROVIDER_NATIVE_SEPARATION
+  status: deferred_to_G07_nonblocking_for_storyboard
+  rule: derived crops are selected_component evidence only
+- gap_id: GAP_PRODUCTION_ASSETS
+  status: open_required_for_G07
+  scope: Character, Set, Hero Brush, Writing Surface and related technical tests
 - gap_id: GAP_SCRATCH_AUDIO_RECORDING
   status: open_nonblocking_for_initial_storyboard
   required_before: G06_TIMED_ANIMATIC_LOCK
-- gap_id: GAP_VISUAL_CANON
-  status: open_gate_revise
-  next: Phase A Batch03 three separate native Styleframes -> Dailies -> G05 HOD review
 - gap_id: GAP_STORYBOARD_ENTRY
-  status: blocked_by_G05_visual_only
-  notification: 'When G05 approve, tell user: 文本前置与 G05 已通过，可以进入分镜阶段。'
-current_legal_action: Phase A Batch03; no Storyboard execution until G05 approve.
+  status: ready
+current_legal_action: Begin EP01 14-shot / 27-panel Storyboard; do not generate ShotKeyframe or video.
 rights_posture: internal_candidate_only
