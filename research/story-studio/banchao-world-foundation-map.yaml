@@ -1,0 +1,89 @@
+schema: story-studio/public-world-foundation-map
+artifact_id: banchao-world-foundation-map
+status: approved_internal_foundation_conditions_recorded
+project_id: banchao
+as_of_utc: '2026-08-19T08:50:00Z'
+coverage:
+  regions: 8
+  locations: 25
+  episodes: 24
+  ban_chao_major_states: 6
+regions:
+- region_id: REGION_CENTRAL_PLAINS_LUOYANG
+  zh_name: 中原与洛阳
+  episodes:
+  - EP01
+  - EP24
+  exact_geography: not_verified
+- region_id: REGION_HEXI_CORRIDOR
+  zh_name: 河西走廊与关塞通道
+  episodes:
+  - EP02
+  - EP24
+  exact_geography: not_verified
+- region_id: REGION_EASTERN_TIANSHAN_YIWU_PULEI
+  zh_name: 伊吾、蒲类海与东天山方向
+  episodes:
+  - EP02
+  exact_geography: not_verified
+- region_id: REGION_SOUTH_TARIM
+  zh_name: 塔里木盆地南缘（鄯善、于阗方向）
+  episodes:
+  - EP03
+  - EP04
+  - EP05
+  exact_geography: not_verified
+- region_id: REGION_WEST_TARIM
+  zh_name: 塔里木盆地西缘（疏勒、莎车方向）
+  episodes:
+  - EP06
+  - EP07
+  - EP08
+  - EP09
+  - EP10
+  - EP13
+  - EP15
+  - EP16
+  - EP17
+  - EP18
+  exact_geography: not_verified
+- region_id: REGION_NORTH_TARIM
+  zh_name: 塔里木盆地北缘（龟兹、姑墨、温宿方向）
+  episodes:
+  - EP06
+  - EP07
+  - EP10
+  - EP11
+  - EP18
+  - EP19
+  - EP20
+  - EP23
+  exact_geography: not_verified
+- region_id: REGION_TRANSOXIANA_ALLIANCE_SPHERE
+  zh_name: 康居、月氏、乌孙等远域联盟网络
+  episodes:
+  - EP14
+  - EP15
+  - EP16
+  - EP17
+  - EP19
+  exact_geography: not_verified
+- region_id: REGION_YANQI_RETURN_CORRIDOR
+  zh_name: 焉耆、玉门关与返洛阳路径
+  episodes:
+  - EP21
+  - EP22
+  - EP24
+  exact_geography: not_verified
+private_artifacts:
+- banchao-world-foundation-package.yaml
+- banchao-location-bible.yaml
+- banchao-character-state-bible.yaml
+- banchao-episode-foundation-matrix.yaml
+public_decision: banchao-world-foundation-decision.yaml
+current_constraints:
+- VisualCanon not approved
+- exact ancient coordinates and architecture not approved
+- rights posture internal_candidate_only
+- episode-specific material culture research remains required
+next_action: EP01 Round3 Phase A three controlled LookDev tests using approved foundations
