@@ -18,27 +18,45 @@
   },
   "current_status": {
     "file": "banchao-ep01-current-status.json",
-    "github_blob_sha": "157c0f7e1211ca3ff3449743ca21eef0fa880b65",
-    "status_revision": 12
+    "sha256": "a89dc2d738997da61a1e4e8eea97d45a77d2ad362e929d87c22b650723247161",
+    "status_revision": 13
   },
   "public_files": {
     "banchao-ep01-visual-canon-rules.yaml": {
-      "sha256": "b186d6b0972b4660fdf347d5fc7124bc6f344db8cdb87fd4cb131cd0765ab219"
+      "sha256": "1cdd31e90d1a0f8386ce8e689f8ccd4b3aafd05642fbfe817fca10acb6aceaf9",
+      "size": 3551
     },
     "banchao-ep01-selected-component-styleframes-manifest.json": {
-      "sha256": "967368330d8211b85c9eccd4ab1c84e79b3c66c53735ea5e41ab3f021ce3a4c5"
+      "sha256": "967368330d8211b85c9eccd4ab1c84e79b3c66c53735ea5e41ab3f021ce3a4c5",
+      "size": 3534
     },
     "banchao-ep01-storyboard-entry-decision.yaml": {
-      "sha256": "fd275e65da17c2ce344e23673eeefbae2fab6b4ba4ab3be7136975e05dfb7929"
+      "sha256": "fd275e65da17c2ce344e23673eeefbae2fab6b4ba4ab3be7136975e05dfb7929",
+      "size": 1110
     },
     "banchao-ep01-g05-storyboard-entry-validation.json": {
-      "sha256": "f5c4d974d839b3ac5102d0f5cf00a3a7d271bd2735d1a21cc2980bf49cbacbb3"
+      "sha256": "e809793683d12f9320a08b8eba7171ad5f62462bdf6cef2b1ca58040de72cce2",
+      "size": 1929
     },
     "banchao-series-visual-development-scope-decision.yaml": {
-      "sha256": "25de09c5a7f31dfd422056f261d4cf316bba5ece7ec00cb39d2841c615dfc3ef"
+      "sha256": "25de09c5a7f31dfd422056f261d4cf316bba5ece7ec00cb39d2841c615dfc3ef",
+      "size": 4702
     },
     "banchao-thirty-six-companions-ensemble-foundation.yaml": {
-      "sha256": "dead20c075b07d4f80c14cdcd224a96df810d5bff897173a14a4edd9ebd315c7"
+      "sha256": "dead20c075b07d4f80c14cdcd224a96df810d5bff897173a14a4edd9ebd315c7",
+      "size": 2914
+    },
+    "banchao-artifact-stage-map.yaml": {
+      "sha256": "d2f20cc8b0076e098e8a7da442644bbf9f1267ec282eb93c62a76a8d32ef48b9",
+      "size": 2189
+    },
+    "banchao-stage-gap-register.yaml": {
+      "sha256": "146eea5fc13be23b88ac0baa24a6b8a91b20738761f4da122da8f4f64bf10f57",
+      "size": 1742
+    },
+    "2026-08-18-banchao-ep01-preproduction.md": {
+      "sha256": "a4f84f69012a7aadde7aba3ce21d2b1d2833ad14f73f20a70f36324dda5b5e21",
+      "size": 1591
     }
   },
   "private_file_hashes": {
