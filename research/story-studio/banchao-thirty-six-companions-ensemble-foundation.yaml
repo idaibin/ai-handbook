@@ -1,0 +1,59 @@
+schema: story-studio/ensemble-foundation
+artifact_id: banchao-thirty-six-companions-ensemble-foundation
+status: registered_text_foundation_visual_assets_deferred
+project_id: banchao
+as_of_utc: '2026-08-19T14:12:30Z'
+canonical_term: ThirtySixCompanionsEnsemble
+zh_label: 班超初次西域使团三十六名官属群像
+historical_wording:
+  preferred: 官属三十六人 / 三十六人使团
+  marketing_only: 三十六勇士
+  rule: “三十六勇士”不得作为史料原词或三十六名已知个人的事实陈述。
+historical_boundary:
+  verified_anchor: 《后汉书》相关记载与班超上疏传统支持“三十六人/官属三十六人”的使团规模锚点。
+  not_verified:
+  - 完整姓名名单
+  - 三十六人固定职业构成
+  - 每人的年龄、籍贯、外貌、装备和结局
+  - 全程成员不变
+  source_refs:
+  - SRC_HHS47_WIKISOURCE
+  - SRC_CASS_BAN_CHAO_36_2025
+dramatic_function:
+- 把班超的判断转化为共同承担的生死风险
+- 提供使团内部信任、犹疑、执行与代价的群体视角
+- 避免把西域经营简化为单人神话
+production_hierarchy:
+  featured_named_companions: 仅在史料或锁定 Screenplay 支持时建立独立 CharacterBible 与 CharacterBlueprint。
+  foreground_companions: 按锁定 Shot 需要建立少量稳定 Continuity ID，不虚构完整传记。
+  midground_cohorts: 使用受控轮廓、服装层级和功能变体。
+  background_cohorts: 使用群体规则和 CrowdVariation，不建立 36 个独立 Hero Asset。
+continuity_rules:
+- “36”是使团规模锚点，不要求每个 Shot 同时可见 36 人。
+- 每集由锁定 Screenplay 和 ShotList 记录可见人数、离场、伤亡、增援与成员状态；无证据时不得自行补全。
+- 同一前景成员必须使用稳定 Continuity ID、轮廓、服装层级和道具状态。
+- 群像必须保留个体差异，但不得用夸张异域化、统一军团模板或现代战队视觉。
+visual_asset_policy:
+  create_now:
+  - 文本级 EnsembleFoundation
+  - 历史称谓和不确定性边界
+  - 未来 UnitBible 的字段与 Gate
+  do_not_create_now:
+  - 36 张独立人物肖像
+  - 36 套唯一服装与装备
+  - 无 Screenplay 需求的群像海报
+  - 未经证据支持的完整姓名与传记
+  activation: 在第一集把该群体作为核心在场单位的 Episode 进入 G03/G04 前，扩展为 ThirtySixCompanionsUnitBible；在该 Episode G05 前完成群像 Styleframe 与 Dailies。
+required_unit_bible_fields_later:
+- episode-specific visible roster and continuity IDs
+- command and functional tiers
+- foreground/midground/background cohort rules
+- costume and equipment families
+- language/dialogue/naming policy
+- crowd reuse and variation policy
+- state-change and replacement records
+- source and adaptation matrix
+rights_status: internal_candidate_only
+visual_canon: false
+production_ready: false
+publication_ready: false
