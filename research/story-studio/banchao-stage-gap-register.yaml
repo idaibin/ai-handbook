@@ -1,0 +1,201 @@
+schema: story-studio/project-stage-gap-register
+artifact_id: banchao-stage-gap-register
+status: authoritative_mapping_complete_gaps_open
+project_id: banchao
+as_of_utc: '2026-08-19T04:20:00Z'
+authority:
+  artifact_map_ref: research/story-studio/banchao-artifact-stage-map.yaml
+  stage_matrix_ref: workflows/story-studio/stage-artifact-matrix.yaml
+  rule: Downstream not_started artifacts are tracked but do not become current blockers until their entry gate is reached.
+summary:
+  required_artifact_count: 68
+  coverage_counts:
+    missing: 23
+    partial: 21
+    satisfies_working_baseline: 1
+    satisfies: 1
+    gate_failed: 2
+    not_started: 20
+  current_blocking_gap_count: 9
+  current_operational_stage: STAGE_05_VISDEV_LOOKDEV_APPROVAL
+  effective_gate_decision: revise
+  round3_lookdev: paused
+stage_gate_assessment:
+- stage_id: STAGE_01_DEVELOPMENT_GREENLIGHT
+  gate_id: G01_DEVELOPMENT_GREENLIGHT
+  formal_gate_assessment: blocked_or_incomplete
+  coverage_counts:
+    missing: 3
+    partial: 3
+- stage_id: STAGE_02_NARRATIVE_SCRIPT_LOCK
+  gate_id: G02_SCRIPT_LOCK
+  formal_gate_assessment: blocked_or_incomplete
+  coverage_counts:
+    partial: 5
+    satisfies_working_baseline: 1
+    missing: 1
+- stage_id: STAGE_03_HOD_BREAKDOWN_PLANNING
+  gate_id: G03_HOD_BREAKDOWN_COMPLETE
+  formal_gate_assessment: blocked_or_incomplete
+  coverage_counts:
+    partial: 5
+    missing: 1
+- stage_id: STAGE_04_RESEARCH_RIGHTS_CONSTRAINTS
+  gate_id: G04_RESEARCH_RIGHTS_CONSTRAINTS_LOCK
+  formal_gate_assessment: blocked_or_incomplete
+  coverage_counts:
+    satisfies: 1
+    missing: 1
+    partial: 3
+- stage_id: STAGE_05_VISDEV_LOOKDEV_APPROVAL
+  gate_id: G05_DESIGN_LOOK_APPROVAL
+  formal_gate_assessment: revise
+  coverage_counts:
+    partial: 2
+    gate_failed: 2
+    missing: 4
+- stage_id: STAGE_06_STORYBOARD_LAYOUT_ANIMATIC
+  gate_id: G06_TIMED_ANIMATIC_LOCK
+  formal_gate_assessment: blocked_or_incomplete
+  coverage_counts:
+    missing: 7
+    partial: 1
+- stage_id: STAGE_07_ASSET_BUILD_TECH_VALIDATION
+  gate_id: G07_ASSET_PRODUCTION_READINESS
+  formal_gate_assessment: blocked_or_incomplete
+  coverage_counts:
+    not_started: 2
+    missing: 3
+    partial: 1
+- stage_id: STAGE_08_SHOT_PRODUCTION_DAILIES
+  gate_id: G08_SHOT_SELECT_APPROVAL
+  formal_gate_assessment: blocked_or_incomplete
+  coverage_counts:
+    missing: 3
+    not_started: 2
+    partial: 1
+- stage_id: STAGE_09_EDITORIAL_PICTURE_LOCK
+  gate_id: G09_PICTURE_LOCK
+  formal_gate_assessment: not_started
+  coverage_counts:
+    not_started: 6
+- stage_id: STAGE_10_FINISH_DELIVERY_ARCHIVE
+  gate_id: G11_MASTER_DELIVERY_APPROVAL
+  formal_gate_assessment: not_started
+  coverage_counts:
+    not_started: 10
+priority_gaps_before_more_generation:
+- gap_id: GAP_SERIES_FORMAT_AUTHORITY
+  stage_id: STAGE_01_DEVELOPMENT_GREENLIGHT
+  required_artifacts:
+  - SeriesFormatContract
+  priority: P0
+  status: missing_series_scope
+  reason: EP01 is 16:9 but NarrativeBible and Screenplay still claim 9:16.
+  completion_action: Create one stable 24-episode SeriesFormatContract and update active narrative/script pointers without
+    rewriting historical bytes.
+- gap_id: GAP_CREATIVE_GREENLIGHT_PACKAGE
+  stage_id: STAGE_01_DEVELOPMENT_GREENLIGHT
+  required_artifacts:
+  - CreativeBrief
+  - PremiseLoglineTheme
+  - BudgetScheduleRiskRegister
+  - RightsPosture
+  priority: P0
+  status: incomplete
+  reason: Audience, distribution, success criteria, production limits and rights posture are not formally approved.
+  completion_action: Create a bounded development package; unknown values remain explicit rather than inferred.
+- gap_id: GAP_SOURCE_LEDGER
+  stage_id: STAGE_01_DEVELOPMENT_GREENLIGHT
+  required_artifacts:
+  - SourceLedger
+  priority: P0
+  status: partial
+  reason: Sources exist in prose but claims are not mapped to stable source IDs and editions.
+  completion_action: Extract claim-level source rows from the existing Bible, Screenplay and validation report.
+- gap_id: GAP_NARRATIVE_AUTHORITY_NORMALIZATION
+  stage_id: STAGE_02_NARRATIVE_SCRIPT_LOCK
+  required_artifacts:
+  - SeriesCreativeConstitution
+  - NarrativeBible
+  - FactInferenceAdaptationFictionMatrix
+  priority: P0
+  status: partial
+  reason: Existing StoryBible is strong content but mixes stale format/tool routing and lacks separated WorldBible/CharacterBible
+    production fields.
+  completion_action: Directly normalize existing narrative authority into stable SeriesCreativeConstitution, StoryBible/WorldBible/CharacterBible
+    sections and a structured evidence matrix; no new story expansion.
+- gap_id: GAP_EP01_SCRIPT_LOCK
+  stage_id: STAGE_02_NARRATIVE_SCRIPT_LOCK
+  required_artifacts:
+  - Screenplay
+  - SceneBeatIndex
+  - TimingReadScratchDialoguePlan
+  priority: P0
+  status: incomplete
+  reason: EP01 has timecoded content but stale 9:16 metadata, draft header, no Scene/Beat IDs and no TimingRead/ScratchDialogue
+    record.
+  completion_action: Correct active metadata, create SceneBeatIndex and run a text timing/read contract before changing story
+    content.
+- gap_id: GAP_HOD_BREAKDOWN
+  stage_id: STAGE_03_HOD_BREAKDOWN_PLANNING
+  required_artifacts:
+  - ScriptBreakdown
+  - AssetRequirementList
+  - ShotPlanningBaseline
+  - DepartmentBreakdowns
+  - ProductionPlan
+  - DependencyAndRiskMap
+  priority: P0
+  status: partial
+  reason: Existing Shot/Asset/Continuity files are useful but not a complete departmental production plan.
+  completion_action: Map every Scene/Beat/Shot to departments, assets, schedule, review cadence, dependencies and risks.
+- gap_id: GAP_RIGHTS_PROVENANCE
+  stage_id: STAGE_04_RESEARCH_RIGHTS_CONSTRAINTS
+  required_artifacts:
+  - RightsLedger
+  - ProviderProvenancePolicy
+  - AdaptationExceptionLog
+  - DesignConstraintRegister
+  priority: P0
+  status: incomplete
+  reason: Exact model, terms, commercial/publication use, privacy and retention remain unknown.
+  completion_action: Establish internal_candidate_only as current rights posture and record provider/terms snapshots without
+    inventing unknown model IDs.
+- gap_id: GAP_LOOKDEV_INPUTS
+  stage_id: STAGE_05_VISDEV_LOOKDEV_APPROVAL
+  required_artifacts:
+  - DirectorTreatment
+  - ProductionDesignBible
+  - LookBookAndStyleframes
+  - ColorScript
+  - ShowLook
+  - CameraLightingTests
+  priority: P0
+  status: incomplete
+  reason: Two LookDev rounds failed because assets were not tested against a complete common visual, camera, lighting and
+    story framework.
+  completion_action: Create stable approved inputs before rewriting the paused Round-3 Work Order.
+- gap_id: GAP_VISUAL_CANON
+  stage_id: STAGE_05_VISDEV_LOOKDEV_APPROVAL
+  required_artifacts:
+  - CharacterCostumePropDesigns
+  - VisualCanonDecision
+  priority: P0
+  status: gate_revise
+  reason: HOD Round 2 approved zero assets.
+  completion_action: Resume generation only after all upstream P0 gaps are closed; then Dailies and HOD review.
+- gap_id: GAP_NARRATIVE_TO_PRODUCTION_BRIDGE
+  stage_id: STAGE_06_STORYBOARD_LAYOUT_ANIMATIC
+  required_artifacts:
+  - NarrativeToProductionBridge
+  - BlockingCoveragePlan
+  priority: P1
+  status: missing
+  reason: ShotList is not linked to stable Scene/Beat dramatic objectives, character states and departmental intent.
+  completion_action: Create after G02/G03 inputs are normalized and before Storyboard.
+coverage_detail:
+  private_artifact: banchao-stage-gap-register-private.yaml
+  required_artifacts_assessed: 68
+  rule: Full per-required-artifact coverage is stored in private Drive evidence; public register retains stage totals and
+    all current blocking gaps.
