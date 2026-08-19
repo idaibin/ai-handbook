@@ -1,0 +1,92 @@
+schema: story-studio/stage-artifact-matrix
+artifact_id: story-studio-stage-artifact-matrix
+status: authoritative
+authority:
+  stable_path: workflows/story-studio/stage-artifact-matrix.yaml
+  workflow_ref: workflows/story-studio/film-department-gate-matrix-v1.yaml
+  glossary_ref: workflows/story-studio/core-glossary.yaml
+rules:
+- required_artifacts are mandatory unless the workflow explicitly records not_applicable.
+- conditional artifacts are controlled by conditional-modules.yaml.
+- an exit gate cannot pass on prose claims alone; artifact IDs and evidence references are required.
+stages:
+- stage_id: STAGE_01_DEVELOPMENT_GREENLIGHT
+  exit_gate: G01_DEVELOPMENT_GREENLIGHT
+  owner: production_management
+  reviewers: [writing_story, directing, research, rights_legal, editorial]
+  approver: producer
+  required_artifacts: [CreativeBrief, PremiseLoglineTheme, SourceLedger, SeriesFormatContract, BudgetScheduleRiskRegister, RightsPosture]
+  pass_condition: Audience, purpose, scope, format, distribution, evidence policy, budget, schedule, risk and rights posture are explicit.
+  prohibited_shortcuts: [starting image or video generation before scope and format exist]
+- stage_id: STAGE_02_NARRATIVE_SCRIPT_LOCK
+  exit_gate: G02_SCRIPT_LOCK
+  owner: writing_story
+  reviewers: [directing, editorial, sound_music, research, continuity]
+  approver: director
+  required_artifacts: [SeriesCreativeConstitution, NarrativeBible, EpisodeTreatment, Screenplay, SceneBeatIndex, TimingReadScratchDialoguePlan, FactInferenceAdaptationFictionMatrix]
+  pass_condition: Narrative rules, Scene and Beat causality, duration, dialogue and evidence classifications are production-readable.
+  prohibited_shortcuts: [treating Treatment or outline as locked Screenplay, waiting until post-production to test dialogue timing]
+- stage_id: STAGE_03_HOD_BREAKDOWN_PLANNING
+  exit_gate: G03_HOD_BREAKDOWN_COMPLETE
+  owner: production_management
+  reviewers: [all_activated_departments]
+  approver: producer
+  required_artifacts: [ScriptBreakdown, AssetRequirementList, ShotPlanningBaseline, DepartmentBreakdowns, ProductionPlan, DependencyAndRiskMap]
+  pass_condition: Every Scene and Shot has owners, dependencies, schedule, budget, review cadence and open questions.
+  prohibited_shortcuts: [generating assets not required by Script or Shot plans]
+- stage_id: STAGE_04_RESEARCH_RIGHTS_CONSTRAINTS
+  exit_gate: G04_RESEARCH_RIGHTS_CONSTRAINTS_LOCK
+  owner: research_rights_panel
+  reviewers: [production_design, character_design_costume_hmu, props, cinematography, vfx, ai_production_engineering]
+  approver: research_lead_and_rights_approver
+  required_artifacts: [VisualResearchRegistry, RightsLedger, DesignConstraintRegister, AdaptationExceptionLog, ProviderProvenancePolicy]
+  pass_condition: Every uncertainty is evidence-supported, bounded, excluded or deferred; usage and provenance requirements are recorded.
+  prohibited_shortcuts: [closing historical flags through visual preference, treating provider success as rights clearance]
+- stage_id: STAGE_05_VISDEV_LOOKDEV_APPROVAL
+  exit_gate: G05_DESIGN_LOOK_APPROVAL
+  owner: production_design
+  reviewers: [directing, cinematography, lighting, character_design_costume_hmu, props, vfx, continuity, colour_qc, research]
+  approver: director_and_relevant_hod
+  required_artifacts: [DirectorTreatment, ProductionDesignBible, CharacterCostumePropDesigns, LookBookAndStyleframes, ColorScript, ShowLook, CameraLightingTests, VisualCanonDecision]
+  pass_condition: Versioned design rules and anchor assets work under common camera, lighting, continuity and colour conditions.
+  prohibited_shortcuts: [promoting generated output without HOD review, using Moodboard as final design approval]
+- stage_id: STAGE_06_STORYBOARD_LAYOUT_ANIMATIC
+  exit_gate: G06_TIMED_ANIMATIC_LOCK
+  owner: directing_editorial
+  reviewers: [cinematography, layout_previs, sound_music, continuity, vfx, action_stunts]
+  approver: director_and_editor
+  required_artifacts: [NarrativeToProductionBridge, BlockingCoveragePlan, ShotList, Storyboard, LayoutPrevisTechvis, TimedAnimatic, ScratchAudio, AnimaticLockDecision]
+  pass_condition: Screen geography, eyelines, coverage, action, sound, technical feasibility and total duration are proven at low cost.
+  prohibited_shortcuts: [creating production ShotKeyframes or motion Shots before TimedAnimatic approval]
+- stage_id: STAGE_07_ASSET_BUILD_TECH_VALIDATION
+  exit_gate: G07_ASSET_PRODUCTION_READINESS
+  owner: technical_hod_panel
+  reviewers: [directing, continuity, cinematography, lighting, vfx, colour_qc, ai_production_engineering, rights_legal]
+  approver: producer_and_relevant_hod
+  required_artifacts: [ProductionAssetVersions, SingleViewTurnaroundDerivatives, ProviderBenchmark, CameraLightingMotionTests, AssetLineageGraph, ProductionReadyDecision]
+  pass_condition: Canonical assets reproduce under intended camera, lighting, motion, continuity, provider and rights constraints.
+  prohibited_shortcuts: [treating canonical as automatically production_ready]
+- stage_id: STAGE_08_SHOT_PRODUCTION_DAILIES
+  exit_gate: G08_SHOT_SELECT_APPROVAL
+  owner: directing_editorial
+  reviewers: [cinematography, lighting, continuity, vfx, colour_qc, ai_production_engineering]
+  approver: director_and_editor
+  required_artifacts: [ShotContract, GenerationAttemptManifest, DailiesReview, SelectsLog, ShotContinuityNotes, CostTimeFailureLog]
+  pass_condition: Only Takes meeting performance, camera, continuity, technical, cost and rights requirements become Selects.
+  prohibited_shortcuts: [using a successful provider response as a Select without Dailies]
+- stage_id: STAGE_09_EDITORIAL_PICTURE_LOCK
+  exit_gate: G09_PICTURE_LOCK
+  owner: editorial
+  reviewers: [directing, production_management, vfx, sound_music, continuity]
+  approver: director_and_producer
+  required_artifacts: [AssemblyCut, RoughCut, FineCut, PictureLock, LockedTimeline, TurnoverHandlesManifest]
+  pass_condition: Shot order, duration, transitions, handles and approved media versions are locked.
+  prohibited_shortcuts: [starting final VFX or final mix from an unlocked timeline]
+- stage_id: STAGE_10_FINISH_DELIVERY_ARCHIVE
+  exit_gate: G11_MASTER_DELIVERY_APPROVAL
+  owner: production_post_management
+  reviewers: [directing, editorial, vfx, sound_music, colour_qc, rights_legal, localization_accessibility]
+  approver: producer_and_qc_approver
+  required_artifacts: [VFXFinals, Conform, ColourGrade, SpottingADR_Foley_Score_FinalMix, TitlesSubtitlesAccessibility, Master, MasterQCReport, RightsAttributionRecord, DeliveryManifest, ArchiveManifest]
+  pass_condition: Picture, sound, rights, provenance, accessibility, delivery and archive QC pass.
+  prohibited_shortcuts: [calling an exported preview a Master, deleting superseded or failed evidence needed for audit]
