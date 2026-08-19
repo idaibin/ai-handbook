@@ -57,6 +57,10 @@
     "2026-08-18-banchao-ep01-preproduction.md": {
       "sha256": "a4f84f69012a7aadde7aba3ce21d2b1d2833ad14f73f20a70f36324dda5b5e21",
       "size": 1591
+    },
+    "banchao-g05-series-scope-sync-receipt.json": {
+      "sha256": "6eebd87dc209aaf18ea6ead0162b793f52e715ea2acf7f90ddfb9f0a833e7024",
+      "size": 3208
     }
   },
   "private_file_hashes": {
@@ -85,5 +89,6 @@
   },
   "rights_status": "internal_candidate_only",
   "production_ready": false,
-  "publication_ready": false
+  "publication_ready": false,
+  "sync_status": "completed_per_file_readback_verified"
 }
