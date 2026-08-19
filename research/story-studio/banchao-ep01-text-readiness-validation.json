@@ -1,0 +1,34 @@
+{
+  "schema": "story-studio/text-readiness-validation",
+  "result": "pass_text_static_visual_gate_pending",
+  "generated_at_utc": "2026-08-19T11:45:00Z",
+  "checks": {
+    "yaml_parse": "pass",
+    "json_parse": "pass",
+    "scene_count": 3,
+    "beat_count": 8,
+    "shot_count": 14,
+    "duration_seconds": 105,
+    "planned_storyboard_panels": 27,
+    "textual_required_artifacts": 7,
+    "remaining_text_gaps": 0,
+    "G05": "revise",
+    "storyboard_execution_allowed": false,
+    "new_story_content_added": false,
+    "new_media_generated": false
+  },
+  "files": {
+    "banchao-ep01-blocking-coverage-plan.yaml": {"sha256": "a89e74a9eea4e3c4e3e23af9c3cf15e2fe47d1b5ebf1cb670c38c75847ad4ee2", "size": 4997},
+    "banchao-ep01-layout-previs-techvis-plan.yaml": {"sha256": "0dad11540e527150a203f3ba293f7ebc0dfa484a94f59862d42ffd213a2f9c10", "size": 2990},
+    "banchao-ep01-lookdev-batch02-review-package.yaml": {"sha256": "fa080cc406218b0f3a8809883c77d6c2857d16d5a63b533f6e43008e567e0a23", "size": 5722},
+    "banchao-ep01-narrative-to-production-bridge.yaml": {"sha256": "b2ddbb13fd1b458145bef1139b6620e323a6966190bc59ad9d1a5946b1042039", "size": 9932},
+    "banchao-ep01-round3-lookdev-work-order.yaml": {"sha256": "846996b607c6f246cc44f16e96cf7745a8bc4f1b7181bdf551bb7f17fd670195", "size": 2303},
+    "banchao-ep01-scratch-audio-plan.yaml": {"sha256": "05cbdabc701c579ebb38922431f17e0b669fc6d9c0874d5ce26ea90736aedbce", "size": 3133},
+    "banchao-ep01-storyboard-brief.yaml": {"sha256": "53e2eea2d08ec6b31271e39522d48c385886113dbddca7c25ae9e37208f75b44", "size": 12677},
+    "banchao-ep01-storyboard-preproduction-text-package.yaml": {"sha256": "e9e3ed96e959eda882de7d93a793fd1c65ff6c62f6e90a92157767561108e8b4", "size": 936},
+    "banchao-ep01-storyboard-text-readiness-detail.yaml": {"sha256": "176a06e485cf920404b20ada7e457057c552e8cc15aaa8bdbd44b39eb51fd1c5", "size": 1388},
+    "banchao-ep01-technical-format-decision.yaml": {"sha256": "56f05f29b204e167f7a7ed73daa3a00dbcf829cbef359e38bd901b64f963be5b", "size": 1024},
+    "banchao-g05-design-look-decision.yaml": {"sha256": "7771955282c591522955d45ce2b34ccab09ee11da554b644271639774deb52e4", "size": 1371},
+    "core-glossary.yaml": {"sha256": "e9bb52ce689e5c1a2b8b510684ec18ffc573b8eceb387b1f3cd307ef28e752d3", "size": 25145}
+  }
+}
