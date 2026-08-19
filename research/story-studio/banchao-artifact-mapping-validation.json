@@ -1,0 +1,28 @@
+{
+  "schema": "story-studio/artifact-mapping-validation",
+  "artifact_id": "banchao-artifact-mapping-validation",
+  "generated_at_utc": "2026-08-19T04:20:00Z",
+  "result": "pass_local_static",
+  "checks": {
+    "yaml_parse": "pass",
+    "json_parse": "pass",
+    "mapped_artifact_groups": 20,
+    "required_artifacts_assessed": 68,
+    "macro_stages": 10,
+    "priority_P0_gaps": 9,
+    "new_media_generated": false,
+    "round3_generation_executed": false,
+    "public_gap_register_compacted": true,
+    "private_full_gap_register_preserved": true
+  },
+  "sha256": {
+    "banchao-artifact-stage-map.yaml": "4ddecb64c7dc4719206c5d3ec0c9b498771d6eb5663e665b04053372f2c35240",
+    "banchao-artifact-stage-map-private.yaml": "23baf97645f16dea878ec0b1cb3e12c021d7df5e1b9838bf1ccc376020b17c2f",
+    "banchao-stage-gap-register.yaml": "a2670a622a3f1eca9daabc6a7e6a2a85fcdc877075d25f2e386de54fb41ffbfc",
+    "banchao-stage-gap-register-private.yaml": "0941105534f75dda7aabe9618f704a222161ac7b8c63964ddc9a97431c40bf84",
+    "banchao-foundation-alignment.md": "b74321aaeddf77b4e1d6c0a44dda724a948f032eac291ddd93c9c5d1bc1810fa",
+    "banchao-ep01-current-status.json": "faf61c9be33ce708803b837e4e8ae07611f7b0c6a53a3f8f3cd334b4fa9b8fe1",
+    "2026-08-18-banchao-ep01-preproduction.md": "330df8d267e27a2df246f02c69220b5f4ae272adec92a11f14c7a6be3464e6c2",
+    "2026-08-18-banchao-ep01-evidence-manifest.json": "e606e3c5c8f4b1fec75e540f0df6b2f2f46216550185797518cff99424b40fa7"
+  }
+}
