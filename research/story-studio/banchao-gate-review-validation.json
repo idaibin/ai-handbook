@@ -1,0 +1,40 @@
+{
+  "schema": "story-studio/gate-review-validation",
+  "result": "pass_static",
+  "generated_at_utc": "2026-08-19T06:15:00Z",
+  "storage_scope": {
+    "public_github": [
+      "four sanitized Gate decisions",
+      "current status",
+      "artifact map",
+      "gap register",
+      "public projection",
+      "evidence manifest"
+    ],
+    "private_google_drive": [
+      "nine complete project packages",
+      "event log",
+      "sync receipt"
+    ]
+  },
+  "checks": {
+    "yaml_parse": "pass",
+    "json_parse": "pass",
+    "gate_decision_count": 4,
+    "gate_decisions": {
+      "G01": "approve",
+      "G02": "approve",
+      "G03": "approve",
+      "G04": "approve_internal_candidate_only"
+    },
+    "screenplay_story_dialogue_timing_changed": false,
+    "screenplay_metadata_and_canonical_terms_corrected": true,
+    "hod_canonical_ids_normalized": true,
+    "hod_shot_tracking_rows": 14,
+    "official_terms_rechecked": true,
+    "round3_generation_executed": false,
+    "phase_a_authorized": true,
+    "phase_b_blocked": true,
+    "public_repository_private_package_paths_expected": false
+  }
+}
