@@ -1,61 +1,66 @@
 {
-  "schema_version": "story-studio/public-evidence-manifest/v1.5",
+  "schema": "story-studio/public-evidence-manifest",
   "project_id": "banchao",
   "episode_id": "EP01",
-  "evidence_scope": "public_sanitized_step5",
+  "evidence_scope": "public_sanitized_foundation_alignment",
   "current_status_ref": {
     "artifact": "banchao-ep01-current-status.json",
-    "sha256": "b74458b25f9f497ba860d9e58b92400c879a3cfd9ce962bc3278d2f17026a783",
+    "sha256": "6db499373b1088333951a540ddc6250d1490039b4b39571f23d94809ce980e09",
     "authority": "single_current_state_source"
   },
-  "active_format": {
-    "artifact": "banchao-ep01-production-format-contract-v1.yaml",
-    "sha256": "0b6406cdd79b5b76694c40f809cdf3835fad20ab839c2909bf928b0827f6ca7f",
-    "format": "16:9 / 1920x1080"
+  "foundation_baseline": {
+    "workflow": {
+      "path": "workflows/story-studio/film-department-gate-matrix-v1.yaml",
+      "git_blob_sha": "42bda771339802b54f5b17cd8c66d87d205f9049"
+    },
+    "glossary": {
+      "path": "workflows/story-studio/core-glossary.yaml",
+      "git_blob_sha": "e70aa2fac8e9038600ff5ea2e5fb61236df6ae95"
+    },
+    "stage_artifact_matrix": {
+      "path": "workflows/story-studio/stage-artifact-matrix.yaml",
+      "git_blob_sha": "925039550d3c12a37f946991254ed7458163c7ae"
+    },
+    "role_approval_matrix": {
+      "path": "workflows/story-studio/role-approval-matrix.yaml",
+      "git_blob_sha": "8fc7c9c13117988a401724088bdc2c07351d0e37"
+    },
+    "conditional_modules": {
+      "path": "workflows/story-studio/conditional-modules.yaml",
+      "git_blob_sha": "45a9c431249d74bfa832abf42fb648129028943d"
+    }
   },
-  "visual_research": {
-    "registry": "banchao-ep01-visual-research-registry-v1.3.yaml",
-    "registry_sha256": "ff141d5cd117c6e92486d16b327b637cefae0cc36f5bf98fd1f6c19b1160c17a",
-    "total": 19,
-    "closed": 19,
-    "open": 0,
-    "p1_decision_sha256": "3b31c6afbd6a53124b800fcd5dadf5d04652ae00faaa75b416852e4485017fe2"
+  "workflow_state": {
+    "current_stage_id": "STAGE_05_VISDEV_LOOKDEV_APPROVAL",
+    "current_gate_id": "G05_DESIGN_LOOK_APPROVAL",
+    "decision": "revise",
+    "round3_lookdev": "paused_until_foundation_mapping"
   },
-  "lookdev_round2": {
-    "attempts": 8,
-    "normalized": "8 x 1920x1080",
-    "dailies": {
-      "artifact": "banchao-ep01-lookdev-dailies-review-round2-v1.yaml",
-      "sha256": "54c92e6765e565f844dc696985bce5b9adf92bc8a46f7a624bceaa43889aaa92",
+  "project_evidence": {
+    "format": "16:9 / 1920x1080",
+    "visual_research": "19/19 closed",
+    "lookdev_round2": {
+      "attempts": 8,
       "select": 0,
       "revise": 6,
       "reject": 2
     },
-    "hod": {
-      "artifact": "banchao-ep01-minimum-visual-canon-hod-review-round2-v1.yaml",
-      "sha256": "804349f04f4916d7bfd251672c9b44a6ab75107aa1e39e2d5c95ebd5cb263396",
-      "status": "revise_required",
-      "canonical_promoted": 0
+    "canonical_assets": 0,
+    "downstream_counts": {
+      "single_view": 0,
+      "storyboard": 0,
+      "animatic": 0,
+      "keyframes": 0,
+      "video": 0,
+      "final_audio": 0
     }
   },
-  "round3": {
-    "artifact": "banchao-ep01-lookdev-revision-work-order-v1.2.yaml",
-    "sha256": "b1b103b7d20fee0876a0d5eea6be41f40ce9ef9792e19c781dca81a9f128e565",
-    "work_items": 9,
-    "executed": false
-  },
+  "next_legal_action": "map_existing_banchao_artifacts_to_canonical_terms_and_required_stage_artifacts",
   "private_evidence": "Google Drive private folder",
-  "legacy_candidate_inventory_commit": "aa8ae64e231ed4df078a15868b9f3d1e445e52ac",
   "not_verified": [
-    "exact model",
-    "usage/publication rights"
-  ],
-  "downstream_counts": {
-    "single_view": 0,
-    "storyboard": 0,
-    "animatic": 0,
-    "keyframes": 0,
-    "video": 0,
-    "final_audio": 0
-  }
+    "exact model identity and version",
+    "image usage and publication rights",
+    "AGY effective model",
+    "video and audio provider quality, speed and cost"
+  ]
 }
