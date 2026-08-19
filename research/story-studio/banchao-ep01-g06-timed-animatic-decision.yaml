@@ -1,0 +1,61 @@
+schema: story-studio/gate-decision
+gate_id: G06_TIMED_ANIMATIC_LOCK
+decision: approve_timed_animatic_lock_with_conditions
+decision_timestamp_utc: '2026-08-20T00:30:00Z'
+decision_scope: EP01 14-shot / 27-panel / 105-second timing and editorial structure; internal candidate workflow only
+owner: editorial_and_directing
+reviewers:
+- directing
+- editorial
+- sound_music
+- continuity
+- layout_previs
+- ai_production_engineering
+approver: USER_DELEGATED_DIRECTOR_EDITOR_PROXY
+human_signoff_separately_recorded: false
+evidence_refs:
+- banchao-ep01-timed-animatic-manifest.json
+- banchao-ep01-scratch-dialogue-cue-manifest.yaml
+- banchao-ep01-timed-animatic-timeline.json
+- banchao-ep01-storyboard-panel-manifest.yaml
+checks:
+  storyboard_shots: 14/14 pass
+  storyboard_panels: 27/27 pass
+  picture_duration_seconds: 105.0
+  target_duration_seconds: 105.0
+  duration_delta_seconds: 0.0
+  frame_rate: 24/1
+  resolution: 1920x1080
+  audio_sample_rate: '48000'
+  audio_channels: 2
+  scratch_dialogue_cues: 14
+  all_dialogue_cues_fit_approved_windows: true
+  dialogue_overlap_check: pass by cue placement
+  shot_order_unchanged: true
+  new_shots_added: 0
+  final_casting_or_performance_approved: false
+  production_assets_approved: false
+locked_elements:
+- shot order
+- 14 Shot IDs
+- nominal Shot durations totaling 105 seconds
+- 27-panel timing allocation
+- dialogue cue placement baseline
+- title-card windows
+not_locked:
+- final voice casting or performance
+- LipSync
+- final Character/Set/Costume/HeroProp assets
+- production ShotKeyframes
+- final Foley/SFX/Score/Mix
+- publication rights
+conditions:
+- G07 must build and technically validate production assets before ShotKeyframe production.
+- Any change to dialogue, Shot order or locked duration requires a ChangeRecord and impact review.
+- Final voice/casting and performance require separate approval; current espeak audio is timing-only.
+- All outputs remain internal_candidate_only.
+next_stage: STAGE_07_ASSET_BUILD_TECHNICAL_VALIDATION
+next_legal_action: Build and technically validate the minimum production asset package for EP01, then run camera/lighting/continuity tests before production ShotKeyframes.
+rights_status: internal_candidate_only
+production_ready: false
+publication_ready: false
