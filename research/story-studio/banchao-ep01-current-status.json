@@ -1,10 +1,10 @@
 {
   "schema": "story-studio/current-status",
   "status_id": "banchao-ep01-current-status",
-  "status_revision": 10,
+  "status_revision": 11,
   "authority": {
     "role": "single_current_state_source",
-    "as_of_utc": "2026-08-19T08:50:00Z",
+    "as_of_utc": "2026-08-19T11:45:00Z",
     "rule": "Stable file directly replaced; no parallel v2/v3 state files."
   },
   "project": {
@@ -14,184 +14,81 @@
     "format": {
       "aspect_ratio": "16:9",
       "working_resolution": "1920x1080",
-      "target_duration_seconds": 105
+      "frame_rate_fps": 24,
+      "audio": "48kHz/24-bit working"
     },
-    "shot_count": 14
-  },
-  "foundation_closure": {
-    "glossary_extended_terms": 28,
-    "packages_created": 9,
-    "source_ledger_claims": 10,
+    "duration_seconds": 105,
     "scene_count": 3,
     "beat_count": 8,
-    "shot_breakdown_count": 14,
-    "rights_posture": "internal_candidate_only",
-    "package_storage": "private_google_drive",
-    "public_evidence_storage": "github_sanitized_only",
-    "world_regions_defined": 8,
-    "location_entries_defined": 25,
-    "ban_chao_production_states": 6,
-    "episode_location_asset_mappings": 24,
-    "future_world_research_tasks": 10,
-    "episode_foundation_rows": 24,
-    "world_foundation_decision": "approve_internal_foundation_conditions_recorded"
+    "shot_count": 14
   },
   "gates": {
-    "G01_DEVELOPMENT_GREENLIGHT": "approve_conditions_recorded",
-    "G02_SCRIPT_LOCK": "approve_conditions_recorded",
-    "G03_HOD_BREAKDOWN_COMPLETE": "approve_conditions_recorded",
-    "G04_RESEARCH_RIGHTS_CONSTRAINTS_LOCK": "approve_internal_candidate_only_conditions_recorded",
-    "G05_DESIGN_LOOK_APPROVAL": "revise_phase_a_authorized"
+    "G01": "approve_conditions_recorded",
+    "G02": "approve_conditions_recorded",
+    "G03": "approve_conditions_recorded",
+    "G04": "approve_internal_candidate_only",
+    "G05": "revise_batch02_reviewed_batch03_required",
+    "G06": "not_entered"
   },
   "readiness": {
     "NarrativeCanon": "approved_working_baseline_conditions_recorded",
     "VisualCanon": "not_approved",
     "ProductionCanon": "not_established",
+    "StoryboardTextReady": true,
+    "StoryboardExecutionReady": false,
     "production_ready": false,
     "publication_ready": false
   },
+  "text_completion": {
+    "status": "complete",
+    "planned_storyboard_panels": 27,
+    "remaining_text_gaps": 0,
+    "artifacts": {
+      "banchao-ep01-narrative-to-production-bridge.yaml": "b2ddbb13fd1b458145bef1139b6620e323a6966190bc59ad9d1a5946b1042039",
+      "banchao-ep01-blocking-coverage-plan.yaml": "a89e74a9eea4e3c4e3e23af9c3cf15e2fe47d1b5ebf1cb670c38c75847ad4ee2",
+      "banchao-ep01-storyboard-brief.yaml": "53e2eea2d08ec6b31271e39522d48c385886113dbddca7c25ae9e37208f75b44",
+      "banchao-ep01-layout-previs-techvis-plan.yaml": "0dad11540e527150a203f3ba293f7ebc0dfa484a94f59862d42ffd213a2f9c10",
+      "banchao-ep01-scratch-audio-plan.yaml": "05cbdabc701c579ebb38922431f17e0b669fc6d9c0874d5ce26ea90736aedbce",
+      "banchao-ep01-technical-format-decision.yaml": "56f05f29b204e167f7a7ed73daa3a00dbcf829cbef359e38bd901b64f963be5b",
+      "banchao-ep01-storyboard-text-readiness-detail.yaml": "176a06e485cf920404b20ada7e457057c552e8cc15aaa8bdbd44b39eb51fd1c5",
+      "banchao-ep01-storyboard-preproduction-text-package.yaml": "e9e3ed96e959eda882de7d93a793fd1c65ff6c62f6e90a92157767561108e8b4"
+    }
+  },
+  "lookdev_batch02": {
+    "conformance": "fail_contact_sheet_not_three_native_attempts",
+    "dailies": {
+      "select": 0,
+      "revise": 2,
+      "reject": 1
+    },
+    "G05": "revise",
+    "canonical_assets_promoted": 0
+  },
   "workflow": {
     "current_stage_id": "STAGE_05_VISDEV_LOOKDEV_APPROVAL",
-    "next_legal_action": "Resume EP01 Round3 Phase A three bounded tests using the approved World/Location/Character foundations, then Dailies and G05 HOD review.",
-    "round3_lookdev": "phase_a_authorized_not_executed",
+    "next_legal_action": "Phase A Batch03: three separate native clean Styleframes -> Dailies -> G05 HOD review.",
+    "storyboard_entry_condition": "G05 = approve",
+    "notification_trigger": "文本前置与 G05 已通过，可以进入分镜阶段。",
     "prohibited": [
-      "Round3 Phase B bulk assets before Phase A Dailies/HOD decision",
-      "single-view derivation before Character VisualCanon",
-      "Storyboard before G05 approve",
+      "Storyboard/Layout/Previs before G05 approve",
       "ShotKeyframe/video before G06 TimedAnimatic lock",
-      "public/commercial use while rights posture is internal_candidate_only"
-    ],
-    "series_world_foundation": "approved_internal_foundation_conditions_recorded_non_ep01_visual_canon_pending"
+      "public/commercial use"
+    ]
   },
+  "rights_status": "internal_candidate_only",
   "not_verified": [
     "exact ChatGPT image model/version",
-    "current account data control setting",
+    "current account data-control setting",
     "AGY effective model",
     "public/commercial third-party rights clearance",
-    "video/audio provider quality, speed and cost",
-    "exact ancient route coordinates and place equivalences",
-    "region-specific first-century architecture/costume/language/tack/weapon systems outside EP01",
-    "episode-specific first-century architecture/costume/language/tack/weapon systems outside EP01"
+    "video/audio provider quality speed and cost"
   ],
-  "artifact_refs": {
-    "glossary": {
-      "path": "workflows/story-studio/core-glossary.yaml",
-      "sha256": "3aba937e45b92488a070c67d44c0876131267597c7c78e45906ecebff5356300"
-    },
-    "development_greenlight": {
-      "file": "banchao-development-greenlight-package.yaml",
-      "sha256": "09711c2a7f760c0817c9bc3aee6aa6eb9b6b0a3917d5dd03c5f55a202b952771",
-      "storage": "private_google_drive"
-    },
-    "source_ledger": {
-      "file": "banchao-source-ledger.yaml",
-      "sha256": "c83a5618bae74ae77c3e8dcaaaba5ab8db0fbaa78e6e01608bf68e2629f25f7d",
-      "storage": "private_google_drive"
-    },
-    "narrative_authority": {
-      "file": "banchao-narrative-authority-package.yaml",
-      "sha256": "628894580b9cd8b59a7242df0441cc90f4804f605db98c17464d03197ba3138b",
-      "storage": "private_google_drive"
-    },
-    "active_screenplay": {
-      "file": "banchao-ep01-screenplay.md",
-      "sha256": "d511d443087c47e1ad87aec652a41a8caa8dd37ed74c0a4137694cd980d7e4df",
-      "storage": "private_google_drive"
-    },
-    "script_lock": {
-      "file": "banchao-ep01-script-lock-package.yaml",
-      "sha256": "8a870cdc6731a7b896df0d5e0d062d26a5f4c0f70aa94305b5f0056299e46ca2",
-      "storage": "private_google_drive"
-    },
-    "hod_breakdown": {
-      "file": "banchao-ep01-hod-breakdown-package.yaml",
-      "sha256": "46150d783dd5aadb6da29c0ed5912f344965a14c85147f1dbf5b012fced65334",
-      "storage": "private_google_drive"
-    },
-    "rights_provenance": {
-      "file": "banchao-rights-provenance-package.yaml",
-      "sha256": "067c6ed55514a50ab75a74ecfe286eafdf824553de3711166b0154ffee8b51c0",
-      "storage": "private_google_drive"
-    },
-    "lookdev_inputs": {
-      "file": "banchao-ep01-lookdev-input-package.yaml",
-      "sha256": "9c7059d4e2641b00a018ecb4ce4e4fe5278bcdb4e6ccac404dd5458db6c080d1",
-      "storage": "private_google_drive"
-    },
-    "round3_work_order": {
-      "file": "banchao-ep01-round3-lookdev-work-order.yaml",
-      "sha256": "ae0671a9b8c6fc4c38bd0c251fb23afda1e47407e4cafc89114e34141cf5ed04",
-      "storage": "private_google_drive"
-    },
-    "gap_register": {
-      "file": "banchao-stage-gap-register.yaml",
-      "sha256": "589ea6886d38063ed2f4b7b7623a9f634c03b28e43b50037c7e46a5804773ba5"
-    },
-    "artifact_map": {
-      "file": "banchao-artifact-stage-map.yaml",
-      "sha256": "c3d863010fe3573628f977d57bccfbc6c81e0e98e5a31680d757a534f2379950",
-      "storage": "public_github_and_private_drive"
-    },
-    "validation": {
-      "file": "banchao-foundation-closure-validation.json",
-      "sha256": "684b093c2875550ab8f320e5d09457fedc240e4e1d110e48da6aebe6234aa2b5",
-      "storage": "public_github_and_private_drive"
-    },
-    "world_foundation_validation": {
-      "file": "banchao-world-foundation-validation.json",
-      "storage": "public_github_and_private_drive"
-    },
-    "world_foundation_package": {
-      "file": "banchao-world-foundation-package.yaml",
-      "sha256": "30e556c919c1a051139fc459c82674e34a305c1ef7611df986b64bb4e10954bc",
-      "size": 15122,
-      "storage": "private_google_drive"
-    },
-    "location_bible": {
-      "file": "banchao-location-bible.yaml",
-      "sha256": "b085c3fb4d2f37db2d0bbf5d4502656137318fca2e8290ba06b95ba9e01575da",
-      "size": 25453,
-      "storage": "private_google_drive"
-    },
-    "character_state_bible": {
-      "file": "banchao-character-state-bible.yaml",
-      "sha256": "6ed0478ab99cedbf157025c7500440fbe25a9ba0cd55166a732c3fc72d56c265",
-      "size": 6370,
-      "storage": "private_google_drive"
-    },
-    "episode_foundation_matrix": {
-      "file": "banchao-episode-foundation-matrix.yaml",
-      "sha256": "705b4bc0908cf6e0d20d28217ce4ff135387853da78dd6e9d26bdc27f92419ac",
-      "size": 14756,
-      "storage": "private_google_drive"
-    },
-    "world_foundation_decision": {
-      "file": "banchao-world-foundation-decision.yaml",
-      "sha256": "7899604f88370d57b09f8fca037a44e3b52aa9b387f23e1b7229e7daa03491cf",
-      "size": 1693,
-      "storage": "public_github_and_private_drive"
-    }
-  },
-  "gate_decision_refs": {
-    "G01": {
-      "file": "banchao-g01-development-greenlight-decision.yaml",
-      "sha256": "b8042ab620d5c497c2239a969c2155b21f6cf1f40e1fdb8806e9163e69a62347",
-      "storage": "public_github_and_private_drive"
-    },
-    "G02": {
-      "file": "banchao-g02-script-lock-decision.yaml",
-      "sha256": "2a25f2b2a7c9693cb3f15bc388cbd8ac72bc3ae6fc17685a6f09ed656edb799d",
-      "storage": "public_github_and_private_drive"
-    },
-    "G03": {
-      "file": "banchao-g03-hod-breakdown-decision.yaml",
-      "sha256": "17b68a8f35736e095f3bab17c98e7cfa93d8bc95a170865d5c606b535f0ec7e2",
-      "storage": "public_github_and_private_drive"
-    },
-    "G04": {
-      "file": "banchao-g04-research-rights-constraints-decision.yaml",
-      "sha256": "13edc282e8c828751b942d66f1a1afe2193891483a275f8c99d486f7b9fb784b",
-      "storage": "public_github_and_private_drive"
-    }
+  "public_refs": {
+    "glossary_sha256": "e9bb52ce689e5c1a2b8b510684ec18ffc573b8eceb387b1f3cd307ef28e752d3",
+    "artifact_map_sha256": "9c122aeb4ddd235a4e7015940c8aa289f1fbc390c8e246f061d9f10e178f57af",
+    "gap_register_sha256": "333ccab3ba137cef16f4c7710b9a967d4f4755601b0e396d1dbb1daaa1f8f5c6",
+    "G05_decision_sha256": "7771955282c591522955d45ce2b34ccab09ee11da554b644271639774deb52e4",
+    "storyboard_text_decision_sha256": "114e53e17b000a214572e3e395e9bd67ccd19339d50b77d4c3fcad5cc61b3de8",
+    "validation_sha256": "694450ca6b5072041e12966ac9e1c6cef49976c64615a4b0b6c0c2449ce9455d"
   }
 }
