@@ -1,10 +1,10 @@
 {
   "schema": "story-studio/current-status",
   "status_id": "banchao-ep01-current-status",
-  "status_revision": 6,
+  "status_revision": 7,
   "authority": {
     "role": "single_current_state_source",
-    "as_of_utc": "2026-08-19T03:06:00Z",
+    "as_of_utc": "2026-08-19T04:20:00Z",
     "rule": "This stable file is directly replaced. No parallel v2/v3 status files are created."
   },
   "foundation_baseline": {
@@ -82,15 +82,18 @@
     "current_stage_id": "STAGE_05_VISDEV_LOOKDEV_APPROVAL",
     "current_gate_id": "G05_DESIGN_LOOK_APPROVAL",
     "gate_decision": "revise",
-    "foundation_alignment": "required_before_more_generation",
-    "next_legal_action": "map_existing_banchao_artifacts_to_canonical_terms_and_required_stage_artifacts",
+    "foundation_alignment": "mapping_complete_gap_completion_required",
+    "next_legal_action": "complete_ST01_development_greenlight_artifacts_without_new_media_generation",
     "round3_lookdev": "paused",
     "prohibited": [
       "resume Round-3 generation before foundation mapping",
       "use ambiguous labels such as 脚本、场景、分镜、关键图片、审核通过 or 最终版 in contracts",
       "single-view derivation before Character VisualCanon approval",
       "Storyboard or ShotKeyframe production before required Stage 05 and Stage 06 artifacts pass",
-      "claim canonical as production_ready or publication_ready without separate gates"
+      "claim canonical as production_ready or publication_ready without separate gates",
+      "resume Round-3 generation before P0 foundation gaps are closed",
+      "treat existing overlapping prose as a formally approved required artifact",
+      "claim G01-G04 passed without named artifacts and approval records"
     ]
   },
   "not_verified": [
@@ -98,5 +101,29 @@
     "image usage and publication rights",
     "AGY effective model",
     "video and audio provider quality, speed and cost"
-  ]
+  ],
+  "artifact_mapping": {
+    "status": "complete",
+    "public_map_path": "research/story-studio/banchao-artifact-stage-map.yaml",
+    "gap_register_path": "research/story-studio/banchao-stage-gap-register.yaml",
+    "alignment_report_path": "research/story-studio/banchao-foundation-alignment.md",
+    "existing_artifact_groups_mapped": 20,
+    "required_artifacts_assessed": 68,
+    "coverage_counts": {
+      "missing": 23,
+      "partial": 21,
+      "satisfies_working_baseline": 1,
+      "satisfies": 1,
+      "gate_failed": 2,
+      "not_started": 20
+    },
+    "current_P0_gap_count": 9
+  },
+  "upstream_gate_reconciliation": {
+    "G01_DEVELOPMENT_GREENLIGHT": "blocked_or_incomplete",
+    "G02_SCRIPT_LOCK": "blocked_or_incomplete_working_content_present",
+    "G03_HOD_BREAKDOWN_COMPLETE": "blocked_or_incomplete",
+    "G04_RESEARCH_RIGHTS_CONSTRAINTS_LOCK": "research_pass_rights_provenance_incomplete",
+    "G05_DESIGN_LOOK_APPROVAL": "revise"
+  }
 }
