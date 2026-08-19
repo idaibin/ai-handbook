@@ -1,0 +1,73 @@
+{
+  "schema": "story-studio/timed-animatic-validation",
+  "result": "pass_with_conditions",
+  "generated_at_utc": "2026-08-20T00:30:00Z",
+  "checks": {
+    "storyboard_shots": "14/14 pass",
+    "storyboard_panels": "27/27 pass",
+    "picture_duration_seconds": 105.0,
+    "target_duration_seconds": 105.0,
+    "duration_delta_seconds": 0.0,
+    "frame_rate": "24/1",
+    "resolution": "1920x1080",
+    "audio_sample_rate": "48000",
+    "audio_channels": 2,
+    "scratch_dialogue_cues": 14,
+    "all_dialogue_cues_fit_approved_windows": true,
+    "dialogue_overlap_check": "pass by cue placement",
+    "shot_order_unchanged": true,
+    "new_shots_added": 0,
+    "final_casting_or_performance_approved": false,
+    "production_assets_approved": false
+  },
+  "file_integrity": {
+    "banchao-ep01-timed-animatic-scratch.mp4": {
+      "sha256": "5123a07d0a840f3a6fc50e7e78c73776b6d2907143fdb6273158dd307d27d2be",
+      "size": 6625492
+    },
+    "banchao-ep01-silent-animatic-rebuilt.mp4": {
+      "sha256": "d9c5ad6e5f13205ad6c92ab36ff4af6895ec016f33cb87005df7c21a38631206",
+      "size": 3905194
+    },
+    "DX_SCRATCH.wav": {
+      "sha256": "f66a318d0939edd7bfde686f0ac7678895fdf964104bf876b5eea94a9c458e81",
+      "size": 15120044
+    },
+    "FX_PRELAY.wav": {
+      "sha256": "c7a21b775c0396b474cfd084309f28bc5fa4de26894e9c4f8bf6acdaba23cdef",
+      "size": 30240044
+    },
+    "MUSIC_TEMP.wav": {
+      "sha256": "c3f7af553ffb3010aef2980a169df0584986c031c6a22474a46a0aacb2949ee1",
+      "size": 30240044
+    },
+    "MIX_SCRATCH.wav": {
+      "sha256": "4ac470ed6862e0d2004865323f8c2d3c7fbd5cee04e7076b53e307a25cd1a306",
+      "size": 30240044
+    },
+    "banchao-ep01-scratch-dialogue-cue-manifest.yaml": {
+      "sha256": "e74f052fe0900cbc156a9dc5e27da6d8fbba0a24889d2da7b6aff0648baed711",
+      "size": 7178
+    },
+    "banchao-ep01-scratch-subtitles.srt": {
+      "sha256": "1da05ab2f3ae3d146faff68cf67802d96cfdc5fa945785067875693cdf081271",
+      "size": 1450
+    },
+    "banchao-ep01-timed-animatic-timeline.json": {
+      "sha256": "501d6e8421af99f173ea3d64e7d1c033e2f5eb7fccf393764d2a0b217502ae55",
+      "size": 8317
+    },
+    "banchao-ep01-timed-animatic-manifest.json": {
+      "sha256": "1efba10072a65ccfc253a82edfaf5180ecf0562ec1187308bcdb93d47a7aac3e",
+      "size": 2663
+    },
+    "banchao-ep01-g06-timed-animatic-decision.yaml": {
+      "sha256": "8c168607d9351696b4ed7053308fe40fd14eda5eff85b282018c591dacacf312",
+      "size": 2255
+    }
+  },
+  "G06_decision": "approve_timed_animatic_lock_with_conditions",
+  "next_stage": "STAGE_07_ASSET_BUILD_TECHNICAL_VALIDATION",
+  "production_ready": false,
+  "publication_ready": false
+}
