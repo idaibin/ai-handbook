@@ -1,7 +1,7 @@
 # 班超 EP01 当前生产状态（公开投影）
 
 - `authoritative_state`: `banchao-ep01-current-status.json`
-- `authoritative_state_sha256`: `6db499373b1088333951a540ddc6250d1490039b4b39571f23d94809ce980e09`
+- `authoritative_state_sha256`: `9345097cc3ad47bba0e93f16498a4cd10b7aced2416f8b9fe8c437039071764f`
 - `active_format`: `16:9 / 1920x1080`
 - `current_stage`: `STAGE_05_VISDEV_LOOKDEV_APPROVAL`
 - `current_gate`: `G05_DESIGN_LOOK_APPROVAL`
