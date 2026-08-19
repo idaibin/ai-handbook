@@ -1,12 +1,12 @@
 {
   "schema": "story-studio/g05-storyboard-entry-validation",
   "result": "pass_storyboard_entry_ready_conditions_recorded",
-  "generated_at_utc": "2026-08-19T12:30:00Z",
+  "generated_at_utc": "2026-08-19T14:12:30Z",
   "checks": {
     "yaml_parse": "pass",
     "json_parse": "pass",
     "G05": "approve_rule_level_visual_direction_conditions_recorded",
-    "G06": "entry_allowed_not_started",
+    "G06": "entered_storyboard_ready",
     "storyboard_execution_allowed": true,
     "scene_count": 3,
     "beat_count": 8,
@@ -17,25 +17,37 @@
     "production_ready": false,
     "publication_ready": false,
     "new_story_content_added": false,
-    "current_status_revision": 12,
+    "current_status_revision": 13,
     "current_stage_id": "STAGE_06_STORYBOARD_LAYOUT_ANIMATIC"
   },
   "files": {
     "banchao-ep01-visual-canon-rules.yaml": {
-      "sha256": "b186d6b0972b4660fdf347d5fc7124bc6f344db8cdb87fd4cb131cd0765ab219",
-      "size": 3572
+      "sha256": "1cdd31e90d1a0f8386ce8e689f8ccd4b3aafd05642fbfe817fca10acb6aceaf9",
+      "size": 3551
     },
     "banchao-g05-design-look-decision.yaml": {
       "sha256": "2b27bce497add9bcdfea4944380ba1862aa7f7116bdd42701deee992c74df62a",
       "size": 2151
     },
-    "banchao-ep01-storyboard-text-readiness-decision.yaml": {
-      "sha256": "76fdd8da056d651a4c3354cfd45fccfdcdef8ee43138b05a616b62344f904b05",
-      "size": 2462
+    "banchao-ep01-storyboard-entry-decision.yaml": {
+      "sha256": "fd275e65da17c2ce344e23673eeefbae2fab6b4ba4ab3be7136975e05dfb7929",
+      "size": 1110
     },
     "banchao-ep01-selected-component-styleframes-manifest.json": {
-      "sha256": "aff2b4b112cf64940979a1738b3a3afa264d97a3fa913ba2166b7b44c32fe507",
-      "size": 1690
+      "sha256": "967368330d8211b85c9eccd4ab1c84e79b3c66c53735ea5e41ab3f021ce3a4c5",
+      "size": 3534
+    },
+    "banchao-series-visual-development-scope-decision.yaml": {
+      "sha256": "25de09c5a7f31dfd422056f261d4cf316bba5ece7ec00cb39d2841c615dfc3ef",
+      "size": 4702
+    },
+    "banchao-thirty-six-companions-ensemble-foundation.yaml": {
+      "sha256": "dead20c075b07d4f80c14cdcd224a96df810d5bff897173a14a4edd9ebd315c7",
+      "size": 2914
+    },
+    "banchao-ep01-current-status.json": {
+      "sha256": "a89dc2d738997da61a1e4e8eea97d45a77d2ad362e929d87c22b650723247161",
+      "size": 4873
     }
   }
 }
