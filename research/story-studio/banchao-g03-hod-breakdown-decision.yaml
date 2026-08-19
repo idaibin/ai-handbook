@@ -1,0 +1,28 @@
+schema: story-studio/gate-decision
+gate_id: G03_HOD_BREAKDOWN_COMPLETE
+decision: approve
+decision_timestamp_utc: '2026-08-19T06:15:00Z'
+decision_scope: internal project workflow only
+review_mode: user_delegated_ai_assisted_independent_review_pass
+owner: production_management
+reviewers:
+- all_activated_departments
+approver: USER_DELEGATED_PRODUCER_PROXY
+human_signoff_separately_recorded: false
+self_approval_exception:
+  used: true
+  basis: User explicitly delegated continued execution; decision is limited to internal workflow state and records evidence/conditions.
+  does_not_mean: legal opinion, publication clearance, or human HOD sign-off
+evidence_refs:
+- banchao-ep01-hod-breakdown-package.yaml
+- banchao-ep01-script-lock-package.yaml
+findings:
+- All 3 Scenes, 8 Beats and 14 Shots have department ownership, asset dependencies, risk/constraint context and review cadence.
+- Character and Prop identifiers were normalized to canonical IDs.
+- Shot-level schedule buckets, budget classes, dependency gates, review checkpoints and open questions were added.
+conditions:
+- Shot handles remain provisional until G06.
+- No provider generation is authorized by G03 approval.
+- Relative schedule buckets and budget classes are planning controls, not calendar or cash commitments.
+- Any activated department may return a Shot to revise if dependencies change.
+next_gate: G04_RESEARCH_RIGHTS_CONSTRAINTS_LOCK
