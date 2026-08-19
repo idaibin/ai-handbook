@@ -1,10 +1,10 @@
 {
   "schema": "story-studio/current-status",
   "status_id": "banchao-ep01-current-status",
-  "status_revision": 13,
+  "status_revision": 14,
   "authority": {
     "role": "single_current_state_source",
-    "as_of_utc": "2026-08-19T14:12:30Z",
+    "as_of_utc": "2026-08-19T16:35:00Z",
     "rule": "Stable file directly replaced; no parallel v2/v3 state files."
   },
   "project": {
@@ -20,7 +20,8 @@
     "duration_seconds": 105,
     "scene_count": 3,
     "beat_count": 8,
-    "shot_count": 14
+    "shot_count": 14,
+    "storyboard_panel_count": 27
   },
   "gates": {
     "G01": "approve_conditions_recorded",
@@ -28,7 +29,7 @@
     "G03": "approve_conditions_recorded",
     "G04": "approve_internal_candidate_only",
     "G05": "approve_rule_level_visual_direction_conditions_recorded",
-    "G06": "entered_storyboard_ready"
+    "G06": "in_progress_storyboard_dailies_and_silent_animatic_proxy_complete_timed_lock_pending"
   },
   "readiness": {
     "NarrativeCanon": "approved_working_baseline_conditions_recorded",
@@ -36,41 +37,36 @@
     "ProductionCanon": "not_established",
     "StoryboardTextReady": true,
     "StoryboardExecutionReady": true,
+    "StoryboardDailies": "approve_for_layout_previs_conditions_recorded",
+    "LayoutPrevisReview": "approve_silent_animatic_proxy_conditions_recorded",
+    "SilentAnimaticProxy": "created_105_seconds",
+    "TimedAnimaticLock": "blocked_pending_scratch_dialogue_and_audio_review",
     "production_ready": false,
     "publication_ready": false
   },
-  "text_completion": {
-    "status": "complete",
-    "planned_storyboard_panels": 27,
-    "remaining_text_gaps": 0,
-    "artifacts": {
-      "banchao-ep01-narrative-to-production-bridge.yaml": "b2ddbb13fd1b458145bef1139b6620e323a6966190bc59ad9d1a5946b1042039",
-      "banchao-ep01-blocking-coverage-plan.yaml": "a89e74a9eea4e3c4e3e23af9c3cf15e2fe47d1b5ebf1cb670c38c75847ad4ee2",
-      "banchao-ep01-storyboard-brief.yaml": "53e2eea2d08ec6b31271e39522d48c385886113dbddca7c25ae9e37208f75b44",
-      "banchao-ep01-layout-previs-techvis-plan.yaml": "0dad11540e527150a203f3ba293f7ebc0dfa484a94f59862d42ffd213a2f9c10",
-      "banchao-ep01-scratch-audio-plan.yaml": "05cbdabc701c579ebb38922431f17e0b669fc6d9c0874d5ce26ea90736aedbce",
-      "banchao-ep01-technical-format-decision.yaml": "56f05f29b204e167f7a7ed73daa3a00dbcf829cbef359e38bd901b64f963be5b",
-      "banchao-ep01-storyboard-text-readiness-detail.yaml": "176a06e485cf920404b20ada7e457057c552e8cc15aaa8bdbd44b39eb51fd1c5",
-      "banchao-ep01-storyboard-preproduction-text-package.yaml": "e9e3ed96e959eda882de7d93a793fd1c65ff6c62f6e90a92157767561108e8b4"
-    }
+  "storyboard": {
+    "status": "rough_storyboard_selected_for_layout_previs",
+    "shots": 14,
+    "panels": 27,
+    "duration_seconds": 105,
+    "panel_manifest": "banchao-ep01-storyboard-panel-manifest.yaml",
+    "dailies_decision": "banchao-ep01-storyboard-dailies-decision.yaml",
+    "static_validation": "banchao-ep01-storyboard-static-validation.json",
+    "package": "banchao-ep01-storyboard-rough-package.zip"
   },
-  "lookdev_batch02": {
-    "conformance": "fail_contact_sheet_not_three_native_attempts",
-    "dailies": {
-      "select": 0,
-      "revise": 2,
-      "reject": 1
-    },
-    "G05": "revise",
-    "canonical_assets_promoted": 0
+  "animatic": {
+    "status": "silent_timed_proxy_created_not_locked",
+    "file": "banchao-ep01-silent-animatic-proxy.mp4",
+    "manifest": "banchao-ep01-silent-animatic-proxy-manifest.json",
+    "duration_seconds": 105.0,
+    "sha256": "d22474c1fe8314e885aecb31ff218fef72fb209f9ba45cc64dc6dcfbff19e122",
+    "scratch_dialogue_recorded": false
   },
   "workflow": {
     "current_stage_id": "STAGE_06_STORYBOARD_LAYOUT_ANIMATIC",
-    "next_legal_action": "Create EP01 14-shot / 27-panel Storyboard, then Storyboard Dailies and Layout/Previs review.",
-    "storyboard_entry_condition": "met",
-    "notification_trigger": "met: 文本前置与 G05 已通过，可以进入分镜阶段。",
+    "next_legal_action": "Record ScratchDialogue according to approved plan, assemble audio-enabled TimedAnimatic, then run G06 TimedAnimatic review.",
     "prohibited": [
-      "ShotKeyframe/video before G06 TimedAnimatic lock",
+      "Production ShotKeyframe/video before G06 TimedAnimatic lock",
       "production asset promotion before G07 validation",
       "public/commercial use"
     ]
@@ -83,33 +79,26 @@
     "public/commercial third-party rights clearance",
     "video/audio provider quality speed and cost"
   ],
-  "lookdev_batch03": {
-    "provider_conformance": "contact_sheet_nonconformance_repeated",
-    "selected_component_refs": 3,
-    "approved_rule_groups": 3,
-    "production_assets_approved": 0,
-    "G05": "approve_rule_level_visual_direction_conditions_recorded"
-  },
-  "visual_canon": {
-    "scope": "rule_level_and_selected_components_only",
-    "rules_artifact": "banchao-ep01-visual-canon-rules.yaml",
-    "provider_exception": "derived crops are review evidence, not native production assets",
-    "G07_asset_build_required": true
-  },
-  "series_visual_scope": {
-    "detailed_map_now": false,
-    "narrative_topology_foundation": "8 regions / 25 Location IDs / 24 Episode rows",
-    "generic_western_regions_style": false,
-    "region_specific_lookdev_by_episode": true,
-    "thirty_six_individual_portraits_now": false,
-    "ensemble_foundation": "banchao-thirty-six-companions-ensemble-foundation.yaml",
-    "unit_bible_before_first_central_use": true
-  },
   "artifact_refs": {
-    "visual_canon_rules": "banchao-ep01-visual-canon-rules.yaml",
-    "selected_component_manifest": "banchao-ep01-selected-component-styleframes-manifest.json",
-    "storyboard_entry_decision": "banchao-ep01-storyboard-entry-decision.yaml",
-    "series_visual_scope_decision": "banchao-series-visual-development-scope-decision.yaml",
-    "thirty_six_companions_foundation": "banchao-thirty-six-companions-ensemble-foundation.yaml"
+    "storyboard_panel_manifest": {
+      "file": "banchao-ep01-storyboard-panel-manifest.yaml",
+      "sha256": "0e7f9a13ccaa1df762a71fcfd01c34e1b92d45c35d18409effc57dd95d7bd9ff"
+    },
+    "storyboard_dailies_decision": {
+      "file": "banchao-ep01-storyboard-dailies-decision.yaml",
+      "sha256": "572be33b473293f9305a76a521fb8a014513f46f4175eda2edbe9a89450c6634"
+    },
+    "layout_previs_review": {
+      "file": "banchao-ep01-layout-previs-review.yaml",
+      "sha256": "6ce74d64b9a020cf2496d999e494d0c9a64b72766071cd990a037a8d6ec36546"
+    },
+    "storyboard_static_validation": {
+      "file": "banchao-ep01-storyboard-static-validation.json",
+      "sha256": "69a6b03704524fa07c5f9fe1f66ea7f554744a7f4164ec6b6ef54e7c77f7e730"
+    },
+    "silent_animatic_manifest": {
+      "file": "banchao-ep01-silent-animatic-proxy-manifest.json",
+      "sha256": "f065055ac7dc044f7dca0d34a7f5f77fd470b3a18b13794fb0a22b1cc5fd3c2e"
+    }
   }
 }
