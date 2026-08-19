@@ -1,0 +1,124 @@
+schema: story-studio/asset-build-work-order
+artifact_id: banchao-ep01-g07-asset-build-work-order
+status: authorized_not_executed
+project_id: banchao
+episode_id: EP01
+stage_id: STAGE_07_ASSET_BUILD_TECHNICAL_VALIDATION
+entry_gate: G06_TIMED_ANIMATIC_LOCK approve_timed_animatic_lock_with_conditions
+rights_status: internal_candidate_only
+format:
+  aspect_ratio: '16:9'
+  working_resolution: 1920x1080
+execution_policy:
+- one asset_id per native GenerationAttempt
+- preserve provider-native bytes, input refs, exact output hash and attempt metadata
+- candidate output cannot self-promote to Canon or production_ready
+- Dailies before HOD/G07 decision
+- no readable pseudo-historical text
+- exact model and account data-control status remain not_verified unless provider evidence exists
+work_sequence:
+- G07_A01 CharacterBlueprint Ban Chao
+- G07_A02 CharacterBlueprint Ban Mother
+- G07_A03 CharacterBlueprint Ban Gu
+- G07_A04 CharacterBlueprint Unnamed Scribe
+- G07_A05 Composite Set Plan
+- G07_A06 Hero Brush Sheet
+- G07_A07 Writing Surface Sheet
+- G07_A08 Brush Pouch Sheet
+- G07_A09 Official Desk and Generic Document Packet
+asset_work_items:
+- work_item_id: G07_A01
+  asset_id: CHAR_BAN_CHAO_STATE_01_LUOYANG_SCRIBE
+  artifact: CharacterBlueprint
+  action: replace_previous_candidate
+  requirements:
+  - one landscape four-view sheet: front, three-quarter, profile and back
+  - neutral standing pose, no hand props, no readable text or labels
+  - same face, hair silhouette, body proportions and garment layer order across views
+  - plain matte layered clothing, low saturation, no rank insignia, no ornate pattern
+  - labour-stage fatigue and restraint; no heroic, military or later-life identity
+  tests: [identity_consistency, costume_silhouette, camera_light_test]
+- work_item_id: G07_A02
+  asset_id: CHAR_BAN_MOTHER
+  artifact: CharacterBlueprint
+  action: replace_previous_candidate
+  requirements:
+  - landscape neutral four-view sheet without props
+  - stable age hierarchy and restrained plain costume
+  - no invented name, ornate jewellery or exact historical hairstyle claim
+  tests: [identity_consistency, age_hierarchy, camera_light_test]
+- work_item_id: G07_A03
+  asset_id: CHAR_BAN_GU
+  artifact: CharacterBlueprint
+  action: replace_previous_candidate
+  requirements:
+  - landscape neutral four-view sheet without props
+  - clearly distinct from Ban Chao in face, posture and garment finish
+  - cleaner than Ban Chao but no later-dynasty official uniform
+  tests: [identity_separation, costume_hierarchy, camera_light_test]
+- work_item_id: G07_A04
+  asset_id: CHAR_UNNAMED_SCRIBE
+  artifact: CharacterBlueprint
+  action: replace_previous_candidate
+  requirements:
+  - landscape neutral four-view sheet without props
+  - deliberately low-distinction supporting silhouette
+  - no hero accessory, military identity or modern element
+  tests: [low_distinction_hierarchy, cohort_reuse, camera_light_test]
+- work_item_id: G07_A05
+  asset_id: LOC_LUOYANG_COPYING_COMPOSITE_SET
+  artifact: ProductionDesignSetPlan
+  action: build
+  requirements:
+  - A work axis, B social-pressure axis and C family-threshold axis
+  - camera-safe 180-degree line and coverage positions
+  - simplified composite interior, not a Luoyang historical reconstruction
+  - one motivated side-light direction; no ornate generic ancient study
+  tests: [blocking_geography, coverage, lighting_continuity, set_simplification]
+- work_item_id: G07_A06
+  asset_id: PROP_HERO_BRUSH
+  artifact: HeroPropSheet
+  action: replace_previous_candidate
+  requirements:
+  - general Han-form range: plain slender wooden shaft and simple bristle connection
+  - no metal ferrule, segmented decorative shaft, plastic or modern brush construction
+  - scale, side profile, tip state, worn state and hand-use orientation
+  tests: [form_boundary, hand_choreography, macro_camera_test]
+- work_item_id: G07_A07
+  asset_id: PROP_WRITING_SURFACE
+  artifact: HeroPropSheet
+  action: revise
+  requirements:
+  - narrow bamboo/wood slip-like surfaces
+  - loose, aligned, bundled and partly completed states
+  - no readable text, modern paper, codex or thread-bound book
+  tests: [material_boundary, bundle_states, continuity_count]
+- work_item_id: G07_A08
+  asset_id: PROP_BRUSH_POUCH
+  artifact: ContinuityPropSheet
+  action: replace_previous_candidate
+  requirements:
+  - one plain soft wrap or sleeve silhouette
+  - closed, open, worn and attached states
+  - no roll-case pockets, metal fittings, tassels, embroidery or military appearance
+  tests: [silhouette_consistency, costume_attachment, continuity_states]
+- work_item_id: G07_A09
+  asset_id: SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET
+  artifact: SetPropPackage
+  action: build
+  requirements:
+  - minimal official work surface matching the copying-desk geometry for SHOT_11
+  - generic unreadable document packet and empty-desk state
+  - no complete Lantai reconstruction, rank symbol or readable appointment/dismissal document
+  tests: [match_cut_geometry, abstract_official_space, no_readable_text]
+exit_gate:
+  gate_id: G07_ASSET_BUILD_TECHNICAL_VALIDATION
+  required:
+  - approved production-ready versions for all locked Shot dependencies
+  - camera, lighting, motion and continuity tests
+  - Dailies and HOD decision
+prohibited:
+- Production ShotKeyframe before G07 approval
+- video generation before G07 approval
+- public or commercial use
+next_legal_action: Execute G07_A01 as one native GenerationAttempt, record provenance and run Dailies before continuing.
