@@ -1,0 +1,41 @@
+{
+  "schema": "story-studio/g05-storyboard-entry-validation",
+  "result": "pass_storyboard_entry_ready_conditions_recorded",
+  "generated_at_utc": "2026-08-19T12:30:00Z",
+  "checks": {
+    "yaml_parse": "pass",
+    "json_parse": "pass",
+    "G05": "approve_rule_level_visual_direction_conditions_recorded",
+    "G06": "entry_allowed_not_started",
+    "storyboard_execution_allowed": true,
+    "scene_count": 3,
+    "beat_count": 8,
+    "shot_count": 14,
+    "planned_storyboard_panels": 27,
+    "duration_seconds": 105,
+    "production_assets_approved": 0,
+    "production_ready": false,
+    "publication_ready": false,
+    "new_story_content_added": false,
+    "current_status_revision": 12,
+    "current_stage_id": "STAGE_06_STORYBOARD_LAYOUT_ANIMATIC"
+  },
+  "files": {
+    "banchao-ep01-visual-canon-rules.yaml": {
+      "sha256": "b186d6b0972b4660fdf347d5fc7124bc6f344db8cdb87fd4cb131cd0765ab219",
+      "size": 3572
+    },
+    "banchao-g05-design-look-decision.yaml": {
+      "sha256": "2b27bce497add9bcdfea4944380ba1862aa7f7116bdd42701deee992c74df62a",
+      "size": 2151
+    },
+    "banchao-ep01-storyboard-text-readiness-decision.yaml": {
+      "sha256": "76fdd8da056d651a4c3354cfd45fccfdcdef8ee43138b05a616b62344f904b05",
+      "size": 2462
+    },
+    "banchao-ep01-selected-component-styleframes-manifest.json": {
+      "sha256": "aff2b4b112cf64940979a1738b3a3afa264d97a3fa913ba2166b7b44c32fe507",
+      "size": 1690
+    }
+  }
+}
