@@ -147,9 +147,10 @@
       "size": 248442
     },
     "private_archive": {
-      "file": "story-studio-ep01-g06-timed-animatic.zip",
-      "sha256": "74ba974c9010c30c5c111c1f5d471595d1381c76c219a5b72edec63b143d6423",
-      "size": 125523362
+      "file": "story-studio-ep01-g06-timed-animatic-review-package.zip",
+      "sha256": "26956f99a0e3720b2ff70181538eb3b5b4bc5fe8369892fdf9b735a33b17aa50",
+      "size": 42812843,
+      "storage": "private_google_drive"
     }
   }
 }
