@@ -5,7 +5,7 @@
   "evidence_scope": "public_sanitized_foundation_alignment",
   "current_status_ref": {
     "artifact": "banchao-ep01-current-status.json",
-    "sha256": "6db499373b1088333951a540ddc6250d1490039b4b39571f23d94809ce980e09",
+    "sha256": "9345097cc3ad47bba0e93f16498a4cd10b7aced2416f8b9fe8c437039071764f",
     "authority": "single_current_state_source"
   },
   "foundation_baseline": {
@@ -19,7 +19,7 @@
     },
     "stage_artifact_matrix": {
       "path": "workflows/story-studio/stage-artifact-matrix.yaml",
-      "git_blob_sha": "925039550d3c12a37f946991254ed7458163c7ae"
+      "git_blob_sha": "e5dd8690e123f8bcd756d678a3a1a766c06fbf5b"
     },
     "role_approval_matrix": {
       "path": "workflows/story-studio/role-approval-matrix.yaml",
@@ -27,7 +27,15 @@
     },
     "conditional_modules": {
       "path": "workflows/story-studio/conditional-modules.yaml",
-      "git_blob_sha": "45a9c431249d74bfa832abf42fb648129028943d"
+      "git_blob_sha": "613af18df4c4e3c7cfbf2eed6ce956943a5314f0"
+    },
+    "validation": {
+      "yaml_parse": "pass",
+      "cross_reference_errors": 0,
+      "macro_stages": 10,
+      "quality_gates": 11,
+      "departments": 19,
+      "conditional_modules": 12
     }
   },
   "workflow_state": {
