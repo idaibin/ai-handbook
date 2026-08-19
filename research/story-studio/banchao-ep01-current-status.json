@@ -1,10 +1,10 @@
 {
   "schema": "story-studio/current-status",
   "status_id": "banchao-ep01-current-status",
-  "status_revision": 8,
+  "status_revision": 9,
   "authority": {
     "role": "single_current_state_source",
-    "as_of_utc": "2026-08-19T05:30:00Z",
+    "as_of_utc": "2026-08-19T06:15:00Z",
     "rule": "Stable file directly replaced; no parallel v2/v3 state files."
   },
   "project": {
@@ -25,28 +25,30 @@
     "scene_count": 3,
     "beat_count": 8,
     "shot_breakdown_count": 14,
-    "rights_posture": "internal_candidate_only"
+    "rights_posture": "internal_candidate_only",
+    "package_storage": "private_google_drive",
+    "public_evidence_storage": "github_sanitized_only"
   },
   "gates": {
-    "G01_DEVELOPMENT_GREENLIGHT": "review_ready_approval_pending",
-    "G02_SCRIPT_LOCK": "review_ready_approval_pending",
-    "G03_HOD_BREAKDOWN_COMPLETE": "review_ready_approval_pending",
-    "G04_RESEARCH_RIGHTS_CONSTRAINTS_LOCK": "review_ready_for_internal_candidate_only_approval",
-    "G05_DESIGN_LOOK_APPROVAL": "revise; new upstream rules ready, tests and VisualCanon missing"
+    "G01_DEVELOPMENT_GREENLIGHT": "approve_conditions_recorded",
+    "G02_SCRIPT_LOCK": "approve_conditions_recorded",
+    "G03_HOD_BREAKDOWN_COMPLETE": "approve_conditions_recorded",
+    "G04_RESEARCH_RIGHTS_CONSTRAINTS_LOCK": "approve_internal_candidate_only_conditions_recorded",
+    "G05_DESIGN_LOOK_APPROVAL": "revise_phase_a_authorized"
   },
   "readiness": {
-    "NarrativeCanon": "working_baseline_review_pending",
+    "NarrativeCanon": "approved_working_baseline_conditions_recorded",
     "VisualCanon": "not_approved",
     "ProductionCanon": "not_established",
     "production_ready": false,
     "publication_ready": false
   },
   "workflow": {
-    "current_stage_id": "STAGE_01_DEVELOPMENT_GREENLIGHT_REVIEW_QUEUE",
-    "next_legal_action": "approve_or_revise G01 package, then G02/G03/G04 in order; authorize Round3 Phase A tests only after decisions",
-    "round3_lookdev": "paused",
+    "current_stage_id": "STAGE_05_VISDEV_LOOKDEV_APPROVAL",
+    "next_legal_action": "execute Round3 Phase A three bounded Styleframe/Camera/Lighting tests, then Dailies and G05 HOD review",
+    "round3_lookdev": "phase_a_authorized_not_executed",
     "prohibited": [
-      "bulk Round3 asset generation before G01-G04 decisions",
+      "Round3 Phase B bulk assets before Phase A Dailies/HOD decision",
       "single-view derivation before Character VisualCanon",
       "Storyboard before G05 approve",
       "ShotKeyframe/video before G06 TimedAnimatic lock",
@@ -67,51 +69,84 @@
     },
     "development_greenlight": {
       "file": "banchao-development-greenlight-package.yaml",
-      "sha256": "58bf6a36670f8459b352540ee985a168162e3314eacc370b9707b70249aae008"
+      "sha256": "09711c2a7f760c0817c9bc3aee6aa6eb9b6b0a3917d5dd03c5f55a202b952771",
+      "storage": "private_google_drive"
     },
     "source_ledger": {
       "file": "banchao-source-ledger.yaml",
-      "sha256": "cd0dede56317d9f78cd048c0807debad05593b69528dfbfa800219ae5c302acc"
+      "sha256": "b9e4021f391fb4ccba054d5aabd8ebbbeb2bd7db3338512ce117fe9f9c7b9d4b",
+      "storage": "private_google_drive"
     },
     "narrative_authority": {
       "file": "banchao-narrative-authority-package.yaml",
-      "sha256": "9baa722ddaca4e3466c72e31b360c135071c882f998979bf1a59cf947735a9d8"
+      "sha256": "dd00706bd06a230c7d29558e9666f158269b09b42fa7967a1e25024998f8350b",
+      "storage": "private_google_drive"
     },
     "active_screenplay": {
       "file": "banchao-ep01-screenplay.md",
-      "sha256": "137637f94879a79a1f0a984121d149d5710fbdd40cc53b14e3b6df6a948242d5"
+      "sha256": "d511d443087c47e1ad87aec652a41a8caa8dd37ed74c0a4137694cd980d7e4df",
+      "storage": "private_google_drive"
     },
     "script_lock": {
       "file": "banchao-ep01-script-lock-package.yaml",
-      "sha256": "71d451d1be08abcf685db242c103c001fec8a06a173b9945b6245b23af39f5ac"
+      "sha256": "8a870cdc6731a7b896df0d5e0d062d26a5f4c0f70aa94305b5f0056299e46ca2",
+      "storage": "private_google_drive"
     },
     "hod_breakdown": {
       "file": "banchao-ep01-hod-breakdown-package.yaml",
-      "sha256": "f265db79542ea4b9af013219a1d8a5d3269532bfd90c371f519d19ea126da586"
+      "sha256": "46150d783dd5aadb6da29c0ed5912f344965a14c85147f1dbf5b012fced65334",
+      "storage": "private_google_drive"
     },
     "rights_provenance": {
       "file": "banchao-rights-provenance-package.yaml",
-      "sha256": "c88f8aba855938f9b92da4fdf1e793a34aacc378a249327c99238f45665d4387"
+      "sha256": "067c6ed55514a50ab75a74ecfe286eafdf824553de3711166b0154ffee8b51c0",
+      "storage": "private_google_drive"
     },
     "lookdev_inputs": {
       "file": "banchao-ep01-lookdev-input-package.yaml",
-      "sha256": "9c7059d4e2641b00a018ecb4ce4e4fe5278bcdb4e6ccac404dd5458db6c080d1"
+      "sha256": "9c7059d4e2641b00a018ecb4ce4e4fe5278bcdb4e6ccac404dd5458db6c080d1",
+      "storage": "private_google_drive"
     },
     "round3_work_order": {
       "file": "banchao-ep01-round3-lookdev-work-order.yaml",
-      "sha256": "ae0671a9b8c6fc4c38bd0c251fb23afda1e47407e4cafc89114e34141cf5ed04"
+      "sha256": "ae0671a9b8c6fc4c38bd0c251fb23afda1e47407e4cafc89114e34141cf5ed04",
+      "storage": "private_google_drive"
     },
     "gap_register": {
       "file": "banchao-stage-gap-register.yaml",
-      "sha256": "25d8c138292f631811399f53a6bb0f5a3dd97049ce20c47c916ee1a3cd9b7dd8"
+      "sha256": "5c158ad0952f858fe6a8d24726084f50d564fc8b113a94da1ff4673b4b2ec20c"
     },
     "artifact_map": {
       "file": "banchao-artifact-stage-map.yaml",
-      "sha256": "761f43dd44a9337028aded8b910d3bff86ba2d0c1965ab6e3ebf70b947e60803"
+      "sha256": "dae39ad9bb6c6ce935b08f1fb994af00da1a3c3ce514a2d0397f61bf98fdd786",
+      "storage": "public_github_and_private_drive"
     },
     "validation": {
       "file": "banchao-foundation-closure-validation.json",
-      "sha256": "f0fed54a5ce4b8a601b231cb039710bb1c2668e0dcf692c2f92952b76c16c044"
+      "sha256": "684b093c2875550ab8f320e5d09457fedc240e4e1d110e48da6aebe6234aa2b5",
+      "storage": "public_github_and_private_drive"
+    }
+  },
+  "gate_decision_refs": {
+    "G01": {
+      "file": "banchao-g01-development-greenlight-decision.yaml",
+      "sha256": "b8042ab620d5c497c2239a969c2155b21f6cf1f40e1fdb8806e9163e69a62347",
+      "storage": "public_github_and_private_drive"
+    },
+    "G02": {
+      "file": "banchao-g02-script-lock-decision.yaml",
+      "sha256": "2a25f2b2a7c9693cb3f15bc388cbd8ac72bc3ae6fc17685a6f09ed656edb799d",
+      "storage": "public_github_and_private_drive"
+    },
+    "G03": {
+      "file": "banchao-g03-hod-breakdown-decision.yaml",
+      "sha256": "17b68a8f35736e095f3bab17c98e7cfa93d8bc95a170865d5c606b535f0ec7e2",
+      "storage": "public_github_and_private_drive"
+    },
+    "G04": {
+      "file": "banchao-g04-research-rights-constraints-decision.yaml",
+      "sha256": "13edc282e8c828751b942d66f1a1afe2193891483a275f8c99d486f7b9fb784b",
+      "storage": "public_github_and_private_drive"
     }
   }
 }
