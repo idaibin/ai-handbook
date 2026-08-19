@@ -1,0 +1,83 @@
+schema: story-studio/visual-canon-rules
+artifact_id: banchao-ep01-visual-canon-rules
+status: approved_rule_level_selected_components
+project_id: banchao
+episode_id: EP01
+approved_at_utc: '2026-08-19T12:30:00Z'
+rights_status: internal_candidate_only
+approval_scope:
+  rule_level_visual_direction: approved
+  selected_components: approved_for_storyboard_reference
+  production_assets: not_approved
+  publication_assets: not_approved
+show_look:
+  palette:
+  - cool_grey
+  - earth_brown
+  - ink_black
+  - muted_skin
+  saturation: low
+  contrast: restrained
+  lighting: motivated soft side light with readable shadow detail
+  forbidden:
+  - decorative golden ancient glow
+  - generic teal-orange grade
+  - crushed blacks hiding face or hands
+  - inconsistent white balance inside a Scene
+character_costume_direction:
+  performance: restrained, fatigued, inward, not heroic
+  costume: plain layered matte cloth, no pattern or rank decoration
+  hair: simple stable silhouette without later-dynasty headwear
+  selected_component_ref:
+    file: SF_EP01_CHARACTER_COSTUME_SHOWLOOK_SELECTED_COMPONENT.png
+    sha256: 6e96f334e4ac7dd06ae0f55d0d419efe69351fa29acc71ce4585ea04b6cdd936
+  noncanonical_details:
+  - exact face identity
+  - exact hairstyle construction
+  - exact garment cut and fabric weave
+  - writing surface and brush geometry shown in the source image
+composite_set_camera_lighting_direction:
+  staging:
+    A_work_axis: Ban Chao and low writing desk
+    B_social_pressure_axis: low-distinction scribes side/rear
+    C_family_threshold_axis: Ban Mother at edge/threshold
+  spatial_rule: minimal Composite Set, not historical reconstruction
+  camera: natural perspective, readable foreground/midground/background, no extreme wide distortion
+  lighting: one motivated side-light direction with negative fill and readable hands/faces
+  selected_component_ref:
+    file: SF_EP01_COMPOSITE_SET_CAMERA_LIGHTING_SELECTED_COMPONENT.png
+    sha256: bd859972325ea78d510d576b6659cf28becf4a28e5f2f20b88e48e1a6b0b82f8
+  noncanonical_details:
+  - lattice-window construction
+  - shelves, vessels and background dressing
+  - wall, doorway and furniture construction
+  - exact room plan
+hero_prop_hand_direction:
+  approved_components:
+  - close-up framing of hand, brush and contact point
+  - readable action phase and natural side light
+  - restrained material palette
+  selected_component_ref:
+    file: SF_EP01_HERO_PROP_HAND_LIGHTING_SELECTED_COMPONENT.png
+    sha256: 36b6c3e2954ab83be1e72109731b2fc3733e0146f4837edff4dfa84e9a0d23d9
+  explicitly_not_canonical:
+  - brush ferrule, segmentation and exact form
+  - pseudo-writing or marks on slips
+  - exact slip dimensions, binding and material
+  - inkstone and auxiliary object form
+storyboard_usage:
+  allowed: true
+  rule: Storyboard may use simplified silhouettes and placeholders that obey these rules; it must not copy noncanonical details as historical fact.
+  required_annotations:
+  - Character/Costume details provisional until G07 asset build
+  - Set architecture and dressing provisional until G07
+  - Hero Brush and Writing Surface provisional until G07
+provider_exception:
+  issue: ChatGPT Image repeatedly returned contact-sheet boards despite separate-native-attempt instructions.
+  disposition: derived crops accepted only as selected_component review evidence, not as native GenerationAttempt or production asset.
+  does_not_block: Storyboard visual-direction entry
+  still_blocks:
+  - production-ready Character assets
+  - production-ready Set assets
+  - production-ready Hero Prop assets
+  - publication_ready
