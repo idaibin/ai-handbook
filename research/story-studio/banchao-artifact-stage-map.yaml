@@ -1,0 +1,528 @@
+schema: story-studio/project-artifact-stage-map
+artifact_id: banchao-artifact-stage-map
+status: complete_with_blocking_gaps
+project_id: banchao
+as_of_utc: '2026-08-19T04:20:00Z'
+authority:
+  workflow_ref: workflows/story-studio/film-department-gate-matrix-v1.yaml
+  glossary_ref: workflows/story-studio/core-glossary.yaml
+  stage_artifact_matrix_ref: workflows/story-studio/stage-artifact-matrix.yaml
+  role_approval_matrix_ref: workflows/story-studio/role-approval-matrix.yaml
+  rule: Mapping describes what existing files actually support. Overlapping content is not silently promoted to a required
+    artifact or approved gate.
+mapping_status_vocabulary:
+  satisfies: Meets the named required artifact at the assessed scope.
+  satisfies_working_baseline: Usable working content exists but formal gate approval may still be absent.
+  partially_satisfies: Useful content exists but required fields or authority are missing.
+  supports_only: Evidence or component support; not the required artifact itself.
+  historical_snapshot: Retained for provenance; current state claims must not drive workflow.
+  gate_failed: Review artifact exists and returned revise/reject/blocked.
+  governance_artifact: State/evidence governance, not a creative-stage deliverable.
+artifact_count: 20
+artifacts:
+- logical_id: ART_NARRATIVE_BIBLE_WORKING
+  source_file: banchao__ip__story-bible-world-background__2026-08-18__v01.md
+  source_sha256: fe52a7017eb774413b2c5dbe51aa9dd522e8b624dc567ef95f1ce1a289b766c0
+  canonical_terms:
+  - StoryBible
+  - WorldBible
+  - CharacterBible
+  - NarrativeBible
+  - Premise
+  - Logline
+  - Theme
+  - CharacterArc
+  stage_id: STAGE_02_NARRATIVE_SCRIPT_LOCK
+  gate_id: G02_SCRIPT_LOCK
+  artifact_type: working_narrative_compound
+  owner: writing_story
+  reviewers:
+  - directing
+  - editorial
+  - sound_music
+  - research
+  - continuity
+  approver: director
+  current_state: working_baseline_not_formally_locked
+  mapping_status: partially_satisfies
+  missing_or_noncompliant:
+  - active format still says 9:16 while project authority is 16:9
+  - mixes narrative content with old provider/tool responsibilities
+  - WorldBible lacks production-facing language, architecture, sound, weather and location rules
+  - CharacterBible lacks per-character objective, need, performance, speech, state and continuity fields
+  - not a formal SeriesCreativeConstitution
+- logical_id: ART_CHARACTER_ARC_FULL_TRAJECTORY
+  source_file: banchao__ip__full-trajectory__2026-08-18__v01.md
+  source_sha256: 8f20557c67d53a6fa771e9a806c6dfbd4df5969541b3c0841e6b9286d8ba2680
+  canonical_terms:
+  - CharacterArc
+  - ChapterOrSeason
+  - Episode
+  - Treatment
+  stage_id: STAGE_02_NARRATIVE_SCRIPT_LOCK
+  gate_id: G02_SCRIPT_LOCK
+  artifact_type: series_arc_support
+  owner: writing_story
+  reviewers:
+  - directing
+  - editorial
+  - sound_music
+  - research
+  - continuity
+  approver: director
+  current_state: working_baseline
+  mapping_status: supports_only
+  missing_or_noncompliant:
+  - document status still references an expansion brief/master v2
+  - does not contain production CharacterBible fields
+  - does not lock series format, audience or distribution
+- logical_id: ART_EPISODE_TREATMENT_24
+  source_file: banchao__script__24-episode-treatment__2026-08-18__v01.md
+  source_sha256: e6ea119124678d1de69a53b3e9bb65abe6a982a69a73583c2155977e44550a05
+  canonical_terms:
+  - Treatment
+  - Episode
+  - ChapterOrSeason
+  - CharacterArc
+  stage_id: STAGE_02_NARRATIVE_SCRIPT_LOCK
+  gate_id: G02_SCRIPT_LOCK
+  artifact_type: episode_treatment
+  owner: writing_story
+  reviewers:
+  - directing
+  - editorial
+  - sound_music
+  - research
+  - continuity
+  approver: director
+  current_state: working_baseline
+  mapping_status: satisfies_working_baseline
+  missing_or_noncompliant:
+  - not a Screenplay
+  - episode IDs are headings rather than a structured registry
+  - format field remains an interface placeholder and not the series authority
+- logical_id: ART_HISTORICAL_RESEARCH_DRAFT
+  source_file: Ban Chao Historical Research v0.1
+  source_sha256: null
+  canonical_terms:
+  - StoryBible
+  - SourceLedger
+  stage_id: STAGE_01_DEVELOPMENT_GREENLIGHT
+  gate_id: G01_DEVELOPMENT_GREENLIGHT
+  artifact_type: historical_draft
+  owner: production_management
+  reviewers:
+  - writing_story
+  - directing
+  - research
+  - rights_legal
+  - editorial
+  approver: producer
+  current_state: historical_snapshot
+  mapping_status: historical_snapshot
+  missing_or_noncompliant:
+  - draft has no claim-level citations or stable source IDs
+  - far less complete than current NarrativeBible
+  - must not be selected as current authority
+- logical_id: ART_EP01_SCREENPLAY
+  source_file: banchao__script__ep01-yongshu__2026-08-18__v01.1.md
+  source_sha256: a2ba6bb8cbd094ea65c3cdcdb0e341929f479fb9cbcfe0b2cbdc4c36bad02f0e
+  canonical_terms:
+  - Screenplay
+  - Beat
+  - ScriptLock
+  stage_id: STAGE_02_NARRATIVE_SCRIPT_LOCK
+  gate_id: G02_SCRIPT_LOCK
+  artifact_type: episode_screenplay
+  owner: writing_story
+  reviewers:
+  - directing
+  - editorial
+  - sound_music
+  - research
+  - continuity
+  approver: director
+  current_state: validated_content_input_not_formal_G02_pass
+  mapping_status: partially_satisfies
+  missing_or_noncompliant:
+  - document header says screenplay-draft-ready-for-review
+  - aspect ratio says 9:16 and conflicts with active 16:9 contract
+  - no stable Scene IDs or Beat IDs
+  - no recorded TableRead/TimingRead result
+  - no ScratchDialogue plan or structured evidence matrix
+- logical_id: ART_EP01_WORLD_VALIDATION
+  source_file: banchao__evidence__ep01-world-background-validation__2026-08-18__v01.1.md
+  source_sha256: b29cb1188ede5ce598ed045c8ce772eb94be9d07bfc48104d51bbf6f529aacb2
+  canonical_terms:
+  - fact
+  - inference
+  - adaptation
+  - WorldBible
+  stage_id: STAGE_04_RESEARCH_RIGHTS_CONSTRAINTS
+  gate_id: G04_RESEARCH_RIGHTS_CONSTRAINTS_LOCK
+  artifact_type: historical_validation_evidence
+  owner: research_rights_panel
+  reviewers:
+  - production_design
+  - character_design_costume_hmu
+  - props
+  - cinematography
+  - vfx
+  - ai_production_engineering
+  approver: research_lead_and_rights_approver
+  current_state: historical_validation_snapshot
+  mapping_status: supports_only
+  missing_or_noncompliant:
+  - visual pass_with_tbd state is superseded by 19/19 closed VisualResearchRegistry
+  - not a WorldBible or RightsLedger
+  - does not replace claim-level SourceLedger
+- logical_id: ART_EP01_FORMAT_CONTRACT
+  source_file: banchao-ep01-production-format-contract-v1.yaml
+  source_sha256: a7ce981855064f348b82a4b11899972c43395d33704f3ad40079794b8a5cfc33
+  canonical_terms:
+  - Episode
+  - Master
+  stage_id: STAGE_01_DEVELOPMENT_GREENLIGHT
+  gate_id: G01_DEVELOPMENT_GREENLIGHT
+  artifact_type: episode_format_contract
+  owner: production_management
+  reviewers:
+  - writing_story
+  - directing
+  - research
+  - rights_legal
+  - editorial
+  approver: producer
+  current_state: active_EP01_only
+  mapping_status: partially_satisfies
+  missing_or_noncompliant:
+  - does not satisfy SeriesFormatContract for all 24 episodes
+  - NarrativeBible and Screenplay still contain stale 9:16 claims
+- logical_id: ART_EP01_SHOT_LIST
+  source_file: banchao__contract__ep01-shot-list__2026-08-19__v01.1.yaml
+  source_sha256: 17c9cc91eac282d9d025013186180bafd22782a2e4fce2783af99f68ad0551d3
+  canonical_terms:
+  - ShotList
+  - Shot
+  - Coverage
+  - Blocking
+  stage_id: STAGE_06_STORYBOARD_LAYOUT_ANIMATIC
+  gate_id: G06_TIMED_ANIMATIC_LOCK
+  artifact_type: shot_planning_baseline
+  owner: directing_editorial
+  reviewers:
+  - cinematography
+  - layout_previs
+  - sound_music
+  - continuity
+  - vfx
+  - action_stunts
+  approver: director_and_editor
+  current_state: validated_static_14_shots_105_seconds
+  mapping_status: partially_satisfies
+  missing_or_noncompliant:
+  - no stable Scene IDs or Beat IDs
+  - no approved BlockingCoveragePlan
+  - camera strings are not a Camera/Lensing Plan
+  - no lens/FOV/camera height/axis/handles
+  - not Storyboard, Layout, Previs, Techvis or Animatic
+- logical_id: ART_EP01_CONTINUITY
+  source_file: banchao__contract__ep01-continuity__2026-08-19__v01.1.yaml
+  source_sha256: 901d16bd439b675b918fcfae2a7dd682f8ade2d91589d3755ac1a0849a9bb7b4
+  canonical_terms:
+  - Blocking
+  - Shot
+  - ShotContract
+  stage_id: STAGE_03_HOD_BREAKDOWN_PLANNING
+  gate_id: G03_HOD_BREAKDOWN_COMPLETE
+  artifact_type: continuity_contract
+  owner: production_management
+  reviewers:
+  - all_activated_departments
+  approver: producer
+  current_state: validated_static
+  mapping_status: partially_satisfies
+  missing_or_noncompliant:
+  - not a Daily Continuity Log
+  - does not record approved camera, lighting, costume and prop states per Take
+  - no Scene/Beat linkage
+  - does not replace NarrativeToProductionBridge
+- logical_id: ART_EP01_ASSET_MANIFEST
+  source_file: banchao__evidence__ep01-asset-manifest-increment__2026-08-18__v01.yaml
+  source_sha256: 994625a2502cef1360107f19aec75e08610455fe8dd70dffe3e446b6f0f5671a
+  canonical_terms:
+  - ReferenceAsset
+  - CharacterBlueprint
+  - HeroProp
+  stage_id: STAGE_03_HOD_BREAKDOWN_PLANNING
+  gate_id: G03_HOD_BREAKDOWN_COMPLETE
+  artifact_type: asset_requirement_inventory
+  owner: production_management
+  reviewers:
+  - all_activated_departments
+  approver: producer
+  current_state: historical_inventory_with_valid_hashes
+  mapping_status: partially_satisfies
+  missing_or_noncompliant:
+  - statuses predate HOD Round 2
+  - no current owner/reviewer/approver
+  - no parent/derived/superseded lineage
+  - does not identify current Round-3 replacement targets
+  - not a complete AssetLineageGraph
+- logical_id: ART_EP01_REFERENCE_PLAN
+  source_file: banchao__contract__ep01-reference-asset-plan__2026-08-18__v01.yaml
+  source_sha256: 69a08dc2459926c0b33704691d3043ab057d8ef4677dca9ac7f7002bf8e92b7f
+  canonical_terms:
+  - ReferenceAsset
+  - CharacterBlueprint
+  - GenerationAttempt
+  stage_id: STAGE_05_VISDEV_LOOKDEV_APPROVAL
+  gate_id: G05_DESIGN_LOOK_APPROVAL
+  artifact_type: lookdev_candidate_plan
+  owner: production_design
+  reviewers:
+  - directing
+  - cinematography
+  - lighting
+  - character_design_costume_hmu
+  - props
+  - vfx
+  - continuity
+  - colour_qc
+  - research
+  approver: director_and_relevant_hod
+  current_state: historical_snapshot_valid_media_hashes
+  mapping_status: historical_snapshot
+  missing_or_noncompliant:
+  - research-open and keyframe-gate claims are superseded
+  - exact model and rights remain unknown
+  - candidate generation does not satisfy design approval
+- logical_id: ART_VISUAL_RESEARCH_REGISTRY
+  source_file: banchao__contract__ep01-visual-research-registry__2026-08-19__v01.3.yaml
+  source_sha256: ff141d5cd117c6e92486d16b327b637cefae0cc36f5bf98fd1f6c19b1160c17a
+  canonical_terms:
+  - VisualDevelopment
+  - fact
+  - inference
+  - adaptation
+  stage_id: STAGE_04_RESEARCH_RIGHTS_CONSTRAINTS
+  gate_id: G04_RESEARCH_RIGHTS_CONSTRAINTS_LOCK
+  artifact_type: visual_research_registry
+  owner: research_rights_panel
+  reviewers:
+  - production_design
+  - character_design_costume_hmu
+  - props
+  - cinematography
+  - vfx
+  - ai_production_engineering
+  approver: research_lead_and_rights_approver
+  current_state: pass_19_of_19_closed
+  mapping_status: satisfies
+  missing_or_noncompliant:
+  - research closure does not equal VisualCanon, RightsLedger, production_ready or publication_ready
+- logical_id: ART_PROVIDER_ROUTE
+  source_file: banchao__contract__provider-and-production-route__2026-08-18__v01.md
+  source_sha256: c3b6f3177bb0faf47f8d47a14ce6ab902a1562ff64268353340b9203ee8da613
+  canonical_terms:
+  - ProductionBible
+  - GenerationAttempt
+  stage_id: STAGE_03_HOD_BREAKDOWN_PLANNING
+  gate_id: G03_HOD_BREAKDOWN_COMPLETE
+  artifact_type: provider_route_snapshot
+  owner: production_management
+  reviewers:
+  - all_activated_departments
+  approver: producer
+  current_state: superseded_status_claims
+  mapping_status: historical_snapshot
+  missing_or_noncompliant:
+  - says 9:16 and three-episode pilot
+  - lists unverified provider versions as candidates
+  - ShotList/Continuity not_started claims are outdated
+  - not a ProductionPlan, RightsLedger or ProviderProvenancePolicy
+- logical_id: ART_LOOKDEV_CANDIDATE_MEDIA
+  source_file: legacy ReferenceAssets and CharacterBlueprints (8 + 4 images)
+  source_sha256: null
+  canonical_terms:
+  - ReferenceAsset
+  - CharacterBlueprint
+  - Turnaround
+  - candidate
+  stage_id: STAGE_05_VISDEV_LOOKDEV_APPROVAL
+  gate_id: G05_DESIGN_LOOK_APPROVAL
+  artifact_type: candidate_asset_group
+  owner: production_design
+  reviewers:
+  - directing
+  - cinematography
+  - lighting
+  - character_design_costume_hmu
+  - props
+  - vfx
+  - continuity
+  - colour_qc
+  - research
+  approver: director_and_relevant_hod
+  current_state: reviewed_round1_not_canonical
+  mapping_status: supports_only
+  missing_or_noncompliant:
+  - no complete asset approved
+  - rights and exact model unknown
+  - not Styleframes, ShowLook, production_ready or publication_ready
+- logical_id: ART_LOOKDEV_ROUND2_TAKES
+  source_file: LookDev Round 2 provider-native and 1920x1080 derivatives (8 Takes)
+  source_sha256: null
+  canonical_terms:
+  - GenerationAttempt
+  - Take
+  - DailiesOrRushes
+  - candidate
+  stage_id: STAGE_05_VISDEV_LOOKDEV_APPROVAL
+  gate_id: G05_DESIGN_LOOK_APPROVAL
+  artifact_type: lookdev_attempt_group
+  owner: production_design
+  reviewers:
+  - directing
+  - cinematography
+  - lighting
+  - character_design_costume_hmu
+  - props
+  - vfx
+  - continuity
+  - colour_qc
+  - research
+  approver: director_and_relevant_hod
+  current_state: 0_select_6_revise_2_reject
+  mapping_status: gate_failed
+  missing_or_noncompliant:
+  - no Select
+  - no approved Character/Location/Prop design
+  - exact model and rights unknown
+- logical_id: ART_LOOKDEV_DAILIES_ROUND2
+  source_file: banchao-ep01-lookdev-dailies-review-round2-v1.yaml
+  source_sha256: 487a89f5b1235fb0710df219e44acb8dd2bd636273f518ee6cbc5378bc21b2c3
+  canonical_terms:
+  - DailiesOrRushes
+  - Take
+  - Select
+  stage_id: STAGE_05_VISDEV_LOOKDEV_APPROVAL
+  gate_id: G05_DESIGN_LOOK_APPROVAL
+  artifact_type: lookdev_dailies_review
+  owner: production_design
+  reviewers:
+  - directing
+  - cinematography
+  - lighting
+  - character_design_costume_hmu
+  - props
+  - vfx
+  - continuity
+  - colour_qc
+  - research
+  approver: director_and_relevant_hod
+  current_state: revise_required
+  mapping_status: satisfies_review_artifact
+  missing_or_noncompliant:
+  - this is LookDev Dailies, not STAGE_08 Shot Production Dailies
+  - no Select generated
+- logical_id: ART_VISUAL_CANON_DECISION_ROUND2
+  source_file: banchao-ep01-minimum-visual-canon-hod-review-round2-v1.yaml
+  source_sha256: 16aa1794dc5b9a23877b257600f287d8b86728eea1ec60ced3b8cfa995ba3c98
+  canonical_terms:
+  - VisualCanon
+  - canonical
+  stage_id: STAGE_05_VISDEV_LOOKDEV_APPROVAL
+  gate_id: G05_DESIGN_LOOK_APPROVAL
+  artifact_type: design_approval_decision
+  owner: production_design
+  reviewers:
+  - directing
+  - cinematography
+  - lighting
+  - character_design_costume_hmu
+  - props
+  - vfx
+  - continuity
+  - colour_qc
+  - research
+  approver: director_and_relevant_hod
+  current_state: revise_0_approved
+  mapping_status: satisfies_decision_artifact_gate_not_passed
+  missing_or_noncompliant:
+  - G05 did not pass
+  - cannot unlock SingleView, Storyboard or ShotKeyframe production
+- logical_id: ART_ROUND3_WORK_ORDER
+  source_file: banchao-ep01-lookdev-revision-work-order-v1.2.yaml
+  source_sha256: c10739c2b1bcd21f02b4806d082ec156dd88301f509e35f5cf8dc16b8fa550ae
+  canonical_terms:
+  - LookDevelopment
+  - GenerationAttempt
+  stage_id: STAGE_05_VISDEV_LOOKDEV_APPROVAL
+  gate_id: G05_DESIGN_LOOK_APPROVAL
+  artifact_type: lookdev_work_order
+  owner: production_design
+  reviewers:
+  - directing
+  - cinematography
+  - lighting
+  - character_design_costume_hmu
+  - props
+  - vfx
+  - continuity
+  - colour_qc
+  - research
+  approver: director_and_relevant_hod
+  current_state: paused_before_generation
+  mapping_status: supports_only
+  missing_or_noncompliant:
+  - work order predates canonical terminology mapping
+  - must be rewritten from normalized NarrativeBible, CharacterBible, ProductionBible and rights/provenance rules before execution
+- logical_id: ART_CURRENT_STATUS
+  source_file: banchao-ep01-current-status.json
+  source_sha256: null
+  canonical_terms:
+  - Project
+  - Episode
+  stage_id: STAGE_05_VISDEV_LOOKDEV_APPROVAL
+  gate_id: G05_DESIGN_LOOK_APPROVAL
+  artifact_type: current_state_authority
+  owner: production_design
+  reviewers:
+  - directing
+  - cinematography
+  - lighting
+  - character_design_costume_hmu
+  - props
+  - vfx
+  - continuity
+  - colour_qc
+  - research
+  approver: director_and_relevant_hod
+  current_state: authoritative
+  mapping_status: governance_artifact
+  missing_or_noncompliant:
+  - must be updated after this mapping; it is not a creative or production-stage deliverable
+- logical_id: ART_EVENT_LOG
+  source_file: banchao__evidence__events__2026-08-18.jsonl
+  source_sha256: null
+  canonical_terms:
+  - GenerationAttempt
+  - Archive
+  stage_id: STAGE_10_FINISH_DELIVERY_ARCHIVE
+  gate_id: G11_MASTER_DELIVERY_APPROVAL
+  artifact_type: append_only_execution_history
+  owner: production_management
+  reviewers:
+  - directing
+  - editorial
+  - vfx
+  - sound_music
+  - colour_qc
+  - rights_legal
+  - localization_accessibility
+  approver: producer_and_qc_approver
+  current_state: authoritative_evidence_log
+  mapping_status: governance_artifact
+  missing_or_noncompliant:
+  - not an AssetLineageGraph, CostTimeFailureLog or ArchiveManifest by itself
