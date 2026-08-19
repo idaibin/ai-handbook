@@ -1,0 +1,205 @@
+schema: story-studio/storyboard-panel-manifest
+artifact_id: banchao-ep01-storyboard-panel-manifest
+status: rough_storyboard_candidate_for_dailies
+project_id: banchao
+episode_id: EP01
+technical_format:
+  aspect_ratio: '16:9'
+  resolution: 1920x1080
+  frame_rate_fps: 24
+  audio: 48kHz/24-bit working
+rights_status: internal_candidate_only
+visual_policy: rule-level VisualCanon with simplified placeholders; no production asset canon
+panel_count: 27
+shot_count: 14
+duration_seconds: 105
+panels:
+- panel_id: EP01_SHOT_01_P01
+  shot_id: EP01_SHOT_01
+  time_window: 00:00–00:01.5
+  duration_estimate: 约 1.5 秒
+  file: EP01_SHOT_01_P01.png
+  sha256: 62c1f47bb74b85047045c59c6be8c1cba97e1938a7fee797930143ff536e2748
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_01_P02
+  shot_id: EP01_SHOT_01
+  time_window: 00:01.5–00:03
+  duration_estimate: 约 1.5 秒
+  file: EP01_SHOT_01_P02.png
+  sha256: bd8628881f3dfc910d4fd861a8a63c3e0f9ef875ac08ef01f5ae0b9d53269466
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_02_P01
+  shot_id: EP01_SHOT_02
+  time_window: 00:03–00:05.5
+  duration_estimate: 约 2.5 秒
+  file: EP01_SHOT_02_P01.png
+  sha256: 66443a33ad3c8828d730df088676d17b6ee0e5ca8a960226fa762a260f3e125b
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_02_P02
+  shot_id: EP01_SHOT_02
+  time_window: 00:05.5–00:08
+  duration_estimate: 约 2.5 秒
+  file: EP01_SHOT_02_P02.png
+  sha256: 79e673a0df9a1d5d3199aa17f066ee8d72f630f912e1c678329cc4ec3a37dd6a
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_03_P01
+  shot_id: EP01_SHOT_03
+  time_window: 00:08–00:12
+  duration_estimate: 约 4 秒
+  file: EP01_SHOT_03_P01.png
+  sha256: d5c507bf5aba6c2447bcb3cf00171de9bc51070776a1c45b87d79fbf4bed8340
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_03_P02
+  shot_id: EP01_SHOT_03
+  time_window: 00:12–00:16
+  duration_estimate: 约 4 秒
+  file: EP01_SHOT_03_P02.png
+  sha256: 9fcf8811376f20211e93e4bfd36bb592c4e9f39de76166247225394a19996687
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_04_P01
+  shot_id: EP01_SHOT_04
+  time_window: 00:16–00:20.5
+  duration_estimate: 约 4.5 秒
+  file: EP01_SHOT_04_P01.png
+  sha256: 8167e313872505f884da400d4043a1c04498aa0df5bd02bbc3fbc78b2fbf2ef6
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_04_P02
+  shot_id: EP01_SHOT_04
+  time_window: 00:20.5–00:25
+  duration_estimate: 约 4.5 秒
+  file: EP01_SHOT_04_P02.png
+  sha256: 88996ba32a8dc3fd345f9052da0438e37bf51a09886086d46a77422c6c962fe2
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_05_P01
+  shot_id: EP01_SHOT_05
+  time_window: 00:25–00:29.5
+  duration_estimate: 约 4.5 秒
+  file: EP01_SHOT_05_P01.png
+  sha256: 81d15c9f4df26abc3a120a6dd2f3017d040d1d1195f471e7a6577dc5ea91f025
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_05_P02
+  shot_id: EP01_SHOT_05
+  time_window: 00:29.5–00:34
+  duration_estimate: 约 4.5 秒
+  file: EP01_SHOT_05_P02.png
+  sha256: e964b3e3029f6a0d2ca8032bbfd8b39419b558d46fb07c575a624efc0e197065
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_06_P01
+  shot_id: EP01_SHOT_06
+  time_window: 00:34–00:38
+  duration_estimate: 约 4 秒
+  file: EP01_SHOT_06_P01.png
+  sha256: 3ff8318aae32283e9bcb654ad5023a8b568348caaa59c45d7be8f401cf0554a8
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_06_P02
+  shot_id: EP01_SHOT_06
+  time_window: 00:38–00:42
+  duration_estimate: 约 4 秒
+  file: EP01_SHOT_06_P02.png
+  sha256: 5e11585be8b66689f7a5a2e1013eadd713f63dbafa5e8396992e1294d4aacccb
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_07_P01
+  shot_id: EP01_SHOT_07
+  time_window: 00:42–00:50
+  duration_estimate: 约 8 秒
+  file: EP01_SHOT_07_P01.png
+  sha256: 46c6fe7c4034b09ddd2b6d3745ec881d54b2b8b3c137a17ff1d0f1402cb8bca4
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_08_P01
+  shot_id: EP01_SHOT_08
+  time_window: 00:50–00:54
+  duration_estimate: 约 4 秒
+  file: EP01_SHOT_08_P01.png
+  sha256: 6acf9e4c32d8090ec4ae1681225268b9e2133d7a89ae8f4b1a0cd5526fa089f7
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_08_P02
+  shot_id: EP01_SHOT_08
+  time_window: 00:54–00:58
+  duration_estimate: 约 4 秒
+  file: EP01_SHOT_08_P02.png
+  sha256: 3b9cbd73562297646628f34e4fec102c38efc4f90bc8a6f7e9ea13b676323511
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_09_P01
+  shot_id: EP01_SHOT_09
+  time_window: 00:58–01:02.5
+  duration_estimate: 约 4.5 秒
+  file: EP01_SHOT_09_P01.png
+  sha256: 16d0aab18ecbddb8b86fb50cf0c3e27ab9e9fde96243e6968640a6a4add41b92
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_09_P02
+  shot_id: EP01_SHOT_09
+  time_window: 01:02.5–01:07
+  duration_estimate: 约 4.5 秒
+  file: EP01_SHOT_09_P02.png
+  sha256: c46a7cb6e584b7247e9b9d1a6d784403e03a823307a06e0ec207e116a5202d67
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_10_P01
+  shot_id: EP01_SHOT_10
+  time_window: 01:07–01:10
+  duration_estimate: 约 3 秒
+  file: EP01_SHOT_10_P01.png
+  sha256: 41da31c315b4d28f60ff045e3a776f5957074565e3cc0c67ad838069f30e64b3
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_10_P02
+  shot_id: EP01_SHOT_10
+  time_window: 01:10–01:13
+  duration_estimate: 约 3 秒
+  file: EP01_SHOT_10_P02.png
+  sha256: 6e86a93f49d310a86aea18d3e5504207afe8adfe927dee5e26e8aa5544686997
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_10_P03
+  shot_id: EP01_SHOT_10
+  time_window: 01:13–01:16
+  duration_estimate: 约 3 秒
+  file: EP01_SHOT_10_P03.png
+  sha256: f922101ef97845dd113523a63cbfab10ae1539f8589e0a7d7c8df5ccae0957c7
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_11_P01
+  shot_id: EP01_SHOT_11
+  time_window: 01:16–01:20.5
+  duration_estimate: 约 4.5 秒
+  file: EP01_SHOT_11_P01.png
+  sha256: 2e6903a955dfd3e8bbb2b6c1f724bdaecd610625f780586e3dec4fa50868874e
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_11_P02
+  shot_id: EP01_SHOT_11
+  time_window: 01:20.5–01:25
+  duration_estimate: 约 4.5 秒
+  file: EP01_SHOT_11_P02.png
+  sha256: 48360cbc80ea8ac2237ae2dca18af42e7169bfc612adf220d9b529c80ccc6c17
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_12_P01
+  shot_id: EP01_SHOT_12
+  time_window: 01:25–01:30
+  duration_estimate: 约 5 秒
+  file: EP01_SHOT_12_P01.png
+  sha256: 31f5cf944913785f133f510aa10495eb161b9dcdc54934379b1b98e976512d0f
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_12_P02
+  shot_id: EP01_SHOT_12
+  time_window: 01:30–01:35
+  duration_estimate: 约 5 秒
+  file: EP01_SHOT_12_P02.png
+  sha256: 482a7f02d0165acc6655f0b58c58987b1512709590138b33c31650d7b2d4da5c
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_13_P01
+  shot_id: EP01_SHOT_13
+  time_window: 01:35–01:38
+  duration_estimate: 约 3 秒
+  file: EP01_SHOT_13_P01.png
+  sha256: 4c10a93de1a82b89f15bff2bd5ff46cb5a2fff6ff151f5335c6835cfa6b47b3d
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_13_P02
+  shot_id: EP01_SHOT_13
+  time_window: 01:38–01:41
+  duration_estimate: 约 3 秒
+  file: EP01_SHOT_13_P02.png
+  sha256: 66a869be0c38a2a9f63a5987d657cad779c608f8861d8498cface377abf2b060
+  status: rough_storyboard_candidate
+- panel_id: EP01_SHOT_14_P01
+  shot_id: EP01_SHOT_14
+  time_window: 01:41–01:45
+  duration_estimate: 约 4 秒
+  file: EP01_SHOT_14_P01.png
+  sha256: 8437651b6cb33095d9dc0dd4d44eeaf209a60debbf7f5e45ab08bf4e37a22d0b
+  status: rough_storyboard_candidate
