@@ -18,17 +18,17 @@
   },
   "current_status": {
     "file": "banchao-ep01-current-status.json",
-    "sha256": "97f6ceb5700fa31f181603828ac63e663a0b3e1cc79fa30b04ee98215f1bcbfb",
+    "sha256": "6cc764b73e210322e3831743aa9bd1dd1731f7d4a43afedc7f61bfabb604dfc1",
     "status_revision": 15
   },
   "public_files": {
     "banchao-ep01-current-status.json": {
-      "sha256": "97f6ceb5700fa31f181603828ac63e663a0b3e1cc79fa30b04ee98215f1bcbfb",
-      "size": 5686
+      "sha256": "6cc764b73e210322e3831743aa9bd1dd1731f7d4a43afedc7f61bfabb604dfc1",
+      "size": 5741
     },
     "banchao-artifact-stage-map.yaml": {
-      "sha256": "4fe9803003846bc501656b02c5c77cbc35542bc858a9d4e548d8a08d8afae4f4",
-      "size": 2167
+      "sha256": "3730965f0650b0bca92396f159899a3faede0a359e93b3feafebbc06ad782125",
+      "size": 2182
     },
     "banchao-stage-gap-register.yaml": {
       "sha256": "707f20f923f4c0e1bbfb109f5b1aae28aa3a529bf1dd31dd4fa44e625730b4f6",
@@ -92,9 +92,10 @@
       "sha256": "854d527626ca1e7c239b5096bf5c3b813914f8bc2e8768b11a2d3f4eec6ead4d",
       "size": 248442
     },
-    "story-studio-ep01-g06-timed-animatic.zip": {
-      "sha256": "74ba974c9010c30c5c111c1f5d471595d1381c76c219a5b72edec63b143d6423",
-      "size": 125523362
+    "story-studio-ep01-g06-timed-animatic-review-package.zip": {
+      "sha256": "26956f99a0e3720b2ff70181538eb3b5b4bc5fe8369892fdf9b735a33b17aa50",
+      "size": 42812843,
+      "drive_file_id": "10pR8wfosa32hpVxZOCJTImAXZpS-lpoP"
     }
   },
   "G06": {
