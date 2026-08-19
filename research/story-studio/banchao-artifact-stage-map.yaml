@@ -1,8 +1,8 @@
 schema: story-studio/project-artifact-stage-map
 artifact_id: banchao-artifact-stage-map
-status: storyboard_dailies_and_silent_animatic_proxy_complete
+status: G06_timed_animatic_locked_G07_ready
 project_id: banchao
-as_of_utc: '2026-08-19T16:35:00Z'
+as_of_utc: '2026-08-20T00:45:00Z'
 stage_map:
 - stage_id: STAGE_01_DEVELOPMENT_GREENLIGHT
   gate: G01
@@ -21,26 +21,40 @@ stage_map:
   decision: approve_rule_level_visual_direction_conditions_recorded
 - stage_id: STAGE_06_STORYBOARD_LAYOUT_ANIMATIC
   gate: G06
-  decision: in_progress_timed_animatic_lock_pending
-  public_artifacts:
-  - banchao-ep01-storyboard-panel-manifest.yaml
-  - banchao-ep01-storyboard-dailies-decision.yaml
-  - banchao-ep01-layout-previs-review.yaml
-  - banchao-ep01-storyboard-static-validation.json
-  - banchao-ep01-silent-animatic-proxy-manifest.json
-  private_artifacts:
-  - 27 Storyboard Panel PNGs
-  - 4 Storyboard Contact Sheets
-  - banchao-ep01-storyboard-dailies-review.yaml
-  - banchao-ep01-silent-animatic-proxy.mp4
-  - banchao-ep01-storyboard-rough-package.zip
+  decision: approve_timed_animatic_lock_with_conditions
   completed:
     storyboard_panels: 27
     shots: 14
     duration_seconds: 105
-    storyboard_dailies: approve_for_layout_previs_conditions_recorded
-    silent_animatic_proxy: created_not_locked
-  next: ScratchDialogue and audio-enabled TimedAnimatic Review
+    scratch_dialogue_cues: 14
+    timed_animatic: banchao-ep01-timed-animatic-scratch.mp4
+  public_artifacts:
+  - banchao-ep01-scratch-dialogue-cue-manifest.yaml
+  - banchao-ep01-timed-animatic-manifest.json
+  - banchao-ep01-g06-timed-animatic-decision.yaml
+  - banchao-ep01-timed-animatic-validation.json
+  private_artifacts:
+  - banchao-ep01-timed-animatic-scratch.mp4
+  - banchao-ep01-silent-animatic-rebuilt.mp4
+  - DX_SCRATCH.wav
+  - FX_PRELAY.wav
+  - MUSIC_TEMP.wav
+  - MIX_SCRATCH.wav
+  - banchao-ep01-scratch-subtitles.srt
+  - banchao-ep01-timed-animatic-timeline.json
+  - story-studio-ep01-g06-timed-animatic.zip
+- stage_id: STAGE_07_ASSET_BUILD_TECHNICAL_VALIDATION
+  gate: G07
+  decision: ready_to_enter
+  required_minimum_assets:
+  - CharacterState production sheets for Ban Chao, Ban Gu, Ban Mother and Unnamed Scribe
+  - Composite Set plan and camera-safe layout
+  - Hero Brush
+  - Writing Surface
+  - Brush Pouch
+  - Abstract Official Desk and Generic Document Packet
+  - Camera/Lighting/Continuity test package
+  next: G07 Asset Build -> camera/light/motion tests -> production ShotKeyframes
 storage_policy:
-  github: sanitized map/status/decisions/hashes only
-  google_drive: complete private packages, panels, sheets, media and provenance
+  github: sanitized maps/status/decisions/manifests/hashes
+  google_drive: complete private media, audio, packages and provenance
