@@ -2,73 +2,44 @@
   "schema": "story-studio/public-evidence-manifest",
   "project_id": "banchao",
   "episode_id": "EP01",
-  "evidence_scope": "public_sanitized_foundation_alignment",
+  "evidence_scope": "public_sanitized_artifact_mapping",
   "current_status_ref": {
     "artifact": "banchao-ep01-current-status.json",
-    "sha256": "9345097cc3ad47bba0e93f16498a4cd10b7aced2416f8b9fe8c437039071764f",
+    "sha256": "faf61c9be33ce708803b837e4e8ae07611f7b0c6a53a3f8f3cd334b4fa9b8fe1",
     "authority": "single_current_state_source"
   },
-  "foundation_baseline": {
-    "workflow": {
-      "path": "workflows/story-studio/film-department-gate-matrix-v1.yaml",
-      "git_blob_sha": "42bda771339802b54f5b17cd8c66d87d205f9049"
+  "foundation_refs": {
+    "workflow": "workflows/story-studio/film-department-gate-matrix-v1.yaml",
+    "glossary": "workflows/story-studio/core-glossary.yaml",
+    "stage_artifact_matrix": "workflows/story-studio/stage-artifact-matrix.yaml",
+    "role_approval_matrix": "workflows/story-studio/role-approval-matrix.yaml"
+  },
+  "mapping_refs": {
+    "artifact_map": {
+      "artifact": "banchao-artifact-stage-map.yaml",
+      "sha256": "4ddecb64c7dc4719206c5d3ec0c9b498771d6eb5663e665b04053372f2c35240",
+      "mapped_artifact_groups": 20
     },
-    "glossary": {
-      "path": "workflows/story-studio/core-glossary.yaml",
-      "git_blob_sha": "e70aa2fac8e9038600ff5ea2e5fb61236df6ae95"
+    "gap_register": {
+      "artifact": "banchao-stage-gap-register.yaml",
+      "sha256": "a2670a622a3f1eca9daabc6a7e6a2a85fcdc877075d25f2e386de54fb41ffbfc",
+      "required_artifacts_assessed": 68,
+      "current_P0_gaps": 9,
+      "private_detail_sha256": "0941105534f75dda7aabe9618f704a222161ac7b8c63964ddc9a97431c40bf84"
     },
-    "stage_artifact_matrix": {
-      "path": "workflows/story-studio/stage-artifact-matrix.yaml",
-      "git_blob_sha": "e5dd8690e123f8bcd756d678a3a1a766c06fbf5b"
-    },
-    "role_approval_matrix": {
-      "path": "workflows/story-studio/role-approval-matrix.yaml",
-      "git_blob_sha": "8fc7c9c13117988a401724088bdc2c07351d0e37"
-    },
-    "conditional_modules": {
-      "path": "workflows/story-studio/conditional-modules.yaml",
-      "git_blob_sha": "613af18df4c4e3c7cfbf2eed6ce956943a5314f0"
-    },
-    "validation": {
-      "yaml_parse": "pass",
-      "cross_reference_errors": 0,
-      "macro_stages": 10,
-      "quality_gates": 11,
-      "departments": 19,
-      "conditional_modules": 12
+    "alignment_report": {
+      "artifact": "banchao-foundation-alignment.md",
+      "sha256": "b74321aaeddf77b4e1d6c0a44dda724a948f032eac291ddd93c9c5d1bc1810fa"
     }
   },
-  "workflow_state": {
-    "current_stage_id": "STAGE_05_VISDEV_LOOKDEV_APPROVAL",
-    "current_gate_id": "G05_DESIGN_LOOK_APPROVAL",
-    "decision": "revise",
-    "round3_lookdev": "paused_until_foundation_mapping"
+  "current_gate_state": {
+    "G01_DEVELOPMENT_GREENLIGHT": "blocked_or_incomplete",
+    "G02_SCRIPT_LOCK": "blocked_or_incomplete_working_content_present",
+    "G03_HOD_BREAKDOWN_COMPLETE": "blocked_or_incomplete",
+    "G04_RESEARCH_RIGHTS_CONSTRAINTS_LOCK": "research_pass_rights_provenance_incomplete",
+    "G05_DESIGN_LOOK_APPROVAL": "revise"
   },
-  "project_evidence": {
-    "format": "16:9 / 1920x1080",
-    "visual_research": "19/19 closed",
-    "lookdev_round2": {
-      "attempts": 8,
-      "select": 0,
-      "revise": 6,
-      "reject": 2
-    },
-    "canonical_assets": 0,
-    "downstream_counts": {
-      "single_view": 0,
-      "storyboard": 0,
-      "animatic": 0,
-      "keyframes": 0,
-      "video": 0,
-      "final_audio": 0
-    }
-  },
-  "next_legal_action": "map_existing_banchao_artifacts_to_canonical_terms_and_required_stage_artifacts",
-  "private_evidence": "Google Drive private folder",
-  "not_verified": [
-    "exact model identity and version",
-    "image usage and publication rights",
-    "AGY effective model",
-    "video and audio provider quality, speed and cost"
-  ]
+  "media_generated_in_mapping_step": false,
+  "round3_lookdev": "paused",
+  "private_detail": "Google Drive private artifact-stage map includes Drive IDs; public map is sanitized."
 }
