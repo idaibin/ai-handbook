@@ -1,75 +1,54 @@
 schema: story-studio/project-artifact-stage-map
 artifact_id: banchao-artifact-stage-map
-status: storyboard_text_ready_g05_open
+status: storyboard_entry_ready
 project_id: banchao
-as_of_utc: '2026-08-19T11:45:00Z'
+as_of_utc: '2026-08-19T14:12:30Z'
 stage_map:
 - stage_id: STAGE_01_DEVELOPMENT_GREENLIGHT
   gate: G01
   decision: approve_conditions_recorded
-  private_packages:
-  - banchao-development-greenlight-package.yaml
-  - banchao-source-ledger.yaml
 - stage_id: STAGE_02_NARRATIVE_SCRIPT_LOCK
   gate: G02
   decision: approve_conditions_recorded
-  private_packages:
-  - banchao-narrative-authority-package.yaml
-  - banchao-world-foundation-package.yaml
-  - banchao-location-bible.yaml
-  - banchao-character-state-bible.yaml
-  - banchao-ep01-screenplay.md
-  - banchao-ep01-script-lock-package.yaml
 - stage_id: STAGE_03_HOD_BREAKDOWN_PLANNING
   gate: G03
   decision: approve_conditions_recorded
-  private_packages:
-  - banchao-episode-foundation-matrix.yaml
-  - banchao-ep01-hod-breakdown-package.yaml
 - stage_id: STAGE_04_RESEARCH_RIGHTS_CONSTRAINTS
   gate: G04
   decision: approve_internal_candidate_only
-  private_packages:
-  - banchao-rights-provenance-package.yaml
-  - VisualResearchRegistry
 - stage_id: STAGE_05_VISDEV_LOOKDEV_APPROVAL
   gate: G05
-  decision: revise_batch02_reviewed_batch03_required
-  private_packages:
-  - banchao-ep01-lookdev-input-package.yaml
-  - banchao-ep01-lookdev-batch02-review-package.yaml
-  - banchao-ep01-round3-lookdev-work-order.yaml
+  decision: approve_rule_level_visual_direction_conditions_recorded
+  public_artifacts:
+  - banchao-ep01-visual-canon-rules.yaml
+  - banchao-ep01-selected-component-styleframes-manifest.json
+  - banchao-g05-design-look-decision.yaml
+  - banchao-ep01-g05-storyboard-entry-validation.json
+  private_artifacts:
+  - banchao-ep01-round3-phase-a-batch03-attempt-manifest.yaml
+  - banchao-ep01-round3-phase-a-batch03-dailies-review.yaml
+  - three derived 1920x1080 review frames
 - stage_id: STAGE_06_STORYBOARD_LAYOUT_ANIMATIC
   gate: G06
-  decision: not_entered
+  decision: entered_storyboard_ready
   textual_readiness: complete
-  execution: blocked_by_G05
-  private_packages:
-  - banchao-ep01-storyboard-preproduction-text-package.yaml
+  execution: allowed
+  public_artifacts:
+  - banchao-ep01-storyboard-entry-decision.yaml
+  private_artifacts:
   - banchao-ep01-narrative-to-production-bridge.yaml
   - banchao-ep01-blocking-coverage-plan.yaml
   - banchao-ep01-storyboard-brief.yaml
   - banchao-ep01-layout-previs-techvis-plan.yaml
   - banchao-ep01-scratch-audio-plan.yaml
   - banchao-ep01-technical-format-decision.yaml
-private_package_hashes:
-  banchao-ep01-narrative-to-production-bridge.yaml: b2ddbb13fd1b458145bef1139b6620e323a6966190bc59ad9d1a5946b1042039
-  banchao-ep01-blocking-coverage-plan.yaml: a89e74a9eea4e3c4e3e23af9c3cf15e2fe47d1b5ebf1cb670c38c75847ad4ee2
-  banchao-ep01-storyboard-brief.yaml: 53e2eea2d08ec6b31271e39522d48c385886113dbddca7c25ae9e37208f75b44
-  banchao-ep01-layout-previs-techvis-plan.yaml: 0dad11540e527150a203f3ba293f7ebc0dfa484a94f59862d42ffd213a2f9c10
-  banchao-ep01-scratch-audio-plan.yaml: 05cbdabc701c579ebb38922431f17e0b669fc6d9c0874d5ce26ea90736aedbce
-  banchao-ep01-technical-format-decision.yaml: 56f05f29b204e167f7a7ed73daa3a00dbcf829cbef359e38bd901b64f963be5b
-  banchao-ep01-storyboard-text-readiness-detail.yaml: 176a06e485cf920404b20ada7e457057c552e8cc15aaa8bdbd44b39eb51fd1c5
-  banchao-ep01-storyboard-preproduction-text-package.yaml: e9e3ed96e959eda882de7d93a793fd1c65ff6c62f6e90a92157767561108e8b4
-  banchao-ep01-lookdev-batch02-review-package.yaml: fa080cc406218b0f3a8809883c77d6c2857d16d5a63b533f6e43008e567e0a23
-  banchao-ep01-round3-lookdev-work-order.yaml: 846996b607c6f246cc44f16e96cf7745a8bc4f1b7181bdf551bb7f17fd670195
-public_decisions:
-- banchao-g01-development-greenlight-decision.yaml
-- banchao-g02-script-lock-decision.yaml
-- banchao-g03-hod-breakdown-decision.yaml
-- banchao-g04-research-rights-constraints-decision.yaml
-- banchao-g05-design-look-decision.yaml
-- banchao-ep01-storyboard-text-readiness-decision.yaml
+series_scope_artifact:
+  file: banchao-series-visual-development-scope-decision.yaml
+  ensemble_foundation: banchao-thirty-six-companions-ensemble-foundation.yaml
+  decision:
+  - narrative topology now; detailed visual map only when editorial or educational use requires it
+  - no generic Western Regions style; use region-specific Episode LookDev modules
+  - register a ThirtySixCompanionsEnsemble foundation now; expand to UnitBible before first central use; do not create thirty-six portraits now
 storage_policy:
   github: sanitized map/status/decisions/hashes
-  google_drive: complete private packages and media
+  google_drive: complete private packages, media and provenance
