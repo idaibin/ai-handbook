@@ -2,62 +2,109 @@
   "schema": "story-studio/public-evidence-manifest",
   "project_id": "banchao",
   "episode_id": "EP01",
-  "evidence_scope": "public_sanitized_storyboard_dailies_and_silent_animatic_proxy",
-  "as_of_utc": "2026-08-19T16:35:00Z",
+  "evidence_scope": "public_sanitized_G06_timed_animatic_lock_and_G07_entry",
+  "as_of_utc": "2026-08-20T00:45:00Z",
   "storage_policy": {
-    "github": "sanitized manifests/decisions/status/hash indexes only",
-    "google_drive": "complete private packages, panels, sheets, media and provenance"
+    "github": "sanitized decisions/status/manifests/validation/hash indexes only",
+    "google_drive": "complete private video, audio stems, cue files, subtitles, timeline and archive"
   },
   "gate_decisions": {
     "G01": "approve_conditions_recorded",
     "G02": "approve_conditions_recorded",
     "G03": "approve_conditions_recorded",
-    "G04": "approve_internal_candidate_only_conditions_recorded",
+    "G04": "approve_internal_candidate_only",
     "G05": "approve_rule_level_visual_direction_conditions_recorded",
-    "G06": "in_progress_timed_animatic_lock_pending"
+    "G06": "approve_timed_animatic_lock_with_conditions"
   },
   "current_status": {
     "file": "banchao-ep01-current-status.json",
-    "sha256": "9862b7c4552f8c5408f6ec270d29d2ed295da12e6c75c765938ecb2cf918c6eb",
-    "status_revision": 14
-  },
-  "storyboard": {
-    "shots": 14,
-    "panels": 27,
-    "duration_seconds": 105,
-    "dailies": "approve_for_layout_previs_conditions_recorded",
-    "layout_previs": "approve_silent_animatic_proxy_conditions_recorded"
-  },
-  "silent_animatic_proxy": {
-    "duration_seconds": 105.0,
-    "sha256": "d22474c1fe8314e885aecb31ff218fef72fb209f9ba45cc64dc6dcfbff19e122",
-    "size": 3850817,
-    "timed_lock": false,
-    "blocker": "ScratchDialogue and audio review"
+    "sha256": "97f6ceb5700fa31f181603828ac63e663a0b3e1cc79fa30b04ee98215f1bcbfb",
+    "status_revision": 15
   },
   "public_files": {
-    "banchao-ep01-current-status.json": {"sha256": "9862b7c4552f8c5408f6ec270d29d2ed295da12e6c75c765938ecb2cf918c6eb", "size": 4113},
-    "banchao-ep01-storyboard-panel-manifest.yaml": {"sha256": "0e7f9a13ccaa1df762a71fcfd01c34e1b92d45c35d18409effc57dd95d7bd9ff", "size": 7401},
-    "banchao-ep01-storyboard-dailies-decision.yaml": {"sha256": "572be33b473293f9305a76a521fb8a014513f46f4175eda2edbe9a89450c6634", "size": 1161},
-    "banchao-ep01-layout-previs-review.yaml": {"sha256": "6ce74d64b9a020cf2496d999e494d0c9a64b72766071cd990a037a8d6ec36546", "size": 1065},
-    "banchao-ep01-storyboard-static-validation.json": {"sha256": "69a6b03704524fa07c5f9fe1f66ea7f554744a7f4164ec6b6ef54e7c77f7e730", "size": 1272},
-    "banchao-ep01-silent-animatic-proxy-manifest.json": {"sha256": "f065055ac7dc044f7dca0d34a7f5f77fd470b3a18b13794fb0a22b1cc5fd3c2e", "size": 903},
-    "banchao-artifact-stage-map.yaml": {"sha256": "0a8e10c5c2b8e7331fc0c9d013153aa0e38faf821786966201c4443d56840dbf", "size": 1735},
-    "banchao-stage-gap-register.yaml": {"sha256": "af6f82834de462bb8bacff4b2396b05735080cd0503f4535aa97d4e51cb5f91c", "size": 1494},
-    "2026-08-18-banchao-ep01-preproduction.md": {"sha256": "2c6282b826afd84d5e9c726b4360f2118866a2286426cf4ffe607af78f1cc13b", "size": 1726}
+    "banchao-ep01-current-status.json": {
+      "sha256": "97f6ceb5700fa31f181603828ac63e663a0b3e1cc79fa30b04ee98215f1bcbfb",
+      "size": 5686
+    },
+    "banchao-artifact-stage-map.yaml": {
+      "sha256": "4fe9803003846bc501656b02c5c77cbc35542bc858a9d4e548d8a08d8afae4f4",
+      "size": 2167
+    },
+    "banchao-stage-gap-register.yaml": {
+      "sha256": "707f20f923f4c0e1bbfb109f5b1aae28aa3a529bf1dd31dd4fa44e625730b4f6",
+      "size": 1484
+    },
+    "2026-08-18-banchao-ep01-preproduction.md": {
+      "sha256": "81da1ea0356b36d66c71dd16ed83b6fb5bfcb2a7bd9ece0af84acbf031957d43",
+      "size": 1192
+    },
+    "banchao-ep01-scratch-dialogue-cue-manifest.yaml": {
+      "sha256": "e74f052fe0900cbc156a9dc5e27da6d8fbba0a24889d2da7b6aff0648baed711",
+      "size": 7178
+    },
+    "banchao-ep01-timed-animatic-manifest.json": {
+      "sha256": "1efba10072a65ccfc253a82edfaf5180ecf0562ec1187308bcdb93d47a7aac3e",
+      "size": 2663
+    },
+    "banchao-ep01-g06-timed-animatic-decision.yaml": {
+      "sha256": "8c168607d9351696b4ed7053308fe40fd14eda5eff85b282018c591dacacf312",
+      "size": 2255
+    },
+    "banchao-ep01-timed-animatic-validation.json": {
+      "sha256": "032dc3b1df263e73c9089cdfd9c3d922a90f10d2a7192d38ce729f75c55ba954",
+      "size": 2650
+    }
   },
-  "private_file_hashes": {
-    "banchao-ep01-storyboard-dailies-review.yaml": "9a6d4fff59f047ed9a9ab1a304088760b0e90923b0206f83e1f2d406aa4fca3a",
-    "banchao-ep01-silent-animatic-proxy.mp4": "d22474c1fe8314e885aecb31ff218fef72fb209f9ba45cc64dc6dcfbff19e122",
-    "banchao-ep01-storyboard-rough-package.zip": "3c7ad6f0130cb2c848f46ee67a8340bad63570072ea026e34a69d712ac49bc41",
-    "banchao-ep01-storyboard-sheet-01.jpg": "b00777b1ac82fee0579f314e8f615a9d6a8e38aa39c43d5f5e59bb29432edeb2",
-    "banchao-ep01-storyboard-sheet-02.jpg": "6dbd57d68c79ed14c1e1ffcd4a1d82ff63f29ee76b0ab928367681b8f056b568",
-    "banchao-ep01-storyboard-sheet-03.jpg": "8513f2d20f93f71a3e460942740103aa60f4b0522f38ca73e81f43a4574bd8d2",
-    "banchao-ep01-storyboard-sheet-04.jpg": "1df90e5f948263d6ebc86ddc96612e5a90f2a5a4477b68b6c4d23220e12fc4fa"
+  "private_files": {
+    "banchao-ep01-timed-animatic-scratch.mp4": {
+      "sha256": "5123a07d0a840f3a6fc50e7e78c73776b6d2907143fdb6273158dd307d27d2be",
+      "size": 6625492
+    },
+    "banchao-ep01-silent-animatic-rebuilt.mp4": {
+      "sha256": "d9c5ad6e5f13205ad6c92ab36ff4af6895ec016f33cb87005df7c21a38631206",
+      "size": 3905194
+    },
+    "DX_SCRATCH.wav": {
+      "sha256": "f66a318d0939edd7bfde686f0ac7678895fdf964104bf876b5eea94a9c458e81",
+      "size": 15120044
+    },
+    "FX_PRELAY.wav": {
+      "sha256": "c7a21b775c0396b474cfd084309f28bc5fa4de26894e9c4f8bf6acdaba23cdef",
+      "size": 30240044
+    },
+    "MUSIC_TEMP.wav": {
+      "sha256": "c3f7af553ffb3010aef2980a169df0584986c031c6a22474a46a0aacb2949ee1",
+      "size": 30240044
+    },
+    "MIX_SCRATCH.wav": {
+      "sha256": "4ac470ed6862e0d2004865323f8c2d3c7fbd5cee04e7076b53e307a25cd1a306",
+      "size": 30240044
+    },
+    "banchao-ep01-scratch-subtitles.srt": {
+      "sha256": "1da05ab2f3ae3d146faff68cf67802d96cfdc5fa945785067875693cdf081271",
+      "size": 1450
+    },
+    "banchao-ep01-timed-animatic-timeline.json": {
+      "sha256": "501d6e8421af99f173ea3d64e7d1c033e2f5eb7fccf393764d2a0b217502ae55",
+      "size": 8317
+    },
+    "banchao-ep01-timed-animatic-review-contact-sheet.jpg": {
+      "sha256": "854d527626ca1e7c239b5096bf5c3b813914f8bc2e8768b11a2d3f4eec6ead4d",
+      "size": 248442
+    },
+    "story-studio-ep01-g06-timed-animatic.zip": {
+      "sha256": "74ba974c9010c30c5c111c1f5d471595d1381c76c219a5b72edec63b143d6423",
+      "size": 125523362
+    }
+  },
+  "G06": {
+    "decision": "approve_timed_animatic_lock_with_conditions",
+    "duration_seconds": 105.0,
+    "frame_count": 2520,
+    "scratch_dialogue_cues": 14,
+    "next_stage": "STAGE_07_ASSET_BUILD_TECHNICAL_VALIDATION"
   },
   "rights_status": "internal_candidate_only",
   "production_ready": false,
-  "publication_ready": false,
-  "production_shot_keyframes": 0,
-  "video_shots": 0
+  "publication_ready": false
 }
