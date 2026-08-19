@@ -42,7 +42,7 @@ stage_map:
   - MIX_SCRATCH.wav
   - banchao-ep01-scratch-subtitles.srt
   - banchao-ep01-timed-animatic-timeline.json
-  - story-studio-ep01-g06-timed-animatic.zip
+  - story-studio-ep01-g06-timed-animatic-review-package.zip
 - stage_id: STAGE_07_ASSET_BUILD_TECHNICAL_VALIDATION
   gate: G07
   decision: ready_to_enter
