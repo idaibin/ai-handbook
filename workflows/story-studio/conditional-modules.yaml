@@ -1,0 +1,71 @@
+schema: story-studio/conditional-modules
+artifact_id: story-studio-conditional-modules
+status: authoritative
+authority:
+  stable_path: workflows/story-studio/conditional-modules.yaml
+  rule: A module activates only when its trigger is present. Deactivation must be explicit; responsibilities may not silently disappear.
+modules:
+- module_id: MODULE_HISTORICAL_RESEARCH
+  trigger: Historical people, places, institutions, material culture or factual claims appear.
+  owner: research
+  required_artifacts: [SourceLedger, HistoricalClaimMatrix, VisualResearchRegistry, AdaptationExceptionLog]
+  affected_gates: [G01, G02, G04, G05, G11]
+- module_id: MODULE_ACTION_STUNTS
+  trigger: Combat, falls, vehicles, fire or complex physical action materially affects a sequence.
+  owner: action_stunts
+  required_artifacts: [ActionBeatSheet, ActionPrevis, ScreenGeographyPlan, SafetyFeasibilityGate]
+  affected_gates: [G03, G06, G07, G08]
+  boundary: No practical stunt instruction is generated; real-world execution requires qualified adult professionals and safety governance.
+- module_id: MODULE_CROWDS
+  trigger: Crowd scale, group choreography or repeated background identities affect story or production.
+  owner: production_design_vfx
+  required_artifacts: [CrowdBreakdown, CrowdLookDev, CrowdBlockingPrevis, CrowdContinuityRules]
+  affected_gates: [G03, G05, G06, G07, G08]
+- module_id: MODULE_LIP_SYNC_DIALOGUE
+  trigger: Visible speaking faces or dialogue performance require mouth synchronization.
+  owner: directing_sound_music
+  required_artifacts: [VoiceCastingBrief, ScratchDialogue, PhonemeTiming, LipSyncTest, ADRPlan]
+  affected_gates: [G02, G06, G07, G08, G10]
+- module_id: MODULE_COMPLEX_VFX
+  trigger: Environment extension, destruction, magic, weather, compositing or invisible fixes exceed routine cleanup.
+  owner: vfx
+  required_artifacts: [VFXBreakdown, VFXShotList, PlateReferenceRequirements, Techvis, VFXTurnover]
+  affected_gates: [G03, G05, G06, G08, G09, G10]
+- module_id: MODULE_SIMULATION
+  trigger: Hair, cloth, particles, fluids or crowds require controlled simulation.
+  owner: vfx_technical_animation
+  required_artifacts: [SimulationDesign, CollisionConstraintRules, CacheVersionPolicy, SimulationQC]
+  affected_gates: [G05, G07, G08, G10]
+- module_id: MODULE_ORIGINAL_MUSIC
+  trigger: Original score or licensed music materially supports the project.
+  owner: sound_music
+  required_artifacts: [MusicBrief, TempTrackPolicy, CueSheet, SpottingNotes, RightsRecord, Stems]
+  affected_gates: [G02, G06, G09, G10, G11]
+- module_id: MODULE_LOCALIZATION
+  trigger: More than one language or territory is delivered.
+  owner: localization_accessibility
+  required_artifacts: [LocalizationPlan, TerminologyList, SubtitleTemplate, DubMAndEPackage, LanguageQC]
+  affected_gates: [G03, G10, G11]
+- module_id: MODULE_ACCESSIBILITY
+  trigger: Captions, subtitles for deaf or hard-of-hearing audiences, audio description or accessibility requirements apply.
+  owner: localization_accessibility
+  required_artifacts: [AccessibilityPlan, CaptionFile, AudioDescriptionScript, AccessibilityQC]
+  affected_gates: [G03, G10, G11]
+- module_id: MODULE_RIGHTS_SENSITIVE_MATERIAL
+  trigger: Third-party IP, trademarks, recognizable people, copyrighted inputs or uncertain provider rights are involved.
+  owner: rights_legal
+  required_artifacts: [RightsLedger, TermsSnapshot, InputOwnershipRecord, AttributionPlan, ReleaseRestriction]
+  affected_gates: [G01, G04, G07, G08, G11]
+- module_id: MODULE_MULTI_FORMAT_DELIVERY
+  trigger: The project requires multiple aspect ratios, resolutions, frame rates or platform packages.
+  owner: production_post_management
+  required_artifacts: [MultiFormatContract, ProtectedCompositionZones, ReframePlan, PlatformQC]
+  affected_gates: [G01, G05, G06, G09, G11]
+- module_id: MODULE_ARCHIVAL_REUSE
+  trigger: Assets or methods are intended for reuse across episodes, seasons or future projects.
+  owner: production_post_management
+  required_artifacts: [CanonicalAssetIndex, AssetLineageGraph, ArchiveManifest, ReuseRestrictions]
+  affected_gates: [G05, G07, G11]
+activation_record:
+  required_fields: [module_id, active, trigger_evidence, owner, activated_at_stage, deactivation_reason]
+  rule: Every project or episode records active and inactive modules; omission is not a valid state.
