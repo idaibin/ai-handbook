@@ -1,0 +1,29 @@
+{
+  "schema": "story-studio/storyboard-static-validation",
+  "result": "pass_storyboard_and_silent_animatic_proxy_created",
+  "checks": {
+    "panel_count": 27,
+    "expected_panel_count": 27,
+    "shot_count": 14,
+    "expected_shot_count": 14,
+    "duration_seconds": 105,
+    "all_panel_files_exist": true,
+    "all_panel_dimensions_1920x1080": true,
+    "contact_sheet_count": 4,
+    "rights_status": "internal_candidate_only",
+    "production_shot_keyframes_created": 0,
+    "video_created": 0,
+    "storyboard_dailies": "approve_for_layout_previs_conditions_recorded",
+    "layout_previs_review": "approve_silent_animatic_proxy_conditions_recorded",
+    "silent_animatic_proxy_created": true,
+    "silent_animatic_duration_seconds": 105.0,
+    "scratch_dialogue_recorded": false,
+    "G06_timed_animatic_lock": "blocked_pending_scratch_dialogue"
+  },
+  "limitations": [
+    "Panels are derived rough boards from approved direction references and abstract placeholders.",
+    "Exact CharacterBlueprint, Set architecture and HeroBrush construction remain G07 tasks.",
+    "Storyboard Dailies must review eyelines, screen direction, blocking, action continuity and match-cut readability."
+  ],
+  "animatic_manifest": "banchao-ep01-silent-animatic-proxy-manifest.json"
+}
