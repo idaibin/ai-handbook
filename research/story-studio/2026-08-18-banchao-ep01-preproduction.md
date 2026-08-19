@@ -1,36 +1,28 @@
 # 班超 EP01 当前状态（公开投影）
 
 - `authoritative_state`: `banchao-ep01-current-status.json`
-- `status_revision`: `14`
-- `active_format`: `16:9 / 1920x1080 / 24 fps`
-- `G01-G04`: `approved with recorded conditions`
-- `G05`: `approve_rule_level_visual_direction_conditions_recorded`
-- `G06`: `in progress — Storyboard Dailies and silent animatic proxy complete`
+- `status_revision`: `15`
+- `active_format`: `16:9 / 1920x1080 / 24 fps / 48 kHz`
+- `G01-G05`: `approved with recorded conditions`
+- `G06`: `approve_timed_animatic_lock_with_conditions`
 - `rights_status`: `internal_candidate_only`
 
 ## 已完成
 
 - Storyboard：`14 Shots / 27 Panels / 105 seconds`
-- Storyboard Dailies：`approve_for_layout_previs_conditions_recorded`
-- Layout / Previs Review：`approve_silent_animatic_proxy_conditions_recorded`
-- Silent Animatic Proxy：`105.0 seconds / H.264 / 1920x1080 / 24 fps`
-- Production ShotKeyframe：`0`
-- Video Shot：`0`
+- ScratchDialogue：`14 cues / temporary neutral synthetic timing read`
+- FX Prelay：笔触、简牍、脚步、关门钟声和低鼓占位
+- Timed Animatic：`105.0 seconds / H.264 1920x1080 24fps / AAC 48kHz / Chinese subtitle track`
+- G06 锁定：Shot 顺序、Shot 时长、27 Panel 时间分配、对白 cue 基线和标题卡时间窗
 
-当前 Storyboard 使用规则级 VisualCanon 和抽象占位，不把生成图中的精确脸型、建筑、毛笔结构或伪文字升级为 Production Asset。
+## 尚未锁定
 
-## 当前阻塞
+最终配音与表演、LipSync、正式 Character/Set/Costume/HeroProp、Production ShotKeyframe、Foley/SFX/Score/Final Mix 和公开发行权利均未批准。
 
-`G06_TIMED_ANIMATIC_LOCK` 尚未通过。仍需按已批准计划录制 `ScratchDialogue`，加入临时声音并完成 Timed Animatic Review。
+## 当前阶段
 
-在 G06 Timed Animatic Lock 前，禁止 Production ShotKeyframe、视频生成和 Production Asset Promotion。
+`STAGE_07_ASSET_BUILD_TECHNICAL_VALIDATION`
 
-## 系列视觉范围
+下一步：建立 EP01 最小正式资产包，完成 Camera / Lighting / Motion / Continuity 技术测试，再进入 Production ShotKeyframe。
 
-- 完整西域地图：按教育、片头或路线图实际用途触发，不提前制作精确古今坐标图。
-- 西域视觉：按鄯善、于阗、疏勒、龟兹、焉耆、乌孙、康居分别建立 RegionResearchPacket，不采用统一“西域风格”。
-- 三十六人使团：已登记 `ThirtySixCompanionsEnsemble`，首个核心在场 Episode 前扩展 UnitBible；当前不制作 36 张人物图。
-
-## 下一步
-
-`ScratchDialogue → 音频版 105 秒 Timed Animatic → G06 Review`
+仍禁止视频镜头生产和公开/商业使用。
