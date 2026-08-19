@@ -1,50 +1,16 @@
 {
   "schema": "story-studio/current-status",
   "status_id": "banchao-ep01-current-status",
-  "status_revision": 7,
+  "status_revision": 8,
   "authority": {
     "role": "single_current_state_source",
-    "as_of_utc": "2026-08-19T04:20:00Z",
-    "rule": "This stable file is directly replaced. No parallel v2/v3 status files are created."
-  },
-  "foundation_baseline": {
-    "status": "authoritative",
-    "workflow": {
-      "path": "workflows/story-studio/film-department-gate-matrix-v1.yaml",
-      "git_blob_sha": "42bda771339802b54f5b17cd8c66d87d205f9049"
-    },
-    "glossary": {
-      "path": "workflows/story-studio/core-glossary.yaml",
-      "git_blob_sha": "e70aa2fac8e9038600ff5ea2e5fb61236df6ae95"
-    },
-    "stage_artifact_matrix": {
-      "path": "workflows/story-studio/stage-artifact-matrix.yaml",
-      "git_blob_sha": "e5dd8690e123f8bcd756d678a3a1a766c06fbf5b"
-    },
-    "role_approval_matrix": {
-      "path": "workflows/story-studio/role-approval-matrix.yaml",
-      "git_blob_sha": "8fc7c9c13117988a401724088bdc2c07351d0e37"
-    },
-    "conditional_modules": {
-      "path": "workflows/story-studio/conditional-modules.yaml",
-      "git_blob_sha": "613af18df4c4e3c7cfbf2eed6ce956943a5314f0"
-    },
-    "validation": {
-      "yaml_parse": "pass",
-      "macro_stages": 10,
-      "quality_gates": 11,
-      "role_departments": 19,
-      "conditional_modules": 12,
-      "ambiguous_labels_controlled": 7,
-      "cross_reference_errors": 0,
-      "gate_reference_validation": "pass"
-    }
+    "as_of_utc": "2026-08-19T05:30:00Z",
+    "rule": "Stable file directly replaced; no parallel v2/v3 state files."
   },
   "project": {
     "project_id": "banchao",
     "series_title": "《班超：定远》",
     "episode_id": "EP01",
-    "episode_title": "《佣书》",
     "format": {
       "aspect_ratio": "16:9",
       "working_resolution": "1920x1080",
@@ -52,78 +18,100 @@
     },
     "shot_count": 14
   },
-  "verified": {
-    "narrative_baseline": "complete_working_baseline",
-    "screenplay": "frozen_validated_input",
-    "visual_research": "19/19 closed",
-    "lookdev_round2": "8 Takes reviewed",
-    "dailies_round2": {
-      "select": 0,
-      "revise": 6,
-      "reject": 2
-    },
-    "design_look_gate": "revise",
-    "canonical_assets": 0,
-    "single_view": 0,
-    "storyboard": 0,
-    "animatic": 0,
-    "keyframes": 0,
-    "video": 0,
-    "final_audio": 0
+  "foundation_closure": {
+    "glossary_extended_terms": 28,
+    "packages_created": 9,
+    "source_ledger_claims": 10,
+    "scene_count": 3,
+    "beat_count": 8,
+    "shot_breakdown_count": 14,
+    "rights_posture": "internal_candidate_only"
+  },
+  "gates": {
+    "G01_DEVELOPMENT_GREENLIGHT": "review_ready_approval_pending",
+    "G02_SCRIPT_LOCK": "review_ready_approval_pending",
+    "G03_HOD_BREAKDOWN_COMPLETE": "review_ready_approval_pending",
+    "G04_RESEARCH_RIGHTS_CONSTRAINTS_LOCK": "review_ready_for_internal_candidate_only_approval",
+    "G05_DESIGN_LOOK_APPROVAL": "revise; new upstream rules ready, tests and VisualCanon missing"
   },
   "readiness": {
-    "NarrativeCanon": "working_baseline",
+    "NarrativeCanon": "working_baseline_review_pending",
     "VisualCanon": "not_approved",
     "ProductionCanon": "not_established",
     "production_ready": false,
     "publication_ready": false
   },
   "workflow": {
-    "current_stage_id": "STAGE_05_VISDEV_LOOKDEV_APPROVAL",
-    "current_gate_id": "G05_DESIGN_LOOK_APPROVAL",
-    "gate_decision": "revise",
-    "foundation_alignment": "mapping_complete_gap_completion_required",
-    "next_legal_action": "complete_ST01_development_greenlight_artifacts_without_new_media_generation",
+    "current_stage_id": "STAGE_01_DEVELOPMENT_GREENLIGHT_REVIEW_QUEUE",
+    "next_legal_action": "approve_or_revise G01 package, then G02/G03/G04 in order; authorize Round3 Phase A tests only after decisions",
     "round3_lookdev": "paused",
     "prohibited": [
-      "resume Round-3 generation before foundation mapping",
-      "use ambiguous labels such as 脚本、场景、分镜、关键图片、审核通过 or 最终版 in contracts",
-      "single-view derivation before Character VisualCanon approval",
-      "Storyboard or ShotKeyframe production before required Stage 05 and Stage 06 artifacts pass",
-      "claim canonical as production_ready or publication_ready without separate gates",
-      "resume Round-3 generation before P0 foundation gaps are closed",
-      "treat existing overlapping prose as a formally approved required artifact",
-      "claim G01-G04 passed without named artifacts and approval records"
+      "bulk Round3 asset generation before G01-G04 decisions",
+      "single-view derivation before Character VisualCanon",
+      "Storyboard before G05 approve",
+      "ShotKeyframe/video before G06 TimedAnimatic lock",
+      "public/commercial use while rights posture is internal_candidate_only"
     ]
   },
   "not_verified": [
-    "exact ChatGPT image model and version",
-    "image usage and publication rights",
+    "exact ChatGPT image model/version",
+    "current account data control setting",
     "AGY effective model",
-    "video and audio provider quality, speed and cost"
+    "public/commercial third-party rights clearance",
+    "video/audio provider quality, speed and cost"
   ],
-  "artifact_mapping": {
-    "status": "complete",
-    "public_map_path": "research/story-studio/banchao-artifact-stage-map.yaml",
-    "gap_register_path": "research/story-studio/banchao-stage-gap-register.yaml",
-    "alignment_report_path": "research/story-studio/banchao-foundation-alignment.md",
-    "existing_artifact_groups_mapped": 20,
-    "required_artifacts_assessed": 68,
-    "coverage_counts": {
-      "missing": 23,
-      "partial": 21,
-      "satisfies_working_baseline": 1,
-      "satisfies": 1,
-      "gate_failed": 2,
-      "not_started": 20
+  "artifact_refs": {
+    "glossary": {
+      "path": "workflows/story-studio/core-glossary.yaml",
+      "sha256": "3aba937e45b92488a070c67d44c0876131267597c7c78e45906ecebff5356300"
     },
-    "current_P0_gap_count": 9
-  },
-  "upstream_gate_reconciliation": {
-    "G01_DEVELOPMENT_GREENLIGHT": "blocked_or_incomplete",
-    "G02_SCRIPT_LOCK": "blocked_or_incomplete_working_content_present",
-    "G03_HOD_BREAKDOWN_COMPLETE": "blocked_or_incomplete",
-    "G04_RESEARCH_RIGHTS_CONSTRAINTS_LOCK": "research_pass_rights_provenance_incomplete",
-    "G05_DESIGN_LOOK_APPROVAL": "revise"
+    "development_greenlight": {
+      "file": "banchao-development-greenlight-package.yaml",
+      "sha256": "58bf6a36670f8459b352540ee985a168162e3314eacc370b9707b70249aae008"
+    },
+    "source_ledger": {
+      "file": "banchao-source-ledger.yaml",
+      "sha256": "cd0dede56317d9f78cd048c0807debad05593b69528dfbfa800219ae5c302acc"
+    },
+    "narrative_authority": {
+      "file": "banchao-narrative-authority-package.yaml",
+      "sha256": "9baa722ddaca4e3466c72e31b360c135071c882f998979bf1a59cf947735a9d8"
+    },
+    "active_screenplay": {
+      "file": "banchao-ep01-screenplay.md",
+      "sha256": "137637f94879a79a1f0a984121d149d5710fbdd40cc53b14e3b6df6a948242d5"
+    },
+    "script_lock": {
+      "file": "banchao-ep01-script-lock-package.yaml",
+      "sha256": "71d451d1be08abcf685db242c103c001fec8a06a173b9945b6245b23af39f5ac"
+    },
+    "hod_breakdown": {
+      "file": "banchao-ep01-hod-breakdown-package.yaml",
+      "sha256": "f265db79542ea4b9af013219a1d8a5d3269532bfd90c371f519d19ea126da586"
+    },
+    "rights_provenance": {
+      "file": "banchao-rights-provenance-package.yaml",
+      "sha256": "c88f8aba855938f9b92da4fdf1e793a34aacc378a249327c99238f45665d4387"
+    },
+    "lookdev_inputs": {
+      "file": "banchao-ep01-lookdev-input-package.yaml",
+      "sha256": "9c7059d4e2641b00a018ecb4ce4e4fe5278bcdb4e6ccac404dd5458db6c080d1"
+    },
+    "round3_work_order": {
+      "file": "banchao-ep01-round3-lookdev-work-order.yaml",
+      "sha256": "ae0671a9b8c6fc4c38bd0c251fb23afda1e47407e4cafc89114e34141cf5ed04"
+    },
+    "gap_register": {
+      "file": "banchao-stage-gap-register.yaml",
+      "sha256": "25d8c138292f631811399f53a6bb0f5a3dd97049ce20c47c916ee1a3cd9b7dd8"
+    },
+    "artifact_map": {
+      "file": "banchao-artifact-stage-map.yaml",
+      "sha256": "761f43dd44a9337028aded8b910d3bff86ba2d0c1965ab6e3ebf70b947e60803"
+    },
+    "validation": {
+      "file": "banchao-foundation-closure-validation.json",
+      "sha256": "53fab61a2d581287939849b00ec5ce4da7cca4e7523d873de3696b5f7e78525c"
+    }
   }
 }
