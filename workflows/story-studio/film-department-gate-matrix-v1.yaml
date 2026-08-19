@@ -1,430 +1,207 @@
-schema_version: story-studio/film-department-gate-matrix/v1
-artifact_id: story-studio-film-department-gate-matrix-v1
-status: workflow_baseline
-created_at_utc: '2026-08-18T15:45:09Z'
-purpose: Map industrial film/animation department practice to a provider-neutral AI drama workflow without treating models as departments or approvals.
+schema: story-studio/industrial-workflow
+artifact_id: story-studio-industrial-workflow
+status: authoritative
+authority:
+  stable_path: workflows/story-studio/film-department-gate-matrix-v1.yaml
+  change_policy: direct_replace_stable_path_no_parallel_v2_v3_files
+  purpose: Canonical workflow for AI drama and animation production. Models are tools or vendors, not departments or approvers.
+  companion_artifacts:
+  - workflows/story-studio/core-glossary.yaml
+  - workflows/story-studio/stage-artifact-matrix.yaml
+  - workflows/story-studio/role-approval-matrix.yaml
+  - workflows/story-studio/conditional-modules.yaml
+scope:
+  applies_to:
+  - AI drama
+  - AI animation
+  - hybrid animation/live-action planning
+  - historical or fictional narrative projects
+  does_not_claim: A single universal studio pipeline. Department names may vary by studio, but responsibilities and gates must remain represented.
 operating_principles:
-- The director owns creative intent; models are tools or vendors, not the final authority.
-- Every department receives a locked upstream brief and returns an inspectable artifact, not only a prompt.
-- Storyboard, previs/techvis and animatic precede expensive production keyframes and motion generation.
-- Reference assets remain candidates until a cross-department HOD review approves a Visual Canon version.
-- GenerationAttempt is the AI analogue of a take; DailiesReview chooses Selects; only selected takes enter editorial.
-- Picture Lock precedes final VFX turnover, conform, colour and final mix.
-- Historical evidence, adaptation, inference and fiction remain separate from visual preference.
-- Rights, model identity, input provenance and output hashes are production gates, not administrative notes.
-ai_film_terms:
-  DirectorTreatment: Creative intent, emotional arc, performance direction and visual priorities for the episode.
-  HODReview: Heads-of-department review across directing, production design, camera, lighting, costume, props, VFX, editorial, sound and continuity.
-  LookDevelopment: Exploration of palette, texture, silhouette, composition, lighting and virtual-lens language before Canon approval.
-  VisualCanon: Approved versioned visual rules and anchor assets; not every attractive reference image.
-  Previs: Low-cost visualization of blocking, camera and sequence logic.
-  Techvis: Feasibility plan for camera, motion, VFX, reference inputs, frame transitions and model/provider constraints.
-  Coverage: Planned set of master, two-shot, close-up, insert and reaction views needed for editorial flexibility.
-  DailiesOrRushes: Daily review of generated attempts with technical, continuity and performance notes.
-  Take: One generated motion or image attempt for a fixed shot contract.
-  Select: Take accepted by director/editor for the current cut; not necessarily final.
-  Handles: Extra frames or seconds before and after the intended action for editorial transitions.
-  PictureLock: Approved shot order and duration; no casual structural changes after VFX/sound turnover.
-  VFXTurnover: Locked plates, handles, masks, camera metadata, references and notes delivered to VFX.
-  Conform: Relinking the editorial timeline to approved high-quality media and verified versions.
-  SpottingSession: Director/editor/sound review deciding dialogue, ambience, Foley, sound effects and music cues.
-  ShowLook: Versioned viewing transform/palette target used consistently during dailies and final colour.
-department_roles:
-- department: writing_story
-  industrial_roles:
-  - screenwriter
-  - story_editor
-  ai_story_studio_responsibility: Narrative Canon, scene purpose, beat causality, dialogue, Fact/Inference/Adaptation/Fiction labels.
-  core_artifacts:
-  - Story Bible
-  - Treatment
-  - Screenplay
-  - Scene List
-  - Beat Sheet
-  cannot_self_approve:
-  - historical claims
-  - production feasibility
-  - final picture
-- department: directing
-  industrial_roles:
-  - director
-  - assistant_director
-  ai_story_studio_responsibility: Director’s Intent, performance, blocking, coverage, pacing priorities and final creative decisions.
-  core_artifacts:
-  - Director Treatment
-  - Blocking Plan
-  - Coverage Plan
-  - Director Notes
-  cannot_self_approve:
-  - rights
-  - historical authenticity
-  - technical QC
-- department: historical_research
-  industrial_roles:
-  - researcher
-  - historical_consultant
-  ai_story_studio_responsibility: Source ledger, material-culture evidence, claim boundaries and exception records.
-  core_artifacts:
-  - Source Ledger
-  - Visual Research Registry
-  - Historical Claim Matrix
-  cannot_self_approve:
-  - dramatic effectiveness
-  - visual taste
-- department: production_design_art
-  industrial_roles:
-  - production_designer
-  - art_director
-  - set_decorator
-  ai_story_studio_responsibility: Visual world, set logic, architecture boundary, palette, texture, set dressing and spatial hierarchy.
-  core_artifacts:
-  - Production Design Bible
-  - Look Book
-  - Set Plan
-  - Set Dressing List
-  - Colour Script
-  cannot_self_approve:
-  - camera coverage
-  - historical claim outside evidence
-- department: costume_hair_makeup
-  industrial_roles:
-  - costume_designer
-  - hair_and_makeup_designer
-  ai_story_studio_responsibility: Character silhouette, costume plot, ageing/distressing, hair silhouette and continuity under the approved lighting look.
-  core_artifacts:
-  - Costume Plot
-  - Costume Continuity Book
-  - Hair/Makeup Test Sheet
-  cannot_self_approve:
-  - historical certainty from candidate art
-  - lighting compatibility without test
-- department: props
-  industrial_roles:
-  - prop_master
-  ai_story_studio_responsibility: Hero props, hand props, duplicates, scale, wear, continuity and actor/character interaction.
-  core_artifacts:
-  - Property List
-  - Hero Prop Sheet
-  - Prop Continuity Log
-  cannot_self_approve:
-  - historical form without evidence
-  - performance choreography
-- department: cinematography_camera_grip
-  industrial_roles:
-  - director_of_photography
-  - camera_operator
-  - grip
-  ai_story_studio_responsibility: Virtual lens intent, framing, camera height, movement, depth, screen direction, eyelines and coverage.
-  core_artifacts:
-  - Camera & Lensing Plan
-  - Shot List
-  - Camera Test
-  - Techvis
-  cannot_self_approve:
-  - set design
-  - performance meaning
-- department: lighting
-  industrial_roles:
-  - gaffer
-  - lighting_team
-  ai_story_studio_responsibility: Motivated-light logic, key direction, negative fill, practical/source visibility and shot-to-shot lighting continuity.
-  core_artifacts:
-  - Lighting Bible
-  - Lighting Diagram
-  - Light/Time-of-day Continuity
-  cannot_self_approve:
-  - final colour grade
-  - unsupported architectural source
-- department: action_stunts
-  industrial_roles:
-  - action_director
-  - stunt_coordinator
-  ai_story_studio_responsibility: Action beats, safe choreography concept, action previs, screen geography and continuity; no practical stunt instruction in the workflow artifact.
-  core_artifacts:
-  - Action Beat Sheet
-  - Action Previs
-  - Safety/Feasibility Gate
-  activation_rule: Required only for episodes with combat, falls, vehicles, fire or complex physical action.
-- department: vfx
-  industrial_roles:
-  - vfx_supervisor
-  ai_story_studio_responsibility: VFX breakdown, invisible cleanup, generated extensions, plate/reference requirements and turnover after shot lock.
-  core_artifacts:
-  - VFX Breakdown
-  - VFX Shot List
-  - Turnover Package
-  - VFX QC Notes
-  cannot_self_approve:
-  - unlocked editorial timing
-- department: continuity
-  industrial_roles:
-  - script_supervisor
-  ai_story_studio_responsibility: Dialogue/action continuity, props/costume state, eyeline, screen direction, camera metadata and change notes.
-  core_artifacts:
-  - Continuity Breakdown
-  - Daily Continuity Log
-  - Shot-to-shot Edge Graph
-  cannot_self_approve:
-  - creative exceptions without director sign-off
-- department: editorial
-  industrial_roles:
-  - editor
-  - animation_editor
-  ai_story_studio_responsibility: Storyboard timing, animatic, selects, rhythm, assembly, rough cut and Picture Lock.
-  core_artifacts:
-  - Storyboard
-  - Animatic
-  - Selects Log
-  - Editorial Timeline
-  - Picture Lock
-  cannot_self_approve:
-  - historical claims
-  - unreviewed VFX final
-- department: sound_music
-  industrial_roles:
-  - production_sound_mixer
-  - supervising_sound_editor
-  - composer
-  - re_recording_mixer
-  ai_story_studio_responsibility: Scratch/prelay timing, dialogue, ambience, Foley, SFX, score, spotting and final mix/M&E.
-  core_artifacts:
-  - Audio Cue Sheet
-  - Spotting Notes
-  - ADR/Foley List
-  - Final Mix
-  - M&E
-  cannot_self_approve:
-  - picture changes after lock without change control
-- department: dit_colour_qc
-  industrial_roles:
-  - digital_imaging_technician
-  - colourist
-  - qc_operator
-  ai_story_studio_responsibility: Viewing transform, exposure/contrast checks, media integrity, version/hash QC, colour continuity and master QC.
-  core_artifacts:
-  - Show Look
-  - Dailies QC
-  - Colour Decision List
-  - Master QC Report
-  cannot_self_approve:
-  - creative intent without director/DP
-- department: ai_production_engineering
-  industrial_roles:
-  - prompt_supervisor
-  - generation_operator
-  - pipeline_td
-  ai_story_studio_responsibility: Provider-neutral shot contracts, references, attempt metadata, reproducibility, routing, cost/time logging and asset lineage.
-  core_artifacts:
-  - Generation Package
-  - Attempt Manifest
-  - Provider Run Log
-  - Asset Lineage Graph
-  cannot_self_approve:
-  - creative select
-  - historical authenticity
-  - rights clearance
-- department: production_post_management
-  industrial_roles:
-  - producer
-  - line_producer
-  - post_production_supervisor
-  ai_story_studio_responsibility: Scope, budget, schedule, provider/rights gate, change control, turnover and deliverables.
-  core_artifacts:
-  - Production Plan
-  - Cost Report
-  - Rights Ledger
-  - Delivery Manifest
-  cannot_self_approve:
-  - creative quality without HOD review
-gates:
+- The director owns creative intent; models and providers execute bounded tasks.
+- Every stage returns inspectable artifacts, not only prompts.
+- A creator, model or agent cannot generate, review and approve the same artifact without an explicit exception record.
+- Storyboard, layout, previs/techvis and timed animatic precede expensive shot production.
+- Candidate assets remain non-canonical until the required approval gate passes.
+- GenerationAttempt is the Story Studio equivalent of a take; DailiesReview chooses Selects.
+- Picture Lock precedes final VFX turnover, conform, colour finishing and final mix.
+- Historical fact, inference, adaptation and fiction remain separate from visual preference.
+- Rights, provider identity, provenance, lineage, cost and run metadata are production controls.
+- 'The workflow is iterative: failed gates return to a named upstream artifact, not to an undefined redesign loop.'
+content_hierarchy:
+- level: 1
+  term: Project
+  meaning: Production workspace and governance boundary.
+- level: 2
+  term: Series
+  meaning: Whole continuing work and its long-term narrative/production rules.
+- level: 3
+  term: ChapterOrSeason
+  meaning: Major story division containing multiple episodes.
+- level: 4
+  term: Episode
+  meaning: Single delivery unit.
+- level: 5
+  term: Sequence
+  meaning: Group of scenes serving one dramatic movement or production unit.
+- level: 6
+  term: Scene
+  meaning: Continuous dramatic unit, usually bounded by place and time.
+- level: 7
+  term: Beat
+  meaning: Smallest meaningful change in objective, information, emotion or power.
+- level: 8
+  term: Shot
+  meaning: Single planned continuous camera view in the edit.
+- level: 9
+  term: Take
+  meaning: One generated or recorded attempt for a fixed Shot Contract.
+macro_stages:
+- stage_id: STAGE_01_DEVELOPMENT_GREENLIGHT
+  name_en: Development & Greenlight
+  name_zh: 项目开发与立项
+  purpose: Define premise, theme, audience, scope, format, distribution, evidence policy, budget and rights posture.
+  entry_gate: null
+  exit_gate: G01_DEVELOPMENT_GREENLIGHT
+- stage_id: STAGE_02_NARRATIVE_SCRIPT_LOCK
+  name_en: Narrative Bible & Script Lock
+  name_zh: 叙事圣经与剧本锁定
+  purpose: Lock narrative rules, story structure, character arcs, scene/beat IDs, screenplay timing and scratch dialogue needs.
+  entry_gate: G01_DEVELOPMENT_GREENLIGHT
+  exit_gate: G02_SCRIPT_LOCK
+- stage_id: STAGE_03_HOD_BREAKDOWN_PLANNING
+  name_en: HOD Breakdown & Production Planning
+  name_zh: 部门拆解与制片规划
+  purpose: Break the locked script into department-owned assets, shots, sound, VFX, action, schedule, budget and risks.
+  entry_gate: G02_SCRIPT_LOCK
+  exit_gate: G03_HOD_BREAKDOWN_COMPLETE
+- stage_id: STAGE_04_RESEARCH_RIGHTS_CONSTRAINTS
+  name_en: Research, Rights & Design Constraints
+  name_zh: 考据、权利与设计边界
+  purpose: Resolve, bound, exclude or defer uncertain historical, legal, provider and design elements.
+  entry_gate: G03_HOD_BREAKDOWN_COMPLETE
+  exit_gate: G04_RESEARCH_RIGHTS_CONSTRAINTS_LOCK
+- stage_id: STAGE_05_VISDEV_LOOKDEV_APPROVAL
+  name_en: Visual Development, LookDev & Design Approval
+  name_zh: 视觉开发、外观开发与设计批准
+  purpose: Approve character, environment, costume, prop, material, palette, lighting language and Show Look.
+  entry_gate: G04_RESEARCH_RIGHTS_CONSTRAINTS_LOCK
+  exit_gate: G05_DESIGN_LOOK_APPROVAL
+- stage_id: STAGE_06_STORYBOARD_LAYOUT_ANIMATIC
+  name_en: Storyboard, Layout, Previs, Techvis & Animatic
+  name_zh: 故事板、布局、预演、技术预演与动态分镜
+  purpose: Prove screen geography, blocking, coverage, eyelines, timing, scratch audio, technical feasibility and total duration at low cost.
+  entry_gate: G05_DESIGN_LOOK_APPROVAL
+  exit_gate: G06_TIMED_ANIMATIC_LOCK
+- stage_id: STAGE_07_ASSET_BUILD_TECH_VALIDATION
+  name_en: Asset Build & Technical Validation
+  name_zh: 资产制作与技术验证
+  purpose: Create production-ready asset versions and prove identity, camera, lighting, motion, provider and technical reproducibility.
+  entry_gate: G06_TIMED_ANIMATIC_LOCK
+  exit_gate: G07_ASSET_PRODUCTION_READINESS
+- stage_id: STAGE_08_SHOT_PRODUCTION_DAILIES
+  name_en: Shot Production, Dailies & Selects
+  name_zh: 镜头生产、样片审查与选片
+  purpose: Generate or record Takes against locked Shot Contracts, review Dailies and select approved material for editorial.
+  entry_gate: G07_ASSET_PRODUCTION_READINESS
+  exit_gate: G08_SHOT_SELECT_APPROVAL
+- stage_id: STAGE_09_EDITORIAL_PICTURE_LOCK
+  name_en: Editorial & Picture Lock
+  name_zh: 剪辑与画面锁定
+  purpose: Build assembly, rough cut and fine cut; lock shot order, duration and turnover handles.
+  entry_gate: G08_SHOT_SELECT_APPROVAL
+  exit_gate: G09_PICTURE_LOCK
+- stage_id: STAGE_10_FINISH_DELIVERY_ARCHIVE
+  name_en: Finish, QC, Delivery & Archive
+  name_zh: 后期完成、质检、交付与归档
+  purpose: Complete VFX, conform, colour, final voice, sound design, score, mix, subtitles, accessibility, master QC, delivery and archive.
+  entry_gate: G09_PICTURE_LOCK
+  exit_gate: G11_MASTER_DELIVERY_APPROVAL
+quality_gates:
 - gate_id: G01_DEVELOPMENT_GREENLIGHT
-  phase: development
-  required_artifacts:
-  - Creative Brief
-  - Source Ledger
-  - Premise/Logline
-  - Audience/Format
-  required_departments:
-  - writing_story
-  - directing
-  - historical_research
-  - production_post_management
-  pass_condition: Scope, audience, evidence policy, format and rights posture are explicit.
+  decision_owner: production_management
+  pass_meaning: Project scope, audience, format, budget, evidence and rights posture are explicit.
 - gate_id: G02_SCRIPT_LOCK
-  phase: writing_preproduction
-  required_artifacts:
-  - Frozen Screenplay
-  - Scene/Beat IDs
-  - Fact/Adaptation Matrix
-  - Timing Read
-  required_departments:
-  - writing_story
-  - directing
-  - historical_research
-  - editorial
-  pass_condition: Causality and duration are viable; unresolved claims are tagged rather than silently resolved.
-- gate_id: G03_HOD_BREAKDOWN
-  phase: preproduction
-  required_artifacts:
-  - Script Breakdown
-  - Asset List
-  - Costume Plot
-  - Property List
-  - VFX/Action/Sound Breakdowns
-  required_departments:
-  - production_design_art
-  - costume_hair_makeup
-  - props
-  - cinematography_camera_grip
-  - lighting
-  - action_stunts
-  - vfx
-  - sound_music
-  - continuity
-  pass_condition: Every scene and shot has department ownership, dependencies and open questions.
-- gate_id: G04_RESEARCH_RIGHTS_LOCK
-  phase: preproduction
-  required_artifacts:
-  - Visual Research Registry
-  - Rights Ledger
-  - Exception/Adaptation Decisions
-  required_departments:
-  - historical_research
-  - production_design_art
-  - costume_hair_makeup
-  - props
-  - production_post_management
-  pass_condition: Each uncertain element is evidence-supported, bounded, excluded or deferred; publication rights remain separately tracked.
-- gate_id: G05_LOOKDEV_VISUAL_CANON
-  phase: look_development
-  required_artifacts:
-  - Director Treatment
-  - Look Book
-  - Styleframes
-  - Production Design Bible
-  - Costume/Prop Tests
-  - Camera/Lighting Tests
-  - Show Look
-  required_departments:
-  - directing
-  - production_design_art
-  - cinematography_camera_grip
-  - lighting
-  - costume_hair_makeup
-  - props
-  - vfx
-  - dit_colour_qc
-  - continuity
-  pass_condition: HOD review approves a versioned Visual Canon; candidate references alone cannot pass.
-- gate_id: G06_PREVIS_STORYBOARD_ANIMATIC
-  phase: previs
-  required_artifacts:
-  - Blocking Plan
-  - Coverage Plan
-  - Storyboard
-  - Techvis
-  - Timed Animatic
-  - Scratch Audio
-  required_departments:
-  - directing
-  - cinematography_camera_grip
-  - editorial
-  - continuity
-  - vfx
-  - sound_music
-  - action_stunts
-  pass_condition: Screen geography, eyelines, rhythm, action feasibility and 100% duration are proven at low cost.
-- gate_id: G07_ASSET_BUILD_TECH_TEST
-  phase: production_preparation
-  required_artifacts:
-  - Production-ready Asset Versions
-  - Single-view/Turnaround Derivatives
-  - Model/Provider Tests
-  - VFX/Audio Input Packages
-  required_departments:
-  - production_design_art
-  - costume_hair_makeup
-  - props
-  - ai_production_engineering
-  - vfx
-  - dit_colour_qc
-  pass_condition: Assets reproduce under camera/light tests and retain identity/continuity across required views.
-- gate_id: G08_SHOT_PRODUCTION_DAILIES
-  phase: production
-  required_artifacts:
-  - Shot Contract
-  - Generation Attempts/Takes
-  - Dailies QC
-  - Director/Editor Selects
-  - Continuity Notes
-  required_departments:
-  - directing
-  - cinematography_camera_grip
-  - lighting
-  - continuity
-  - editorial
-  - ai_production_engineering
-  - dit_colour_qc
-  pass_condition: A take meets performance, camera, continuity, technical and rights requirements; failures remain logged.
+  decision_owner: directing
+  pass_meaning: Narrative causality, scene/beat IDs, duration and scratch dialogue needs are viable.
+- gate_id: G03_HOD_BREAKDOWN_COMPLETE
+  decision_owner: production_management
+  pass_meaning: Every required department has owned artifacts, dependencies, schedule and open questions.
+- gate_id: G04_RESEARCH_RIGHTS_CONSTRAINTS_LOCK
+  decision_owner: research_rights_panel
+  pass_meaning: Every uncertain element is evidence-supported, bounded, excluded or deferred; usage posture is recorded.
+- gate_id: G05_DESIGN_LOOK_APPROVAL
+  decision_owner: directing_design_camera_panel
+  pass_meaning: Versioned design approvals and Show Look exist; references alone do not pass.
+- gate_id: G06_TIMED_ANIMATIC_LOCK
+  decision_owner: directing_editorial_panel
+  pass_meaning: Storyboard/Layout/Animatic prove screen geography, timing, scratch sound and total duration.
+- gate_id: G07_ASSET_PRODUCTION_READINESS
+  decision_owner: technical_hod_panel
+  pass_meaning: Assets reproduce under camera, lighting, identity, continuity and provider tests.
+- gate_id: G08_SHOT_SELECT_APPROVAL
+  decision_owner: director_editor
+  pass_meaning: A Select meets performance, camera, continuity, technical and rights requirements; repeated per shot or sequence.
 - gate_id: G09_PICTURE_LOCK
-  phase: editorial
-  required_artifacts:
-  - Assembly
-  - Rough Cut
-  - Fine Cut
-  - Picture Lock
-  - Locked Timeline/EDL-or-OTIO
-  required_departments:
-  - directing
-  - editorial
-  - production_post_management
-  - vfx
-  - sound_music
-  pass_condition: Shot order and timing are approved; later changes require explicit change control and re-turnover.
-- gate_id: G10_POST_TURNOVER_AND_FINISH
-  phase: postproduction
-  required_artifacts:
-  - VFX Turnover/Finals
-  - Conform
-  - Colour Grade
-  - Spotting/ADR/Foley
-  - Final Mix
-  - Titles/Subtitles
-  required_departments:
-  - vfx
-  - editorial
-  - sound_music
-  - dit_colour_qc
-  - production_post_management
-  pass_condition: All finals match the locked timeline, Show Look, sound plan and delivery spec.
-- gate_id: G11_MASTER_QC_DELIVERY
-  phase: delivery
-  required_artifacts:
-  - Master
-  - M&E
-  - Subtitle/Caption Files
-  - Rights/Attribution Record
-  - QC Report
-  - Delivery Manifest
-  required_departments:
-  - dit_colour_qc
-  - sound_music
-  - production_post_management
-  pass_condition: Technical, content, rights and accessibility QC pass; hashes and provenance are retained.
-industry_sources:
-- title: ScreenSkills — Film and TV drama career maps / idea-to-screen roles
+  decision_owner: director_editor_producer
+  pass_meaning: Shot order and timing are locked; later structural change requires change control and re-turnover.
+- gate_id: G10_FINISH_APPROVAL
+  decision_owner: post_supervisor_director
+  pass_meaning: VFX finals, conform, colour and sound finals match the locked timeline and approved look.
+- gate_id: G11_MASTER_DELIVERY_APPROVAL
+  decision_owner: production_qc_rights
+  pass_meaning: Technical, content, rights, accessibility, provenance and delivery QC pass.
+cross_stage_tracks:
+- track_id: TRACK_PRODUCTION_MANAGEMENT
+  starts: STAGE_01_DEVELOPMENT_GREENLIGHT
+  ends: STAGE_10_FINISH_DELIVERY_ARCHIVE
+- track_id: TRACK_EDITORIAL
+  starts: STAGE_02_NARRATIVE_SCRIPT_LOCK
+  ends: STAGE_10_FINISH_DELIVERY_ARCHIVE
+- track_id: TRACK_SOUND_MUSIC
+  starts: STAGE_02_NARRATIVE_SCRIPT_LOCK
+  ends: STAGE_10_FINISH_DELIVERY_ARCHIVE
+- track_id: TRACK_CONTINUITY
+  starts: STAGE_03_HOD_BREAKDOWN_PLANNING
+  ends: STAGE_09_EDITORIAL_PICTURE_LOCK
+- track_id: TRACK_RESEARCH
+  starts: STAGE_01_DEVELOPMENT_GREENLIGHT
+  ends: STAGE_10_FINISH_DELIVERY_ARCHIVE
+- track_id: TRACK_RIGHTS_PROVENANCE
+  starts: STAGE_01_DEVELOPMENT_GREENLIGHT
+  ends: STAGE_10_FINISH_DELIVERY_ARCHIVE
+- track_id: TRACK_COLOUR_MANAGEMENT
+  starts: STAGE_05_VISDEV_LOOKDEV_APPROVAL
+  ends: STAGE_10_FINISH_DELIVERY_ARCHIVE
+- track_id: TRACK_AI_PRODUCTION_ENGINEERING
+  starts: STAGE_03_HOD_BREAKDOWN_PLANNING
+  ends: STAGE_10_FINISH_DELIVERY_ARCHIVE
+- track_id: TRACK_COST_TIME_QUOTA
+  starts: STAGE_01_DEVELOPMENT_GREENLIGHT
+  ends: STAGE_10_FINISH_DELIVERY_ARCHIVE
+- track_id: TRACK_ASSET_LINEAGE
+  starts: STAGE_03_HOD_BREAKDOWN_PLANNING
+  ends: STAGE_10_FINISH_DELIVERY_ARCHIVE
+decision_vocabulary:
+- approve
+- revise
+- reject
+- blocked
+- defer
+sources:
+- source_id: SRC_SCREEN_SKILLS_CAREER_MAPS
+  title: ScreenSkills — Career maps for film, animation, VFX and post-production
   url: https://www.screenskills.com/starting-your-career/career-maps/
-- title: ScreenSkills — Gaffer role
-  url: https://www.screenskills.com/careers/job-profiles/film-and-tv-drama/technical/gaffer/
-- title: ScreenSkills — Prop master role
-  url: https://www.screenskills.com/job-profiles/roles/prop-master/
-- title: ScreenSkills — Set decorator role
-  url: https://www.screenskills.com/job-profiles/roles/set-decorator/
-- title: ScreenSkills — VFX supervisor role
-  url: https://www.screenskills.com/job-profiles/roles/vfx-supervisor/
-- title: ScreenSkills — Post-production supervisor role
-  url: https://www.screenskills.com/job-profiles/roles/post-production-supervisor/
-- title: Adobe Firefly — AI storyboard generator
-  url: https://www.adobe.com/products/firefly/features/storyboard.html
-- title: American Society of Cinematographers — cinematography/production-design lighting collaboration example
-  url: https://staging.ascmag.com/articles/casino-royale-high-stakes-007
+  use: department boundaries and role families
+- source_id: SRC_DISNEY_ANIMATION_PROCESS
+  title: Walt Disney Animation Studios — Filmmaking Process
+  url: https://disneyanimation.com/process-encanto/
+  use: development, asset creation, shot production, post-production and archiving structure
+- source_id: SRC_ADOBE_ANIMATICS
+  title: 'Adobe — Animatics: definition and workflow'
+  url: https://www.adobe.com/de/creativecloud/animation/discover/animatics.html
+  use: storyboard-to-animatic timing and low-cost validation
+- source_id: SRC_SCREEN_SKILLS_POST
+  title: ScreenSkills — Post-production
+  url: https://www.screenskills.com/job-profiles/browse/post-production/
+  use: editorial, sound, VFX, grade and final-post scope
