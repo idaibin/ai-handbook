@@ -1,10 +1,10 @@
 {
   "schema": "story-studio/current-status",
   "status_id": "banchao-ep01-current-status",
-  "status_revision": 14,
+  "status_revision": 15,
   "authority": {
     "role": "single_current_state_source",
-    "as_of_utc": "2026-08-19T16:35:00Z",
+    "as_of_utc": "2026-08-20T00:45:00Z",
     "rule": "Stable file directly replaced; no parallel v2/v3 state files."
   },
   "project": {
@@ -29,18 +29,18 @@
     "G03": "approve_conditions_recorded",
     "G04": "approve_internal_candidate_only",
     "G05": "approve_rule_level_visual_direction_conditions_recorded",
-    "G06": "in_progress_storyboard_dailies_and_silent_animatic_proxy_complete_timed_lock_pending"
+    "G06": "approve_timed_animatic_lock_with_conditions"
   },
   "readiness": {
     "NarrativeCanon": "approved_working_baseline_conditions_recorded",
     "VisualCanon": "approved_rule_level_selected_components",
-    "ProductionCanon": "not_established",
+    "ProductionCanon": "screenplay_storyboard_and_timing_baseline_locked",
     "StoryboardTextReady": true,
     "StoryboardExecutionReady": true,
     "StoryboardDailies": "approve_for_layout_previs_conditions_recorded",
     "LayoutPrevisReview": "approve_silent_animatic_proxy_conditions_recorded",
-    "SilentAnimaticProxy": "created_105_seconds",
-    "TimedAnimaticLock": "blocked_pending_scratch_dialogue_and_audio_review",
+    "ScratchDialogue": "recorded_and_edited_timing_only",
+    "TimedAnimaticLock": "approve_with_conditions",
     "production_ready": false,
     "publication_ready": false
   },
@@ -49,25 +49,45 @@
     "shots": 14,
     "panels": 27,
     "duration_seconds": 105,
-    "panel_manifest": "banchao-ep01-storyboard-panel-manifest.yaml",
-    "dailies_decision": "banchao-ep01-storyboard-dailies-decision.yaml",
-    "static_validation": "banchao-ep01-storyboard-static-validation.json",
-    "package": "banchao-ep01-storyboard-rough-package.zip"
+    "production_shotkeyframes": 0
   },
-  "animatic": {
-    "status": "silent_timed_proxy_created_not_locked",
-    "file": "banchao-ep01-silent-animatic-proxy.mp4",
-    "manifest": "banchao-ep01-silent-animatic-proxy-manifest.json",
+  "timed_animatic": {
+    "status": "locked_timing_and_editorial_structure_with_conditions",
+    "file": "banchao-ep01-timed-animatic-scratch.mp4",
+    "sha256": "5123a07d0a840f3a6fc50e7e78c73776b6d2907143fdb6273158dd307d27d2be",
+    "size_bytes": 6625492,
     "duration_seconds": 105.0,
-    "sha256": "d22474c1fe8314e885aecb31ff218fef72fb209f9ba45cc64dc6dcfbff19e122",
-    "scratch_dialogue_recorded": false
+    "frame_count": 2520,
+    "scratch_dialogue_cues": 14,
+    "subtitle_track": "mov_text zho plus external SRT",
+    "final_voice_casting_approved": false,
+    "lip_sync_approved": false,
+    "final_sound_approved": false
+  },
+  "G06_lock_scope": {
+    "locked": [
+      "Shot order",
+      "14 Shot IDs",
+      "nominal Shot durations totaling 105 seconds",
+      "27-panel timing allocation",
+      "dialogue cue placement baseline",
+      "title-card windows"
+    ],
+    "not_locked": [
+      "final voice casting/performance",
+      "LipSync",
+      "production Character/Set/Costume/HeroProp assets",
+      "production ShotKeyframes",
+      "final Foley/SFX/Score/Mix",
+      "publication rights"
+    ]
   },
   "workflow": {
-    "current_stage_id": "STAGE_06_STORYBOARD_LAYOUT_ANIMATIC",
-    "next_legal_action": "Record ScratchDialogue according to approved plan, assemble audio-enabled TimedAnimatic, then run G06 TimedAnimatic review.",
+    "current_stage_id": "STAGE_07_ASSET_BUILD_TECHNICAL_VALIDATION",
+    "next_legal_action": "Build and technically validate the minimum EP01 production asset package, then run camera, lighting, motion and continuity tests before production ShotKeyframes.",
     "prohibited": [
-      "Production ShotKeyframe/video before G06 TimedAnimatic lock",
-      "production asset promotion before G07 validation",
+      "Production ShotKeyframe/video before G07 Asset Build and Technical Validation",
+      "production asset promotion without G07 approval",
       "public/commercial use"
     ]
   },
@@ -77,28 +97,59 @@
     "current account data-control setting",
     "AGY effective model",
     "public/commercial third-party rights clearance",
-    "video/audio provider quality speed and cost"
+    "video provider quality speed and cost",
+    "final voice casting and performance"
   ],
   "artifact_refs": {
-    "storyboard_panel_manifest": {
-      "file": "banchao-ep01-storyboard-panel-manifest.yaml",
-      "sha256": "0e7f9a13ccaa1df762a71fcfd01c34e1b92d45c35d18409effc57dd95d7bd9ff"
+    "scratch_dialogue_manifest": {
+      "file": "banchao-ep01-scratch-dialogue-cue-manifest.yaml",
+      "sha256": "e74f052fe0900cbc156a9dc5e27da6d8fbba0a24889d2da7b6aff0648baed711",
+      "size": 7178
     },
-    "storyboard_dailies_decision": {
-      "file": "banchao-ep01-storyboard-dailies-decision.yaml",
-      "sha256": "572be33b473293f9305a76a521fb8a014513f46f4175eda2edbe9a89450c6634"
+    "timed_animatic_manifest": {
+      "file": "banchao-ep01-timed-animatic-manifest.json",
+      "sha256": "1efba10072a65ccfc253a82edfaf5180ecf0562ec1187308bcdb93d47a7aac3e",
+      "size": 2663
     },
-    "layout_previs_review": {
-      "file": "banchao-ep01-layout-previs-review.yaml",
-      "sha256": "6ce74d64b9a020cf2496d999e494d0c9a64b72766071cd990a037a8d6ec36546"
+    "timed_animatic_timeline": {
+      "file": "banchao-ep01-timed-animatic-timeline.json",
+      "sha256": "501d6e8421af99f173ea3d64e7d1c033e2f5eb7fccf393764d2a0b217502ae55",
+      "size": 8317
     },
-    "storyboard_static_validation": {
-      "file": "banchao-ep01-storyboard-static-validation.json",
-      "sha256": "69a6b03704524fa07c5f9fe1f66ea7f554744a7f4164ec6b6ef54e7c77f7e730"
+    "G06_decision": {
+      "file": "banchao-ep01-g06-timed-animatic-decision.yaml",
+      "sha256": "8c168607d9351696b4ed7053308fe40fd14eda5eff85b282018c591dacacf312",
+      "size": 2255
     },
-    "silent_animatic_manifest": {
-      "file": "banchao-ep01-silent-animatic-proxy-manifest.json",
-      "sha256": "f065055ac7dc044f7dca0d34a7f5f77fd470b3a18b13794fb0a22b1cc5fd3c2e"
+    "timed_animatic_validation": {
+      "file": "banchao-ep01-timed-animatic-validation.json",
+      "sha256": "032dc3b1df263e73c9089cdfd9c3d922a90f10d2a7192d38ce729f75c55ba954",
+      "size": 2650
+    },
+    "timed_animatic_review_proxy": {
+      "file": "banchao-ep01-timed-animatic-scratch.mp4",
+      "sha256": "5123a07d0a840f3a6fc50e7e78c73776b6d2907143fdb6273158dd307d27d2be",
+      "size": 6625492
+    },
+    "silent_animatic_rebuilt": {
+      "file": "banchao-ep01-silent-animatic-rebuilt.mp4",
+      "sha256": "d9c5ad6e5f13205ad6c92ab36ff4af6895ec016f33cb87005df7c21a38631206",
+      "size": 3905194
+    },
+    "scratch_subtitles": {
+      "file": "banchao-ep01-scratch-subtitles.srt",
+      "sha256": "1da05ab2f3ae3d146faff68cf67802d96cfdc5fa945785067875693cdf081271",
+      "size": 1450
+    },
+    "review_contact_sheet": {
+      "file": "banchao-ep01-timed-animatic-review-contact-sheet.jpg",
+      "sha256": "854d527626ca1e7c239b5096bf5c3b813914f8bc2e8768b11a2d3f4eec6ead4d",
+      "size": 248442
+    },
+    "private_archive": {
+      "file": "story-studio-ep01-g06-timed-animatic.zip",
+      "sha256": "74ba974c9010c30c5c111c1f5d471595d1381c76c219a5b72edec63b143d6423",
+      "size": 125523362
     }
   }
 }
