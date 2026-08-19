@@ -1,0 +1,80 @@
+{
+  "schema": "story-studio/world-foundation-validation",
+  "result": "pass_static",
+  "generated_at_utc": "2026-08-19T08:55:00Z",
+  "checks": {
+    "yaml_parse": "pass",
+    "json_parse": "pass",
+    "stable_filename_policy": "pass_no_parallel_v2_v3",
+    "duplicate_temporary_entities_removed": 3,
+    "source_story_events_added": false,
+    "regions": 8,
+    "locations": 25,
+    "episode_rows": 24,
+    "episode_ids_unique": true,
+    "location_ids_unique": true,
+    "ban_chao_major_states": 6,
+    "world_foundation_decision": "approve_internal_foundation_conditions_recorded",
+    "visual_canon_approved": false,
+    "media_generated": false,
+    "rights_posture": "internal_candidate_only"
+  },
+  "files": {
+    "core-glossary.yaml": {
+      "sha256": "3aba937e45b92488a070c67d44c0876131267597c7c78e45906ecebff5356300",
+      "size": 23034
+    },
+    "banchao-source-ledger.yaml": {
+      "sha256": "c83a5618bae74ae77c3e8dcaaaba5ab8db0fbaa78e6e01608bf68e2629f25f7d",
+      "size": 13983
+    },
+    "banchao-narrative-authority-package.yaml": {
+      "sha256": "628894580b9cd8b59a7242df0441cc90f4804f605db98c17464d03197ba3138b",
+      "size": 11466
+    },
+    "banchao-world-foundation-package.yaml": {
+      "sha256": "30e556c919c1a051139fc459c82674e34a305c1ef7611df986b64bb4e10954bc",
+      "size": 15122
+    },
+    "banchao-location-bible.yaml": {
+      "sha256": "b085c3fb4d2f37db2d0bbf5d4502656137318fca2e8290ba06b95ba9e01575da",
+      "size": 25453
+    },
+    "banchao-character-state-bible.yaml": {
+      "sha256": "6ed0478ab99cedbf157025c7500440fbe25a9ba0cd55166a732c3fc72d56c265",
+      "size": 6370
+    },
+    "banchao-episode-foundation-matrix.yaml": {
+      "sha256": "705b4bc0908cf6e0d20d28217ce4ff135387853da78dd6e9d26bdc27f92419ac",
+      "size": 14756
+    },
+    "banchao-world-foundation-decision.yaml": {
+      "sha256": "7899604f88370d57b09f8fca037a44e3b52aa9b387f23e1b7229e7daa03491cf",
+      "size": 1693
+    },
+    "banchao-world-foundation-map.yaml": {
+      "sha256": "0e0f85a7c501ac066a0fa8640482e192e8afcb2f36977bde91c0b87649765ffe",
+      "size": 2191
+    },
+    "banchao-world-foundation-summary.md": {
+      "sha256": "b76d234817ec41a2f37fbc70d18f0a587528838df3aa515134d456194a6673e6",
+      "size": 1193
+    },
+    "banchao-artifact-stage-map.yaml": {
+      "sha256": "c3d863010fe3573628f977d57bccfbc6c81e0e98e5a31680d757a534f2379950",
+      "size": 7252
+    },
+    "banchao-stage-gap-register.yaml": {
+      "sha256": "589ea6886d38063ed2f4b7b7623a9f634c03b28e43b50037c7e46a5804773ba5",
+      "size": 3237
+    },
+    "banchao-ep01-current-status.json": {
+      "sha256": "c815050c1d23330b36a1a53d5843fdd75be35568922fa16394a523c58ae9f8ff",
+      "size": 8013
+    },
+    "2026-08-18-banchao-ep01-preproduction.md": {
+      "sha256": "18876581fbbe48b40a92b79f6ceb34c909f25286698ba46b1a245a348c874666",
+      "size": 1093
+    }
+  }
+}
