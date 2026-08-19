@@ -1,0 +1,34 @@
+schema: story-studio/gate-decision
+gate_id: G04_RESEARCH_RIGHTS_CONSTRAINTS_LOCK
+decision: approve
+decision_timestamp_utc: '2026-08-19T06:15:00Z'
+decision_scope: internal project workflow only
+review_mode: user_delegated_ai_assisted_independent_review_pass
+owner: research_rights_panel
+reviewers:
+- production_design
+- character_design_costume_hmu
+- props
+- ai_production_engineering
+approver: USER_DELEGATED_RESEARCH_RIGHTS_PROXY
+human_signoff_separately_recorded: false
+self_approval_exception:
+  used: true
+  basis: User explicitly delegated continued execution; decision is limited to internal workflow state and records evidence/conditions.
+  does_not_mean: legal opinion, publication clearance, or human HOD sign-off
+decision_qualification: approve_internal_candidate_only
+evidence_refs:
+- banchao-rights-provenance-package.yaml
+- banchao-source-ledger.yaml
+- VisualResearchRegistry 19/19 closed
+findings:
+- Historical/design uncertainties are evidence-supported, bounded, excluded or deferred.
+- Official OpenAI terms/data-control sources were rechecked; they do not clear third-party rights or establish exact model identity.
+- Provider/model/account settings and publication rights remain explicitly not_verified.
+conditions:
+- Public release, commercial distribution and publication-ready labels remain blocked.
+- Each future GenerationAttempt must record a generation-time TermsSnapshot and account data-control status.
+- Exact effective model remains not_verified unless the provider exposes evidence.
+- Critical-edition metadata and attribution must be completed before public historical release.
+publication_clearance: false
+next_gate: G05_DESIGN_LOOK_APPROVAL
