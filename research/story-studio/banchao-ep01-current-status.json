@@ -1,15 +1,42 @@
 {
-  "schema_version": "story-studio/current-status/v1",
+  "schema": "story-studio/current-status",
   "status_id": "banchao-ep01-current-status",
-  "status_revision": 5,
+  "status_revision": 6,
   "authority": {
     "role": "single_current_state_source",
-    "scope": {
-      "project_id": "banchao",
-      "episode_id": "EP01"
+    "as_of_utc": "2026-08-19T03:06:00Z",
+    "rule": "This stable file is directly replaced. No parallel v2/v3 status files are created."
+  },
+  "foundation_baseline": {
+    "status": "authoritative",
+    "workflow": {
+      "path": "workflows/story-studio/film-department-gate-matrix-v1.yaml",
+      "git_blob_sha": "42bda771339802b54f5b17cd8c66d87d205f9049"
     },
-    "as_of_utc": "2026-08-18T19:45:00Z",
-    "rule": "This file alone determines current workflow stage and gates; other state claims are projections or historical snapshots."
+    "glossary": {
+      "path": "workflows/story-studio/core-glossary.yaml",
+      "git_blob_sha": "e70aa2fac8e9038600ff5ea2e5fb61236df6ae95"
+    },
+    "stage_artifact_matrix": {
+      "path": "workflows/story-studio/stage-artifact-matrix.yaml",
+      "git_blob_sha": "925039550d3c12a37f946991254ed7458163c7ae"
+    },
+    "role_approval_matrix": {
+      "path": "workflows/story-studio/role-approval-matrix.yaml",
+      "git_blob_sha": "8fc7c9c13117988a401724088bdc2c07351d0e37"
+    },
+    "conditional_modules": {
+      "path": "workflows/story-studio/conditional-modules.yaml",
+      "git_blob_sha": "45a9c431249d74bfa832abf42fb648129028943d"
+    },
+    "validation": {
+      "yaml_parse": "pass",
+      "macro_stages": 10,
+      "quality_gates": 11,
+      "role_departments": 19,
+      "conditional_modules": 12,
+      "ambiguous_labels_controlled": 7
+    }
   },
   "project": {
     "project_id": "banchao",
@@ -27,14 +54,13 @@
     "narrative_baseline": "complete_working_baseline",
     "screenplay": "frozen_validated_input",
     "visual_research": "19/19 closed",
-    "P1": "5/5 closed",
-    "lookdev_round2": "8 Takes normalized and reviewed",
+    "lookdev_round2": "8 Takes reviewed",
     "dailies_round2": {
       "select": 0,
       "revise": 6,
       "reject": 2
     },
-    "HOD_round2": "revise_required",
+    "design_look_gate": "revise",
     "canonical_assets": 0,
     "single_view": 0,
     "storyboard": 0,
@@ -43,89 +69,32 @@
     "video": 0,
     "final_audio": 0
   },
-  "not_verified": [
-    "exact ChatGPT image model/version",
-    "image usage/publication rights",
-    "AGY effective model",
-    "video/audio provider quality, speed and cost"
-  ],
-  "artifacts": {
-    "format_contract": {
-      "artifact": "banchao-ep01-production-format-contract-v1.yaml",
-      "sha256": "0b6406cdd79b5b76694c40f809cdf3835fad20ab839c2909bf928b0827f6ca7f"
-    },
-    "shot_list": {
-      "artifact": "ep01-shot-list-v1.1.yaml",
-      "sha256": "17c9cc91eac282d9d025013186180bafd22782a2e4fce2783af99f68ad0551d3"
-    },
-    "continuity": {
-      "artifact": "ep01-continuity-contract-v1.1.yaml",
-      "sha256": "901d16bd439b675b918fcfae2a7dd682f8ade2d91589d3755ac1a0849a9bb7b4"
-    },
-    "visual_research_registry": {
-      "artifact": "banchao-ep01-visual-research-registry-v1.3.yaml",
-      "sha256": "ff141d5cd117c6e92486d16b327b637cefae0cc36f5bf98fd1f6c19b1160c17a"
-    },
-    "p1_decision": {
-      "artifact": "banchao-ep01-p1-visual-research-decision-v1.yaml",
-      "sha256": "3b31c6afbd6a53124b800fcd5dadf5d04652ae00faaa75b416852e4485017fe2"
-    },
-    "visual_canon_brief": {
-      "artifact": "banchao-ep01-minimum-visual-canon-brief-v1.1.yaml",
-      "sha256": "2a7a73a17d1a3748a521f1a6e088942f3c77a80873589cb55c344e0236a7c0e2"
-    },
-    "dailies_round2": {
-      "artifact": "banchao-ep01-lookdev-dailies-review-round2-v1.yaml",
-      "sha256": "54c92e6765e565f844dc696985bce5b9adf92bc8a46f7a624bceaa43889aaa92"
-    },
-    "HOD_round2": {
-      "artifact": "banchao-ep01-minimum-visual-canon-hod-review-round2-v1.yaml",
-      "sha256": "804349f04f4916d7bfd251672c9b44a6ab75107aa1e39e2d5c95ebd5cb263396"
-    },
-    "round3_work_order": {
-      "artifact": "banchao-ep01-lookdev-revision-work-order-v1.2.yaml",
-      "sha256": "b1b103b7d20fee0876a0d5eea6be41f40ce9ef9792e19c781dca81a9f128e565",
-      "work_items": 9
-    }
-  },
-  "gates": {
-    "visual_research": {
-      "status": "pass",
-      "open_flags": 0
-    },
-    "visual_canon": {
-      "status": "revise_required_after_HOD_round2",
-      "approved_assets": 0
-    },
-    "single_view_crops": {
-      "status": "blocked"
-    },
-    "storyboard": {
-      "status": "blocked"
-    },
-    "animatic": {
-      "status": "not_started"
-    },
-    "keyframes": {
-      "status": "blocked"
-    },
-    "video": {
-      "status": "blocked"
-    },
-    "audio": {
-      "status": "scratch_later_final_not_started"
-    }
+  "readiness": {
+    "NarrativeCanon": "working_baseline",
+    "VisualCanon": "not_approved",
+    "ProductionCanon": "not_established",
+    "production_ready": false,
+    "publication_ready": false
   },
   "workflow": {
-    "current_stage": "08_visual_research_and_canon",
-    "status": "visual_research_pass_HOD_round2_revise_required",
-    "next_legal_action": "execute_9_item_round3_lookdev_work_order_then_Dailies_and_HOD_round3",
+    "current_stage_id": "STAGE_05_VISDEV_LOOKDEV_APPROVAL",
+    "current_gate_id": "G05_DESIGN_LOOK_APPROVAL",
+    "gate_decision": "revise",
+    "foundation_alignment": "required_before_more_generation",
+    "next_legal_action": "map_existing_banchao_artifacts_to_canonical_terms_and_required_stage_artifacts",
+    "round3_lookdev": "paused",
     "prohibited": [
-      "single-view crops before character Canon",
-      "Storyboard Lock before Visual Canon",
-      "Keyframes/Video before Animatic pass",
-      "relabel legacy source bytes as 16:9",
-      "claim model/rights or Ban Chao-specific official objects as verified"
+      "resume Round-3 generation before foundation mapping",
+      "use ambiguous labels such as 脚本、场景、分镜、关键图片、审核通过 or 最终版 in contracts",
+      "single-view derivation before Character VisualCanon approval",
+      "Storyboard or ShotKeyframe production before required Stage 05 and Stage 06 artifacts pass",
+      "claim canonical as production_ready or publication_ready without separate gates"
     ]
-  }
+  },
+  "not_verified": [
+    "exact ChatGPT image model and version",
+    "image usage and publication rights",
+    "AGY effective model",
+    "video and audio provider quality, speed and cost"
+  ]
 }
