@@ -1,4 +1,4 @@
-schema: story-studio/storyboard-entry-decision
+schema: story-studio/storyboard-text-readiness-decision
 artifact_id: banchao-ep01-storyboard-text-readiness-decision
 status: text_ready_visual_gate_blocked
 project_id: banchao
@@ -11,7 +11,7 @@ shot_count: 14
 duration_seconds: 105
 planned_storyboard_panels: 27
 technical_format:
-  aspect_ratio: 16:9
+  aspect_ratio: '16:9'
   resolution: 1920x1080
   frame_rate_fps: 24
   audio: 48kHz/24-bit working
@@ -20,36 +20,36 @@ G06: not_entered
 storyboard_execution_allowed: false
 only_remaining_entry_blocker: G05 VisualCanon approval; ScratchAudio recording is required before TimedAnimatic lock.
 next_legal_action: Execute three separate native Phase A Batch03 Styleframes, Dailies and HOD G05 review.
-notification_rule: Notify the user only after G05 approve that Storyboard stage may begin.
+notification_rule: Notify user only after G05 approve that Storyboard stage may begin.
 private_package_hashes:
-  banchao-ep01-blocking-coverage-plan.yaml:
-    sha256: a89e74a9eea4e3c4e3e23af9c3cf15e2fe47d1b5ebf1cb670c38c75847ad4ee2
-    size: 4997
-  banchao-ep01-layout-previs-techvis-plan.yaml:
-    sha256: 0dad11540e527150a203f3ba293f7ebc0dfa484a94f59862d42ffd213a2f9c10
-    size: 2990
-  banchao-ep01-lookdev-batch02-review-package.yaml:
-    sha256: fa080cc406218b0f3a8809883c77d6c2857d16d5a63b533f6e43008e567e0a23
-    size: 5722
   banchao-ep01-narrative-to-production-bridge.yaml:
     sha256: b2ddbb13fd1b458145bef1139b6620e323a6966190bc59ad9d1a5946b1042039
     size: 9932
-  banchao-ep01-round3-lookdev-work-order.yaml:
-    sha256: 846996b607c6f246cc44f16e96cf7745a8bc4f1b7181bdf551bb7f17fd670195
-    size: 2303
-  banchao-ep01-scratch-audio-plan.yaml:
-    sha256: 05cbdabc701c579ebb38922431f17e0b669fc6d9c0874d5ce26ea90736aedbce
-    size: 3133
+  banchao-ep01-blocking-coverage-plan.yaml:
+    sha256: a89e74a9eea4e3c4e3e23af9c3cf15e2fe47d1b5ebf1cb670c38c75847ad4ee2
+    size: 4997
   banchao-ep01-storyboard-brief.yaml:
     sha256: 53e2eea2d08ec6b31271e39522d48c385886113dbddca7c25ae9e37208f75b44
     size: 12677
-  banchao-ep01-storyboard-preproduction-text-package.yaml:
-    sha256: 26723c0d072e406858ee50fd46f038c5a0ca7a8034491f5c9b8666de04a51655
-    size: 938
-  banchao-ep01-storyboard-text-readiness-detail.yaml:
-    sha256: 176a06e485cf920404b20ada7e457057c552e8cc15aaa8bdbd44b39eb51fd1c5
-    size: 1388
+  banchao-ep01-layout-previs-techvis-plan.yaml:
+    sha256: 0dad11540e527150a203f3ba293f7ebc0dfa484a94f59862d42ffd213a2f9c10
+    size: 2990
+  banchao-ep01-scratch-audio-plan.yaml:
+    sha256: 05cbdabc701c579ebb38922431f17e0b669fc6d9c0874d5ce26ea90736aedbce
+    size: 3133
   banchao-ep01-technical-format-decision.yaml:
     sha256: 56f05f29b204e167f7a7ed73daa3a00dbcf829cbef359e38bd901b64f963be5b
     size: 1024
+  banchao-ep01-storyboard-text-readiness-detail.yaml:
+    sha256: 176a06e485cf920404b20ada7e457057c552e8cc15aaa8bdbd44b39eb51fd1c5
+    size: 1388
+  banchao-ep01-storyboard-preproduction-text-package.yaml:
+    sha256: e9e3ed96e959eda882de7d93a793fd1c65ff6c62f6e90a92157767561108e8b4
+    size: 936
+  banchao-ep01-lookdev-batch02-review-package.yaml:
+    sha256: fa080cc406218b0f3a8809883c77d6c2857d16d5a63b533f6e43008e567e0a23
+    size: 5722
+  banchao-ep01-round3-lookdev-work-order.yaml:
+    sha256: 846996b607c6f246cc44f16e96cf7745a8bc4f1b7181bdf551bb7f17fd670195
+    size: 2303
 rights_status: internal_candidate_only
