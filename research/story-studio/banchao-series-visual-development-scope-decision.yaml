@@ -1,0 +1,89 @@
+schema: story-studio/series-visual-development-scope-decision
+artifact_id: banchao-series-visual-development-scope-decision
+status: approved_internal_planning_conditions_recorded
+project_id: banchao
+as_of_utc: '2026-08-19T14:12:30Z'
+rights_status: internal_candidate_only
+purpose: Decide what series-level visual information must exist now and what must be activated only by a locked Episode or Sequence need.
+verified_current_foundation:
+  regions: 8
+  location_ids: 25
+  episode_foundation_rows: 24
+  ban_chao_character_states: 6
+  current_episode: EP01
+  current_episode_storyboard_entry: ready
+  current_visual_canon_scope: EP01 rule-level directional baseline only
+decisions:
+  narrative_geography_map:
+    decision: text_topology_sufficient_now_detailed_visual_map_deferred
+    rationale:
+    - The Region and Location registries already support series causality, travel direction and Episode planning.
+    - A polished map without an explicit editorial or educational use would create unverified coordinates and unnecessary art work.
+    create_now:
+    - stable Region and Location IDs
+    - route relationships and uncertainty labels
+    - Chapter and Episode mapping
+    create_later_when_triggered:
+    - educational insert map
+    - title-sequence map
+    - route-progress graphic
+    - public explanatory map with source and uncertainty legend
+    forbidden:
+    - exact ancient-to-modern coordinate equivalence without evidence
+    - presenting a narrative topology map as an archaeological reconstruction
+  western_regions_visual_style:
+    decision: no_single_generic_western_regions_style
+    rationale:
+    - 鄯善、于阗、疏勒、龟兹、焉耆、乌孙和康居不能被压成同一套“西域风格”。
+    activation_rule: Build a RegionResearchPacket and Episode-specific LookDev package before the relevant Episode G05 review.
+    planned_modules:
+    - REGION_HEXI_CORRIDOR_AND_GATES
+    - REGION_YIWU_PULEI_EAST_TIANSHAN
+    - REGION_SHANSHAN_YUTIAN_SOUTHERN_TARIM
+    - REGION_SHULE_SHACHE_WESTERN_TARIM
+    - REGION_KUCHA_YANQI_NORTHERN_TARIM
+    - REGION_WUSUN_KANGJU_STEPPE_DIPLOMACY
+    each_module_requires:
+    - source packet
+    - architecture and settlement boundary
+    - costume and identity hierarchy
+    - props, transport and material-culture boundary
+    - environment, season, light and sound rules
+    - three bounded Styleframes
+    - Dailies and HOD G05 decision
+  thirty_six_companions:
+    canonical_term: ThirtySixCompanionsEnsemble
+    historical_label: 官属三十六人 / 三十六人使团
+    marketing_label_rule: “三十六勇士”仅可作后续宣传性简称，不作为史料原词。
+    decision: ensemble_foundation_now_unit_bible_before_first_central_use_no_36_individual_portraits_now
+    registered_now: banchao-thirty-six-companions-ensemble-foundation.yaml
+    rationale:
+    - The group is a narrative and continuity system, not thirty-six equal Hero Characters.
+    - Creating thirty-six portraits before locked Screenplay and Shot needs would waste assets and invent biographies.
+    required_before_first_central_use:
+    - ThirtySixCompanionsUnitBible
+    - verified group-size wording and historical boundary
+    - command and functional role tiers
+    - foreground Hero subset and background cohort tiers
+    - stable continuity IDs
+    - silhouette, costume and equipment families
+    - crowd reuse and variation policy
+    - dialogue, language and naming policy
+    - state-change rules when supported by later Screenplays
+    visual_asset_rule:
+    - Build only named or foreground characters required by locked Shots.
+    - Use controlled cohort variants for medium and background coverage.
+    - Do not invent thirty-six fixed personal biographies, names or unique costumes.
+  ep01:
+    decision: do_not_block_storyboard
+    rationale: EP01 requires Luoyang labour-space, family and writing-prop direction; Western-region modules and the thirty-six-person ensemble do not appear in the locked 14-Shot plan.
+activation_gates:
+  series_text_foundation: complete_internal
+  episode_source_packet: required_before_episode_G03_or_G04
+  region_lookdev: required_before_episode_G05
+  production_assets: required_at_G07 only for locked Shot dependencies
+  public_map_or_release_art: requires RightsAndProvenanceGate and publication review
+next_actions:
+- Begin EP01 Storyboard using the approved rule-level VisualCanon.
+- Before the first central on-screen use, expand the registered EnsembleFoundation into a ThirtySixCompanionsUnitBible; do not create thirty-six portraits.
+- Before each Western-region Episode enters LookDev, create the corresponding RegionResearchPacket instead of a generic Western Regions style pack.
