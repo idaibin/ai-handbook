@@ -19,7 +19,7 @@
     },
     "stage_artifact_matrix": {
       "path": "workflows/story-studio/stage-artifact-matrix.yaml",
-      "git_blob_sha": "925039550d3c12a37f946991254ed7458163c7ae"
+      "git_blob_sha": "e5dd8690e123f8bcd756d678a3a1a766c06fbf5b"
     },
     "role_approval_matrix": {
       "path": "workflows/story-studio/role-approval-matrix.yaml",
@@ -27,7 +27,7 @@
     },
     "conditional_modules": {
       "path": "workflows/story-studio/conditional-modules.yaml",
-      "git_blob_sha": "45a9c431249d74bfa832abf42fb648129028943d"
+      "git_blob_sha": "613af18df4c4e3c7cfbf2eed6ce956943a5314f0"
     },
     "validation": {
       "yaml_parse": "pass",
@@ -35,7 +35,9 @@
       "quality_gates": 11,
       "role_departments": 19,
       "conditional_modules": 12,
-      "ambiguous_labels_controlled": 7
+      "ambiguous_labels_controlled": 7,
+      "cross_reference_errors": 0,
+      "gate_reference_validation": "pass"
     }
   },
   "project": {
