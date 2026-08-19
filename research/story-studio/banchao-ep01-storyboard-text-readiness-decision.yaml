@@ -1,9 +1,9 @@
 schema: story-studio/storyboard-text-readiness-decision
 artifact_id: banchao-ep01-storyboard-text-readiness-decision
-status: text_ready_visual_gate_blocked
+status: storyboard_entry_ready
 project_id: banchao
 episode_id: EP01
-as_of_utc: '2026-08-19T11:45:00Z'
+as_of_utc: '2026-08-19T12:30:00Z'
 text_artifacts_complete: true
 scene_count: 3
 beat_count: 8
@@ -15,12 +15,12 @@ technical_format:
   resolution: 1920x1080
   frame_rate_fps: 24
   audio: 48kHz/24-bit working
-G05: revise_batch03_required
-G06: not_entered
-storyboard_execution_allowed: false
-only_remaining_entry_blocker: G05 VisualCanon approval; ScratchAudio recording is required before TimedAnimatic lock.
-next_legal_action: Execute three separate native Phase A Batch03 Styleframes, Dailies and HOD G05 review.
-notification_rule: Notify user only after G05 approve that Storyboard stage may begin.
+G05: approve_rule_level_visual_direction_conditions_recorded
+G06: entry_allowed_not_started
+storyboard_execution_allowed: true
+only_remaining_entry_blocker: null
+next_legal_action: Begin 14-shot / 27-panel Storyboard; record ScratchAudio before TimedAnimatic lock.
+notification_rule: Notify user that Storyboard stage may begin.
 private_package_hashes:
   banchao-ep01-narrative-to-production-bridge.yaml:
     sha256: b2ddbb13fd1b458145bef1139b6620e323a6966190bc59ad9d1a5946b1042039
@@ -53,3 +53,5 @@ private_package_hashes:
     sha256: 846996b607c6f246cc44f16e96cf7745a8bc4f1b7181bdf551bb7f17fd670195
     size: 2303
 rights_status: internal_candidate_only
+visual_canon_scope: approved_rule_level_selected_components; production assets remain pending G07
+provider_exception: derived crops accepted as selected_component evidence; not native production assets
