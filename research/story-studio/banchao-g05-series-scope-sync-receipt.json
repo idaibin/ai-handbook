@@ -1,0 +1,89 @@
+{
+  "schema": "story-studio/public-sync-receipt",
+  "artifact_id": "banchao-g05-series-scope-sync-receipt",
+  "generated_at_utc": "2026-08-19T15:15:30Z",
+  "status": "completed_per_file_readback_verified",
+  "repository": "idaibin/ai-handbook",
+  "branch": "agent/story-studio-banchao-sync-20260818",
+  "verification_mode": "per-file branch readback and SHA-256; branch head omitted because connector did not expose it",
+  "state": {
+    "current_status_revision": 13,
+    "G05": "approve_rule_level_visual_direction_conditions_recorded",
+    "G06": "entered_storyboard_ready",
+    "storyboard": {
+      "shots": 14,
+      "panels": 27,
+      "duration_seconds": 105
+    },
+    "rights_status": "internal_candidate_only"
+  },
+  "series_visual_scope": {
+    "detailed_map_now": false,
+    "narrative_topology_foundation": "8 regions / 25 Location IDs / 24 Episode rows",
+    "generic_western_regions_style": false,
+    "region_specific_lookdev_by_episode": true,
+    "thirty_six_individual_portraits_now": false,
+    "ensemble_foundation_registered": true,
+    "unit_bible_before_first_central_use": true
+  },
+  "public_files": [
+    {
+      "file": "banchao-ep01-current-status.json",
+      "sha256": "a89dc2d738997da61a1e4e8eea97d45a77d2ad362e929d87c22b650723247161",
+      "size": 4873
+    },
+    {
+      "file": "banchao-ep01-visual-canon-rules.yaml",
+      "sha256": "1cdd31e90d1a0f8386ce8e689f8ccd4b3aafd05642fbfe817fca10acb6aceaf9",
+      "size": 3551
+    },
+    {
+      "file": "banchao-ep01-selected-component-styleframes-manifest.json",
+      "sha256": "967368330d8211b85c9eccd4ab1c84e79b3c66c53735ea5e41ab3f021ce3a4c5",
+      "size": 3534
+    },
+    {
+      "file": "banchao-ep01-storyboard-entry-decision.yaml",
+      "sha256": "fd275e65da17c2ce344e23673eeefbae2fab6b4ba4ab3be7136975e05dfb7929",
+      "size": 1110
+    },
+    {
+      "file": "banchao-ep01-g05-storyboard-entry-validation.json",
+      "sha256": "e809793683d12f9320a08b8eba7171ad5f62462bdf6cef2b1ca58040de72cce2",
+      "size": 1929
+    },
+    {
+      "file": "banchao-g05-design-look-decision.yaml",
+      "sha256": "2b27bce497add9bcdfea4944380ba1862aa7f7116bdd42701deee992c74df62a",
+      "size": 2151
+    },
+    {
+      "file": "banchao-series-visual-development-scope-decision.yaml",
+      "sha256": "25de09c5a7f31dfd422056f261d4cf316bba5ece7ec00cb39d2841c615dfc3ef",
+      "size": 4702
+    },
+    {
+      "file": "banchao-thirty-six-companions-ensemble-foundation.yaml",
+      "sha256": "dead20c075b07d4f80c14cdcd224a96df810d5bff897173a14a4edd9ebd315c7",
+      "size": 2914
+    },
+    {
+      "file": "banchao-artifact-stage-map.yaml",
+      "sha256": "d2f20cc8b0076e098e8a7da442644bbf9f1267ec282eb93c62a76a8d32ef48b9",
+      "size": 2189
+    },
+    {
+      "file": "banchao-stage-gap-register.yaml",
+      "sha256": "146eea5fc13be23b88ac0baa24a6b8a91b20738761f4da122da8f4f64bf10f57",
+      "size": 1742
+    },
+    {
+      "file": "2026-08-18-banchao-ep01-preproduction.md",
+      "sha256": "a4f84f69012a7aadde7aba3ce21d2b1d2833ad14f73f20a70f36324dda5b5e21",
+      "size": 1591
+    }
+  ],
+  "private_media_policy": "Drive only; no PNG committed to public repository",
+  "production_ready": false,
+  "publication_ready": false
+}
