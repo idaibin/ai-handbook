@@ -1,51 +1,54 @@
 schema: story-studio/project-stage-gap-register
 artifact_id: banchao-stage-gap-register
-status: foundation_packages_created_gate_reviews_pending
+status: g01_g04_approved_g05_open
 project_id: banchao
-as_of_utc: '2026-08-19T05:30:00Z'
+as_of_utc: '2026-08-19T06:15:00Z'
 summary:
   p0_gap_count_original: 9
-  artifact_creation_closed_or_reduced: 8
-  gate_still_open: 1
-  round3_lookdev: paused
+  gates_approved: 4
+  remaining_current_gate_count: 1
+  remaining_gate: G05_DESIGN_LOOK_APPROVAL
+  round3_phase_a: authorized_not_executed
+  round3_phase_b: blocked_until_G05_phase_a_review
 gaps:
 - gap_id: GAP_SERIES_FORMAT_AUTHORITY
-  status: artifact_complete_approval_pending
+  status: closed_by_approved_gate_or_bounded_condition
   artifact: banchao-development-greenlight-package.yaml
-  next: G01 producer decision
+  next: Conditions tracked downstream; not a current blocker.
 - gap_id: GAP_CREATIVE_GREENLIGHT_PACKAGE
-  status: artifact_complete_approval_pending
+  status: closed_by_approved_gate_or_bounded_condition
   artifact: banchao-development-greenlight-package.yaml
-  next: G01 producer decision
+  next: Conditions tracked downstream; not a current blocker.
 - gap_id: GAP_SOURCE_LEDGER
-  status: artifact_complete_review_pending
+  status: closed_by_approved_gate_or_bounded_condition
   artifact: banchao-source-ledger.yaml
-  next: research review and critical-edition follow-up
+  next: Conditions tracked downstream; not a current blocker.
 - gap_id: GAP_NARRATIVE_AUTHORITY_NORMALIZATION
-  status: artifact_complete_approval_pending
+  status: closed_by_approved_gate_or_bounded_condition
   artifact: banchao-narrative-authority-package.yaml
-  next: G02 director/research review
+  next: Conditions tracked downstream; not a current blocker.
 - gap_id: GAP_EP01_SCRIPT_LOCK
-  status: artifact_complete_approval_pending
+  status: closed_by_approved_gate_or_bounded_condition
   artifacts:
   - banchao-ep01-screenplay.md
   - banchao-ep01-script-lock-package.yaml
-  next: director/editor/sound/research/continuity review; record scratch dialogue later
+  next: Conditions tracked downstream; not a current blocker.
 - gap_id: GAP_HOD_BREAKDOWN
-  status: artifact_complete_approval_pending
+  status: closed_by_approved_gate_or_bounded_condition
   artifact: banchao-ep01-hod-breakdown-package.yaml
-  next: G03 producer/HOD review
+  next: Conditions tracked downstream; not a current blocker.
 - gap_id: GAP_RIGHTS_PROVENANCE
-  status: internal_candidate_only_package_complete_approval_pending
+  status: closed_by_approved_gate_or_bounded_condition
   artifact: banchao-rights-provenance-package.yaml
-  next: G04 research/rights decision; publication remains blocked
+  next: Conditions tracked downstream; not a current blocker.
 - gap_id: GAP_LOOKDEV_INPUTS
-  status: rules_complete_tests_not_run
+  status: closed_by_approved_gate_or_bounded_condition
   artifacts:
   - banchao-ep01-lookdev-input-package.yaml
   - banchao-ep01-round3-lookdev-work-order.yaml
-  next: approve inputs, then run Phase A styleframe/camera/light tests
+  next: Conditions tracked downstream; not a current blocker.
 - gap_id: GAP_VISUAL_CANON
   status: open_gate_revise
-  next: after upstream approvals run Round3 Dailies and HOD G05 decision
-current_legal_action: obtain G01-G04 decisions and G05 input authorization; no bulk image generation yet
+  next: Run authorized Round3 Phase A tests, Dailies, then G05 HOD decision.
+current_legal_action: execute Round3 Phase A three bounded Styleframe/Camera/Lighting tests; no Phase B bulk assets
+artifact_storage_rule: 'Full packages: private Google Drive. Sanitized Gate decisions/status: public GitHub.'
