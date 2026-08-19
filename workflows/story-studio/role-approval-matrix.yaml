@@ -1,0 +1,135 @@
+schema: story-studio/role-approval-matrix
+artifact_id: story-studio-role-approval-matrix
+status: authoritative
+authority:
+  stable_path: workflows/story-studio/role-approval-matrix.yaml
+  workflow_ref: workflows/story-studio/film-department-gate-matrix-v1.yaml
+  principle: Roles may be combined in a small team, but responsibility, review and approval must remain logically distinct.
+approval_rules:
+- Artifact owner prepares the artifact and may not be its only approver.
+- A model/provider may produce evidence but may not approve creative, historical, rights or release state.
+- Every gate decision records gate_id, decision, approver, timestamp and evidence references.
+- approve means exit criteria pass; revise returns to named artifacts; reject prohibits use; blocked names missing evidence/dependency; defer removes scope with a reason.
+- An exception to role separation requires producer sign-off and an exception record.
+departments:
+- department_id: production_management
+  industry_roles: [producer, line producer, production manager, post-production supervisor]
+  responsibilities: [scope, budget, schedule, risk, change control, turnover, delivery]
+  cannot_self_approve: [creative quality, historical authenticity]
+- department_id: writing_story
+  industry_roles: [screenwriter, story editor]
+  responsibilities: [premise, bibles, treatment, screenplay, scene/beat causality]
+  cannot_self_approve: [historical claims, production feasibility, final picture]
+- department_id: directing
+  industry_roles: [director, assistant director]
+  responsibilities: [creative intent, performance, blocking, coverage, pacing, final creative decisions]
+  cannot_self_approve: [rights clearance, technical QC, historical authenticity]
+- department_id: research
+  industry_roles: [researcher, historical consultant]
+  responsibilities: [source ledger, claim boundaries, material culture, evidence classification]
+  cannot_self_approve: [dramatic effectiveness, visual taste]
+- department_id: rights_legal
+  industry_roles: [rights coordinator, legal/business affairs]
+  responsibilities: [terms snapshot, input/output rights, commercial/publication posture, attribution]
+  cannot_self_approve: [creative select, historical truth]
+- department_id: production_design
+  industry_roles: [production designer, art director, set decorator]
+  responsibilities: [visual world, set logic, architecture, palette, texture, set dressing]
+  cannot_self_approve: [camera coverage, unsupported historical claims]
+- department_id: character_design_costume_hmu
+  industry_roles: [character designer, costume designer, hair and makeup designer]
+  responsibilities: [identity, silhouette, costume plot, hair/makeup, ageing/distressing, continuity]
+  cannot_self_approve: [historical certainty, lighting compatibility without tests]
+- department_id: props
+  industry_roles: [prop master]
+  responsibilities: [hero props, hand props, scale, state, wear, interaction, continuity]
+  cannot_self_approve: [historical form without evidence, performance choreography]
+- department_id: cinematography
+  industry_roles: [director of photography, camera operator, grip]
+  responsibilities: [lens/FOV, framing, camera height, movement, depth, screen direction, coverage]
+  cannot_self_approve: [set design, performance meaning, final grade]
+- department_id: lighting
+  industry_roles: [gaffer, lighting lead]
+  responsibilities: [motivated light, key direction, fill/negative fill, practicals, continuity]
+  cannot_self_approve: [final colour grade, unsupported light source architecture]
+- department_id: layout_previs
+  industry_roles: [layout artist, previs artist, techvis artist]
+  responsibilities: [camera blocking, scene layout, rough action, technical feasibility]
+  cannot_self_approve: [final performance, final shot select]
+- department_id: action_stunts
+  industry_roles: [action director, stunt coordinator]
+  responsibilities: [action beats, screen geography, action previs, feasibility and safety governance]
+  cannot_self_approve: [practical execution without qualified human safety oversight, final edit]
+- department_id: vfx
+  industry_roles: [VFX supervisor, compositor]
+  responsibilities: [VFX breakdown, plates/references, cleanup, extensions, turnover, final QC]
+  cannot_self_approve: [unlocked editorial timing, historical design claims]
+- department_id: continuity
+  industry_roles: [script supervisor]
+  responsibilities: [dialogue/action continuity, props/costume state, eyeline, screen direction, change notes]
+  cannot_self_approve: [creative exception without director sign-off]
+- department_id: editorial
+  industry_roles: [editor, animation editor]
+  responsibilities: [storyboard timing, animatic, selects, assembly, rough/fine cut, picture lock]
+  cannot_self_approve: [historical claims, unreviewed VFX final]
+- department_id: sound_music
+  industry_roles: [sound editor, production sound mixer, composer, re-recording mixer]
+  responsibilities: [scratch dialogue, prelay, ambience, Foley, SFX, ADR, score, mix, M&E]
+  cannot_self_approve: [picture changes after lock without change control]
+- department_id: colour_qc
+  industry_roles: [DIT, colourist, QC operator]
+  responsibilities: [viewing transform, exposure/contrast, media integrity, colour continuity, master QC]
+  cannot_self_approve: [creative intent without director/DP]
+- department_id: ai_production_engineering
+  industry_roles: [pipeline TD, generation operator, prompt supervisor]
+  responsibilities: [provider-neutral contracts, run metadata, reproducibility, routing, cost/time, asset lineage]
+  cannot_self_approve: [creative select, historical authenticity, rights clearance]
+- department_id: localization_accessibility
+  industry_roles: [localization producer, subtitle editor, accessibility QC]
+  responsibilities: [subtitles, captions, audio description, language versions, accessibility checks]
+  cannot_self_approve: [master picture or rights]
+gate_approval_matrix:
+- gate_id: G01_DEVELOPMENT_GREENLIGHT
+  owner: production_management
+  required_reviewers: [writing_story, directing, research, rights_legal]
+  approver: producer
+- gate_id: G02_SCRIPT_LOCK
+  owner: writing_story
+  required_reviewers: [directing, editorial, sound_music, research]
+  approver: director
+- gate_id: G03_HOD_BREAKDOWN_COMPLETE
+  owner: production_management
+  required_reviewers: [all_activated_departments]
+  approver: producer
+- gate_id: G04_RESEARCH_RIGHTS_CONSTRAINTS_LOCK
+  owner: research_rights_panel
+  required_reviewers: [production_design, character_design_costume_hmu, props, ai_production_engineering]
+  approver: research_lead_and_rights_approver
+- gate_id: G05_DESIGN_LOOK_APPROVAL
+  owner: production_design
+  required_reviewers: [directing, cinematography, lighting, character_design_costume_hmu, props, vfx, continuity, colour_qc]
+  approver: director_and_relevant_hod
+- gate_id: G06_TIMED_ANIMATIC_LOCK
+  owner: editorial
+  required_reviewers: [directing, cinematography, layout_previs, sound_music, continuity, vfx]
+  approver: director_and_editor
+- gate_id: G07_ASSET_PRODUCTION_READINESS
+  owner: technical_hod_panel
+  required_reviewers: [ai_production_engineering, continuity, colour_qc, rights_legal]
+  approver: producer_and_relevant_hod
+- gate_id: G08_SHOT_SELECT_APPROVAL
+  owner: directing_editorial
+  required_reviewers: [cinematography, continuity, vfx, colour_qc]
+  approver: director_and_editor
+- gate_id: G09_PICTURE_LOCK
+  owner: editorial
+  required_reviewers: [directing, production_management, vfx, sound_music]
+  approver: director_and_producer
+- gate_id: G10_FINISH_APPROVAL
+  owner: post_management
+  required_reviewers: [directing, editorial, vfx, sound_music, colour_qc]
+  approver: director_and_post_supervisor
+- gate_id: G11_MASTER_DELIVERY_APPROVAL
+  owner: production_management
+  required_reviewers: [colour_qc, sound_music, rights_legal, localization_accessibility]
+  approver: producer_and_qc_approver
