@@ -2,11 +2,11 @@
   "schema": "story-studio/public-evidence-manifest",
   "project_id": "banchao",
   "episode_id": "EP01",
-  "evidence_scope": "public_sanitized_G05_storyboard_entry_and_series_visual_scope",
-  "as_of_utc": "2026-08-19T14:12:30Z",
+  "evidence_scope": "public_sanitized_storyboard_dailies_and_silent_animatic_proxy",
+  "as_of_utc": "2026-08-19T16:35:00Z",
   "storage_policy": {
-    "github": "sanitized decisions/status/rules/hash indexes only",
-    "google_drive": "complete private packages, media and provenance"
+    "github": "sanitized manifests/decisions/status/hash indexes only",
+    "google_drive": "complete private packages, panels, sheets, media and provenance"
   },
   "gate_decisions": {
     "G01": "approve_conditions_recorded",
@@ -14,81 +14,50 @@
     "G03": "approve_conditions_recorded",
     "G04": "approve_internal_candidate_only_conditions_recorded",
     "G05": "approve_rule_level_visual_direction_conditions_recorded",
-    "G06": "entered_storyboard_ready"
+    "G06": "in_progress_timed_animatic_lock_pending"
   },
   "current_status": {
     "file": "banchao-ep01-current-status.json",
-    "sha256": "a89dc2d738997da61a1e4e8eea97d45a77d2ad362e929d87c22b650723247161",
-    "status_revision": 13
+    "sha256": "9862b7c4552f8c5408f6ec270d29d2ed295da12e6c75c765938ecb2cf918c6eb",
+    "status_revision": 14
   },
-  "public_files": {
-    "banchao-ep01-visual-canon-rules.yaml": {
-      "sha256": "1cdd31e90d1a0f8386ce8e689f8ccd4b3aafd05642fbfe817fca10acb6aceaf9",
-      "size": 3551
-    },
-    "banchao-ep01-selected-component-styleframes-manifest.json": {
-      "sha256": "967368330d8211b85c9eccd4ab1c84e79b3c66c53735ea5e41ab3f021ce3a4c5",
-      "size": 3534
-    },
-    "banchao-ep01-storyboard-entry-decision.yaml": {
-      "sha256": "fd275e65da17c2ce344e23673eeefbae2fab6b4ba4ab3be7136975e05dfb7929",
-      "size": 1110
-    },
-    "banchao-ep01-g05-storyboard-entry-validation.json": {
-      "sha256": "e809793683d12f9320a08b8eba7171ad5f62462bdf6cef2b1ca58040de72cce2",
-      "size": 1929
-    },
-    "banchao-series-visual-development-scope-decision.yaml": {
-      "sha256": "25de09c5a7f31dfd422056f261d4cf316bba5ece7ec00cb39d2841c615dfc3ef",
-      "size": 4702
-    },
-    "banchao-thirty-six-companions-ensemble-foundation.yaml": {
-      "sha256": "dead20c075b07d4f80c14cdcd224a96df810d5bff897173a14a4edd9ebd315c7",
-      "size": 2914
-    },
-    "banchao-artifact-stage-map.yaml": {
-      "sha256": "d2f20cc8b0076e098e8a7da442644bbf9f1267ec282eb93c62a76a8d32ef48b9",
-      "size": 2189
-    },
-    "banchao-stage-gap-register.yaml": {
-      "sha256": "146eea5fc13be23b88ac0baa24a6b8a91b20738761f4da122da8f4f64bf10f57",
-      "size": 1742
-    },
-    "2026-08-18-banchao-ep01-preproduction.md": {
-      "sha256": "a4f84f69012a7aadde7aba3ce21d2b1d2833ad14f73f20a70f36324dda5b5e21",
-      "size": 1591
-    },
-    "banchao-g05-series-scope-sync-receipt.json": {
-      "sha256": "6eebd87dc209aaf18ea6ead0162b793f52e715ea2acf7f90ddfb9f0a833e7024",
-      "size": 3208
-    }
-  },
-  "private_file_hashes": {
-    "banchao-ep01-round3-phase-a-batch03-attempt-manifest.yaml": "fdf04036e61a76127682c82f384d7bd49ea92952bb213231d5b5722403d98cfa",
-    "banchao-ep01-round3-phase-a-batch03-dailies-review.yaml": "0815bb1bb52aa18e81f478a52a10620a7edc8971d2a0e3943b012dc3920f82d1",
-    "banchao-ep01-round3-lookdev-work-order.yaml": "3fa8f069a08a65b30dbeb282b98c6317d4556c7b9c81de253e126121b2d674db",
-    "banchao-ep01-round3-phase-a-batch03-provider-contact-sheet.png": "69922effdc3af4471dcd8e6f6dbb9e01789ce2dc0743a54aa188a0b28ac29ea2",
-    "SF_EP01_CHARACTER_COSTUME_SHOWLOOK_B03_DERIVED.png": "633f4c02b6b7d8118afe48071e2ee610ad0331d5971c651af2fe000f29f8f05a",
-    "SF_EP01_COMPOSITE_SET_CAMERA_LIGHTING_B03_DERIVED.png": "bbcec11f2e6807158e8adca2fee52ac19e6babdfaaa069b07847b7616a0e46d1",
-    "SF_EP01_HERO_PROP_HAND_LIGHTING_B03_DERIVED.png": "52797f01d5bd800dd37bc7d55971319968cf58ca313d0a7f5277d9e5945c7036",
-    "banchao-source-ledger.yaml": "f0270a4eaa9fe949730b400af2073baaf6fe5318c05a609b222c33c74d159eba"
-  },
-  "series_visual_scope": {
-    "detailed_map_now": false,
-    "generic_western_regions_style": false,
-    "thirty_six_individual_portraits_now": false,
-    "ensemble_foundation_registered": true,
-    "unit_bible_before_first_central_use": true,
-    "region_specific_lookdev_by_episode": true
-  },
-  "storyboard_entry": {
-    "allowed": true,
+  "storyboard": {
     "shots": 14,
     "panels": 27,
-    "duration_seconds": 105
+    "duration_seconds": 105,
+    "dailies": "approve_for_layout_previs_conditions_recorded",
+    "layout_previs": "approve_silent_animatic_proxy_conditions_recorded"
+  },
+  "silent_animatic_proxy": {
+    "duration_seconds": 105.0,
+    "sha256": "d22474c1fe8314e885aecb31ff218fef72fb209f9ba45cc64dc6dcfbff19e122",
+    "size": 3850817,
+    "timed_lock": false,
+    "blocker": "ScratchDialogue and audio review"
+  },
+  "public_files": {
+    "banchao-ep01-current-status.json": {"sha256": "9862b7c4552f8c5408f6ec270d29d2ed295da12e6c75c765938ecb2cf918c6eb", "size": 4113},
+    "banchao-ep01-storyboard-panel-manifest.yaml": {"sha256": "0e7f9a13ccaa1df762a71fcfd01c34e1b92d45c35d18409effc57dd95d7bd9ff", "size": 7401},
+    "banchao-ep01-storyboard-dailies-decision.yaml": {"sha256": "572be33b473293f9305a76a521fb8a014513f46f4175eda2edbe9a89450c6634", "size": 1161},
+    "banchao-ep01-layout-previs-review.yaml": {"sha256": "6ce74d64b9a020cf2496d999e494d0c9a64b72766071cd990a037a8d6ec36546", "size": 1065},
+    "banchao-ep01-storyboard-static-validation.json": {"sha256": "69a6b03704524fa07c5f9fe1f66ea7f554744a7f4164ec6b6ef54e7c77f7e730", "size": 1272},
+    "banchao-ep01-silent-animatic-proxy-manifest.json": {"sha256": "f065055ac7dc044f7dca0d34a7f5f77fd470b3a18b13794fb0a22b1cc5fd3c2e", "size": 903},
+    "banchao-artifact-stage-map.yaml": {"sha256": "0a8e10c5c2b8e7331fc0c9d013153aa0e38faf821786966201c4443d56840dbf", "size": 1735},
+    "banchao-stage-gap-register.yaml": {"sha256": "af6f82834de462bb8bacff4b2396b05735080cd0503f4535aa97d4e51cb5f91c", "size": 1494},
+    "2026-08-18-banchao-ep01-preproduction.md": {"sha256": "2c6282b826afd84d5e9c726b4360f2118866a2286426cf4ffe607af78f1cc13b", "size": 1726}
+  },
+  "private_file_hashes": {
+    "banchao-ep01-storyboard-dailies-review.yaml": "9a6d4fff59f047ed9a9ab1a304088760b0e90923b0206f83e1f2d406aa4fca3a",
+    "banchao-ep01-silent-animatic-proxy.mp4": "d22474c1fe8314e885aecb31ff218fef72fb209f9ba45cc64dc6dcfbff19e122",
+    "banchao-ep01-storyboard-rough-package.zip": "3c7ad6f0130cb2c848f46ee67a8340bad63570072ea026e34a69d712ac49bc41",
+    "banchao-ep01-storyboard-sheet-01.jpg": "b00777b1ac82fee0579f314e8f615a9d6a8e38aa39c43d5f5e59bb29432edeb2",
+    "banchao-ep01-storyboard-sheet-02.jpg": "6dbd57d68c79ed14c1e1ffcd4a1d82ff63f29ee76b0ab928367681b8f056b568",
+    "banchao-ep01-storyboard-sheet-03.jpg": "8513f2d20f93f71a3e460942740103aa60f4b0522f38ca73e81f43a4574bd8d2",
+    "banchao-ep01-storyboard-sheet-04.jpg": "1df90e5f948263d6ebc86ddc96612e5a90f2a5a4477b68b6c4d23220e12fc4fa"
   },
   "rights_status": "internal_candidate_only",
   "production_ready": false,
   "publication_ready": false,
-  "sync_status": "completed_per_file_readback_verified"
+  "production_shot_keyframes": 0,
+  "video_shots": 0
 }
