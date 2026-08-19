@@ -1,0 +1,82 @@
+{
+  "schema": "story-studio/timed-animatic-manifest",
+  "artifact_id": "banchao-ep01-timed-animatic-scratch",
+  "status": "timed_animatic_created_ready_for_G06_review",
+  "project_id": "banchao",
+  "episode_id": "EP01",
+  "generated_at_utc": "2026-08-20T00:30:00Z",
+  "format": {
+    "video": "H.264 1920x1080 24fps progressive",
+    "audio": "AAC stereo 48kHz scratch mix",
+    "duration_seconds": 105.0,
+    "frame_count": 2520
+  },
+  "source": {
+    "storyboard_manifest": "banchao-ep01-storyboard-panel-manifest.yaml",
+    "storyboard_panel_count": 27,
+    "shot_count": 14,
+    "scratch_cue_manifest": "banchao-ep01-scratch-dialogue-cue-manifest.yaml",
+    "timeline": "banchao-ep01-timed-animatic-timeline.json"
+  },
+  "files": [
+    {
+      "file": "banchao-ep01-timed-animatic-scratch.mp4",
+      "role": "audio_enabled_timed_animatic_review_proxy",
+      "sha256": "5123a07d0a840f3a6fc50e7e78c73776b6d2907143fdb6273158dd307d27d2be",
+      "size": 6625492
+    },
+    {
+      "file": "banchao-ep01-silent-animatic-rebuilt.mp4",
+      "role": "rebuilt_silent_picture_timing_proxy",
+      "sha256": "d9c5ad6e5f13205ad6c92ab36ff4af6895ec016f33cb87005df7c21a38631206",
+      "size": 3905194
+    },
+    {
+      "file": "MIX_SCRATCH.wav",
+      "role": "scratch_review_mix",
+      "sha256": "4ac470ed6862e0d2004865323f8c2d3c7fbd5cee04e7076b53e307a25cd1a306",
+      "size": 30240044
+    },
+    {
+      "file": "banchao-ep01-scratch-subtitles.srt",
+      "role": "scratch_subtitles",
+      "sha256": "1da05ab2f3ae3d146faff68cf67802d96cfdc5fa945785067875693cdf081271",
+      "size": 1450
+    }
+  ],
+  "lineage_limitations": [
+    "Storyboard panels are rough internal photobash/tonal boards, not production ShotKeyframes.",
+    "Scratch voices are local synthetic timing reads, not casting, final performance, ADR or LipSync approval.",
+    "FX and music are functional placeholders, not final Foley, sound design or score."
+  ],
+  "rights_status": "internal_candidate_only",
+  "production_ready": false,
+  "publication_ready": false,
+  "ffprobe": {
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "pix_fmt": "yuvj420p",
+        "r_frame_rate": "24/1"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2
+      },
+      {
+        "codec_name": "mov_text",
+        "codec_type": "subtitle",
+        "language": "zho"
+      }
+    ],
+    "format": {
+      "duration": "105.000000",
+      "size": "6625492"
+    }
+  }
+}
