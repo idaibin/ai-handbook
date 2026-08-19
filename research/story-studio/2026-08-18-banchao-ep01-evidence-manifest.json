@@ -2,8 +2,8 @@
   "schema": "story-studio/public-evidence-manifest",
   "project_id": "banchao",
   "episode_id": "EP01",
-  "evidence_scope": "public_sanitized_storyboard_text_readiness",
-  "as_of_utc": "2026-08-19T11:45:00Z",
+  "evidence_scope": "public_sanitized_g05_storyboard_entry",
+  "as_of_utc": "2026-08-19T12:30:00Z",
   "storage_policy": {
     "github": "sanitized decisions/status/hash indexes",
     "google_drive": "complete private packages and media"
@@ -13,44 +13,36 @@
     "G02": "approve",
     "G03": "approve",
     "G04": "approve_internal_candidate_only",
-    "G05": "revise",
-    "G06": "not_entered"
+    "G05": "approve_rule_level_visual_direction_conditions_recorded",
+    "G06": "entry_allowed_not_started"
   },
-  "storyboard_text_readiness": {
-    "complete": true,
+  "storyboard_readiness": {
+    "text_complete": true,
+    "visual_direction_approved": true,
+    "storyboard_execution_allowed": true,
     "scenes": 3,
     "beats": 8,
     "shots": 14,
     "duration_seconds": 105,
-    "planned_panels": 27,
-    "storyboard_execution_allowed": false
+    "planned_panels": 27
   },
   "public_file_hashes": {
-    "banchao-g01-development-greenlight-decision.yaml": "b8042ab620d5c497c2239a969c2155b21f6cf1f40e1fdb8806e9163e69a62347",
-    "banchao-g02-script-lock-decision.yaml": "2a25f2b2a7c9693cb3f15bc388cbd8ac72bc3ae6fc17685a6f09ed656edb799d",
-    "banchao-g03-hod-breakdown-decision.yaml": "17b68a8f35736e095f3bab17c98e7cfa93d8bc95a170865d5c606b535f0ec7e2",
-    "banchao-g04-research-rights-constraints-decision.yaml": "13edc282e8c828751b942d66f1a1afe2193891483a275f8c99d486f7b9fb784b",
-    "banchao-g05-design-look-decision.yaml": "7771955282c591522955d45ce2b34ccab09ee11da554b644271639774deb52e4",
-    "banchao-ep01-storyboard-text-readiness-decision.yaml": "114e53e17b000a214572e3e395e9bd67ccd19339d50b77d4c3fcad5cc61b3de8",
-    "banchao-ep01-text-readiness-validation.json": "694450ca6b5072041e12966ac9e1c6cef49976c64615a4b0b6c0c2449ce9455d",
-    "workflows/story-studio/core-glossary.yaml": "e9bb52ce689e5c1a2b8b510684ec18ffc573b8eceb387b1f3cd307ef28e752d3",
-    "banchao-artifact-stage-map.yaml": "9c122aeb4ddd235a4e7015940c8aa289f1fbc390c8e246f061d9f10e178f57af",
-    "banchao-stage-gap-register.yaml": "333ccab3ba137cef16f4c7710b9a967d4f4755601b0e396d1dbb1daaa1f8f5c6",
-    "banchao-ep01-current-status.json": "8760f60e166b020594b2ad5b4da78bbd76073e71059fe3270be4edf65046ce94",
-    "2026-08-18-banchao-ep01-preproduction.md": "49e3f0a865a7f1426fb86e774cf8c6a17f2b5b4af26cffc0c7ad0ed93c240964"
+    "banchao-g05-design-look-decision.yaml": "2b27bce497add9bcdfea4944380ba1862aa7f7116bdd42701deee992c74df62a",
+    "banchao-ep01-visual-canon-rules.yaml": "b186d6b0972b4660fdf347d5fc7124bc6f344db8cdb87fd4cb131cd0765ab219",
+    "banchao-ep01-storyboard-text-readiness-decision.yaml": "76fdd8da056d651a4c3354cfd45fccfdcdef8ee43138b05a616b62344f904b05",
+    "banchao-ep01-g05-storyboard-entry-validation.json": "a694341cfe018754de3ca3003d09ea2b932a826884d06a3fc89e1c5de297ec09",
+    "banchao-stage-gap-register.yaml": "d9267e559c956ad81ae8b67774ee756a43cea70cfe891f15ef8ef9d9b158e361",
+    "banchao-ep01-current-status.json": "88040351f7e515c5301bfcd98e56d07696b4252acc4879f36a3ba89778ae6c9e",
+    "2026-08-18-banchao-ep01-preproduction.md": "bb566030d2fd026df4951ee0581a0278b96aed60242f38d760dbc51620676746"
   },
   "private_package_hashes": {
-    "banchao-ep01-narrative-to-production-bridge.yaml": "b2ddbb13fd1b458145bef1139b6620e323a6966190bc59ad9d1a5946b1042039",
-    "banchao-ep01-blocking-coverage-plan.yaml": "a89e74a9eea4e3c4e3e23af9c3cf15e2fe47d1b5ebf1cb670c38c75847ad4ee2",
-    "banchao-ep01-storyboard-brief.yaml": "53e2eea2d08ec6b31271e39522d48c385886113dbddca7c25ae9e37208f75b44",
-    "banchao-ep01-layout-previs-techvis-plan.yaml": "0dad11540e527150a203f3ba293f7ebc0dfa484a94f59862d42ffd213a2f9c10",
-    "banchao-ep01-scratch-audio-plan.yaml": "05cbdabc701c579ebb38922431f17e0b669fc6d9c0874d5ce26ea90736aedbce",
-    "banchao-ep01-technical-format-decision.yaml": "56f05f29b204e167f7a7ed73daa3a00dbcf829cbef359e38bd901b64f963be5b",
-    "banchao-ep01-storyboard-text-readiness-detail.yaml": "176a06e485cf920404b20ada7e457057c552e8cc15aaa8bdbd44b39eb51fd1c5",
-    "banchao-ep01-storyboard-preproduction-text-package.yaml": "e9e3ed96e959eda882de7d93a793fd1c65ff6c62f6e90a92157767561108e8b4",
-    "banchao-ep01-lookdev-batch02-review-package.yaml": "fa080cc406218b0f3a8809883c77d6c2857d16d5a63b533f6e43008e567e0a23",
-    "banchao-ep01-round3-lookdev-work-order.yaml": "846996b607c6f246cc44f16e96cf7745a8bc4f1b7181bdf551bb7f17fd670195"
+    "banchao-ep01-selected-component-styleframes-manifest.json": "aff2b4b112cf64940979a1738b3a3afa264d97a3fa913ba2166b7b44c32fe507",
+    "SF_EP01_CHARACTER_COSTUME_SHOWLOOK_SELECTED_COMPONENT.png": "6e96f334e4ac7dd06ae0f55d0d419efe69351fa29acc71ce4585ea04b6cdd936",
+    "SF_EP01_COMPOSITE_SET_CAMERA_LIGHTING_SELECTED_COMPONENT.png": "bd859972325ea78d510d576b6659cf28becf4a28e5f2f20b88e48e1a6b0b82f8",
+    "SF_EP01_HERO_PROP_HAND_LIGHTING_SELECTED_COMPONENT.png": "36b6c3e2954ab83be1e72109731b2fc3733e0146f4837edff4dfa84e9a0d23d9"
   },
+  "provider_exception": "contact sheet outputs accepted only as selected_component evidence; production assets remain pending G07",
   "rights_status": "internal_candidate_only",
-  "media_generated_in_text_completion_step": false
+  "production_ready": false,
+  "publication_ready": false
 }
