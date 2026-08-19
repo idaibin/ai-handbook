@@ -1,0 +1,32 @@
+schema: story-studio/storyboard-dailies-decision
+artifact_id: banchao-ep01-storyboard-dailies-decision
+status: approve_for_layout_previs_conditions_recorded
+project_id: banchao
+episode_id: EP01
+reviewed_at_utc: '2026-08-19T16:20:00Z'
+scope:
+  shots: 14
+  panels: 27
+  duration_seconds: 105
+  format: 16:9 / 1920x1080 / 24fps
+decision_summary:
+  select: 14
+  revise: 0
+  reject: 0
+  decision: approve_for_layout_previs
+pass_checks:
+  dramatic_clarity: pass
+  A_B_C_geography: pass
+  screen_direction_and_eyelines: pass_after_SHOT_05_06_revision
+  camera_motivation_and_coverage: pass_for_rough_board
+  SHOT_10_action_chain: pass
+  SHOT_11_match_cut_geometry: pass_abstract_placeholder
+  historical_modern_exclusions: pass_rule_level
+  duration_structure: pass_105_seconds
+  scratch_audio_timing: not_run
+conditions:
+- Keep Character identity labels in Layout until G07 CharacterBlueprint approval.
+- Keep official-workspace and prop panels abstract; do not promote their geometry to asset canon.
+- Record ScratchDialogue before TimedAnimatic Lock.
+- No Production ShotKeyframe or video before G06 TimedAnimatic approval.
+rights_status: internal_candidate_only
