@@ -1,8 +1,8 @@
 schema: story-studio/project-stage-gap-register
 artifact_id: banchao-stage-gap-register
-status: g01_g04_approved_g05_open
+status: g01_g04_and_world_foundation_approved_g05_open
 project_id: banchao
-as_of_utc: '2026-08-19T06:15:00Z'
+as_of_utc: '2026-08-19T08:50:00Z'
 summary:
   p0_gap_count_original: 9
   gates_approved: 4
@@ -10,6 +10,12 @@ summary:
   remaining_gate: G05_DESIGN_LOOK_APPROVAL
   round3_phase_a: authorized_not_executed
   round3_phase_b: blocked_until_G05_phase_a_review
+  series_world_regions_defined: 8
+  series_location_ids_defined: 25
+  episode_location_maps: 24
+  future_world_research_tasks: 10
+  episode_foundation_rows: 24
+  ban_chao_major_states: 6
 gaps:
 - gap_id: GAP_SERIES_FORMAT_AUTHORITY
   status: closed_by_approved_gate_or_bounded_condition
@@ -50,5 +56,16 @@ gaps:
 - gap_id: GAP_VISUAL_CANON
   status: open_gate_revise
   next: Run authorized Round3 Phase A tests, Dailies, then G05 HOD decision.
-current_legal_action: execute Round3 Phase A three bounded Styleframe/Camera/Lighting tests; no Phase B bulk assets
+- gap_id: GAP_SERIES_WORLD_LOCATION_FOUNDATION
+  status: closed_by_approved_internal_foundation
+  artifacts:
+  - banchao-world-foundation-package.yaml
+  - banchao-location-bible.yaml
+  - banchao-episode-foundation-matrix.yaml
+  next: Episode-specific location evidence and G05 approval remain downstream conditions.
+- gap_id: GAP_CHARACTER_LIFESPAN_STATES
+  status: closed_by_approved_internal_foundation
+  artifact: banchao-character-state-bible.yaml
+  next: State-specific Character VisualCanon remains downstream.
+current_legal_action: Resume EP01 Round3 Phase A three controlled tests using the approved World/Location/Character foundations; no bulk Phase B assets.
 artifact_storage_rule: 'Full packages: private Google Drive. Sanitized Gate decisions/status: public GitHub.'
