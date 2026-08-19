@@ -1,0 +1,106 @@
+schema: story-studio/core-glossary
+artifact_id: story-studio-core-glossary
+status: authoritative
+authority:
+  stable_path: workflows/story-studio/core-glossary.yaml
+  change_policy: direct_replace_stable_path_no_parallel_version_files
+  language_rule: English term is the canonical identifier; Chinese is the required explanatory label.
+  usage_rule: Contracts use canonical terms; prose may show both languages.
+term_classes:
+  industry_standard: Widely established across film, animation, VFX, editorial or sound.
+  industry_common: Common but studio boundaries may vary.
+  studio_common: Used by some studios or departments, not universal.
+  story_studio_defined: Internal Story Studio governance term; industry equivalents must be stated where relevant.
+  provider_specific: Defined by a model or platform provider and not portable by default.
+controlled_vocabularies:
+  review_decision: [approve, revise, reject, blocked, defer]
+  lifecycle_state: [draft, candidate, selected_component, canonical, production_ready, publication_ready, superseded, retired, rejected]
+  evidence_class: [fact, inference, adaptation, fiction, not_verified]
+terms:
+  Project: {zh: 项目, class: industry_common, definition: 生产范围、资产和治理的工作空间, cannot_mean: 单集或散乱文件夹}
+  Series: {zh: 系列, class: industry_standard, definition: 由长期叙事和生产规则约束的完整连续作品, cannot_mean: 单集}
+  ChapterOrSeason: {zh: 篇章或季, class: industry_common, definition: 包含多集的主要故事分区, cannot_mean: Scene 或 Sequence}
+  Episode: {zh: 集, class: industry_standard, definition: 系列中的单个交付单元, cannot_mean: Scene 或 Shot}
+  Sequence: {zh: 段落或序列, class: industry_standard, definition: 服务同一戏剧运动的一组 Scene 或 Shot, cannot_mean: 单个连续 Scene}
+  Scene: {zh: 场, class: industry_standard, definition: 通常由时间和地点限定的连续戏剧单元, cannot_mean: 可复用 Location 资产}
+  Location: {zh: 地点或场景资产, class: industry_common, definition: 可被一个或多个 Scene 使用的空间资产, cannot_mean: 戏剧 Scene}
+  Beat: {zh: 剧情节拍, class: industry_common, definition: 目标、信息、情绪或权力关系发生一次有意义变化的最小单元, cannot_mean: Shot 或任意句子}
+  Shot: {zh: 镜头, class: industry_standard, definition: 剪辑中一次连续的摄影机视图, cannot_mean: 单张图片、Scene 或 Take}
+  Take: {zh: 条或次, class: industry_standard, definition: 对固定 Shot Contract 的一次录制或生成尝试, cannot_mean: Select 或最终镜头}
+  Premise: {zh: 故事命题, class: industry_common, definition: 人物、处境、冲突与后果构成的核心命题, cannot_mean: 宣传口号}
+  Logline: {zh: 一句话梗概, class: industry_common, definition: 用主角、目标、阻力和风险概括故事, cannot_mean: 完整 Synopsis 或 Theme}
+  Theme: {zh: 主题, class: industry_standard, definition: 作品通过选择和后果持续探讨的问题, cannot_mean: 事件列表或价值口号}
+  ValueConflict: {zh: 价值冲突, class: story_studio_defined, definition: 叙事中被反复检验的相互冲突价值, cannot_mean: 简单善恶标签}
+  CharacterArc: {zh: 人物弧, class: industry_standard, definition: 人物信念、策略、身份或关系随时间产生的有意义变化, cannot_mean: 只有年龄或服装变化}
+  DramaticObjective: {zh: 戏剧目标, class: industry_standard, definition: 人物在 Scene 或 Beat 中主动想获得的结果, cannot_mean: 主题或生产任务}
+  Obstacle: {zh: 阻力, class: industry_standard, definition: 阻止或复杂化戏剧目标的力量, cannot_mean: 背景装饰}
+  Turn: {zh: 转折, class: industry_common, definition: 改变目标、信息、情绪或权力方向的变化, cannot_mean: 任意剪辑点}
+  Treatment: {zh: 故事处理稿, class: industry_standard, definition: 在完整 Screenplay 前以散文说明结构和主要场面, cannot_mean: 锁定剧本}
+  Screenplay: {zh: 剧本, class: industry_standard, definition: 以 Scene 组织动作、对白和必要声音信息的正式文本, cannot_mean: Shot List、Storyboard 或 Prompt}
+  ScriptLock: {zh: 剧本锁定, class: industry_common, definition: 剧本可进入部门拆解且后续变更必须受控, cannot_mean: 永远禁止修正}
+  TableRead: {zh: 围读, class: industry_standard, definition: 通过朗读验证对白、节奏、清晰度与时长, cannot_mean: 正式配音}
+  ScriptBreakdown: {zh: 剧本拆解, class: industry_standard, definition: 按部门提取人物、地点、道具、服装、VFX、声音和动作需求, cannot_mean: 剧情摘要}
+  StoryBible: {zh: 故事圣经, class: industry_common, definition: 长期叙事事实、规则、时间线与连续性权威, cannot_mean: 单集大纲}
+  WorldBible: {zh: 世界观圣经, class: industry_common, definition: 地理、制度、物质文化、语言和环境规则, cannot_mean: Moodboard}
+  CharacterBible: {zh: 人物圣经, class: industry_common, definition: 人物身份、关系、人物弧、表演和连续性规则, cannot_mean: 人物肖像图}
+  ProductionBible: {zh: 生产圣经, class: studio_common, definition: 把叙事规则转为美术、摄影、灯光、声音、连续性和技术约束, cannot_mean: 文学 Bible 的复制}
+  NarrativeCanon: {zh: 叙事权威, class: story_studio_defined, definition: 下游生产必须遵守的已批准故事事实和规则, cannot_mean: 全部历史真相或所有草稿}
+  VisualCanon: {zh: 视觉权威, class: story_studio_defined, definition: 已批准的视觉规则和锚点资产；行业近似为 approved visual development、design approval、Show Look, cannot_mean: 任意好看的参考图}
+  ProductionCanon: {zh: 生产执行权威, class: story_studio_defined, definition: 当前剪辑采用的锁定剧本、镜头、时长、声音和执行决策, cannot_mean: 叙事或历史真相}
+  VisualDevelopment: {zh: 视觉开发, class: industry_standard, definition: 最终设计批准前对人物、世界、形状、色彩和视觉叙事的探索, cannot_mean: 正式镜头生产}
+  LookDevelopment: {zh: 外观开发, class: industry_standard, definition: 材料、色彩、纹理、光照响应和最终视觉语言的开发验证, cannot_mean: 只生成一张漂亮图片}
+  Styleframe: {zh: 风格帧, class: industry_common, definition: 验证目标最终观感的代表性画面, cannot_mean: 最终 Shot}
+  ColorScript: {zh: 色彩脚本, class: industry_standard, definition: 故事或段落中色彩与明度变化的规划, cannot_mean: 最终调色}
+  ShowLook: {zh: 项目统一观感, class: studio_common, definition: 用于测试、Dailies 和最终完成阶段的统一视觉目标或 Viewing Transform, cannot_mean: Provider 默认滤镜}
+  ReferenceAsset: {zh: 参考资产, class: story_studio_defined, definition: 不绑定具体 Shot、用于约束身份、设计、地点、道具或风格的输入, cannot_mean: Shot Keyframe 或 Canon}
+  CharacterBlueprint: {zh: 人物蓝图, class: story_studio_defined, definition: 稳定人物结构、轮廓和服装层级的多视图参考, cannot_mean: 自动成为 Character Canon}
+  Turnaround: {zh: 角色转面图, class: industry_standard, definition: 正面、侧面、背面和中间角度的角色结构图, cannot_mean: 表演或表情表}
+  CostumePlot: {zh: 服装规划表, class: industry_standard, definition: 人物在不同 Scene 和时间状态中的服装计划, cannot_mean: 单张服装图}
+  SetPlan: {zh: 布景空间计划, class: industry_standard, definition: 用于调度、摄影机、置景、开口和连续性的空间图, cannot_mean: 未经证据支持的历史复原}
+  HeroProp: {zh: 主道具, class: industry_common, definition: 需要严格控制形制、尺寸、状态和互动的叙事关键道具, cannot_mean: 主角持有的所有物件}
+  Blocking: {zh: 调度, class: industry_standard, definition: 人物和物体在空间中的位置与移动, cannot_mean: 摄影机运动}
+  Staging: {zh: 场面调度或呈现, class: industry_standard, definition: 组织动作、表演和视觉重点以清楚表达故事, cannot_mean: 只指置景}
+  Coverage: {zh: 覆盖镜头方案, class: industry_standard, definition: 为剪辑准备的 Master、Two-shot、Close-up、Insert 和 Reaction 等组合, cannot_mean: 拍摄所有角度}
+  ShotList: {zh: 镜头表, class: industry_standard, definition: 记录 Shot ID、时长、构图、摄影机、动作、声音和依赖的结构化计划, cannot_mean: Storyboard}
+  Storyboard: {zh: 故事板, class: industry_standard, definition: 按顺序展示构图、动作、摄影机和转场的视觉面板, cannot_mean: Shot List 或最终画面}
+  Layout: {zh: 布局或镜头布局, class: industry_standard, definition: 建立摄影机、视野、环境、人物、调度和粗动作的首个空间一致版本, cannot_mean: 静态 Set Plan 或最终动画}
+  Previs: {zh: 预演, class: industry_common, definition: 低成本验证段落调度、摄影机和时长的动态可视化, cannot_mean: 最终动画}
+  Techvis: {zh: 技术预演, class: industry_common, definition: 验证摄影机、VFX、转场、参考输入和 Provider 限制的技术方案, cannot_mean: 风格探索}
+  Animatic: {zh: 动态分镜, class: industry_standard, definition: 由 Storyboard 或 Layout 按时长剪成、可含 Scratch Audio 的低成本视频, cannot_mean: 最终动画}
+  ShotContract: {zh: 镜头合同, class: story_studio_defined, definition: 定义单个 Shot 输入、摄影机、动作、声音、连续性和验收条件的机器可读文件, cannot_mean: 只是一段 Prompt}
+  ShotKeyframe: {zh: 镜头关键帧, class: story_studio_defined, definition: 绑定具体 Shot 或运动区间的已批准视觉锚点, cannot_mean: Animation Keyframe 或普通参考图}
+  AnimationKeyframe: {zh: 动画关键帧, class: industry_standard, definition: 时间轴中属性、Pose 或状态被明确设定的帧, cannot_mean: 镜头关键图片}
+  Handles: {zh: 镜头余量, class: industry_standard, definition: 正式动作前后为剪辑保留的额外帧或秒数, cannot_mean: 失败素材}
+  GenerationAttempt: {zh: 生成尝试, class: story_studio_defined, definition: 一次固定合同的 Provider 运行，必须保存输入、模型、时间、成本、哈希和血缘, cannot_mean: Select 或已批准 Take}
+  DailiesOrRushes: {zh: 样片或毛片审查, class: industry_common, definition: 定期审查新生成或拍摄的 Takes 并形成创意、连续性和技术决定, cannot_mean: 最终批准}
+  Select: {zh: 选片, class: industry_standard, definition: 导演和剪辑选择进入当前 Cut 或下一阶段的 Take, cannot_mean: 默认即最终 Shot 或 Canon}
+  PictureLock: {zh: 画面锁定, class: industry_standard, definition: Shot 顺序和时长获批，结构变化需正式变更控制, cannot_mean: VFX、声音或母版完成}
+  VFXTurnover: {zh: 视效移交, class: industry_standard, definition: 向 VFX 交付锁定素材、Handles、Mask、摄影机或参考数据和说明, cannot_mean: 发送未锁定预览}
+  Conform: {zh: 套底或回套, class: industry_standard, definition: 把锁定剪辑重新链接至获批高质量媒体, cannot_mean: 调色或普通导出}
+  SpottingSession: {zh: 声音或音乐看片会, class: industry_standard, definition: 导演、剪辑和声音共同确定对白、环境、Foley、SFX 与音乐 Cue, cannot_mean: 最终混音}
+  Foley: {zh: 拟音, class: industry_standard, definition: 同步表演和录制脚步、衣物与物体互动声, cannot_mean: 通用音效库}
+  ADR: {zh: 对白补录, class: industry_standard, definition: 为表演、清晰度或替换而重新录制对白, cannot_mean: Scratch Dialogue}
+  Master: {zh: 母版, class: industry_standard, definition: 符合技术和内容交付规范的最终批准文件, cannot_mean: 任意导出预览}
+  Archive: {zh: 归档, class: industry_standard, definition: 有组织地保存母版、资产、元数据、来源和项目记录, cannot_mean: 临时备份目录}
+  candidate: {zh: 候选, class: story_studio_defined, definition: 可审查但未成为权威的选项, cannot_mean: canonical、production_ready 或 publication_ready}
+  selected_component: {zh: 选中成分, class: story_studio_defined, definition: 仅批准源资产中的部分特征，完整源资产仍非 Canon, cannot_mean: 批准整张资产}
+  canonical: {zh: 内部权威, class: story_studio_defined, definition: 下游必须遵守的内部批准事实或资产, cannot_mean: 自动 production_ready 或 publication_ready}
+  production_ready: {zh: 可投入生产, class: story_studio_defined, definition: Canonical 且已通过技术、摄影、灯光、连续性和复现测试, cannot_mean: 允许公开发布}
+  publication_ready: {zh: 可公开发布, class: story_studio_defined, definition: 权利、条款、署名、来源和交付条件允许公开或商业发布, cannot_mean: 只有创意批准}
+  fact: {zh: 已验证事实, class: story_studio_defined, definition: 由明确证据直接支持的主张, cannot_mean: 合理推断}
+  inference: {zh: 基于证据的推断, class: story_studio_defined, definition: 由证据支持但非直接记载或观察的结论, cannot_mean: fact}
+  adaptation: {zh: 改编, class: story_studio_defined, definition: 在明确边界内主动进行的叙事或生产变化, cannot_mean: 历史事实}
+  fiction: {zh: 虚构, class: story_studio_defined, definition: 明确创造且不冒充证据事实的内容, cannot_mean: 未披露的推断或改编}
+ambiguous_or_deprecated_labels:
+  脚本: {use: [Screenplay, Storyboard Script, Generation Prompt, Automation Script], rule: 必须指明文件类型}
+  场景: {use: [Scene, Location, Set, Environment Asset], rule: 戏剧单元用 Scene，可复用空间用 Location 或 Set}
+  分镜: {use: [ShotList, Storyboard, Animatic], rule: 必须区分文字镜头表、视觉面板和有时长视频}
+  关键图片: {use: [ReferenceAsset, Styleframe, Storyboard Panel, ShotKeyframe, Marketing Art], rule: 合同中禁止使用模糊标签}
+  关键帧: {use: [ShotKeyframe, AnimationKeyframe], rule: 区分镜头视觉锚点和时间轴关键帧}
+  审核通过: {use: [gate_id + approve/revise/reject/blocked/defer], rule: 必须记录 Gate、决定和 Approver}
+  最终版: {use: [canonical, production_ready, picture_locked, master_approved, publication_ready], rule: 必须声明准确状态}
+sources:
+- https://www.screenskills.com/starting-your-career/career-maps/
+- https://disneyanimation.com/process-encanto/
+- https://www.adobe.com/de/creativecloud/animation/discover/animatics.html
+- https://www.screenskills.com/job-profiles/browse/post-production/
