@@ -1,0 +1,30 @@
+schema: story-studio/gate-decision
+gate_id: G01_DEVELOPMENT_GREENLIGHT
+decision: approve
+decision_timestamp_utc: '2026-08-19T06:15:00Z'
+decision_scope: internal project workflow only
+review_mode: user_delegated_ai_assisted_independent_review_pass
+owner: production_management
+reviewers:
+- writing_story
+- directing
+- research
+- rights_legal
+approver: USER_DELEGATED_PRODUCER_PROXY
+human_signoff_separately_recorded: false
+self_approval_exception:
+  used: true
+  basis: User explicitly delegated continued execution; decision is limited to internal workflow state and records evidence/conditions.
+  does_not_mean: legal opinion, publication clearance, or human HOD sign-off
+evidence_refs:
+- banchao-development-greenlight-package.yaml
+- banchao-source-ledger.yaml
+findings:
+- Audience, purpose, scope, active 16:9 format, evidence policy, budget posture, dependency schedule, risk register and rights posture are explicit.
+- Platform, frame rate and audio sample rate are intentionally deferred and do not block internal pilot greenlight.
+conditions:
+- Frame rate and audio sample rate must be approved before G06 TimedAnimatic Lock.
+- No additional paid provider spend without a benchmark approval.
+- No public/commercial release while RightsPosture is internal_candidate_only.
+- Distribution platform and delivery-specific QC remain later-stage decisions.
+next_gate: G02_SCRIPT_LOCK
