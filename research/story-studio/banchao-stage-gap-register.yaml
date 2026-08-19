@@ -1,40 +1,35 @@
 schema: story-studio/project-stage-gap-register
 artifact_id: banchao-stage-gap-register
-status: storyboard_entry_ready_G07_assets_pending
+status: storyboard_and_silent_animatic_proxy_complete_timed_lock_pending
 project_id: banchao
-as_of_utc: '2026-08-19T14:12:30Z'
+as_of_utc: '2026-08-19T16:35:00Z'
 summary:
   G01_G04: approved_with_conditions
   G05: approve_rule_level_visual_direction_conditions_recorded
-  G06: entered_storyboard_ready
+  G06: in_progress_storyboard_dailies_and_silent_proxy_complete
   remaining_text_gap_count: 0
-  remaining_storyboard_entry_blockers: 0
-  storyboard_text_ready: true
-  storyboard_execution_ready: true
-  planned_storyboard_panels: 27
+  storyboard_panels_completed: 27
+  storyboard_dailies: approve_for_layout_previs_conditions_recorded
+  silent_animatic_proxy_seconds: 105.0
+  G06_timed_animatic_lock: blocked_pending_scratch_dialogue_and_audio_review
 gaps:
 - gap_id: GAP_EP01_STORYBOARD_TEXT
   status: closed
-- gap_id: GAP_VISUAL_DIRECTION
-  status: closed_rule_level_baseline
-  artifact: banchao-ep01-visual-canon-rules.yaml
-- gap_id: GAP_PROVIDER_NATIVE_SEPARATION
-  status: recorded_deferred_to_G07
-  rule: derived review frames are selected-component evidence only
+- gap_id: GAP_EP01_ROUGH_STORYBOARD
+  status: closed_selected_for_layout_previs
+- gap_id: GAP_LAYOUT_PREVIS_SILENT_PROXY
+  status: closed_conditions_recorded
+- gap_id: GAP_SCRATCH_AUDIO_RECORDING
+  status: open_blocking_G06_timed_animatic_lock
+- gap_id: GAP_G06_TIMED_ANIMATIC_REVIEW
+  status: open_after_scratch_audio
 - gap_id: GAP_PRODUCTION_ASSETS
   status: open_required_for_G07
-- gap_id: GAP_SCRATCH_AUDIO_RECORDING
-  status: open_nonblocking_for_initial_storyboard
-  required_before: G06_TIMED_ANIMATIC_LOCK
-- gap_id: GAP_DETAILED_SERIES_MAP
-  status: deferred_nonblocking
-  activation: educational, title or route-graphic use with source and uncertainty legend
+- gap_id: GAP_PROVIDER_NATIVE_SEPARATION
+  status: recorded_deferred_to_G07
 - gap_id: GAP_WESTERN_REGION_VISUAL_MODULES
   status: deferred_by_episode
-  activation: before each relevant Episode G05; no generic Western Regions style
 - gap_id: GAP_THIRTY_SIX_COMPANIONS_UNIT_BIBLE
-  status: foundation_registered_deferred_nonblocking_for_EP01
-  foundation_artifact: banchao-thirty-six-companions-ensemble-foundation.yaml
-  activation: Expand to UnitBible before first central on-screen use; no 36 individual portraits now.
-current_legal_action: Begin EP01 14-shot / 27-panel Storyboard; do not generate Production ShotKeyframe or video.
+  status: foundation_registered_deferred_until_first_central_use
+current_legal_action: Record ScratchDialogue, assemble audio-enabled 105-second TimedAnimatic, then run G06 review.
 rights_posture: internal_candidate_only
