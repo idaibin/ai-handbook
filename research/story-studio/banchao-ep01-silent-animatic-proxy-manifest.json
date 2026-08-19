@@ -1,0 +1,25 @@
+{
+  "schema": "story-studio/animatic-proxy-manifest",
+  "artifact_id": "banchao-ep01-silent-animatic-proxy",
+  "status": "silent_timed_proxy_created_not_locked",
+  "project_id": "banchao",
+  "episode_id": "EP01",
+  "duration_seconds": 105.0,
+  "format": {
+    "video": "H.264 1920x1080 24fps progressive",
+    "audio": "AAC stereo 48kHz silence"
+  },
+  "source": {
+    "storyboard_panels": 27,
+    "shots": 14,
+    "panel_manifest": "banchao-ep01-storyboard-panel-manifest.yaml"
+  },
+  "file": "banchao-ep01-silent-animatic-proxy.mp4",
+  "sha256": "d22474c1fe8314e885aecb31ff218fef72fb209f9ba45cc64dc6dcfbff19e122",
+  "size_bytes": 3850817,
+  "purpose": "Validate shot order and nominal duration before ScratchDialogue.",
+  "G06_timed_animatic_lock": "blocked_pending_scratch_dialogue_and_review",
+  "rights_status": "internal_candidate_only",
+  "production_ready": false,
+  "publication_ready": false
+}
