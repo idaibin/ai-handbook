@@ -546,6 +546,97 @@ terms:
     class: story_studio_defined
     definition: 提交给指定 Approver 的 Artifact、证据、未决项与允许决定集合
     cannot_mean: 自动 approve
+  NarrativeToProductionBridge:
+    zh: 叙事到生产桥接
+    class: story_studio_defined
+    definition: 把 Scene/Beat 的目标、转折、人物状态与摄影、美术、灯光、声音、VFX、连续性和 Shot 连接起来的结构化 Artifact
+    cannot_mean: Screenplay、ShotList 或通用 Prompt
+  BlockingCoveragePlan:
+    zh: 调度与镜头覆盖计划
+    class: story_studio_defined
+    definition: 在 Storyboard 前固定人物空间、轴线、Eyeline、Screen Direction 和必要 Coverage 的计划
+    cannot_mean: 最终 Storyboard 或越多镜头越好
+  StoryboardBrief:
+    zh: 故事板制作简报
+    class: story_studio_defined
+    definition: 逐 Shot 规定 Panel 数量、构图、动作阶段、Camera、Audio、Continuity 和禁止项的文字输入
+    cannot_mean: Storyboard Panel 本身
+  LayoutPrevisTechvisPlan:
+    zh: Layout、预演与技术预演计划
+    class: story_studio_defined
+    definition: 规定灰盒空间、Camera 数据、代理角色、Previs 时间线和技术风险验证方法
+    cannot_mean: 已完成 Layout、Previs 或 Techvis
+  ScratchAudioPlan:
+    zh: 临时声音计划
+    class: story_studio_defined
+    definition: 规定 Animatic 用临时对白、环境、拟音占位、音频格式和时间锚点
+    cannot_mean: Final Voice、ADR 或 Final Mix
+  TechnicalFormatDecision:
+    zh: 技术格式决定
+    class: story_studio_defined
+    definition: 固定画幅、分辨率、帧率、Timecode、音频采样率、位深和 Review Proxy 的项目决定
+    cannot_mean: Provider 默认设置或最终平台交付规范
+  StoryboardEntryDecision:
+    zh: 分镜阶段进入决定
+    class: story_studio_defined
+    definition: 明确文本前置、视觉门禁、未完成项和是否允许进入 Storyboard 执行的 Gate Decision
+    cannot_mean: 文本写完即自动进入分镜
+  StoryboardPanel:
+    zh: 故事板画格
+    class: industry_standard
+    definition: 一个 Shot 内用于表达构图、动作阶段、Eyeline、Camera 和剪辑关系的单个画格
+    cannot_mean: Styleframe、ShotKeyframe 或最终画面
+ambiguous_or_deprecated_labels:
+  脚本:
+    use:
+    - Screenplay
+    - Storyboard Script
+    - Generation Prompt
+    - Automation Script
+    rule: 必须指明文件类型
+  场景:
+    use:
+    - Scene
+    - Location
+    - Set
+    - Environment Asset
+    rule: 戏剧单元用 Scene，可复用空间用 Location 或 Set
+  分镜:
+    use:
+    - ShotList
+    - Storyboard
+    - Animatic
+    rule: 必须区分文字镜头表、视觉面板和有时长视频
+  关键图片:
+    use:
+    - ReferenceAsset
+    - Styleframe
+    - Storyboard Panel
+    - ShotKeyframe
+    - Marketing Art
+    rule: 合同中禁止使用模糊标签
+  关键帧:
+    use:
+    - ShotKeyframe
+    - AnimationKeyframe
+    rule: 区分镜头视觉锚点和时间轴关键帧
+  审核通过:
+    use:
+    - gate_id + approve/revise/reject/blocked/defer
+    rule: 必须记录 Gate、决定和 Approver
+  最终版:
+    use:
+    - canonical
+    - production_ready
+    - picture_locked
+    - master_approved
+    - publication_ready
+    rule: 必须声明准确状态
+sources:
+- https://www.screenskills.com/starting-your-career/career-maps/
+- https://disneyanimation.com/process-encanto/
+- https://www.adobe.com/de/creativecloud/animation/discover/animatics.html
+- https://www.screenskills.com/job-profiles/browse/post-production/
 ambiguous_label_rules:
   脚本: Screenplay | StoryboardScript | GenerationPrompt | AutomationScript
   场景: Scene | Location | Set | EnvironmentAsset
