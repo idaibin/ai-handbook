@@ -1,10 +1,10 @@
 {
   "schema": "story-studio/current-status",
   "status_id": "banchao-ep01-current-status",
-  "status_revision": 9,
+  "status_revision": 10,
   "authority": {
     "role": "single_current_state_source",
-    "as_of_utc": "2026-08-19T06:15:00Z",
+    "as_of_utc": "2026-08-19T08:50:00Z",
     "rule": "Stable file directly replaced; no parallel v2/v3 state files."
   },
   "project": {
@@ -27,7 +27,14 @@
     "shot_breakdown_count": 14,
     "rights_posture": "internal_candidate_only",
     "package_storage": "private_google_drive",
-    "public_evidence_storage": "github_sanitized_only"
+    "public_evidence_storage": "github_sanitized_only",
+    "world_regions_defined": 8,
+    "location_entries_defined": 25,
+    "ban_chao_production_states": 6,
+    "episode_location_asset_mappings": 24,
+    "future_world_research_tasks": 10,
+    "episode_foundation_rows": 24,
+    "world_foundation_decision": "approve_internal_foundation_conditions_recorded"
   },
   "gates": {
     "G01_DEVELOPMENT_GREENLIGHT": "approve_conditions_recorded",
@@ -45,7 +52,7 @@
   },
   "workflow": {
     "current_stage_id": "STAGE_05_VISDEV_LOOKDEV_APPROVAL",
-    "next_legal_action": "execute Round3 Phase A three bounded Styleframe/Camera/Lighting tests, then Dailies and G05 HOD review",
+    "next_legal_action": "Resume EP01 Round3 Phase A three bounded tests using the approved World/Location/Character foundations, then Dailies and G05 HOD review.",
     "round3_lookdev": "phase_a_authorized_not_executed",
     "prohibited": [
       "Round3 Phase B bulk assets before Phase A Dailies/HOD decision",
@@ -53,14 +60,18 @@
       "Storyboard before G05 approve",
       "ShotKeyframe/video before G06 TimedAnimatic lock",
       "public/commercial use while rights posture is internal_candidate_only"
-    ]
+    ],
+    "series_world_foundation": "approved_internal_foundation_conditions_recorded_non_ep01_visual_canon_pending"
   },
   "not_verified": [
     "exact ChatGPT image model/version",
     "current account data control setting",
     "AGY effective model",
     "public/commercial third-party rights clearance",
-    "video/audio provider quality, speed and cost"
+    "video/audio provider quality, speed and cost",
+    "exact ancient route coordinates and place equivalences",
+    "region-specific first-century architecture/costume/language/tack/weapon systems outside EP01",
+    "episode-specific first-century architecture/costume/language/tack/weapon systems outside EP01"
   ],
   "artifact_refs": {
     "glossary": {
@@ -74,12 +85,12 @@
     },
     "source_ledger": {
       "file": "banchao-source-ledger.yaml",
-      "sha256": "b9e4021f391fb4ccba054d5aabd8ebbbeb2bd7db3338512ce117fe9f9c7b9d4b",
+      "sha256": "c83a5618bae74ae77c3e8dcaaaba5ab8db0fbaa78e6e01608bf68e2629f25f7d",
       "storage": "private_google_drive"
     },
     "narrative_authority": {
       "file": "banchao-narrative-authority-package.yaml",
-      "sha256": "dd00706bd06a230c7d29558e9666f158269b09b42fa7967a1e25024998f8350b",
+      "sha256": "628894580b9cd8b59a7242df0441cc90f4804f605db98c17464d03197ba3138b",
       "storage": "private_google_drive"
     },
     "active_screenplay": {
@@ -114,16 +125,50 @@
     },
     "gap_register": {
       "file": "banchao-stage-gap-register.yaml",
-      "sha256": "5c158ad0952f858fe6a8d24726084f50d564fc8b113a94da1ff4673b4b2ec20c"
+      "sha256": "589ea6886d38063ed2f4b7b7623a9f634c03b28e43b50037c7e46a5804773ba5"
     },
     "artifact_map": {
       "file": "banchao-artifact-stage-map.yaml",
-      "sha256": "dae39ad9bb6c6ce935b08f1fb994af00da1a3c3ce514a2d0397f61bf98fdd786",
+      "sha256": "c3d863010fe3573628f977d57bccfbc6c81e0e98e5a31680d757a534f2379950",
       "storage": "public_github_and_private_drive"
     },
     "validation": {
       "file": "banchao-foundation-closure-validation.json",
       "sha256": "684b093c2875550ab8f320e5d09457fedc240e4e1d110e48da6aebe6234aa2b5",
+      "storage": "public_github_and_private_drive"
+    },
+    "world_foundation_validation": {
+      "file": "banchao-world-foundation-validation.json",
+      "storage": "public_github_and_private_drive"
+    },
+    "world_foundation_package": {
+      "file": "banchao-world-foundation-package.yaml",
+      "sha256": "30e556c919c1a051139fc459c82674e34a305c1ef7611df986b64bb4e10954bc",
+      "size": 15122,
+      "storage": "private_google_drive"
+    },
+    "location_bible": {
+      "file": "banchao-location-bible.yaml",
+      "sha256": "b085c3fb4d2f37db2d0bbf5d4502656137318fca2e8290ba06b95ba9e01575da",
+      "size": 25453,
+      "storage": "private_google_drive"
+    },
+    "character_state_bible": {
+      "file": "banchao-character-state-bible.yaml",
+      "sha256": "6ed0478ab99cedbf157025c7500440fbe25a9ba0cd55166a732c3fc72d56c265",
+      "size": 6370,
+      "storage": "private_google_drive"
+    },
+    "episode_foundation_matrix": {
+      "file": "banchao-episode-foundation-matrix.yaml",
+      "sha256": "705b4bc0908cf6e0d20d28217ce4ff135387853da78dd6e9d26bdc27f92419ac",
+      "size": 14756,
+      "storage": "private_google_drive"
+    },
+    "world_foundation_decision": {
+      "file": "banchao-world-foundation-decision.yaml",
+      "sha256": "7899604f88370d57b09f8fca037a44e3b52aa9b387f23e1b7229e7daa03491cf",
+      "size": 1693,
       "storage": "public_github_and_private_drive"
     }
   },
