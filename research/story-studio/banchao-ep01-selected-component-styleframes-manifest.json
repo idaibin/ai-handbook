@@ -1,0 +1,85 @@
+{
+  "schema": "story-studio/selected-component-styleframes-manifest",
+  "artifact_id": "banchao-ep01-selected-component-styleframes-manifest",
+  "status": "approved_rule_level_evidence_not_production_assets",
+  "project_id": "banchao",
+  "episode_id": "EP01",
+  "source_contact_sheet": {
+    "file": "banchao-ep01-round3-phase-a-batch03-provider-contact-sheet.png",
+    "sha256": "69922effdc3af4471dcd8e6f6dbb9e01789ce2dc0743a54aa188a0b28ac29ea2",
+    "resolution": "1536x1024",
+    "provider": "ChatGPT",
+    "surface": "ChatGPT Image",
+    "requested_model": "not_verified",
+    "effective_model": "not_verified",
+    "exact_model_verified": false,
+    "native_attempt_count": 1,
+    "contains_three_visual_panels": true,
+    "one_asset_per_native_attempt_contract": "fail"
+  },
+  "selected_components": [
+    {
+      "asset_id": "SF_EP01_CHARACTER_COSTUME_SHOWLOOK_B03_DERIVED",
+      "file": "SF_EP01_CHARACTER_COSTUME_SHOWLOOK_B03_DERIVED.png",
+      "sha256": "633f4c02b6b7d8118afe48071e2ee610ad0331d5971c651af2fe000f29f8f05a",
+      "resolution": "1920x1080",
+      "native_generation": false,
+      "decision": "select_component",
+      "selected_components": [
+        "restrained labourer performance",
+        "plain layered costume value structure",
+        "cool-grey/earth-brown palette",
+        "motivated soft side light",
+        "face-and-hand readability"
+      ],
+      "exceptions": [
+        "generated face is not CharacterBlueprint or identity canon",
+        "background architecture is not approved",
+        "writing props remain placeholders"
+      ]
+    },
+    {
+      "asset_id": "SF_EP01_COMPOSITE_SET_CAMERA_LIGHTING_B03_DERIVED",
+      "file": "SF_EP01_COMPOSITE_SET_CAMERA_LIGHTING_B03_DERIVED.png",
+      "sha256": "bbcec11f2e6807158e8adca2fee52ac19e6babdfaaa069b07847b7616a0e46d1",
+      "resolution": "1920x1080",
+      "native_generation": false,
+      "decision": "select_component",
+      "selected_components": [
+        "A/B/C blocking-zone relationship",
+        "low-worktable hierarchy",
+        "natural-perspective camera intent",
+        "single motivated side-light direction",
+        "social-pressure and family-threshold staging"
+      ],
+      "exceptions": [
+        "lattice-window pattern, shelves, wall details and pottery are not historical canon",
+        "set dressing must be simplified during Layout and Asset Build",
+        "no architecture in this frame may be described as a Luoyang reconstruction"
+      ]
+    },
+    {
+      "asset_id": "SF_EP01_HERO_PROP_HAND_LIGHTING_B03_DERIVED",
+      "file": "SF_EP01_HERO_PROP_HAND_LIGHTING_B03_DERIVED.png",
+      "sha256": "52797f01d5bd800dd37bc7d55971319968cf58ca313d0a7f5277d9e5945c7036",
+      "resolution": "1920x1080",
+      "native_generation": false,
+      "decision": "select_component_with_prop_revise",
+      "selected_components": [
+        "hand choreography readability",
+        "insert framing and depth",
+        "bamboo/wood slip-like work surface",
+        "soft side-light relationship between hand and prop"
+      ],
+      "exceptions": [
+        "segmented or banded brush-shaft construction is not canonical and must be redesigned at G07",
+        "no mark on the writing surface may be treated as readable historical text",
+        "HeroBrush remains placeholder-only in Storyboard"
+      ]
+    }
+  ],
+  "technical_exception": "one_asset_per_native_attempt_contract failed; derived frames are evidence only",
+  "rights_status": "internal_candidate_only",
+  "production_ready": false,
+  "publication_ready": false
+}
