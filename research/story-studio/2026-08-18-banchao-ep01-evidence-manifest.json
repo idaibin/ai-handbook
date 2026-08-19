@@ -2,8 +2,8 @@
   "schema": "story-studio/public-evidence-manifest",
   "project_id": "banchao",
   "episode_id": "EP01",
-  "evidence_scope": "public_sanitized_gate_reviews_g01_g04",
-  "as_of_utc": "2026-08-19T06:15:00Z",
+  "evidence_scope": "public_sanitized_g01_g04_and_world_foundation",
+  "as_of_utc": "2026-08-19T08:55:00Z",
   "storage_policy": {
     "github": "sanitized decisions/status/hash indexes only",
     "google_drive": "complete private project packages and media"
@@ -41,34 +41,60 @@
       "size": 2776
     },
     "banchao-artifact-stage-map.yaml": {
-      "sha256": "dae39ad9bb6c6ce935b08f1fb994af00da1a3c3ce514a2d0397f61bf98fdd786",
-      "size": 5428
+      "sha256": "c3d863010fe3573628f977d57bccfbc6c81e0e98e5a31680d757a534f2379950",
+      "size": 7252
     },
     "banchao-stage-gap-register.yaml": {
-      "sha256": "5c158ad0952f858fe6a8d24726084f50d564fc8b113a94da1ff4673b4b2ec20c",
-      "size": 2475
+      "sha256": "589ea6886d38063ed2f4b7b7623a9f634c03b28e43b50037c7e46a5804773ba5",
+      "size": 3237
     },
     "banchao-ep01-current-status.json": {
-      "sha256": "e13353916d546144b84ac684ec3b5db728212d8c30aeaab538918e8d1acd527f",
-      "size": 5951
+      "sha256": "c815050c1d23330b36a1a53d5843fdd75be35568922fa16394a523c58ae9f8ff",
+      "size": 8013
     },
     "2026-08-18-banchao-ep01-preproduction.md": {
-      "sha256": "c02264b34e6ce66f984e3d91deecc71c9f7106fa79f9ae7d800bb803cae07ada",
-      "size": 929
+      "sha256": "18876581fbbe48b40a92b79f6ceb34c909f25286698ba46b1a245a348c874666",
+      "size": 1093
+    },
+    "banchao-world-foundation-validation.json": {
+      "sha256": "7d39a2bc4ae6347de4d8b977f18b79108e15b8cadddf259c731e11d2c73e6a87",
+      "size": 2867
+    },
+    "banchao-world-foundation-decision.yaml": {
+      "sha256": "7899604f88370d57b09f8fca037a44e3b52aa9b387f23e1b7229e7daa03491cf",
+      "size": 1693
+    },
+    "banchao-world-foundation-map.yaml": {
+      "sha256": "0e0f85a7c501ac066a0fa8640482e192e8afcb2f36977bde91c0b87649765ffe",
+      "size": 2191
     }
   },
   "private_package_hashes": {
     "banchao-development-greenlight-package.yaml": "09711c2a7f760c0817c9bc3aee6aa6eb9b6b0a3917d5dd03c5f55a202b952771",
-    "banchao-source-ledger.yaml": "b9e4021f391fb4ccba054d5aabd8ebbbeb2bd7db3338512ce117fe9f9c7b9d4b",
-    "banchao-narrative-authority-package.yaml": "dd00706bd06a230c7d29558e9666f158269b09b42fa7967a1e25024998f8350b",
+    "banchao-source-ledger.yaml": "c83a5618bae74ae77c3e8dcaaaba5ab8db0fbaa78e6e01608bf68e2629f25f7d",
+    "banchao-narrative-authority-package.yaml": "628894580b9cd8b59a7242df0441cc90f4804f605db98c17464d03197ba3138b",
     "banchao-ep01-screenplay.md": "d511d443087c47e1ad87aec652a41a8caa8dd37ed74c0a4137694cd980d7e4df",
     "banchao-ep01-script-lock-package.yaml": "8a870cdc6731a7b896df0d5e0d062d26a5f4c0f70aa94305b5f0056299e46ca2",
     "banchao-ep01-hod-breakdown-package.yaml": "46150d783dd5aadb6da29c0ed5912f344965a14c85147f1dbf5b012fced65334",
     "banchao-rights-provenance-package.yaml": "067c6ed55514a50ab75a74ecfe286eafdf824553de3711166b0154ffee8b51c0",
     "banchao-ep01-lookdev-input-package.yaml": "9c7059d4e2641b00a018ecb4ce4e4fe5278bcdb4e6ccac404dd5458db6c080d1",
-    "banchao-ep01-round3-lookdev-work-order.yaml": "ae0671a9b8c6fc4c38bd0c251fb23afda1e47407e4cafc89114e34141cf5ed04"
+    "banchao-ep01-round3-lookdev-work-order.yaml": "ae0671a9b8c6fc4c38bd0c251fb23afda1e47407e4cafc89114e34141cf5ed04",
+    "banchao-world-foundation-package.yaml": "30e556c919c1a051139fc459c82674e34a305c1ef7611df986b64bb4e10954bc",
+    "banchao-location-bible.yaml": "b085c3fb4d2f37db2d0bbf5d4502656137318fca2e8290ba06b95ba9e01575da",
+    "banchao-character-state-bible.yaml": "6ed0478ab99cedbf157025c7500440fbe25a9ba0cd55166a732c3fc72d56c265",
+    "banchao-episode-foundation-matrix.yaml": "705b4bc0908cf6e0d20d28217ce4ff135387853da78dd6e9d26bdc27f92419ac"
   },
   "media_generated": false,
   "round3_phase_a": "authorized_not_executed",
-  "rights_posture": "internal_candidate_only"
+  "rights_posture": "internal_candidate_only",
+  "series_world_foundation": {
+    "decision": "approve_internal_foundation_conditions_recorded",
+    "regions": 8,
+    "location_ids": 25,
+    "episode_rows": 24,
+    "ban_chao_states": 6,
+    "visual_canon": false,
+    "new_media_generated": false,
+    "other_region_lookdev": "blocked_pending_episode_specific_source_packets"
+  }
 }
