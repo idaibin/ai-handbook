@@ -1,40 +1,47 @@
-# 班超 EP01 前置生产状态（公开投影）
+# 班超 EP01 当前生产状态（公开投影）
 
 - `authoritative_state`: `banchao-ep01-current-status.json`
-- `authoritative_state_sha256`: `b74458b25f9f497ba860d9e58b92400c879a3cfd9ce962bc3278d2f17026a783`
+- `authoritative_state_sha256`: `6db499373b1088333951a540ddc6250d1490039b4b39571f23d94809ce980e09`
 - `active_format`: `16:9 / 1920x1080`
-- `visual_research`: `19/19 closed — PASS`
-- `dailies_round2`: `banchao-ep01-lookdev-dailies-review-round2-v1.yaml`
-- `hod_review_round2`: `banchao-ep01-minimum-visual-canon-hod-review-round2-v1.yaml`
-- `as_of_utc`: `2026-08-18T19:45:00Z`
+- `current_stage`: `STAGE_05_VISDEV_LOOKDEV_APPROVAL`
+- `current_gate`: `G05_DESIGN_LOOK_APPROVAL`
+- `gate_decision`: `revise`
+- `as_of_utc`: `2026-08-19T03:06:00Z`
 
-## 当前结论
+## Story Studio 基础权威已统一
 
-```text
-P0: 7/7 closed
-P1: 5/5 closed
-LookDev Round 2: 8 Takes normalized to 1920x1080
-Dailies Round 2: 0 select / 6 revise / 2 reject
-HOD Review Round 2: revise_required
-Visual Canon: 0 approved
-Single-view / Storyboard / Animatic / Keyframe / Video: blocked or not started
-```
+以下文件使用稳定路径直接修改，不创建并行 `v2`、`v3`：
 
-## P1 生产边界
+- `workflows/story-studio/film-department-gate-matrix-v1.yaml`：10 个 Macro Stages、11 个 Quality Gates 与跨阶段工作线；
+- `workflows/story-studio/core-glossary.yaml`：Canonical Terms、术语来源分类、生命周期、证据分类和模糊词禁用规则；
+- `workflows/story-studio/stage-artifact-matrix.yaml`：每一步必备 Artifact、Owner、Reviewer、Approver、Pass Condition；
+- `workflows/story-studio/role-approval-matrix.yaml`：部门职责、不可自批规则和 Gate 审批关系；
+- `workflows/story-studio/conditional-modules.yaml`：历史考据、动作、Crowds、Lip Sync、VFX、Localization、Accessibility 等按触发条件启用。
 
-- `writing_batch_format`：一束已系简册 + 一组未完成排列，不是两本现代书。
-- `official_space_architecture`：完整官署空间排除出画面。
-- `official_desk_form`：与佣书低案保持 Match Cut 几何，只改变整洁与秩序。
-- `official_document_material`：只允许通用汉代简牍文书包/封检，不写任免正文与姓名。
-- `doorway_architecture`：只保留竖向边缘、门槛阴影和有动机光线。
+## 当前术语约束
 
-## 下一合法动作
+合同中不再使用未限定的：
 
 ```text
-9 个 Round-3 LookDev replacement/new Takes
-→ Dailies Round 3
-→ HOD Review Round 3
-→ approve / revise / blocked
+脚本
+场景
+分镜
+关键图片
+关键帧
+审核通过
+最终版
 ```
 
-Visual Canon 通过前，不执行单视图裁切、Storyboard Lock、关键帧、视频或最终音频。
+必须分别使用 `Screenplay`、`Scene/Location/Set`、`ShotList/Storyboard/Animatic`、`ReferenceAsset/Styleframe/ShotKeyframe`、`ShotKeyframe/AnimationKeyframe`，并以 `gate_id + approve/revise/reject/blocked/defer` 记录审查。
+
+## 《班超》当前状态
+
+```text
+NarrativeCanon: working_baseline
+VisualCanon: not_approved
+ProductionCanon: not_established
+production_ready: false
+publication_ready: false
+```
+
+Round-3 LookDev 暂停。下一合法动作是把现有《班超》Story Bible、人物、世界、EP01 剧本、ShotList、Continuity、LookDev 和 Review 逐项映射到新的 Canonical Terms 与 Stage Artifact Matrix，补齐缺失 Artifact 后再恢复生成。
