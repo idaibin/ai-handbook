@@ -1,71 +1,38 @@
 {
   "schema": "story-studio/foundation-closure-validation",
   "result": "pass_static",
-  "generated_at_utc": "2026-08-19T05:30:00Z",
-  "scope": "Independent foundation artifacts only. Current status and public projections are validated by parse/readback but excluded from the hash graph to avoid cyclic references.",
-  "files": {
-    "banchao-artifact-stage-map.yaml": {
-      "sha256": "761f43dd44a9337028aded8b910d3bff86ba2d0c1965ab6e3ebf70b947e60803",
-      "size": 3474
-    },
-    "banchao-development-greenlight-package.yaml": {
-      "sha256": "58bf6a36670f8459b352540ee985a168162e3314eacc370b9707b70249aae008",
-      "size": 6868
-    },
-    "banchao-ep01-hod-breakdown-package.yaml": {
-      "sha256": "f265db79542ea4b9af013219a1d8a5d3269532bfd90c371f519d19ea126da586",
-      "size": 22969
-    },
-    "banchao-ep01-lookdev-input-package.yaml": {
-      "sha256": "9c7059d4e2641b00a018ecb4ce4e4fe5278bcdb4e6ccac404dd5458db6c080d1",
-      "size": 4510
-    },
-    "banchao-ep01-round3-lookdev-work-order.yaml": {
-      "sha256": "ae0671a9b8c6fc4c38bd0c251fb23afda1e47407e4cafc89114e34141cf5ed04",
-      "size": 2177
-    },
-    "banchao-ep01-screenplay.md": {
-      "sha256": "137637f94879a79a1f0a984121d149d5710fbdd40cc53b14e3b6df6a948242d5",
-      "size": 4817
-    },
-    "banchao-ep01-script-lock-package.yaml": {
-      "sha256": "71d451d1be08abcf685db242c103c001fec8a06a173b9945b6245b23af39f5ac",
-      "size": 7426
-    },
-    "banchao-foundation-closure-summary.md": {
-      "sha256": "5a2f20d4c440ff58d5cd74e66ece0b0abb61378e6f1dcaaa0cd3ebeb81ce5f78",
-      "size": 1176
-    },
-    "banchao-narrative-authority-package.yaml": {
-      "sha256": "9baa722ddaca4e3466c72e31b360c135071c882f998979bf1a59cf947735a9d8",
-      "size": 9689
-    },
-    "banchao-rights-provenance-package.yaml": {
-      "sha256": "c88f8aba855938f9b92da4fdf1e793a34aacc378a249327c99238f45665d4387",
-      "size": 5860
-    },
-    "banchao-source-ledger.yaml": {
-      "sha256": "cd0dede56317d9f78cd048c0807debad05593b69528dfbfa800219ae5c302acc",
-      "size": 8614
-    },
-    "banchao-stage-gap-register.yaml": {
-      "sha256": "25d8c138292f631811399f53a6bb0f5a3dd97049ce20c47c916ee1a3cd9b7dd8",
-      "size": 2118
-    },
-    "core-glossary.yaml": {
-      "sha256": "3aba937e45b92488a070c67d44c0876131267597c7c78e45906ecebff5356300",
-      "size": 23034
-    }
-  },
+  "generated_at_utc": "2026-08-19T06:15:00Z",
+  "scope": "Foundation packages and G01-G04 Gate decisions, with explicit GitHub/Drive storage separation.",
   "checks": {
     "yaml_parse": "pass",
     "json_parse": "pass",
-    "stable_filename_policy": "pass_no_v2_v3_new_files",
-    "source_bytes_rewritten": false,
-    "round3_generation_executed": false,
-    "current_status_parse": "pass",
-    "public_projection_present": true,
-    "public_evidence_manifest_parse": "pass",
-    "cyclic_hash_references": "none"
+    "stable_filename_policy": "pass_no_parallel_v2_v3_foundation_files",
+    "private_packages_present_in_drive": 9,
+    "public_gate_decisions": 4,
+    "github_missing_path_issue": "resolved_by_storage_scope_correction",
+    "round3_phase_a": "authorized_not_executed",
+    "round3_phase_b": "blocked",
+    "media_generated": false
+  },
+  "private_package_hashes": {
+    "banchao-development-greenlight-package.yaml": "09711c2a7f760c0817c9bc3aee6aa6eb9b6b0a3917d5dd03c5f55a202b952771",
+    "banchao-source-ledger.yaml": "b9e4021f391fb4ccba054d5aabd8ebbbeb2bd7db3338512ce117fe9f9c7b9d4b",
+    "banchao-narrative-authority-package.yaml": "dd00706bd06a230c7d29558e9666f158269b09b42fa7967a1e25024998f8350b",
+    "banchao-ep01-screenplay.md": "d511d443087c47e1ad87aec652a41a8caa8dd37ed74c0a4137694cd980d7e4df",
+    "banchao-ep01-script-lock-package.yaml": "8a870cdc6731a7b896df0d5e0d062d26a5f4c0f70aa94305b5f0056299e46ca2",
+    "banchao-ep01-hod-breakdown-package.yaml": "46150d783dd5aadb6da29c0ed5912f344965a14c85147f1dbf5b012fced65334",
+    "banchao-rights-provenance-package.yaml": "067c6ed55514a50ab75a74ecfe286eafdf824553de3711166b0154ffee8b51c0",
+    "banchao-ep01-lookdev-input-package.yaml": "9c7059d4e2641b00a018ecb4ce4e4fe5278bcdb4e6ccac404dd5458db6c080d1",
+    "banchao-ep01-round3-lookdev-work-order.yaml": "ae0671a9b8c6fc4c38bd0c251fb23afda1e47407e4cafc89114e34141cf5ed04"
+  },
+  "public_decision_hashes": {
+    "banchao-g01-development-greenlight-decision.yaml": "b8042ab620d5c497c2239a969c2155b21f6cf1f40e1fdb8806e9163e69a62347",
+    "banchao-g02-script-lock-decision.yaml": "2a25f2b2a7c9693cb3f15bc388cbd8ac72bc3ae6fc17685a6f09ed656edb799d",
+    "banchao-g03-hod-breakdown-decision.yaml": "17b68a8f35736e095f3bab17c98e7cfa93d8bc95a170865d5c606b535f0ec7e2",
+    "banchao-g04-research-rights-constraints-decision.yaml": "13edc282e8c828751b942d66f1a1afe2193891483a275f8c99d486f7b9fb784b"
+  },
+  "current_validation_ref": {
+    "file": "banchao-gate-review-validation.json",
+    "sha256": "0f541b044b103d75956589ee7202dc3d4feba5e98d2eac2f6fd7cee4abe3d939"
   }
 }
