@@ -1,0 +1,38 @@
+schema: story-studio/gate-decision
+gate_id: G02_SCRIPT_LOCK
+decision: approve
+decision_timestamp_utc: '2026-08-19T06:15:00Z'
+decision_scope: internal project workflow only
+review_mode: user_delegated_ai_assisted_independent_review_pass
+owner: writing_story
+reviewers:
+- directing
+- editorial
+- sound_music
+- research
+- continuity
+approver: USER_DELEGATED_DIRECTOR_PROXY
+human_signoff_separately_recorded: false
+self_approval_exception:
+  used: true
+  basis: User explicitly delegated continued execution; decision is limited to internal workflow state and records evidence/conditions.
+  does_not_mean: legal opinion, publication clearance, or human HOD sign-off
+evidence_refs:
+- banchao-narrative-authority-package.yaml
+- banchao-source-ledger.yaml
+- banchao-ep01-screenplay.md
+- banchao-ep01-script-lock-package.yaml
+findings:
+- SeriesCreativeConstitution, NarrativeBible, WorldBible, CharacterBible and FIAF boundaries are production-readable.
+- EP01 has 3 Scenes, 8 Beats, 14 Shots and 105-second structure with dialogue timing plan.
+- Active Screenplay canonical Location/Prop/Claim identifiers and stale [待核实] language were corrected without changing dialogue, story or timing.
+conditions:
+- Record actual ScratchDialogue and director performance read before G06.
+- Approve frame rate, audio sample rate and scratch audio technical format before G06.
+- Any dialogue or Beat change requires ChangeRecord and affected Shot analysis.
+locked_scope:
+- story causality
+- dialogue text
+- Scene/Beat structure
+- 105-second target
+next_gate: G03_HOD_BREAKDOWN_COMPLETE
