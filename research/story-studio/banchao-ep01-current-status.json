@@ -1,10 +1,10 @@
 {
   "schema": "story-studio/current-status",
   "status_id": "banchao-ep01-current-status",
-  "status_revision": 11,
+  "status_revision": 12,
   "authority": {
     "role": "single_current_state_source",
-    "as_of_utc": "2026-08-19T11:45:00Z",
+    "as_of_utc": "2026-08-19T12:30:00Z",
     "rule": "Stable file directly replaced; no parallel v2/v3 state files."
   },
   "project": {
@@ -27,15 +27,15 @@
     "G02": "approve_conditions_recorded",
     "G03": "approve_conditions_recorded",
     "G04": "approve_internal_candidate_only",
-    "G05": "revise_batch02_reviewed_batch03_required",
-    "G06": "not_entered"
+    "G05": "approve_rule_level_visual_direction_conditions_recorded",
+    "G06": "entry_allowed_not_started"
   },
   "readiness": {
     "NarrativeCanon": "approved_working_baseline_conditions_recorded",
-    "VisualCanon": "not_approved",
+    "VisualCanon": "approved_rule_level_selected_components",
     "ProductionCanon": "not_established",
     "StoryboardTextReady": true,
-    "StoryboardExecutionReady": false,
+    "StoryboardExecutionReady": true,
     "production_ready": false,
     "publication_ready": false
   },
@@ -65,13 +65,13 @@
     "canonical_assets_promoted": 0
   },
   "workflow": {
-    "current_stage_id": "STAGE_05_VISDEV_LOOKDEV_APPROVAL",
-    "next_legal_action": "Phase A Batch03: three separate native clean Styleframes -> Dailies -> G05 HOD review.",
-    "storyboard_entry_condition": "G05 = approve",
-    "notification_trigger": "文本前置与 G05 已通过，可以进入分镜阶段。",
+    "current_stage_id": "STAGE_06_STORYBOARD_LAYOUT_ANIMATIC",
+    "next_legal_action": "Begin EP01 14-shot / 27-panel Storyboard using approved brief and provisional asset annotations.",
+    "storyboard_entry_condition": "met",
+    "notification_trigger": "met: 文本前置与 G05 已通过，可以进入分镜阶段。",
     "prohibited": [
-      "Storyboard/Layout/Previs before G05 approve",
       "ShotKeyframe/video before G06 TimedAnimatic lock",
+      "production asset promotion before G07 validation",
       "public/commercial use"
     ]
   },
@@ -86,9 +86,24 @@
   "public_refs": {
     "glossary_sha256": "e9bb52ce689e5c1a2b8b510684ec18ffc573b8eceb387b1f3cd307ef28e752d3",
     "artifact_map_sha256": "9c122aeb4ddd235a4e7015940c8aa289f1fbc390c8e246f061d9f10e178f57af",
-    "gap_register_sha256": "333ccab3ba137cef16f4c7710b9a967d4f4755601b0e396d1dbb1daaa1f8f5c6",
-    "G05_decision_sha256": "7771955282c591522955d45ce2b34ccab09ee11da554b644271639774deb52e4",
-    "storyboard_text_decision_sha256": "114e53e17b000a214572e3e395e9bd67ccd19339d50b77d4c3fcad5cc61b3de8",
-    "validation_sha256": "694450ca6b5072041e12966ac9e1c6cef49976c64615a4b0b6c0c2449ce9455d"
+    "gap_register_sha256": "d9267e559c956ad81ae8b67774ee756a43cea70cfe891f15ef8ef9d9b158e361",
+    "G05_decision_sha256": "2b27bce497add9bcdfea4944380ba1862aa7f7116bdd42701deee992c74df62a",
+    "storyboard_text_decision_sha256": "76fdd8da056d651a4c3354cfd45fccfdcdef8ee43138b05a616b62344f904b05",
+    "validation_sha256": "694450ca6b5072041e12966ac9e1c6cef49976c64615a4b0b6c0c2449ce9455d",
+    "visual_canon_rules_sha256": "b186d6b0972b4660fdf347d5fc7124bc6f344db8cdb87fd4cb131cd0765ab219",
+    "preproduction_projection_sha256": "bb566030d2fd026df4951ee0581a0278b96aed60242f38d760dbc51620676746"
+  },
+  "lookdev_batch03": {
+    "provider_conformance": "contact_sheet_nonconformance_repeated",
+    "selected_component_refs": 3,
+    "approved_rule_groups": 3,
+    "production_assets_approved": 0,
+    "G05": "approve_rule_level_visual_direction_conditions_recorded"
+  },
+  "visual_canon": {
+    "scope": "rule_level_and_selected_components_only",
+    "rules_artifact": "banchao-ep01-visual-canon-rules.yaml",
+    "provider_exception": "derived crops are review evidence, not native production assets",
+    "G07_asset_build_required": true
   }
 }
