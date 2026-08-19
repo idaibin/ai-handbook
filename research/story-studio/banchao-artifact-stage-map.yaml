@@ -1,8 +1,8 @@
 schema: story-studio/project-artifact-stage-map
 artifact_id: banchao-artifact-stage-map
-status: foundation_packages_created_reviews_pending
+status: g01_g04_approved_g05_open
 project_id: banchao
-as_of_utc: '2026-08-19T05:30:00Z'
+as_of_utc: '2026-08-19T06:15:00Z'
 new_stable_artifacts:
 - file: banchao-development-greenlight-package.yaml
   stage_id: STAGE_01_DEVELOPMENT_GREENLIGHT
@@ -12,12 +12,16 @@ new_stable_artifacts:
   - PremiseLoglineTheme
   - BudgetScheduleRiskRegister
   - RightsPosture
-  coverage: review_ready
+  coverage: approved_conditions_recorded
+  storage: private_google_drive
+  sha256: 09711c2a7f760c0817c9bc3aee6aa6eb9b6b0a3917d5dd03c5f55a202b952771
 - file: banchao-source-ledger.yaml
   stage_id: STAGE_01_DEVELOPMENT_GREENLIGHT
   contains:
   - SourceLedger
-  coverage: review_ready
+  coverage: approved_internal_pilot_conditions_recorded
+  storage: private_google_drive
+  sha256: b9e4021f391fb4ccba054d5aabd8ebbbeb2bd7db3338512ce117fe9f9c7b9d4b
 - file: banchao-narrative-authority-package.yaml
   stage_id: STAGE_02_NARRATIVE_SCRIPT_LOCK
   contains:
@@ -26,12 +30,16 @@ new_stable_artifacts:
   - WorldBible
   - CharacterBible
   - FactInferenceAdaptationFictionMatrix
-  coverage: review_ready
+  coverage: approved_conditions_recorded
+  storage: private_google_drive
+  sha256: dd00706bd06a230c7d29558e9666f158269b09b42fa7967a1e25024998f8350b
 - file: banchao-ep01-screenplay.md
   stage_id: STAGE_02_NARRATIVE_SCRIPT_LOCK
   contains:
   - Screenplay
-  coverage: active_metadata_normalized_review_pending
+  coverage: active_g02_approved_conditions_recorded
+  storage: private_google_drive
+  sha256: d511d443087c47e1ad87aec652a41a8caa8dd37ed74c0a4137694cd980d7e4df
 - file: banchao-ep01-script-lock-package.yaml
   stage_id: STAGE_02_NARRATIVE_SCRIPT_LOCK
   contains:
@@ -39,7 +47,9 @@ new_stable_artifacts:
   - SceneBeatIndex
   - TimingReadScratchDialoguePlan
   - ScriptLockDecision
-  coverage: review_ready
+  coverage: approved_conditions_recorded
+  storage: private_google_drive
+  sha256: 8a870cdc6731a7b896df0d5e0d062d26a5f4c0f70aa94305b5f0056299e46ca2
 - file: banchao-ep01-hod-breakdown-package.yaml
   stage_id: STAGE_03_HOD_BREAKDOWN_PLANNING
   contains:
@@ -49,7 +59,9 @@ new_stable_artifacts:
   - DepartmentBreakdowns
   - ProductionPlan
   - DependencyAndRiskMap
-  coverage: review_ready
+  coverage: approved_conditions_recorded
+  storage: private_google_drive
+  sha256: 46150d783dd5aadb6da29c0ed5912f344965a14c85147f1dbf5b012fced65334
 - file: banchao-rights-provenance-package.yaml
   stage_id: STAGE_04_RESEARCH_RIGHTS_CONSTRAINTS
   contains:
@@ -58,7 +70,9 @@ new_stable_artifacts:
   - AdaptationExceptionLog
   - DesignConstraintRegister
   - RightsPosture
-  coverage: review_ready_internal_candidate_only
+  coverage: approved_internal_candidate_only_conditions_recorded
+  storage: private_google_drive
+  sha256: 067c6ed55514a50ab75a74ecfe286eafdf824553de3711166b0154ffee8b51c0
 - file: banchao-ep01-lookdev-input-package.yaml
   stage_id: STAGE_05_VISDEV_LOOKDEV_APPROVAL
   contains:
@@ -68,12 +82,16 @@ new_stable_artifacts:
   - ColorScript
   - ShowLook
   - CameraLightingTests
-  coverage: rules_review_ready_tests_missing
+  coverage: rules_ready_phase_a_authorized_tests_missing
+  storage: private_google_drive
+  sha256: 9c7059d4e2641b00a018ecb4ce4e4fe5278bcdb4e6ccac404dd5458db6c080d1
 - file: banchao-ep01-round3-lookdev-work-order.yaml
   stage_id: STAGE_05_VISDEV_LOOKDEV_APPROVAL
   contains:
   - LookDevWorkOrder
-  coverage: paused_pending_reviews
+  coverage: phase_a_authorized_not_executed
+  storage: private_google_drive
+  sha256: ae0671a9b8c6fc4c38bd0c251fb23afda1e47407e4cafc89114e34141cf5ed04
 legacy_sources_preserved:
   narrative_bible:
     file: banchao__ip__story-bible-world-background__2026-08-18__v01.md
@@ -97,3 +115,21 @@ legacy_sources_preserved:
     file: banchao__contract__ep01-visual-research-registry__2026-08-19__v01.3.yaml
     sha256: ff141d5cd117c6e92486d16b327b637cefae0cc36f5bf98fd1f6c19b1160c17a
 rule: New stable packages normalize existing content and do not rewrite historical source bytes.
+gate_decision_refs:
+- file: banchao-g01-development-greenlight-decision.yaml
+  storage: public_github
+  sha256: b8042ab620d5c497c2239a969c2155b21f6cf1f40e1fdb8806e9163e69a62347
+- file: banchao-g02-script-lock-decision.yaml
+  storage: public_github
+  sha256: 2a25f2b2a7c9693cb3f15bc388cbd8ac72bc3ae6fc17685a6f09ed656edb799d
+- file: banchao-g03-hod-breakdown-decision.yaml
+  storage: public_github
+  sha256: 17b68a8f35736e095f3bab17c98e7cfa93d8bc95a170865d5c606b535f0ec7e2
+- file: banchao-g04-research-rights-constraints-decision.yaml
+  storage: public_github
+  sha256: 13edc282e8c828751b942d66f1a1afe2193891483a275f8c99d486f7b9fb784b
+current_gate:
+  gate_id: G05_DESIGN_LOOK_APPROVAL
+  decision: revise
+  next: Round3 Phase A authorized
+public_repository_policy: GitHub stores sanitized workflow/status/decision evidence; complete project packages remain private in Google Drive.
