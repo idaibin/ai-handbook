@@ -1,0 +1,263 @@
+schema: story-studio/scratch-dialogue-cue-manifest
+artifact_id: banchao-ep01-scratch-dialogue-cue-manifest
+status: scratch_dialogue_recorded_and_edited
+project_id: banchao
+episode_id: EP01
+generated_at_utc: '2026-08-20T00:30:00Z'
+technical_format:
+  sample_rate_hz: 48000
+  bit_depth: 24
+  dialogue_stem: mono
+  review_mix: stereo
+  peak_rule: at_or_below_-6_dBFS
+voice_policy:
+  temporary_neutral_synthetic_voices: true
+  celebrity_or_living_person_imitation: false
+  language: Mandarin Chinese working read
+  final_casting_approved: false
+  lip_sync_approved: false
+engine:
+  surface: local espeak CLI
+  requested_voice: zh
+  effective_voice_model: not_verified
+  limitation: Full Mandarin dictionary was not installed; output is acceptable only
+    as a mechanical timing read.
+cues:
+- cue: DX01
+  char: CHAR_BAN_MOTHER
+  start: 8.6
+  text: 今日交得上吗？
+  speed: 150
+  pitch: 47
+  file: BANCHAO_EP01_SCRATCH_CHAR_BAN_MOTHER_DX01.wav
+  duration_seconds: 1.842
+  end: 10.442
+  window:
+  - 8.0
+  - 11.1
+  fits_window: true
+  sha256: 253f9a26af9ee19f7ccf6a6ab4d56ab38df4bbabbdf720bb22182adbc54375ea
+  voice_engine: espeak zh temporary neutral
+  effective_voice_model: not_verified
+- cue: DX02
+  char: CHAR_BAN_CHAO
+  start: 11.3
+  text: 还差两卷。交完，才有钱带回去。
+  speed: 148
+  pitch: 35
+  file: BANCHAO_EP01_SCRATCH_CHAR_BAN_CHAO_DX02.wav
+  duration_seconds: 4.835
+  end: 16.135
+  window:
+  - 11.1
+  - 17.1
+  fits_window: true
+  sha256: fe1bda6797e6a6b54eb323120e3206e54bb00ca911966670045a705b2c6ab43a
+  voice_engine: espeak zh temporary neutral
+  effective_voice_model: not_verified
+- cue: DX03
+  char: CHAR_BAN_MOTHER
+  start: 17.3
+  text: 你兄长呢？
+  speed: 150
+  pitch: 47
+  file: BANCHAO_EP01_SCRATCH_CHAR_BAN_MOTHER_DX03.wav
+  duration_seconds: 1.295
+  end: 18.595
+  window:
+  - 17.1
+  - 19.5
+  fits_window: true
+  sha256: 420b5abac379375daba65ad5964abb0c40e4c850fc3ade2e305d96e57ad1e9d0
+  voice_engine: espeak zh temporary neutral
+  effective_voice_model: not_verified
+- cue: DX04
+  char: CHAR_BAN_CHAO
+  start: 19.7
+  text: 走他的路。
+  speed: 148
+  pitch: 35
+  file: BANCHAO_EP01_SCRATCH_CHAR_BAN_CHAO_DX04.wav
+  duration_seconds: 1.079
+  end: 20.779
+  window:
+  - 19.5
+  - 24.7
+  fits_window: true
+  sha256: 7088139ca406f41af9e18734063352db780e439a15b99dd4d63230b1d9a63b03
+  voice_engine: espeak zh temporary neutral
+  effective_voice_model: not_verified
+- cue: DX05
+  char: CHAR_BAN_GU
+  start: 25.7
+  text: 母亲让我告诉你，别把今日的字写错。
+  speed: 154
+  pitch: 30
+  file: BANCHAO_EP01_SCRATCH_CHAR_BAN_GU_DX05.wav
+  duration_seconds: 4.542
+  end: 30.242
+  window:
+  - 25.0
+  - 30.4
+  fits_window: true
+  sha256: 7dd084612fc951b59ae9dff0850bc69ef554752fd63f8e500656803b2f102650
+  voice_engine: espeak zh temporary neutral
+  effective_voice_model: not_verified
+- cue: DX06
+  char: CHAR_BAN_CHAO
+  start: 30.6
+  text: 我写错一个字，少一日佣钱。你走错一步，可有人替你改吗？
+  speed: 163
+  pitch: 35
+  file: BANCHAO_EP01_SCRATCH_CHAR_BAN_CHAO_DX06.wav
+  duration_seconds: 5.78
+  end: 36.38
+  window:
+  - 30.4
+  - 36.5
+  fits_window: true
+  sha256: 4460220d93e64ef97dc6add5ec822069605cd997e77a1274c9a47d13b0e088d7
+  voice_engine: espeak zh temporary neutral
+  effective_voice_model: not_verified
+- cue: DX07
+  char: CHAR_BAN_GU
+  start: 36.7
+  text: 路不一样，未必高下相同。
+  speed: 154
+  pitch: 30
+  file: BANCHAO_EP01_SCRATCH_CHAR_BAN_GU_DX07.wav
+  duration_seconds: 3.08
+  end: 39.78
+  window:
+  - 36.5
+  - 39.9
+  fits_window: true
+  sha256: 594127dc4f69fa55c6a3cf358660ed6b36368386622877ff7ff4fd7d001fea29
+  voice_engine: espeak zh temporary neutral
+  effective_voice_model: not_verified
+- cue: DX08
+  char: CHAR_BAN_CHAO
+  start: 40.1
+  text: 可人人看见的，只有你那条。
+  speed: 158
+  pitch: 35
+  file: BANCHAO_EP01_SCRATCH_CHAR_BAN_CHAO_DX08.wav
+  duration_seconds: 1.68
+  end: 41.78
+  window:
+  - 39.9
+  - 41.9
+  fits_window: true
+  sha256: 3551de139be67a540e025daa5938459d24deea15d70f35f50e3a7b2ba99948bd
+  voice_engine: espeak zh temporary neutral
+  effective_voice_model: not_verified
+- cue: DX09
+  char: CHAR_UNNAMED_SCRIBE
+  start: 42.6
+  text: 班家也有抄书的？史家之后，替人誊字。
+  speed: 160
+  pitch: 40
+  file: BANCHAO_EP01_SCRATCH_CHAR_UNNAMED_SCRIBE_DX09.wav
+  duration_seconds: 4.591
+  end: 47.191
+  window:
+  - 42.0
+  - 47.8
+  fits_window: true
+  sha256: df98e1179419044e0e80b09b6516a3b5962c17199f665d0a2eae28972eab9e29
+  voice_engine: espeak zh temporary neutral
+  effective_voice_model: not_verified
+- cue: DX10
+  char: CHAR_BAN_CHAO
+  start: 48.0
+  text: 字能换粮，也能留下名字。
+  speed: 154
+  pitch: 35
+  file: BANCHAO_EP01_SCRATCH_CHAR_BAN_CHAO_DX10.wav
+  duration_seconds: 3.298
+  end: 51.298
+  window:
+  - 47.8
+  - 53.0
+  fits_window: true
+  sha256: a87606c0225ff3f8a23f4e370e6f8daf47846ad79d99c16474ce5d4dffaf2517
+  voice_engine: espeak zh temporary neutral
+  effective_voice_model: not_verified
+- cue: DX11
+  char: CHAR_UNNAMED_SCRIBE
+  start: 53.2
+  text: 那你留下了吗？
+  speed: 152
+  pitch: 40
+  file: BANCHAO_EP01_SCRATCH_CHAR_UNNAMED_SCRIBE_DX11.wav
+  duration_seconds: 1.414
+  end: 54.614
+  window:
+  - 53.0
+  - 57.6
+  fits_window: true
+  sha256: c1feea96fe55abda8adc3bcd8dd21ad031a685be4639a6098a2a79e9f90ee45e
+  voice_engine: espeak zh temporary neutral
+  effective_voice_model: not_verified
+- cue: DX12
+  char: CHAR_BAN_CHAO
+  start: 60.5
+  text: 大丈夫当立功异域，安能久事笔砚间！
+  speed: 150
+  pitch: 32
+  file: BANCHAO_EP01_SCRATCH_CHAR_BAN_CHAO_DX12.wav
+  duration_seconds: 4.658
+  end: 65.158
+  window:
+  - 58.0
+  - 75.5
+  fits_window: true
+  sha256: 86e2b3715e221f1f224c39d882e8a8a74831d8f60be51e6c9d4941fcfd1c6359
+  voice_engine: espeak zh temporary neutral
+  effective_voice_model: not_verified
+- cue: DX13
+  char: NARRATOR
+  start: 77.0
+  text: 其后，班超被任为兰台令史；又因事免官。
+  speed: 145
+  pitch: 25
+  file: BANCHAO_EP01_SCRATCH_NARRATOR_DX13.wav
+  duration_seconds: 5.672
+  end: 82.672
+  window:
+  - 76.0
+  - 86.8
+  fits_window: true
+  sha256: 9d320adfbd90b563f0967cd2e5e75912253053920fbda0e2e3e5471cc4ddd7d2
+  voice_engine: espeak zh temporary neutral
+  effective_voice_model: not_verified
+- cue: DX14
+  char: CHAR_BAN_CHAO_VO
+  start: 87.4
+  text: 换一张案，也还是案。
+  speed: 145
+  pitch: 32
+  file: BANCHAO_EP01_SCRATCH_CHAR_BAN_CHAO_VO_DX14.wav
+  duration_seconds: 2.799
+  end: 90.199
+  window:
+  - 87.0
+  - 94.5
+  fits_window: true
+  sha256: ee59d3e0f721f4f76a2d42bedc30e9efb77725dc92cb874d122b44d5a7cf1333
+  voice_engine: espeak zh temporary neutral
+  effective_voice_model: not_verified
+stems:
+- file: DX_SCRATCH.wav
+  role: DX_SCRATCH
+  sha256: f66a318d0939edd7bfde686f0ac7678895fdf964104bf876b5eea94a9c458e81
+- file: FX_PRELAY.wav
+  role: FX_PRELAY
+  sha256: c7a21b775c0396b474cfd084309f28bc5fa4de26894e9c4f8bf6acdaba23cdef
+- file: MUSIC_TEMP.wav
+  role: MUSIC_TEMP
+  sha256: c3f7af553ffb3010aef2980a169df0584986c031c6a22474a46a0aacb2949ee1
+- file: MIX_SCRATCH.wav
+  role: SCRATCH_REVIEW_MIX
+  sha256: 4ac470ed6862e0d2004865323f8c2d3c7fbd5cee04e7076b53e307a25cd1a306
+rights_status: internal_candidate_only
