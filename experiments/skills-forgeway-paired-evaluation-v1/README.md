@@ -110,7 +110,7 @@ task_type = "bugfix"
 complexity = "L1"
 skills = [
   "dev-rust@<commit>",
-  "repo-validation@<commit>"
+  "repo-map@<commit>"
 ]
 ```
 
