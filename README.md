@@ -111,7 +111,7 @@ Workspace Map 见
 - `research/forgeway/`：Forgeway 从 Platform Spec、PDS 到单一现行产品的演进、设计决策与验证边界；仅作历史研究，不是运行时权威。
 - `roadmap/`：以产出和门禁驱动的学习路径。
 - `sources/`：候选来源、固定阅读证据和来源治理。
-- `experiments/`：固定输入、oracle、baseline/treatment、运行结果与应用案例。
+- [`experiments/`](experiments/README.md)：固定输入、oracle、baseline/treatment、运行结果与应用案例；当前包括 [`Skills / Forgeway 配对评测 v1`](experiments/skills-forgeway-paired-evaluation-v1/README.md)。
 - `templates/`：来源和研究记录模板。
 - `workflows/`：AI Engineering System 的唯一权威工作流、存储规范、交接合同和评估。
   当前图片设计流程见 [`workflows/image-design/`](workflows/image-design/README.md)。

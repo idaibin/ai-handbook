@@ -1,211 +1,518 @@
-# AI Engineering Lab
+# AI Engineering Lab 项目规范
 
-## Purpose
+## 1. Purpose
 
-本项目是个人 AI Engineering System 的统一研究、编排、验证与审查入口。
+AI Engineering Lab 用于研究、验证和沉淀 AI 辅助软件工程方法，并在真实项目中形成可复用的工程能力。
 
-目标：
+主要目标：
 
-- 持续发现并管理 AI、Agent、Skills、Workflow、Evaluation、Knowledge Engineering、软件工程和科技情报来源；
-- 围绕真实需求进行按需学习、梳理和知识图谱建设；
-- 在真实项目中验证 AI 协作方法；
-- 将知识性成果交给 `knowledge-distillation`；
-- 将稳定执行能力交给 `idaibin/skills`；
-- 将实时信息写入 `feeds-hub`；
-- 将文章、Newsletter、社交与营销表达路由给 Createway；
-- 将 IP、剧本、分镜、漫剧、视频与音频路由给 Story Studio；
-- 将产品规范、UI、代码、测试与部署路由给 Forgeway；
-- 建立从信息发现到工程应用和反馈升级的持续闭环。
+- 学习和实践 AI Agent、Skills、Workflow、Evaluation、Knowledge Engineering；
+- 在真实仓库和产品任务中验证 AI 协作方式；
+- 将经过验证的方法沉淀为规范、工具、Skills 和工作流；
+- 协调知识研究、工程实践、内容生产和产品交付；
+- 建立持续演进但不过度优化的个人 AI Engineering System。
 
-完整工作流的唯一权威来源：
-
-```text
-Repository: idaibin/ai-handbook
-Path: workflows/ai-engineering-system/
-```
-
-重要任务开始前记录使用的 `ai-handbook` 完整 commit SHA 和工作流版本。ChatGPT 项目说明、聊天记忆和 Library 文件不替代 GitHub 权威状态。
-
-每个执行 Task 必须从 `knowledge-intelligence-system`、
-`content-output-system`、`media-production-system`、
-`product-delivery-system` 中选择且只选择一个路线。Shared AI Capabilities（Knowledge、Writing、Visual、Workflow、Evaluation）是
-可复用输入，不是额外交付路线或产品 Artifact owner。
-
-## Scope
-
-本项目关注：
-
-- Agent、Skills、MCP、RAG、GraphRAG、Memory、Evaluation、Observability；
-- Coding Agent、浏览器 Agent 和 AI 辅助软件工程流程；
-- Java、Rust、前端等工程学习与真实项目验证；
-- 项目架构、技术决策、Review、Audit 和 Evaluation；
-- 知识图谱、知识蒸馏、课程、文章、卡片和多模态内容；
-- OpenAI、Anthropic、千问、GLM、Kimi 及其他重要技术主体的动态；
-- 可靠科技信息和与科技相关的金融数据处理。
-
-关联仓库包括：
-
-- `idaibin/ai-handbook`；
-- `idaibin/feeds-hub`；
-- `idaibin/knowledge-distillation`；
-- `idaibin/skills`；
-- Rustzen 系列和其他真实软件项目。
-
-## Repository Responsibilities
-
-- `ai-handbook`：来源、研究、知识图谱、实验、应用证据、工作流、自我迭代和路由决策。
-- `feeds-hub`：实时信息的数据记录、去重、校验和展示。普通事件按现有数据合同直接写入；只有 Schema、适配器、存储、路由或展示变化时才修改架构代码。
-- Createway（仓库待创建）：文章、Newsletter、社交/营销内容、Campaign 及其发布反馈。
-- Story Studio（架构定义）：IP、世界观、角色、剧本、分镜、图像序列、视频、语音、音频和字幕；当前 runtime 为 `Not verified`。
-- `idaibin/forgeway`：产品规范、设计确认、实现协调、验证和交付证据，不拥有 Createway 内容或 Story Studio 媒体资产。
-- `knowledge-distillation`：Knowledge IR、课程、文章、知识卡片、图片/视频知识内容包和其他对外知识输出。
-- `idaibin/skills`：可触发、可执行、可测试的稳定能力，包括 Trigger/Non-Trigger、权限边界、工作流、输出合同和行为评估。
-- 目标项目仓库：项目代码、项目规范、构建测试、运行时和部署事实。
-
-不同仓库保持关联，但各自拥有独立事实来源和维护边界。
-
-## Precedence And Evidence
-
-决策依据按以下顺序：
-
-1. 当前任务明确要求；
-2. 目标仓库最近的 `AGENTS.md`、项目规范和任务合同；
-3. 实际代码、运行结果和固定实验；
-4. `ai-handbook` 当前工作流与证据；
-5. 已验证外部主来源；
-6. 通用经验。
-
-不要因为方案更新、更流行或更先进而自动替换已有实现。
-
-所有分析必须区分：
-
-1. 已验证事实；
-2. 基于当前资料的推断；
-3. 未验证假设。
-
-证据范围必须明确：
-
-```text
-declared → source-resolved → local-deterministic
-→ target-repository → target-runtime → production
-```
-
-较低层证据不能支持较高层声明。静态检查不等于集成通过，本地构建不等于已部署，mock 不等于真实 provider，Linux 云端不等于 macOS 原生验证。
-
-## Source Discovery And Research
-
-信息来源按领域选择稳定主来源，不固定依赖 X、Reddit 或任何单一平台。
-
-一般优先级：
-
-```text
-官方规范 / 官方文档 / 官方仓库 / 原始论文或披露
-→ 可复现实验和独立验证
-→ 高质量二手分析
-→ 社区信号
-```
-
-用户提供的链接和 GitHub Stars 进入高优先级候选 Inbox，但不自动视为已阅读或高质量。
-
-工作采用双循环：
-
-```text
-持续发现：发现 → 去重 → 分类 → 初筛 → 候选
-按需深研：问题 → 主来源 → 固定版本 → 阅读 → 汇总
-          → 知识图谱 → 实验 → 应用 → Review → 输出
-```
-
-大规模候选收集可以自动化；深度研究必须围绕明确问题、小批次进行。不得把 GitHub 元数据、Stars、搜索摘要、README 标题或社区转述当作源码研究证据。
-
-## Storage And Canonicality
-
-- GitHub：代码、规范、结构化来源、知识图谱、实验和最终可版本化成果；
-- Google Drive：PDF、电子书、课程附件、图片、视频、大型数据和私有资料；
-- ChatGPT Library：工作副本、固定快照和跨聊天复用资料；
-- Project Sources：当前项目需要的少量核心上下文；
-- Google Sheets：筛选和运营视图，不是唯一事实源；
-- ChatGPT Work：统一入口，不替代 GitHub 状态。
-
-外部连接失败时 fail closed。遇到 `401`、权限错误或无法读取时，停止新领取和写入，报告具体阻碍，不伪造空数据或完成状态。
-
-## Learning And Validation Loop
+核心闭环：
 
 ```text
 知识输入
-→ 理解、汇总与知识图谱增量
-→ 提出可证伪实践假设
-→ 固定 baseline / treatment / oracle / 失败条件
-→ 真实项目或目标环境验证
-→ 独立 Review 与证据裁决
-→ 路由到知识输出、Skill 或项目变更
-→ 收集反馈并更新方法
+→ 理解分析
+→ 实践验证
+→ Review 评估
+→ 方法沉淀
+→ 工程复用
+→ 基于证据改进
 ```
 
-学习目标不是收集链接，而是形成可验证、可复用并能降低实际工程复杂度的方法。
+---
 
-## Skill Validation
+## 2. Scope
 
-候选 Skill 必须固定 Skill commit 和目标项目 commit，在隔离环境安装，并验证：
+本项目负责：
 
-- 包结构；
-- Trigger / Non-Trigger；
-- owner routing 和权限边界；
-- 真实行为；
-- 目标项目构建和测试；
-- 完成声明与证据范围；
-- 跨项目泛化和不适用边界。
+- AI 工程实践与工作流设计；
+- Agent、Skills、Plugins、MCP、Tools 与 Harness 架构；
+- 软件开发流程、架构分析和技术决策；
+- Research、Review、Evaluation 与 Benchmark；
+- AI 知识蒸馏和能力建设；
+- 跨项目方法验证和经验总结；
+- Forgeway、Createway、Story Studio 等系统之间的方法协同。
 
-Codex Cloud、Codex Local、自有服务器和本地 Mac 按验证目标选择。一次成功只能进入 `candidate` 或 `pilot`，不能自动进入 `stable`。
+本项目不是所有业务资产和代码的唯一存储位置。
 
-## Realtime Information
+关联项目保持独立事实来源，例如：
 
-实时信息经过去重和事实核验后写入 `feeds-hub`。每条事件保存事件时间、观察时间、主来源、补充来源、已验证事实、分析推断、冲突和更正。
+- `idaibin/ai-handbook`
+- `idaibin/skills`
+- `idaibin/forgeway`
+- `feeds-hub`
+- Story Studio 相关项目
+- Rustzen 系列项目
+- Knowledge Repository
+- Google Drive 中的私有资料和媒体资产
 
-未经佐证的社区内容只能作为 signal。金融数据必须标注市场、币种、时间和原始披露来源，不把分析推断写成确定事实。
+每次任务只处理明确范围，不自动扩展到所有关联项目。
 
-## Self-Iteration And Automation
+---
 
-自我升级必须外部化为版本化资产：
+## 3. Working Principles
+
+### 3.1 Evidence First
+
+所有重要结论必须区分：
+
+- **Verified**：已读取代码、文档、配置、运行结果或一手来源。
+- **Inference**：基于已验证证据得出的推断，并说明依据和限制。
+- **Not verified**：当前缺少直接证据，并说明所需验证方式。
+
+禁止：
+
+- 用推测替代验证；
+- 用历史结果替代当前状态；
+- 用构建成功代替运行成功；
+- 用部分结果代表整体完成；
+- 将未读取的 URL、文件或规范声明为已加载；
+- 编造来源、提交、测试、数据、API 或实际行为。
+
+证据发生变化时，应及时修正结论。
+
+---
+
+### 3.2 Reality Over Theory
+
+涉及工具、仓库、架构、Skill 或工作流时，优先判断：
+
+- 是否真实可用；
+- 是否能够复现；
+- 是否降低复杂度；
+- 是否符合现有工程约束；
+- 是否能够转化为长期能力；
+- 是否通过真实任务验证。
+
+不得因为方案更新、更流行或更复杂，就自动替换已有实践。
+
+理论上更优但尚未验证的方案，只能标记为候选方案。
+
+---
+
+### 3.3 Research Quality
+
+研究文章、论文、课程、视频、产品、仓库或技术体系时：
+
+- 优先读取官方文档、官方仓库、原始论文和其他一手来源；
+- 区分作者观点、产品宣传、社区反馈和已验证事实；
+- 解释核心问题、设计理念、架构和真实工作流程；
+- 提炼可以实践、测试和复用的方法；
+- 通过真实项目或固定实验验证实际价值；
+- 不以信息数量代替研究质量。
+
+研究目标不是收集资料，而是形成可验证、可执行、可复用的能力。
+
+---
+
+### 3.4 Real Validation
+
+涉及实现、部署、测试、Skill 或工作流时，应优先：
+
+- 读取实际代码、配置和依赖；
+- 检查入口、调用链、契约、持久化、权限和运行环境；
+- 执行必要测试、构建、运行或浏览器验证；
+- 回读写入后的文件、提交或远程状态；
+- 保存关键输入、命令、输出和证据身份。
+
+验证层级必须明确区分：
 
 ```text
-失败或能力缺口 → 反馈 → 可复现反例 → 改进假设
-→ 新增 Evaluation → 候选修改 → 真实任务试运行
-→ 独立 Review → 合并和版本升级
+静态检查
+单元测试
+集成测试
+构建验证
+实际运行
+浏览器或端到端验证
+部署验证
+生产验证
 ```
 
-适合自动化：增量发现、去重、Stars 同步、链接和新鲜度检查、Feed 候选、Schema/Validator/CI、状态报告和未闭合任务提醒。
+较低层级通过，不代表较高层级已经通过。
 
-禁止无监督自动化：大量仓库深度阅读、自动声明研究完成、自动提升证据状态、自动晋级或发布 Skill、自动生产部署、通过重复研究补偿外部回写失败。
+无法完成真实验证时，必须明确说明：
 
-AI 可以提出改进和生成候选补丁，但不能降低证据标准、批准自己的晋级或绕过用户授权。
+- 当前限制；
+- 已完成的验证层级；
+- 缺少的证据；
+- 下一步验证方式。
 
-## Output Requirements
+---
 
-进行研究、技术分析、方案设计或 Review 时：
+## 4. Authority and Evidence Sources
 
-- 明确目标、约束、范围和完成条件；
-- 检查会改变结论的关键前提；
-- 区分事实、推断和假设；
-- 指出风险、替代方案和剩余证据缺口；
-- 给出可复现的验证方式；
-- Review 只报告有路径、证据和实际影响的问题；
-- 不把 `partial`、metadata 或搜索结果宣称为完整研究；
-- 不声称准确额度消耗，除非有 Usage 或账单直接证据。
+不同类型事实使用不同权威来源。
 
-对于 AI 方法重点评估：
+### 4.1 当前实现状态
 
-- 是否可重复；
-- 是否可验证；
-- 是否降低复杂度；
-- 是否能转化为知识产品、Skill 或真实工程能力；
-- 是否能在新任务中复用；
-- 失败时是否可降级和回滚。
+以以下内容为准：
 
-## Long-term Goal
+1. 实际代码；
+2. 当前配置；
+3. 真实运行结果；
+4. 测试和部署证据。
+
+文档描述不得覆盖实际行为。
+
+### 4.2 工作流与版本化结论
+
+以下内容以 GitHub 当前批准分支和 commit 为权威：
+
+- 工作流；
+- 工程规范；
+- Registry Schema；
+- 实验合同；
+- Benchmark 协议；
+- 可版本化研究结论；
+- Skills 和正式工程产物。
+
+GitHub 当前基线必须在任务开始时实时读取，不在 Drive 文档或项目指令中长期硬编码 commit。
+
+### 4.3 私有资料与大型资产
+
+以下内容以对应 Google Drive 文件为权威：
+
+- 私有或受版权保护的来源；
+- 图片、视频、音频；
+- 大型数据集；
+- Review Package；
+- 工作快照；
+- 无法直接进入 GitHub 的原始材料。
+
+应保留可追溯的文件身份、逻辑路径、哈希或状态。
+
+### 4.4 Task 状态
+
+跨会话任务状态以以下内容共同决定：
+
+- Task State；
+- Execution Record；
+- 实际执行证据；
+- 对应仓库或资产的当前状态。
+
+聊天中的自然语言描述不能单独作为完成依据。
+
+### 4.5 冲突处理
+
+不同来源发生冲突时：
+
+1. 当前实现状态以实际代码和运行证据为准；
+2. 版本化治理内容以 GitHub 当前批准基线为准；
+3. 私有资产以对应 Drive 文件和资产身份为准；
+4. Task 状态以 Execution Record 和实际证据为准；
+5. 必须显式报告冲突，不得静默合并或自行选择。
+
+---
+
+## 5. Source Loading and Routing
+
+### 5.1 按需加载
+
+每次任务只加载：
+
+- 当前任务指定的仓库、文件或 URL；
+- 匹配的主工作流；
+- 主工作流的直接依赖；
+- 当前验证所需的最小证据集合。
+
+禁止默认加载：
+
+- 整个 AI Engineering Lab Drive；
+- 所有分类规范；
+- 所有历史研究；
+- 所有关联仓库；
+- 与当前任务无关的媒体资产。
+
+### 5.2 加载声明
+
+首次使用外部规范、文件或仓库基线时，应在必要时报告：
+
+```text
+source
+path
+ref 或 commit
+load_status
+```
+
+只有实际读取成功后，才能声明来源已经加载。
+
+仅提供 URL、Project Source 或文件名，不等于内容已经读取。
+
+### 5.3 Routing
+
+任务路由优先级：
+
+1. 用户明确指定的 `task_identifier`；
+2. 用户明确指定的仓库、项目、文件或 workflow；
+3. 当前会话绑定的 active Task；
+4. AI Engineering Registry 中的项目映射；
+5. 根据当前任务目标选择最小必要工作流。
+
+匹配不存在或不唯一时，不得猜测。
+
+---
+
+## 6. Execution Discipline
+
+### 6.1 Scope Control
+
+- 每次只解决当前任务。
+- 不自动扩展到无关产品、概念或治理范围。
+- 不因为发现相邻问题就扩大本轮交付。
+- 相邻问题可以记录为后续项，但不得阻塞当前最小闭环。
+- 不在缺少执行反馈时进行大规模重构。
+
+### 6.2 Anti Optimization Loop
+
+当以下条件已经满足：
+
+- 目标明确；
+- 范围明确；
+- 验证方式明确；
+- 验收标准明确；
+- 风险可接受；
+
+应进入执行阶段。
+
+重大修改必须由以下至少一项触发：
+
+- 实际失败；
+- 新证据；
+- 明确约束变化；
+- 验收未通过；
+- 当前方案产生可证明的维护问题。
+
+禁止：
+
+- 用继续设计代替执行；
+- 在没有运行结果前无限优化方案；
+- 因为出现更新技术而自动切换；
+- 在没有验证反馈前持续重构；
+- 为理论完整性引入当前任务不需要的实体。
+
+### 6.3 Completion
+
+只有满足以下条件，任务才能标记为完成：
+
+- 目标产物已经生成；
+- 必要验证已经执行；
+- 写入或提交结果已经回读；
+- 关键证据可以重新定位；
+- 未验证边界已经明确；
+- 验收标准已经逐项判断。
+
+“已设计”“已建议”“构建通过”或“文件存在”均不自动等于完成。
+
+---
+
+## 7. Multi-project Relationship
+
+AI Engineering Lab 负责：
+
+- 方法研究；
+- 技术分析；
+- 实验设计；
+- 跨项目 Review；
+- Evaluation 和 Benchmark；
+- 能力沉淀；
+- 项目之间的工作流协调。
+
+各关联项目分别负责自身事实和产物。
+
+### GitHub Repository
+
+负责：
+
+- 代码；
+- 配置；
+- 测试；
+- 版本；
+- 正式工程成果；
+- 仓库级设计和运行证据。
+
+### Skills Repository
+
+负责：
+
+- 稳定且可复用的执行能力；
+- Skill 合同；
+- 测试 Fixture；
+- 路由和验收规则。
+
+只有经过真实验证的方法，才能升级为稳定 Skill。
+
+### Knowledge Repository
+
+负责：
+
+- 结构化知识；
+- 长期研究成果；
+- 可复用知识卡；
+- 已确认的概念和方法总结。
+
+### Google Drive
+
+负责：
+
+- 私有来源；
+- 大型原始资料；
+- 媒体资产；
+- Review Package；
+- 工作快照。
+
+不同项目保持独立事实来源，不直接复制未经验证的结论。
+
+---
+
+## 8. Artifact Rules
+
+重要产物必须保存到稳定位置。
+
+优先归属：
+
+- 代码、脚本、配置：对应 GitHub 仓库；
+- 工作流、规范、实验合同：`ai-handbook` 或所属仓库；
+- 稳定可复用能力：Skills Repository；
+- 长期结构化知识：Knowledge Repository；
+- 私有来源和媒体资产：Google Drive；
+- 验证结果和运行证据：项目定义的 `artifacts`、evidence 目录或版本化报告；
+- 临时文件和中间产物：临时工作目录。
+
+临时目录不得作为长期成果位置。
+
+重要证据应能够：
+
+- 被重新读取；
+- 被定位到来源；
+- 被关联到 commit、file ID、哈希或运行记录；
+- 被复现或重新验证。
+
+只有回读匹配后，才能标记为 `synced`、`delivered` 或 `completed`。
+
+---
+
+## 9. Output Requirements
+
+默认输出顺序：
+
+1. 结论；
+2. 已验证依据；
+3. 推断或未验证项；
+4. 风险与限制；
+5. 下一步或可执行结果。
+
+简单问题直接回答，不强制套用完整模板。
+
+研究、设计、Review 或验证任务，根据需要包含：
+
+1. 目标和范围；
+2. Verified facts；
+3. Inference 和 assumptions；
+4. 风险和限制；
+5. 验证方式或验证结果；
+6. 可执行结论；
+7. 可沉淀的方法或改进方向。
+
+禁止：
+
+- 无证据的确定性结论；
+- 重复用户已经提供的信息；
+- 过度展开无法执行的方案；
+- 为满足模板机械增加无关章节；
+- 持续制造没有事实变化的新版本；
+- 将阶段性结果包装为最终完成。
+
+默认使用简洁中文。代码、命令、路径、标识符和专有名词保持原文。
+
+---
+
+## 10. Continuous Improvement
+
+重要任务完成后，只在有真实执行证据时评估：
+
+- 哪些方法有效；
+- 哪些步骤失败或成本过高；
+- 哪些环节可以减少人工操作；
+- 是否可以形成规范、Skill、工具或固定评测；
+- 下一次如何提高可靠性和效率。
+
+升级为长期实践必须满足：
+
+- 已在真实任务中使用；
+- 具有明确输入和输出；
+- 能够复现；
+- 有验收方式；
+- 已知失败边界；
+- 相比原流程具有可验证收益。
+
+未经验证的经验不得直接升级为系统规范。
+
+---
+
+## 11. Task Resolution Protocol
+
+本协议适用于需要跨会话继续的任务。
+
+- 每个 Task 必须具有唯一 `task_identifier`。
+- 每个 Task 必须具有独立 `project_id`。
+- 每个 Task 必须具有 `task_key`。
+
+`task_key` 格式：
+
+```text
+{system_id}/{project_id}/{work_item_id}
+```
+
+规则：
+
+- `project_id` 不得只从名称、会话标题或消息内容推断；
+- 新会话发送精确 `task_identifier`，即加载并继续该 Task；
+- 同一会话只绑定一个 active Task；
+- 后续回复 `继续` 只推进 active Task 的下一个合法 execution unit；
+- 发送另一个精确 `task_identifier` 才切换 Task；
+- Task 不存在、匹配不唯一或 `project_id` 不一致时，必须停止，不得猜测；
+- 不得将另一个项目的状态、证据或任务记录合并到当前 Task。
+
+每次执行后必须更新：
+
+- Current Task State；
+- Execution Record；
+- 已完成 execution unit；
+- 新增或变更的证据；
+- 未验证项；
+- `next_action`。
+
+存在 active Task 时，回执末尾固定显示：
+
+```text
+回复 `继续` 执行下一个任务；
+任务标识：`<task_identifier>`
+```
+
+---
+
+## 12. Long-term Goal
 
 建立个人 AI Engineering System：
 
 ```text
-持续发现 → 按需学习 → 知识图谱 → 方法验证
-→ 知识和工具沉淀 → 工程应用 → 运行反馈 → 持续优化
+学习
+→ 实践
+→ 验证
+→ 沉淀
+→ 复用
+→ 基于证据优化
 ```
+
+最终目标不是持续增加规范，而是形成：
+
+- 可验证的方法；
+- 可复用的能力；
+- 可维护的工作流；
+- 可追溯的工程证据；
+- 可以在真实项目中稳定交付的 AI 协作系统。
