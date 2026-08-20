@@ -1,6 +1,6 @@
 schema_version: paired-eval-phase0-task-preflight/v1
 artifact_status: candidate_not_approved
-preflight_status: oracle_prevalidated_phase0_blocked
+preflight_status: harness_contract_prevalidated_live_runtime_blocked
 task_id: phase0-ts-darkreader-7238
 benchmark_role: phase-0-infrastructure-smoke-only
 
@@ -106,79 +106,133 @@ comparison_contract:
         repository_commit: 0d6039345d646c4d4795da7de22aa9b257930a59
       - name: repo-map
         repository_commit: 0d6039345d646c4d4795da7de22aa9b257930a59
-    materialized_bundle_digest: not_verified
+    materialized_bundle:
+      status: pass
+      file_count: 22
+      total_bytes: 80333
+      bundle_sha256: bd733fed7ac51148f5b10c9ba5584a30b5635d348866bf162a2568457053f686
+      manifest_sha256: 3449fd7c5f2c3cf566e4bc278c97521a960b6f1c89d6ac4dc64ead7a7a089796
+      harbor_destination: $HOME/.agents/skills/
+      live_trial_injection: not_run
 
 harness_candidate_basis:
+  candidate_repository: idaibin/forgeway
+  candidate_branch: agent/paired-eval-phase0-harness-contract-20260820
+  candidate_source_commit: f7fe2e774b6486106abd9b589bacc3d06e8b3432
   harbor:
     repository: harbor-framework/harbor
     commit: c3ce0c60bbd2fd1888b327efcc880dbd86d8b7cf
+    version: 0.21.0
     codex_adapter_source: src/harbor/agents/installed/codex.py
+    construction_validation: pass
     source_observations:
-      - supports Codex CLI version selection
-      - supports Skill directory injection
+      - supports exact Codex CLI version selection
+      - supports Skill directory injection into $HOME/.agents/skills/
       - records prompt, cached, completion Token and cost fields
-    runtime_validation: not_verified
+    live_trial_runtime: not_run
   codex_runtime:
-    cli_version: not_frozen
-    model: not_frozen
-    reasoning_effort: not_frozen
-    provider: not_frozen
-    sandbox_policy: not_frozen
-    approval_policy: not_frozen
-    network_policy: not_frozen
-    config_digest: not_frozen
+    cli_version: 0.147.0
+    cli_installation: pass
+    version_output: codex-cli 0.147.0
+    model: gpt-5.6-terra
+    provider: openai
+    reasoning_effort: high
+    sandbox_policy: workspace-write
+    approval_policy: never
+    network_policy: disabled
+    web_search: disabled
+    config_sha256: 72e4be7b755683e0b447e18dcce5ee19a4f493b6f110abaedeea826f9606781c
+    effective_provider_model_snapshot: not_verified
+    authenticated_model_call: not_run
+  equal_budget:
+    total_model_tokens: 120000
+    wall_clock_timeout_seconds: 1800
+    tool_call_ceiling: 160
+    cpu: 4
+    memory_mb: 8192
+    parallelism: 1
+    network_policy: disabled
+    shared_budget_digest: 43e0d2dd90f68ec11b111df0b3f688f90ec305d49df967ba108a9035ebdfc2c0
   forgeway_harbor_adapter:
-    expected_owner: project-owned thin adapter
-    expected_repository: forgeway-eval
-    repository_status: not_found
-    adapter_commit: not_verified
+    owner: idaibin/forgeway
+    contract: forgeway-harbor-thin/v1
+    implementation: evaluation/experiments/skills-forgeway-paired-evaluation-v1/tooling/contract.mjs
+    copies_harbor: false
+    construction_validation: pass
+    runtime_trial_status: not_run
+  evidence:
+    repository: idaibin/forgeway
+    branch: agent/paired-eval-phase0-harness-contract-20260820
+    result_path: .validation/benchmark-preflight/phase-0/harness-contract/harness-contract-preflight.json
+    log_path: .validation/benchmark-preflight/phase-0/harness-contract/harness-contract-preflight.log
+    log_sha256: f16f29baa8b5864f4e891f89ecb398c950dd76c05393973e71c674e3f9bc56de
+    result_status: contract-pass-live-runtime-blocked
+    canonical_forgeway_gate: pass
+    group_parity: pass
+    harbor_construction: pass
+    trials_started: false
 
 phase_0_hard_gates:
   codex_identity_and_equal_config:
-    status: blocked
+    status: contract_pass_live_runtime_blocked
+    verified:
+      - exact Codex CLI 0.147.0 installed in the independent runner
+      - A/B/C share model, provider, reasoning flags, sandbox, approval, network and budget locks
+      - configuration and budget digests are fixed
     missing:
-      - exact Codex CLI version
-      - exact model snapshot and reasoning configuration
-      - provider, sandbox, approval, network, config and budget digests
+      - authenticated model call
+      - effective provider-side model snapshot identity
+      - live A/B/C equality proof from Harbor Trial receipts
   skills_lock_and_static_binding:
-    status: partial
+    status: contract_pass_live_runtime_blocked
     verified:
-      - Skills repository commit
-      - static package names
+      - Skills repository commit and skills-index identity
+      - static package names dev-typescript and repo-map
+      - deterministic 22-file Skill Bundle and content digest
+      - Harbor Codex construction uses the same registration command for B and C and none for A
     missing:
-      - materialized Skill Bundle digest
-      - Harbor Skill provenance replay
+      - live Harbor Skill injection and provenance receipt from a Trial
   complete_forgeway_token_and_cost_accounting:
-    status: blocked
-    missing:
-      - thin Forgeway Harbor Adapter
-      - accounting proof covering contract parsing, decomposition, review, sub-agents, compression, retries and recovery
-  complete_candidate_patch_sealing:
-    status: blocked
-    missing:
-      - executable sealing test for modified, added, deleted, renamed, binary and untracked files
-  agent_future_history_and_oracle_isolation:
-    status: blocked
-    missing:
-      - agent sandbox proof with no future Git objects, target network, hidden tests or solution
-  fresh_verifier_isolation:
-    status: blocked
-    missing:
-      - verifier replay from immutable base using only candidate.patch and independent test package
-      - proof that verifier output cannot return to the Agent
-  immutable_identity_set:
-    status: partial
+    status: synthetic_pass_live_runtime_blocked
     verified:
-      - protocol commit
-      - Harbor candidate commit
-      - dataset revision and file/row digests
-      - Skills commit and index blob
-      - Forgeway commit
-      - task Base SHA and Oracle digests
+      - project-owned thin Adapter exists without copying Harbor
+      - synthetic ledger rejects unclassified, duplicate and non-conserving calls
+      - accounting covers main-agent, contract parsing, task decomposition, review, sub-agent, context compression, retry and recovery
     missing:
-      - Codex CLI version and model snapshot
-      - Forgeway Adapter commit
-      - budget digest
+      - real Group C provider totals and complete end-to-end accounting receipt
+  complete_candidate_patch_sealing:
+    status: synthetic_pass_live_runtime_blocked
+    verified:
+      - executable fixture seals modified, added, deleted, renamed, binary and previously untracked files
+      - sealed Patch replays in a fresh repository clone
+    missing:
+      - live Trial Patch sealing and replay receipt
+  agent_future_history_and_oracle_isolation:
+    status: synthetic_pass_live_runtime_blocked
+    verified:
+      - capsule contract rejects future Git, solution, reference Patch, hidden-test and Verifier material
+      - policy requires target network disabled and future Git history absent
+    missing:
+      - live container proof that network, future history, hidden tests and solution are inaccessible
+  fresh_verifier_isolation:
+    status: synthetic_pass_live_runtime_blocked
+    verified:
+      - Agent and Verifier roots must be disjoint
+      - Verifier requires only candidate.patch and independent tests
+      - Verifier output leakage into Agent root is rejected
+    missing:
+      - live Harbor Verifier replay and proof that results are not returned to the Agent
+  immutable_identity_set:
+    status: contract_pass_runtime_partial
+    verified:
+      - protocol, Harbor, Skills, skills-index and Forgeway commits
+      - dataset revision and file/row digests
+      - task Base SHA, Issue snapshot and Oracle digests
+      - Codex CLI version, configuration digest, budget digest and Skill Bundle digest
+      - thin Adapter candidate branch and source commit
+    missing:
+      - authenticated effective model snapshot identity
+      - live Trial and Verifier identities
   smoke_set_completeness:
     status: blocked
     missing:
@@ -187,7 +241,8 @@ phase_0_hard_gates:
 
 decision:
   task_oracle: accepted_for_phase_0_smoke
+  harness_contract: passed
   benchmark_trials_started: false
   phase_0_start_authorized: false
-  reason: TypeScript task Oracle is reproducible, but multiple protocol hard gates and two Smoke tasks remain incomplete.
-  next_execution_unit: phase0_harness_contract_preflight
+  reason: TypeScript Oracle and contract-level Harness gates are reproducible, but authenticated live Harbor Runtime isolation/accounting and the Rust/Java Smoke tasks remain incomplete.
+  next_execution_unit: phase0_live_harbor_runtime_preflight
