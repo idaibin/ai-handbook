@@ -1,0 +1,49 @@
+schema_version: story-studio/g07-public-rebaseline/v1
+project_id: banchao
+episode_id: EP01
+status: approved_vertical_slice_first_asset_outputs_pending
+as_of_utc: '2026-08-20T13:56:27Z'
+preserved_baseline:
+  screenplay_sha256: a2ba6bb8cbd094ea65c3cdcdb0e341929f479fb9cbcfe0b2cbdc4c36bad02f0e
+  shots: 14
+  storyboard_panels: 27
+  duration_seconds: 105.0
+  aspect_ratio: '16:9'
+  working_resolution: 1920x1080
+  frame_rate_fps: 24
+execution_strategy:
+  mode: vertical_slice_first
+  active_slice: EP01_G07_VERTICAL_SLICE_01
+  active_execution_unit: VERTICAL_SLICE_01_BAN_CHAO_CAMERA_LIGHT
+  selected_master_lanes:
+  - CHAR_BAN_CHAO_STATE_01_LUOYANG_SCRIBE
+  - LOC_LUOYANG_COPYING_COMPOSITE_SET
+  - PROP_HERO_BRUSH
+  - PROP_WRITING_SURFACE
+  deferred_master_lanes:
+  - CHAR_BAN_MOTHER
+  - CHAR_BAN_GU
+  - CHAR_UNNAMED_SCRIBE
+  - PROP_BRUSH_POUCH
+  - PROP_FAMILY_MONEY_POUCH
+  - SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET
+  bounded_test_subset:
+  - VS_T01_BAN_CHAO_CAMERA_LIGHT_AND_SET
+  - VS_T02_HAND_BRUSH_WRITING_SURFACE
+  full_clmc_pass_claimed: false
+execution_state:
+  master_lanes: 10/10
+  verified_asset_executions: 1/10
+  clmc_test_execution: 0/9
+  production_shotkeyframes: 0
+  video_shots: 0
+private_contract_hashes:
+  rebaseline_decision: bc2b1522b499071ec956c25b703e46d08b06740ceabed23fd3d26531efb204d0
+  canonical_alias_map: c3cf29b24ad5bcf3aaeec5f1ec200245089b9ed5a1fe070b5528283b84d6b1e3
+  vertical_slice_work_order: 78054ec421ca37223a7259394133e2371172850182271673532cd30c0634eec2
+  active_capsule: bbbd5768d5c68b656c18083305147d97d079c2dc6f5ee86fa7193543785f0020
+  static_validation: c25ca0f8e28384ec018c12b4ae80661a29e92e691a78977344c8096e54f9b82e
+  g07_master_work_order: 6045a46dd1570fb526518a8606345fc20d7633e5b35eb1b5dfcd1208ecafe84a
+rights_status: internal_candidate_only
+production_ready: false
+publication_ready: false

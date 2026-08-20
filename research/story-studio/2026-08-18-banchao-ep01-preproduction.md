@@ -17,29 +17,48 @@
 | 候选参考图 | archived_candidate | 8 张，全部 `candidate_not_canonical` |
 | 角色四视图蓝图 | archived_candidate | 4 张，均非历史肖像或 Production Canon |
 | LookDev 审查对 | archived_candidate | 8 组 provider-native / 1920×1080 review 文件存在 |
-| G07 资产清单 | **reconciled** | HOD `13/13` accounted；10 个 master lanes + 1 no-full-set waiver |
-| G07 资产执行 | in_progress_blocked | 仅 `1/10` 有完整验证执行；其余需要原生修订/新建 |
-| Camera / Lighting / Motion / Continuity | contract_ready_not_executed | 9 个测试单元覆盖 14/14 Shots 与 10/10 lanes |
+| G07 资产清单 | reconciled | HOD `13/13` accounted；10 个 master lanes + 1 no-full-set waiver |
+| G07 执行策略 | **rebaseline_approved** | Vertical Slice First；4 条核心 lane 优先，6 条 lane 延后 |
+| G07 资产执行 | in_progress_blocked | 仅 `1/10` 有完整验证执行 |
+| Camera / Lighting / Motion / Continuity | subset_authorized_not_executed | 完整 CLMC v2 为 `0/9`；Vertical Slice 有界子集已授权 |
 | Production ShotKeyframe / 视频 | prohibited | G07 尚未批准 |
 
-## 本次资产补齐
+## G07 Rebaseline
+
+保留 Screenplay、14 Shots、27 Panels、105 秒 Storyboard / G06 Editorial Baseline；暂停“完成全部 10 条资产后才运行技术测试”的批量顺序。
+
+当前 Vertical Slice：
+
+1. Ban Chao Camera / Lighting
+2. Minimal Luoyang Camera-safe Set
+3. Hero Brush
+4. Writing Surface
+5. 有界 CLMC Core Technical Still；通过后可选 5–10 秒低成本 Motion Proxy
+
+`PROP_FAMILY_MONEY_POUCH`、班母、班固、无名抄书人、Brush Pouch 和 Official Desk Package 保留既有合同，但不再作为当前最高优先级。
+
+## 已关闭的结构缺口
 
 - 新增 `PROP_FAMILY_MONEY_POUCH` master lane，绑定 `EP01_SHOT_03–04`。
 - 将 `SET_ABSTRACT_OFFICIAL_WORKSPACE`、`PROP_GENERIC_OFFICIAL_DOCUMENT_PACKET`、`PROP_LOW_WRITING_DESK` 显式合并到 `SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET`。
 - 将 `SET_ABSTRACT_TRANSITION` 显式记录为 `no_full_set_required` waiver。
-- Unified CLMC Test Package 更新为 v2：`9` test units、`14/14` Shots、`10/10` master lanes。
+- Canonical ID Alias Map 已覆盖当前 Screenplay、Shot List、Continuity、HOD 与 G07 中的资产标识漂移。
 - G06 音频 lineage 已纠正：当前可验证的是 4 个 FLAC 派生 stem；4 个 WAV 原件未在 Drive 中找到，source-fidelity 仍未验证。
 
 ## 边界
 
-- “资产清单完整”不等于“资产媒体完成”。`PROP_FAMILY_MONEY_POUCH__TAKE_01A` 当前只有 Work Order，没有生成图片、GenerationAttempt 或 Dailies。
+- “资产清单完整”不等于“资产媒体完成”。
+- G05 当前只表示 `VISUAL_DIRECTION_SELECTED`；没有 Production Asset Canon 批准。
 - Ban Chao Variant B 仅有条件选中；Camera/Lighting Test 尚未通过。
-- 其余 Character、Set、HeroProp、ContinuityProp 修订仍待隔离 provider-native 生成与 Dailies。
+- provider-native 精确尺寸必须保留；1920×1080 normalized review derivative 不得写成 native。
 - exact image provider/model、账户数据控制状态、历史构造细节和公开/商业权利仍为 `Not verified`。
 - `rights_status=internal_candidate_only`；`production_ready=false`；`publication_ready=false`。
 
 ## 公开证据入口
 
+- [G07 Rebaseline](./2026-08-20-banchao-ep01-g07-rebaseline.md)
+- [G07 Rebaseline 机器状态](./2026-08-20-banchao-ep01-g07-rebaseline.yaml)
+- [Canonical ID Alias Map](./2026-08-20-banchao-ep01-canonical-id-alias-map.yaml)
 - [G07 资产清单对账](./2026-08-20-banchao-ep01-g07-asset-reconciliation.md)
 - [G07 机器可读映射](./2026-08-20-banchao-ep01-g07-asset-reconciliation.yaml)
 - [历史候选资产证据清单](./2026-08-18-banchao-ep01-evidence-manifest.json)

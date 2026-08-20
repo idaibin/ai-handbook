@@ -1,0 +1,125 @@
+schema_version: story-studio/public-canonical-id-alias-map/v1
+project_id: banchao
+episode_id: EP01
+status: active_locked_baseline_compatibility
+policy:
+  historical_locked_files_rewritten: false
+  new_contracts_must_use_canonical_ids: true
+  aliases_are_resolution_rules_not_duplicate_assets: true
+  static_reference_coverage_is_not_delivery_completion: true
+canonical_master_lanes:
+- CHAR_BAN_CHAO_STATE_01_LUOYANG_SCRIBE
+- CHAR_BAN_MOTHER
+- CHAR_BAN_GU
+- CHAR_UNNAMED_SCRIBE
+- LOC_LUOYANG_COPYING_COMPOSITE_SET
+- PROP_HERO_BRUSH
+- PROP_WRITING_SURFACE
+- PROP_BRUSH_POUCH
+- PROP_FAMILY_MONEY_POUCH
+- SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET
+group_definitions:
+  GROUP_LUOYANG_WRITING_SYSTEM:
+    type: continuity_group
+    members:
+    - PROP_HERO_BRUSH
+    - PROP_WRITING_SURFACE
+    - LOC_LUOYANG_COPYING_COMPOSITE_SET
+aliases:
+- source_id: CHAR_BAN_CHAO
+  resolution: canonical_alias
+  canonical_id: CHAR_BAN_CHAO_STATE_01_LUOYANG_SCRIBE
+  scope:
+  - screenplay
+  - shot_list
+  - continuity
+  note: EP01 uses the pre-career Luoyang scribe state; historical locked files are not rewritten.
+- source_id: LOC_LUOYANG_COPYING_SPACE
+  resolution: canonical_alias
+  canonical_id: LOC_LUOYANG_COPYING_COMPOSITE_SET
+  scope:
+  - continuity
+- source_id: LOC_LUOYANG_COPYING_COMPOSITE
+  resolution: canonical_alias
+  canonical_id: LOC_LUOYANG_COPYING_COMPOSITE_SET
+  scope:
+  - historical_contract_compatibility
+- source_id: PROP_BRUSH
+  resolution: canonical_alias
+  canonical_id: PROP_HERO_BRUSH
+  scope:
+  - shot_list
+- source_id: PROP_WRITING_SET
+  resolution: group_expansion
+  canonical_group_id: GROUP_LUOYANG_WRITING_SYSTEM
+  members:
+  - PROP_HERO_BRUSH
+  - PROP_WRITING_SURFACE
+  - LOC_LUOYANG_COPYING_COMPOSITE_SET
+  scope:
+  - continuity
+  note: A continuity group, not a standalone G07 master lane.
+- source_id: PROP_WRITING_DESK
+  resolution: package_state_alias
+  canonical_id: SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET
+  state: desk_packet_present
+  scope:
+  - shot_list
+- source_id: PROP_EMPTY_DESK
+  resolution: package_state_alias
+  canonical_id: SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET
+  state: desk_empty_or_withdrawn
+  scope:
+  - shot_list
+- source_id: PROP_OFFICIAL_DOCUMENT
+  resolution: package_component_alias
+  canonical_id: SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET
+  component: PROP_GENERIC_OFFICIAL_DOCUMENT_PACKET
+  scope:
+  - shot_list
+- source_id: PROP_DOCUMENT
+  resolution: package_component_alias
+  canonical_id: SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET
+  component: PROP_GENERIC_OFFICIAL_DOCUMENT_PACKET
+  scope:
+  - shot_list
+- source_id: SET_ABSTRACT_OFFICIAL_WORKSPACE
+  resolution: consolidated_requirement
+  canonical_id: SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET
+  component: abstract_official_space
+  scope:
+  - screenplay
+  - hod
+  - g07
+- source_id: PROP_GENERIC_OFFICIAL_DOCUMENT_PACKET
+  resolution: consolidated_requirement
+  canonical_id: SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET
+  component: generic_document_packet
+  scope:
+  - screenplay
+  - hod
+  - g07
+- source_id: PROP_LOW_WRITING_DESK
+  resolution: consolidated_requirement
+  canonical_id: SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET
+  component: low_official_desk
+  scope:
+  - screenplay
+  - hod
+  - g07
+- source_id: SET_ABSTRACT_TRANSITION
+  resolution: waiver_no_full_set
+  canonical_id: null
+  covered_by_tests:
+  - CLMC_T06_END_HOOK_PROP_AND_BLACK_HANDOFF
+  - CLMC_T07_TIMELINE_EDITORIAL_AND_DIALOGUE_LOCK
+  - CLMC_T08_GLOBAL_PSEUDOTEXT_PROVENANCE_AND_RIGHTS
+  scope:
+  - screenplay
+  - hod
+  - g07
+gate_aliases:
+- historical_id: G05_DESIGN_LOOK_APPROVAL
+  operational_label: G05_VISUAL_DIRECTION_SELECTED
+  meaning: rule-level ShowLook and selected components only; zero Production Asset Canon approvals
+  migration: retain historical ID; use operational label in current status and new contracts

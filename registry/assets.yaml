@@ -70,7 +70,7 @@ assets:
 
   - id: banchao-ep01-g07-asset-package
     type: story-studio-episode-asset-package
-    status: inventory-reconciled-output-pending
+    status: rebaseline-approved-vertical-slice-pending
     route: media-production-system
     domains:
       - ai-creative-media
@@ -87,8 +87,13 @@ assets:
         accounted_requirements: 13
         master_lanes: 10
       execution:
+        strategy: vertical-slice-first
+        active_slice: EP01_G07_VERTICAL_SLICE_01
+        active_execution_unit: VERTICAL_SLICE_01_BAN_CHAO_CAMERA_LIGHT
+        slice_lanes: 4
+        deferred_lanes: 6
         verified_asset_executions: 1
-        test_execution: not-started
+        clmc_test_execution: not-started
         production_ready: false
         publication_ready: false
       public_indexes:
@@ -97,3 +102,6 @@ assets:
         - research/story-studio/2026-08-20-banchao-ep01-g07-evidence-manifest.json
         - research/story-studio/2026-08-20-banchao-ep01-g07-asset-reconciliation.md
         - research/story-studio/2026-08-20-banchao-ep01-g07-asset-reconciliation.yaml
+        - research/story-studio/2026-08-20-banchao-ep01-g07-rebaseline.md
+        - research/story-studio/2026-08-20-banchao-ep01-g07-rebaseline.yaml
+        - research/story-studio/2026-08-20-banchao-ep01-canonical-id-alias-map.yaml
