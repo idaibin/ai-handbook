@@ -1,9 +1,10 @@
 # Forgeway + Skills TypeScript — Local Runtime Validation Handoff
 
-Status: `paused_for_local_runtime_validation`  
+Status: `handoff_complete_awaiting_user_local_validation`  
 Task identifier: `TASK — Forgeway + Skills — TypeScript 能力建设`  
 Task key: `ai-engineering-lab/forgeway-skills/typescript-capability`  
-Recorded date: `2026-08-20`
+Recorded date: `2026-08-20`  
+Next owner: `user_local_environment`
 
 ## Conclusion
 
@@ -15,6 +16,10 @@ The remaining evidence requires a runtime with Docker, Harbor, Codex, and an alr
 approved authentication route. The current remote execution container has no `docker`,
 `harbor`, or `codex` executable. The user declined creation of a new OpenAI API key, so
 remaining runtime validation is handed off to the local environment.
+
+The user accepted the handoff and will clone the repositories and execute locally. No
+further assistant execution unit is scheduled. Resume this task only when local evidence
+or failure logs are returned for review.
 
 No authenticated Harbor + Codex Trial and no real-task A/B/C effectiveness Trial have
 run. Do not claim that Skills or Forgeway improve real-repository resolution rates.
@@ -109,7 +114,7 @@ applicable gates before its evidence is accepted.
 Repository: `idaibin/forgeway`  
 Branch: `validation/paired-eval-phase0-typescript-preflight-20260820`  
 Path: `.validation/benchmark-preflight/phase-0/execution-record.json`  
-Recording commit: `40bce6008d8fbe2bf6b0c580e29bdab95c6f58e4`
+Recording commit: `3c08580d8ce76dee9fd9617d357124f0c6ece49d`
 
 ## Drive copies
 
