@@ -67,3 +67,33 @@ assets:
         - name: 04_Story-Studio
         - name: 05_Forgeway
         - name: 99_Archive
+
+  - id: banchao-ep01-g07-asset-package
+    type: story-studio-episode-asset-package
+    status: inventory-reconciled-output-pending
+    route: media-production-system
+    domains:
+      - ai-creative-media
+    storage:
+      provider: google-drive
+      path: 04_Story-Studio/IP/banchao/EP01-preproduction-candidates-2026-08-18
+    privacy: private
+    metadata:
+      project_id: banchao
+      episode_id: EP01
+      rights_status: internal_candidate_only
+      inventory:
+        hod_requirements: 13
+        accounted_requirements: 13
+        master_lanes: 10
+      execution:
+        verified_asset_executions: 1
+        test_execution: not-started
+        production_ready: false
+        publication_ready: false
+      public_indexes:
+        - research/story-studio/2026-08-18-banchao-ep01-preproduction.md
+        - research/story-studio/2026-08-18-banchao-ep01-evidence-manifest.json
+        - research/story-studio/2026-08-20-banchao-ep01-g07-evidence-manifest.json
+        - research/story-studio/2026-08-20-banchao-ep01-g07-asset-reconciliation.md
+        - research/story-studio/2026-08-20-banchao-ep01-g07-asset-reconciliation.yaml

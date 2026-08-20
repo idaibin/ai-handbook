@@ -1,0 +1,76 @@
+schema_version: story-studio/g07-asset-reconciliation/v1
+project_id: banchao
+episode_id: EP01
+status: inventory_reconciled_asset_outputs_pending
+as_of_utc: '2026-08-20T11:19:11Z'
+authority:
+  repository_baseline_before_sync: 318574d93922385204b8216114e4169ee8246bd2
+  hod_requirement_count: 13
+  g07_master_lane_count: 10
+  locked_shot_count: 14
+mapping:
+- requirement_id: CHAR_BAN_CHAO_STATE_01_LUOYANG_SCRIBE
+  resolution: direct
+  master_lane: CHAR_BAN_CHAO_STATE_01_LUOYANG_SCRIBE
+- requirement_id: CHAR_BAN_MOTHER
+  resolution: direct
+  master_lane: CHAR_BAN_MOTHER
+- requirement_id: CHAR_BAN_GU
+  resolution: direct
+  master_lane: CHAR_BAN_GU
+- requirement_id: CHAR_UNNAMED_SCRIBE
+  resolution: direct
+  master_lane: CHAR_UNNAMED_SCRIBE
+- requirement_id: LOC_LUOYANG_COPYING_COMPOSITE_SET
+  resolution: direct
+  master_lane: LOC_LUOYANG_COPYING_COMPOSITE_SET
+- requirement_id: PROP_HERO_BRUSH
+  resolution: direct
+  master_lane: PROP_HERO_BRUSH
+- requirement_id: PROP_WRITING_SURFACE
+  resolution: direct
+  master_lane: PROP_WRITING_SURFACE
+- requirement_id: PROP_BRUSH_POUCH
+  resolution: direct
+  master_lane: PROP_BRUSH_POUCH
+- requirement_id: PROP_FAMILY_MONEY_POUCH
+  resolution: direct_new_lane
+  master_lane: PROP_FAMILY_MONEY_POUCH
+  required_by_shots:
+  - EP01_SHOT_03
+  - EP01_SHOT_04
+  output_status: authorized_not_executed
+- requirement_id: SET_ABSTRACT_OFFICIAL_WORKSPACE
+  resolution: consolidated
+  master_lane: SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET
+- requirement_id: PROP_GENERIC_OFFICIAL_DOCUMENT_PACKET
+  resolution: consolidated
+  master_lane: SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET
+- requirement_id: PROP_LOW_WRITING_DESK
+  resolution: consolidated
+  master_lane: SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET
+- requirement_id: SET_ABSTRACT_TRANSITION
+  resolution: waived_no_full_set
+  master_lane: null
+  waiver: dark field / prop corner / fade / title window only; continuity covered by CLMC tests
+coverage:
+  accounted_requirements: 13/13
+  master_lanes: 10/10
+  locked_shots_referenced_by_tests: 14/14
+  master_lanes_referenced_by_tests: 10/10
+  test_units: 9
+evidence_hashes:
+  drive_reconciliation_contract: 8226edb38ffebac4f0fa14192b727e7577a3ebe4d7e6005534d5484c3454cf8c
+  drive_master_work_order: 1b19ec46017b6e7e76b111f2a9b882745657cd7d21fc8feb7f595c808229c789
+  drive_money_pouch_work_order: 3343c51eb1ea9fa20b75167a39b981d9ec480ebe5bd1e14030af9ddcdac68a5a
+  drive_clmc_test_package_v2: 54460e6c26a9041e3dd3899d3498ebe726321dc0e2c7d2c47351928267ac67d7
+  drive_static_validation: 422649b86bd890410799e956c1a359e7f185453a3257004ae40be205cb789315
+  drive_audio_lineage_correction: 6aad09ece593d88ec3537b65d1343b1bb736763369e484bf0dd89b6cd5b9af5b
+execution:
+  verified_g07_asset_executions: 1
+  asset_outputs_complete: false
+  tests_executed: false
+  g07_gate: not_approved
+  production_ready: false
+  publication_ready: false
+rights_status: internal_candidate_only

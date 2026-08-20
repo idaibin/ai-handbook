@@ -1,0 +1,155 @@
+{
+  "schema_version": "story-studio/g07-public-evidence-manifest/v1",
+  "project_id": "banchao",
+  "episode_id": "EP01",
+  "status": "inventory_reconciled_asset_outputs_pending",
+  "as_of_utc": "2026-08-20T11:19:11Z",
+  "repository_baseline_before_sync": "318574d93922385204b8216114e4169ee8246bd2",
+  "locked_baseline": {
+    "shot_count": 14,
+    "storyboard_panel_count": 27,
+    "duration_seconds": 105.0,
+    "working_resolution": "1920x1080",
+    "frame_rate_fps": 24,
+    "dialogue_cue_count": 14
+  },
+  "historical_candidate_manifest": {
+    "path": "research/story-studio/2026-08-18-banchao-ep01-evidence-manifest.json",
+    "scope": "8 reference images + 4 character blueprints; historical candidate evidence retained unchanged"
+  },
+  "private_media_inventory": {
+    "reference_images": 8,
+    "character_blueprints": 4,
+    "lookdev_provider_native_review_pairs": 8,
+    "storyboard_panels": 27,
+    "g06_timed_animatic_review_package": true
+  },
+  "g07_asset_inventory": {
+    "hod_requirements_total": 13,
+    "accounted_requirements": "13/13",
+    "master_lanes_total": 10,
+    "consolidated_requirements": [
+      "SET_ABSTRACT_OFFICIAL_WORKSPACE",
+      "PROP_GENERIC_OFFICIAL_DOCUMENT_PACKET",
+      "PROP_LOW_WRITING_DESK"
+    ],
+    "consolidation_target": "SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET",
+    "waived_requirement": {
+      "asset_id": "SET_ABSTRACT_TRANSITION",
+      "rule": "no_full_set_required"
+    },
+    "lanes": [
+      {
+        "asset_id": "CHAR_BAN_CHAO_STATE_01_LUOYANG_SCRIBE",
+        "artifact": "CharacterBlueprint",
+        "status": "selected_with_conditions_camera_light_pending"
+      },
+      {
+        "asset_id": "CHAR_BAN_MOTHER",
+        "artifact": "CharacterBlueprint",
+        "status": "revision_required_wrong_subject_retry"
+      },
+      {
+        "asset_id": "CHAR_BAN_GU",
+        "artifact": "CharacterBlueprint",
+        "status": "revision_authorized_not_executed"
+      },
+      {
+        "asset_id": "CHAR_UNNAMED_SCRIBE",
+        "artifact": "CharacterBlueprint",
+        "status": "revision_authorized_not_executed"
+      },
+      {
+        "asset_id": "LOC_LUOYANG_COPYING_COMPOSITE_SET",
+        "artifact": "ProductionDesignSetPlan",
+        "status": "revision_authorized_not_executed"
+      },
+      {
+        "asset_id": "PROP_HERO_BRUSH",
+        "artifact": "HeroPropSheet",
+        "status": "replacement_authorized_not_executed"
+      },
+      {
+        "asset_id": "PROP_WRITING_SURFACE",
+        "artifact": "HeroPropSheet",
+        "status": "revision_authorized_not_executed"
+      },
+      {
+        "asset_id": "PROP_BRUSH_POUCH",
+        "artifact": "ContinuityPropSheet",
+        "status": "replacement_authorized_not_executed"
+      },
+      {
+        "asset_id": "PROP_FAMILY_MONEY_POUCH",
+        "artifact": "ContinuityPropSheet",
+        "status": "new_build_authorized_not_executed",
+        "required_by_shots": [
+          "EP01_SHOT_03",
+          "EP01_SHOT_04"
+        ]
+      },
+      {
+        "asset_id": "SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET",
+        "artifact": "SetPropPackage",
+        "status": "new_build_authorized_not_executed"
+      }
+    ],
+    "verified_asset_executions": 1,
+    "asset_outputs_complete": false
+  },
+  "g07_static_validation": {
+    "test_units": 9,
+    "locked_shots_covered": "14/14",
+    "master_lanes_referenced": "10/10",
+    "test_execution": "not_started",
+    "g07_gate": "not_approved"
+  },
+  "audio_lineage": {
+    "status": "FLAC_derivatives_verified_WAV_origins_not_found_source_fidelity_not_verified",
+    "available_flac": [
+      {
+        "file": "DX_SCRATCH.flac",
+        "sha256": "2250e8f12c61bb6c278b59ed323d54204159158d81c61fad90687dad614921eb",
+        "size": 2982086
+      },
+      {
+        "file": "FX_PRELAY.flac",
+        "sha256": "c222fcbf5db3a46eb600cc5b083efaa9d3e15ebcbb291427a0c89cae43cefca7",
+        "size": 14458524
+      },
+      {
+        "file": "MIX_SCRATCH.flac",
+        "sha256": "cb81381f5f6576351c31a91b214801a1e4c25b69a665ce4eefd2e9ce16357a86",
+        "size": 14971940
+      },
+      {
+        "file": "MUSIC_TEMP.flac",
+        "sha256": "468371c433d5dc35c9ffacf02db269f5db8cd2f68705b8056833947f56302021",
+        "size": 83930
+      }
+    ],
+    "declared_wav_origins": "not_found_in_current_Drive_audit"
+  },
+  "versioned_evidence_hashes": {
+    "drive_reconciliation_contract": "8226edb38ffebac4f0fa14192b727e7577a3ebe4d7e6005534d5484c3454cf8c",
+    "drive_master_work_order": "1b19ec46017b6e7e76b111f2a9b882745657cd7d21fc8feb7f595c808229c789",
+    "drive_money_pouch_work_order": "3343c51eb1ea9fa20b75167a39b981d9ec480ebe5bd1e14030af9ddcdac68a5a",
+    "drive_clmc_test_package_v2": "54460e6c26a9041e3dd3899d3498ebe726321dc0e2c7d2c47351928267ac67d7",
+    "drive_static_validation": "422649b86bd890410799e956c1a359e7f185453a3257004ae40be205cb789315",
+    "drive_audio_lineage_correction": "6aad09ece593d88ec3537b65d1343b1bb736763369e484bf0dd89b6cd5b9af5b"
+  },
+  "storage_policy": {
+    "github": "sanitized mapping, status and hashes only",
+    "google_drive": "complete private contracts, candidate media, provider-native bytes, audio/video and execution evidence"
+  },
+  "not_verified": [
+    "provider-native outputs for nine unresolved/new-build lanes and Ban Chao camera/light test",
+    "actual CLMC test results",
+    "exact provider/model and account data-control status",
+    "public/commercial rights clearance",
+    "WAV source-stem preservation and FLAC transcode provenance"
+  ],
+  "rights_status": "internal_candidate_only",
+  "production_ready": false,
+  "publication_ready": false
+}
