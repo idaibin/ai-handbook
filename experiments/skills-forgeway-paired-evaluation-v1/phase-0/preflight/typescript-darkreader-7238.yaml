@@ -1,0 +1,193 @@
+schema_version: paired-eval-phase0-task-preflight/v1
+artifact_status: candidate_not_approved
+preflight_status: oracle_prevalidated_phase0_blocked
+task_id: phase0-ts-darkreader-7238
+benchmark_role: phase-0-infrastructure-smoke-only
+
+protocol:
+  repository: idaibin/ai-handbook
+  path: experiments/skills-forgeway-paired-evaluation-v1/README.md
+  commit: 772139f2f7fe45289163765ff1d2418ef967f8ab
+
+delivered_system_basis:
+  skills:
+    repository: idaibin/skills
+    commit: 0d6039345d646c4d4795da7de22aa9b257930a59
+    skills_index_blob: 92b493268110117f7beaa6e80765f403bd37eab1
+  forgeway:
+    repository: idaibin/forgeway
+    commit: 6dcd835f6fe4fe5e5b4e1dca30975b841c1ccd75
+
+task_source:
+  dataset: ByteDance-Seed/Multi-SWE-bench
+  dataset_revision: 56ff018c04a38e27ada1e9d0a6d5839a51f88f0d
+  dataset_file: ts/darkreader__darkreader_dataset.jsonl
+  dataset_file_sha256: 350ddd200d2774be699d72062b356a9ceecdf38c3f9ab72e1ece3887626a93a8
+  dataset_row_sha256: 59429966137979bbd3c64941fa0e710a422bf1e83a0c8c936a8304b0f53716e0
+  repository: darkreader/darkreader
+  issue: 7238
+  reference_pull_request: 7241
+  base_commit: 991883df4d5910851130e3dc0e21fcbce604ea7d
+  reference_head_commit: 958189b1ecbb6e06c468aad611a505254b569a89
+  language: TypeScript
+  task_type: bugfix
+  complexity: L1
+  contamination_status: public_historical
+  issue_hint_level: high
+  phase_1_effectiveness_candidate: false
+
+agent_input_contract:
+  issue_snapshot_sha256: 095d476fae68ca53f1a8d8cd499ec71355bdb0e50937ec007e34fad3c4086028
+  repository_export_commit: 991883df4d5910851130e3dc0e21fcbce604ea7d
+  allowed:
+    - frozen issue snapshot
+    - repository export at base_commit
+    - repository-local instructions present at base_commit
+    - assigned Skills only for Groups B and C
+  prohibited:
+    - reference patch
+    - hidden or regression test package
+    - Git objects, refs, tags, messages, comments, PR discussion, or CI results after base_commit
+    - external network access to the target issue or answer
+    - another Trial workspace, trajectory, or result
+
+oracle_prevalidation:
+  status: pass
+  evidence_repository: idaibin/forgeway
+  evidence_branch: validation/paired-eval-phase0-typescript-preflight-20260820
+  result_path: .validation/benchmark-preflight/phase-0/typescript-darkreader-7238/oracle-preflight.json
+  log_path: .validation/benchmark-preflight/phase-0/typescript-darkreader-7238/oracle-preflight.log
+  log_sha256: 2e2454ba84220d23e686b8d957ec77642071301805d86639041029d5a9c2e708
+  issue_snapshot_path: .validation/benchmark-preflight/phase-0/typescript-darkreader-7238/issue-snapshot.txt
+  fix_patch_sha256: 0746559d6b14f403b6722a4a526eb2c8a4fe55b73a26d2c0dddf3c76c2f6da15
+  test_patch_sha256: b18cf04f576da16c409445de8cb5a797812b32ba9557ce12c23c992170dcaab5
+  environment:
+    runner: ubuntu-24.04
+    node: v14.21.3
+    npm: 6.14.18
+    package_lock_sha256: 7db88bacc84c28c5b79cc028b67a33fb64a1db51c1264cf49da4f5904efd5f9c
+    install_command: npm ci
+    full_test_command: npm run test:ci
+    lint_command: npm run lint
+  results:
+    base_full_suite: 3/3
+    base_lint: pass
+    regression_test_on_base: expected_fail
+    reference_focused_test: 3/3
+    reference_full_suite: 3/3
+    reference_lint: pass
+    reference_changed_files: 2
+    reference_additions: 55
+    reference_deletions: 1
+    reference_changed_lines: 56
+
+comparison_contract:
+  repeats_per_group: 3
+  groups:
+    A:
+      codex_harness: frozen
+      skills: disabled
+      forgeway: disabled
+    B:
+      codex_harness: same_as_A
+      skills: frozen_static_bundle
+      forgeway: disabled
+    C:
+      codex_harness: same_as_A
+      skills: same_as_B
+      forgeway: enabled
+  static_skill_binding:
+    binding_id: typescript-l1-bugfix-v1
+    language: TypeScript
+    task_type: bugfix
+    complexity: L1
+    skills:
+      - name: dev-typescript
+        repository_commit: 0d6039345d646c4d4795da7de22aa9b257930a59
+      - name: repo-map
+        repository_commit: 0d6039345d646c4d4795da7de22aa9b257930a59
+    materialized_bundle_digest: not_verified
+
+harness_candidate_basis:
+  harbor:
+    repository: harbor-framework/harbor
+    commit: c3ce0c60bbd2fd1888b327efcc880dbd86d8b7cf
+    codex_adapter_source: src/harbor/agents/installed/codex.py
+    source_observations:
+      - supports Codex CLI version selection
+      - supports Skill directory injection
+      - records prompt, cached, completion Token and cost fields
+    runtime_validation: not_verified
+  codex_runtime:
+    cli_version: not_frozen
+    model: not_frozen
+    reasoning_effort: not_frozen
+    provider: not_frozen
+    sandbox_policy: not_frozen
+    approval_policy: not_frozen
+    network_policy: not_frozen
+    config_digest: not_frozen
+  forgeway_harbor_adapter:
+    expected_owner: project-owned thin adapter
+    expected_repository: forgeway-eval
+    repository_status: not_found
+    adapter_commit: not_verified
+
+phase_0_hard_gates:
+  codex_identity_and_equal_config:
+    status: blocked
+    missing:
+      - exact Codex CLI version
+      - exact model snapshot and reasoning configuration
+      - provider, sandbox, approval, network, config and budget digests
+  skills_lock_and_static_binding:
+    status: partial
+    verified:
+      - Skills repository commit
+      - static package names
+    missing:
+      - materialized Skill Bundle digest
+      - Harbor Skill provenance replay
+  complete_forgeway_token_and_cost_accounting:
+    status: blocked
+    missing:
+      - thin Forgeway Harbor Adapter
+      - accounting proof covering contract parsing, decomposition, review, sub-agents, compression, retries and recovery
+  complete_candidate_patch_sealing:
+    status: blocked
+    missing:
+      - executable sealing test for modified, added, deleted, renamed, binary and untracked files
+  agent_future_history_and_oracle_isolation:
+    status: blocked
+    missing:
+      - agent sandbox proof with no future Git objects, target network, hidden tests or solution
+  fresh_verifier_isolation:
+    status: blocked
+    missing:
+      - verifier replay from immutable base using only candidate.patch and independent test package
+      - proof that verifier output cannot return to the Agent
+  immutable_identity_set:
+    status: partial
+    verified:
+      - protocol commit
+      - Harbor candidate commit
+      - dataset revision and file/row digests
+      - Skills commit and index blob
+      - Forgeway commit
+      - task Base SHA and Oracle digests
+    missing:
+      - Codex CLI version and model snapshot
+      - Forgeway Adapter commit
+      - budget digest
+  smoke_set_completeness:
+    status: blocked
+    missing:
+      - one Rust Smoke task
+      - one Java Smoke task
+
+decision:
+  task_oracle: accepted_for_phase_0_smoke
+  benchmark_trials_started: false
+  phase_0_start_authorized: false
+  reason: TypeScript task Oracle is reproducible, but multiple protocol hard gates and two Smoke tasks remain incomplete.
+  next_execution_unit: phase0_harness_contract_preflight
