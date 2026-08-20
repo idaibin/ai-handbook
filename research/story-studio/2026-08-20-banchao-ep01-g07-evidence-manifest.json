@@ -1,17 +1,18 @@
 {
-  "schema_version": "story-studio/g07-public-evidence-manifest/v1",
+  "schema_version": "story-studio/g07-public-evidence-manifest/v2",
   "project_id": "banchao",
   "episode_id": "EP01",
-  "status": "inventory_reconciled_asset_outputs_pending",
-  "as_of_utc": "2026-08-20T11:19:11Z",
-  "repository_baseline_before_sync": "318574d93922385204b8216114e4169ee8246bd2",
+  "status": "rebaseline_approved_vertical_slice_01_authorized_asset_outputs_pending",
+  "as_of_utc": "2026-08-20T14:22:18Z",
+  "repository_baseline_before_update": "a4cf06f467047a556527d73c863286f92184fafe",
   "locked_baseline": {
     "shot_count": 14,
     "storyboard_panel_count": 27,
     "duration_seconds": 105.0,
     "working_resolution": "1920x1080",
     "frame_rate_fps": 24,
-    "dialogue_cue_count": 14
+    "dialogue_cue_count": 14,
+    "changed_by_rebaseline": false
   },
   "historical_candidate_manifest": {
     "path": "research/story-studio/2026-08-18-banchao-ep01-evidence-manifest.json",
@@ -21,6 +22,7 @@
     "reference_images": 8,
     "character_blueprints": 4,
     "lookdev_provider_native_review_pairs": 8,
+    "round3_styleframe_derivatives": 3,
     "storyboard_panels": 27,
     "g06_timed_animatic_review_package": true
   },
@@ -42,47 +44,60 @@
       {
         "asset_id": "CHAR_BAN_CHAO_STATE_01_LUOYANG_SCRIBE",
         "artifact": "CharacterBlueprint",
-        "status": "selected_with_conditions_camera_light_pending"
+        "status": "selected_with_conditions_camera_light_pending",
+        "rebaseline_priority": "active",
+        "execution_unit": "VERTICAL_SLICE_01_BAN_CHAO_CAMERA_LIGHT"
       },
       {
         "asset_id": "CHAR_BAN_MOTHER",
         "artifact": "CharacterBlueprint",
-        "status": "revision_required_wrong_subject_retry"
+        "status": "revision_required_wrong_subject_retry",
+        "rebaseline_priority": "deferred"
       },
       {
         "asset_id": "CHAR_BAN_GU",
         "artifact": "CharacterBlueprint",
-        "status": "revision_authorized_not_executed"
+        "status": "revision_authorized_not_executed",
+        "rebaseline_priority": "deferred"
       },
       {
         "asset_id": "CHAR_UNNAMED_SCRIBE",
         "artifact": "CharacterBlueprint",
-        "status": "revision_authorized_not_executed"
+        "status": "revision_authorized_not_executed",
+        "rebaseline_priority": "deferred"
       },
       {
         "asset_id": "LOC_LUOYANG_COPYING_COMPOSITE_SET",
         "artifact": "ProductionDesignSetPlan",
-        "status": "revision_authorized_not_executed"
+        "status": "revision_authorized_not_executed",
+        "rebaseline_priority": "queued",
+        "execution_unit": "VERTICAL_SLICE_02_LUOYANG_MINIMAL_SET"
       },
       {
         "asset_id": "PROP_HERO_BRUSH",
         "artifact": "HeroPropSheet",
-        "status": "replacement_authorized_not_executed"
+        "status": "replacement_authorized_not_executed",
+        "rebaseline_priority": "queued",
+        "execution_unit": "VERTICAL_SLICE_03_HERO_BRUSH"
       },
       {
         "asset_id": "PROP_WRITING_SURFACE",
         "artifact": "HeroPropSheet",
-        "status": "revision_authorized_not_executed"
+        "status": "revision_authorized_not_executed",
+        "rebaseline_priority": "queued",
+        "execution_unit": "VERTICAL_SLICE_04_WRITING_SURFACE"
       },
       {
         "asset_id": "PROP_BRUSH_POUCH",
         "artifact": "ContinuityPropSheet",
-        "status": "replacement_authorized_not_executed"
+        "status": "replacement_authorized_not_executed",
+        "rebaseline_priority": "deferred"
       },
       {
         "asset_id": "PROP_FAMILY_MONEY_POUCH",
         "artifact": "ContinuityPropSheet",
-        "status": "new_build_authorized_not_executed",
+        "status": "new_build_handoff_ready_not_executed",
+        "rebaseline_priority": "deferred",
         "required_by_shots": [
           "EP01_SHOT_03",
           "EP01_SHOT_04"
@@ -91,18 +106,51 @@
       {
         "asset_id": "SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET",
         "artifact": "SetPropPackage",
-        "status": "new_build_authorized_not_executed"
+        "status": "new_build_authorized_not_executed",
+        "rebaseline_priority": "deferred"
       }
     ],
     "verified_asset_executions": 1,
     "asset_outputs_complete": false
   },
+  "g07_rebaseline": {
+    "strategy": "vertical_slice_first",
+    "active_slice": "EP01_G07_VERTICAL_SLICE_01",
+    "active_execution_unit": "VERTICAL_SLICE_01_BAN_CHAO_CAMERA_LIGHT",
+    "selected_master_lanes": [
+      "CHAR_BAN_CHAO_STATE_01_LUOYANG_SCRIBE",
+      "LOC_LUOYANG_COPYING_COMPOSITE_SET",
+      "PROP_HERO_BRUSH",
+      "PROP_WRITING_SURFACE"
+    ],
+    "deferred_master_lanes": [
+      "CHAR_BAN_MOTHER",
+      "CHAR_BAN_GU",
+      "CHAR_UNNAMED_SCRIBE",
+      "PROP_BRUSH_POUCH",
+      "PROP_FAMILY_MONEY_POUCH",
+      "SET_OFFICIAL_DESK_AND_GENERIC_DOCUMENT_PACKET"
+    ],
+    "bounded_test_subset": [
+      "VS_T01_BAN_CHAO_CAMERA_LIGHT_AND_SET",
+      "VS_T02_HAND_BRUSH_WRITING_SURFACE"
+    ],
+    "bounded_test_execution": "0/2",
+    "full_clmc_pass_claimed": false,
+    "public_index_paths": [
+      "research/story-studio/2026-08-20-banchao-ep01-g07-rebaseline.md",
+      "research/story-studio/2026-08-20-banchao-ep01-g07-rebaseline.yaml",
+      "research/story-studio/2026-08-20-banchao-ep01-canonical-id-alias-map.yaml"
+    ]
+  },
   "g07_static_validation": {
-    "test_units": 9,
+    "full_clmc_test_units": 9,
     "locked_shots_covered": "14/14",
     "master_lanes_referenced": "10/10",
-    "test_execution": "not_started",
-    "g07_gate": "not_approved"
+    "full_clmc_test_execution": "0/9",
+    "vertical_slice_bounded_test_execution": "0/2",
+    "g07_gate": "not_approved",
+    "static_coverage_is_delivery_completion": false
   },
   "audio_lineage": {
     "status": "FLAC_derivatives_verified_WAV_origins_not_found_source_fidelity_not_verified",
@@ -132,10 +180,13 @@
   },
   "versioned_evidence_hashes": {
     "drive_reconciliation_contract": "8226edb38ffebac4f0fa14192b727e7577a3ebe4d7e6005534d5484c3454cf8c",
-    "drive_master_work_order": "1b19ec46017b6e7e76b111f2a9b882745657cd7d21fc8feb7f595c808229c789",
-    "drive_money_pouch_work_order": "3343c51eb1ea9fa20b75167a39b981d9ec480ebe5bd1e14030af9ddcdac68a5a",
+    "drive_rebaseline_decision": "bc2b1522b499071ec956c25b703e46d08b06740ceabed23fd3d26531efb204d0",
+    "drive_canonical_alias_map": "c3cf29b24ad5bcf3aaeec5f1ec200245089b9ed5a1fe070b5528283b84d6b1e3",
+    "drive_vertical_slice_work_order": "78054ec421ca37223a7259394133e2371172850182271673532cd30c0634eec2",
+    "drive_active_capsule": "bbbd5768d5c68b656c18083305147d97d079c2dc6f5ee86fa7193543785f0020",
+    "drive_rebaseline_static_validation": "c25ca0f8e28384ec018c12b4ae80661a29e92e691a78977344c8096e54f9b82e",
+    "drive_master_work_order_rebaseline": "6045a46dd1570fb526518a8606345fc20d7633e5b35eb1b5dfcd1208ecafe84a",
     "drive_clmc_test_package_v2": "54460e6c26a9041e3dd3899d3498ebe726321dc0e2c7d2c47351928267ac67d7",
-    "drive_static_validation": "422649b86bd890410799e956c1a359e7f185453a3257004ae40be205cb789315",
     "drive_audio_lineage_correction": "6aad09ece593d88ec3537b65d1343b1bb736763369e484bf0dd89b6cd5b9af5b"
   },
   "storage_policy": {
@@ -143,8 +194,8 @@
     "google_drive": "complete private contracts, candidate media, provider-native bytes, audio/video and execution evidence"
   },
   "not_verified": [
-    "provider-native outputs for nine unresolved/new-build lanes and Ban Chao camera/light test",
-    "actual CLMC test results",
+    "provider-native outputs and Dailies for the four Vertical Slice lanes",
+    "actual bounded Vertical Slice technical tests and full CLMC test results",
     "exact provider/model and account data-control status",
     "public/commercial rights clearance",
     "WAV source-stem preservation and FLAC transcode provenance"
