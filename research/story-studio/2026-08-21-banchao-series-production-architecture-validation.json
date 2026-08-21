@@ -12,13 +12,14 @@
     "svg_generated": true,
     "png_dimensions": "1920x1080",
     "source_treatment_sha256_matches": true,
-    "nonexistent_gate_matrix_reference_removed": true
+    "nonexistent_gate_matrix_reference_removed": true,
+    "drive_artifact_bindings_added": true
   },
   "files": [
     {
       "file": "2026-08-21-banchao-series-production-architecture.md",
-      "size_bytes": 9832,
-      "sha256": "1c3727170a8db1b981c567132e88478f2a86707ec55da7b76129c67e77be165f"
+      "size_bytes": 10843,
+      "sha256": "5a0d06bbd3af2a46d455e1f6825bf5d7d7db29e629e52a1047a32e7e561146cb"
     },
     {
       "file": "2026-08-21-banchao-series-production-architecture.yaml",
@@ -41,5 +42,5 @@
       "sha256": "4fcab550988770e577f0b9b75cac0450357aa146710e8de866a45b6bb1951301"
     }
   ],
-  "result": "pass_static_architecture_and_render_validation"
+  "result": "pass_final_static_architecture_and_render_validation"
 }
