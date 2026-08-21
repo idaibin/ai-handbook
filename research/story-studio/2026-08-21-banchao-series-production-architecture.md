@@ -260,11 +260,12 @@ PROP_HERO_BRUSH__TAKE_02A
 
 成功只授权 `VERTICAL_SLICE_04_WRITING_SURFACE`，不得直接推进 G07、Production Shotkeyframe 或视频。
 
+
 ## 11. 持久化身份
 
 | 产物 | Google Drive file ID | SHA-256 |
 |---|---|---|
-| 架构 Markdown | `1_3t-Ff5yzNkxWwyLtM3yZruvfitw-Vew` | `1c3727170a8db1b981c567132e88478f2a86707ec55da7b76129c67e77be165f` |
+| 架构 Markdown | `1_3t-Ff5yzNkxWwyLtM3yZruvfitw-Vew` | GitHub commit + Drive readback 见同步回执 |
 | 机器合同 YAML | `1lz2elTRETKl15ep1kEjdHHDljblyqoGO` | `627df01e18c0c50c2a86434bb8733824cb372a8e937a3dc4a9c9f8a994b8048d` |
 | Renderer | `1zO8VrgGhWsdsinWBCx3MRnX7O02ErrJT` | `4fcab550988770e577f0b9b75cac0450357aa146710e8de866a45b6bb1951301` |
 | SVG | `1Fp8aqDtqtZIBg4DnPQoWjpmKP8GPRnVJ` | `eedbb5663155d61bcd3bd054d7692071cc2927cae301b45d1e228ea1962573a0` |
