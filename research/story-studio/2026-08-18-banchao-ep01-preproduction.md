@@ -1,10 +1,29 @@
 # 班超 EP01 前置生产状态（公开索引）
 
 首次记录：2026-08-18（Asia/Shanghai）  
-最近更新：2026-08-21  
+最近更新：2026-08-22（Asia/Tokyo）  
 项目：`banchao` · 集数：`EP01` · 剧本：`ep01-yongshu-screenplay-v1.1`
 
 这是一份可公开版本化的状态索引。完整任务证据、原始事件日志、候选媒体、execution-native bytes、音视频和私有 Work Order 保存在 Google Drive；GitHub 只保存公开状态、映射、Drive ID、哈希和验证边界。
+
+## 系列级架构绑定
+
+EP01 现作为《班超：定远》24 集系列短剧的生产闭环 Pilot，已绑定项目级“设计先行、证据驱动”架构：
+
+```text
+设计闭环：Evidence → Architecture → Review → Freeze
+执行闭环：Work Order → Execute → Validate → Gate → Next Unit
+```
+
+- 架构 ID：`BANCHAO_SERIES_PRODUCTION_ARCHITECTURE_V1`
+- 六篇章 / 24 集处理稿已通过静态结构核对：`6/6`、`24/24`
+- 24 集处理稿 Drive file ID：`1wlDngVD09q7sbL4IPtAKMiwaV-a9HP88`
+- 处理稿 SHA-256：`e6ea119124678d1de69a53b3e9bb65abe6a982a69a73583c2155977e44550a05`
+- 关系路径图 Drive SVG：`1Fp8aqDtqtZIBg4DnPQoWjpmKP8GPRnVJ`
+- 关系路径图 1920×1080 PNG：`1b-EvPlg1-M_1UYD1IHrAzQUmKD7TWsHi`
+- 静态验证 Drive file ID：`1QHR2bhAzMtPS-KezDJvXbC9ZPDB7RmUx`
+
+该绑定不改变 EP01 的 Screenplay、Shot、Storyboard、时长、格式、Gate 或当前执行单元；系列设计完成也不表示 EP01 或 24 集媒体生产完成。
 
 ## 当前进度
 
@@ -60,6 +79,10 @@
 
 ## 公开证据入口
 
+- [系列短剧生产架构](./2026-08-21-banchao-series-production-architecture.md)
+- [系列生产机器合同](./2026-08-21-banchao-series-production-architecture.yaml)
+- [系列关系路径确定性 Renderer](./2026-08-21-render-banchao-series-production-path.py)
+- [系列架构静态验证](./2026-08-21-banchao-series-production-architecture-validation.json)
 - [G07 Rebaseline](./2026-08-20-banchao-ep01-g07-rebaseline.md)
 - [G07 Rebaseline 机器状态](./2026-08-20-banchao-ep01-g07-rebaseline.yaml)
 - [Assistant-Owned Non-Video Execution Policy](./2026-08-21-assistant-owned-non-video-execution-policy.md)
