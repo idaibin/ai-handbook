@@ -1,0 +1,29 @@
+schema_version: story-studio/banchao-execution-architecture/v1
+project_id: banchao
+episode_id: EP01
+status: architecture_baseline_locked_pending_runtime_validation
+format:
+  master: 1920x1080
+  fps: 24
+  aspect_ratio: 16:9
+execution_model:
+  design: Evidence -> Architecture -> Review -> Freeze
+  execution: Work Order -> Execute -> Validate -> Gate -> Next Unit
+series_flow:
+  - Story Bible
+  - 24 Episode Treatment
+  - Episode Contract
+  - Production Validation
+  - Episode Master
+  - Series Master
+ep01:
+  shots: 14
+  storyboard_panels: 27
+  duration_seconds: 105
+  current_unit: VERTICAL_SLICE_03_HERO_BRUSH
+  verified_asset_executions: 2/10
+  production_ready: false
+rules:
+  - do_not_change_locked_editorial_baseline_without_change_record
+  - do_not_upgrade_candidate_assets_without_evidence
+  - architecture_change_requires_failure_classification
