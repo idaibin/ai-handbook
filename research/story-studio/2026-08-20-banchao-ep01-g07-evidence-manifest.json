@@ -1,10 +1,10 @@
 {
-  "schema_version": "story-studio/g07-public-evidence-manifest/v2",
+  "schema_version": "story-studio/g07-public-evidence-manifest/v3",
   "project_id": "banchao",
   "episode_id": "EP01",
-  "status": "rebaseline_approved_vertical_slice_01_authorized_asset_outputs_pending",
-  "as_of_utc": "2026-08-20T14:22:18Z",
-  "repository_baseline_before_update": "a4cf06f467047a556527d73c863286f92184fafe",
+  "status": "rebaseline_vertical_slice_02_completed_unit03_authorized_unit01_blocked",
+  "as_of_utc": "2026-08-21T13:32:22Z",
+  "repository_baseline_before_update": "7466065d00a060ae22afd822372ae83dca58bb53",
   "locked_baseline": {
     "shot_count": 14,
     "storyboard_panel_count": 27,
@@ -12,7 +12,22 @@
     "working_resolution": "1920x1080",
     "frame_rate_fps": 24,
     "dialogue_cue_count": 14,
-    "changed_by_rebaseline": false
+    "changed_by_scope_or_unit02": false
+  },
+  "execution_policy": {
+    "status": "approved",
+    "path": "research/story-studio/2026-08-21-assistant-owned-non-video-execution-policy.md",
+    "assistant_owned_non_video": true,
+    "user_handoff_required_for_non_video": false,
+    "fresh_chat_required_for_non_video": false,
+    "actual_video_generation_exception": true,
+    "accepted_native_lineage": [
+      "tool-native",
+      "renderer-native",
+      "source-native"
+    ],
+    "canonical_term": "execution-native",
+    "gate_requirements_changed": false
   },
   "historical_candidate_manifest": {
     "path": "research/story-studio/2026-08-18-banchao-ep01-evidence-manifest.json",
@@ -44,8 +59,8 @@
       {
         "asset_id": "CHAR_BAN_CHAO_STATE_01_LUOYANG_SCRIBE",
         "artifact": "CharacterBlueprint",
-        "status": "selected_with_conditions_camera_light_pending",
-        "rebaseline_priority": "active",
+        "status": "selected_with_conditions_camera_light_blocked_not_waived",
+        "rebaseline_priority": "blocked_dependency",
         "execution_unit": "VERTICAL_SLICE_01_BAN_CHAO_CAMERA_LIGHT"
       },
       {
@@ -69,15 +84,37 @@
       {
         "asset_id": "LOC_LUOYANG_COPYING_COMPOSITE_SET",
         "artifact": "ProductionDesignSetPlan",
-        "status": "revision_authorized_not_executed",
-        "rebaseline_priority": "queued",
-        "execution_unit": "VERTICAL_SLICE_02_LUOYANG_MINIMAL_SET"
+        "status": "take02b_pass_internal_candidate_only",
+        "rebaseline_priority": "completed",
+        "execution_unit": "VERTICAL_SLICE_02_LUOYANG_MINIMAL_SET",
+        "verified_execution": {
+          "attempt_id": "LOC_LUOYANG_COPYING_COMPOSITE_SET__TAKE_02B",
+          "native_lineage": "renderer-native",
+          "format": "PNG",
+          "dimensions": "1920x1080",
+          "mode": "RGB",
+          "size_bytes": 231155,
+          "sha256": "95875a2243294872f6defd0d31bd4be51edeacb6a3ccd0de40eba85ec10d13ff",
+          "byte_identical_rerender": true,
+          "automatic_validation": "pass",
+          "dailies": "pass_internal_candidate_only",
+          "drive_file_ids": {
+            "png": "147iTmfu_Gt4XtlvxFila-rUZHcGAS9DR",
+            "source": "1kA_DXRZAxftARlw75Btj1gqY4GmR97Zj",
+            "receipt": "1yDcMSMX47aeHZaStJ57hhgq5rqopy9vy",
+            "return_evidence": "1pQQV8njUlFo-DhHgT5F-Zn4XBchEvC99",
+            "generation_attempt": "1U3kVx6Gs7wvYzkEZDnNf7N4FyINpqYmP",
+            "dailies": "1brcB-sNd0-jKUXYQp-6Rbadnk7pOUuo4",
+            "manifest": "1DRxQjOClfP7bDPJCz-cmzhF73nIT2PtI",
+            "return_package": "1i75mQ_h-Ze1q7MadG3soUrInl-6sJOnL"
+          }
+        }
       },
       {
         "asset_id": "PROP_HERO_BRUSH",
         "artifact": "HeroPropSheet",
-        "status": "replacement_authorized_not_executed",
-        "rebaseline_priority": "queued",
+        "status": "replacement_authorized_assistant_owned_execution",
+        "rebaseline_priority": "active",
         "execution_unit": "VERTICAL_SLICE_03_HERO_BRUSH"
       },
       {
@@ -110,13 +147,19 @@
         "rebaseline_priority": "deferred"
       }
     ],
-    "verified_asset_executions": 1,
+    "verified_asset_executions": 2,
     "asset_outputs_complete": false
   },
   "g07_rebaseline": {
     "strategy": "vertical_slice_first",
-    "active_slice": "EP01_G07_VERTICAL_SLICE_01",
-    "active_execution_unit": "VERTICAL_SLICE_01_BAN_CHAO_CAMERA_LIGHT",
+    "active_slice": "EP01_G07_VERTICAL_SLICE",
+    "active_execution_unit": "VERTICAL_SLICE_03_HERO_BRUSH",
+    "completed_execution_units": [
+      "VERTICAL_SLICE_02_LUOYANG_MINIMAL_SET"
+    ],
+    "blocked_not_waived_execution_units": [
+      "VERTICAL_SLICE_01_BAN_CHAO_CAMERA_LIGHT"
+    ],
     "selected_master_lanes": [
       "CHAR_BAN_CHAO_STATE_01_LUOYANG_SCRIBE",
       "LOC_LUOYANG_COPYING_COMPOSITE_SET",
@@ -138,9 +181,11 @@
     "bounded_test_execution": "0/2",
     "full_clmc_pass_claimed": false,
     "public_index_paths": [
+      "research/story-studio/2026-08-18-banchao-ep01-preproduction.md",
       "research/story-studio/2026-08-20-banchao-ep01-g07-rebaseline.md",
       "research/story-studio/2026-08-20-banchao-ep01-g07-rebaseline.yaml",
-      "research/story-studio/2026-08-20-banchao-ep01-canonical-id-alias-map.yaml"
+      "research/story-studio/2026-08-20-banchao-ep01-canonical-id-alias-map.yaml",
+      "research/story-studio/2026-08-21-assistant-owned-non-video-execution-policy.md"
     ]
   },
   "g07_static_validation": {
@@ -150,7 +195,8 @@
     "full_clmc_test_execution": "0/9",
     "vertical_slice_bounded_test_execution": "0/2",
     "g07_gate": "not_approved",
-    "static_coverage_is_delivery_completion": false
+    "static_coverage_is_delivery_completion": false,
+    "unit02_asset_execution_is_full_g07_completion": false
   },
   "audio_lineage": {
     "status": "FLAC_derivatives_verified_WAV_origins_not_found_source_fidelity_not_verified",
@@ -183,20 +229,29 @@
     "drive_rebaseline_decision": "bc2b1522b499071ec956c25b703e46d08b06740ceabed23fd3d26531efb204d0",
     "drive_canonical_alias_map": "c3cf29b24ad5bcf3aaeec5f1ec200245089b9ed5a1fe070b5528283b84d6b1e3",
     "drive_vertical_slice_work_order": "78054ec421ca37223a7259394133e2371172850182271673532cd30c0634eec2",
-    "drive_active_capsule": "bbbd5768d5c68b656c18083305147d97d079c2dc6f5ee86fa7193543785f0020",
     "drive_rebaseline_static_validation": "c25ca0f8e28384ec018c12b4ae80661a29e92e691a78977344c8096e54f9b82e",
     "drive_master_work_order_rebaseline": "6045a46dd1570fb526518a8606345fc20d7633e5b35eb1b5dfcd1208ecafe84a",
     "drive_clmc_test_package_v2": "54460e6c26a9041e3dd3899d3498ebe726321dc0e2c7d2c47351928267ac67d7",
-    "drive_audio_lineage_correction": "6aad09ece593d88ec3537b65d1343b1bb736763369e484bf0dd89b6cd5b9af5b"
+    "drive_audio_lineage_correction": "6aad09ece593d88ec3537b65d1343b1bb736763369e484bf0dd89b6cd5b9af5b",
+    "assistant_owned_non_video_policy": "daa9d9efcac74ebf87ee56d5f29f10400496271dd4fddaf7e0c08a221b82f0d4",
+    "unit02_take02b_execution_addendum": "eec9a950eebfad681e88692cd9becd61a787f81bd90ba6b66b137b714bb730b9",
+    "unit02_renderer_source": "0aa688f471ba315aef09f026c1deab189f83ef534f347230bc5c5d8baf5e5770",
+    "unit02_execution_native_png": "95875a2243294872f6defd0d31bd4be51edeacb6a3ccd0de40eba85ec10d13ff",
+    "unit02_execution_receipt": "c9c5cd612900a105070262f7165b8545a23cc4e57ffcfdc084e1949452bcba9c",
+    "unit02_return_evidence": "00f05bd9ccd2c4b3cb67ce4fe650cd2dff41de238befa972f2ec34912f8a0cc1",
+    "unit02_generation_attempt": "f4cc3e4f16d28fa4c91a78ec3c442d2e7981d9c81af6db7aa17481f6d6c51243",
+    "unit02_dailies": "f8e37c84ef71aa45aaa2ea2600d0e057ca273f3f3aa700c8f27eec3163affa02",
+    "unit02_return_manifest": "bafb7d8d216211634d551de75b5584eb28bb343fd5cd2236cf5a794afdf14cd9",
+    "unit02_return_package": "46fd14c16fe66ad3b61bc450dc499053259cb6d86f4ae415f8ee43b4274a7838"
   },
   "storage_policy": {
-    "github": "sanitized mapping, status and hashes only",
-    "google_drive": "complete private contracts, candidate media, provider-native bytes, audio/video and execution evidence"
+    "github": "sanitized mapping, status, Drive IDs and hashes only",
+    "google_drive": "complete private contracts, execution-native media, source code, receipts, audio/video and execution evidence"
   },
   "not_verified": [
-    "provider-native outputs and Dailies for the four Vertical Slice lanes",
+    "valid Unit 01 Ban Chao camera/light execution",
+    "remaining eight unresolved or new-build G07 lanes",
     "actual bounded Vertical Slice technical tests and full CLMC test results",
-    "exact provider/model and account data-control status",
     "public/commercial rights clearance",
     "WAV source-stem preservation and FLAC transcode provenance"
   ],
