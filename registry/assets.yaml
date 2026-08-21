@@ -70,7 +70,7 @@ assets:
 
   - id: banchao-ep01-g07-asset-package
     type: story-studio-episode-asset-package
-    status: rebaseline-approved-vertical-slice-pending
+    status: vertical-slice-unit02-completed-unit03-active
     route: media-production-system
     domains:
       - ai-creative-media
@@ -86,16 +86,31 @@ assets:
         hod_requirements: 13
         accounted_requirements: 13
         master_lanes: 10
+      execution_policy:
+        mode: assistant-owned-non-video
+        video_generation_exception: true
+        public_policy: research/story-studio/2026-08-21-assistant-owned-non-video-execution-policy.md
       execution:
         strategy: vertical-slice-first
-        active_slice: EP01_G07_VERTICAL_SLICE_01
-        active_execution_unit: VERTICAL_SLICE_01_BAN_CHAO_CAMERA_LIGHT
+        active_slice: EP01_G07_VERTICAL_SLICE
+        active_execution_unit: VERTICAL_SLICE_03_HERO_BRUSH
+        completed_execution_units:
+          - VERTICAL_SLICE_02_LUOYANG_MINIMAL_SET
+        blocked_not_waived_execution_units:
+          - VERTICAL_SLICE_01_BAN_CHAO_CAMERA_LIGHT
         slice_lanes: 4
         deferred_lanes: 6
-        verified_asset_executions: 1
+        verified_asset_executions: 2
         clmc_test_execution: not-started
         production_ready: false
         publication_ready: false
+      unit02_take02b:
+        asset_id: LOC_LUOYANG_COPYING_COMPOSITE_SET
+        status: pass-internal-candidate-only
+        native_lineage: renderer-native
+        dimensions: 1920x1080
+        sha256: 95875a2243294872f6defd0d31bd4be51edeacb6a3ccd0de40eba85ec10d13ff
+        drive_file_id: 147iTmfu_Gt4XtlvxFila-rUZHcGAS9DR
       public_indexes:
         - research/story-studio/2026-08-18-banchao-ep01-preproduction.md
         - research/story-studio/2026-08-18-banchao-ep01-evidence-manifest.json
@@ -105,3 +120,4 @@ assets:
         - research/story-studio/2026-08-20-banchao-ep01-g07-rebaseline.md
         - research/story-studio/2026-08-20-banchao-ep01-g07-rebaseline.yaml
         - research/story-studio/2026-08-20-banchao-ep01-canonical-id-alias-map.yaml
+        - research/story-studio/2026-08-21-assistant-owned-non-video-execution-policy.md
