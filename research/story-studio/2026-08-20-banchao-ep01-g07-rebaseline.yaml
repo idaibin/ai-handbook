@@ -1,8 +1,8 @@
-schema_version: story-studio/g07-public-rebaseline/v1
+schema_version: story-studio/g07-public-rebaseline/v2
 project_id: banchao
 episode_id: EP01
-status: approved_vertical_slice_first_asset_outputs_pending
-as_of_utc: '2026-08-20T13:56:27Z'
+status: approved_vertical_slice_first_unit02_completed_unit03_active
+as_of_utc: '2026-08-21T13:32:22Z'
 preserved_baseline:
   screenplay_sha256: a2ba6bb8cbd094ea65c3cdcdb0e341929f479fb9cbcfe0b2cbdc4c36bad02f0e
   shots: 14
@@ -11,10 +11,24 @@ preserved_baseline:
   aspect_ratio: '16:9'
   working_resolution: 1920x1080
   frame_rate_fps: 24
+  changed_by_execution_policy: false
+execution_policy:
+  mode: assistant_owned_non_video_execution
+  policy_path: research/story-studio/2026-08-21-assistant-owned-non-video-execution-policy.md
+  user_handoff_required_for_non_video: false
+  fresh_asset_chat_required_for_non_video: false
+  video_generation_exception: true
+  native_lineage_term: execution-native
+  deterministic_renderer_allowed_for_technical_assets: true
+  gate_requirements_changed: false
 execution_strategy:
   mode: vertical_slice_first
-  active_slice: EP01_G07_VERTICAL_SLICE_01
-  active_execution_unit: VERTICAL_SLICE_01_BAN_CHAO_CAMERA_LIGHT
+  active_slice: EP01_G07_VERTICAL_SLICE
+  active_execution_unit: VERTICAL_SLICE_03_HERO_BRUSH
+  blocked_not_waived_execution_units:
+  - VERTICAL_SLICE_01_BAN_CHAO_CAMERA_LIGHT
+  completed_execution_units:
+  - VERTICAL_SLICE_02_LUOYANG_MINIMAL_SET
   selected_master_lanes:
   - CHAR_BAN_CHAO_STATE_01_LUOYANG_SCRIBE
   - LOC_LUOYANG_COPYING_COMPOSITE_SET
@@ -33,17 +47,39 @@ execution_strategy:
   full_clmc_pass_claimed: false
 execution_state:
   master_lanes: 10/10
-  verified_asset_executions: 1/10
+  verified_asset_executions: 2/10
   clmc_test_execution: 0/9
   production_shotkeyframes: 0
   video_shots: 0
+unit02_take02b:
+  asset_id: LOC_LUOYANG_COPYING_COMPOSITE_SET
+  attempt_id: LOC_LUOYANG_COPYING_COMPOSITE_SET__TAKE_02B
+  status: pass_internal_candidate_only
+  execution_native:
+    format: PNG
+    dimensions: 1920x1080
+    mode: RGB
+    size_bytes: 231155
+    sha256: 95875a2243294872f6defd0d31bd4be51edeacb6a3ccd0de40eba85ec10d13ff
+    renderer: Python/Pillow deterministic vector renderer
+    byte_identical_rerender: true
+  drive_file_ids:
+    png: 147iTmfu_Gt4XtlvxFila-rUZHcGAS9DR
+    source: 1kA_DXRZAxftARlw75Btj1gqY4GmR97Zj
+    receipt: 1yDcMSMX47aeHZaStJ57hhgq5rqopy9vy
+    return_evidence: 1pQQV8njUlFo-DhHgT5F-Zn4XBchEvC99
+    generation_attempt: 1U3kVx6Gs7wvYzkEZDnNf7N4FyINpqYmP
+    dailies: 1brcB-sNd0-jKUXYQp-6Rbadnk7pOUuo4
+    manifest: 1DRxQjOClfP7bDPJCz-cmzhF73nIT2PtI
+    return_package: 1i75mQ_h-Ze1q7MadG3soUrInl-6sJOnL
 private_contract_hashes:
   rebaseline_decision: bc2b1522b499071ec956c25b703e46d08b06740ceabed23fd3d26531efb204d0
   canonical_alias_map: c3cf29b24ad5bcf3aaeec5f1ec200245089b9ed5a1fe070b5528283b84d6b1e3
   vertical_slice_work_order: 78054ec421ca37223a7259394133e2371172850182271673532cd30c0634eec2
-  active_capsule: bbbd5768d5c68b656c18083305147d97d079c2dc6f5ee86fa7193543785f0020
-  static_validation: c25ca0f8e28384ec018c12b4ae80661a29e92e691a78977344c8096e54f9b82e
-  g07_master_work_order: 6045a46dd1570fb526518a8606345fc20d7633e5b35eb1b5dfcd1208ecafe84a
+  assistant_owned_policy: daa9d9efcac74ebf87ee56d5f29f10400496271dd4fddaf7e0c08a221b82f0d4
+  unit02_take02b_addendum: eec9a950eebfad681e88692cd9becd61a787f81bd90ba6b66b137b714bb730b9
+  unit02_renderer_source: 0aa688f471ba315aef09f026c1deab189f83ef534f347230bc5c5d8baf5e5770
+  unit02_execution_native_png: 95875a2243294872f6defd0d31bd4be51edeacb6a3ccd0de40eba85ec10d13ff
 rights_status: internal_candidate_only
 production_ready: false
 publication_ready: false
