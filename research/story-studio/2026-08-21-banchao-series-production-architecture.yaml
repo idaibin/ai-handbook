@@ -1,0 +1,241 @@
+schema_version: story-studio/series-production-architecture/v1
+architecture_id: BANCHAO_SERIES_PRODUCTION_ARCHITECTURE_V1
+project_id: banchao
+title: 班超：定远 24 集系列短剧生产架构
+status: approved_for_persistence_and_execution_binding
+as_of_utc: '2026-08-21T16:03:39Z'
+local_date_asia_tokyo: '2026-08-22'
+github_read_baseline:
+  repository: idaibin/ai-handbook
+  branch: main
+  commit: aa7aa9b3fe61206c235af2f21184b118f60b42c7
+authority:
+  versioned_architecture: github_main
+  current_task_state: drive_current_status
+  current_execution_entry: drive_active_capsule
+  execution_history: drive_task_execution_records
+  private_assets_and_evidence: google_drive
+  derived_visualizations: read_only_projection
+source_bindings:
+  series_treatment:
+    file_name: banchao__script__24-episode-treatment__2026-08-18__v01.md
+    drive_file_id: 1wlDngVD09q7sbL4IPtAKMiwaV-a9HP88
+    sha256: e6ea119124678d1de69a53b3e9bb65abe6a982a69a73583c2155977e44550a05
+    status: working_series_treatment
+    fact_markers:
+    - F
+    - I
+    - A
+    - V
+    - 待核实
+  ep01_public_index: research/story-studio/2026-08-18-banchao-ep01-preproduction.md
+  ep01_g07_rebaseline: research/story-studio/2026-08-20-banchao-ep01-g07-rebaseline.yaml
+  assistant_owned_policy: research/story-studio/2026-08-21-assistant-owned-non-video-execution-policy.md
+scope:
+  series_episodes: 24
+  chapters: 6
+  target_format:
+    aspect_ratio: '16:9'
+    resolution: 1920x1080
+    episode_duration_guidance_seconds: 90-120
+  active_pilot: EP01
+  does_not_change_ep01_locked_editorial_baseline: true
+  does_not_replace_existing_episode_gates: true
+chapters:
+- chapter_id: CH01
+  title: 投笔出塞
+  episodes:
+  - EP01
+  - EP02
+  - EP03
+  - EP04
+- chapter_id: CH02
+  title: 西域立足
+  episodes:
+  - EP05
+  - EP06
+  - EP07
+  - EP08
+- chapter_id: CH03
+  title: 孤城五年
+  episodes:
+  - EP09
+  - EP10
+  - EP11
+  - EP12
+- chapter_id: CH04
+  title: 联盟与背叛
+  episodes:
+  - EP13
+  - EP14
+  - EP15
+  - EP16
+- chapter_id: CH05
+  title: 破龟兹、立都护
+  episodes:
+  - EP17
+  - EP18
+  - EP19
+  - EP20
+- chapter_id: CH06
+  title: 焉耆、封侯与归乡
+  episodes:
+  - EP21
+  - EP22
+  - EP23
+  - EP24
+episode_contract_required_fields:
+- episode_id
+- chapter_id
+- duration_seconds
+- aspect_ratio
+- location_ids
+- character_ids
+- prop_ids
+- historical_fact_refs
+- adaptation_notes
+- visual_continuity_anchors
+- audio_cue_placeholders
+design_loop:
+- EVIDENCE
+- ARCHITECTURE
+- REVIEW
+- FREEZE
+execution_loop:
+- WORK_ORDER
+- EXECUTE
+- VALIDATE
+- GATE
+- NEXT_UNIT
+episode_phases:
+- id: E00_EPISODE_CONTRACT
+  outputs:
+  - episode_contract
+  gate: series_causality_and_source_boundary
+- id: E01_SCREENPLAY
+  outputs:
+  - screenplay
+  gate: narrative_and_fact_treatment
+- id: E02_EDITORIAL_BASELINE
+  outputs:
+  - shot_list
+  - storyboard
+  - timed_animatic
+  gate: editorial_lock
+- id: E03_PRODUCTION_DESIGN
+  outputs:
+  - hod_breakdown
+  - asset_reconciliation
+  - continuity_contracts
+  gate: production_design_ready
+- id: E04_ASSET_TECH_VALIDATION
+  outputs:
+  - vertical_slice
+  - asset_attempts
+  - clmc_results
+  gate: asset_production_readiness
+- id: E05_SHOT_PRODUCTION
+  outputs:
+  - shot_contracts
+  - production_shotkeyframes
+  - video_attempts
+  - dailies
+  gate: shot_selects_ready
+- id: E06_PICTURE_LOCK
+  outputs:
+  - picture_lock
+  gate: picture_locked
+- id: E07_POST_AND_QC
+  outputs:
+  - dialogue
+  - foley
+  - sfx
+  - score
+  - mix
+  - vfx
+  - colour
+  - subtitles
+  - qc
+  gate: delivery_ready
+- id: E08_EPISODE_MASTER
+  outputs:
+  - master
+  - srt
+  - delivery_manifest
+  - evidence_package
+  gate: episode_delivered
+evidence_chain:
+- requirement
+- work_order
+- execution_native_output
+- receipt
+- mechanical_validation
+- generation_attempt
+- dailies
+- evidence_manifest
+- drive_readback
+- current_status
+- github_projection
+- next_unit_authorization
+failure_classes:
+  FAIL_IMPLEMENTATION: new_attempt
+  FAIL_CONTRACT: revise_work_order
+  FAIL_DEPENDENCY: freeze_affected_units_and_revise_dependency
+  FAIL_ARCHITECTURE: architecture_change_record_and_impact_analysis
+  FAIL_RIGHTS_OR_PROVIDER: quarantine_and_update_rights_provider_contract
+  BASELINE_CHANGE: return_to_upstream_gate_and_invalidate_dependents
+batch_strategy:
+- id: B0
+  name: architecture_and_source_freeze
+- id: B1
+  name: ep01_end_to_end_production_loop
+- id: B2
+  name: extract_verified_reusable_templates
+- id: B3
+  name: chapter_1_ep02_ep04
+- id: B4
+  name: chapter_2_ep05_ep08
+- id: B5
+  name: chapter_3_ep09_ep12
+- id: B6
+  name: chapter_4_ep13_ep16
+- id: B7
+  name: chapter_5_ep17_ep20
+- id: B8
+  name: chapter_6_ep21_ep24
+- id: B9
+  name: series_continuity_rights_and_release
+series_completion_gate:
+  episode_contracts: 24/24
+  episode_masters: 24/24
+  chapter_continuity_reviews: 6/6
+  orphan_events_shots_assets_sources_audio_cues: 0
+  fact_inference_adaptation_fiction_traceable: true
+  rights_status_meets_release_target: true
+  drive_readback_and_hash_verification: true
+current_ep01_binding:
+  locked_baseline:
+    duration_seconds: 105
+    shots: 14
+    storyboard_panels: 27
+    resolution: 1920x1080
+    fps: 24
+  stage: STAGE_07_ASSET_BUILD_TECHNICAL_VALIDATION
+  verified_g07_asset_executions: 2/10
+  active_execution_unit: VERTICAL_SLICE_03_HERO_BRUSH
+  blocked_not_waived:
+  - VERTICAL_SLICE_01_BAN_CHAO_CAMERA_LIGHT
+  completed:
+  - VERTICAL_SLICE_02_LUOYANG_MINIMAL_SET
+  queued:
+  - VERTICAL_SLICE_04_WRITING_SURFACE
+  pending:
+  - VERTICAL_SLICE_05_CLMC_CORE_TECHNICAL_PROXY
+  production_ready: false
+  publication_ready: false
+  next_on_success: VERTICAL_SLICE_04_WRITING_SURFACE
+diagram:
+  source_path: research/story-studio/2026-08-21-render-banchao-series-production-path.py
+  svg_path: research/story-studio/2026-08-21-banchao-series-production-path.svg
+  png_target: 1920x1080
+  layout: layered_left_to_right
