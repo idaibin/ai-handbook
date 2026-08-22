@@ -1,149 +1,49 @@
+# v0.2 global execution override: every project is frozen until one MVP_BRIEF is approved.
 projects:
   - id: ai-handbook
     type: framework
-    status: active
-    domains:
-      - ai-engineering
-    capabilities:
-      - knowledge-governance
-      - registry
-      - research
-      - workflow
-      - decision-record
+    status: frozen
+    previous_status: active
     github:
       repository: idaibin/ai-handbook
-    tags:
-      - knowledge-system
-      - governance
 
   - id: skills
     type: library
-    status: active
-    domains:
-      - ai-engineering
-    capabilities:
-      - agent
-      - skill
-      - workflow
-      - evaluation
+    status: frozen
+    previous_status: active
     github:
       repository: idaibin/skills
-    tags:
-      - agent-skills
-      - shared-capabilities
 
   - id: createway
     type: product
-    status: defined
-    route:
-      primary: content-output-system
-      secondary:
-        - product-delivery-system
-    domains:
-      - ai-engineering
-      - ai-creative-media
-    capabilities:
-      - content-workflow
-      - content-artifact
-      - writing
-      - design-system-content-view
-      - publication
-      - content-verification
-    tags:
-      - content-output-system
-      - architecture-defined
-      - repository-not-created
+    status: frozen
+    previous_status: defined
+    notes: repository_not_created
 
   - id: story-studio
     type: product
-    status: architecture-defined
-    route:
-      primary: media-production-system
-      secondary:
-        - product-delivery-system
-    domains:
-      - ai-engineering
-      - ai-creative-media
-    capabilities:
-      - ip-world-building
-      - character-continuity
-      - script
-      - storyboard
-      - visual-production
-      - audio-production
-      - media-verification
-    tags:
-      - media-production-system
-      - architecture-defined
-      - repository-not-created
-      - runtime-not-verified
+    status: frozen
+    previous_status: architecture-defined
+    notes: ep01_g07_2_of_10_not_production_ready
 
   - id: forgeway
     type: product
-    status: active
-    route:
-      primary: product-delivery-system
-    domains:
-      - ai-engineering
-      - ai-product-experience
-    capabilities:
-      - agent
-      - workflow
-      - artifact
-      - design-system-product-view
-      - product-ui
-      - design-source-ingestion
-      - ui-candidate-confirmation
-      - delivery-graph
-      - repo-map-bug-routing
-      - browser-verification
-      - verification
+    status: frozen
+    previous_status: active
     github:
       repository: idaibin/forgeway
-    tags:
-      - product-delivery-system
-      - artifact-system
-      - browser-verified-product-ui
-      - product-ui-source-pipeline
 
   - id: rustzen-admin
     type: product
-    status: active
-    route:
-      primary: product-delivery-system
-    domains:
-      - ai-engineering
-      - ai-product-experience
-    capabilities:
-      - desktop-application
-      - local-first
-      - product-ui
+    status: frozen
+    previous_status: active
     github:
       repository: idaibin/rustzen-admin
-    tags:
-      - desktop
-      - local-first
 
   - id: feeds-hub
     type: product
-    status: active
-    route:
-      primary: knowledge-intelligence-system
-      secondary:
-        - product-delivery-system
-    domains:
-      - ai-engineering
-      - ai-knowledge-intelligence
-      - ai-product-experience
-    capabilities:
-      - intelligence-pipeline
-      - feed-system
-      - source-grounded-research
-      - knowledge-candidate
-      - web-application
+    status: frozen
+    previous_status: active
     github:
       repository: idaibin/feeds-hub
-    tags:
-      - information-system
-      - ai-feed
-      - research-runtime-not-verified
+
