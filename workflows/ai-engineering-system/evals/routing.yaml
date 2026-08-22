@@ -1,6 +1,6 @@
 schema_version: "1.0"
 eval_suite: ai_engineering_system_routing
-workflow_version: 1.0.0
+workflow_version: "0.2"
 cases:
   - id: source_grounded_research_report
     input:
