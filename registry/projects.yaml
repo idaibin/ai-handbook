@@ -1,4 +1,4 @@
-# v0.2 global execution override: every project is frozen until one MVP_BRIEF is approved.
+# v0.2 execution override: only Story Studio MVP is active; all other projects remain frozen.
 projects:
   - id: ai-handbook
     type: framework
@@ -33,14 +33,14 @@ projects:
 
   - id: story-studio
     type: product
-    status: frozen
-    previous_status: architecture-defined
+    status: active_mvp_pending_user_review
+    previous_status: frozen
     route:
       primary: media-production-system
       secondary: [product-delivery-system]
     domains: [ai-engineering, ai-creative-media]
     capabilities: [ip-world-building, character-continuity, script, storyboard, visual-production, audio-production, media-verification]
-    tags: [media-production-system, architecture-defined, repository-not-created, runtime-not-verified, ep01-g07-2-of-10-not-production-ready]
+    tags: [story-studio-mvp, toubi-30s-rendered, internal-candidate, not-production-ready]
 
   - id: forgeway
     type: product
