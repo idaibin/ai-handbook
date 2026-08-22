@@ -1,33 +1,36 @@
-# Story Studio MVP — 班超《投笔》30 秒内部样片
+# Story Studio MVP — 班超《投笔》10 秒视频验证
 
-- `mvp_id`: `story-studio/banchao/toubi-30s-v0.2`
-- `status`: `rendered_pending_user_review`
-- `approved_by`: user request on 2026-08-22
+- `mvp_id`: `story-studio/banchao/toubi-10s-v0.2`
+- `status`: `ready_for_real_video_generation`
+- `supersedes`: `story-studio/banchao/toubi-30s-v0.2`
 - `scope`: Story Studio only; Forgeway and Skills remain frozen
-
-## Problem
-
-EP01 已有 105 秒剧本、27 格分镜和大量候选资产，但没有先提供一个可直接观看、可据此决定是否继续投入的最小结果。
 
 ## Smallest Result
 
-只复用既有 `EP01_SHOT_07`—`EP01_SHOT_10`，将“受辱—停笔—决断”裁成严格 30 秒内部样片。未生成新角色、场景、道具或生产镜头。
+使用已有班超与洛阳抄书空间参考，只生成一段严格 10 秒的视频，验证“停笔—抬眼—决断”。输入缩减为 `EP01_SHOT_08`—`EP01_SHOT_10`。
 
 ## Acceptance
 
-- MP4：H.264，1920×1080，24fps，30.000 秒；
-- 音频：AAC stereo 48kHz，仅基础 room tone 与一个低频落点；
-- 输出 SHA-256：`631ae1c7c7ef08c4868b592112aa65362f2c9f97c78c5f523f0901c8c3cd28e1`；
-- 用户看完后只做 `keep / change / stop` 决策。
+- 一个真实视频模型生成的 10 秒 MP4；
+- 班超身份、服装和场景无明显漂移；
+- 完成停笔、抬眼、放下毛笔三个连续动作；
+- 不出现现代物品、军装、兵器、乱码或额外人物；
+- 用户作出 `keep / change / stop` 决策。
 
-## Evidence
+最多生成 3 次。仍失败则停止增加资产和镜头，记录问题并更换模型。
 
-- [30 秒样片](https://drive.google.com/file/d/1a53of7NQ-176tPlL9qUXd4nGw6t5qzuo/view)
-- [MVP Brief](https://drive.google.com/file/d/10roOpEsqjCalXYbqB3OuZ6ZKlhMkK2ge/view)
-- [技术证据](https://drive.google.com/file/d/1Yhg8I5TtEP9Y4hc1KTQnSFVnPWQi6HcS/view)
+## Current Evidence
 
-限制：Drive 历史 105 秒代理经连接器内联取回时尾部不完整，未匹配历史全文件哈希；本次使用的 42.00–75.95 秒区间已完整解码，最终输出也通过解码与抽帧检查。因此本结果仅为 `internal_mvp_candidate_not_production_ready`。
+- [10 秒分镜时序代理](https://drive.google.com/file/d/1VDLeFcj671TyRuGrm6sp0Xki45Cota8M/view)
+- [MVP Brief](https://drive.google.com/file/d/1TBsWkH3ArwheSvjo0PW_r7vwczFK7X1a/view)
+- [技术证据](https://drive.google.com/file/d/19EFmYc6ebkaMsG1VStGRK2rjTUmswnrn/view)
 
-## Stop Condition
+分镜时序代理规格：H.264，1920×1080，24fps，10.000 秒；SHA-256 `b9c17ce3db13bb932b439f8f49b4ae877a1c1dd2066f8c9e24343912683c569a`。它只用于视频模型输入和节奏参考，不是已生成的真实视频。
 
-若用户不能从该片段理解班超由受辱转为决断，停止补资产并只重写本片段。在用户给出 `keep` 前，不恢复 105 秒整集、G07 十单元或 24 集扩展。
+## Archived Result
+
+原 30 秒文件降级为历史分镜预览，不再是 MVP，也不构成 production-ready 证据。
+
+## Excluded
+
+不做 30 秒成片、不做配音字幕、不补齐 G07 十单元、不扩展 EP01 或 24 集。
