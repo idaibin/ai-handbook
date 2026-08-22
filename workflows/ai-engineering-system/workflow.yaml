@@ -11,6 +11,19 @@ legacy:
   archived_at_commit: fb61beeac1ac18dba4fd064cdefd892f5b4052eb
   continuation_authorized: false
 
+task_routing:
+  execution_authorized: false
+  purpose: legacy_identity_and_registry_consistency_only
+  routes:
+    knowledge-intelligence-system:
+      owner: idaibin/feeds-hub
+    content-output-system:
+      owner: createway
+    media-production-system:
+      owner: story-studio
+    product-delivery-system:
+      owner: idaibin/forgeway
+
 execution_gate:
   maximum_active_mvps: 1
   current_mvp: null
@@ -53,4 +66,3 @@ allowed_outputs_per_run:
   - smallest_artifact
   - run_evidence
   - keep_change_or_stop_decision
-
