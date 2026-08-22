@@ -4,46 +4,77 @@ projects:
     type: framework
     status: frozen
     previous_status: active
+    domains: [ai-engineering]
+    capabilities: [knowledge-governance, registry, research, workflow, decision-record]
     github:
       repository: idaibin/ai-handbook
+    tags: [knowledge-system, governance]
 
   - id: skills
     type: library
     status: frozen
     previous_status: active
+    domains: [ai-engineering]
+    capabilities: [agent, skill, workflow, evaluation]
     github:
       repository: idaibin/skills
+    tags: [agent-skills, shared-capabilities]
 
   - id: createway
     type: product
     status: frozen
     previous_status: defined
-    notes: repository_not_created
+    route:
+      primary: content-output-system
+      secondary: [product-delivery-system]
+    domains: [ai-engineering, ai-creative-media]
+    capabilities: [content-workflow, content-artifact, writing, design-system-content-view, publication, content-verification]
+    tags: [content-output-system, architecture-defined, repository-not-created]
 
   - id: story-studio
     type: product
     status: frozen
     previous_status: architecture-defined
-    notes: ep01_g07_2_of_10_not_production_ready
+    route:
+      primary: media-production-system
+      secondary: [product-delivery-system]
+    domains: [ai-engineering, ai-creative-media]
+    capabilities: [ip-world-building, character-continuity, script, storyboard, visual-production, audio-production, media-verification]
+    tags: [media-production-system, architecture-defined, repository-not-created, runtime-not-verified, ep01-g07-2-of-10-not-production-ready]
 
   - id: forgeway
     type: product
     status: frozen
     previous_status: active
+    route:
+      primary: product-delivery-system
+    domains: [ai-engineering, ai-product-experience]
+    capabilities: [agent, workflow, artifact, design-system-product-view, product-ui, design-source-ingestion, ui-candidate-confirmation, delivery-graph, repo-map-bug-routing, browser-verification, verification]
     github:
       repository: idaibin/forgeway
+    tags: [product-delivery-system, artifact-system, browser-verified-product-ui, product-ui-source-pipeline]
 
   - id: rustzen-admin
     type: product
     status: frozen
     previous_status: active
+    route:
+      primary: product-delivery-system
+    domains: [ai-engineering, ai-product-experience]
+    capabilities: [desktop-application, local-first, product-ui]
     github:
       repository: idaibin/rustzen-admin
+    tags: [desktop, local-first]
 
   - id: feeds-hub
     type: product
     status: frozen
     previous_status: active
+    route:
+      primary: knowledge-intelligence-system
+      secondary: [product-delivery-system]
+    domains: [ai-engineering, ai-knowledge-intelligence, ai-product-experience]
+    capabilities: [intelligence-pipeline, feed-system, source-grounded-research, knowledge-candidate, web-application]
     github:
       repository: idaibin/feeds-hub
-
+    tags: [information-system, ai-feed, research-runtime-not-verified]
