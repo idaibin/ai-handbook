@@ -1,24 +1,20 @@
 # AI Engineering Lab v0.2
 
-- **Status:** `FROZEN_PENDING_MVP_SELECTION`
+- **Status:** `ACTIVE_MVP_STORY_STUDIO_PENDING_REVIEW`
 - **Effective date:** 2026-08-22
 - **Previous baseline:** `v0.1` archived at `fb61beeac1ac18dba4fd064cdefd892f5b4052eb`
 
 AI Engineering Lab v0.2 只做一件事：用最小可运行结果验证真实价值。
 
-当前所有既有项目、Task、研究、架构扩展、资产生产和自动化均冻结。历史代码、文档、实验和资产保留为证据，但不再自动构成待办。
+当前只允许一个 MVP 活动。其他既有项目、Task、研究、架构扩展、资产生产和自动化继续冻结；历史代码、文档、实验和资产只作为证据。
 
-## 唯一入口
+## 当前唯一 MVP
 
-开始执行前，必须先批准一份不超过一页的 `MVP_BRIEF`：
+Story Studio：班超《投笔》30 秒内部样片，状态为 `rendered_pending_user_review`。
 
-1. 真实用户与问题；
-2. 最小可使用结果；
-3. 最多 7 天获得首个结果；
-4. 一个客观验收指标；
-5. 明确的停止条件。
-
-一次只能有一个 MVP。未批准前保持冻结。
+- [MVP Brief、输出与证据](mvp/story-studio-banchao-toubi-30s-v0.2.md)
+- 下一门禁：用户只做 `keep / change / stop` 决策
+- 在决策前：不恢复 105 秒整集、G07 十单元或 24 集扩展；Forgeway 与 Skills 保持冻结
 
 执行循环：
 
@@ -32,4 +28,3 @@ AI Engineering Lab v0.2 只做一件事：用最小可运行结果验证真实�
 - [v0.2 最小工作流](workflows/ai-engineering-system/README.md)
 
 旧 v0.1 内容可通过 Git 历史读取，不再具有当前执行权。
-
