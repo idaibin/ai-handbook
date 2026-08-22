@@ -40,7 +40,7 @@ projects:
       secondary: [product-delivery-system]
     domains: [ai-engineering, ai-creative-media]
     capabilities: [ip-world-building, character-continuity, script, storyboard, visual-production, audio-production, media-verification]
-    tags: [story-studio-mvp, toubi-30s-rendered, internal-candidate, not-production-ready]
+    tags: [story-studio-mvp, toubi-10frames-ready, target-10-seconds, not-production-ready]
 
   - id: forgeway
     type: product
