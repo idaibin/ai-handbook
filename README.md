@@ -10,11 +10,11 @@ AI Engineering Lab v0.2 只做一件事：用最小可运行结果验证真实�
 
 ## 当前唯一 MVP
 
-Story Studio：班超《投笔》30 秒内部样片，状态为 `rendered_pending_user_review`。
+Story Studio：班超《投笔》10 秒视频验证，状态为 `ready_for_real_video_generation`。
 
-- [MVP Brief、输出与证据](mvp/story-studio-banchao-toubi-30s-v0.2.md)
-- 下一门禁：用户只做 `keep / change / stop` 决策
-- 在决策前：不恢复 105 秒整集、G07 十单元或 24 集扩展；Forgeway 与 Skills 保持冻结
+- [MVP Brief、输出与证据](mvp/story-studio-banchao-toubi-10s-v0.2.md)
+- 下一门禁：调用真实视频模型，最多 3 次；随后用户只做 `keep / change / stop` 决策
+- 在决策前：不恢复 30/105 秒成片、G07 十单元或 24 集扩展；Forgeway 与 Skills 保持冻结
 
 执行循环：
 
