@@ -148,14 +148,12 @@ repository_creation: verified
 remote_push_and_readback: verified
 private_visibility: verified
 local_npm_verify: user_reported
-remote_commit_status_checks: none
+remote_commit_status_checks_at_initialization: none
 production_deployment: not_verified
 live_browser_runtime: not_verified
 custom_domain: not_verified
 valid_independent_images: 0/4
 ```
-
-The absence of GitHub commit-status checks means the user-reported local build must not be represented as GitHub Actions validation.
 
 ### Gate decision
 
@@ -166,20 +164,116 @@ experiment_authority: idaibin/ai-handbook
 large_image_asset_authority: Google Drive
 ```
 
-### Next valid action
+## UNIT_08_REMOTE_CI_VERIFICATION
 
-Deploy the exact remote commit and verify:
+### Entry basis
+
+- remote repository was active;
+- local `npm run verify` result existed but had no independent remote status check;
+- production deployment remained outside the verification boundary.
+
+### Execution
+
+Added repository-native workflow:
 
 ```text
-deployment receipt and provider project identity
-production URL and commit SHA
-HTTP reachability
-browser rendering at desktop and mobile sizes
+repository: idaibin/prompts-hub
+path: .github/workflows/verify.yml
+commit: 3ca6519195b070ea3f69e8265321ad1bea2a0cbc
+workflow: Verify
+run ID: 32834969574
+```
+
+The workflow executed:
+
+```text
+checkout
+Node.js 22 setup with npm cache
+npm ci --no-audit --no-fund
+npm run verify
+assert exactly 16 exported index.html pages
+upload out/ as prompts-hub-static-export
+```
+
+### Remote result
+
+```text
+job: verify
+status: completed
+conclusion: success
+install dependencies: success
+validate, typecheck, and build: success
+static export assertion: success
+artifact upload: success
+```
+
+Artifact identity:
+
+```text
+artifact ID: 9558241090
+name: prompts-hub-static-export
+bytes: 317335
+digest: sha256:a5e78fca8fe4314d213e41e98ca0b5e33d674175aae2c3d5d2175d5c491c3547
+head SHA: 3ca6519195b070ea3f69e8265321ad1bea2a0cbc
+expires: 2026-11-23T10:00:28Z
+```
+
+### Artifact readback
+
+The artifact was downloaded and inspected:
+
+```text
+index.html files: 16
+home page: present
+PromptCase detail route: present
+Style detail routes: 12 present
+not-found routes: 2 present
+HTTP home route: passed
+HTTP PromptCase route: passed
+HTTP transparent-watercolor Style route: passed
+key Chinese content checks: passed
+```
+
+A local Chromium screenshot attempt did not terminate successfully in the container and produced no accepted screenshot evidence. It is not counted as browser validation.
+
+### Vercel discovery
+
+```text
+team: abin-projects
+team ID: team_amYvGsCiewLeDfeWT5zduStG
+plan: hobby
+existing prompts-hub project: none
+```
+
+The available Vercel connector did not expose a safe project-creation/linking action for `idaibin/prompts-hub`. No unrelated existing Vercel project was reused.
+
+### Current gate
+
+```text
+status: repository_verified_deployment_not_verified
+code_authority: idaibin/prompts-hub@3ca6519195b070ea3f69e8265321ad1bea2a0cbc
+remote_ci: verified
+static_export: verified
+production_deployment: not_verified
+live_deployed_browser: not_verified
+custom_domain: not_verified
+valid_independent_images: 0/4
+```
+
+### Next valid action
+
+Create or link a Vercel project for `idaibin/prompts-hub`, deploy commit `3ca6519195b070ea3f69e8265321ad1bea2a0cbc`, and then verify:
+
+```text
+Vercel project and deployment identities
+production URL and deployed Git SHA
+HTTP availability
+desktop and mobile browser rendering
 search/filter behavior
 Style detail route
 PromptCase detail route
 truthful 0/4 image state
-custom domain prompt.idaibin.dev, if configured
+prompt.idaibin.dev domain state
 ```
 
-Only after those checks pass may online operation move from `not_verified` to `verified`.
+Only after those checks pass may online operation move to `verified`.
