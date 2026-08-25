@@ -1,6 +1,8 @@
 {
   "status": "passed",
-  "process_runs": 2,
+  "process_runs_per_artifact": 2,
   "byte_identical": true,
-  "compiler_output_sha256": "46b3be7e6600c8e7284324e1a85cd1ee6cf6093fce365a7fc187efe346b01edb"
+  "compiler_output_sha256": "46b3be7e6600c8e7284324e1a85cd1ee6cf6093fce365a7fc187efe346b01edb",
+  "query_index_sha256": "763a4d6c55f1acc4eabe128624d7151a1da5e39929261da5315388fe303a9115",
+  "image_case_prompts_sha256": "ef17045bbf8de44c860e00edf3591a75d191d15d1abc53e807524156f40591d3"
 }

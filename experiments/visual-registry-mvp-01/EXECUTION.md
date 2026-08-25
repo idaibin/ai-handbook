@@ -1,38 +1,16 @@
 # Execution Record
 
-## Unit
+## UNIT_02_STATIC_COMPILER
 
-`VISUAL_REGISTRY_MVP_01 / UNIT_02_STATIC_COMPILER`
-
-## Entry basis
+### Basis
 
 - `idaibin/ai-handbook@dc8925bd7b5760a1a591c77e8e9e69abcbacb722`
-- user-authorized continuation without confirmation
 - existing experiment rules in `experiments/README.md`
 
-## Scope
-
-- audit six named repositories at fixed commits;
-- define one provider-neutral Schema;
-- create three original Golden Candidate contracts;
-- implement Gemini, Flux, and Midjourney text adapters;
-- run deterministic static tests;
-- persist generated evidence.
-
-## Execution history
-
-1. Initial TypeScript build failed because the `50mm` lexicon key was not quoted.
-2. The syntax defect was fixed and the complete test command passed.
-3. Architecture self-review found that `category` incorrectly named consumers; it was changed to provider-neutral visual domains while consumers remain metadata.
-4. Runtime self-review found that an unknown adapter target could fall through the switch; explicit target and empty-subject guards were added with negative tests.
-5. The final suite passed in the working copy and in a clean copied directory with generated evidence removed before execution.
-6. The clean-copy and working-copy compiler output hashes matched exactly.
-
-## Final result
+### Result
 
 ```text
 status: passed_static_validation
-validation_level: static_and_unit_tests
 contracts: 3
 consumer_cases: 3
 adapters: 3
@@ -40,17 +18,65 @@ compilations: 9
 compiler_output_sha256: 46b3be7e6600c8e7284324e1a85cd1ee6cf6093fce365a7fc187efe346b01edb
 ```
 
-## Gate decision
+The static compiler remained in `ai-handbook/experiments`; it was not promoted to `skills`, and no public website was authorized.
 
-The static compiler prototype may remain in `ai-handbook/experiments` for a real provider trial. It is not authorized for promotion into `skills`, and no public website is authorized.
+## UNIT_03_QUERY_AND_IMAGE_CASES
 
-## Not verified
+### Entry basis
 
-- real Gemini, Flux, or Midjourney image generation;
-- cross-provider visual similarity;
-- quality against a manually authored prompt baseline;
-- runtime integration with Story Studio or UI Spec.
+- `idaibin/ai-handbook@44cb4312a34e4082a79e67829a3047a822477794`
+- user requirement: support querying and different-Prompt image examples
+- scope decision: implement query and fixed Prompt/image case contracts before running a Provider trial
 
-## Next action
+### Scope
 
-Run one controlled image-generation comparison for `historical_han_realism` and one UI mockup comparison for `saas_bento_dashboard`, preserving provider receipts, inputs, outputs, and review criteria.
+- add direct file-backed Registry query without a database;
+- expose list, search, show, compile, examples, and prompt-set commands;
+- support exact ID, Unicode, category, consumer, status, and target filters;
+- define two original A/B/C Prompt-to-image comparison cases;
+- generate six deterministic Prompt variants and hashes;
+- preserve the distinction between Prompt readiness and real image generation.
+
+### Validation history
+
+1. Added `image-generation-case.schema.json` and two fixed comparison definitions.
+2. Added a deterministic catalog and query CLI over contracts and image cases.
+3. Added A subject-only, B manual reference, and C contract-compiled Prompt rendering.
+4. Added Schema, query, CLI, image-case, determinism, and negative tests.
+5. Full suite passed in the working copy.
+6. Generated compiler output, query index, and image Prompt sets were byte-identical across two independent processes.
+7. Query by Chinese text `班超` returned the intended image case.
+8. No image result or Provider receipt was created or claimed.
+
+### Result
+
+```text
+status: passed_query_and_prompt_case_validation
+validation_level: static_unit_and_clean_copy_tests
+catalog_records: 5
+contracts: 3
+image_comparison_cases: 2
+prompt_variants: 6
+planned_images: 6
+compiler_output_sha256: 46b3be7e6600c8e7284324e1a85cd1ee6cf6093fce365a7fc187efe346b01edb
+query_index_sha256: 763a4d6c55f1acc4eabe128624d7151a1da5e39929261da5315388fe303a9115
+image_case_prompts_sha256: ef17045bbf8de44c860e00edf3591a75d191d15d1abc53e807524156f40591d3
+```
+
+### Gate decision
+
+The query and Prompt comparison layer may remain in `ai-handbook/experiments`. It is still not authorized for promotion into `skills`, a standalone repository, or a public website.
+
+### Not verified
+
+- real Provider image generation;
+- different-Prompt image output examples;
+- blind Review scores;
+- visual consistency or quality gains;
+- Story Studio/UI Spec runtime integration.
+
+### Next action
+
+`VISUAL_REGISTRY_MVP_01 / UNIT_04_IMAGE_GENERATION_TRIAL`
+
+Generate six controlled images for the two A/B/C cases using the same Provider/model and aspect ratio, fixed seed where supported, no post-processing, exact Prompt hashes, Provider receipts, image SHA-256 values, and blind Review records. Add query support for real result records only after the first valid result exists.

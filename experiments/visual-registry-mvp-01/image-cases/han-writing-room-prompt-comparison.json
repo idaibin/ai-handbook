@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1",
+  "id": "han_writing_room_prompt_comparison",
+  "title": "班超洛阳佣书 Prompt A/B/C 对比",
+  "description": "固定同一画面主题与 Provider，比较主题直述、人工参考 Prompt 和 Visual Contract 编译 Prompt 对东汉历史场景约束的影响。",
+  "contract_id": "historical_han_realism",
+  "subject": "Ban Chao copying documents in a modest Luoyang writing room before his military life",
+  "consumer": "story_studio",
+  "target": "gemini",
+  "comparison_axis": "prompt_specificity",
+  "variants": [
+    {
+      "id": "a_subject_only",
+      "kind": "subject_only",
+      "label": "A — Subject only"
+    },
+    {
+      "id": "b_manual_reference",
+      "kind": "manual_reference",
+      "label": "B — Manual reference prompt",
+      "prompt": "Ban Chao copying documents in a modest Eastern Han Luoyang writing room, quiet restrained historical drama, cold gray and earth-brown palette, aged wood and handmade fiber paper, soft daylight entering from the left, eye-level 50mm medium shot, physically coherent writing action, readable silhouette, no modern objects, no fantasy armor, no later-dynasty costume, no readable text, 16:9 cinematic still."
+    },
+    {
+      "id": "c_contract_compiled",
+      "kind": "contract_compiled",
+      "label": "C — Visual Contract compiled prompt"
+    }
+  ],
+  "controls": {
+    "same_provider_model": true,
+    "same_aspect_ratio": true,
+    "seed_policy": "fixed_if_supported",
+    "post_processing": "none",
+    "images_per_variant": 1
+  },
+  "review": {
+    "criteria": [
+      "period_plausibility",
+      "writing_action_coherence",
+      "visual_language_adherence",
+      "forbidden_element_avoidance",
+      "composition_quality"
+    ],
+    "score_min": 1,
+    "score_max": 5,
+    "blind_review": true,
+    "decision_rule": "A compiled prompt is useful only if it improves mean adherence without increasing forbidden-element failures relative to both baselines."
+  },
+  "metadata": {
+    "status": "prompt_set_ready",
+    "provenance": "original_case"
+  }
+}

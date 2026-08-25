@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "image_cases": 2,
+  "prompt_variants": 6,
+  "planned_images": 6,
+  "checks": [
+    "deterministic_prompt_sets",
+    "abc_variant_contract",
+    "distinct_prompt_hashes",
+    "fixed_trial_controls",
+    "compiler_variant_matches_compiler",
+    "image_generation_status_not_overstated"
+  ]
+}

@@ -1,16 +1,32 @@
 {
   "status": "passed",
-  "schema": "visual-contract.schema.json",
-  "validated_contracts": [
-    "historical-han-realism.json",
-    "minimal-tech-cover.json",
-    "saas-bento-dashboard.json"
-  ],
-  "rejected_negative_cases": [
-    "prompt",
-    "template",
-    "models",
-    "invalid_id",
-    "consumer_identity_as_category"
+  "schemas": [
+    {
+      "schema": "visual-contract.schema.json",
+      "validated": [
+        "historical-han-realism.json",
+        "minimal-tech-cover.json",
+        "saas-bento-dashboard.json"
+      ],
+      "rejected_negative_cases": [
+        "prompt",
+        "template",
+        "models",
+        "invalid_id",
+        "consumer_identity_as_category"
+      ]
+    },
+    {
+      "schema": "image-generation-case.schema.json",
+      "validated": [
+        "han-writing-room-prompt-comparison.json",
+        "saas-dashboard-prompt-comparison.json"
+      ],
+      "rejected_negative_cases": [
+        "manual_reference_without_prompt",
+        "subject_only_with_prompt",
+        "unsupported_target"
+      ]
+    }
   ]
 }

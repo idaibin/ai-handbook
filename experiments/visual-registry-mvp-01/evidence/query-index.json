@@ -1,0 +1,68 @@
+[
+  {
+    "kind": "contract",
+    "id": "historical_han_realism",
+    "name": "Eastern Han restrained historical realism",
+    "description": "Grounded historical-drama visual language for ordinary labor, writing spaces, characters, and props in the Eastern Han setting.",
+    "path": "contracts/historical-han-realism.json",
+    "category": "narrative",
+    "consumers": [
+      "story_studio"
+    ],
+    "status": "golden_candidate",
+    "target": null
+  },
+  {
+    "kind": "contract",
+    "id": "minimal_tech_cover",
+    "name": "Minimal technical editorial cover",
+    "description": "A calm editorial cover system with one geometric technical metaphor, strong title reserve, and low visual noise.",
+    "path": "contracts/minimal-tech-cover.json",
+    "category": "editorial",
+    "consumers": [
+      "createway"
+    ],
+    "status": "golden_candidate",
+    "target": null
+  },
+  {
+    "kind": "contract",
+    "id": "saas_bento_dashboard",
+    "name": "Operational SaaS bento dashboard",
+    "description": "A restrained enterprise dashboard language with modular bento regions, coherent data hierarchy, and implementation-plausible components.",
+    "path": "contracts/saas-bento-dashboard.json",
+    "category": "interface",
+    "consumers": [
+      "ui_spec",
+      "dev_frontend"
+    ],
+    "status": "golden_candidate",
+    "target": null
+  },
+  {
+    "kind": "image_case",
+    "id": "han_writing_room_prompt_comparison",
+    "name": "班超洛阳佣书 Prompt A/B/C 对比",
+    "description": "固定同一画面主题与 Provider，比较主题直述、人工参考 Prompt 和 Visual Contract 编译 Prompt 对东汉历史场景约束的影响。",
+    "path": "image-cases/han-writing-room-prompt-comparison.json",
+    "category": "narrative",
+    "consumers": [
+      "story_studio"
+    ],
+    "status": "prompt_set_ready",
+    "target": "gemini"
+  },
+  {
+    "kind": "image_case",
+    "id": "saas_dashboard_prompt_comparison",
+    "name": "企业资产看板 Prompt A/B/C 对比",
+    "description": "固定同一 UI 主题与 Provider，比较主题直述、人工参考 Prompt 和 Visual Contract 编译 Prompt 对布局层级、组件一致性与可读性的影响。",
+    "path": "image-cases/saas-dashboard-prompt-comparison.json",
+    "category": "interface",
+    "consumers": [
+      "ui_spec"
+    ],
+    "status": "prompt_set_ready",
+    "target": "gemini"
+  }
+]

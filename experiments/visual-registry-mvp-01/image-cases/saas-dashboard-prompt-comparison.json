@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1",
+  "id": "saas_dashboard_prompt_comparison",
+  "title": "企业资产看板 Prompt A/B/C 对比",
+  "description": "固定同一 UI 主题与 Provider，比较主题直述、人工参考 Prompt 和 Visual Contract 编译 Prompt 对布局层级、组件一致性与可读性的影响。",
+  "contract_id": "saas_bento_dashboard",
+  "subject": "an enterprise asset operations dashboard showing inventory, maintenance risk, lifecycle cost, and device status",
+  "consumer": "ui_spec",
+  "target": "gemini",
+  "comparison_axis": "prompt_specificity",
+  "variants": [
+    {
+      "id": "a_subject_only",
+      "kind": "subject_only",
+      "label": "A — Subject only"
+    },
+    {
+      "id": "b_manual_reference",
+      "kind": "manual_reference",
+      "label": "B — Manual reference prompt",
+      "prompt": "Direct frontal desktop UI mockup for an enterprise asset operations dashboard, modern SaaS bento grid, clear KPI hierarchy, modular cards for inventory, maintenance risk, lifecycle cost, and device status, dark graphite surfaces, cool gray typography, restrained indigo and emerald accents, consistent spacing and radii, no perspective distortion, no random decorative cards, placeholder labels only, 16:9."
+    },
+    {
+      "id": "c_contract_compiled",
+      "kind": "contract_compiled",
+      "label": "C — Visual Contract compiled prompt"
+    }
+  ],
+  "controls": {
+    "same_provider_model": true,
+    "same_aspect_ratio": true,
+    "seed_policy": "fixed_if_supported",
+    "post_processing": "none",
+    "images_per_variant": 1
+  },
+  "review": {
+    "criteria": [
+      "information_hierarchy",
+      "component_consistency",
+      "layout_adherence",
+      "text_handling",
+      "production_reusability"
+    ],
+    "score_min": 1,
+    "score_max": 5,
+    "blind_review": true,
+    "decision_rule": "A compiled prompt is useful only if it improves layout and component adherence without producing more text or perspective defects than both baselines."
+  },
+  "metadata": {
+    "status": "prompt_set_ready",
+    "provenance": "original_case"
+  }
+}

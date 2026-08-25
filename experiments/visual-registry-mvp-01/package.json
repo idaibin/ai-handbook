@@ -1,12 +1,14 @@
 {
   "name": "visual-registry-mvp-01",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "bash run-tests.sh",
-    "demo": "npm run build && node prototype/demo.mjs"
+    "demo": "npm run build && node prototype/demo.mjs",
+    "query": "npm run build --silent && node prototype/query-cli.mjs",
+    "prompt-cases": "npm run build --silent && node prototype/image-case-output.mjs"
   },
   "engines": {
     "node": ">=22.0.0"

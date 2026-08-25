@@ -1,0 +1,203 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://idaibin.dev/schemas/image-generation-case/0.1.json",
+  "title": "Image Generation Comparison Case v0.1",
+  "description": "An experiment-only A/B/C prompt comparison case. It references a durable Visual Contract but stores ephemeral prompt variants and provider trial controls separately.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "title",
+    "description",
+    "contract_id",
+    "subject",
+    "consumer",
+    "target",
+    "comparison_axis",
+    "variants",
+    "controls",
+    "review",
+    "metadata"
+  ],
+  "$defs": {
+    "token": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"
+    },
+    "tokenArray": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/token"
+      }
+    },
+    "variant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "label"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/token"
+        },
+        "kind": {
+          "enum": [
+            "subject_only",
+            "manual_reference",
+            "contract_compiled"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prompt": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "manual_reference"
+              }
+            },
+            "required": ["kind"]
+          },
+          "then": {
+            "required": ["prompt"]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "enum": ["subject_only", "contract_compiled"]
+              }
+            },
+            "required": ["kind"]
+          },
+          "then": {
+            "not": {
+              "required": ["prompt"]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "id": {
+      "$ref": "#/$defs/token"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contract_id": {
+      "$ref": "#/$defs/token"
+    },
+    "subject": {
+      "type": "string",
+      "minLength": 1
+    },
+    "consumer": {
+      "$ref": "#/$defs/token"
+    },
+    "target": {
+      "enum": ["gemini", "flux", "midjourney"]
+    },
+    "comparison_axis": {
+      "const": "prompt_specificity"
+    },
+    "variants": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "$ref": "#/$defs/variant"
+      }
+    },
+    "controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "same_provider_model",
+        "same_aspect_ratio",
+        "seed_policy",
+        "post_processing",
+        "images_per_variant"
+      ],
+      "properties": {
+        "same_provider_model": {
+          "const": true
+        },
+        "same_aspect_ratio": {
+          "const": true
+        },
+        "seed_policy": {
+          "enum": ["fixed_if_supported", "provider_unavailable"]
+        },
+        "post_processing": {
+          "const": "none"
+        },
+        "images_per_variant": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["criteria", "score_min", "score_max", "blind_review", "decision_rule"],
+      "properties": {
+        "criteria": {
+          "$ref": "#/$defs/tokenArray"
+        },
+        "score_min": {
+          "const": 1
+        },
+        "score_max": {
+          "const": 5
+        },
+        "blind_review": {
+          "type": "boolean"
+        },
+        "decision_rule": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "provenance"],
+      "properties": {
+        "status": {
+          "enum": [
+            "planned",
+            "prompt_set_ready",
+            "generated",
+            "reviewed"
+          ]
+        },
+        "provenance": {
+          "const": "original_case"
+        }
+      }
+    }
+  }
+}

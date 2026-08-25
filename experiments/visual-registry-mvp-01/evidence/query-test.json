@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "records": 5,
+  "contracts": 3,
+  "image_cases": 2,
+  "checks": [
+    "stable_catalog",
+    "exact_id_query",
+    "unicode_query",
+    "field_filters",
+    "image_case_query",
+    "cli_json_output",
+    "unknown_id_rejected"
+  ]
+}

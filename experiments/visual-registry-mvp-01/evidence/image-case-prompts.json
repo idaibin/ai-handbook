@@ -1,0 +1,121 @@
+{
+  "generated_at": "deterministic",
+  "prompt_sets": [
+    {
+      "case_id": "han_writing_room_prompt_comparison",
+      "contract_id": "historical_han_realism",
+      "consumer": "story_studio",
+      "target": "gemini",
+      "subject": "Ban Chao copying documents in a modest Luoyang writing room before his military life",
+      "comparison_axis": "prompt_specificity",
+      "controls": {
+        "same_provider_model": true,
+        "same_aspect_ratio": true,
+        "seed_policy": "fixed_if_supported",
+        "post_processing": "none",
+        "images_per_variant": 1
+      },
+      "review": {
+        "criteria": [
+          "period_plausibility",
+          "writing_action_coherence",
+          "visual_language_adherence",
+          "forbidden_element_avoidance",
+          "composition_quality"
+        ],
+        "score_min": 1,
+        "score_max": 5,
+        "blind_review": true,
+        "decision_rule": "A compiled prompt is useful only if it improves mean adherence without increasing forbidden-element failures relative to both baselines."
+      },
+      "status": "prompt_set_ready_image_generation_pending",
+      "variants": [
+        {
+          "id": "a_subject_only",
+          "kind": "subject_only",
+          "label": "A — Subject only",
+          "prompt": "Ban Chao copying documents in a modest Luoyang writing room before his military life",
+          "prompt_sha256": "db65ce2f3a126d03bb83a49a1724ffb0b542f77613c7bfa740109abfb1309af5"
+        },
+        {
+          "id": "b_manual_reference",
+          "kind": "manual_reference",
+          "label": "B — Manual reference prompt",
+          "prompt": "Ban Chao copying documents in a modest Eastern Han Luoyang writing room, quiet restrained historical drama, cold gray and earth-brown palette, aged wood and handmade fiber paper, soft daylight entering from the left, eye-level 50mm medium shot, physically coherent writing action, readable silhouette, no modern objects, no fantasy armor, no later-dynasty costume, no readable text, 16:9 cinematic still.",
+          "prompt_sha256": "5f26b7cdd49f415028eb2d85b43b881652773c4f647e0e8575950978cf907330"
+        },
+        {
+          "id": "c_contract_compiled",
+          "kind": "contract_compiled",
+          "label": "C — Visual Contract compiled prompt",
+          "prompt": "Produce a visual depiction of Ban Chao copying documents in a modest Luoyang writing room before his military life. Output medium: cinematic still. Visual intent: historical drama, Eastern Han dynasty, restrained, observant, physically grounded, character asset, prop asset, interior scene, and storyboard keyframe. Visual language: cinematic naturalism, historical graphic drama, documentary observation, cold gray, earth brown, muted ink black, natural paper, aged wood, handmade fiber paper, ink, plant fiber textile, matte, worn, low sheen, quiet labor, enclosed interior, and human scale. Camera: medium, 50mm lens, eye-level camera, and moderate. Lighting: soft daylight from a side window, left-to-right light direction, soft, and low-to-medium contrast. Composition: grounded horizontal layers, single subject or small group, character action first, and restrained. Preserve: historically plausible Eastern Han details, physically coherent writing action, readable silhouette, and consistent character identity. Text handling: no rendered text. Avoid: modern objects, readable modern text, fantasy armor, later dynasty costume, saturated fantasy color, decorative overload, readable text, logos, and watermarks. Use an aspect ratio of 16:9.",
+          "negative_prompt": null,
+          "parameters": {
+            "aspect_ratio": "16:9",
+            "output_medium": "cinematic still"
+          },
+          "semantic_signature": "vlc-bad90c20",
+          "prompt_sha256": "c8cef2858c5f7ba6a80fe9c566bf8bf07d4fc820006a6f4aed7dbfa56bbca911"
+        }
+      ]
+    },
+    {
+      "case_id": "saas_dashboard_prompt_comparison",
+      "contract_id": "saas_bento_dashboard",
+      "consumer": "ui_spec",
+      "target": "gemini",
+      "subject": "an enterprise asset operations dashboard showing inventory, maintenance risk, lifecycle cost, and device status",
+      "comparison_axis": "prompt_specificity",
+      "controls": {
+        "same_provider_model": true,
+        "same_aspect_ratio": true,
+        "seed_policy": "fixed_if_supported",
+        "post_processing": "none",
+        "images_per_variant": 1
+      },
+      "review": {
+        "criteria": [
+          "information_hierarchy",
+          "component_consistency",
+          "layout_adherence",
+          "text_handling",
+          "production_reusability"
+        ],
+        "score_min": 1,
+        "score_max": 5,
+        "blind_review": true,
+        "decision_rule": "A compiled prompt is useful only if it improves layout and component adherence without producing more text or perspective defects than both baselines."
+      },
+      "status": "prompt_set_ready_image_generation_pending",
+      "variants": [
+        {
+          "id": "a_subject_only",
+          "kind": "subject_only",
+          "label": "A — Subject only",
+          "prompt": "an enterprise asset operations dashboard showing inventory, maintenance risk, lifecycle cost, and device status",
+          "prompt_sha256": "4dd7c784e707a1dd5b7ed15fe541c26939a4d58d395e6cf705b1ed950fb9cdef"
+        },
+        {
+          "id": "b_manual_reference",
+          "kind": "manual_reference",
+          "label": "B — Manual reference prompt",
+          "prompt": "Direct frontal desktop UI mockup for an enterprise asset operations dashboard, modern SaaS bento grid, clear KPI hierarchy, modular cards for inventory, maintenance risk, lifecycle cost, and device status, dark graphite surfaces, cool gray typography, restrained indigo and emerald accents, consistent spacing and radii, no perspective distortion, no random decorative cards, placeholder labels only, 16:9.",
+          "prompt_sha256": "138d1decb6d46eca23e80b8b94626062920b78c0f31e49a7d6624a0167106dfa"
+        },
+        {
+          "id": "c_contract_compiled",
+          "kind": "contract_compiled",
+          "label": "C — Visual Contract compiled prompt",
+          "prompt": "Produce a visual depiction of an enterprise asset operations dashboard showing inventory, maintenance risk, lifecycle cost, and device status. Output medium: desktop UI mockup. Visual intent: enterprise software, precise, calm, operational, desktop dashboard, UI spec exploration, and product mockup. Visual language: implementation plausible interface, modern SaaS, minimal data UI, neutral dark, restrained blue, muted green, high-contrast interface typography, digital surface, subtle translucent layer, clean, low noise, soft border, focused workspace, and dense but legible. Composition: bento grid, direct frontal interface view, task and risk first, and moderate. Preserve: coherent component system, plausible data density, consistent spacing, accessible contrast, and clear primary action. Text handling: placeholder labels without brand copy. Avoid: random widgets, illegible text, fake 3d perspective, excessive glow, decorative charts, unbounded card count, garbled typography, brand logos, and watermarks. Use an aspect ratio of 16:10.",
+          "negative_prompt": null,
+          "parameters": {
+            "aspect_ratio": "16:10",
+            "output_medium": "desktop UI mockup"
+          },
+          "semantic_signature": "vlc-c3cf3aef",
+          "prompt_sha256": "d60fe35d4e8c8a8e07840b7e478900e7b845877ab0537585a54f6042e88a5888"
+        }
+      ]
+    }
+  ]
+}
