@@ -12,7 +12,7 @@
 | [`repo-review-benchmark-v1/`](./repo-review-benchmark-v1/) | 固定 Benchmark 协议 | `repo-review` 与公开 Review Skills 的配对评测；数据集仍在构建。 |
 | [`skills-forgeway-paired-evaluation-v1/`](./skills-forgeway-paired-evaluation-v1/) | 配对工程评测协议 | 基于 Harbor 与 Multi-SWE-bench 验证 A→B Skills 增益和 B→C Forgeway 增益；已定义[测试反馈与强化闭环](./skills-forgeway-paired-evaluation-v1/feedback-loop.md)，Phase 0 尚未执行。 |
 | [`story-studio-60s-pilot/`](./story-studio-60s-pilot/) | 媒体生产 Pilot | Story Studio 60 秒生产链路的阶段性实验与证据。 |
-| [`visual-registry-mvp-01/`](./visual-registry-mvp-01/) | Visual Contract、Prompt 1:N、查询与 Next.js Web 实验 | 已验证 3 个 Schema、11 条文件查询记录、GenerationBatch 与独立 Result 身份；Next.js + React + TypeScript Web 源码已建立并进入远程构建门禁，真实独立图片仍为 0/4。 |
+| [`visual-registry-mvp-01/`](./visual-registry-mvp-01/) | Visual Contract、Prompt 1:N 与查询实验 | 保留合同、查询原型与证据；真实应用已迁出，目标仓库为 `idaibin/prompts-hub`，当前等待仓库创建。独立图片仍为 0/4。 |
 
 ## 维护规则
 
@@ -21,3 +21,4 @@
 - 基于测试反馈产生的修改必须建立新 Candidate 和 Result Series，不得覆盖旧 Trial。
 - 大型原始日志与二进制证据可放 Google Drive，但 GitHub 必须保留不可变身份和索引。
 - 开源 Harness 已提供的容器、调度、轨迹或 Verifier 能力不得在本仓库重复实现。
+- 可运行产品代码必须进入对应产品仓库，不得长期存放在 `ai-handbook/experiments`。

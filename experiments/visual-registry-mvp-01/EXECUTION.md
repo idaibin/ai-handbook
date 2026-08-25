@@ -4,8 +4,6 @@
 
 Basis: `idaibin/ai-handbook@dc8925bd7b5760a1a591c77e8e9e69abcbacb722`
 
-Result:
-
 ```text
 status: passed_static_validation
 contracts: 3
@@ -16,8 +14,6 @@ compilations: 9
 ## UNIT_03_QUERY_AND_IMAGE_CASES
 
 Basis: `idaibin/ai-handbook@44cb4312a34e4082a79e67829a3047a822477794`
-
-Result:
 
 ```text
 status: passed_query_and_prompt_case_validation
@@ -31,56 +27,20 @@ No image or Provider receipt was claimed.
 
 ## UNIT_04_GENERATION_BATCH_QUERY_CONTRACT
 
-### Entry basis
+Basis: `idaibin/ai-handbook@ee0969c45407380a3d8a343b655dae22c8b5cfdb`
 
-- `idaibin/ai-handbook@ee0969c45407380a3d8a343b655dae22c8b5cfdb`;
-- user requirement: every image must be an independent file;
-- user requirement: one Prompt must query to N image effects;
-- research decision: introduce `GenerationBatch` and separate `exact_results` from `related_results`.
+Implemented:
 
-### Scope
+- Draft 2020-12 `prompt-case.schema.json`;
+- PromptCase → GenerationBatch → independent ImageResult identities;
+- exact and related query separation;
+- provider-native evidence requirements;
+- exclusion of combined reports, dashboards, collages, and contact sheets.
 
-- add a Draft 2020-12 `prompt-case.schema.json`;
-- add one original `PromptCase` with one blocked `GenerationBatch` and four independent pending `ImageResult` identities;
-- make PromptCase, Batch, and Result queryable;
-- add style, Provider, model, image/receipt presence, and count filters;
-- add query-expression syntax and exact/related result separation;
-- attempt real image generation without accepting a combined image as valid output;
-- preserve accurate failure evidence.
-
-### Image execution evidence
-
-ChatGPT Image attempts:
-
-```text
-8b28cb60-74e9-48ba-ac62-85bd854fee1d -> combined report/contact sheet
-11167813-592a-4f04-99ff-9ce0517f1e86 -> combined Visual Registry report
-714bfc22-3602-43f4-81a0-83572c8a364d -> combined Dashboard-style result
-```
-
-Adobe Firefly:
-
-```text
-image_generate -> HTTP 403
-required retry -> HTTP 403
-```
-
-All generated combined images are `invalid_attempt`. They are not stored under the PromptCase `results/` directory and are not counted as provider-native images. They were isolated as failure evidence under Drive folder `1LvfPHztXKDUhZ-Kpu0NTPKPi_Veu8y3D`:
-
-```text
-8b28cb60 -> Drive 1vJSnmYh6zOPqGbkRPQl1Alo8s0niPRyy
-             SHA-256 6b750bc2a9fa4b2e13262b0039c43f59f975e794a3aef4bd3c1cc038c49399b4
-11167813 -> Drive 1kAvjhtRkjyM3XbgsR6hSw_MYjZGog_Wc
-             SHA-256 e5bc05366ee78107913d0e218f8512d563eb6db9e0260a4d76cb80442bfe9566
-714bfc22 -> Drive 1M904qhgguiU5v06vXZVEjHtUJEawlUBX
-             SHA-256 601dfcc4f198dc9f9b4d4b935b01005e830feacbd2c5cd21a55bbdaba25c29c4
-```
-
-### Validation result
+Result:
 
 ```text
 status: passed_contract_and_query_validation_generation_blocked
-validation_level: static_unit_and_clean_copy_tests
 catalog_records: 11
 prompt_cases: 1
 generation_batches: 1
@@ -89,77 +49,64 @@ provider_native_images: 0
 saved_result_files: 0
 ```
 
-Verified:
-
-- PromptCase Schema and negative tests;
-- Prompt SHA-256 identity;
-- Batch-to-Prompt identity consistency;
-- contiguous `r01-r04` result identities;
-- Provider-native evidence requirements;
-- combined outputs cannot be counted;
-- exact and related query results remain separate;
-- structured query expressions work;
-- current blocked state matches real execution evidence.
-
-### Gate decision
-
-The contract and query changes may remain in `ai-handbook/experiments`.
-
-The task is not promoted to `skills`, a standalone repository, or a public website. Image completion remains blocked because no available route returned four independent provider-native files.
-
-### Next valid action
-
-Execute the exact frozen Prompt through a Provider route that returns four independent files. For each result, preserve:
-
-```text
-result_id
-provider / model
-provider receipt
-Drive file ID
-image SHA-256
-width / height
-Review status
-```
-
-Only then may the PromptCase move from `generation_blocked` to `generated_unverified`.
+Image generation remained blocked because ChatGPT Image returned combined report images and Adobe Firefly returned HTTP 403 twice. Invalid attempts were preserved under Drive folder `1LvfPHztXKDUhZ-Kpu0NTPKPi_Veu8y3D` and were not counted.
 
 ## UNIT_05_NEXTJS_WEB_MVP
 
+Entry basis:
+
+- user correction: use React and Next.js, not handwritten static HTML;
+- truthful image state remained `0/4`.
+
+A Next.js prototype was implemented under `experiments/visual-registry-mvp-01/web/`. It demonstrated the intended routes and React query interaction, but storing a runnable product inside `ai-handbook` violated the repository boundary.
+
+## UNIT_06_EXTRACT_PROMPTS_HUB
+
 ### Entry basis
 
-- `idaibin/ai-handbook@27ae1d2045da94a6391ea97099cbbe2cca2f276c`;
-- user correction: use React and Next.js, not a standalone native HTML/JavaScript page;
-- current image execution remains blocked at 0/4 and must not be hidden by the Web UI.
+- user correction: real product projects must not live inside `ai-handbook`;
+- requested target project: `prompts-hub`;
+- source baseline: `idaibin/ai-handbook@68220929832a0aa898262566b30aab8310b0a61b`.
 
-### Scope
+### Execution
 
-- supersede the handwritten static HTML prototype;
-- add a Next.js App Router application under `web/`;
-- implement typed Registry records and React search/filter state;
-- add Style and PromptCase list/detail routes;
-- keep Prompt text and independent ImageResult presentation separate;
-- configure static export and a GitHub Actions build gate;
-- preserve the truthful 0/4 image state.
+1. Rebuilt a clean standalone Next.js + React + TypeScript project at `/mnt/data/prompts-hub`.
+2. Retained Style browsing, PromptCase search/filter, Style and Prompt detail routes, and four independent pending ImageResult slots.
+3. Kept Prompt text, image files, and result evidence as separate assets.
+4. Ran project structure checks, TypeScript/TSX syntax transpilation, Prompt SHA-256 verification, and fake-image URL guards.
+5. Created a local Git repository with initial commit `b58624698cc2bcc4ef7bf3ea90e3b6e14127d1df`.
+6. Created and cloned back a Git bundle to verify commit recoverability.
+7. Uploaded the source ZIP, Git bundle, and Manifest to the independent Drive folder `Prompts Hub` (`1a3gAeZIYih6UQS0GRvANTf-ji78srtOa`).
+8. Removed the runnable `web/` project and its two dedicated workflows from `ai-handbook`.
+9. Added `PROJECT.md` as the migration and authority pointer.
 
-### Local validation
+### Validation result
 
 ```text
-TypeScript/TSX syntax transpilation: passed
-plain source .html/.js guard: passed
-package/config JSON parsing: passed
-Next.js dependency installation: blocked locally by registry.npmjs.org DNS EAI_AGAIN
+status: application_extracted_repository_creation_blocked
+validation_level: source_structure_and_typescript_syntax
+framework: Next.js + React + TypeScript
+typed_files: 13
+prompt_sha256: 7b9028e383835b574e0a25bcfb97f7e4ab9f34b9047918cdd86c1afe8fbec66f
+independent_result_identities: 4
+valid_images: 0
+local_initial_commit: b58624698cc2bcc4ef7bf3ea90e3b6e14127d1df
+bundle_readback: passed
 ```
 
-### Remote gate
-
-The first commit containing `web/` must run `.github/workflows/visual-registry-web.yml`. Completion requires:
+Not executed in the current environment:
 
 ```text
 npm install
-npm run typecheck
-next build
-static export route assertion
-GitHub Actions artifact readback
+Next.js production build
+browser/E2E validation
+Vercel deployment
 ```
 
-Until that workflow succeeds, status remains `nextjs_web_source_ready_build_pending_generation_blocked`.
+### Blocker
+
+The connected GitHub tool exposes writes to existing repositories but does not expose repository creation. `idaibin/prompts-hub` did not exist at the time of execution, so the source could not be pushed to a verified remote repository.
+
+### Next valid action
+
+Create the empty `idaibin/prompts-hub` repository, then push/read back initial commit `b58624698cc2bcc4ef7bf3ea90e3b6e14127d1df`. Only after that should CI and Vercel deployment be configured.
