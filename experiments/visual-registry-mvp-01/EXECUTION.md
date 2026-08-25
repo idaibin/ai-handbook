@@ -122,3 +122,44 @@ Review status
 ```
 
 Only then may the PromptCase move from `generation_blocked` to `generated_unverified`.
+
+## UNIT_05_NEXTJS_WEB_MVP
+
+### Entry basis
+
+- `idaibin/ai-handbook@27ae1d2045da94a6391ea97099cbbe2cca2f276c`;
+- user correction: use React and Next.js, not a standalone native HTML/JavaScript page;
+- current image execution remains blocked at 0/4 and must not be hidden by the Web UI.
+
+### Scope
+
+- supersede the handwritten static HTML prototype;
+- add a Next.js App Router application under `web/`;
+- implement typed Registry records and React search/filter state;
+- add Style and PromptCase list/detail routes;
+- keep Prompt text and independent ImageResult presentation separate;
+- configure static export and a GitHub Actions build gate;
+- preserve the truthful 0/4 image state.
+
+### Local validation
+
+```text
+TypeScript/TSX syntax transpilation: passed
+plain source .html/.js guard: passed
+package/config JSON parsing: passed
+Next.js dependency installation: blocked locally by registry.npmjs.org DNS EAI_AGAIN
+```
+
+### Remote gate
+
+The first commit containing `web/` must run `.github/workflows/visual-registry-web.yml`. Completion requires:
+
+```text
+npm install
+npm run typecheck
+next build
+static export route assertion
+GitHub Actions artifact readback
+```
+
+Until that workflow succeeds, status remains `nextjs_web_source_ready_build_pending_generation_blocked`.

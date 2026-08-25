@@ -1,6 +1,6 @@
 # Visual Registry MVP 01
 
-Status: `passed_contract_and_query_validation_generation_blocked`
+Status: `nextjs_web_source_ready_build_pending_generation_blocked`
 
 ## Goal
 
@@ -40,6 +40,12 @@ prototype/
   image-case-output.mjs
 tests/
 evidence/
+web/
+  src/app/
+  src/components/
+  src/data/
+  package.json
+  next.config.mjs
 ```
 
 ## Asset boundaries
@@ -166,6 +172,37 @@ has:image has:receipt has:no-image has:no-receipt count:>=N
 
 A related result may miss exactly one free-text term. Structured filters remain strict. Related results are never silently merged into exact results.
 
+## Next.js Web query MVP
+
+The previous standalone static HTML prototype is superseded. The maintained Web source now lives at:
+
+```text
+experiments/visual-registry-mvp-01/web/
+```
+
+Implementation constraints:
+
+- Next.js App Router;
+- React Client Component for search and filters;
+- TypeScript source;
+- static export with `output: "export"`;
+- routes for `/`, `/styles/`, `/styles/[id]/`, `/prompts/`, and `/prompts/[id]/`;
+- Prompt text and ImageResult presentation remain separate UI regions;
+- no standalone source `index.html` or handwritten browser JavaScript;
+- no image is rendered until an ImageResult has a valid image URL and evidence identity.
+
+The Web app is a read-only projection. GitHub contracts and Drive images remain authoritative.
+
+Build gate:
+
+```bash
+cd web
+npm install
+npm run verify
+```
+
+The GitHub Actions workflow `.github/workflows/visual-registry-web.yml` performs the remote build and uploads `out/` as an artifact.
+
 ## Validation
 
 Run:
@@ -207,6 +244,6 @@ Not verified:
 - visual consistency or quality gains;
 - Story Studio/UI Spec runtime integration;
 - readiness for `skills` promotion;
-- public Web query interface.
+- public deployment and live browser validation of the Next.js Web interface.
 
 The next valid image execution must return four independent original files from one exact Prompt. Until then, the current PromptCase remains `generation_blocked`.
