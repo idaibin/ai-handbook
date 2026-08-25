@@ -94,7 +94,7 @@ local_initial_commit: b58624698cc2bcc4ef7bf3ea90e3b6e14127d1df
 bundle_readback: passed
 ```
 
-Not executed in the current environment:
+Not executed in that environment:
 
 ```text
 npm install
@@ -103,10 +103,83 @@ browser/E2E validation
 Vercel deployment
 ```
 
-### Blocker
+### Blocker at completion of UNIT_06
 
-The connected GitHub tool exposes writes to existing repositories but does not expose repository creation. `idaibin/prompts-hub` did not exist at the time of execution, so the source could not be pushed to a verified remote repository.
+The connected GitHub tool exposed writes to existing repositories but did not expose repository creation. `idaibin/prompts-hub` did not exist at that time.
+
+## UNIT_07_REMOTE_REPOSITORY_ACTIVATION
+
+### Evidence basis
+
+User reported:
+
+```text
+repository: idaibin/prompts-hub
+visibility: private
+branch: main
+commit: 2d9b9640228023e2e0c775a349a34124b4d8573a
+commit message: chore: complete project initialization
+local and remote SHA: matched
+working tree: clean
+npm run verify: passed
+production build: passed
+static pages generated: 16
+deployment: not verified
+```
+
+GitHub connector readback verified:
+
+```text
+repository exists: true
+visibility: private
+default branch: main
+remote main SHA: 2d9b9640228023e2e0c775a349a34124b4d8573a
+commit message: chore: complete project initialization
+parent: b58624698cc2bcc4ef7bf3ea90e3b6e14127d1df
+repository description: Browse visual styles, Prompt cases, and independent image results.
+```
+
+The commit tree contains the standalone Next.js application, `package-lock.json`, validation script, MIT license, project guidance, and Prompt/Style routes.
+
+### Validation classification
+
+```text
+repository_creation: verified
+remote_push_and_readback: verified
+private_visibility: verified
+local_npm_verify: user_reported
+remote_commit_status_checks: none
+production_deployment: not_verified
+live_browser_runtime: not_verified
+custom_domain: not_verified
+valid_independent_images: 0/4
+```
+
+The absence of GitHub commit-status checks means the user-reported local build must not be represented as GitHub Actions validation.
+
+### Gate decision
+
+```text
+status: repository_ready_deployment_not_verified
+code_authority: idaibin/prompts-hub@2d9b9640228023e2e0c775a349a34124b4d8573a
+experiment_authority: idaibin/ai-handbook
+large_image_asset_authority: Google Drive
+```
 
 ### Next valid action
 
-Create the empty `idaibin/prompts-hub` repository, then push/read back initial commit `b58624698cc2bcc4ef7bf3ea90e3b6e14127d1df`. Only after that should CI and Vercel deployment be configured.
+Deploy the exact remote commit and verify:
+
+```text
+deployment receipt and provider project identity
+production URL and commit SHA
+HTTP reachability
+browser rendering at desktop and mobile sizes
+search/filter behavior
+Style detail route
+PromptCase detail route
+truthful 0/4 image state
+custom domain prompt.idaibin.dev, if configured
+```
+
+Only after those checks pass may online operation move from `not_verified` to `verified`.
