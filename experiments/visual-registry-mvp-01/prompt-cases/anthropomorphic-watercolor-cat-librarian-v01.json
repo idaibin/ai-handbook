@@ -1,0 +1,138 @@
+{
+  "schema_version": "0.1",
+  "prompt_id": "anthropomorphic_watercolor_cat_librarian_v01",
+  "style_id": "anthropomorphic_watercolor",
+  "subject": "一只拟人化橘猫图书管理员穿简洁小马甲，坐在窗边木桌前阅读一本打开的书；桌上有一杯茶、一盆小绿植和两三本书。",
+  "prompt_text": "一张独立的横向插画：一只拟人化橘猫图书管理员穿简洁小马甲，坐在窗边木桌前阅读一本打开的书；桌上有一杯茶、一盆小绿植和两三本书。透明水彩与温暖儿童绘本风格，柔和自然光，纸张纹理可见，色彩清透克制，主体、动作和桌面物件清晰完整。不要文字、标题、边框、表格、拼版、信息图、UI、水印或多画面组合。",
+  "prompt_sha256": "7b9028e383835b574e0a25bcfb97f7e4ab9f34b9047918cdd86c1afe8fbec66f",
+  "tags": [
+    "anthropomorphic",
+    "watercolor",
+    "storybook",
+    "soft_natural_light",
+    "cat_librarian"
+  ],
+  "aspect_ratio": "4:3",
+  "generation_batches": [
+    {
+      "batch_id": "anthropomorphic_watercolor_cat_librarian_v01_batch_01",
+      "prompt_sha256": "7b9028e383835b574e0a25bcfb97f7e4ab9f34b9047918cdd86c1afe8fbec66f",
+      "requested_count": 4,
+      "provider": null,
+      "model": null,
+      "aspect_ratio": "4:3",
+      "quality": null,
+      "seed": null,
+      "parameters": {
+        "independent_files_required": true,
+        "contact_sheet_is_result": false,
+        "post_processing": "none"
+      },
+      "status": "blocked",
+      "failure": {
+        "type": "output_shape_violation",
+        "summary": "Available generation routes did not return four provider-native independent image files. ChatGPT Image repeatedly returned combined report/contact-sheet images; Adobe Firefly generation returned HTTP 403 twice.",
+        "attempt_evidence": [
+          {
+            "provider": "chatgpt_image",
+            "model": "chatgpt_image",
+            "outcome": "combined_output",
+            "provider_reference": "8b28cb60-74e9-48ba-ac62-85bd854fee1d",
+            "detail": "Returned one documentation-style image containing four panels instead of independent image files.",
+            "drive_file_id": "1vJSnmYh6zOPqGbkRPQl1Alo8s0niPRyy",
+            "artifact_sha256": "6b750bc2a9fa4b2e13262b0039c43f59f975e794a3aef4bd3c1cc038c49399b4"
+          },
+          {
+            "provider": "chatgpt_image",
+            "model": "chatgpt_image",
+            "outcome": "combined_output",
+            "provider_reference": "11167813-592a-4f04-99ff-9ce0517f1e86",
+            "detail": "Returned one Visual Registry report image containing four embedded results.",
+            "drive_file_id": "1kAvjhtRkjyM3XbgsR6hSw_MYjZGog_Wc",
+            "artifact_sha256": "e5bc05366ee78107913d0e218f8512d563eb6db9e0260a4d76cb80442bfe9566"
+          },
+          {
+            "provider": "chatgpt_image",
+            "model": "chatgpt_image",
+            "outcome": "combined_output",
+            "provider_reference": "714bfc22-3602-43f4-81a0-83572c8a364d",
+            "detail": "Returned one dashboard-style combined output despite an explicit standalone-image constraint.",
+            "drive_file_id": "1M904qhgguiU5v06vXZVEjHtUJEawlUBX",
+            "artifact_sha256": "601dfcc4f198dc9f9b4d4b935b01005e830feacbd2c5cd21a55bbdaba25c29c4"
+          },
+          {
+            "provider": "adobe_firefly",
+            "model": null,
+            "outcome": "http_error",
+            "provider_reference": null,
+            "detail": "image_generate failed twice with HTTP 403 from adobe.io after the required single retry.",
+            "drive_file_id": null,
+            "artifact_sha256": null
+          }
+        ]
+      },
+      "results": [
+        {
+          "result_id": "anthropomorphic_watercolor_cat_librarian_v01__r01",
+          "sequence": 1,
+          "file_name": "anthropomorphic_watercolor_cat_librarian_v01__r01.png",
+          "status": "pending",
+          "source_kind": "none",
+          "provider_receipt": null,
+          "drive_file_id": null,
+          "image_sha256": null,
+          "width": null,
+          "height": null,
+          "review_status": "not_started"
+        },
+        {
+          "result_id": "anthropomorphic_watercolor_cat_librarian_v01__r02",
+          "sequence": 2,
+          "file_name": "anthropomorphic_watercolor_cat_librarian_v01__r02.png",
+          "status": "pending",
+          "source_kind": "none",
+          "provider_receipt": null,
+          "drive_file_id": null,
+          "image_sha256": null,
+          "width": null,
+          "height": null,
+          "review_status": "not_started"
+        },
+        {
+          "result_id": "anthropomorphic_watercolor_cat_librarian_v01__r03",
+          "sequence": 3,
+          "file_name": "anthropomorphic_watercolor_cat_librarian_v01__r03.png",
+          "status": "pending",
+          "source_kind": "none",
+          "provider_receipt": null,
+          "drive_file_id": null,
+          "image_sha256": null,
+          "width": null,
+          "height": null,
+          "review_status": "not_started"
+        },
+        {
+          "result_id": "anthropomorphic_watercolor_cat_librarian_v01__r04",
+          "sequence": 4,
+          "file_name": "anthropomorphic_watercolor_cat_librarian_v01__r04.png",
+          "status": "pending",
+          "source_kind": "none",
+          "provider_receipt": null,
+          "drive_file_id": null,
+          "image_sha256": null,
+          "width": null,
+          "height": null,
+          "review_status": "not_started"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "status": "generation_blocked",
+    "provenance": "original_prompt_case",
+    "rights_status": "internal_original",
+    "consumers": [
+      "visual_registry"
+    ]
+  }
+}

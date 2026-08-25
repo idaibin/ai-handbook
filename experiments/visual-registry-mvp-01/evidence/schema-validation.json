@@ -27,6 +27,26 @@
         "subject_only_with_prompt",
         "unsupported_target"
       ]
+    },
+    {
+      "schema": "prompt-case.schema.json",
+      "validated": [
+        "anthropomorphic-watercolor-cat-librarian-v01.json"
+      ],
+      "rejected_negative_cases": [
+        "verified_without_evidence",
+        "blocked_without_failure",
+        "invalid_result_id"
+      ],
+      "cross_checks": [
+        "prompt_sha256_matches_prompt_text",
+        "batch_prompt_sha_matches_prompt_case",
+        "requested_count_matches_result_identities",
+        "contiguous_result_sequence",
+        "provider_native_required_for_counted_results",
+        "derived_composite_never_counted",
+        "blocked_status_has_failure_evidence"
+      ]
     }
   ]
 }

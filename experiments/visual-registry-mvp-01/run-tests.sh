@@ -10,6 +10,7 @@ python3 tests/validate_schema.py > evidence/schema-validation.json
 node tests/compiler.test.mjs > evidence/compiler-test.json
 node tests/query.test.mjs > evidence/query-test.json
 node tests/image-case.test.mjs > evidence/image-case-test.json
+node tests/prompt-case.test.mjs > evidence/prompt-case-test.json
 
 node prototype/demo.mjs > evidence/compiler-output.json
 node prototype/demo.mjs > evidence/compiler-output.rerun.json
@@ -29,16 +30,19 @@ cmp --silent evidence/image-case-prompts.json evidence/image-case-prompts.rerun.
 IMAGE_CASE_SHA="$(sha256sum evidence/image-case-prompts.json | awk '{print $1}')"
 rm evidence/image-case-prompts.rerun.json
 
-python3 - "$COMPILER_SHA" "$QUERY_SHA" "$IMAGE_CASE_SHA" <<'PY' > evidence/determinism-rerun.json
+PROMPT_CASE_SHA="$(sha256sum prompt-cases/anthropomorphic-watercolor-cat-librarian-v01.json | awk '{print $1}')"
+
+python3 - "$COMPILER_SHA" "$QUERY_SHA" "$IMAGE_CASE_SHA" "$PROMPT_CASE_SHA" <<'PY' > evidence/determinism-rerun.json
 import json
 import sys
 print(json.dumps({
     "status": "passed",
-    "process_runs_per_artifact": 2,
+    "process_runs_per_generated_artifact": 2,
     "byte_identical": True,
     "compiler_output_sha256": sys.argv[1],
     "query_index_sha256": sys.argv[2],
     "image_case_prompts_sha256": sys.argv[3],
+    "prompt_case_source_sha256": sys.argv[4],
 }, indent=2))
 PY
 
@@ -47,11 +51,13 @@ for file in \
   contracts/*.json \
   cases/*.json \
   image-cases/*.json \
+  prompt-cases/*.json \
   sources/source-audit.json \
   evidence/schema-validation.json \
   evidence/compiler-test.json \
   evidence/query-test.json \
   evidence/image-case-test.json \
+  evidence/prompt-case-test.json \
   evidence/compiler-output.json \
   evidence/query-index.json \
   evidence/image-case-prompts.json \
@@ -62,4 +68,4 @@ done
 python3 tests/generate_manifest.py > evidence/manifest.json
 python3 -m json.tool evidence/manifest.json >/dev/null
 
-printf 'visual-registry-mvp-01: all query and prompt-case checks passed\n'
+printf 'visual-registry-mvp-01: all batch, query, and prompt-case checks passed\n'

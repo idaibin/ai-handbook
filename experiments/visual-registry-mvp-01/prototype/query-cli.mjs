@@ -2,7 +2,14 @@
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { compilePrompt } from "../dist/prototype/compiler.js";
-import { catalogSnapshot, findCatalogRecord, loadCatalog, queryCatalog } from "./catalog.mjs";
+import {
+  catalogSnapshot,
+  findCatalogRecord,
+  loadCatalog,
+  parseQueryExpression,
+  queryCatalog,
+  queryCatalogWithRelated,
+} from "./catalog.mjs";
 import { buildPromptSet } from "./image-case-demo.mjs";
 
 function parse(argv) {
@@ -28,8 +35,15 @@ function parse(argv) {
 
 function usage(message) {
   if (message) process.stderr.write(`${message}\n\n`);
-  process.stderr.write(`Usage:\n  node prototype/query-cli.mjs list [--kind contract|image_case] [--category X] [--consumer X] [--status X] [--target X] [--json]\n  node prototype/query-cli.mjs search <query> [filters] [--limit N] [--json]\n  node prototype/query-cli.mjs show <id> [--json]\n  node prototype/query-cli.mjs compile <contract-id> --subject <text> --target gemini|flux|midjourney [--json]\n  node prototype/query-cli.mjs examples [query] [filters] [--json]\n  node prototype/query-cli.mjs prompt-set <image-case-id> [--json]\n`);
+  process.stderr.write(`Usage:\n  node prototype/query-cli.mjs list [filters] [--json]\n  node prototype/query-cli.mjs search <query expression> [filters] [--related] [--limit N] [--json]\n  node prototype/query-cli.mjs show <id> [--json]\n  node prototype/query-cli.mjs compile <contract-id> --subject <text> --target gemini|flux|midjourney [--json]\n  node prototype/query-cli.mjs examples [query expression] [filters] [--related] [--json]\n  node prototype/query-cli.mjs prompt-set <image-case-id> [--json]\n  node prototype/query-cli.mjs results <prompt-id> [--json]\n\nFilters:\n  --kind contract|image_case|prompt_case|generation_batch|image_result\n  --category X --consumer X --status X --target X --style X\n  --provider X --model X --has-image true|false --has-receipt true|false\n  --count-min N\n\nQuery expression fields:\n  style:X provider:X model:X status:X kind:X consumer:X target:X\n  has:image has:receipt has:no-image has:no-receipt count:>=N\n`);
   process.exitCode = 2;
+}
+
+function parseBoolean(name, value) {
+  if (value === undefined) return undefined;
+  if (value === true || value === "true") return true;
+  if (value === false || value === "false") return false;
+  throw new Error(`Invalid ${name}: ${value}`);
 }
 
 function filtersFrom(flags) {
@@ -37,14 +51,46 @@ function filtersFrom(flags) {
   if (limit !== undefined && (!Number.isInteger(limit) || limit <= 0)) {
     throw new Error(`Invalid limit: ${flags.limit}`);
   }
+
+  const countMin = flags.count_min === undefined ? undefined : Number(flags.count_min);
+  if (countMin !== undefined && (!Number.isInteger(countMin) || countMin < 0)) {
+    throw new Error(`Invalid count-min: ${flags.count_min}`);
+  }
+
   return {
     kind: flags.kind,
     category: flags.category,
     consumer: flags.consumer,
     status: flags.status,
     target: flags.target,
+    style: flags.style,
+    provider: flags.provider,
+    model: flags.model,
+    has_image: parseBoolean("has-image", flags.has_image),
+    has_receipt: parseBoolean("has-receipt", flags.has_receipt),
+    count_min: countMin,
     limit,
   };
+}
+
+function compactFilters(filters) {
+  return Object.fromEntries(Object.entries(filters).filter(([, value]) => value !== undefined));
+}
+
+function printArray(value) {
+  for (const item of value) {
+    const context = [
+      item.kind,
+      item.category,
+      item.status,
+      item.style_id,
+      ...(item.providers ?? []),
+      ...(item.consumers ?? []),
+    ]
+      .filter(Boolean)
+      .join(" | ");
+    process.stdout.write(`${item.id}\t${item.name}\t${context}\n`);
+  }
 }
 
 function print(value, json) {
@@ -54,16 +100,32 @@ function print(value, json) {
   }
 
   if (Array.isArray(value)) {
-    for (const item of value) {
-      const context = [item.kind, item.category, item.status, ...(item.consumers ?? [])]
-        .filter(Boolean)
-        .join(" | ");
-      process.stdout.write(`${item.id}\t${item.name}\t${context}\n`);
-    }
+    printArray(value);
+    return;
+  }
+
+  if (value && Array.isArray(value.exact_results) && Array.isArray(value.related_results)) {
+    process.stdout.write("EXACT\n");
+    printArray(value.exact_results);
+    process.stdout.write("RELATED\n");
+    printArray(value.related_results);
     return;
   }
 
   process.stdout.write(`${JSON.stringify(value, null, 2)}\n`);
+}
+
+function runSearch(catalog, rawQuery, flags, forcedFilters = {}) {
+  const parsedExpression = parseQueryExpression(rawQuery);
+  const filters = {
+    ...parsedExpression.filters,
+    ...compactFilters(filtersFrom(flags)),
+    ...forcedFilters,
+  };
+  if (flags.related === true) {
+    return queryCatalogWithRelated(catalog, parsedExpression.query, filters);
+  }
+  return queryCatalog(catalog, parsedExpression.query, filters);
 }
 
 const parsed = parse(process.argv.slice(2));
@@ -80,12 +142,12 @@ if (!command) {
     if (command === "list") {
       print(queryCatalog(catalog, "", filtersFrom(parsed.flags)), asJson);
     } else if (command === "search") {
-      const query = parsed.positional.join(" ").trim();
-      if (!query) throw new Error("search requires a query");
-      print(queryCatalog(catalog, query, filtersFrom(parsed.flags)), asJson);
+      const rawQuery = parsed.positional.join(" ").trim();
+      if (!rawQuery) throw new Error("search requires a query");
+      print(runSearch(catalog, rawQuery, parsed.flags), asJson);
     } else if (command === "examples") {
-      const query = parsed.positional.join(" ").trim();
-      print(queryCatalog(catalog, query, { ...filtersFrom(parsed.flags), kind: "image_case" }), asJson);
+      const rawQuery = parsed.positional.join(" ").trim();
+      print(runSearch(catalog, rawQuery, parsed.flags, { kind: "image_case" }), asJson);
     } else if (command === "show") {
       const id = parsed.positional[0];
       if (!id) throw new Error("show requires an id");
@@ -117,6 +179,21 @@ if (!command) {
         throw new Error(`Missing contract: ${imageCase.document.contract_id}`);
       }
       print(buildPromptSet(imageCase.document, contract.document), true);
+    } else if (command === "results") {
+      const id = parsed.positional[0];
+      if (!id) throw new Error("results requires a prompt id");
+      const promptCase = findCatalogRecord(catalog, id);
+      if (!promptCase || promptCase.kind !== "prompt_case") throw new Error(`Unknown prompt id: ${id}`);
+      const results = promptCase.document.generation_batches.flatMap((batch) =>
+        batch.results.map((result) => ({
+          prompt_id: promptCase.document.prompt_id,
+          batch_id: batch.batch_id,
+          provider: batch.provider,
+          model: batch.model,
+          ...result,
+        })),
+      );
+      print(results, true);
     } else if (command === "snapshot") {
       print(catalogSnapshot(catalog), true);
     } else {

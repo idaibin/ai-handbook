@@ -1,0 +1,479 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://idaibin.dev/schemas/prompt-case/0.1.json",
+  "title": "Prompt Case 1:N v0.1",
+  "description": "A queryable PromptCase with one immutable prompt identity, one or more GenerationBatch executions, and independent ImageResult records.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "prompt_id",
+    "style_id",
+    "subject",
+    "prompt_text",
+    "prompt_sha256",
+    "tags",
+    "aspect_ratio",
+    "generation_batches",
+    "metadata"
+  ],
+  "$defs": {
+    "token": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"
+    },
+    "tokenArray": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/token"
+      }
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "nullableSha256": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/sha256"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "nullableString": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "result_id",
+        "sequence",
+        "file_name",
+        "status",
+        "source_kind",
+        "provider_receipt",
+        "drive_file_id",
+        "image_sha256",
+        "width",
+        "height"
+      ],
+      "properties": {
+        "result_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*__r[0-9]{2}$"
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 99
+        },
+        "file_name": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*__r[0-9]{2}\\.(png|jpg|jpeg|webp)$"
+        },
+        "status": {
+          "enum": [
+            "pending",
+            "generated_unverified",
+            "verified",
+            "rejected",
+            "invalid_attempt"
+          ]
+        },
+        "source_kind": {
+          "enum": [
+            "none",
+            "provider_native",
+            "derived_from_composite"
+          ]
+        },
+        "provider_receipt": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "drive_file_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "image_sha256": {
+          "$ref": "#/$defs/nullableSha256"
+        },
+        "width": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "height": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "review_status": {
+          "enum": [
+            "not_started",
+            "pending",
+            "passed",
+            "failed"
+          ]
+        },
+        "invalid_reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "generated_unverified",
+                  "verified",
+                  "rejected"
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "source_kind": {
+                "const": "provider_native"
+              },
+              "provider_receipt": {
+                "type": "string",
+                "minLength": 1
+              },
+              "drive_file_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "image_sha256": {
+                "$ref": "#/$defs/sha256"
+              },
+              "width": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "pending"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "source_kind": {
+                "const": "none"
+              },
+              "provider_receipt": {
+                "type": "null"
+              },
+              "drive_file_id": {
+                "type": "null"
+              },
+              "image_sha256": {
+                "type": "null"
+              },
+              "width": {
+                "type": "null"
+              },
+              "height": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "invalid_attempt"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "required": [
+              "invalid_reason"
+            ]
+          }
+        }
+      ]
+    },
+    "failure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "summary",
+        "attempt_evidence"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "provider_auth",
+            "provider_unavailable",
+            "provider_routing",
+            "output_shape_violation",
+            "unknown"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "attempt_evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "provider",
+              "outcome"
+            ],
+            "properties": {
+              "provider": {
+                "type": "string",
+                "minLength": 1
+              },
+              "model": {
+                "$ref": "#/$defs/nullableString"
+              },
+              "outcome": {
+                "enum": [
+                  "http_error",
+                  "combined_output",
+                  "invalid_output",
+                  "unknown"
+                ]
+              },
+              "provider_reference": {
+                "$ref": "#/$defs/nullableString"
+              },
+              "detail": {
+                "type": "string",
+                "minLength": 1
+              },
+              "drive_file_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "artifact_sha256": {
+                "oneOf": [
+                  {
+                    "$ref": "#/$defs/sha256"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "batch": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "batch_id",
+        "prompt_sha256",
+        "requested_count",
+        "provider",
+        "model",
+        "aspect_ratio",
+        "quality",
+        "seed",
+        "parameters",
+        "status",
+        "results"
+      ],
+      "properties": {
+        "batch_id": {
+          "$ref": "#/$defs/token"
+        },
+        "prompt_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "requested_count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "provider": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "model": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "aspect_ratio": {
+          "enum": [
+            "1:1",
+            "4:3",
+            "3:4",
+            "16:9",
+            "9:16"
+          ]
+        },
+        "quality": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "seed": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "parameters": {
+          "type": "object"
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "running",
+            "blocked",
+            "partially_generated",
+            "generated",
+            "reviewed",
+            "rejected"
+          ]
+        },
+        "failure": {
+          "$ref": "#/$defs/failure"
+        },
+        "results": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/result"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "blocked"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "required": [
+              "failure"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "prompt_id": {
+      "$ref": "#/$defs/token"
+    },
+    "style_id": {
+      "$ref": "#/$defs/token"
+    },
+    "subject": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prompt_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prompt_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "tags": {
+      "$ref": "#/$defs/tokenArray"
+    },
+    "aspect_ratio": {
+      "enum": [
+        "1:1",
+        "4:3",
+        "3:4",
+        "16:9",
+        "9:16"
+      ]
+    },
+    "generation_batches": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/batch"
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "provenance",
+        "rights_status",
+        "consumers"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "prompt_ready",
+            "generation_pending",
+            "generation_blocked",
+            "partially_generated",
+            "generated",
+            "reviewed"
+          ]
+        },
+        "provenance": {
+          "const": "original_prompt_case"
+        },
+        "rights_status": {
+          "enum": [
+            "internal_original",
+            "internal_candidate_only",
+            "cleared_for_publication"
+          ]
+        },
+        "consumers": {
+          "$ref": "#/$defs/tokenArray"
+        }
+      }
+    }
+  }
+}

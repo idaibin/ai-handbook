@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import copy
+import hashlib
 import json
 from pathlib import Path
 
@@ -34,11 +35,11 @@ contract_validator, contract_paths, validated_contracts = validate_directory(
 image_case_validator, image_case_paths, validated_image_cases = validate_directory(
     "schema/image-generation-case.schema.json", "image-cases"
 )
+prompt_case_validator, prompt_case_paths, validated_prompt_cases = validate_directory(
+    "schema/prompt-case.schema.json", "prompt-cases"
+)
 
-contract_ids = {
-    json.loads(path.read_text())["id"]
-    for path in contract_paths
-}
+contract_ids = {json.loads(path.read_text())["id"] for path in contract_paths}
 for path in image_case_paths:
     instance = json.loads(path.read_text())
     if instance["contract_id"] not in contract_ids:
@@ -47,6 +48,40 @@ for path in image_case_paths:
     expected = {"subject_only", "manual_reference", "contract_compiled"}
     if set(kinds) != expected or len(kinds) != len(expected):
         raise SystemExit(f"{path.name} must contain exactly one A/B/C prompt variant")
+
+for path in prompt_case_paths:
+    instance = json.loads(path.read_text())
+    actual_prompt_sha = hashlib.sha256(instance["prompt_text"].encode("utf-8")).hexdigest()
+    if actual_prompt_sha != instance["prompt_sha256"]:
+        raise SystemExit(
+            f"{path.name} prompt_sha256 mismatch: {instance['prompt_sha256']} != {actual_prompt_sha}"
+        )
+
+    for batch in instance["generation_batches"]:
+        if batch["prompt_sha256"] != instance["prompt_sha256"]:
+            raise SystemExit(f"{path.name} batch prompt_sha256 differs from PromptCase")
+        if len(batch["results"]) != batch["requested_count"]:
+            raise SystemExit(
+                f"{path.name} batch {batch['batch_id']} result identity count does not equal requested_count"
+            )
+        sequences = [result["sequence"] for result in batch["results"]]
+        if sequences != list(range(1, batch["requested_count"] + 1)):
+            raise SystemExit(f"{path.name} batch result sequence must be contiguous and ordered")
+        for result in batch["results"]:
+            expected_id = f"{instance['prompt_id']}__r{result['sequence']:02d}"
+            if result["result_id"] != expected_id:
+                raise SystemExit(
+                    f"{path.name} result identity mismatch: {result['result_id']} != {expected_id}"
+                )
+            if result["status"] in {"generated_unverified", "verified", "rejected"}:
+                if result["source_kind"] != "provider_native":
+                    raise SystemExit(f"{path.name} counted result is not provider_native")
+            if result["source_kind"] == "derived_from_composite" and result["status"] != "invalid_attempt":
+                raise SystemExit(f"{path.name} derived composite result cannot be counted")
+
+    if instance["metadata"]["status"] == "generation_blocked":
+        if not any(batch["status"] == "blocked" for batch in instance["generation_batches"]):
+            raise SystemExit(f"{path.name} generation_blocked without a blocked batch")
 
 base = json.loads(contract_paths[0].read_text())
 contract_negative_cases = []
@@ -97,18 +132,59 @@ if not list(image_case_validator.iter_errors(bad_target)):
     raise SystemExit("image case schema accepted unsupported target")
 image_negative_cases.append("unsupported_target")
 
-print(json.dumps({
-    "status": "passed",
-    "schemas": [
+prompt_base = json.loads(prompt_case_paths[0].read_text())
+prompt_negative_cases = []
+
+fake_generated = copy.deepcopy(prompt_base)
+fake_result = fake_generated["generation_batches"][0]["results"][0]
+fake_result["status"] = "verified"
+if not list(prompt_case_validator.iter_errors(fake_generated)):
+    raise SystemExit("prompt case schema accepted verified result without evidence")
+prompt_negative_cases.append("verified_without_evidence")
+
+blocked_without_failure = copy.deepcopy(prompt_base)
+del blocked_without_failure["generation_batches"][0]["failure"]
+if not list(prompt_case_validator.iter_errors(blocked_without_failure)):
+    raise SystemExit("prompt case schema accepted blocked batch without failure")
+prompt_negative_cases.append("blocked_without_failure")
+
+bad_result_id = copy.deepcopy(prompt_base)
+bad_result_id["generation_batches"][0]["results"][0]["result_id"] = "bad_result"
+if not list(prompt_case_validator.iter_errors(bad_result_id)):
+    raise SystemExit("prompt case schema accepted invalid result id")
+prompt_negative_cases.append("invalid_result_id")
+
+print(
+    json.dumps(
         {
-            "schema": "visual-contract.schema.json",
-            "validated": validated_contracts,
-            "rejected_negative_cases": contract_negative_cases,
+            "status": "passed",
+            "schemas": [
+                {
+                    "schema": "visual-contract.schema.json",
+                    "validated": validated_contracts,
+                    "rejected_negative_cases": contract_negative_cases,
+                },
+                {
+                    "schema": "image-generation-case.schema.json",
+                    "validated": validated_image_cases,
+                    "rejected_negative_cases": image_negative_cases,
+                },
+                {
+                    "schema": "prompt-case.schema.json",
+                    "validated": validated_prompt_cases,
+                    "rejected_negative_cases": prompt_negative_cases,
+                    "cross_checks": [
+                        "prompt_sha256_matches_prompt_text",
+                        "batch_prompt_sha_matches_prompt_case",
+                        "requested_count_matches_result_identities",
+                        "contiguous_result_sequence",
+                        "provider_native_required_for_counted_results",
+                        "derived_composite_never_counted",
+                        "blocked_status_has_failure_evidence",
+                    ],
+                },
+            ],
         },
-        {
-            "schema": "image-generation-case.schema.json",
-            "validated": validated_image_cases,
-            "rejected_negative_cases": image_negative_cases,
-        },
-    ],
-}, indent=2))
+        indent=2,
+    )
+)

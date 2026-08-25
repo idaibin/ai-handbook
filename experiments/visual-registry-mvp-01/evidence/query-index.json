@@ -10,7 +10,14 @@
       "story_studio"
     ],
     "status": "golden_candidate",
-    "target": null
+    "target": null,
+    "style_id": "historical_han_realism",
+    "providers": [],
+    "models": [],
+    "has_image": false,
+    "has_receipt": false,
+    "result_count": 0,
+    "requested_count": null
   },
   {
     "kind": "contract",
@@ -23,7 +30,14 @@
       "createway"
     ],
     "status": "golden_candidate",
-    "target": null
+    "target": null,
+    "style_id": "minimal_tech_cover",
+    "providers": [],
+    "models": [],
+    "has_image": false,
+    "has_receipt": false,
+    "result_count": 0,
+    "requested_count": null
   },
   {
     "kind": "contract",
@@ -37,7 +51,34 @@
       "dev_frontend"
     ],
     "status": "golden_candidate",
-    "target": null
+    "target": null,
+    "style_id": "saas_bento_dashboard",
+    "providers": [],
+    "models": [],
+    "has_image": false,
+    "has_receipt": false,
+    "result_count": 0,
+    "requested_count": null
+  },
+  {
+    "kind": "generation_batch",
+    "id": "anthropomorphic_watercolor_cat_librarian_v01_batch_01",
+    "name": "Generation batch for anthropomorphic_watercolor_cat_librarian_v01",
+    "description": "Available generation routes did not return four provider-native independent image files. ChatGPT Image repeatedly returned combined report/contact-sheet images; Adobe Firefly generation returned HTTP 403 twice.",
+    "path": "prompt-cases/anthropomorphic-watercolor-cat-librarian-v01.json",
+    "category": "generation_batch",
+    "consumers": [
+      "visual_registry"
+    ],
+    "status": "blocked",
+    "target": null,
+    "style_id": "anthropomorphic_watercolor",
+    "providers": [],
+    "models": [],
+    "has_image": false,
+    "has_receipt": false,
+    "result_count": 0,
+    "requested_count": 4
   },
   {
     "kind": "image_case",
@@ -50,7 +91,16 @@
       "story_studio"
     ],
     "status": "prompt_set_ready",
-    "target": "gemini"
+    "target": "gemini",
+    "style_id": "historical_han_realism",
+    "providers": [
+      "gemini"
+    ],
+    "models": [],
+    "has_image": false,
+    "has_receipt": false,
+    "result_count": 0,
+    "requested_count": null
   },
   {
     "kind": "image_case",
@@ -63,6 +113,115 @@
       "ui_spec"
     ],
     "status": "prompt_set_ready",
-    "target": "gemini"
+    "target": "gemini",
+    "style_id": "saas_bento_dashboard",
+    "providers": [
+      "gemini"
+    ],
+    "models": [],
+    "has_image": false,
+    "has_receipt": false,
+    "result_count": 0,
+    "requested_count": null
+  },
+  {
+    "kind": "image_result",
+    "id": "anthropomorphic_watercolor_cat_librarian_v01__r01",
+    "name": "anthropomorphic_watercolor_cat_librarian_v01__r01.png",
+    "description": "一只拟人化橘猫图书管理员穿简洁小马甲，坐在窗边木桌前阅读一本打开的书；桌上有一杯茶、一盆小绿植和两三本书。",
+    "path": "prompt-cases/anthropomorphic-watercolor-cat-librarian-v01.json",
+    "category": "image_result",
+    "consumers": [
+      "visual_registry"
+    ],
+    "status": "pending",
+    "target": null,
+    "style_id": "anthropomorphic_watercolor",
+    "providers": [],
+    "models": [],
+    "has_image": false,
+    "has_receipt": false,
+    "result_count": 0,
+    "requested_count": 1
+  },
+  {
+    "kind": "image_result",
+    "id": "anthropomorphic_watercolor_cat_librarian_v01__r02",
+    "name": "anthropomorphic_watercolor_cat_librarian_v01__r02.png",
+    "description": "一只拟人化橘猫图书管理员穿简洁小马甲，坐在窗边木桌前阅读一本打开的书；桌上有一杯茶、一盆小绿植和两三本书。",
+    "path": "prompt-cases/anthropomorphic-watercolor-cat-librarian-v01.json",
+    "category": "image_result",
+    "consumers": [
+      "visual_registry"
+    ],
+    "status": "pending",
+    "target": null,
+    "style_id": "anthropomorphic_watercolor",
+    "providers": [],
+    "models": [],
+    "has_image": false,
+    "has_receipt": false,
+    "result_count": 0,
+    "requested_count": 1
+  },
+  {
+    "kind": "image_result",
+    "id": "anthropomorphic_watercolor_cat_librarian_v01__r03",
+    "name": "anthropomorphic_watercolor_cat_librarian_v01__r03.png",
+    "description": "一只拟人化橘猫图书管理员穿简洁小马甲，坐在窗边木桌前阅读一本打开的书；桌上有一杯茶、一盆小绿植和两三本书。",
+    "path": "prompt-cases/anthropomorphic-watercolor-cat-librarian-v01.json",
+    "category": "image_result",
+    "consumers": [
+      "visual_registry"
+    ],
+    "status": "pending",
+    "target": null,
+    "style_id": "anthropomorphic_watercolor",
+    "providers": [],
+    "models": [],
+    "has_image": false,
+    "has_receipt": false,
+    "result_count": 0,
+    "requested_count": 1
+  },
+  {
+    "kind": "image_result",
+    "id": "anthropomorphic_watercolor_cat_librarian_v01__r04",
+    "name": "anthropomorphic_watercolor_cat_librarian_v01__r04.png",
+    "description": "一只拟人化橘猫图书管理员穿简洁小马甲，坐在窗边木桌前阅读一本打开的书；桌上有一杯茶、一盆小绿植和两三本书。",
+    "path": "prompt-cases/anthropomorphic-watercolor-cat-librarian-v01.json",
+    "category": "image_result",
+    "consumers": [
+      "visual_registry"
+    ],
+    "status": "pending",
+    "target": null,
+    "style_id": "anthropomorphic_watercolor",
+    "providers": [],
+    "models": [],
+    "has_image": false,
+    "has_receipt": false,
+    "result_count": 0,
+    "requested_count": 1
+  },
+  {
+    "kind": "prompt_case",
+    "id": "anthropomorphic_watercolor_cat_librarian_v01",
+    "name": "anthropomorphic_watercolor: 一只拟人化橘猫图书管理员穿简洁小马甲，坐在窗边木桌前阅读一本打开的书；桌上有一杯茶、一盆小绿植和两三本书。",
+    "description": "一只拟人化橘猫图书管理员穿简洁小马甲，坐在窗边木桌前阅读一本打开的书；桌上有一杯茶、一盆小绿植和两三本书。",
+    "path": "prompt-cases/anthropomorphic-watercolor-cat-librarian-v01.json",
+    "category": "illustration",
+    "consumers": [
+      "visual_registry"
+    ],
+    "status": "generation_blocked",
+    "target": null,
+    "style_id": "anthropomorphic_watercolor",
+    "providers": [],
+    "models": [],
+    "has_image": false,
+    "has_receipt": false,
+    "result_count": 0,
+    "requested_count": 4
   }
 ]

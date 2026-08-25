@@ -1,7 +1,8 @@
 {
   "basis": {
-    "commit_before_implementation": "44cb4312a34e4082a79e67829a3047a822477794",
+    "commit_before_implementation": "ee0969c45407380a3d8a343b655dae22c8b5cfdb",
     "design_path": "research/visual-registry/2026-08-24-visual-registry-mvp-01.md",
+    "drive_contract": "visual-registry-prompt-1vn-contract-v0.1.json",
     "repository": "idaibin/ai-handbook"
   },
   "environment": {
@@ -17,12 +18,12 @@
       "sha256": "ed19d3c9c8a5e34d0179e0b1a9c2907d2e657738733e4a432a8cf81c76ce56f1"
     },
     "EXECUTION.md": {
-      "bytes": 3157,
-      "sha256": "29656904f4ef82f79bec919307be8177ff54dd6a66bed08e0cf0a18cca777044"
+      "bytes": 3718,
+      "sha256": "b3b0fbff524a37a83ac067326b5b52c518927faf1526204a6838f189096f53b2"
     },
     "README.md": {
-      "bytes": 5135,
-      "sha256": "ffa82ced4be6d3fae587cc3d40575eabdf939d5f33766937109f6819a7fb2bba"
+      "bytes": 5979,
+      "sha256": "6501cadf13ee1ec3f24e119db6ef282391defe44f7bd43be9fc8239b3932cb6f"
     },
     "SOURCES.md": {
       "bytes": 1887,
@@ -52,6 +53,10 @@
       "bytes": 1857,
       "sha256": "b763f42bb1bca20c75fec9b2b281af2fcd668f1e053b94766f5516420a386c2d"
     },
+    "evidence/clean-copy-validation.json": {
+      "bytes": 1163,
+      "sha256": "5533a5c2123ed50a30006ffbf6a7b130239fe69a49a8691967a60e4027e092b8"
+    },
     "evidence/compiler-output.json": {
       "bytes": 84780,
       "sha256": "46b3be7e6600c8e7284324e1a85cd1ee6cf6093fce365a7fc187efe346b01edb"
@@ -61,8 +66,8 @@
       "sha256": "e5db6a8e085283349ba32832f3a7feb1d0e04d5b9d3b6e0d85b9eb876479b8d0"
     },
     "evidence/determinism-rerun.json": {
-      "bytes": 372,
-      "sha256": "23cf5b65ff36a4bf7b63b1504f41e07864113cfa76f4ec5e136531238a96a185"
+      "bytes": 481,
+      "sha256": "4bd6efe2796328f94c84e7503cf53774f4b971c54569e977e6ba021c3f94cff0"
     },
     "evidence/image-case-prompts.json": {
       "bytes": 7596,
@@ -72,17 +77,21 @@
       "bytes": 316,
       "sha256": "085620a8275059620de8c7d09a6b11f543824bb63e62903787cfe396868d309c"
     },
+    "evidence/prompt-case-test.json": {
+      "bytes": 874,
+      "sha256": "0e3b0081538765d870d57104b1a8c1a599aac5b73a31a336b1f16a31e5912b54"
+    },
     "evidence/query-index.json": {
-      "bytes": 2389,
-      "sha256": "763a4d6c55f1acc4eabe128624d7151a1da5e39929261da5315388fe303a9115"
+      "bytes": 7984,
+      "sha256": "15a17fa6ffa131dd427928f67a46283d7f7b2ea24d243593f9e9049625301957"
     },
     "evidence/query-test.json": {
-      "bytes": 257,
-      "sha256": "5ade39e5ff284c1be980888f0f21a25849e08f83eb092f0e4da71e21bf59bc3b"
+      "bytes": 435,
+      "sha256": "44fface3fe711c2f6fd34a82316a33eb733ef55f1ff9cfafd5024bd9e4296664"
     },
     "evidence/schema-validation.json": {
-      "bytes": 751,
-      "sha256": "00a9dee69fc87a3ec992e9ff3863fc7cfc5fa7360a5d9691ecbbd7ca7fbaa305"
+      "bytes": 1402,
+      "sha256": "5dbf23549e80685544253710520f934d7dea727607c20fad01f292f45d090742"
     },
     "image-cases/han-writing-room-prompt-comparison.json": {
       "bytes": 2068,
@@ -94,15 +103,19 @@
     },
     "package.json": {
       "bytes": 499,
-      "sha256": "0e5bf050ef9f83a448993107593564d42c4b4431b520ca326eee5df1e448cb22"
+      "sha256": "5f0893d3a56ca419457f9f4c69f862c7dd599d52401a7f96643d52d2a84416b3"
+    },
+    "prompt-cases/anthropomorphic-watercolor-cat-librarian-v01.json": {
+      "bytes": 5774,
+      "sha256": "344687d1fa87d734438e5f35549a0b650acbadeb9fda98b14f3c3b7b1035832c"
     },
     "prototype/adapters.ts": {
       "bytes": 5143,
       "sha256": "7ae195ede12279fd1f3c0a7a637800f059c507147cabb7f890b6bb822b31d700"
     },
     "prototype/catalog.mjs": {
-      "bytes": 7232,
-      "sha256": "a75c8818437e56a49dde6997516118d9d4e05d89ff6dea38dbe5761c17d4598d"
+      "bytes": 17225,
+      "sha256": "a6bca2ce2a9a95db7e7a74e3bf4b126844ff8b407844feece33a8af95f87e029"
     },
     "prototype/compiler.ts": {
       "bytes": 5045,
@@ -121,8 +134,8 @@
       "sha256": "a94685ce4deb196905a07be99223c7a4ff0b22413c43912726a8695f032cb815"
     },
     "prototype/query-cli.mjs": {
-      "bytes": 5136,
-      "sha256": "7d6f6f9476f601a17ce9ea457f1c4bb1172b221ccc673d1e430ecc2b0cb8b6fc"
+      "bytes": 7918,
+      "sha256": "a0c4eb12a46233784dc86398b0aacace23bf797a62aac0361350b34d358acc50"
     },
     "prototype/types.ts": {
       "bytes": 1735,
@@ -133,12 +146,16 @@
       "sha256": "756cc9e506ae4ee1a6f6c0507088b5cfc0dc8ba350fb2d2d46f1ffa72033adb6"
     },
     "run-tests.sh": {
-      "bytes": 2406,
-      "sha256": "7b83e74973bc5c9e76114d0520505cc45b49e372ca093cd4a34b82b5db67dbd6"
+      "bytes": 2727,
+      "sha256": "ba4f0d7d5501818e139bd9997234039e4f6403832d4b8a82d13617003117e655"
     },
     "schema/image-generation-case.schema.json": {
       "bytes": 4471,
       "sha256": "26ff9c6c7829350cc3a148e41e5be5ed74e75e085752034a4477d25b8685b35d"
+    },
+    "schema/prompt-case.schema.json": {
+      "bytes": 10568,
+      "sha256": "ca5ad2d5cbddb21144486eaacaea68ca3874b44eed7f20bc8d2fd02659a56bc9"
     },
     "schema/visual-contract.schema.json": {
       "bytes": 5185,
@@ -153,20 +170,24 @@
       "sha256": "a890b4c663d41a58d0f6963c784499b17ea4606c817c625e34a19b661b0706aa"
     },
     "tests/generate_manifest.py": {
-      "bytes": 4165,
-      "sha256": "90a62520612e2d82a3dbfa39ed27b26404b0bb6724c76fc5a534fd0f815eae08"
+      "bytes": 5077,
+      "sha256": "5d76b46a11e95057edcf0c548f920695d3503cb559766ab8b854b1987555dca6"
     },
     "tests/image-case.test.mjs": {
       "bytes": 2669,
       "sha256": "87d502c6531d35e6e156faa0d8f130e259c2ba441a7fec03700fa9c9a2cf3319"
     },
+    "tests/prompt-case.test.mjs": {
+      "bytes": 2522,
+      "sha256": "6ee0f9855552d4eaf74e7fa50ae0e71349808ea627c7d6a106d7fc37f7e1f76d"
+    },
     "tests/query.test.mjs": {
-      "bytes": 3024,
-      "sha256": "558546c2dd9981dab58e4f2494c8ac19b8a24bdcff60829057af7111dbac58f3"
+      "bytes": 6111,
+      "sha256": "828f6c129eab425e2d5743ff18468b064b28156540716d67ac87f546e3916358"
     },
     "tests/validate_schema.py": {
-      "bytes": 4463,
-      "sha256": "90bcd40df7d355bd79c7225373bd0f231134490e8a49971eff2ee7d331432558"
+      "bytes": 8582,
+      "sha256": "e158476d2585394deea06756b2fc5d1e0d5a6580f689e5a80592f21629795be1"
     },
     "tsconfig.json": {
       "bytes": 267,
@@ -174,7 +195,9 @@
     }
   },
   "not_verified": [
-    "real_provider_image_generation",
+    "four_provider_native_independent_images",
+    "provider_receipts_for_image_results",
+    "image_sha256_and_dimensions",
     "different_prompt_image_output_examples",
     "cross_provider_visual_similarity",
     "quality_against_manually_authored_prompt_baseline",
@@ -183,43 +206,56 @@
     "skills_promotion_readiness",
     "public_web_query_interface"
   ],
-  "status": "passed_query_and_prompt_case_validation",
+  "status": "passed_contract_and_query_validation_generation_blocked",
   "trial": {
     "adapters": [
       "gemini",
       "flux",
       "midjourney"
     ],
-    "catalog_records": 5,
+    "catalog_records": 11,
     "command": "./run-tests.sh",
     "compiler_compilations": 9,
     "consumer_cases": 3,
     "contracts": 3,
+    "generation_batches": 1,
     "image_comparison_cases": 2,
-    "planned_images": 6,
-    "prompt_variants_per_image_case": 3
+    "independent_result_identities": 4,
+    "invalid_generation_attempt_evidence_entries": 4,
+    "prompt_cases": 1,
+    "provider_native_images": 0,
+    "query_modes": [
+      "exact_results",
+      "related_results"
+    ]
   },
-  "unit": "UNIT_03_QUERY_AND_IMAGE_CASES",
+  "unit": "UNIT_04_GENERATION_BATCH_QUERY_CONTRACT",
   "validation_level": "static_unit_and_clean_copy_tests",
   "verified": [
-    "draft_2020_12_schema_validation",
+    "draft_2020_12_visual_contract_schema_validation",
+    "draft_2020_12_image_case_schema_validation",
+    "draft_2020_12_prompt_case_schema_validation",
     "provider_fields_rejected_by_visual_contract_schema",
-    "image_case_schema_validation",
     "abc_prompt_variant_contract",
-    "provider_syntax_absent_from_visual_contracts",
+    "prompt_sha256_matches_prompt_text",
+    "generation_batch_prompt_sha_matches_prompt_case",
+    "requested_count_matches_independent_result_identities",
+    "contiguous_result_sequence",
+    "provider_native_evidence_required_for_counted_results",
+    "derived_composite_never_counted",
+    "blocked_batch_requires_failure_evidence",
     "typescript_strict_compilation",
     "deterministic_compilation_objects",
     "byte_identical_cross_process_compiler_output",
     "byte_identical_cross_process_query_index",
     "byte_identical_cross_process_image_prompt_sets",
     "semantic_trace_preserved_across_adapters",
-    "positive_and_negative_constraints_preserved_in_text_output",
-    "adapter_specific_syntax_isolated",
-    "invalid_target_rejected",
-    "empty_subject_rejected",
-    "consumer_identity_separated_from_visual_category",
-    "query_by_id_text_unicode_and_filters",
+    "query_by_id_text_unicode_and_structured_filters",
+    "query_expression_fields",
+    "exact_and_related_results_are_separate",
+    "prompt_generation_batch_and_result_records_are_queryable",
     "machine_readable_query_cli",
-    "image_case_status_does_not_overstate_generation"
+    "invalid_generation_outputs_not_saved_as_results",
+    "generation_blocked_status_matches_available_evidence"
   ]
 }

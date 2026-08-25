@@ -1,0 +1,19 @@
+{
+  "all_compared_files_byte_identical": true,
+  "byte_identical_files": {
+    "compiler-output.json": "46b3be7e6600c8e7284324e1a85cd1ee6cf6093fce365a7fc187efe346b01edb",
+    "compiler-test.json": "e5db6a8e085283349ba32832f3a7feb1d0e04d5b9d3b6e0d85b9eb876479b8d0",
+    "determinism-rerun.json": "4bd6efe2796328f94c84e7503cf53774f4b971c54569e977e6ba021c3f94cff0",
+    "image-case-prompts.json": "ef17045bbf8de44c860e00edf3591a75d191d15d1abc53e807524156f40591d3",
+    "image-case-test.json": "085620a8275059620de8c7d09a6b11f543824bb63e62903787cfe396868d309c",
+    "prompt-case-test.json": "0e3b0081538765d870d57104b1a8c1a599aac5b73a31a336b1f16a31e5912b54",
+    "query-index.json": "15a17fa6ffa131dd427928f67a46283d7f7b2ea24d243593f9e9049625301957",
+    "query-test.json": "44fface3fe711c2f6fd34a82316a33eb733ef55f1ff9cfafd5024bd9e4296664",
+    "schema-validation.json": "5dbf23549e80685544253710520f934d7dea727607c20fad01f292f45d090742"
+  },
+  "command": "./run-tests.sh",
+  "comparison": "clean_copy",
+  "note": "Manifest is finalized after this clean-copy comparison and is not part of the byte-identical set.",
+  "source": "working_copy",
+  "status": "passed"
+}

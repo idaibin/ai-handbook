@@ -1,113 +1,116 @@
 # Visual Language Registry + Prompt Compiler MVP 01
 
-Status: `passed_query_and_prompt_case_validation`
+Status: `passed_contract_and_query_validation_generation_blocked`
 
 ## Decision
 
-The durable asset is a provider-neutral Visual Contract. Gemini, Flux, Midjourney, future video prompts, query projections, comparison prompts, generated images, and Provider receipts are derived artifacts.
+The durable asset remains a provider-neutral Visual Contract. Provider prompts, query indexes, PromptCase executions, generated images, receipts, and Web galleries are derived artifacts.
 
-The current work remains an experiment in `ai-handbook`; it is not a standalone product repository, a prompt collection, database, or public website.
+The current work remains an experiment in `ai-handbook`; it is not a standalone product repository, database, public website, or imported Prompt collection.
 
-## Durable contract boundary
-
-Included:
-
-- visual intent and domain;
-- style, palette, materials, textures, and atmosphere;
-- camera, lighting, and composition;
-- positive requirements and forbidden properties;
-- provider-neutral output medium and aspect ratio.
-
-Excluded:
-
-- Provider prompt text and model-version parameters;
-- Midjourney flags;
-- A/B/C experiment prompts and image outputs;
-- query indexes and gallery projections;
-- community prompt and image ingestion;
-- artist-name emulation;
-- website, user, marketplace, and social features.
-
-## Implemented experiment
-
-Path:
+## Implemented layers
 
 ```text
-experiments/visual-registry-mvp-01/
+Visual Contract
+    ↓
+Prompt Compiler / Adapter
+    ↓
+PromptCase
+    ↓
+GenerationBatch
+    ↓
+ImageResult 1:N
 ```
 
-Compiler trial:
+### Static compiler
 
 ```text
-3 original Golden Candidate contracts
-× 3 consumer cases
-× 3 adapters
-= 9 deterministic compilation outputs
+3 contracts × 3 adapters = 9 deterministic outputs
 ```
 
-Query and image-case extension:
+### Query catalog
 
 ```text
 3 Visual Contracts
-+ 2 A/B/C image comparison cases
-= 5 queryable records
-
-2 cases
-× 3 Prompt variants
-= 6 planned controlled images
+2 A/B/C image comparison cases
+1 PromptCase
+1 GenerationBatch
+4 ImageResult identities
+= 11 queryable records
 ```
 
-The query layer scans source JSON directly and supports exact ID, free text, Unicode, category, consumer, status, target, and machine-readable JSON. It introduces no database and does not become a second authority.
+The query layer reads source JSON directly and supports:
 
-Each image comparison case fixes:
+```text
+ID / Unicode / free text
+kind / category / consumer / status / target
+style / provider / model
+has:image / has:receipt / count:>=N
+exact_results / related_results
+```
 
-- A: subject-only Prompt;
-- B: original manual reference Prompt;
-- C: Visual Contract compiled Prompt;
-- same Provider/model and aspect ratio;
-- fixed seed when supported;
-- no post-processing;
-- blind Review criteria before generation.
+Related results are returned separately and may miss exactly one free-text term. Structured filters remain strict.
 
-## Source policy
+## Prompt 1:N contract
 
-Six named repositories were read at fixed commits. They were used only to assess taxonomy, metadata, Adapter, and interaction patterns. No third-party Prompt, image, artist list, or implementation was imported.
+The first PromptCase is:
 
-The original “all are high-star repositories” premise was rejected: `CaylaLuo/awesome-midjourney-prompts` had one star at the recorded snapshot and no declared license, so it was excluded from the MVP.
+```text
+anthropomorphic_watercolor_cat_librarian_v01
+```
+
+It freezes one Prompt SHA-256 and four independent result identities:
+
+```text
+r01 / r02 / r03 / r04
+```
+
+A collage, contact sheet, report, infographic, Dashboard, or grid cannot be a canonical result. Every counted image requires an independent provider-native file, Provider receipt, Drive file ID, SHA-256, width, and height.
+
+## Image execution result
+
+Current state:
+
+```text
+PromptCase: generation_blocked
+GenerationBatch: blocked
+provider_native_images: 0/4
+saved_result_files: 0/4
+```
+
+Verified execution evidence:
+
+- ChatGPT Image repeatedly returned one combined report/contact-sheet image instead of independent files;
+- Adobe Firefly `image_generate` returned HTTP 403 twice, including the required retry;
+- no combined output was assigned a result ID, uploaded to the canonical `results/` directory, or counted as an image;
+- the three combined outputs were archived only as invalid-attempt evidence in Drive folder `1LvfPHztXKDUhZ-Kpu0NTPKPi_Veu8y3D`.
 
 ## Verified result
 
-```text
-status: passed_query_and_prompt_case_validation
-validation_level: static_unit_and_clean_copy_tests
-compiler_output_sha256: 46b3be7e6600c8e7284324e1a85cd1ee6cf6093fce365a7fc187efe346b01edb
-query_index_sha256: 763a4d6c55f1acc4eabe128624d7151a1da5e39929261da5315388fe303a9115
-image_case_prompts_sha256: ef17045bbf8de44c860e00edf3591a75d191d15d1abc53e807524156f40591d3
-```
-
 Verified:
 
-- two Draft 2020-12 Schemas;
-- Provider fields rejected from durable Visual Contracts;
-- strict TypeScript compilation and deterministic Adapter output;
-- deterministic file-backed query and Unicode lookup;
-- exact A/B/C Prompt case structure;
-- six distinct Prompt identities;
-- byte-identical compiler output, query index, and Prompt sets across clean reruns;
-- planned cases remain explicitly marked as image-generation pending.
+- three Draft 2020-12 Schemas;
+- Visual Contract / Adapter separation;
+- deterministic Prompt compilation;
+- Prompt SHA-256 identity;
+- PromptCase → GenerationBatch → ImageResult relationship;
+- one Prompt to four contiguous independent result identities;
+- provider-native evidence requirements;
+- deterministic file-backed query;
+- exact and related result separation;
+- truthful blocked execution state;
+- invalid combined images excluded from canonical counts.
 
 ## Not verified
 
-- real model image generation;
-- different-Prompt image output examples;
-- blind Review scores and quality gain;
-- cross-Provider visual similarity;
+- four independent provider-native image files;
+- Provider receipts, image hashes, and dimensions;
+- different-Prompt image quality comparison;
+- visual consistency or quality gains;
 - Story Studio/UI Spec runtime integration;
-- readiness for promotion into `skills`;
+- readiness for `skills` promotion;
 - need for `prompt.idaibin.dev`.
 
 ## Next gate
 
-`VISUAL_REGISTRY_MVP_01 / UNIT_04_IMAGE_GENERATION_TRIAL`
-
-Generate the six fixed images and preserve exact Prompt hashes, Provider/model identity, parameters, Provider receipts, image SHA-256 values, and blind Review records. Only after the first valid result exists should result records be added to the query catalog.
+Use a Provider route that returns four independent files from the exact frozen Prompt. Only after each image has a receipt, Drive identity, hash, dimensions, and Review status may the PromptCase advance beyond `generation_blocked`.

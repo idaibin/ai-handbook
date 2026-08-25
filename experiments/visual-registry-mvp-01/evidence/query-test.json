@@ -1,14 +1,21 @@
 {
   "status": "passed",
-  "records": 5,
+  "records": 11,
   "contracts": 3,
   "image_cases": 2,
+  "prompt_cases": 1,
+  "generation_batches": 1,
+  "image_results": 4,
   "checks": [
     "stable_catalog",
     "exact_id_query",
     "unicode_query",
     "field_filters",
-    "image_case_query",
+    "prompt_1vn_query",
+    "generation_batch_query",
+    "result_id_query",
+    "query_expression",
+    "exact_related_boundary",
     "cli_json_output",
     "unknown_id_rejected"
   ]

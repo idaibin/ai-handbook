@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "prompt_id": "anthropomorphic_watercolor_cat_librarian_v01",
+  "prompt_sha256": "7b9028e383835b574e0a25bcfb97f7e4ab9f34b9047918cdd86c1afe8fbec66f",
+  "batch_id": "anthropomorphic_watercolor_cat_librarian_v01_batch_01",
+  "batch_status": "blocked",
+  "requested_count": 4,
+  "saved_provider_native_images": 0,
+  "pending_result_identities": [
+    "anthropomorphic_watercolor_cat_librarian_v01__r01",
+    "anthropomorphic_watercolor_cat_librarian_v01__r02",
+    "anthropomorphic_watercolor_cat_librarian_v01__r03",
+    "anthropomorphic_watercolor_cat_librarian_v01__r04"
+  ],
+  "invalid_generation_attempts": 4,
+  "checks": [
+    "prompt_hash_matches",
+    "generation_batch_present",
+    "one_prompt_to_four_result_identities",
+    "combined_outputs_not_counted",
+    "provider_native_evidence_absent",
+    "blocked_failure_evidence_recorded"
+  ]
+}

@@ -1,8 +1,9 @@
 {
   "status": "passed",
-  "process_runs_per_artifact": 2,
+  "process_runs_per_generated_artifact": 2,
   "byte_identical": true,
   "compiler_output_sha256": "46b3be7e6600c8e7284324e1a85cd1ee6cf6093fce365a7fc187efe346b01edb",
-  "query_index_sha256": "763a4d6c55f1acc4eabe128624d7151a1da5e39929261da5315388fe303a9115",
-  "image_case_prompts_sha256": "ef17045bbf8de44c860e00edf3591a75d191d15d1abc53e807524156f40591d3"
+  "query_index_sha256": "15a17fa6ffa131dd427928f67a46283d7f7b2ea24d243593f9e9049625301957",
+  "image_case_prompts_sha256": "ef17045bbf8de44c860e00edf3591a75d191d15d1abc53e807524156f40591d3",
+  "prompt_case_source_sha256": "344687d1fa87d734438e5f35549a0b650acbadeb9fda98b14f3c3b7b1035832c"
 }

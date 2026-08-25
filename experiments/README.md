@@ -12,7 +12,7 @@
 | [`repo-review-benchmark-v1/`](./repo-review-benchmark-v1/) | 固定 Benchmark 协议 | `repo-review` 与公开 Review Skills 的配对评测；数据集仍在构建。 |
 | [`skills-forgeway-paired-evaluation-v1/`](./skills-forgeway-paired-evaluation-v1/) | 配对工程评测协议 | 基于 Harbor 与 Multi-SWE-bench 验证 A→B Skills 增益和 B→C Forgeway 增益；已定义[测试反馈与强化闭环](./skills-forgeway-paired-evaluation-v1/feedback-loop.md)，Phase 0 尚未执行。 |
 | [`story-studio-60s-pilot/`](./story-studio-60s-pilot/) | 媒体生产 Pilot | Story Studio 60 秒生产链路的阶段性实验与证据。 |
-| [`visual-registry-mvp-01/`](./visual-registry-mvp-01/) | Visual Contract 查询与编译实验 | 3 个合同、3 个 Adapter、文件查询 CLI 与 2 个 A/B/C Prompt 图片对比案例已通过静态和 clean-copy 验证；6 张真实图片及 Provider receipts 尚未生成。 |
+| [`visual-registry-mvp-01/`](./visual-registry-mvp-01/) | Visual Contract、Prompt 1:N 与查询实验 | 已验证 3 个 Schema、11 条文件查询记录、GenerationBatch、独立 Result 身份及 exact/related 查询；真实独立图片仍为 0/4，生成因组合输出与 Provider 403 阻塞。 |
 
 ## 维护规则
 
