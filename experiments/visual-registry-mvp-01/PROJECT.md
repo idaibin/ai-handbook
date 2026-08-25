@@ -10,36 +10,69 @@ Active product repository:
 repository: idaibin/prompts-hub
 visibility: private
 role: Next.js Web application for visual Style and PromptCase browsing
-status: repository_ready_deployment_not_verified
+status: repository_verified_deployment_not_verified
 branch: main
-remote commit: 2d9b9640228023e2e0c775a349a34124b4d8573a
-commit message: chore: complete project initialization
-parent migration commit: b58624698cc2bcc4ef7bf3ea90e3b6e14127d1df
+application initialization commit: 2d9b9640228023e2e0c775a349a34124b4d8573a
+current verified commit: 3ca6519195b070ea3f69e8265321ad1bea2a0cbc
+current commit message: ci: verify Next.js project
 ```
 
-The remote repository, visibility, default branch, and commit SHA were read back through the GitHub connector on 2026-08-25.
+The repository, visibility, default branch, and application initialization commit were read back through the GitHub connector on 2026-08-25.
 
-## Validation state
+## Verification state
 
-User-provided local execution evidence:
+### User-provided local evidence
 
 ```text
 npm run verify: passed
 production build: passed
 static pages generated: 16
-local and remote SHA: matched
-working tree: clean
+local and remote SHA at initialization: matched
+working tree at initialization: clean
 ```
 
-This local verification report has not been independently rerun by the assistant. The remote commit currently exposes no GitHub commit-status checks, so it must not be described as GitHub Actions validation.
+### GitHub Actions evidence
+
+A repository-native verification workflow was added at:
+
+```text
+.github/workflows/verify.yml
+```
+
+Verified remote execution:
+
+```text
+workflow: Verify
+run ID: 32834969574
+head SHA: 3ca6519195b070ea3f69e8265321ad1bea2a0cbc
+result: success
+install dependencies: success
+validate, typecheck, and build: success
+16-page static export assertion: success
+artifact upload: success
+```
+
+Static export artifact:
+
+```text
+artifact ID: 9558241090
+name: prompts-hub-static-export
+bytes: 317335
+digest: sha256:a5e78fca8fe4314d213e41e98ca0b5e33d674175aae2c3d5d2175d5c491c3547
+expires: 2026-11-23T10:00:28Z
+```
+
+The artifact was downloaded and inspected. It contains exactly 16 `index.html` files, including the home page, one PromptCase detail route, twelve Style detail routes, and two not-found routes. HTTP serving and content checks passed for the home page, PromptCase route, and transparent-watercolor Style route.
 
 Current product boundary:
 
 ```text
 repository initialization: verified
 source push and remote readback: verified
+remote CI production build: verified
+static export structure and key content: verified
 production deployment: not verified
-live browser behavior: not verified
+live deployed browser behavior: not verified
 custom domain: not configured or verified
 valid independent Prompt images: 0/4
 ```
@@ -66,27 +99,31 @@ manifest:
   SHA-256: 407b46b089ada80e72f935c5c5d928f1e05fa193b5ac0b61cb6f1233a5e771ee
 ```
 
-The bundle was cloned back successfully before the remote repository was created. These files remain migration evidence, not the current code authority.
+These files remain migration evidence, not the current code authority.
 
 ## Authority boundary
 
 - `idaibin/ai-handbook`: experiment contracts, research, validation evidence, and project pointer.
-- `idaibin/prompts-hub`: application code, application releases, deployment configuration, and product issues.
+- `idaibin/prompts-hub`: application code, application releases, CI, deployment configuration, and product issues.
 - Google Drive: migration evidence and future large original image assets.
+
+## Deployment boundary
+
+The connected Vercel team `abin-projects` has no `prompts-hub` project. The available Vercel connector can inspect existing projects and deploy the current bound workspace, but does not expose a safe action to create a new project linked to this GitHub repository. No unrelated Vercel project was reused.
 
 ## Next gate
 
-Deploy `idaibin/prompts-hub@2d9b9640228023e2e0c775a349a34124b4d8573a`, then preserve:
+Create or link a Vercel project for `idaibin/prompts-hub`, deploy exact commit `3ca6519195b070ea3f69e8265321ad1bea2a0cbc`, then preserve:
 
 ```text
-deployment provider and project identity
-deployment commit SHA
+Vercel project ID and team ID
+deployment ID and commit SHA
 production URL
-build logs or deployment receipt
+build/deployment receipt
 HTTP availability
 browser validation at desktop and mobile sizes
 prompt search and detail-route checks
-custom domain state
+custom domain prompt.idaibin.dev state
 ```
 
 Until those checks pass, deployment and online operation remain `not_verified`.
