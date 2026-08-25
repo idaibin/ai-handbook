@@ -1,0 +1,27 @@
+{
+  "name": "visual-registry-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "validate:source": "node scripts/validate-source.mjs",
+    "assert:export": "node scripts/assert-export.mjs",
+    "verify": "npm run validate:source && npm run typecheck && npm run build && npm run assert:export"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "dependencies": {
+    "next": "16.3.2",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "typescript": "5.8.3"
+  }
+}
