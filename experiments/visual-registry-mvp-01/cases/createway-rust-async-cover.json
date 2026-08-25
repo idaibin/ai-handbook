@@ -1,0 +1,6 @@
+{
+  "id": "createway_rust_async_cover",
+  "contract": "minimal-tech-cover.json",
+  "subject": "Rust async runtime: task scheduling, wakeups, and backpressure",
+  "targets": ["gemini", "flux", "midjourney"]
+}

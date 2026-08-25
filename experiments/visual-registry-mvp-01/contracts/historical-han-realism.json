@@ -1,0 +1,97 @@
+{
+  "schema_version": "0.1",
+  "id": "historical_han_realism",
+  "name": "Eastern Han restrained historical realism",
+  "description": "Grounded historical-drama visual language for ordinary labor, writing spaces, characters, and props in the Eastern Han setting.",
+  "category": "narrative",
+  "intent": {
+    "domain": "historical_drama",
+    "period": "eastern_han",
+    "mood": [
+      "restrained",
+      "observant",
+      "physically_grounded"
+    ],
+    "usage": [
+      "character_asset",
+      "prop_asset",
+      "interior_scene",
+      "storyboard_keyframe"
+    ]
+  },
+  "visual_language": {
+    "realism": "cinematic_naturalism",
+    "styles": [
+      "historical_graphic_drama",
+      "documentary_observation"
+    ],
+    "palette": [
+      "cold_gray",
+      "earth_brown",
+      "muted_ink_black",
+      "natural_paper"
+    ],
+    "materials": [
+      "aged_wood",
+      "handmade_fiber_paper",
+      "ink",
+      "plant_fiber_textile"
+    ],
+    "textures": [
+      "matte",
+      "worn",
+      "low_sheen"
+    ],
+    "atmosphere": [
+      "quiet_labor",
+      "enclosed_interior",
+      "human_scale"
+    ]
+  },
+  "camera": {
+    "shot": "medium",
+    "lens": "50mm",
+    "angle": "eye_level",
+    "depth_of_field": "moderate"
+  },
+  "lighting": {
+    "source": "side_window_daylight",
+    "direction": "left_to_right",
+    "quality": "soft",
+    "contrast": "low_to_medium"
+  },
+  "composition": {
+    "layout": "grounded_horizontal_layers",
+    "framing": "single_subject_or_small_group",
+    "hierarchy": "character_action_first",
+    "negative_space": "restrained"
+  },
+  "constraints": {
+    "require": [
+      "historically_plausible_eastern_han",
+      "physically_coherent_writing_action",
+      "readable_silhouette",
+      "consistent_character_identity"
+    ],
+    "avoid": [
+      "modern_objects",
+      "readable_modern_text",
+      "fantasy_armor",
+      "later_dynasty_costume",
+      "saturated_fantasy_color",
+      "decorative_overload"
+    ],
+    "text_policy": "none"
+  },
+  "defaults": {
+    "aspect_ratio": "16:9",
+    "output_medium": "cinematic_still"
+  },
+  "metadata": {
+    "status": "golden_candidate",
+    "consumers": [
+      "story_studio"
+    ],
+    "provenance": "original_contract"
+  }
+}

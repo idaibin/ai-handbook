@@ -1,0 +1,160 @@
+{
+  "basis": {
+    "commit_before_implementation": "dc8925bd7b5760a1a591c77e8e9e69abcbacb722",
+    "design_path": "research/visual-registry/2026-08-24-visual-registry-mvp-01.md",
+    "repository": "idaibin/ai-handbook"
+  },
+  "environment": {
+    "jsonschema": "4.26.0",
+    "node": "v22.16.0",
+    "python": "3.13.5",
+    "typescript": "Version 5.8.3"
+  },
+  "experiment": "visual-registry-mvp-01",
+  "files": {
+    ".gitignore": {
+      "bytes": 6,
+      "sha256": "ed19d3c9c8a5e34d0179e0b1a9c2907d2e657738733e4a432a8cf81c76ce56f1"
+    },
+    "EXECUTION.md": {
+      "bytes": 2128,
+      "sha256": "815e12483cf89a01b5264e4e0841dde80f27be298243db939e13d0e413fa2770"
+    },
+    "README.md": {
+      "bytes": 3840,
+      "sha256": "2fe890c6d8f89377e2a524d9197de47b9a7b74fdf0b515b46239f022ff2faf31"
+    },
+    "SOURCES.md": {
+      "bytes": 1887,
+      "sha256": "bf5e5e62f8326a2ca439f5a2f3f41118045eee57ed4de8171aeb51e3c676dd9d"
+    },
+    "cases/createway-rust-async-cover.json": {
+      "bytes": 208,
+      "sha256": "051896d21b173601b7c80e8157ea753590b168cde2d1d3f90ab6148155182e90"
+    },
+    "cases/story-studio-ban-chao.json": {
+      "bytes": 237,
+      "sha256": "17d58cf14970b5447a870bc88e5bddd1de630f4bae1aca99ac29cd7be68067e4"
+    },
+    "cases/ui-spec-asset-dashboard.json": {
+      "bytes": 267,
+      "sha256": "80d8fdac0b112a1db24cd28ae7034450ec999b4f001aef92825790a0a4bdd955"
+    },
+    "contracts/historical-han-realism.json": {
+      "bytes": 2241,
+      "sha256": "55869567769c296fe3732588a5fed26bfc3effbc7baf396eda8101afe557b35e"
+    },
+    "contracts/minimal-tech-cover.json": {
+      "bytes": 1746,
+      "sha256": "17ea90a7a8f9846bdc9f925aec324dd6b4867ff2a0a2b7b1a1ba36f5a87545d7"
+    },
+    "contracts/saas-bento-dashboard.json": {
+      "bytes": 1857,
+      "sha256": "b763f42bb1bca20c75fec9b2b281af2fcd668f1e053b94766f5516420a386c2d"
+    },
+    "evidence/compiler-output.json": {
+      "bytes": 84780,
+      "sha256": "46b3be7e6600c8e7284324e1a85cd1ee6cf6093fce365a7fc187efe346b01edb"
+    },
+    "evidence/compiler-test.json": {
+      "bytes": 264,
+      "sha256": "e5db6a8e085283349ba32832f3a7feb1d0e04d5b9d3b6e0d85b9eb876479b8d0"
+    },
+    "evidence/determinism-rerun.json": {
+      "bytes": 168,
+      "sha256": "2eaf4f59f8fa86a462997a52822ba7056a2e1024346a94a7a40253c4fb51f937"
+    },
+    "evidence/schema-validation.json": {
+      "bytes": 332,
+      "sha256": "ab16ea2b93786ef818434ba7447301c338adb7db514a916dad17c73024f0eb51"
+    },
+    "package.json": {
+      "bytes": 342,
+      "sha256": "6deb855987e0f82c5d39fb049792632721c7eb1429245c97a86eb26712f93547"
+    },
+    "prototype/adapters.ts": {
+      "bytes": 5143,
+      "sha256": "7ae195ede12279fd1f3c0a7a637800f059c507147cabb7f890b6bb822b31d700"
+    },
+    "prototype/compiler.ts": {
+      "bytes": 5045,
+      "sha256": "f00c5e7389a35adb4f6c6c0a7189604bb0ba9bf4afe992f2744689fca33f900b"
+    },
+    "prototype/demo.mjs": {
+      "bytes": 947,
+      "sha256": "a5131ad8ef01b38d07913d7681695f9a80fc4e7da2d6368f12260726b9bf1d07"
+    },
+    "prototype/types.ts": {
+      "bytes": 1735,
+      "sha256": "4e79df55d761c153d214237064fb09cfe90dfbf1ba20c411eafa70c199a385b4"
+    },
+    "requirements.txt": {
+      "bytes": 19,
+      "sha256": "756cc9e506ae4ee1a6f6c0507088b5cfc0dc8ba350fb2d2d46f1ffa72033adb6"
+    },
+    "run-tests.sh": {
+      "bytes": 1319,
+      "sha256": "f2525a952c9d16d1a3efea0d704495fc5779f5e506a7ab46940f57adaa89ee22"
+    },
+    "schema/visual-contract.schema.json": {
+      "bytes": 5185,
+      "sha256": "de099bef65877f712c006a6c8db2cfe0b0e9f7c0451cfeca7937130b0717ec6c"
+    },
+    "sources/source-audit.json": {
+      "bytes": 2491,
+      "sha256": "7926333de8ab0ecc1f28439c38fc356c5ebbbf05511336e1e7a60fa7f2dc1ce1"
+    },
+    "tests/compiler.test.mjs": {
+      "bytes": 3480,
+      "sha256": "a890b4c663d41a58d0f6963c784499b17ea4606c817c625e34a19b661b0706aa"
+    },
+    "tests/generate_manifest.py": {
+      "bytes": 3368,
+      "sha256": "3ea544e41a50a8ebcf4b2b3513c172d48411d6a6a5718fff0b1dfcae5f664124"
+    },
+    "tests/validate_schema.py": {
+      "bytes": 1897,
+      "sha256": "ee5d0339f9338d7ef4346218727a6eb8ca6822e411973f18685e20aa236bf8d9"
+    },
+    "tsconfig.json": {
+      "bytes": 267,
+      "sha256": "c0f5cc0a4b1b515c25d33be3a28008e48168c0d17e3482aa70f8c132ae4a15c2"
+    }
+  },
+  "not_verified": [
+    "real_provider_image_generation",
+    "cross_provider_visual_similarity",
+    "quality_against_manually_authored_prompt_baseline",
+    "story_studio_runtime_integration",
+    "ui_spec_runtime_integration",
+    "skills_promotion_readiness"
+  ],
+  "status": "passed_static_validation",
+  "trial": {
+    "adapters": [
+      "gemini",
+      "flux",
+      "midjourney"
+    ],
+    "command": "./run-tests.sh",
+    "compilations": 9,
+    "consumer_cases": 3,
+    "contracts": 3
+  },
+  "unit": "UNIT_02_STATIC_COMPILER",
+  "validation_level": "static_and_unit_tests",
+  "verified": [
+    "draft_2020_12_schema_validation",
+    "provider_fields_rejected_by_schema",
+    "provider_syntax_absent_from_contracts",
+    "typescript_strict_compilation",
+    "deterministic_compilation_objects",
+    "byte_identical_cross_process_output",
+    "semantic_trace_preserved_across_adapters",
+    "positive_and_negative_constraints_preserved_in_text_output",
+    "adapter_specific_syntax_isolated",
+    "invalid_target_rejected",
+    "empty_subject_rejected",
+    "consumer_identity_separated_from_visual_category"
+  ]
+}

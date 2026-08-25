@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "cases": 3,
+  "compilations": 9,
+  "checks": [
+    "contract_purity",
+    "determinism",
+    "semantic_trace_preserved",
+    "constraints_preserved",
+    "adapter_syntax",
+    "invalid_target_rejected",
+    "empty_subject_rejected"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "process_runs": 2,
+  "byte_identical": true,
+  "compiler_output_sha256": "46b3be7e6600c8e7284324e1a85cd1ee6cf6093fce365a7fc187efe346b01edb"
+}

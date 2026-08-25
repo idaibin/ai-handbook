@@ -1,0 +1,79 @@
+{
+  "schema_version": "0.1",
+  "id": "minimal_tech_cover",
+  "name": "Minimal technical editorial cover",
+  "description": "A calm editorial cover system with one geometric technical metaphor, strong title reserve, and low visual noise.",
+  "category": "editorial",
+  "intent": {
+    "domain": "technical_content",
+    "mood": [
+      "calm",
+      "precise",
+      "confident"
+    ],
+    "usage": [
+      "social_cover",
+      "article_header",
+      "technical_brief"
+    ]
+  },
+  "visual_language": {
+    "realism": "graphic_editorial",
+    "styles": [
+      "minimal_editorial",
+      "geometric_technical"
+    ],
+    "palette": [
+      "warm_white",
+      "charcoal",
+      "low_saturation_orange_red"
+    ],
+    "materials": [
+      "flat_vector_surface",
+      "subtle_paper_grain"
+    ],
+    "textures": [
+      "matte",
+      "clean",
+      "fine_grain"
+    ],
+    "atmosphere": [
+      "quiet_focus",
+      "technical_clarity"
+    ]
+  },
+  "composition": {
+    "layout": "single_focal_symbol",
+    "framing": "editorial_cover",
+    "hierarchy": "title_zone_then_symbol",
+    "negative_space": "large"
+  },
+  "constraints": {
+    "require": [
+      "one_primary_metaphor",
+      "clear_title_reserve",
+      "small_screen_legibility",
+      "strong_silhouette"
+    ],
+    "avoid": [
+      "busy_background",
+      "excessive_decoration",
+      "multiple_competing_symbols",
+      "stock_photo_aesthetic",
+      "neon_gradient_overuse",
+      "rendered_body_copy"
+    ],
+    "text_policy": "reserved_space"
+  },
+  "defaults": {
+    "aspect_ratio": "16:9",
+    "output_medium": "editorial_cover"
+  },
+  "metadata": {
+    "status": "golden_candidate",
+    "consumers": [
+      "createway"
+    ],
+    "provenance": "original_contract"
+  }
+}

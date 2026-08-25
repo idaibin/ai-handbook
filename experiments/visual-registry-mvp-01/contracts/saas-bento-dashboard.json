@@ -1,0 +1,82 @@
+{
+  "schema_version": "0.1",
+  "id": "saas_bento_dashboard",
+  "name": "Operational SaaS bento dashboard",
+  "description": "A restrained enterprise dashboard language with modular bento regions, coherent data hierarchy, and implementation-plausible components.",
+  "category": "interface",
+  "intent": {
+    "domain": "enterprise_software",
+    "mood": [
+      "precise",
+      "calm",
+      "operational"
+    ],
+    "usage": [
+      "desktop_dashboard",
+      "ui_spec_exploration",
+      "product_mockup"
+    ]
+  },
+  "visual_language": {
+    "realism": "implementation_plausible_interface",
+    "styles": [
+      "modern_saas",
+      "minimal_data_ui"
+    ],
+    "palette": [
+      "neutral_dark",
+      "restrained_blue",
+      "muted_green",
+      "high_contrast_text"
+    ],
+    "materials": [
+      "digital_surface",
+      "subtle_translucent_layer"
+    ],
+    "textures": [
+      "clean",
+      "low_noise",
+      "soft_border"
+    ],
+    "atmosphere": [
+      "focused_workspace",
+      "dense_but_legible"
+    ]
+  },
+  "composition": {
+    "layout": "bento_grid",
+    "framing": "direct_front_interface",
+    "hierarchy": "task_and_risk_first",
+    "negative_space": "moderate"
+  },
+  "constraints": {
+    "require": [
+      "coherent_component_system",
+      "plausible_data_density",
+      "consistent_spacing",
+      "accessible_contrast",
+      "clear_primary_action"
+    ],
+    "avoid": [
+      "random_widgets",
+      "illegible_text",
+      "fake_3d_perspective",
+      "excessive_glow",
+      "decorative_charts",
+      "unbounded_card_count"
+    ],
+    "text_policy": "placeholder"
+  },
+  "defaults": {
+    "aspect_ratio": "16:10",
+    "output_medium": "desktop_ui_mockup"
+  },
+  "metadata": {
+    "status": "golden_candidate",
+    "consumers": [
+      "ui_spec",
+      "dev_frontend"
+    ],
+    "provenance": "original_contract"
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://idaibin.dev/schemas/visual-contract/0.1.json",
+  "title": "Visual Contract v0.1",
+  "description": "Provider-neutral visual intent contract. Provider prompts and model parameters are derived artifacts and are intentionally excluded.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "name",
+    "description",
+    "category",
+    "intent",
+    "visual_language",
+    "composition",
+    "constraints",
+    "defaults",
+    "metadata"
+  ],
+  "$defs": {
+    "token": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"
+    },
+    "tokenArray": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/token"
+      }
+    }
+  },
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "enum": [
+        "narrative",
+        "interface",
+        "editorial"
+      ]
+    },
+    "intent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "domain",
+        "mood",
+        "usage"
+      ],
+      "properties": {
+        "domain": {
+          "$ref": "#/$defs/token"
+        },
+        "period": {
+          "$ref": "#/$defs/token"
+        },
+        "mood": {
+          "$ref": "#/$defs/tokenArray"
+        },
+        "usage": {
+          "$ref": "#/$defs/tokenArray"
+        }
+      }
+    },
+    "visual_language": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "realism",
+        "styles",
+        "palette",
+        "materials",
+        "textures",
+        "atmosphere"
+      ],
+      "properties": {
+        "realism": {
+          "$ref": "#/$defs/token"
+        },
+        "styles": {
+          "$ref": "#/$defs/tokenArray"
+        },
+        "palette": {
+          "$ref": "#/$defs/tokenArray"
+        },
+        "materials": {
+          "$ref": "#/$defs/tokenArray"
+        },
+        "textures": {
+          "$ref": "#/$defs/tokenArray"
+        },
+        "atmosphere": {
+          "$ref": "#/$defs/tokenArray"
+        }
+      }
+    },
+    "camera": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "shot": {
+          "$ref": "#/$defs/token"
+        },
+        "lens": {
+          "$ref": "#/$defs/token"
+        },
+        "angle": {
+          "$ref": "#/$defs/token"
+        },
+        "depth_of_field": {
+          "$ref": "#/$defs/token"
+        }
+      }
+    },
+    "lighting": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "source": {
+          "$ref": "#/$defs/token"
+        },
+        "direction": {
+          "$ref": "#/$defs/token"
+        },
+        "quality": {
+          "$ref": "#/$defs/token"
+        },
+        "contrast": {
+          "$ref": "#/$defs/token"
+        }
+      }
+    },
+    "composition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "layout",
+        "framing",
+        "hierarchy",
+        "negative_space"
+      ],
+      "properties": {
+        "layout": {
+          "$ref": "#/$defs/token"
+        },
+        "framing": {
+          "$ref": "#/$defs/token"
+        },
+        "hierarchy": {
+          "$ref": "#/$defs/token"
+        },
+        "negative_space": {
+          "$ref": "#/$defs/token"
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "require",
+        "avoid",
+        "text_policy"
+      ],
+      "properties": {
+        "require": {
+          "$ref": "#/$defs/tokenArray"
+        },
+        "avoid": {
+          "$ref": "#/$defs/tokenArray"
+        },
+        "text_policy": {
+          "enum": [
+            "none",
+            "reserved_space",
+            "placeholder",
+            "exact"
+          ]
+        }
+      }
+    },
+    "defaults": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "aspect_ratio",
+        "output_medium"
+      ],
+      "properties": {
+        "aspect_ratio": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*:[1-9][0-9]*$"
+        },
+        "output_medium": {
+          "$ref": "#/$defs/token"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "consumers",
+        "provenance"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "draft",
+            "golden_candidate",
+            "validated",
+            "deprecated"
+          ]
+        },
+        "consumers": {
+          "$ref": "#/$defs/tokenArray"
+        },
+        "provenance": {
+          "enum": [
+            "original_contract",
+            "adapted_contract"
+          ]
+        }
+      }
+    }
+  }
+}

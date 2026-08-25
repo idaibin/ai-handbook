@@ -1,0 +1,6 @@
+{
+  "id": "ui_spec_enterprise_asset_dashboard",
+  "contract": "saas-bento-dashboard.json",
+  "subject": "an enterprise asset operations dashboard showing inventory, maintenance risk, lifecycle cost, and device status",
+  "targets": ["gemini", "flux", "midjourney"]
+}

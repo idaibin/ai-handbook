@@ -1,0 +1,17 @@
+{
+  "name": "visual-registry-mvp-01",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "bash run-tests.sh",
+    "demo": "npm run build && node prototype/demo.mjs"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3"
+  }
+}

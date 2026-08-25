@@ -1,0 +1,6 @@
+{
+  "id": "story_studio_ban_chao_luoyang",
+  "contract": "historical-han-realism.json",
+  "subject": "Ban Chao copying documents in a modest Luoyang writing room before his military life",
+  "targets": ["gemini", "flux", "midjourney"]
+}

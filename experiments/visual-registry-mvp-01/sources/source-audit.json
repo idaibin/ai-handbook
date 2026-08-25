@@ -1,0 +1,60 @@
+{
+  "checked_on": "2026-08-25",
+  "policy": "Use repository structure and abstract patterns only. Do not import third-party prompts, images, artist-name lists, or provider-version parameters into the durable registry.",
+  "sources": [
+    {
+      "repository": "willwulfken/MidJourney-Styles-and-Keywords-Reference",
+      "commit": "1e54e7ffd4b6a9a2afc6de83bcfcff962619f299",
+      "stars_snapshot": 12289,
+      "license": "not_declared",
+      "decision": "reference_only",
+      "used_for": ["taxonomy_dimension_review"],
+      "not_imported": ["prompt_text", "images", "artist_names", "keyword_tables"]
+    },
+    {
+      "repository": "f/prompts.chat",
+      "commit": "db927868d3aa6b07129e71d2c9a07bb6b453c09b",
+      "stars_snapshot": 167861,
+      "license": "MIT_code_and_CC0_prompt_data",
+      "decision": "pattern_reference",
+      "used_for": ["data_vs_application_separation", "dynamic_argument_concept", "distribution_patterns"],
+      "not_imported": ["prompt_text", "application_code"]
+    },
+    {
+      "repository": "CaylaLuo/awesome-midjourney-prompts",
+      "commit": "0db48f7e71d08a50c49483f400c08ec8fe7eed9b",
+      "stars_snapshot": 1,
+      "license": "not_declared",
+      "decision": "excluded_from_mvp",
+      "used_for": [],
+      "not_imported": ["all_content"]
+    },
+    {
+      "repository": "YouMind-OpenLab/awesome-gemini-3-prompts",
+      "commit": "602c9fd957568bf173d988aaeb5fc7a6dc0434b5",
+      "stars_snapshot": 514,
+      "license": "CC-BY-4.0",
+      "decision": "pattern_reference",
+      "used_for": ["argument_placeholder_concept", "source_metadata_pattern", "gallery_projection_pattern"],
+      "not_imported": ["prompt_text", "images", "community_submissions"]
+    },
+    {
+      "repository": "AIwork4me/awesome-gemini-visual-gems",
+      "commit": "dde992eea191863233210b55b345295db9bd9752",
+      "stars_snapshot": 50,
+      "license": "MIT",
+      "decision": "pattern_reference",
+      "used_for": ["style_to_use_case_mapping", "workflow_and_design_rule_separation"],
+      "not_imported": ["gem_instructions", "prompt_text", "demo_images"]
+    },
+    {
+      "repository": "Amery2010/midjourney-prompt-generator",
+      "commit": "ff69f7f18b35d7660079d3cb48ac6dc17f0b8d45",
+      "stars_snapshot": 188,
+      "license": "MIT",
+      "decision": "ui_reference_only",
+      "used_for": ["preset_selection", "live_preview", "copy_interaction"],
+      "not_imported": ["frontend_code", "provider_integration", "prompt_logic"]
+    }
+  ]
+}
