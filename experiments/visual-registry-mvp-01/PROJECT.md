@@ -4,26 +4,47 @@
 
 Runnable application code does not belong in `ai-handbook`.
 
-Target project:
+Active product repository:
 
 ```text
 repository: idaibin/prompts-hub
+visibility: private
 role: Next.js Web application for visual Style and PromptCase browsing
-status: repository_creation_blocked
+status: repository_ready_deployment_not_verified
+branch: main
+remote commit: 2d9b9640228023e2e0c775a349a34124b4d8573a
+commit message: chore: complete project initialization
+parent migration commit: b58624698cc2bcc4ef7bf3ea90e3b6e14127d1df
 ```
 
-## Prepared initial repository
+The remote repository, visibility, default branch, and commit SHA were read back through the GitHub connector on 2026-08-25.
+
+## Validation state
+
+User-provided local execution evidence:
 
 ```text
-framework: Next.js 16 + React 19 + TypeScript
-branch: main
-initial commit: b58624698cc2bcc4ef7bf3ea90e3b6e14127d1df
-tree: 596b2432f7742849e1dd4867acb02f4c626976a2
-validation: source structure and TypeScript/TSX syntax passed
-valid independent images: 0/4
+npm run verify: passed
+production build: passed
+static pages generated: 16
+local and remote SHA: matched
+working tree: clean
 ```
 
-## Temporary Drive handoff
+This local verification report has not been independently rerun by the assistant. The remote commit currently exposes no GitHub commit-status checks, so it must not be described as GitHub Actions validation.
+
+Current product boundary:
+
+```text
+repository initialization: verified
+source push and remote readback: verified
+production deployment: not verified
+live browser behavior: not verified
+custom domain: not configured or verified
+valid independent Prompt images: 0/4
+```
+
+## Drive migration handoff
 
 ```text
 folder: Prompts Hub
@@ -45,12 +66,27 @@ manifest:
   SHA-256: 407b46b089ada80e72f935c5c5d928f1e05fa193b5ac0b61cb6f1233a5e771ee
 ```
 
-The Git bundle was cloned back successfully and resolved to the prepared initial commit.
+The bundle was cloned back successfully before the remote repository was created. These files remain migration evidence, not the current code authority.
 
 ## Authority boundary
 
 - `idaibin/ai-handbook`: experiment contracts, research, validation evidence, and project pointer.
-- `idaibin/prompts-hub`: application code, application releases, deployment, and product issues.
-- Google Drive: temporary migration package and future large image assets.
+- `idaibin/prompts-hub`: application code, application releases, deployment configuration, and product issues.
+- Google Drive: migration evidence and future large original image assets.
 
-No live repository URL or deployment is claimed until the target repository is actually created and read back.
+## Next gate
+
+Deploy `idaibin/prompts-hub@2d9b9640228023e2e0c775a349a34124b4d8573a`, then preserve:
+
+```text
+deployment provider and project identity
+deployment commit SHA
+production URL
+build logs or deployment receipt
+HTTP availability
+browser validation at desktop and mobile sizes
+prompt search and detail-route checks
+custom domain state
+```
+
+Until those checks pass, deployment and online operation remain `not_verified`.
