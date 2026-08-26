@@ -3,144 +3,80 @@
   "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
   "task_key": "story-studio/banchao/s1-final-gate",
   "project_id": "banchao",
-  "status_revision": 4,
-  "as_of_utc": "2026-08-26T03:38:27Z",
+  "status_revision": 6,
+  "as_of_utc": "2026-08-26T06:26:11Z",
   "current_stage": "S1_CANDIDATE_FINAL_GATE",
-  "current_status": "blocked_pending_media_spec_audit_and_visual_canon",
+  "current_status": "blocked_pending_reference_repair_5_and_visual_canon",
+  "current_execution_unit": "SEASON_ACTIVE_MEDIA_SPEC_AUDIT_DIRECT_READBACK_66_COMPLETED",
+  "next_action": "SEASON_ACTIVE_REFERENCE_REPAIR_EP03_B04_B08",
+  "resume_after_pass": "VISUAL_CANON_BOUNDARY_REVIEW_03_EP05_TO_EP06",
+  "asset_policy": "candidate_not_canonical",
+  "canonical": 0,
+  "production_ready": 0,
   "scope": {
     "episodes": 24,
     "logical_keyframes": 194,
     "boundaries": 23
   },
-  "asset_policy": "candidate_not_canonical",
-  "canonical": 0,
-  "production_ready": 0,
-  "authority": {
-    "drive_s1_root_folder_id": "1jiJQ6s4PYMxsmR5Fap88JHrsfa4vclJY",
-    "drive_current_folder_id": "1-o5w8lmP3P5800EV1IM58lpvLZAYNAeY",
-    "task_document_id": "1CJEoK7VTDAOAMosU92NaDqruGKkaxuJOJ_kx8FiLVjw",
-    "mapping_file_id": "1U_pXUo1qD0D8rDELWvqUDUevpfoXClwa",
-    "mapping_revision": 4,
-    "mapping_sha256": "78181c78e509a5615e900f7dc8518330eb8ddcad577fa80ad6182871f45ef5be",
-    "candidate_manifest_file_id": "1L-6SgE_3VINfxPuz6VQECJ_-pSDvY6WK",
-    "candidate_manifest_revision": 4,
-    "candidate_manifest_sha256": "548c2e695be07b6e4230eba9fb5615f849897d1479abcde18a288ea2f4c870fb",
-    "current_status_markdown_drive_file_id": "1ZrtDrFQaizTUQgauNg9K78H7OVXgDYg4",
-    "current_status_json_drive_file_id": "19CyI4SnxUKkfjwI3hut_1J19bhAfCZRw",
-    "visual_canon_gate_drive_file_id": "1ZkJYbbHUxC5tDZEL9Kqsx7CoHpya9KiL",
-    "consistency_matrix_file_id": "1j575_IaA2ZRWxgmtqlINYetOk_VsqgS7",
-    "boundary_02_decision_drive_file_id": "14xstpvogW9evDfN7tRpnAwxdJ7LgF4l-",
-    "boundary_02_contact_sheet_drive_file_id": "1NGgu8JssyGS6VtjbMAD9KKtA7vRNo0ie",
-    "boundary_02_face_comparison_drive_file_id": "1bJVmutgTEaxgL6tycKQJGHX9KWjlgCjZ",
-    "boundary_02_spec_normalization_receipt_drive_file_id": "1q1bpVwuQUHRAj0D_K_TACSlfLrnWmqHI",
-    "boundary_02_archive_folder_drive_id": "1xBDz3Aus0GXaZkjjw2ZBcJDBFSqxHRZC",
-    "github_boundary_02_decision_path": "research/story-studio/banchao-s1-visual-canon-decisions/02-ep04-to-ep05.md",
-    "github_boundary_02_decision_commit": "e344d134860c1520b84ec04179f5f979de002364",
-    "github_current_status_markdown_commit": "72cf1604cbed45f3115a87032f094e4c248752ba"
-  },
-  "structural_validation": {
-    "status": "PASS",
-    "mapping_rows": 194,
-    "unique_shot_ids": 194,
-    "unique_frame_keys": 194,
-    "unique_drive_asset_refs": 194,
-    "package_only_refs": 0,
-    "episode_counts": "EP01=10; EP02-EP24=8 each",
-    "character_state_refs": "PASS",
-    "location_refs": "PASS",
-    "episode_foundation_alignment": "PASS",
-    "mapping_manifest_sha_alignment": "PASS"
-  },
-  "active_media_spec_validation": {
-    "status": "NOT_VERIFIED_FULL_SET",
-    "invalidated_claim": "All 194 active PNG refs had already been verified as 1920x1080 RGB/sRGB.",
-    "triggering_evidence": {
-      "EP05-B01_original": {
-        "drive_file_id": "15-2BMhX5gzI8JrSwb5vOFisLgHhz4B5S",
-        "dimensions": "1672x941",
-        "mode": "RGB",
-        "sha256": "35c6fe109a9f226937bb80c98fe38db9b7633e77f443751b00daf98785c0eb82"
-      },
-      "EP05-B02_original": {
-        "drive_file_id": "1ohN3LIBAkZ92uUFfKAgExplTPlSxrDiX",
-        "dimensions": "1672x941",
-        "mode": "RGB",
-        "sha256": "5fb421c3317256417c46ebbbdfafcc360f961247fc98fefcb02297aeaf140f0d"
-      }
+  "l1": {
+    "selection_integrity": {
+      "status": "FAIL_REFERENCE_CONTENT_IDENTITY",
+      "pass": 189,
+      "fail": 5,
+      "repair_frames": ["EP03-B04", "EP03-B05", "EP03-B06", "EP03-B07", "EP03-B08"]
     },
-    "repairs_completed": {
-      "EP05-B01": {
-        "active_drive_file_id": "1JiXt-mZuFdO93jsBNiTNrbufeqeRJt0q",
-        "dimensions": "1920x1080",
-        "mode": "RGB",
-        "sha256": "383052ab14c4004ffa9de337c4cdc9a4ee095115f7cd12e4d4d63842d0a8fbf0"
-      },
-      "EP05-B02": {
-        "active_drive_file_id": "1sRh1aG_fI55CsFHvljoIYcyiIq6MN7Wj",
-        "dimensions": "1920x1080",
-        "mode": "RGB",
-        "sha256": "959c3ce1c8aa87b9e0672dd0d334a27bb84d6ac41e1cb0e8f1426f262fe408bf"
-      }
+    "canonical_source_media_integrity": {
+      "status": "PASS",
+      "pass": 194,
+      "native_dimensions": {"1920x1080": 72, "1672x941": 122},
+      "color_tag": "RGB_UNTAGGED"
     },
-    "next_gate_unit": "SEASON_ACTIVE_MEDIA_SPEC_AUDIT_194"
+    "production_derivatives": {
+      "status": "NOT_STARTED",
+      "resize_and_embed_srgb": 122,
+      "profile_only": 72,
+      "current_blocker": false
+    }
   },
+  "mapping_repair_plan": [
+    {"frame_key":"EP03-B04","current_drive_file_id":"1Gbd1LFHwIO2AjaMR2yVNltc8Ac6PrUm5","direct_bytes_are_frame_key":"EP03-B05","current_direct_sha256":"9f2142b428180c19b83895d67ed75bd45d954ff8ad616f7c3d7abf3de3a4cb86","expected_frame_sha256":"5295bdd3852591983160f009121e2db4ff2dae73b2dc5066300c763b02cddb00","correct_drive_file_id":"14Hc3VHi6r1BB9RuuvoNHY49vn5Rlf3jo","repair_type":"mapping_reference_only_no_media_generation"},
+    {"frame_key":"EP03-B05","current_drive_file_id":"14Hc3VHi6r1BB9RuuvoNHY49vn5Rlf3jo","direct_bytes_are_frame_key":"EP03-B04","current_direct_sha256":"5295bdd3852591983160f009121e2db4ff2dae73b2dc5066300c763b02cddb00","expected_frame_sha256":"9f2142b428180c19b83895d67ed75bd45d954ff8ad616f7c3d7abf3de3a4cb86","correct_drive_file_id":"1Gbd1LFHwIO2AjaMR2yVNltc8Ac6PrUm5","repair_type":"mapping_reference_only_no_media_generation"},
+    {"frame_key":"EP03-B06","current_drive_file_id":"14sYpd4aR_S0QPnpeDqa_zgY_fExOUnrQ","direct_bytes_are_frame_key":"EP03-B07","current_direct_sha256":"d4be3f89cd532827ebccbe13d3bf098b2712315aa8f22c3ac87376c7aefbcb33","expected_frame_sha256":"bb6bcb76b3cb95ae7eab39aefbf1e7b4b0d96d247bc8aaa62c06dcaf6f44b965","correct_drive_file_id":"1zu2BQrqnZ5iJwbdsUEj1OG1dxBZ6_nQ8","repair_type":"mapping_reference_only_no_media_generation"},
+    {"frame_key":"EP03-B07","current_drive_file_id":"1rGYabvWr1I-rU46uEvdRIRvfsC5s1GQg","direct_bytes_are_frame_key":"EP03-B08","current_direct_sha256":"71d91e24118feca434431c151f6d4280cb2a436e47cad489d3ee4a0918942587","expected_frame_sha256":"d4be3f89cd532827ebccbe13d3bf098b2712315aa8f22c3ac87376c7aefbcb33","correct_drive_file_id":"14sYpd4aR_S0QPnpeDqa_zgY_fExOUnrQ","repair_type":"mapping_reference_only_no_media_generation"},
+    {"frame_key":"EP03-B08","current_drive_file_id":"1zu2BQrqnZ5iJwbdsUEj1OG1dxBZ6_nQ8","direct_bytes_are_frame_key":"EP03-B06","current_direct_sha256":"bb6bcb76b3cb95ae7eab39aefbf1e7b4b0d96d247bc8aaa62c06dcaf6f44b965","expected_frame_sha256":"71d91e24118feca434431c151f6d4280cb2a436e47cad489d3ee4a0918942587","correct_drive_file_id":"1rGYabvWr1I-rU46uEvdRIRvfsC5s1GQg","repair_type":"mapping_reference_only_no_media_generation"}
+  ],
   "visual_canon_gate": {
     "status": "BLOCKED",
     "pass_candidate": 15,
-    "pass_canon": 0,
     "pass_intentional_cut": 2,
-    "review_required": 4,
-    "review_required_after_repair": 2,
-    "mapping_blocked": 0,
-    "closed_boundary_decisions": [
-      {
-        "boundary": "EP01→EP02",
-        "decision": "PASS_INTENTIONAL_CUT",
-        "decision_drive_file_id": "1RlBfSCU94SMiWbcRnzvGuMxq2OVVS1bm",
-        "active_asset_changes": []
-      },
-      {
-        "boundary": "EP04→EP05",
-        "decision": "PASS_INTENTIONAL_CUT",
-        "decision_drive_file_id": "14xstpvogW9evDfN7tRpnAwxdJ7LgF4l-",
-        "spec_repair_performed": true,
-        "active_asset_changes": [
-          {
-            "frame_key": "EP05-B01",
-            "from_drive_file_id": "15-2BMhX5gzI8JrSwb5vOFisLgHhz4B5S",
-            "to_drive_file_id": "1JiXt-mZuFdO93jsBNiTNrbufeqeRJt0q"
-          },
-          {
-            "frame_key": "EP05-B02",
-            "from_drive_file_id": "1ohN3LIBAkZ92uUFfKAgExplTPlSxrDiX",
-            "to_drive_file_id": "1sRh1aG_fI55CsFHvljoIYcyiIq6MN7Wj"
-          }
-        ]
-      }
-    ],
-    "boundary_worklist": [
-      {"boundary": "EP05→EP06", "status": "REVIEW_REQUIRED", "frames": ["EP05-B08", "EP06-B01", "EP06-B02"]},
-      {"boundary": "EP11→EP12", "status": "REVIEW_REQUIRED", "frames": ["EP11-B08", "EP12-B01", "EP12-B02"]},
-      {"boundary": "EP15→EP16", "status": "REVIEW_REQUIRED", "frames": ["EP15-B08", "EP16-B01", "EP16-B02"]},
-      {"boundary": "EP16→EP17", "status": "REVIEW_REQUIRED", "frames": ["EP16-B08", "EP17-B01", "EP17-B02"]},
-      {"boundary": "EP20→EP21", "status": "REVIEW_REQUIRED_AFTER_REPAIR", "frames": ["EP20-B08", "EP21-B01", "EP21-B02"]},
-      {"boundary": "EP23→EP24", "status": "REVIEW_REQUIRED_AFTER_REPAIR", "frames": ["EP23-B08", "EP24-B01", "EP24-B02"]}
-    ],
-    "world_domains": [
-      "architecture_and_space",
-      "costume_age_status_silhouette",
-      "weapons_and_armour",
-      "horse_tack_and_travel_gear",
-      "route_region_and_direction"
-    ]
+    "remaining_blocked_boundaries": 6,
+    "boundary_worklist": ["EP05→EP06","EP11→EP12","EP15→EP16","EP16→EP17","EP20→EP21","EP23→EP24"],
+    "world_domains": ["architecture_and_space","costume_age_status_silhouette","weapons_and_armour","horse_tack_and_travel_gear","route_region_and_direction"]
   },
-  "current_execution_unit": "VISUAL_CANON_BOUNDARY_REVIEW_02_EP04_TO_EP05_COMPLETED",
-  "latest_execution_record": {
-    "record_id": "EXEC-0003",
-    "timestamp_utc": "2026-08-26T03:38:27Z",
-    "result": "PASS_INTENTIONAL_CUT_AFTER_SPEC_NORMALIZATION",
-    "active_asset_changes": 2,
-    "new_evidence_effect": "invalidated previous full-set media specification PASS claim"
+  "authority": {
+    "task_document_id": "1CJEoK7VTDAOAMosU92NaDqruGKkaxuJOJ_kx8FiLVjw",
+    "current_status_markdown_drive_file_id": "1ZrtDrFQaizTUQgauNg9K78H7OVXgDYg4",
+    "current_status_json_drive_file_id": "19CyI4SnxUKkfjwI3hut_1J19bhAfCZRw",
+    "mapping_drive_file_id": "1U_pXUo1qD0D8rDELWvqUDUevpfoXClwa",
+    "mapping_revision": 4,
+    "mapping_sha256": "78181c78e509a5615e900f7dc8518330eb8ddcad577fa80ad6182871f45ef5be",
+    "candidate_manifest_drive_file_id": "1L-6SgE_3VINfxPuz6VQECJ_-pSDvY6WK",
+    "candidate_manifest_revision": 5,
+    "visual_canon_gate_drive_file_id": "1ZkJYbbHUxC5tDZEL9Kqsx7CoHpya9KiL",
+    "audit_markdown_drive_file_id": "1UcImnpmnAcm2aaeQijU3TgS4mrLVB_aJ",
+    "audit_json_drive_file_id": "1VMCQvoMGU_DRKojeQorKLPyTLjtMC9hz",
+    "audit_json_sha256": "5fc75fed58ec94832c15742e52fd62acf45b7e418f874ff778ecd9674785e835",
+    "audit_csv_drive_file_id": "1kwkoB9Zgg4KfMGMuft-S-_GzcYtIqwFE",
+    "audit_evidence_zip_drive_file_id": "1TfaTt-aDSTQxN-19N9eiuWzOJFKYM5ea",
+    "exec_0005_drive_file_id": "1kXOQX_EMLa4wkaf8N8aOdWAICj34R0ZZ",
+    "github_commits": {
+      "audit_direct_closure": "41b35e999071c421327e25b3d1c7218e38c9391d",
+      "visual_canon_gate_current_result": "689772094e8e055387795433978b85a434e6bde7",
+      "current_status_markdown": "4ae83fcca2098d746bebc0f492a7baae00a4c224"
+    }
   },
-  "next_action": "SEASON_ACTIVE_MEDIA_SPEC_AUDIT_194"
+  "execution_records": [
+    {"record_id":"EXEC-0004","execution_unit":"SEASON_ACTIVE_MEDIA_SPEC_AUDIT_194","result":"PARTIAL_STRICT_COVERAGE_128_OF_194","next_action":"SEASON_ACTIVE_MEDIA_SPEC_AUDIT_DIRECT_READBACK_66"},
+    {"record_id":"EXEC-0005","execution_unit":"SEASON_ACTIVE_MEDIA_SPEC_AUDIT_DIRECT_READBACK_66","result":"COMPLETED_WITH_L1A_REFERENCE_FAILURE","direct_readback":"66/66","next_action":"SEASON_ACTIVE_REFERENCE_REPAIR_EP03_B04_B08"}
+  ]
 }
