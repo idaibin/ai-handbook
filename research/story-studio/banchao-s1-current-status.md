@@ -1,57 +1,65 @@
 # Story Studio — 班超 S1 Current Status
 
 - `task_identifier`: `TASK — Story Studio — 班超 S1 FINAL GATE`
-- `status_revision`: `15`
-- `as_of_utc`: `2026-08-26T09:08:26Z`
-- `current_stage`: `S1_CANONICAL_STORYBOARD_REFERENCE`
-- `current_status`: `canonical_storyboard_reference_video_chain_test_not_started`
-- `current_execution_unit`: `PROMOTE_CANONICAL_STORYBOARD_REFERENCE_194_COMPLETED`
-- `next_action`: `VIDEO_CHAIN_TEST_SLICE_10_SECONDS`
+- `status_revision`: `16`
+- `as_of_utc`: `2026-08-26T10:52:58Z`
+- `current_stage`: `S1_VIDEO_CHAIN_TEST`
+- `current_status`: `video_chain_test_partial_pass_provider_blocked`
+- `current_execution_unit`: `VIDEO_CHAIN_TEST_SLICE_10_SECONDS_COMPLETED_WITH_PROVIDER_BLOCKER`
+- `next_action`: `VIDEO_CHAIN_TEST_GENERATIVE_PROVIDER_RESOLUTION`
 - `asset_policy`: `canonical_storyboard_reference`
 - `canonical`: `194`
 - `production_ready`: `0`
-- `evidence_package_revision`: `4`
+- `evidence_package_revision`: `5`
 
 ## Conclusion
 
-The same 194 active storyboard source files have been promoted from `candidate_not_canonical` to `canonical_storyboard_reference` after revision 14 authority synchronization and readback passed.
+The first 10-second downstream video-chain test has been executed from the current canonical `EP01-F01 → EP01-F10` sources.
 
 ```text
-L1A: 194/194 PASS_SELECTION
-L1B: 194/194 PASS
-L2: PASS_SEMANTIC_AGGREGATE
-L3: 23/23 PASS
-L4: 5/5 PASS_WITH_BOUNDED_ADAPTATIONS
+Production derivatives: 10/10 PASS
+Motion Contract: PASS_DETERMINISTIC_PROXY
+Sound / assembly / full decode: PASS
+Generative image-to-video: BLOCKED_PROVIDER
+Overall: PARTIAL_PASS_PROVIDER_BLOCKED
 canonical: 194
 production_ready: 0
-image bytes changed by promotion: 0
-Drive asset refs changed by promotion: 0
 ```
 
-This promotion approves the storyboard as the unique visual reference set. It does not make any frame or video `production-ready`.
+The MP4 is a deterministic motion-and-sound proxy used to validate derivative lineage, timing, assembly, audio muxing and playback. It is not a generated actor-motion shot and is not production-ready.
 
-## Promotion Invariants
+## Verified output
 
-- 194 `shot_id`, 194 `frame_key`, row order and 194 Drive references are unchanged;
-- source PNG bytes and native SHA-256 values are unchanged;
-- Character State, Location, subject overrides and all 23 boundary decisions are unchanged;
-- superseded files remain archived;
-- only mapping/manifest/status policy fields and canonical counts changed.
+| Item | Result |
+|---|---|
+| Canonical inputs | `EP01-F01`–`EP01-F10`, mapping revision 10 |
+| Derivatives | 10/10, 1920×1080 RGB, embedded sRGB, pixel-identical to source |
+| Motion | low-amplitude pan/zoom + 0.20s cross-dissolve |
+| Audio | 48 kHz stereo room/brush/cloth Foley proxy |
+| Output | 1920×1080, 24fps, exactly 10.000s, H.264 + AAC |
+| Full decode | PASS |
+| Output SHA-256 | `398046257ceaec0b61c2497bda9daaf5ef5b1581a9d8c65c7ef33172f97fdaab` |
 
-## Authority Hashes
+## Provider blocker
 
-- mapping revision 10: `dc495dd7e1fb20f3f4861de4b7fd09e53270f89bd23fe87c89a93895ce687c49`
-- manifest revision 10: `fb1de906ca74dd65eceb024b42cba7c603e6b2c94d68b91ee20d8a94fc0653cb`
-- status JSON revision 15: `128985c4b060e9e447fe9117605ecce57d997587d671bb7bf5e05eee2a469144`
+The connected Runway workspace is authenticated but reports `availableVideoModels=[]`. No true image-to-video actor motion was generated. This is the only open blocker in this execution unit.
 
-## Remaining Work
+## Evidence
+
+- Drive folder: `1Ms_9SUzg714rCCmap3V4953Lb_xjC4wT`
+- MP4: `1UPEXwogEdIV6szZypFd8i4nnYRk_sRLS`
+- Complete package: `1Yy61_rkQs0AI5g35wCib1q-FftkSr6-P`
+- Report: `1iWQIkSICRzp0U7dKoqq5-KUWuInZ8F4u`
+- Verification JSON: `1tewtIhK9BBEdfbbJz-ZV5ntkXaicaMws`
+- Motion Contract: `1WfwNDarKk1yIUMSL7n2fsAL82kAr7A9Q`
+- Production derivative lineage: `1fu0_A7WfNq_EJR8GWqVcAjeTItyAb1bP`
+- Review contact sheet: `1CE6rJTIYCR8dMgLUF-sYAVtrI4AyNBdn`
+
+## State decision
 
 ```text
-VIDEO_CHAIN_TEST_SLICE_10_SECONDS
+canonical: 194 (unchanged)
+production_ready: 0 (unchanged)
+full-season video production: not authorized
+next_action: VIDEO_CHAIN_TEST_GENERATIVE_PROVIDER_RESOLUTION
 ```
-
-The next unit tests one 10-second slice through production derivatives, Motion Contract, video generation, sound and assembly. Full-season video production is not authorized by this promotion.
-
-- consistency matrix: `ab78e2fde3790077fbba3b26e053c65b3446dc167e989f7f8e69c24b64992c20`
-- Visual Canon Gate: `ded8f4f275dfd4d5f923c82fdc3f48309f5fafa9b2e08b6b0d5a55ea3cef4292`
-- Final Gate JSON: `1d140f3e4499f062f2b54ad1628f331aed2a9ab895f8abf62055279a20663ec8`
