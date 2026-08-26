@@ -2,17 +2,17 @@
 
 - decision_id: `BANCHAO-S1-SEASON-FINAL-GATE-20260826`
 - evaluated_at_utc: `2026-08-26T07:37:20Z`
-- result: **PASS_LOCAL_CONTENT_AND_STRUCTURE_PENDING_REMOTE_AUTHORITY_SYNC**
-- canonical promotion: `DEFERRED_PENDING_REMOTE_AUTHORITY_SYNC`
-- canonical: `0`
+- result: **PASS_CANONICAL_STORYBOARD_REFERENCE**
+- canonical promotion: `COMPLETED`
+- canonical: `194`
 - production_ready: `0`
-- evidence package revision: `2`
+- evidence package revision: `4`
 
 ## 结论
 
 内容、映射、源媒体、跨集连续性和五个最小世界域已经在本地全部通过。当前没有待重生、待替换或待 resize 的 Visual Canon 活动资产。
 
-尚未把 194 张升级为 `canonical_storyboard_reference`，唯一原因是 Exit Criteria 还要求 Drive、GitHub、Registry 和 Task 完成同一状态的远程写入与回读。revision 14 尚未执行远程写入与回读，因此本地通过仍不能包装成远程已完成。
+Revision 14 authority synchronization and readback passed across Drive, GitHub, Registry and Task. The unchanged 194 active sources are now promoted to `canonical_storyboard_reference`.
 
 ## Gate Results
 
@@ -23,8 +23,8 @@
 | L2 Semantic Aggregate | `PASS_SEMANTIC_AGGREGATE` | mapping roles + subject overrides + 24 episode sheets + 6 full-season mosaics |
 | L3 Boundaries | `PASS` | 7 PASS_CANON + 16 PASS_INTENTIONAL_CUT |
 | L4 World Foundation | `PASS_WITH_BOUNDED_ADAPTATIONS` | 5/5 domains; REPAIR_REQUIRED=0 |
-| Exact mapping/manifest byte alignment | `PASS` | `15a5f1cbeb8f8691c7558b2d01b2776153000184d941333def4a579687e10994` |
-| Remote Authority Sync | `PENDING` | Drive/GitHub/Registry/Task write + readback unavailable |
+| Exact mapping/manifest byte alignment | `PASS` | `dc495dd7e1fb20f3f4861de4b7fd09e53270f89bd23fe87c89a93895ce687c49` |
+| Remote Authority Sync | `PASS` | revision 14 Drive/GitHub/Registry/Task readback |
 
 ## Closed Issues
 
@@ -47,16 +47,20 @@ boundary repair required: 0
 world-domain REPAIR_REQUIRED: 0
 ```
 
-## Required Remote Closure
+## Canonical Promotion Closure
 
-1. Apply the revision-13 sync manifest to Drive, GitHub, Registry and Task.
-2. Read back every updated authority artifact and compare SHA/content.
-3. Confirm all four sources report the same gate state.
-4. Only then promote `canonical=194`; keep `production_ready=0`.
+```text
+canonical: 194
+production_ready: 0
+image bytes changed: 0
+Drive asset refs changed: 0
+```
+
+Promotion receipt: `BANCHAO-S1-CANONICAL-PROMOTION-RECEIPT-REV15.json`.
 
 ## Next Action
 
-`REMOTE_AUTHORITY_SYNC_AND_READBACK_REVISION_14`
+`VIDEO_CHAIN_TEST_SLICE_10_SECONDS`
 
 
 ## Metadata Reconciliation
@@ -64,3 +68,11 @@ world-domain REPAIR_REQUIRED: 0
 - revision: `14`
 - reconciled_at_utc: `2026-08-26T08:34:22Z`
 - corrected final-gate JSON SHA reference and stale revision-11 promotion preconditions; Visual Canon content decisions were not rerun.
+
+
+## Promotion Identity
+
+- promoted_at_utc: `2026-08-26T09:08:26Z`
+- mapping_revision: `10`
+- manifest_revision: `10`
+- status_revision: `15`
