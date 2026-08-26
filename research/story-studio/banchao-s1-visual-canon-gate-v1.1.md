@@ -149,7 +149,7 @@ production_ready = 0
 
 ## 9. Current Gate Result
 
-Local rerun on `2026-08-26T07:37:20Z`:
+Canonical promotion completed on `2026-08-26T09:08:26Z`:
 
 ```text
 L1A selection integrity: PASS_SELECTION 194/194
@@ -157,16 +157,15 @@ L1B source media integrity: PASS 194/194
 L2 semantic aggregate: PASS
 L3 boundary continuity: 23/23 PASS
 L4 minimal world foundation: 5/5 PASS_WITH_BOUNDED_ADAPTATIONS
-remote Drive/GitHub/Registry/Task agreement: PENDING
-canonical: 0
+revision 14 Drive/GitHub/Registry/Task agreement: PASS
+canonical: 194
 production_ready: 0
 ```
 
-All content and visual blockers are locally closed. Promotion is deferred only because Season Exit Criteria requires remote authority synchronization and readback.
+The 194 unchanged active Drive sources are now the approved `canonical_storyboard_reference` set. No production derivative, Motion Contract or video shot is approved by this gate.
 
 ## 10. Next Action
 
 ```text
-REMOTE_AUTHORITY_SYNC_AND_READBACK_REVISION_14
-→ PROMOTE_CANONICAL_STORYBOARD_REFERENCE_194
+VIDEO_CHAIN_TEST_SLICE_10_SECONDS
 ```
