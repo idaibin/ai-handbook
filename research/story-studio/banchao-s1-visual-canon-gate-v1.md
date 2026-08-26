@@ -1,213 +1,157 @@
-# Story Studio — 班超 S1 Visual Canon Gate v1
+# Story Studio — 班超 S1 Visual Canon Gate v1.1 媒体合同修正
 
-- `gate_id`: `story-studio/banchao/s1-visual-canon-v1`
+- `gate_id`: `story-studio/banchao/s1-visual-canon-v1.1`
 - `project_id`: `banchao`
-- `scope`: `EP01–EP24 / 194 candidate storyboard keyframes / 23 episode boundaries`
-- `status`: `active`
 - `effective_date`: `2026-08-26`
-- `supersedes`: prior informal uses of “VisualCanon approval” without a standalone acceptance contract
+- `change_class`: `FAIL_CONTRACT_CORRECTION`
+- `supersedes_section`: `v1 / L1 exact 1920×1080 RGB/sRGB source requirement`
+- `evidence`: `BANCHAO-S1-ACTIVE-MEDIA-SPEC-AUDIT-20260826`
+- `audit_json_sha256`: `6de85bac71b6802d5650ec430f065a5794d29c1c393469622ffda854f24aae18`
 
-## 1. Purpose
+## 1. 修正原因
 
-Visual Canon Gate decides whether the current **candidate storyboard keyframes** are stable enough to become the season's approved visual reference set.
-
-It answers only this question:
-
-> Are character identity/state, scene/world rules, shot function, and active asset selection consistent enough that downstream production may rely on them without silently changing the story or visual identity?
-
-A pass allows:
+Visual Canon Gate v1 把以下两件事混为一体：
 
 ```text
-candidate_not_canonical → canonical_storyboard_reference
+A. canonical storyboard source 是否稳定可信
+B. 下游生产输入是否已归一化为 1920×1080 sRGB
 ```
 
-It does **not** by itself allow:
+全量审计证明当前 194 张活动源图均可解码、均为 8-bit RGB PNG，但存在两个真实原生规格：
 
 ```text
-canonical_storyboard_reference → production-ready video
+1920×1080：72
+1672×941：122
 ```
 
-Video production still requires shot-level `Motion Contract`, rights/provider checks, audio/editing plans, and production validation.
+`1672×941` 与 16:9 的相对偏差约为 `0.053135%`。单纯无裁切放大不会改善身份、剧情、构图或世界一致性，因此不能把源图未放大视为 Visual Canon 失败。
 
-## 2. Non-goals
+## 2. 修正后的 L1
 
-The gate is not:
+### L1A — Selection Integrity
 
-- a general “looks good” or style preference review;
-- a demand for perfect visual similarity between every adjacent frame;
-- a complete archaeology or costume encyclopedia;
-- proof that the animatic is a finished episode or season video;
-- permission to overwrite or delete historical evidence;
-- a reason to regenerate an entire episode when one boundary frame fails.
+全部 194 个 mapping rows 必须满足：
 
-## 3. Authority inputs
+- `shot_id` 唯一；
+- `frame_key` 唯一；
+- 一个活动 Drive file ID；
+- `package-only=0`；
+- mapping、manifest、file ID 对齐；
+- superseded 文件不在活动入口；
+- 原生 SHA-256 可重新定位。
 
-The gate must read the following current sources:
+### L1B — Canonical Source Media Integrity
 
-1. `season-shot-mapping-current.json` — unique active selection and shot function;
-2. `season-candidate-manifest-current.json` — frozen candidate counts and hashes;
-3. Character State Bible — Drive `19OF4M-aOYq7BWf31B30pVP75hjTyckNq`;
-4. Location Bible — Drive `10XNmn2diswGMbSbMSXHhcVFwl2siP6mY`;
-5. Episode Foundation Matrix — Drive `1rk-Hk4CqTfedYKmMVMJA_GO-VN7ohOrR`;
-6. 24-episode treatment — Drive `1wlDngVD09q7sbL4IPtAKMiwaV-a9HP88`;
-7. current consistency/audit evidence — Drive `1j575_IaA2ZRWxgmtqlINYetOk_VsqgS7`, `1ndRbPCilP8XzmyShSiWIfmcs443zFNx_`;
-8. the actual active PNG bytes referenced by the mapping.
-
-Old EP01 G07 status, old r24 progress files, old manifests, and archived candidates are evidence only and cannot override this order.
-
-## 4. Validation layers
-
-### L1 — Mechanical integrity
-
-For all 194 mapping rows:
-
-- one unique `shot_id`;
-- one unique `frame_key`;
-- one active Drive asset reference;
-- no package-only reference;
-- PNG can be decoded;
-- expected active format is `1920×1080`, RGB/sRGB;
-- mapping, manifest, and file reference agree;
-- superseded versions are excluded from the active entry.
-
-Result values:
-
-```text
-PASS_MECHANICAL
-FAIL_MECHANICAL
-NOT_VERIFIED
-```
-
-### L2 — Frame semantic integrity
-
-Each active frame must satisfy:
-
-- the depicted primary subject matches `shot_role` / subject override;
-- the image performs the narrative function assigned by the treatment and mapping;
-- character age, face, hair, facial hair, costume, body wear, and props fit the assigned Character State;
-- scene, architecture, palette, and staging fit the assigned Location IDs;
-- no modern objects, unapproved fantasy forms, readable/pseudo-readable text, arrows, prompt labels, or baked-in review annotations;
-- violence is narratively legible without relying on graphic imagery;
-- intentional subject or location changes are recorded rather than disguised as continuity.
-
-Result values:
-
-```text
-PASS_FRAME
-PASS_INTENTIONAL_CHANGE
-REPAIR_REQUIRED
-NOT_VERIFIED
-```
-
-### L3 — Boundary continuity
-
-Every adjacent episode boundary uses exactly three frames:
-
-```text
-previous episode exit
-→ next episode entry
-→ next episode second frame
-```
-
-Review dimensions:
-
-| Dimension | Pass condition |
-|---|---|
-| Identity | Same named character remains recognisable; a different subject is explicitly mapped |
-| State | Age, fatigue, wounds, hair, costume, authority and props follow the Character State progression |
-| Space | Location change is intentional; screen direction, light and establishing responsibility are explainable |
-| Shot function | Exit, establishing/opening and follow-up frames perform their mapped roles |
-| Narrative cause | The cut preserves the treatment’s cause-and-effect rather than merely looking similar |
-
-A boundary passes when every difference is either continuous or explicitly documented as an intentional cut.
-
-Result values:
-
-```text
-PASS_CANON
-PASS_INTENTIONAL_CUT
-REPAIR_REQUIRED
-NOT_VERIFIED
-```
-
-### L4 — Minimal world-foundation subset
-
-Only elements actually visible in the active 194-frame set are reviewed:
-
-1. architecture and spatial material;
-2. costume, age and status silhouette;
-3. weapons and armour;
-4. horse tack and travel gear;
-5. route, region and geographic direction.
-
-The review must distinguish:
-
-- `SUPPORTED`: supported by current source/contract;
-- `BOUNDED_ADAPTATION`: a controlled dramatic/design choice;
-- `REPAIR_REQUIRED`: anachronistic, internally contradictory, modern/fantasy, or misleading;
-- `NOT_VERIFIED`: insufficient source or unreadable asset evidence.
-
-No new global world encyclopedia is required.
-
-## 5. Boundary review procedure
-
-For each blocked boundary:
-
-1. fetch the three exact PNGs from `season-shot-mapping-current.json`;
-2. verify file ID, decode, dimensions and colour mode;
-3. place the three images side by side without altering the images;
-4. record `identity / state / costume / space / light / direction / shot function / narrative cause`;
-5. assign one boundary decision;
-6. if failed, repair only the smallest failing frame;
-7. move the superseded file to archive and update the same `frame_key` mapping;
-8. repeat L1–L3 for that boundary.
-
-A written decision must contain:
+当前《班超》S1 源图允许的规格集合：
 
 ```yaml
-boundary:
-frames:
-decision:
-dimension_results:
-evidence:
-repair_required:
-active_asset_changes:
-reviewer:
-reviewed_at_utc:
+accepted_dimensions:
+  - 1920x1080
+  - 1672x941
+format: PNG
+bit_depth: 8
+color_type: 2
+mode: RGB
+aspect_ratio_relative_tolerance_from_16_9: 0.1%
 ```
 
-## 6. Season exit criteria
-
-The season may be promoted to `canonical_storyboard_reference` only when:
-
-- L1 passes for `194/194`;
-- all `23/23` episode boundaries are `PASS_CANON` or `PASS_INTENTIONAL_CUT`;
-- the five minimal world domains have no unresolved `REPAIR_REQUIRED`;
-- every active `frame_key` points to one active file;
-- manifest SHA and mapping SHA match;
-- the final gate decision and changed file IDs are recorded;
-- Drive, GitHub, and Registry report the same state.
-
-Until then:
+每张源图必须记录：
 
 ```text
-canonical = 0
-production_ready = 0
+Drive file ID
+native dimensions
+file size
+SHA-256
+color tag status
+evidence source
 ```
 
-## 7. Current gate state
-
-Mechanical structure has been revalidated on `2026-08-26T01:13:39Z`:
+颜色标记值：
 
 ```text
-mapping rows: 194
-unique shot IDs: 194
-unique frame keys: 194
-unique Drive asset refs: 194
-episode counts: EP01=10; EP02–EP24=8 each
-character-state references: resolved
-location references: resolved
-episode-foundation alignment: resolved
+RGB_TAGGED_SRGB
+RGB_UNTAGGED
+OTHER_OR_INVALID
 ```
 
-This is a structural pass only. The eight outstanding boundary decisions and minimal world subset remain visually unapproved.
+`RGB_UNTAGGED` 允许作为 canonical storyboard source，但不得直接被声明为已完成 sRGB 生产归一化。
+
+### L1C — Production Derivative Integrity
+
+当某个镜头进入 Production ShotKeyframe、Remotion 或视频生成时，才创建确定性 production derivative：
+
+```yaml
+dimensions: 1920x1080
+format: PNG
+bit_depth: 8
+mode: RGB
+icc_profile: embedded_sRGB
+crop: forbidden_by_default
+lineage:
+  source_drive_file_id: required
+  source_sha256: required
+  derivative_sha256: required
+  transform_receipt: required
+```
+
+规则：
+
+- 1672×941 源图：无裁切 resize + 嵌入 sRGB。
+- 1920×1080 源图：不改变构图，只进行必要的 profile 规范化。
+- 派生文件不得静默覆盖 canonical source。
+- canonical source 的身份由 Visual Canon 决定，不由像素放大决定。
+
+## 3. 本轮结果
+
+```text
+L1A selection integrity: PASS 194/194
+L1B source media integrity: PASS 194/194
+L1C production derivatives: NOT_STARTED
+```
+
+分布：
+
+```text
+1920×1080 / RGB_8BIT_UNTAGGED: 72
+1672×941 / RGB_8BIT_UNTAGGED: 122
+corrupt: 0
+non-RGB: 0
+explicit sRGB-tagged: 0
+```
+
+## 4. 证据缺陷处理
+
+`EP10-B05` 的旧分集 manifest 写入了 65 位 malformed SHA-256。当前 Drive 原始字节与 package 字节一致，正确 SHA-256 为：
+
+```text
+e1bbbb8d060aec9c88f17885b45cd923bbf6bc98c7e815784bf9d42d4b38c3e1
+```
+
+处理方式：
+
+- 不替换活动图像；
+- 在当前 audit 中覆盖旧错误口径；
+- 旧 manifest 保留为历史证据；
+- 后续当前 manifest 只引用本次审计结果，不回写覆盖历史包。
+
+## 5. 不变项
+
+本修正不改变：
+
+- 194 个活动 `frame_key`；
+- 当前 shot mapping；
+- 已关闭的两个边界决策；
+- 人物、场景或剧情语义；
+- `canonical=0`；
+- `production_ready=0`；
+- 其余 Visual Canon 与世界基础门禁。
+
+## 6. 下一步
+
+媒体规格合同修正完成后，恢复边界审核：
+
+```text
+VISUAL_CANON_BOUNDARY_REVIEW_03_EP05_TO_EP06
+```
+
+只有 Visual Canon、最小世界基础和全季 final gate 全部通过，才允许将活动源图升级为 `canonical_storyboard_reference`。生产派生文件随后按需生成，不在本轮批量创建。
