@@ -3,8 +3,8 @@
 - `task_identifier`: `TASK — Story Studio — 班超 S1 FINAL GATE`
 - `task_key`: `story-studio/banchao/s1-final-gate`
 - `project_id`: `banchao`
-- `status_revision`: `2`
-- `as_of_utc`: `2026-08-26T01:26:00Z`
+- `status_revision`: `3`
+- `as_of_utc`: `2026-08-26T03:07:09Z`
 - `current_stage`: `S1_CANDIDATE_FINAL_GATE`
 - `current_status`: `blocked_pending_visual_canon`
 - `asset_policy`: `candidate_not_canonical`
@@ -18,7 +18,7 @@ EP01–EP24 narrative and candidate storyboard coverage are complete. The season
 The only active work now is:
 
 ```text
-Visual Canon closure for 8 boundaries
+Visual Canon closure for 7 remaining boundaries
 + minimal world-foundation review
 + season final gate rerun
 ```
@@ -37,14 +37,15 @@ Do not expand the workflow, create new episodes, regenerate the whole season, or
 | Package-only refs | 0 |
 | Boundary records | 23 |
 | `PASS_CANDIDATE` | 15 |
-| `REVIEW_REQUIRED` | 6 |
+| `PASS_INTENTIONAL_CUT` | 1 |
+| `REVIEW_REQUIRED` | 5 |
 | `REVIEW_REQUIRED_AFTER_REPAIR` | 2 |
 | `MAPPING_BLOCKED` | 0 |
 | Storyboard animatic | available, about 8m58s, no audio |
 | Canonical assets | 0 |
 | Production-ready assets | 0 |
 
-Mechanical validation performed on `2026-08-26T01:14:34Z` also confirmed:
+Mechanical validation re-run on `2026-08-26T03:07:09Z` also confirmed:
 
 - mapping SHA matches the candidate manifest;
 - EP01 has 10 frames and EP02–EP24 have 8 frames each;
@@ -55,18 +56,25 @@ Mechanical validation performed on `2026-08-26T01:14:34Z` also confirmed:
 
 This round did not re-open and visually approve all 194 PNG pixels. Visual approval remains a separate gate.
 
+## Closed Visual Canon decisions
+
+| Boundary | Decision | Three-frame set | Evidence | Asset change |
+|---|---|---|---|---|
+| `EP01→EP02` | `PASS_INTENTIONAL_CUT` | `EP01-F10` → `EP02-B01` → `EP02-B02` | Decision `1RlBfSCU94SMiWbcRnzvGuMxq2OVVS1bm`; contact sheet `1yzf48UjLJ_sRyGAx8NFsDSA3rUUL0uL-` | none |
+
+The cut intentionally resets time, location, light and screen direction between episodes. Ban Chao remains a recognisable young, clean-shaven figure in restrained dark blue-gray clothing; EP02 adds travel wear and field responsibility without an age or authority jump. No frame was regenerated.
+
 ## Active blockers
 
 | Boundary | Current state | Three-frame set | What remains |
 |---|---|---|---|
-| `EP01→EP02` | `REVIEW_REQUIRED` | `EP01-F10` → `EP02-B01` → `EP02-B02` | 青年班超锚点可接；洛阳到早期边地的状态切换需按入口/出口帧确认 |
 | `EP04→EP05` | `REVIEW_REQUIRED` | `EP04-B08` → `EP05-B01` → `EP05-B02` | 发髻/脸型存在漂移；鄯善到于阗王庭需检查空间锚点 |
 | `EP05→EP06` | `REVIEW_REQUIRED` | `EP05-B08` → `EP06-B01` → `EP06-B02` | 年龄/脸部比例轻微跳变；绿洲到疏勒接近空间需统一 |
 | `EP11→EP12` | `REVIEW_REQUIRED` | `EP11-B08` → `EP12-B01` → `EP12-B02` | 联盟攻城到边地上疏是合理转场，但需确认状态与空间方向 |
 | `EP15→EP16` | `REVIEW_REQUIRED` | `EP15-B08` → `EP16-B01` → `EP16-B02` | EP16-B01/B02 已为独立 1920×1080 RGB PNG；仍需复核人物状态、外交空间与入口镜头职责 |
 | `EP16→EP17` | `REVIEW_REQUIRED` | `EP16-B08` → `EP17-B01` → `EP17-B02` | 联盟策略到诈降酒局，需确认王忠开放钩子与人物状态 |
 | `EP20→EP21` | `REVIEW_REQUIRED_AFTER_REPAIR` | `EP20-B08` → `EP21-B01` → `EP21-B02` | EP21-B01 v2 已沿用 EP20 脸型/成熟度并补入秋季军装；仍需与 EP20-B08、EP21-B02 并列复核 |
-| `EP23→EP24` | `REVIEW_REQUIRED_AFTER_REPAIR` | `EP23-B08` → `EP24-B01` → `EP24-B02` | EP24-B01 v3 已完成可解码的 1920×1080 RGB 重导出；EP23-B08→EP24-B01 角色连续，B01→B02 为班超→班昭的有意主体切换；保留候选级复核，不提升 canonical |
+| `EP23→EP24` | `REVIEW_REQUIRED_AFTER_REPAIR` | `EP23-B08` → `EP24-B01` → `EP24-B02` | EP24-B01 v3 已完成可解码的 1920x1080 RGB 重导出；EP23-B08→EP24-B01 角色连续，B01→B02 为班超→班昭的有意主体切换；保留候选级复核，不提升 canonical |
 
 The EP15→EP16 reason in the prior mapping was stale because it still said `package-only`; EP16 is now eight independent direct PNGs. The current mapping revision removes that obsolete statement.
 
@@ -137,14 +145,16 @@ banchao/
 - Drive S1 root: `1jiJQ6s4PYMxsmR5Fap88JHrsfa4vclJY`
 - Drive current folder: `1-o5w8lmP3P5800EV1IM58lpvLZAYNAeY`
 - Drive mapping file: `1U_pXUo1qD0D8rDELWvqUDUevpfoXClwa`
-- mapping SHA-256: `f339b2ef41fd524b345d6ff7fe72774470fd3cbff4b9224cfc44d2ab8a99b48d`
+- mapping SHA-256: `a569d357d43147402fd34496825121e953211dd4a61d916e7b3ae48c4dbeb064`
 - Drive candidate manifest: `1L-6SgE_3VINfxPuz6VQECJ_-pSDvY6WK`
-- candidate manifest SHA-256: `227b16d1292bbbddea850ddeb07618f39f1320eb042bff1b55719914e3ac333d`
+- candidate manifest SHA-256: `d3b3d5f8ecfa23898420f8de438a1576b0e7932076a60da1fbb80b45a9bdc944`
 - Drive consistency matrix: `1j575_IaA2ZRWxgmtqlINYetOk_VsqgS7`
+- Boundary 01 decision: `1RlBfSCU94SMiWbcRnzvGuMxq2OVVS1bm`
+- Boundary 01 contact sheet: `1yzf48UjLJ_sRyGAx8NFsDSA3rUUL0uL-`
 - Drive latest gate snapshot: `1ndRbPCilP8XzmyShSiWIfmcs443zFNx_`
 - Drive animatic: `1o8rH2Gvp5ofRil15osEd_JOPYZzNQwV0`
 - GitHub baseline read before convergence: `idaibin/ai-handbook@eb41bd74ec4f0e9122296f227cbb57b30df26602`
 
 ## Next action
 
-Execute the eight three-frame Visual Canon reviews in the worklist order. Do not regenerate any frame until a specific review dimension returns `REPAIR_REQUIRED`. After those decisions, review the five minimal world domains and rerun the season final gate.
+Execute `VISUAL_CANON_BOUNDARY_REVIEW_02_EP04_TO_EP05` using `EP04-B08 → EP05-B01 → EP05-B02`. Do not regenerate any frame unless a specific review dimension returns `REPAIR_REQUIRED`.
