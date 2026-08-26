@@ -4,14 +4,14 @@
   "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
   "task_key": "story-studio/banchao/s1-final-gate",
   "project_id": "banchao",
-  "status_revision": 15,
-  "as_of_utc": "2026-08-26T09:08:26Z",
-  "current_stage": "S1_CANONICAL_STORYBOARD_REFERENCE",
-  "current_status": "canonical_storyboard_reference_video_chain_test_not_started",
+  "status_revision": 16,
+  "as_of_utc": "2026-08-26T10:52:58Z",
+  "current_stage": "S1_VIDEO_CHAIN_TEST",
+  "current_status": "video_chain_test_partial_pass_provider_blocked",
   "asset_policy": "canonical_storyboard_reference",
   "canonical": 194,
   "production_ready": 0,
-  "next_action": "VIDEO_CHAIN_TEST_SLICE_10_SECONDS",
+  "next_action": "VIDEO_CHAIN_TEST_GENERATIVE_PROVIDER_RESOLUTION",
   "scope": {
     "episodes": 24,
     "logical_keyframes": 194,
@@ -29,28 +29,43 @@
     "L4": "5/5 PASS_WITH_BOUNDED_ADAPTATIONS",
     "repair_required": 0
   },
-  "promotion": {
-    "execution_unit": "PROMOTE_CANONICAL_STORYBOARD_REFERENCE_194",
-    "result": "PASS_CANONICAL_STORYBOARD_REFERENCE_194",
-    "image_bytes_changed": false,
-    "drive_asset_refs_changed": false,
-    "production_ready": 0,
-    "receipt_drive_file_id": "1l_DPX3nwX-CnI2BJIDYsnPYJv7NMGWIe",
-    "package_drive_file_id": "11_wxxS9oErOaqpX6wixigmsnxSExBFsf"
+  "video_chain_test": {
+    "test_id": "BANCHAO-S1-VIDEO-CHAIN-TEST-SLICE-10S-v1",
+    "result": "PARTIAL_PASS_PROVIDER_BLOCKED",
+    "slice": [
+      "EP01-F01",
+      "EP01-F02",
+      "EP01-F03",
+      "EP01-F04",
+      "EP01-F05",
+      "EP01-F06",
+      "EP01-F07",
+      "EP01-F08",
+      "EP01-F09",
+      "EP01-F10"
+    ],
+    "production_derivatives": "10/10 PASS_EMBEDDED_SRGB_PIXEL_IDENTICAL",
+    "motion_contract": "PASS_DETERMINISTIC_PROXY",
+    "generative_video": "BLOCKED_RUNWAY_AVAILABLE_VIDEO_MODELS_EMPTY",
+    "sound": "PASS_SYNTHETIC_FOLEY_PROXY",
+    "assembly": "PASS_1920X1080_24FPS_10S_H264_AAC_FULL_DECODE",
+    "output_video_sha256": "398046257ceaec0b61c2497bda9daaf5ef5b1581a9d8c65c7ef33172f97fdaab",
+    "package_sha256": "f7bf61b103126505ab2c405769cf292f40432d0310ce7c216ada5fb21f98dc8f",
+    "drive": {
+      "folder": "1Ms_9SUzg714rCCmap3V4953Lb_xjC4wT",
+      "video": "1UPEXwogEdIV6szZypFd8i4nnYRk_sRLS",
+      "package": "1Yy61_rkQs0AI5g35wCib1q-FftkSr6-P",
+      "report": "1iWQIkSICRzp0U7dKoqq5-KUWuInZ8F4u",
+      "verification": "1tewtIhK9BBEdfbbJz-ZV5ntkXaicaMws",
+      "contract_md": "12XgpLolrm6i5VDvzVsDfL2dGC7TccR_9",
+      "motion_contract": "1WfwNDarKk1yIUMSL7n2fsAL82kAr7A9Q",
+      "contact_sheet": "1CE6rJTIYCR8dMgLUF-sYAVtrI4AyNBdn",
+      "provider_preflight": "1YlG6V-V1Zuf1wefGrSGUp_HcMnB8rsFk",
+      "lineage": "1fu0_A7WfNq_EJR8GWqVcAjeTItyAb1bP",
+      "ffprobe": "18iqfCTAlI4DWSV_oDCIcnw0W6uBeEnmc",
+      "checksums": "18uGMuJCHAKxXRdfp7MqEB6VHFUhbEEdZ"
+    },
+    "full_season_video_authorized": false
   },
-  "authority": {
-    "drive_current_status_json_file_id": "19CyI4SnxUKkfjwI3hut_1J19bhAfCZRw",
-    "drive_current_status_json_sha256": "128985c4b060e9e447fe9117605ecce57d997587d671bb7bf5e05eee2a469144",
-    "mapping_drive_file_id": "1U_pXUo1qD0D8rDELWvqUDUevpfoXClwa",
-    "mapping_revision": 10,
-    "mapping_sha256": "dc495dd7e1fb20f3f4861de4b7fd09e53270f89bd23fe87c89a93895ce687c49",
-    "manifest_drive_file_id": "1L-6SgE_3VINfxPuz6VQECJ_-pSDvY6WK",
-    "manifest_revision": 10,
-    "manifest_sha256": "fb1de906ca74dd65eceb024b42cba7c603e6b2c94d68b91ee20d8a94fc0653cb",
-    "visual_canon_gate_drive_file_id": "1ZkJYbbHUxC5tDZEL9Kqsx7CoHpya9KiL",
-    "season_final_gate_drive_file_id": "1w9cubCTQIBlrnnCPRb7UaGY1_B84NIQE",
-    "task_document_id": "1CJEoK7VTDAOAMosU92NaDqruGKkaxuJOJ_kx8FiLVjw",
-    "registry_spreadsheet_id": "1mftSIZi57b4h4ya1lsiJwRkRcJnud2yyGQOPXQetUYY"
-  },
-  "sync_status": "PASS_REVISION_15_READBACK"
+  "sync_status": "PENDING_REVISION_16_READBACK"
 }
