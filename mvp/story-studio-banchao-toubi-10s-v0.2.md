@@ -1,9 +1,13 @@
 # Story Studio MVP — 班超《投笔》10 张分镜 / 10 秒
 
 - `mvp_id`: `story-studio/banchao/toubi-10s-v0.2`
-- `status`: `ten_storyboard_frames_ready`
+- `status`: `ready_as_downstream_video_test_slice`
+- `artifact_role`: `downstream_video_chain_test_slice`
+- `project_status_ref`: `research/story-studio/banchao-s1-current-status.md`
 - `supersedes`: `story-studio/banchao/toubi-30s-v0.2`
 - `scope`: Story Studio only; Forgeway and Skills remain frozen
+
+> **状态说明（2026-08-26）**：本文档仅定义一个后续真实视频链路验证切片，不再代表《班超》S1 的当前项目范围，也不覆盖 S1 当前状态。S1 当前已经进入 EP01–EP24 / 194 张候选分镜的 Visual Canon 最终门禁，权威入口见 `research/story-studio/banchao-s1-current-status.md`。
 
 ## Smallest Result
 
@@ -36,6 +40,8 @@
 4. 完成受辱、停笔、抬眼、放下毛笔四个连续节拍；
 5. 最多生成 3 次，随后用户决定 `keep / change / stop`。
 
-## Excluded
+## Excluded from this test slice
 
-不做 30 秒成片、不把 10 张图缩减为 2～3 镜、不做配音字幕、不补齐 G07 十单元、不扩展 EP01 或 24 集。原 30 秒文件与 3 镜 10 秒代理均为历史预览。
+本切片本身不做 30 秒成片、不把 10 张图缩减为 2～3 镜、不做完整季配音字幕、不补齐历史 G07 十单元，也不承担 EP01–EP24 的 Visual Canon 审批。原 30 秒文件与 3 镜 10 秒代理均为历史预览。
+
+这里的排除项只限定本测试切片，不构成对 S1 项目范围的禁止或回退。
