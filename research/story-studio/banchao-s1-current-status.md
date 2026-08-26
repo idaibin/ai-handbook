@@ -63,3 +63,14 @@ production_ready: 0 (unchanged)
 full-season video production: not authorized
 next_action: VIDEO_CHAIN_TEST_GENERATIVE_PROVIDER_RESOLUTION
 ```
+
+## Revision 16 synchronization closure
+
+- `sync_status`: `PASS_REVISION_16_READBACK`
+- `synced_at_utc`: `2026-08-26T11:06:09Z`
+- Drive Current Status Markdown/JSON exact byte readback: `PASS`
+- Drive MP4 exact SHA and full decode after re-download: `PASS`
+- Drive evidence ZIP exact SHA and ZIP integrity after re-download: `PASS`
+- GitHub status Markdown/JSON and test report blob readback: `PASS`
+- Registry Project/Task row readback: `PASS`
+- Task revision `21`; `EXEC-0021` unique; header and next action readback: `PASS`
