@@ -65,7 +65,12 @@
       "ffprobe": "18iqfCTAlI4DWSV_oDCIcnw0W6uBeEnmc",
       "checksums": "18uGMuJCHAKxXRdfp7MqEB6VHFUhbEEdZ"
     },
-    "full_season_video_authorized": false
+    "full_season_video_authorized": false,
+    "drive_readback": {
+      "video": "PASS_EXACT_SHA_AND_FULL_DECODE",
+      "package": "PASS_EXACT_SHA_AND_ZIP_INTEGRITY"
+    }
   },
-  "sync_status": "PENDING_REVISION_16_READBACK"
+  "sync_status": "PASS_REVISION_16_READBACK",
+  "synced_at_utc": "2026-08-26T11:06:09Z"
 }
