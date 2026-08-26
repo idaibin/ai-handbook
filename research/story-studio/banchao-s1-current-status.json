@@ -39,9 +39,15 @@
       "request_result": "BLOCKED_ACCOUNT_LIMITATION_PAID_PLAN_REQUIRED",
       "generation_job_created": false,
       "output_created": false,
-      "numeric_credit_balance": "NOT_EXPOSED_BY_CONNECTOR"
+      "numeric_credit_balance": "NOT_EXPOSED_BY_CONNECTOR",
+      "drive_report_markdown": "1oPlNNiiUdE6FNDY4eQoMC6KMAPXX5v0n",
+      "drive_report_json": "17Be9ukiwGQaDHtViqivMQaOkkfmm4phd",
+      "sync_readback_markdown": "1b6FI3_nr-JkkKgDXqWNHg9lgOQWdGgBh",
+      "sync_readback_json": "1JGDKdrj-cdxVdZ1FUdZ0cvoJ_d64LcH0"
     },
     "full_season_video_authorized": false
   },
-  "sync_status": "PENDING_REVISION_17_READBACK"
+  "sync_status": "PASS_REVISION_17_READBACK",
+  "synced_at_utc": "2026-08-26T11:48:16Z",
+  "task_revision": 22
 }
