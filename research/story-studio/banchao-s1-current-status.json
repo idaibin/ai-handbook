@@ -4,14 +4,14 @@
   "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
   "task_key": "story-studio/banchao/s1-final-gate",
   "project_id": "banchao",
-  "status_revision": 16,
-  "as_of_utc": "2026-08-26T10:52:58Z",
+  "status_revision": 17,
+  "as_of_utc": "2026-08-26T11:41:41Z",
   "current_stage": "S1_VIDEO_CHAIN_TEST",
-  "current_status": "video_chain_test_partial_pass_provider_blocked",
+  "current_status": "video_chain_test_partial_pass_runway_paid_plan_required",
   "asset_policy": "canonical_storyboard_reference",
   "canonical": 194,
   "production_ready": 0,
-  "next_action": "VIDEO_CHAIN_TEST_GENERATIVE_PROVIDER_RESOLUTION",
+  "next_action": "GENERATIVE_VIDEO_PROVIDER_ENABLEMENT_OR_ALTERNATE_PROVIDER",
   "scope": {
     "episodes": 24,
     "logical_keyframes": 194,
@@ -30,47 +30,18 @@
     "repair_required": 0
   },
   "video_chain_test": {
-    "test_id": "BANCHAO-S1-VIDEO-CHAIN-TEST-SLICE-10S-v1",
     "result": "PARTIAL_PASS_PROVIDER_BLOCKED",
-    "slice": [
-      "EP01-F01",
-      "EP01-F02",
-      "EP01-F03",
-      "EP01-F04",
-      "EP01-F05",
-      "EP01-F06",
-      "EP01-F07",
-      "EP01-F08",
-      "EP01-F09",
-      "EP01-F10"
-    ],
-    "production_derivatives": "10/10 PASS_EMBEDDED_SRGB_PIXEL_IDENTICAL",
-    "motion_contract": "PASS_DETERMINISTIC_PROXY",
-    "generative_video": "BLOCKED_RUNWAY_AVAILABLE_VIDEO_MODELS_EMPTY",
-    "sound": "PASS_SYNTHETIC_FOLEY_PROXY",
-    "assembly": "PASS_1920X1080_24FPS_10S_H264_AAC_FULL_DECODE",
-    "output_video_sha256": "398046257ceaec0b61c2497bda9daaf5ef5b1581a9d8c65c7ef33172f97fdaab",
-    "package_sha256": "f7bf61b103126505ab2c405769cf292f40432d0310ce7c216ada5fb21f98dc8f",
-    "drive": {
-      "folder": "1Ms_9SUzg714rCCmap3V4953Lb_xjC4wT",
-      "video": "1UPEXwogEdIV6szZypFd8i4nnYRk_sRLS",
-      "package": "1Yy61_rkQs0AI5g35wCib1q-FftkSr6-P",
-      "report": "1iWQIkSICRzp0U7dKoqq5-KUWuInZ8F4u",
-      "verification": "1tewtIhK9BBEdfbbJz-ZV5ntkXaicaMws",
-      "contract_md": "12XgpLolrm6i5VDvzVsDfL2dGC7TccR_9",
-      "motion_contract": "1WfwNDarKk1yIUMSL7n2fsAL82kAr7A9Q",
-      "contact_sheet": "1CE6rJTIYCR8dMgLUF-sYAVtrI4AyNBdn",
-      "provider_preflight": "1YlG6V-V1Zuf1wefGrSGUp_HcMnB8rsFk",
-      "lineage": "1fu0_A7WfNq_EJR8GWqVcAjeTItyAb1bP",
-      "ffprobe": "18iqfCTAlI4DWSV_oDCIcnw0W6uBeEnmc",
-      "checksums": "18uGMuJCHAKxXRdfp7MqEB6VHFUhbEEdZ"
+    "deterministic_chain": "PASS",
+    "generative_provider_resolution": {
+      "provider": "Runway",
+      "authenticated": true,
+      "available_video_models": [],
+      "request_result": "BLOCKED_ACCOUNT_LIMITATION_PAID_PLAN_REQUIRED",
+      "generation_job_created": false,
+      "output_created": false,
+      "numeric_credit_balance": "NOT_EXPOSED_BY_CONNECTOR"
     },
-    "full_season_video_authorized": false,
-    "drive_readback": {
-      "video": "PASS_EXACT_SHA_AND_FULL_DECODE",
-      "package": "PASS_EXACT_SHA_AND_ZIP_INTEGRITY"
-    }
+    "full_season_video_authorized": false
   },
-  "sync_status": "PASS_REVISION_16_READBACK",
-  "synced_at_utc": "2026-08-26T11:06:09Z"
+  "sync_status": "PENDING_REVISION_17_READBACK"
 }
