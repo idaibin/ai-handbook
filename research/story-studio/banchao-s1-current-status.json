@@ -1,1 +1,366 @@
-{"schema":"story-studio/banchao-s1-current-state","task_identifier":"TASK — Story Studio — 班超 S1 FINAL GATE","task_key":"story-studio/banchao/s1-final-gate","project_id":"banchao","status_revision":6,"as_of_utc":"2026-08-26T06:26:11Z","current_stage":"S1_CANDIDATE_FINAL_GATE","current_status":"blocked_pending_reference_repair_5_and_visual_canon","current_execution_unit":"SEASON_ACTIVE_MEDIA_SPEC_AUDIT_DIRECT_READBACK_66_COMPLETED","next_action":"SEASON_ACTIVE_REFERENCE_REPAIR_EP03_B04_B08","resume_after_pass":"VISUAL_CANON_BOUNDARY_REVIEW_03_EP05_TO_EP06","asset_policy":"candidate_not_canonical","canonical":0,"production_ready":0,"scope":{"episodes":24,"logical_keyframes":194,"boundaries":23},"l1":{"selection_integrity":{"status":"FAIL_REFERENCE_CONTENT_IDENTITY","pass":189,"fail":5,"repair_frames":["EP03-B04","EP03-B05","EP03-B06","EP03-B07","EP03-B08"]},"canonical_source_media_integrity":{"status":"PASS","pass":194,"native_dimensions":{"1920x1080":72,"1672x941":122},"color_tag":"RGB_UNTAGGED"},"production_derivatives":{"status":"NOT_STARTED","resize_and_embed_srgb":122,"profile_only":72,"current_blocker":false}},"mapping_repair_plan":[{"frame_key":"EP03-B04","current_drive_file_id":"1Gbd1LFHwIO2AjaMR2yVNltc8Ac6PrUm5","direct_bytes_are_frame_key":"EP03-B05","current_direct_sha256":"9f2142b428180c19b83895d67ed75bd45d954ff8ad616f7c3d7abf3de3a4cb86","expected_frame_sha256":"5295bdd3852591983160f009121e2db4ff2dae73b2dc5066300c763b02cddb00","correct_drive_file_id":"14Hc3VHi6r1BB9RuuvoNHY49vn5Rlf3jo","repair_type":"mapping_reference_only_no_media_generation"},{"frame_key":"EP03-B05","current_drive_file_id":"14Hc3VHi6r1BB9RuuvoNHY49vn5Rlf3jo","direct_bytes_are_frame_key":"EP03-B04","current_direct_sha256":"5295bdd3852591983160f009121e2db4ff2dae73b2dc5066300c763b02cddb00","expected_frame_sha256":"9f2142b428180c19b83895d67ed75bd45d954ff8ad616f7c3d7abf3de3a4cb86","correct_drive_file_id":"1Gbd1LFHwIO2AjaMR2yVNltc8Ac6PrUm5","repair_type":"mapping_reference_only_no_media_generation"},{"frame_key":"EP03-B06","current_drive_file_id":"14sYpd4aR_S0QPnpeDqa_zgY_fExOUnrQ","direct_bytes_are_frame_key":"EP03-B07","current_direct_sha256":"d4be3f89cd532827ebccbe13d3bf098b2712315aa8f22c3ac87376c7aefbcb33","expected_frame_sha256":"bb6bcb76b3cb95ae7eab39aefbf1e7b4b0d96d247bc8aaa62c06dcaf6f44b965","correct_drive_file_id":"1zu2BQrqnZ5iJwbdsUEj1OG1dxBZ6_nQ8","repair_type":"mapping_reference_only_no_media_generation"},{"frame_key":"EP03-B07","current_drive_file_id":"1rGYabvWr1I-rU46uEvdRIRvfsC5s1GQg","direct_bytes_are_frame_key":"EP03-B08","current_direct_sha256":"71d91e24118feca434431c151f6d4280cb2a436e47cad489d3ee4a0918942587","expected_frame_sha256":"d4be3f89cd532827ebccbe13d3bf098b2712315aa8f22c3ac87376c7aefbcb33","correct_drive_file_id":"14sYpd4aR_S0QPnpeDqa_zgY_fExOUnrQ","repair_type":"mapping_reference_only_no_media_generation"},{"frame_key":"EP03-B08","current_drive_file_id":"1zu2BQrqnZ5iJwbdsUEj1OG1dxBZ6_nQ8","direct_bytes_are_frame_key":"EP03-B06","current_direct_sha256":"bb6bcb76b3cb95ae7eab39aefbf1e7b4b0d96d247bc8aaa62c06dcaf6f44b965","expected_frame_sha256":"71d91e24118feca434431c151f6d4280cb2a436e47cad489d3ee4a0918942587","correct_drive_file_id":"1rGYabvWr1I-rU46uEvdRIRvfsC5s1GQg","repair_type":"mapping_reference_only_no_media_generation"}],"visual_canon_gate":{"status":"BLOCKED","pass_candidate":15,"pass_intentional_cut":2,"remaining_blocked_boundaries":6,"boundary_worklist":["EP05→EP06","EP11→EP12","EP15→EP16","EP16→EP17","EP20→EP21","EP23→EP24"],"world_domains":["architecture_and_space","costume_age_status_silhouette","weapons_and_armour","horse_tack_and_travel_gear","route_region_and_direction"]},"authority":{"task_document_id":"1CJEoK7VTDAOAMosU92NaDqruGKkaxuJOJ_kx8FiLVjw","current_status_markdown_drive_file_id":"1ZrtDrFQaizTUQgauNg9K78H7OVXgDYg4","current_status_json_drive_file_id":"19CyI4SnxUKkfjwI3hut_1J19bhAfCZRw","mapping_drive_file_id":"1U_pXUo1qD0D8rDELWvqUDUevpfoXClwa","mapping_revision":4,"mapping_sha256":"78181c78e509a5615e900f7dc8518330eb8ddcad577fa80ad6182871f45ef5be","candidate_manifest_drive_file_id":"1L-6SgE_3VINfxPuz6VQECJ_-pSDvY6WK","candidate_manifest_revision":5,"visual_canon_gate_drive_file_id":"1ZkJYbbHUxC5tDZEL9Kqsx7CoHpya9KiL","audit_markdown_drive_file_id":"1UcImnpmnAcm2aaeQijU3TgS4mrLVB_aJ","audit_json_drive_file_id":"1VMCQvoMGU_DRKojeQorKLPyTLjtMC9hz","audit_json_sha256":"5fc75fed58ec94832c15742e52fd62acf45b7e418f874ff778ecd9674785e835","audit_csv_drive_file_id":"1kwkoB9Zgg4KfMGMuft-S-_GzcYtIqwFE","audit_evidence_zip_drive_file_id":"1TfaTt-aDSTQxN-19N9eiuWzOJFKYM5ea","github_commits":{"audit_direct_closure":"41b35e999071c421327e25b3d1c7218e38c9391d","visual_canon_gate_current_result":"689772094e8e055387795433978b85a434e6bde7","current_status_markdown":"4ae83fcca2098d746bebc0f492a7baae00a4c224","current_status_json":"dafa9d44400e388097a841acef031cee8262a4bd"},"exec_0005_drive_file_id":"1kXOQX_EMLa4wkaf8N8aOdWAICj34R0ZZ"},"execution_records":[{"record_id":"EXEC-0004","execution_unit":"SEASON_ACTIVE_MEDIA_SPEC_AUDIT_194","result":"PARTIAL_STRICT_COVERAGE_128_OF_194","next_action":"SEASON_ACTIVE_MEDIA_SPEC_AUDIT_DIRECT_READBACK_66"},{"record_id":"EXEC-0005","execution_unit":"SEASON_ACTIVE_MEDIA_SPEC_AUDIT_DIRECT_READBACK_66","result":"COMPLETED_WITH_L1A_REFERENCE_FAILURE","direct_readback":"66/66","next_action":"SEASON_ACTIVE_REFERENCE_REPAIR_EP03_B04_B08"}]}
+{
+  "schema": "story-studio/banchao-s1-current-state",
+  "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
+  "task_key": "story-studio/banchao/s1-final-gate",
+  "project_id": "banchao",
+  "status_revision": 14,
+  "as_of_utc": "2026-08-26T08:34:22Z",
+  "current_stage": "S1_CANDIDATE_FINAL_GATE",
+  "current_status": "local_final_gate_pass_pending_remote_authority_sync",
+  "current_execution_unit": "LOCAL_EVIDENCE_METADATA_RECONCILIATION_REVISION_14_COMPLETED",
+  "next_action": "REMOTE_AUTHORITY_SYNC_AND_READBACK_REVISION_14",
+  "resume_after_pass": "PROMOTE_CANONICAL_STORYBOARD_REFERENCE_194",
+  "asset_policy": "candidate_not_canonical",
+  "canonical": 0,
+  "production_ready": 0,
+  "scope": {
+    "episodes": 24,
+    "logical_keyframes": 194,
+    "boundaries": 23
+  },
+  "l1": {
+    "selection_integrity": {
+      "status": "PASS_SELECTION",
+      "pass": 194,
+      "fail": 0,
+      "repair_frames": []
+    },
+    "canonical_source_media_integrity": {
+      "status": "PASS",
+      "pass": 194,
+      "native_dimensions": {
+        "1920x1080": 72,
+        "1672x941": 122
+      },
+      "color_tag": "RGB_UNTAGGED"
+    },
+    "production_derivatives": {
+      "status": "NOT_STARTED",
+      "resize_and_embed_srgb": 122,
+      "profile_only": 72,
+      "current_blocker": false
+    }
+  },
+  "visual_canon_gate": {
+    "status": "PASS_LOCAL_PENDING_REMOTE_AUTHORITY_SYNC",
+    "pass_candidate": 0,
+    "pass_intentional_cut": 16,
+    "remaining_blocked_boundaries": 0,
+    "boundary_worklist": [],
+    "world_domains": [
+      "architecture_and_space",
+      "costume_age_status_silhouette",
+      "weapons_and_armour",
+      "horse_tack_and_travel_gear",
+      "route_region_and_direction"
+    ],
+    "pass_canon": 7,
+    "closed_boundary_decisions": [
+      {
+        "boundary": "EP05→EP06",
+        "decision_id": "BANCHAO-S1-VC-B03-EP05-EP06",
+        "decision": "PASS_INTENTIONAL_CUT",
+        "decision_file": "03-ep05-to-ep06.md",
+        "decision_json_file": "03-ep05-to-ep06.json",
+        "contact_sheet_file": "03_EP05_to_EP06.png",
+        "reviewed_at_utc": "2026-08-26T07:15:45Z",
+        "remote_sync": "PENDING"
+      },
+      {
+        "boundary": "EP11→EP12",
+        "decision_id": "BANCHAO-S1-VC-B04-EP11-EP12",
+        "decision": "PASS_INTENTIONAL_CUT",
+        "decision_file": "04-ep11-to-ep12.md",
+        "decision_json_file": "04-ep11-to-ep12.json",
+        "contact_sheet_file": "04_EP11_to_EP12.png",
+        "reviewed_at_utc": "2026-08-26T07:15:45Z",
+        "remote_sync": "PENDING"
+      },
+      {
+        "boundary": "EP15→EP16",
+        "decision_id": "BANCHAO-S1-VC-B05-EP15-EP16",
+        "decision": "PASS_CANON",
+        "decision_file": "05-ep15-to-ep16.md",
+        "decision_json_file": "05-ep15-to-ep16.json",
+        "contact_sheet_file": "05_EP15_to_EP16.png",
+        "reviewed_at_utc": "2026-08-26T07:15:45Z",
+        "remote_sync": "PENDING"
+      },
+      {
+        "boundary": "EP16→EP17",
+        "decision_id": "BANCHAO-S1-VC-B06-EP16-EP17",
+        "decision": "PASS_INTENTIONAL_CUT",
+        "decision_file": "06-ep16-to-ep17.md",
+        "decision_json_file": "06-ep16-to-ep17.json",
+        "contact_sheet_file": "06_EP16_to_EP17.png",
+        "reviewed_at_utc": "2026-08-26T07:15:45Z",
+        "remote_sync": "PENDING"
+      },
+      {
+        "boundary": "EP20→EP21",
+        "decision_id": "BANCHAO-S1-VC-B07-EP20-EP21",
+        "decision": "PASS_INTENTIONAL_CUT",
+        "decision_file": "07-ep20-to-ep21.md",
+        "decision_json_file": "07-ep20-to-ep21.json",
+        "contact_sheet_file": "07_EP20_to_EP21.png",
+        "reviewed_at_utc": "2026-08-26T07:15:45Z",
+        "remote_sync": "PENDING"
+      },
+      {
+        "boundary": "EP23→EP24",
+        "decision_id": "BANCHAO-S1-VC-B08-EP23-EP24",
+        "decision": "PASS_INTENTIONAL_CUT",
+        "decision_file": "08-ep23-to-ep24.md",
+        "decision_json_file": "08-ep23-to-ep24.json",
+        "contact_sheet_file": "08_EP23_to_EP24.png",
+        "reviewed_at_utc": "2026-08-26T07:15:45Z",
+        "remote_sync": "PENDING"
+      }
+    ],
+    "all_boundaries": "23/23 PASS",
+    "world_foundation": {
+      "decision": "PASS_WITH_BOUNDED_ADAPTATIONS",
+      "domains": 5,
+      "bounded_adaptation": 5,
+      "repair_required": 0,
+      "not_verified": 0,
+      "no_unresolved_repair_required": true,
+      "evidence_markdown": "BANCHAO-S1-MINIMAL-WORLD-FOUNDATION-REVIEW.md",
+      "evidence_json": "BANCHAO-S1-MINIMAL-WORLD-FOUNDATION-REVIEW.json",
+      "reviewed_at_utc": "2026-08-26T07:30:08Z",
+      "remote_sync": "PENDING_READ_ONLY_CONNECTORS"
+    },
+    "local_final_gate": {
+      "result": "PASS_LOCAL_CONTENT_AND_STRUCTURE_PENDING_REMOTE_AUTHORITY_SYNC",
+      "decision_id": "BANCHAO-S1-SEASON-FINAL-GATE-20260826",
+      "all_local_layers_pass": true,
+      "remote_authority_agreement": false,
+      "canonical_promotion": "DEFERRED",
+      "promotable_after_sync": 194,
+      "evaluated_at_utc": "2026-08-26T07:37:20Z",
+      "next_action": "REMOTE_AUTHORITY_SYNC_AND_READBACK_REVISION_14"
+    }
+  },
+  "authority": {
+    "task_document_id": "1CJEoK7VTDAOAMosU92NaDqruGKkaxuJOJ_kx8FiLVjw",
+    "current_status_markdown_drive_file_id": "1ZrtDrFQaizTUQgauNg9K78H7OVXgDYg4",
+    "current_status_json_drive_file_id": "19CyI4SnxUKkfjwI3hut_1J19bhAfCZRw",
+    "mapping_drive_file_id": "1U_pXUo1qD0D8rDELWvqUDUevpfoXClwa",
+    "mapping_revision": 9,
+    "mapping_sha256": "15a5f1cbeb8f8691c7558b2d01b2776153000184d941333def4a579687e10994",
+    "candidate_manifest_drive_file_id": "1L-6SgE_3VINfxPuz6VQECJ_-pSDvY6WK",
+    "candidate_manifest_revision": 9,
+    "visual_canon_gate_drive_file_id": "1ZkJYbbHUxC5tDZEL9Kqsx7CoHpya9KiL",
+    "audit_markdown_drive_file_id": "1UcImnpmnAcm2aaeQijU3TgS4mrLVB_aJ",
+    "audit_json_drive_file_id": "1VMCQvoMGU_DRKojeQorKLPyTLjtMC9hz",
+    "audit_json_sha256": "5fc75fed58ec94832c15742e52fd62acf45b7e418f874ff778ecd9674785e835",
+    "audit_csv_drive_file_id": "1kwkoB9Zgg4KfMGMuft-S-_GzcYtIqwFE",
+    "audit_evidence_zip_drive_file_id": "1TfaTt-aDSTQxN-19N9eiuWzOJFKYM5ea",
+    "github_commits": {
+      "audit_direct_closure": "41b35e999071c421327e25b3d1c7218e38c9391d",
+      "visual_canon_gate_current_result": "689772094e8e055387795433978b85a434e6bde7",
+      "current_status_markdown": "4ae83fcca2098d746bebc0f492a7baae00a4c224",
+      "current_status_json": "dafa9d44400e388097a841acef031cee8262a4bd"
+    },
+    "exec_0005_drive_file_id": "1kXOQX_EMLa4wkaf8N8aOdWAICj34R0ZZ",
+    "candidate_manifest_sha256": "2f2878c4a3b53b57d22f6a092aaab6eb3ef2d3cb6f7f55077979d89636847a8b",
+    "l1a_rerun_sha256": "66011ef5fd6850c24be13f7b0bd2fca0ff85412cdfc8de6d9e3bf2df4ec96ec1",
+    "consistency_matrix_sha256": "0e4d7dfc35deff5a84c9356d99d455233d8390ee1782b4ad8e4024e8487e0a54",
+    "remote_sync": "PENDING_REMOTE_WRITE_AND_READBACK_REVISION_14",
+    "world_foundation_review_sha256": "fe4f2d07add0714f9ccbffd5e86a39738adef34eda275fb13bf790791c7d059d",
+    "visual_canon_gate_local_sha256": "03b496fb458842d96e94dde5c8f40431101632f10ad6a38cf273c6baa1cdba99",
+    "season_final_gate_json_sha256": "a4913dd3c9fd32126a44a0f551ed9c98e7a0ba27ffa3cb7dc66bc93f10a162a0"
+  },
+  "execution_records": [
+    {
+      "record_id": "EXEC-0004",
+      "execution_unit": "SEASON_ACTIVE_MEDIA_SPEC_AUDIT_194",
+      "result": "PARTIAL_STRICT_COVERAGE_128_OF_194",
+      "next_action": "SEASON_ACTIVE_MEDIA_SPEC_AUDIT_DIRECT_READBACK_66"
+    },
+    {
+      "record_id": "EXEC-0005",
+      "execution_unit": "SEASON_ACTIVE_MEDIA_SPEC_AUDIT_DIRECT_READBACK_66",
+      "result": "COMPLETED_WITH_L1A_REFERENCE_FAILURE",
+      "direct_readback": "66/66",
+      "next_action": "SEASON_ACTIVE_REFERENCE_REPAIR_EP03_B04_B08"
+    },
+    {
+      "record_id": "EXEC-0006",
+      "execution_unit": "SEASON_ACTIVE_REFERENCE_REPAIR_EP03_B04_B08",
+      "result": "PASS_SELECTION_194_OF_194",
+      "reference_repairs": 5,
+      "asset_bytes_changed": false,
+      "next_action": "VISUAL_CANON_BOUNDARY_REVIEW_03_EP05_TO_EP06"
+    },
+    {
+      "record_id": "EXEC-0007",
+      "execution_unit": "VISUAL_CANON_BOUNDARY_REVIEW_03_EP05_TO_EP06",
+      "result": "PASS_INTENTIONAL_CUT",
+      "repair_required": false,
+      "active_asset_changes": 0,
+      "reviewed_at_utc": "2026-08-26T07:15:45Z"
+    },
+    {
+      "record_id": "EXEC-0008",
+      "execution_unit": "VISUAL_CANON_BOUNDARY_REVIEW_04_EP11_TO_EP12",
+      "result": "PASS_INTENTIONAL_CUT",
+      "repair_required": false,
+      "active_asset_changes": 0,
+      "reviewed_at_utc": "2026-08-26T07:15:45Z"
+    },
+    {
+      "record_id": "EXEC-0009",
+      "execution_unit": "VISUAL_CANON_BOUNDARY_REVIEW_05_EP15_TO_EP16",
+      "result": "PASS_CANON",
+      "repair_required": false,
+      "active_asset_changes": 0,
+      "reviewed_at_utc": "2026-08-26T07:15:45Z"
+    },
+    {
+      "record_id": "EXEC-0010",
+      "execution_unit": "VISUAL_CANON_BOUNDARY_REVIEW_06_EP16_TO_EP17",
+      "result": "PASS_INTENTIONAL_CUT",
+      "repair_required": false,
+      "active_asset_changes": 0,
+      "reviewed_at_utc": "2026-08-26T07:15:45Z"
+    },
+    {
+      "record_id": "EXEC-0011",
+      "execution_unit": "VISUAL_CANON_BOUNDARY_REVIEW_07_EP20_TO_EP21",
+      "result": "PASS_INTENTIONAL_CUT",
+      "repair_required": false,
+      "active_asset_changes": 0,
+      "reviewed_at_utc": "2026-08-26T07:15:45Z"
+    },
+    {
+      "record_id": "EXEC-0012",
+      "execution_unit": "VISUAL_CANON_BOUNDARY_REVIEW_08_EP23_TO_EP24",
+      "result": "PASS_INTENTIONAL_CUT",
+      "repair_required": false,
+      "active_asset_changes": 0,
+      "reviewed_at_utc": "2026-08-26T07:15:45Z"
+    },
+    {
+      "record_id": "EXEC-0013",
+      "execution_unit": "VISUAL_CANON_PROMOTE_PASS_CANDIDATE_15",
+      "result": "23_OF_23_BOUNDARIES_PASS",
+      "mapping_correction": [
+        "EP14-B01/B02=CHAR_LI_YI"
+      ],
+      "repair_required": false,
+      "active_asset_changes": 0,
+      "reviewed_at_utc": "2026-08-26T07:20:42Z"
+    },
+    {
+      "record_id": "EXEC-0014",
+      "execution_unit": "MINIMAL_WORLD_FOUNDATION_REVIEW_5_DOMAINS",
+      "result": "PASS_WITH_BOUNDED_ADAPTATIONS",
+      "domains": "5/5",
+      "repair_required": 0,
+      "active_asset_changes": 0,
+      "reviewed_at_utc": "2026-08-26T07:30:08Z",
+      "next_action": "SEASON_FINAL_GATE_RERUN"
+    },
+    {
+      "record_id": "EXEC-0015",
+      "execution_unit": "SEASON_FINAL_GATE_RERUN_ATTEMPT_01",
+      "result": "FAIL_LOCAL_GATE_STALE_NATIVE_MIRROR_5",
+      "classification": "FAIL_DEPENDENCY_LOCAL_EVIDENCE_MIRROR",
+      "drive_assets_changed": false,
+      "drive_mapping_changed": false,
+      "next_action": "REPAIR_LOCAL_NATIVE_SOURCE_MIRROR_EP03_5"
+    },
+    {
+      "record_id": "EXEC-0016",
+      "execution_unit": "REPAIR_LOCAL_NATIVE_SOURCE_MIRROR_EP03_5",
+      "result": "PASS_194_OF_194",
+      "local_mirror_files_changed": 5,
+      "drive_assets_changed": false,
+      "drive_mapping_changed": false,
+      "mirror_manifest_sha256": "eb093e8f87cca0f5b8b60c2304a104ca52b9c1b4251a6f4011920937b4cf5a6a",
+      "next_action": "SEASON_FINAL_GATE_RERUN_ATTEMPT_02"
+    },
+    {
+      "record_id": "EXEC-0017",
+      "execution_unit": "SEASON_FINAL_GATE_RERUN_ATTEMPT_02",
+      "result": "PASS_LOCAL_CONTENT_AND_STRUCTURE_PENDING_REMOTE_AUTHORITY_SYNC",
+      "local_layers_pass": true,
+      "canonical_promotion": "DEFERRED_PENDING_REMOTE_AUTHORITY_SYNC",
+      "canonical": 0,
+      "production_ready": 0,
+      "evaluated_at_utc": "2026-08-26T07:37:20Z",
+      "next_action": "REMOTE_AUTHORITY_SYNC_AND_READBACK_REVISION_13"
+    },
+    {
+      "record_id": "EXEC-0018",
+      "execution_unit": "LOCAL_EVIDENCE_METADATA_RECONCILIATION_REVISION_14",
+      "result": "PASS_METADATA_ONLY",
+      "content_or_visual_repair_rerun": false,
+      "corrected": [
+        "season_final_gate_json_sha256",
+        "canonical_promotion_preconditions_revision_11_to_14",
+        "stale_read_only_connector_capability_statement"
+      ],
+      "verified_at_utc": "2026-08-26T08:34:22Z",
+      "next_action": "REMOTE_AUTHORITY_SYNC_AND_READBACK_REVISION_14"
+    }
+  ],
+  "resolved_reference_repairs": [
+    {
+      "frame_key": "EP03-B04",
+      "before_drive_file_id": "1Gbd1LFHwIO2AjaMR2yVNltc8Ac6PrUm5",
+      "after_drive_file_id": "14Hc3VHi6r1BB9RuuvoNHY49vn5Rlf3jo",
+      "expected_sha256": "5295bdd3852591983160f009121e2db4ff2dae73b2dc5066300c763b02cddb00",
+      "after_drive_sha256": "5295bdd3852591983160f009121e2db4ff2dae73b2dc5066300c763b02cddb00",
+      "result": "PASS",
+      "asset_bytes_changed": false
+    },
+    {
+      "frame_key": "EP03-B05",
+      "before_drive_file_id": "14Hc3VHi6r1BB9RuuvoNHY49vn5Rlf3jo",
+      "after_drive_file_id": "1Gbd1LFHwIO2AjaMR2yVNltc8Ac6PrUm5",
+      "expected_sha256": "9f2142b428180c19b83895d67ed75bd45d954ff8ad616f7c3d7abf3de3a4cb86",
+      "after_drive_sha256": "9f2142b428180c19b83895d67ed75bd45d954ff8ad616f7c3d7abf3de3a4cb86",
+      "result": "PASS",
+      "asset_bytes_changed": false
+    },
+    {
+      "frame_key": "EP03-B06",
+      "before_drive_file_id": "14sYpd4aR_S0QPnpeDqa_zgY_fExOUnrQ",
+      "after_drive_file_id": "1zu2BQrqnZ5iJwbdsUEj1OG1dxBZ6_nQ8",
+      "expected_sha256": "bb6bcb76b3cb95ae7eab39aefbf1e7b4b0d96d247bc8aaa62c06dcaf6f44b965",
+      "after_drive_sha256": "bb6bcb76b3cb95ae7eab39aefbf1e7b4b0d96d247bc8aaa62c06dcaf6f44b965",
+      "result": "PASS",
+      "asset_bytes_changed": false
+    },
+    {
+      "frame_key": "EP03-B07",
+      "before_drive_file_id": "1rGYabvWr1I-rU46uEvdRIRvfsC5s1GQg",
+      "after_drive_file_id": "14sYpd4aR_S0QPnpeDqa_zgY_fExOUnrQ",
+      "expected_sha256": "d4be3f89cd532827ebccbe13d3bf098b2712315aa8f22c3ac87376c7aefbcb33",
+      "after_drive_sha256": "d4be3f89cd532827ebccbe13d3bf098b2712315aa8f22c3ac87376c7aefbcb33",
+      "result": "PASS",
+      "asset_bytes_changed": false
+    },
+    {
+      "frame_key": "EP03-B08",
+      "before_drive_file_id": "1zu2BQrqnZ5iJwbdsUEj1OG1dxBZ6_nQ8",
+      "after_drive_file_id": "1rGYabvWr1I-rU46uEvdRIRvfsC5s1GQg",
+      "expected_sha256": "71d91e24118feca434431c151f6d4280cb2a436e47cad489d3ee4a0918942587",
+      "after_drive_sha256": "71d91e24118feca434431c151f6d4280cb2a436e47cad489d3ee4a0918942587",
+      "result": "PASS",
+      "asset_bytes_changed": false
+    }
+  ],
+  "sync_status": {
+    "local_state": "PASS_FINAL_GATE",
+    "drive": "PENDING_READ_ONLY_CONNECTOR",
+    "github": "PENDING_READ_ONLY_CONNECTOR",
+    "registry": "PENDING_READ_ONLY_CONNECTOR",
+    "task_document": "PENDING_READ_ONLY_CONNECTOR",
+    "canonical_promotion": "BLOCKED_UNTIL_READBACK"
+  },
+  "evidence_package_revision": 3,
+  "evidence_reconciled_at_utc": "2026-08-26T08:34:22Z"
+}
