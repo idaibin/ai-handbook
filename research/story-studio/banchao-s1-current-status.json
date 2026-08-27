@@ -4,61 +4,83 @@
   "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
   "task_key": "story-studio/banchao/s1-final-gate",
   "project_id": "banchao",
-  "status_revision": 21,
-  "task_revision": 27,
-  "as_of_utc": "2026-08-27T08:56:35Z",
+  "status_revision": 22,
+  "task_revision": 28,
+  "as_of_utc": "2026-08-27T10:48:26Z",
   "current_stage": "S1_VIDEO_CHAIN_TEST",
-  "current_status": "k1_source_direct_anchor_pass_k2_authorized",
-  "current_execution_unit": "REVISION_21_SYNC_AND_READBACK_COMPLETED",
+  "current_status": "k2_candidate_generated_pending_review",
+  "current_execution_unit": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_GENERATION_COMPLETED",
   "asset_policy": "canonical_storyboard_reference",
   "canonical": 194,
   "production_ready": 0,
-  "next_action": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_GENERATION",
-  "resume_after_pass": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW",
+  "next_action": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW",
+  "resume_after_pass": "EP01_WRITING_SYSTEM_K3_STATIC_ANCHOR_GENERATION",
   "k1_static_anchor": {
     "result": "PASS_BOUNDED_SOURCE_DIRECT_REUSE",
-    "source_frame": "EP01-F01",
-    "source_drive_file_id": "1sYNi4U-MbP-EjR_ggqamzKa196Ifq7Tc",
     "output_drive_file_id": "1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg",
     "sha256": "ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473",
-    "byte_identical": true,
-    "pixel_mutation": false,
     "native_spec": "1920x1080_RGB_PNG",
-    "preflight": "PASS_BOUNDED",
     "rights_status": "internal_candidate_only",
     "production_ready": false
   },
-  "bounded_contract_correction": {
-    "failure_classification": "FAIL_CONTRACT_REFERENCE_GEOMETRY_MISMATCH",
-    "sequence_base_frame": "EP01-F01",
-    "brush_laydown_zone": "front-edge bare-wood strip immediately below writing surface and left of existing long low wooden edge bar",
-    "set_geometry_changed": false,
-    "new_prop_added": false,
-    "prompt_package_revision": 2,
-    "motion_contract_revision": 3,
-    "architecture_change_required": false
+  "k2_static_anchor": {
+    "result": "K2_CANDIDATE_GENERATED_PENDING_REVIEW",
+    "role": "production_motion_anchor_internal_candidate_pending_review",
+    "source_anchor": "K1",
+    "source_drive_file_id": "1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg",
+    "source_sha256": "ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473",
+    "output_drive_file_id": "1-1A3NoYCCmY0kUat9jGIDbUzLTiCPxJZ",
+    "output_sha256": "f1a6f98b14ae62c0c81a4792f10f5d9ce6500960504a198b52860dd48186a7e6",
+    "native_spec": "1920x1080_RGB_PNG",
+    "derivation_mode": "DETERMINISTIC_LOCAL_SOURCE_EDIT",
+    "changed_bbox_xyxy": [1015, 825, 1038, 871],
+    "changed_pixel_count": 677,
+    "byte_identical_rerun": true,
+    "generation_gate": {
+      "native_spec": "PASS",
+      "single_clean_frame": "PASS",
+      "tip_visibly_clear_of_surface": "PASS_VISUAL_BOUNDED",
+      "brush_near_vertical": "PASS",
+      "paper_movement": "PASS_NONE",
+      "new_mark": "PASS_NONE",
+      "identity_costume_set_camera_lighting": "PASS_PIXEL_IDENTICAL_OUTSIDE_LOCAL_BBOX",
+      "watermark_or_text_added": "PASS_NONE",
+      "full_k2_review": "NOT_EXECUTED"
+    },
+    "rights_status": "internal_candidate_only",
+    "production_ready": false,
+    "k3_authorized": false
   },
+  "failure_attempts": [
+    {"attempt": "image_gen_edit_01", "result": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING", "registered": false},
+    {"attempt": "image_gen_edit_02", "result": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING", "registered": false},
+    {"attempt": "image_gen_crop_edit_03", "result": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING", "registered": false},
+    {"attempt": "adobe_firefly_edit_init", "result": "FAIL_RIGHTS_OR_PROVIDER_HTTP_403", "registered": false}
+  ],
   "authorization_after": {
-    "K2": "AUTHORIZED_NEXT",
-    "K3": "NOT_AUTHORIZED_UNTIL_K2_PASS",
-    "K4": "NOT_AUTHORIZED_UNTIL_K3_PASS",
-    "K5": "NOT_AUTHORIZED_UNTIL_K4_PASS"
+    "K2_review": "AUTHORIZED_NEXT",
+    "K3": "NOT_AUTHORIZED_UNTIL_K2_REVIEW_PASS",
+    "K4": "NOT_AUTHORIZED",
+    "K5": "NOT_AUTHORIZED"
   },
   "drive_evidence": {
-    "k1_png": "1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg",
-    "preflight_report": "1YTgaagmnOojGNymM3Fo-3cNDABSs5g74",
-    "receipt": "15rZI8_ZxSGBUy4UoW-JC5FGHfVuC99Lm",
-    "evidence_json": "1u3SawHT_GPm5L8qj827edJdOYp--9KHG",
-    "checksums": "1fIBz0oUpFL2lM5Y6EjarSjxIaeJYtxMi",
-    "evidence_package": "1uyhOVINWAig7cgndaaVIzx0bms8rYG8o",
-    "prompt_package": "1dqJxF30dbEEFocIV4cuOqlHtgfbSLOpb",
-    "motion_contract": "1g8I8K5aC57brNEZAbOkTlfyGlLxk28WI"
+    "folder": "1pJHzbZTDCJBKcJ3GdvBxRoPAWg736sep",
+    "k2_png": "1-1A3NoYCCmY0kUat9jGIDbUzLTiCPxJZ",
+    "report": "1xIBtEurtE5PuKQWkpLyaFeZLcmmmrBg2",
+    "receipt": "1PDn4yepB0bwVQk6trfFoW3AmYDpeIxVJ",
+    "evidence_json": "18JbOsegLE_BoRkF1APQU6QFlQ1WiiN1L",
+    "script": "11u0p3olhOSP-zydNnk3QcOM5KfK0L_MC",
+    "full_review": "1wcSD3nReI2J9N4bwOgsD-E86d0nuxn13",
+    "tip_review": "1Wa9H-TBYorsrZHTWdf5QGrXhgrSpyUdm",
+    "checksums": "1W3ajUU4b4EHeIGwmRS0n73UFXSKt_L7G",
+    "package": "1IvWidXg-BWyjsPqxs5y53CxtuimnrzIz"
   },
   "github_evidence": {
-    "prompt_package_commit": "926fddce44bab3de32d890e6146a023eae9c639d",
-    "motion_contract_commit": "3e599c3b9194c124619e06c211b202005e7c3478",
-    "preflight_report_commit": "8623d0e8de458fd5d4c788c71ad2adc10de7371f",
-    "evidence_json_commit": "18ca931b6fdc631d6485eeabd123d64263e84b2f"
+    "generation_report_commit": "b5ceca5c3dc86a2ea30002e790cfe5c477436884",
+    "evidence_json_commit": "71467d706c5d872deda8376df9dbbff0aa3b0a14",
+    "derivation_script_commit": "7d4afef8f82b34c178009a4a96b86ab1ab63f8cb",
+    "current_status_markdown_commit": "feb08fc21981f67d11a34e72a0c8468ac96785e7",
+    "current_status_markdown_blob": "e07116ece6e09bc9a5f2a3a26779f995fe1f7085"
   },
   "unchanged": {
     "mapping_revision": 10,
@@ -69,16 +91,13 @@
     "ep01_ep02_boundary": true
   },
   "readback": {
-    "drive_k1_and_evidence": "PASS_EXACT_BYTES",
-    "drive_prompt_and_contract": "PASS_EXACT_BYTES",
-    "drive_current_status_markdown": "PASS_EXACT_BYTES",
-    "drive_current_status_json": "PASS_EXACT_BYTES",
-    "task_revision_27_exec_0027": "PASS",
-    "registry_projects": "PASS",
-    "registry_tasks": "PASS_IN_PROGRESS",
-    "registry_sync": "PASS_SYNCED",
-    "github_current_status_markdown": "PASS_FINAL_BLOB_READBACK"
+    "drive_k2_and_evidence": "PENDING_FINAL_READBACK",
+    "drive_current_status": "PENDING_FINAL_READBACK",
+    "github_evidence": "PENDING_FINAL_BLOB_READBACK",
+    "github_current_status_markdown": "PASS_WRITE_PENDING_FINAL_FETCH",
+    "github_current_status_json": "PENDING_FINAL_FETCH",
+    "task_revision_28_exec_0028": "PENDING_WRITE_AND_READBACK",
+    "registry": "PENDING_REVISION_22_SYNC"
   },
-  "sync_status": "PASS_REVISION_21_READBACK",
-  "synced_at_utc": "2026-08-27T08:56:35Z"
+  "sync_status": "PENDING_REVISION_22_READBACK"
 }
