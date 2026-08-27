@@ -3,7 +3,7 @@ contract_id: BANCHAO-S1-EP01-WRITING-SYSTEM-MOTION-ANCHOR-v1
 task_identifier: TASK — Story Studio — 班超 S1 FINAL GATE
 task_key: story-studio/banchao/s1-final-gate
 created_at_utc: '2026-08-27T01:51:32Z'
-status: DESIGN_APPROVED_MEDIA_INTAKE_PARTIAL
+status: DESIGN_APPROVED_MEDIA_INTAKE_COMPLETE_STATIC_ANCHORS_NOT_STARTED
 authority:
   active_screenplay_drive_file_id: 1zj8EZnqR1DY-nvdPDSUPIMSZQLH1Zdzi
   mapping_drive_file_id: 1U_pXUo1qD0D8rDELWvqUDUevpfoXClwa
@@ -66,7 +66,8 @@ asset_contracts:
     implementation: clear dry zone on the existing low writing desk / approved set surface
     dedicated_prop_id: null
     PROP_BRUSH_REST_status: NOT_AUTHORIZED_NOT_VERIFIED
-    reason: The active screenplay and current canonical asset list do not include PROP_BRUSH_REST; a historical rest form must not be silently introduced.
+    reason: The active screenplay and current canonical asset list do not include PROP_BRUSH_REST; a historical rest form
+      must not be silently introduced.
 hand_choreography:
   K1:
     name: NORMAL_WRITING
@@ -133,10 +134,26 @@ invalidates_on:
 - PROP_WRITING_SURFACE geometry change
 - approved set/desk geometry change
 media_intake:
+  updated_at_utc: '2026-08-27T02:56:15Z'
   current_drive_source_frames: 10/10 VERIFIED
-  gemini_10s_mp4: NOT_AVAILABLE_IN_CURRENT_SESSION
-  gemini_ffprobe_raw_output: NOT_AVAILABLE_IN_CURRENT_SESSION
-  gemini_1fps_review_sheet: NOT_AVAILABLE_IN_CURRENT_SESSION
+  gemini_10s_mp4:
+    status: VERIFIED_REGISTERED_PRODUCTION_FAIL
+    provider_declared_by_user: Gemini
+    encoder_tag: Google
+    drive_file_id: 1-HAifRlGJydN_crLPhLEkSZMznfcH2B8
+    sha256: 951a15a405786fc056b84d5144c4d702191266dc42801a2211bf346e5cfe5d09
+    native_spec: 1280x720 / 24fps / 240 frames / H.264 High / AAC LC 48kHz stereo
+    full_decode: PASS
+  gemini_ffprobe_raw_output:
+    status: VERIFIED_REGISTERED
+    drive_file_id: 18NEst-YnhjvERJl_-yvk2IgC7qbZQf3t
+  gemini_1fps_review_sheet:
+    status: VERIFIED_REGISTERED
+    drive_file_id: 1rubqDEtc5spdKYLPj46yUW96T3mTaZlg
+  contact_release_review:
+    result: PASS_BOUNDED_PHYSICAL_ACTION
+    correction: Prior claims of no support/no release are contradicted by the supplied video bytes.
+    production_failure: The video introduces an unauthorized notched PROP_BRUSH_REST instead of the approved BRUSH_LAYDOWN_ZONE.
   generic_template_docx:
     status: FILE_LIBRARY_TEXT_REVIEWED_REFERENCE_ONLY
     file_library_id: file_00000000749081f58eae20b0fd8ed356
