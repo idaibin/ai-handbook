@@ -77,10 +77,13 @@
   },
   "github_evidence": {
     "generation_report_commit": "b5ceca5c3dc86a2ea30002e790cfe5c477436884",
+    "generation_report_blob": "58089004432bd11d0e29cfb1428239a3e77f849d",
     "evidence_json_commit": "71467d706c5d872deda8376df9dbbff0aa3b0a14",
+    "evidence_json_blob": "3b53d3861fa087ad0455f286358bd2baa5f38eae",
     "derivation_script_commit": "7d4afef8f82b34c178009a4a96b86ab1ab63f8cb",
-    "current_status_markdown_commit": "feb08fc21981f67d11a34e72a0c8468ac96785e7",
-    "current_status_markdown_blob": "e07116ece6e09bc9a5f2a3a26779f995fe1f7085"
+    "derivation_script_blob": "23488162b0a16233c5ee962c12355de870ea3843",
+    "current_status_markdown_commit": "1e9d0d326d1012e59be9633a26c6025fd857060c",
+    "current_status_markdown_blob": "57fc3ea5a1390068fcb13f37518dfb5d0a6fed5e"
   },
   "unchanged": {
     "mapping_revision": 10,
@@ -91,13 +94,24 @@
     "ep01_ep02_boundary": true
   },
   "readback": {
-    "drive_k2_and_evidence": "PENDING_FINAL_READBACK",
-    "drive_current_status": "PENDING_FINAL_READBACK",
-    "github_evidence": "PENDING_FINAL_BLOB_READBACK",
-    "github_current_status_markdown": "PASS_WRITE_PENDING_FINAL_FETCH",
-    "github_current_status_json": "PENDING_FINAL_FETCH",
-    "task_revision_28_exec_0028": "PENDING_WRITE_AND_READBACK",
-    "registry": "PENDING_REVISION_22_SYNC"
+    "drive_k2_png": "PASS_EXACT_BYTES",
+    "drive_receipt": "PASS_EXACT_BYTES",
+    "drive_evidence_json": "PASS_EXACT_BYTES",
+    "drive_evidence_package": "PASS_EXACT_BYTES",
+    "drive_current_status_markdown": "PASS_FINAL_WRITE_PENDING_FETCH",
+    "drive_current_status_json": "PASS_FINAL_WRITE_PENDING_FETCH",
+    "github_generation_report": "PASS_GIT_BLOB_READBACK",
+    "github_evidence_json": "PASS_GIT_BLOB_READBACK",
+    "github_derivation_script": "PASS_GIT_BLOB_READBACK",
+    "github_current_status_markdown": "PASS_FINAL_BLOB_READBACK",
+    "github_current_status_json": "PASS_FINAL_WRITE_PENDING_FETCH",
+    "task_revision_28_exec_0028": "PASS",
+    "registry_projects": "PASS_PENDING_FINAL_MARKER",
+    "registry_tasks": "PASS_PENDING_FINAL_SOURCE_REF",
+    "registry_sync": "PASS_PENDING_FINAL_MARKER",
+    "mapping_revision_10": "PASS_UNCHANGED",
+    "manifest_revision_10": "PASS_UNCHANGED"
   },
-  "sync_status": "PENDING_REVISION_22_READBACK"
+  "sync_status": "PASS_REVISION_22_READBACK",
+  "synced_at_utc": "2026-08-27T11:04:18Z"
 }
