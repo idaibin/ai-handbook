@@ -3,7 +3,7 @@ contract_id: BANCHAO-S1-EP01-WRITING-SYSTEM-MOTION-ANCHOR-v1
 task_identifier: TASK — Story Studio — 班超 S1 FINAL GATE
 task_key: story-studio/banchao/s1-final-gate
 created_at_utc: '2026-08-27T01:51:32Z'
-status: DESIGN_APPROVED_MEDIA_INTAKE_COMPLETE_STATIC_ANCHORS_NOT_STARTED
+status: DESIGN_APPROVED_PROMPT_ARTIFACT_BOUNDARY_REFINED_STATIC_ANCHORS_NOT_STARTED
 authority:
   active_screenplay_drive_file_id: 1zj8EZnqR1DY-nvdPDSUPIMSZQLH1Zdzi
   mapping_drive_file_id: 1U_pXUo1qD0D8rDELWvqUDUevpfoXClwa
@@ -63,11 +63,16 @@ asset_contracts:
       pseudo_text: FAIL
   laydown_target:
     asset_role: BRUSH_LAYDOWN_ZONE
-    implementation: clear dry zone on the existing low writing desk / approved set surface
+    implementation: clear dry bare-wood zone at the front-right edge of the existing approved desk; shaft lies directly on
+      desk, bristles extend beyond edge and touch no surface
     dedicated_prop_id: null
     PROP_BRUSH_REST_status: NOT_AUTHORIZED_NOT_VERIFIED
     reason: The active screenplay and current canonical asset list do not include PROP_BRUSH_REST; a historical rest form
       must not be silently introduced.
+    failure_conditions:
+    - independent brush rest, holder, groove block or support prop
+    - bristles touch paper, desk or ink
+    - laydown zone appears at a different location across K4 and K5
 hand_choreography:
   K1:
     name: NORMAL_WRITING
@@ -87,9 +92,11 @@ hand_choreography:
     name: SHAFT_CONTACT_AND_RELEASE_START
     start_state: K3
     contact_target: BRUSH_LAYDOWN_ZONE
-    action_path: shaft settles on stable dry surface; fingers begin to open
-    release_condition: shaft is supported without rolling; tip does not touch writing surface
-    end_state: support established; partial finger separation
+    action_path: shaft settles directly on approved bare-wood BRUSH_LAYDOWN_ZONE at desk edge; bristles overhang without touching
+      any surface; fingers begin to open
+    release_condition: shaft is stable on bare desk zone; bristles remain suspended beyond desk edge; no independent support
+      prop; fingers visibly opening
+    end_state: bare-desk contact established; bristles untouched; partial finger separation
   K5:
     name: HAND_DETACHED_AND_DECISION
     start_state: K4
@@ -159,3 +166,40 @@ media_intake:
     file_library_id: file_00000000749081f58eae20b0fd8ed356
     authority: false
 next_action_after_media_intake: EP01_WRITING_SYSTEM_K1_K5_STATIC_ANCHOR_GENERATION
+contract_revision: 2
+updated_at_utc: '2026-08-27T06:12:18Z'
+prompt_and_artifact_boundary:
+  prompt_package_role: TEXTUAL_GENERATION_CONTROL_ONLY
+  production_motion_anchor_role: CLEAN_SINGLE_FRAME_PHYSICAL_STATE_IMAGE
+  review_derivative_role: HUMAN_REVIEW_ONLY_AFTER_NATIVE_OUTPUTS
+  evidence_role: IDENTITY_HASH_VALIDATION_AND_SYNC_ONLY
+  contact_sheet_as_model_input: FORBIDDEN
+  metadata_or_prompt_embedded_in_anchor: FAIL_IMPLEMENTATION
+  dashboard_or_infographic_output: FAIL_IMPLEMENTATION
+  one_anchor_per_generation_call: true
+  one_scene_per_native_file: true
+prompt_package:
+  package_id: BANCHAO-S1-EP01-K1-K5-STATIC-ANCHOR-PROMPT-v1
+  drive_file_id: 1dqJxF30dbEEFocIV4cuOqlHtgfbSLOpb
+  github_path: research/story-studio/banchao-s1-ep01-k1-k5-static-anchor-prompt-package.yaml
+  status: DESIGN_APPROVED_READY_FOR_GENERATION
+generation_sequence:
+  order:
+  - K1
+  - K2
+  - K3
+  - K4
+  - K5
+  approve_K1_before_followups: true
+  source_frames_are_individual_files: true
+  contact_sheet_input_forbidden: true
+  native_outputs_before_review_derivative: true
+  regenerate_only_failed_anchor: true
+output_contract:
+  native_count: 5
+  dimensions: 1920x1080
+  format: PNG
+  color_mode: RGB
+  clean_scene_only: true
+  no_text_labels_borders_cards_or_metadata: true
+  review_contact_sheet_is_derivative: true
