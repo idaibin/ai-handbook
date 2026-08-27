@@ -4,50 +4,44 @@
   "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
   "task_key": "story-studio/banchao/s1-final-gate",
   "project_id": "banchao",
-  "status_revision": 17,
-  "as_of_utc": "2026-08-26T11:41:41Z",
+  "status_revision": 18,
+  "task_revision": 23,
+  "as_of_utc": "2026-08-27T01:51:32Z",
   "current_stage": "S1_VIDEO_CHAIN_TEST",
-  "current_status": "video_chain_test_partial_pass_runway_paid_plan_required",
+  "current_status": "ep01_writing_system_motion_anchor_impact_analysis_pass_option_a_media_intake_partial",
   "asset_policy": "canonical_storyboard_reference",
   "canonical": 194,
   "production_ready": 0,
-  "next_action": "GENERATIVE_VIDEO_PROVIDER_ENABLEMENT_OR_ALTERNATE_PROVIDER",
+  "next_action": "REGISTER_GEMINI_10S_VIDEO_AND_REVIEW_MEDIA_EVIDENCE",
+  "resume_after_pass": "EP01_WRITING_SYSTEM_K1_K5_STATIC_ANCHOR_GENERATION",
   "scope": {
     "episodes": 24,
     "logical_keyframes": 194,
     "boundaries": 23
   },
-  "gate": {
-    "L1A": "194/194 PASS_SELECTION",
-    "L1B": "194/194 PASS",
-    "L2": "PASS_SEMANTIC_AGGREGATE",
-    "L3": {
-      "status": "23/23 PASS",
-      "PASS_CANON": 7,
-      "PASS_INTENTIONAL_CUT": 16
-    },
-    "L4": "5/5 PASS_WITH_BOUNDED_ADAPTATIONS",
-    "repair_required": 0
+  "impact_analysis": {
+    "decision": "OPTION_A_KEEP_NARRATIVE_CANON",
+    "production_motion_anchor_false": [
+      "EP01-F03",
+      "EP01-F06",
+      "EP01-F07",
+      "EP01-F08",
+      "EP01-F09",
+      "EP01-F10"
+    ],
+    "canonical_change": 0,
+    "mapping_change": false,
+    "manifest_change": false,
+    "change_record_required": false,
+    "boundary_rerun_required": false,
+    "gemini_media_intake": "BLOCKED_MISSING_CURRENT_SESSION_BYTES",
+    "evidence_folder_id": "1GCpdL1t93bdOGj6aVPVoAazUvspgOMCj",
+    "impact_report_drive_file_id": "1azWrR0yTTvQC8bpKoG-Ud6hJjkGIQhIf",
+    "motion_contract_drive_file_id": "1g8I8K5aC57brNEZAbOkTlfyGlLxk28WI"
   },
-  "video_chain_test": {
-    "result": "PARTIAL_PASS_PROVIDER_BLOCKED",
+  "preserved_video_chain_test": {
     "deterministic_chain": "PASS",
-    "generative_provider_resolution": {
-      "provider": "Runway",
-      "authenticated": true,
-      "available_video_models": [],
-      "request_result": "BLOCKED_ACCOUNT_LIMITATION_PAID_PLAN_REQUIRED",
-      "generation_job_created": false,
-      "output_created": false,
-      "numeric_credit_balance": "NOT_EXPOSED_BY_CONNECTOR",
-      "drive_report_markdown": "1oPlNNiiUdE6FNDY4eQoMC6KMAPXX5v0n",
-      "drive_report_json": "17Be9ukiwGQaDHtViqivMQaOkkfmm4phd",
-      "sync_readback_markdown": "1b6FI3_nr-JkkKgDXqWNHg9lgOQWdGgBh",
-      "sync_readback_json": "1JGDKdrj-cdxVdZ1FUdZ0cvoJ_d64LcH0"
-    },
-    "full_season_video_authorized": false
+    "runway": "BLOCKED_ACCOUNT_LIMITATION_PAID_PLAN_REQUIRED"
   },
-  "sync_status": "PASS_REVISION_17_READBACK",
-  "synced_at_utc": "2026-08-26T11:48:16Z",
-  "task_revision": 22
+  "sync_status": "PENDING_REVISION_18_READBACK"
 }
