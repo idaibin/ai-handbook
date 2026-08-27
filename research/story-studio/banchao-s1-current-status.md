@@ -11,7 +11,8 @@
 - `resume_after_pass`: `EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_03`
 - `canonical`: `194`
 - `production_ready`: `0`
-- `sync_status`: `PENDING_REVISION_25_READBACK`
+- `sync_status`: `PASS_REVISION_25_READBACK`
+- `synced_at_utc`: `2026-08-27T15:42:37Z`
 
 ## Revision 25 result
 
@@ -153,3 +154,19 @@ EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_03_FULL_ROI_REGEN
 ```
 
 Attempt 03 must regenerate/edit the complete hand–wrist–shaft–bristle–paper interaction ROI from K1. It must not continue translating or patching Attempt 02. K3 remains blocked until Attempt 03 passes a new independent review.
+
+## Revision 25 readback
+
+```text
+Drive final review report / evidence JSON / mechanical receipt / checksums / package: PASS_EXACT_BYTES
+Drive Current Status pending bytes: PASS_EXACT_BYTES
+GitHub review report / evidence JSON / review script: PASS_GIT_BLOB_READBACK
+GitHub Current Status pending projections: PASS_GIT_BLOB_READBACK
+Task revision 31 / EXEC-0031: PASS
+Registry pending Projects / Tasks / Sync rows: PASS
+mapping revision 10 / manifest revision 10: PASS_UNCHANGED
+canonical: 194 unchanged
+production_ready: 0 unchanged
+```
+
+The final GitHub Current Status commit identities and final Drive status checksums are recorded in `[SYNC-REV25-FINAL]` and the Registry Sync row to avoid self-referential status commits.
