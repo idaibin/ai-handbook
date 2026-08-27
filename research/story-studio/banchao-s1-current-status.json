@@ -43,5 +43,16 @@
     "deterministic_chain": "PASS",
     "runway": "BLOCKED_ACCOUNT_LIMITATION_PAID_PLAN_REQUIRED"
   },
-  "sync_status": "PENDING_REVISION_18_READBACK"
+  "readback": {
+    "drive_evidence_package": "PASS",
+    "drive_current_status_initial": "PASS",
+    "github_impact_and_contract": "PASS",
+    "github_projection_initial": "PASS",
+    "task_revision_23_exec_0023": "PASS",
+    "registry_project_task_rows": "PASS",
+    "mapping_revision_10": "PASS_UNCHANGED",
+    "manifest_revision_10": "PASS_UNCHANGED"
+  },
+  "sync_status": "PASS_REVISION_18_READBACK",
+  "synced_at_utc": "2026-08-27T02:11:51Z"
 }
