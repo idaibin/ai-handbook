@@ -1,0 +1,75 @@
+{
+  "schema": "story-studio/k2-attempt03-provider-blocker-v1",
+  "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
+  "task_key": "story-studio/banchao/s1-final-gate",
+  "execution_unit": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_03_FULL_ROI_REGEN",
+  "executed_at_utc": "2026-08-27T16:47:14Z",
+  "result": "BLOCKED_IMAGE_EDIT_PROVIDER_ACCESS_AND_OUTPUT_ROUTING",
+  "valid_output_created": false,
+  "attempts": [
+    {
+      "provider": "image_gen",
+      "scope": "full_frame_k1_edit",
+      "result": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING_INFOGRAPHIC",
+      "registered": false
+    },
+    {
+      "provider": "image_gen",
+      "scope": "explicit_k1_only_edit",
+      "result": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING_INFOGRAPHIC",
+      "registered": false
+    },
+    {
+      "provider": "image_gen",
+      "scope": "isolated_hand_brush_paper_roi_edit",
+      "result": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING_INFOGRAPHIC",
+      "registered": false
+    },
+    {
+      "provider": "adobe_firefly",
+      "scope": "asset_openai_file_upload",
+      "result": "FORBIDDEN_ASSET_NOT_ACCESSIBLE_TO_USER",
+      "registered": false
+    },
+    {
+      "provider": "adobe_firefly",
+      "scope": "image_instruct_edit_drive_url",
+      "result": "URL_DOMAIN_NOT_WHITELISTED_DRIVE_GOOGLE_COM",
+      "registered": false
+    }
+  ],
+  "failure_classification": {
+    "primary": "FAIL_RIGHTS_OR_PROVIDER_INPUT_ACCESS",
+    "secondary": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING",
+    "contract_change_required": false,
+    "dependency_change_required": false,
+    "architecture_change_required": false
+  },
+  "asset_disposition": {
+    "k1": "UNCHANGED",
+    "k2_attempt_01": "REJECTED_EVIDENCE_UNCHANGED",
+    "k2_attempt_02": "REJECTED_EVIDENCE_UNCHANGED",
+    "k2_attempt_03": "NO_VALID_OUTPUT",
+    "invalid_outputs_registered": false,
+    "k3_authorized": false
+  },
+  "unchanged": {
+    "canonical": 194,
+    "production_ready": 0,
+    "mapping_revision": 10,
+    "manifest_revision": 10,
+    "canonical_drive_refs": 194,
+    "ep01_ep02_boundary": true
+  },
+  "drive_evidence": {
+    "folder": "1oTnQQxYURKCWhIYxo8V1YgXhJ17IeQXE",
+    "report": "1WzBCeB6n0Rbb7yLUwM6OZh3JJACThjNa",
+    "evidence_json": "1yJiEH_vvh4x6ssp_vKr16YOxzmKtGPkM"
+  },
+  "github_evidence": {
+    "report_commit": "db056122153051cda68a0b3f53101ed77b95b36e",
+    "evidence_json_commit": "PENDING_THIS_WRITE"
+  },
+  "next_action": "EP01_WRITING_SYSTEM_K2_ATTEMPT03_TRUSTED_IMAGE_EDIT_INPUT_ENABLEMENT",
+  "resume_after_pass": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_03_FULL_ROI_REGEN"
+}
