@@ -4,11 +4,13 @@
 - `task_revision`: `24`
 - `current_stage`: `S1_VIDEO_CHAIN_TEST`
 - `current_status`: `gemini_media_evidence_registered_production_acceptance_fail`
+- `current_execution_unit`: `REVISION_19_TASK_REGISTRY_SYNC_AND_READBACK_COMPLETED`
 - `canonical`: `194`
 - `production_ready`: `0`
 - `next_action`: `EP01_WRITING_SYSTEM_K1_K5_STATIC_ANCHOR_GENERATION`
 - `resume_after_pass`: `EP01_WRITING_SYSTEM_K1_K5_STATIC_ANCHOR_REVIEW`
-- `sync_status`: `PENDING_REVISION_19_READBACK`
+- `sync_status`: `PASS_REVISION_19_READBACK`
+- `synced_at_utc`: `2026-08-27T04:01:16Z`
 
 ## Revision 19 result
 
@@ -21,10 +23,11 @@ Original MP4 SHA-256:
 Video: 1280×720 / 24fps / 240 frames / H.264 High / 10.000s
 Audio: AAC LC / 48kHz / stereo / 10.005s
 Full decode: PASS
+Motion path / support contact / hand release: PASS_BOUNDED
 Production acceptance: FAIL
 ```
 
-The supplied bytes correct a prior observation: the generated action does establish support on a notched rest and completes hand release by approximately 8.5 seconds. The clip still fails production because it introduces an unauthorized `PROP_BRUSH_REST`, drifts from Canon identity/costume/set, contains pseudo-text, uses a malformed Hero Brush, includes a fixed visible platform mark, and is natively 1280×720.
+The supplied bytes correct a prior observation: the generated action establishes support on a notched rest and completes hand release by approximately 8.5 seconds. The clip still fails production because it introduces an unauthorized `PROP_BRUSH_REST`, drifts from Canon identity/costume/set, contains pseudo-text, uses a malformed Hero Brush, includes a fixed visible platform mark, and is natively 1280×720.
 
 ## Preserved decisions
 
@@ -44,4 +47,20 @@ Drive package: 1HgolEWto1XQoxJ9Gqgrfti_0RWxlaiQI
 GitHub media review commit: c758282b6aafc90eca3fafedc19dc67fcfd82c03
 GitHub evidence JSON commit: a1563f722df664e4a40a3af2407038def1bbd31f
 GitHub contract update commit: 963481b23e23ccf8a8ea237968b94958df4d62fb
+```
+
+## Revision 19 readback
+
+```text
+Drive media evidence and evidence package: PASS
+Drive Current Status final write: PASS_FINAL_WRITE_PENDING_FINAL_FETCH
+Task revision 24 / EXEC-0024: PASS
+Registry Projects row: PASS
+Registry Tasks row: PASS in_progress
+Registry Sync row: PASS_PENDING_FINAL_MARKER
+GitHub Current Status final write: PASS_FINAL_WRITE_PENDING_FINAL_FETCH
+mapping revision 10: PASS_UNCHANGED
+manifest revision 10: PASS_UNCHANGED
+canonical: 194 unchanged
+production_ready: 0 unchanged
 ```
