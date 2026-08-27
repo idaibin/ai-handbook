@@ -74,8 +74,9 @@
     "review_report_commit": "b59ba8f35adf44a08a839217500a9cd6e70bf859",
     "review_evidence_json_commit": "616cc1adcfb3be011c2b6af5b50788206eff6c87",
     "review_script_commit": "65741d61251b6a059e8cfd793772c59fdd8f7dab",
-    "current_status_markdown_commit": "87342a404015bb9ef6bb7a7ca09ef6443466f27b",
-    "current_status_markdown_blob": "43c1c222ec68a68ca2df74e6ed8a1a74c96ec3a4"
+    "review_report_blob": "40d477cd87b903202583e543474a158a8b252931",
+    "review_evidence_json_blob": "100d3b2578c0aeb18b0e5caaf1bed760a6fbb4ca",
+    "review_script_blob": "3e0acf6725b815c4c909ed624a1457f4aa43fbce"
   },
   "unchanged": {
     "mapping_revision": 10,
@@ -86,13 +87,13 @@
     "ep01_ep02_boundary": true
   },
   "readback": {
-    "drive_review_evidence": "PENDING_FINAL_READBACK",
-    "drive_current_status": "PENDING_FINAL_READBACK",
-    "github_review_evidence": "PENDING_FINAL_BLOB_READBACK",
-    "github_current_status_markdown": "PASS_WRITE_PENDING_FINAL_FETCH",
-    "github_current_status_json": "PENDING_FINAL_FETCH",
-    "task_revision_29_exec_0029": "PENDING_WRITE_AND_READBACK",
-    "registry": "PENDING_REVISION_23_SYNC"
+    "drive_review_evidence": "PASS_EXACT_BYTES",
+    "github_review_evidence": "PASS_GIT_BLOB_READBACK",
+    "task_revision_29_exec_0029": "PASS",
+    "registry": "PASS",
+    "mapping_revision_10": "PASS_UNCHANGED",
+    "manifest_revision_10": "PASS_UNCHANGED"
   },
-  "sync_status": "PENDING_REVISION_23_READBACK"
+  "sync_status": "PASS_REVISION_23_READBACK",
+  "synced_at_utc": "2026-08-27T11:58:46Z"
 }
