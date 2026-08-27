@@ -5,11 +5,12 @@
   "task_key": "story-studio/banchao/s1-final-gate",
   "project_id": "banchao",
   "status_revision": 21,
-  "task_revision": 26,
-  "as_of_utc": "2026-08-27T08:28:06Z",
+  "task_revision": 27,
+  "as_of_utc": "2026-08-27T08:56:35Z",
   "current_stage": "S1_VIDEO_CHAIN_TEST",
   "current_status": "k1_source_direct_anchor_pass_k2_authorized",
-  "current_execution_unit": "EP01_WRITING_SYSTEM_K1_STATIC_ANCHOR_PREFLIGHT_AND_SOURCE_REUSE_COMPLETED",
+  "current_execution_unit": "REVISION_21_SYNC_AND_READBACK_COMPLETED",
+  "asset_policy": "canonical_storyboard_reference",
   "canonical": 194,
   "production_ready": 0,
   "next_action": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_GENERATION",
@@ -55,13 +56,9 @@
   },
   "github_evidence": {
     "prompt_package_commit": "926fddce44bab3de32d890e6146a023eae9c639d",
-    "prompt_package_blob": "7e3b84e4e2cb3452be729d06972ba967fce486e2",
     "motion_contract_commit": "3e599c3b9194c124619e06c211b202005e7c3478",
-    "motion_contract_blob": "16004e695541ec2fb5972803c84e58d53edfdbf5",
     "preflight_report_commit": "8623d0e8de458fd5d4c788c71ad2adc10de7371f",
-    "evidence_json_commit": "18ca931b6fdc631d6485eeabd123d64263e84b2f",
-    "current_status_markdown_pending_commit": "ce2556072f8e543e8306af4c910a0ce928f96e58",
-    "current_status_markdown_pending_blob": "f7c56c3337a532212d70abe62dc856243b3128d1"
+    "evidence_json_commit": "18ca931b6fdc631d6485eeabd123d64263e84b2f"
   },
   "unchanged": {
     "mapping_revision": 10,
@@ -72,10 +69,13 @@
     "ep01_ep02_boundary": true
   },
   "readback": {
-    "drive_current_status": "PENDING_FINAL_READBACK",
-    "task_revision_26_exec_0026": "PENDING",
-    "registry": "PENDING",
-    "github_current_status": "PENDING_FINAL_READBACK"
+    "drive_k1_and_evidence": "PASS_EXACT_BYTES",
+    "drive_prompt_and_contract": "PASS_EXACT_BYTES",
+    "drive_current_status": "PENDING_FINAL_FETCH",
+    "task_revision_27_exec_0027": "PENDING_WRITE_AND_READBACK",
+    "registry": "PENDING_FINAL_SOURCE_REF",
+    "github_current_status": "PENDING_FINAL_FETCH"
   },
-  "sync_status": "PENDING_REVISION_21_READBACK"
+  "sync_status": "PASS_REVISION_21_READBACK",
+  "synced_at_utc": "2026-08-27T08:56:35Z"
 }
