@@ -11,7 +11,8 @@
 - `resume_after_pass`: `EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_03_FULL_ROI_REGEN`
 - `canonical`: `194`
 - `production_ready`: `0`
-- `sync_status`: `PENDING_REVISION_26_READBACK`
+- `sync_status`: `PASS_REVISION_26_READBACK`
+- `synced_at_utc`: `2026-08-27T17:00:50Z`
 
 ## Revision 26 result
 
@@ -98,9 +99,11 @@ K3 authorized: false
 ```text
 provider blocker report commit:
 db056122153051cda68a0b3f53101ed77b95b36e
+blob: b10fae34e7fde6b6326d904c96919986576fc042
 
 provider blocker JSON commit:
 ae2a33c6fc2d69313e6164fe5a98ee48bfc2e890
+blob: dcd021e4278e2212f5841f373dcf070308704bc5
 ```
 
 ## Validation boundary
@@ -110,6 +113,32 @@ Attempt 03 native generation: NOT_EXECUTED_SUCCESSFULLY
 Attempt 03 independent review: NOT_STARTED
 real provider video continuity: NOT_VERIFIED
 ```
+
+## Revision 26 readback
+
+```text
+Drive provider blocker report: PASS_EXACT_BYTES
+SHA-256: 58d83205321156a2c306533fb032a7b2664f9ed6976b432ee7677771fd902ea6
+
+Drive provider blocker JSON: PASS_EXACT_BYTES
+SHA-256: 3e992d5decf68c092f82a6216271066e013af7e010db769ebc3963fe5e4d5a80
+
+Drive pending Current Status Markdown: PASS_EXACT_BYTES
+SHA-256: ec81727ace3c056646f3dfb95702660a667372ec4773665153286f29af881ff8
+
+Drive pending Current Status JSON: PASS_EXACT_BYTES
+SHA-256: 610eb1477e85a09872ba8adcff1c6039b8c3b4d59a5766cd785b3924d3d1d5c3
+
+GitHub blocker report / JSON: PASS_GIT_BLOB_READBACK
+GitHub pending Current Status Markdown / JSON: PASS_GIT_BLOB_READBACK
+Task revision 32 / EXEC-0032: PASS
+Registry pending Projects / Tasks / Sync rows: PASS
+mapping revision 10 / manifest revision 10: PASS_UNCHANGED
+canonical: 194 unchanged
+production_ready: 0 unchanged
+```
+
+Final Current Status commit identities and final Drive status checksums are recorded in `[SYNC-REV26-FINAL]` and the Registry Sync row to avoid self-referential status commits.
 
 ## Unchanged authority
 
