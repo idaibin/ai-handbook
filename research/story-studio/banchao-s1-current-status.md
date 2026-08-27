@@ -3,7 +3,7 @@
 - `task_identifier`: `TASK — Story Studio — 班超 S1 FINAL GATE`
 - `status_revision`: `25`
 - `task_revision`: `31`
-- `as_of_utc`: `2026-08-27T14:39:08Z`
+- `as_of_utc`: `2026-08-27T15:10:35Z`
 - `current_stage`: `S1_VIDEO_CHAIN_TEST`
 - `current_status`: `k2_review_attempt_02_fail_repair_attempt_03_required`
 - `current_execution_unit`: `EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_02_COMPLETED`
@@ -38,72 +38,76 @@ outside changed bbox pixel identity: PASS
 ## Independent review failures
 
 ```text
-bristle soft gathered tip:
-FAIL_RIGID_SOLID_WEDGE
+bristle geometry:
+FAIL_RIGID_SOLID_WEDGE_NO_SOFT_GATHERED_BRISTLE
 
 hand/wrist state naturalness:
-FAIL_TRANSLATED_PATCH_GHOSTING
+FAIL_COHERENT_TRANSLATION_BUT_UNNATURAL_CUTOUT_AND_CUFF_GHOST
 
 tip-to-surface air gap:
-FAIL_AMBIGUOUS_OR_CONTACT_NO_CLEAR_CONTINUOUS_BACKGROUND_BAND
+FAIL_AMBIGUOUS_CONTACT_NO_CONTINUOUS_PAPER_TONED_AIR_BAND
 
 local patch naturalness:
-FAIL_BLUR_SMEAR_EDGE_HALO
+FAIL_DARK_GHOST_BAND_BLUR_AND_TEXTURE_DISCONTINUITY
 
 static interpolation input suitability:
-FAIL_RISK_DOUBLE_EDGE_AND_GHOSTING
+FAIL_RISK_DOUBLE_EDGES_AND_FLOW_INCONSISTENCY_TAIL
 
 real video temporal continuity:
-NOT_VERIFIED_NO_PROVIDER_RUN
+NOT_VERIFIED
 ```
 
-Mechanical proxy:
+Static flow-risk proxy:
 
 ```text
-changed_bbox_xyxy: [884, 538, 1057, 900]
-changed_pixel_count: 31520
-flow_proxy_residual_mae: 7.1086
-flow_proxy_residual_p95: 48.0
-flow_proxy_residual_max: 190
+forward flow magnitude p50: 13.80 px
+forward flow magnitude p95: 14.20 px
+forward-backward error p90: 3.20 px
+forward-backward error p95: 5.28 px
+forward-backward error p99: 9.82 px
 ```
+
+The static proxy is not provider video output and does not validate real temporal continuity.
 
 ## Failure classification
 
 ```text
-FAIL_IMPLEMENTATION_HAND_BRUSH_LOCAL_TRANSFORM_ARTIFACT
-FAIL_IMPLEMENTATION_HERO_BRUSH_GEOMETRY
-FAIL_IMPLEMENTATION_TIP_SURFACE_STATE_AMBIGUOUS
-FAIL_IMPLEMENTATION_INTERPOLATION_INPUT_RISK
+FAIL_IMPLEMENTATION_LOCAL_COMPOSITING_ARTIFACTS
+FAIL_IMPLEMENTATION_PROP_GEOMETRY
+FAIL_IMPLEMENTATION_ACTION_STATE_UNNATURAL
 
 contract_change_required: false
 dependency_change_required: false
 architecture_change_required: false
 ```
 
-## Drive evidence
+## Drive evidence — final Revision 25 set
 
 | Artifact | Drive file ID |
 |---|---|
-| Review folder | `1_-DHgtaItPQue_ZhOeW6QuknOJBOekJO` |
-| Review report | `1EPU-cZjgChayLJfGwkHssE7sUnJPfKVO` |
-| Review evidence JSON | `1GKGfE4vEhLXLVqdsjh51qsdmY45_lo2s` |
-| Review receipt | `13fEhsApZxkfaubHnIgqik96cRe01j4VF` |
-| Review script | `1T13c960pcx0g0p0-kNc6ZsN-rWFdfrAf` |
-| Independent review sheet | `1ep2IlNgVgubccMn1dOuCbIlw7gDvJNe_` |
-| Annotated full frame | `1bGS2rqSXAUaQ34a81lBHSmvQMtRMx1nA` |
-| Tip 10× | `1SLX5i0EG4ni1BLCcW28Bt1qpurJsdNCN` |
-| Paper patch comparison | `1Ubx2dXRZ9pA8B8LXr7U4Dn80Il8UCwfY` |
-| Optical-flow proxy | `1vDSSewRw-5FRtTKTpE2AWiO4E67h_oJS` |
-| Changed-pixel mask | `1xf1KpDve-KSjo5_P84FfOdBMOsPLzPKK` |
-| Diff map | `1aWdUidytsZkqowgaZYR2wlg2j8tHQLTq` |
-| Checksums | `16RrpiwrC08zmZRjorZWFvEA1fS--3WHR` |
-| Evidence package | `19U2C3UTDMCmCLFqlg3zECPglf7IScaKr` |
+| Review folder | `1xY09ZvrjX14M09LEuVqVzBCgCi6ctc8b` |
+| Review report | `1qBJKeHGjIhxP7ual7LgZ6dhpwk1n7BUC` |
+| Review evidence JSON | `19I51wZwbGDYDm-X1-lcV-cgDNb0xw7Zs` |
+| Mechanical receipt | `1XyF1XX9tnJn8qarTngX9dyvqHY5Ou9NV` |
+| Review script | `108o5a-qlrfZiIgtaLbPx-aHrHU89h7zt` |
+| Review sheet | `1eO2sbirdqlhk-5StZ_HGnVmx-4AsgyHk` |
+| Hand/brush comparison | `1dV6pBj614henK8JOCRYAbzRcRgEvz0eL` |
+| Tip 8× | `1N-_wX8PRJmbVbrbf6P51i8jDTUTAW9uY` |
+| Patch comparison | `1ZEhSd22njvSmCOX3Z-87iR-fZJOtgiol` |
+| Linear-blend risk proxy | `1dX-o3bbWb8mwlLLfgA1xvF-9XUspHcHN` |
+| Flow error heatmap | `1N_Niwmnv4MRFZLhS0_VtUUk0MkOAGR3t` |
+| Changed-pixel mask | `1fEVK51nL3soev3aVlswCuL9qQnKpTMDZ` |
+| Diff map | `1hc3tS8xBBLeS1hnqaXl5K1kLRMZ-_y3W` |
+| Checksums | `1reqJov_AgrDPv5p-l_uaAO1JSmp9URAB` |
+| Evidence package | `1E4-W2aaJej19YLsy0a07xvy1R7ER2bnO` |
+
+The earlier partial Revision 25 evidence folder `1_-DHgtaItPQue_ZhOeW6QuknOJBOekJO` remains historical evidence and is superseded by the final set above; it is not deleted.
 
 ## GitHub evidence
 
 ```text
-review report: 3c7e4eed1daa1554952ce9b86e95c2c5bdbd2280 / 2656879dbc75d39e16b01ac0a1f8cd244889d117
-review evidence JSON: c8b483beaa9bef1adedc1ad904dd6110507fa6a3 / 482305e156d77664b426481a1f2cfd20251a9225
+review report: d95a92361f7eae45e29fa6a71d9a22c29d9a2f1c / 0498b4a7c21b8d0deab7f8f22f72629970c2024a
+review evidence JSON: d64be4b4bcca61afc55098604216af5f39601a90 / bf7d626f93e5069225930b03f54abf1fa960d955
 review script: ac44e03f94c1e0ca21d764c96ac623cd23a27151 / f70a397b4b3944404f4912a446f6647dddfe2a38
 ```
 
@@ -148,4 +152,4 @@ EP01→EP02 boundary: unchanged
 EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_03_FULL_ROI_REGEN
 ```
 
-Attempt 03 must regenerate/edit the complete hand–wrist–shaft–bristle ROI from K1. It must not continue translating or patching Attempt 02. K3 remains blocked until Attempt 03 passes a new independent review.
+Attempt 03 must regenerate/edit the complete hand–wrist–shaft–bristle–paper interaction ROI from K1. It must not continue translating or patching Attempt 02. K3 remains blocked until Attempt 03 passes a new independent review.
