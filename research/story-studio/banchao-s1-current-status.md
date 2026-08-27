@@ -1,90 +1,132 @@
 # Story Studio — 班超 S1 Current Status
 
 - `task_identifier`: `TASK — Story Studio — 班超 S1 FINAL GATE`
-- `status_revision`: `24`
-- `task_revision`: `30`
-- `as_of_utc`: `2026-08-27T13:21:14Z`
+- `status_revision`: `25`
+- `task_revision`: `31`
+- `as_of_utc`: `2026-08-27T14:39:08Z`
 - `current_stage`: `S1_VIDEO_CHAIN_TEST`
-- `current_status`: `k2_repair_attempt_02_candidate_generated_pending_review`
-- `current_execution_unit`: `EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_02_COMPLETED`
-- `next_action`: `EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_02`
-- `resume_after_pass`: `EP01_WRITING_SYSTEM_K3_STATIC_ANCHOR_GENERATION`
+- `current_status`: `k2_review_attempt_02_fail_repair_attempt_03_required`
+- `current_execution_unit`: `EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_02_COMPLETED`
+- `next_action`: `EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_03_FULL_ROI_REGEN`
+- `resume_after_pass`: `EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_03`
 - `canonical`: `194`
 - `production_ready`: `0`
-- `sync_status`: `PENDING_REVISION_24_READBACK`
+- `sync_status`: `PENDING_REVISION_25_READBACK`
 
-## Revision 24 result
+## Revision 25 result
 
 ```text
 K1: PASS_BOUNDED_SOURCE_DIRECT_REUSE
 K2 attempt 01: REJECTED_REVIEW_RETAINED_AS_EVIDENCE
-K2 attempt 02: CANDIDATE_GENERATED_PENDING_INDEPENDENT_REVIEW
+K2 attempt 02: FAIL_IMPLEMENTATION_REPAIR_REQUIRED
+K2 attempt 02 disposition: REJECTED_REVIEW_RETAINED_AS_EVIDENCE
 K3–K5: NOT_AUTHORIZED
 ```
 
-Attempt 02 candidate:
+The review target was the native K1 and K2 Attempt 02 keyframes. Prompt and Motion Contract were used only as acceptance semantics, not as result evidence.
+
+## Verified passes
 
 ```text
-file: EP01-K2-TIP-OFF-SURFACE-ATTEMPT-02.png
-Drive ID: 1VRvECfjBepkG3VnUPdhaPeuJxvXm2aO4
-SHA-256: de3bb9745effca071f25f14e3b50d8c4f7518b195021b8a8176987957dd7e84e
-spec: 1920×1080 / RGB PNG
-rights: internal_candidate_only
-production_ready: false
+native 1920×1080 RGB PNG: PASS
+single clean frame: PASS
+hand/wrist changed pixels: 24856
+face changed pixels: 0
+outside changed bbox pixel identity: PASS
 ```
 
-## Mechanical generation evidence
+## Independent review failures
 
 ```text
-shift_y_pixels: -14
+bristle soft gathered tip:
+FAIL_RIGID_SOLID_WEDGE
+
+hand/wrist state naturalness:
+FAIL_TRANSLATED_PATCH_GHOSTING
+
+tip-to-surface air gap:
+FAIL_AMBIGUOUS_OR_CONTACT_NO_CLEAR_CONTINUOUS_BACKGROUND_BAND
+
+local patch naturalness:
+FAIL_BLUR_SMEAR_EDGE_HALO
+
+static interpolation input suitability:
+FAIL_RISK_DOUBLE_EDGE_AND_GHOSTING
+
+real video temporal continuity:
+NOT_VERIFIED_NO_PROVIDER_RUN
+```
+
+Mechanical proxy:
+
+```text
 changed_bbox_xyxy: [884, 538, 1057, 900]
 changed_pixel_count: 31520
-hand_wrist_changed_pixel_count: 24856
-face_changed_pixel_count: 0
-byte_identical_rerun: PASS
+flow_proxy_residual_mae: 7.1086
+flow_proxy_residual_p95: 48.0
+flow_proxy_residual_max: 190
 ```
 
-Generation preflight:
+## Failure classification
 
 ```text
-native specification: PASS
-single clean frame: PASS
-coherent hand/brush state movement: PASS_MECHANICAL_NONZERO_HAND_WRIST_DELTA
-single continuous bristle tip: PASS_VISUAL_BOUNDED_PENDING_INDEPENDENT_REVIEW
-tip off surface: PASS_VISUAL_BOUNDED_PENDING_INDEPENDENT_REVIEW
-full independent review: NOT_EXECUTED
-K3 authorized: false
-```
+FAIL_IMPLEMENTATION_HAND_BRUSH_LOCAL_TRANSFORM_ARTIFACT
+FAIL_IMPLEMENTATION_HERO_BRUSH_GEOMETRY
+FAIL_IMPLEMENTATION_TIP_SURFACE_STATE_AMBIGUOUS
+FAIL_IMPLEMENTATION_INTERPOLATION_INPUT_RISK
 
-This revision closes the repair-generation unit only. It does not approve the repaired K2 as a production motion anchor.
+contract_change_required: false
+dependency_change_required: false
+architecture_change_required: false
+```
 
 ## Drive evidence
 
 | Artifact | Drive file ID |
 |---|---|
-| Evidence folder | `1iI04IOAJnS0Psj0NaSLKBmQ9ZFFDHRai` |
-| Attempt 02 PNG | `1VRvECfjBepkG3VnUPdhaPeuJxvXm2aO4` |
-| Report | `1Q9f43Nmx-AYNhT1vXm3sUF4qroIqlDfm` |
-| Receipt | `1Rih94A7Ta4s-ZFmCI37YCpmI03ZXOB9o` |
-| Rerun receipt | `1DaEmuUBePn3Xtla4PYXUw_VyP5X4gb_C` |
-| Evidence JSON | `1nSiBxUiLmeQEUY_vYpDGE7i2nunLKGXf` |
-| Repair script | `1zYBnPmfLVtOTjtri3oonBUU0iajMYT33` |
-| Evidence script | `1b9w9IXaw9rCgRP5-nDMX0J3T6XPav9Ac` |
-| Full-frame review sheet | `1WXcf12fIksb5eQjHjtS7gJ8AljMfmztN` |
-| Hand/tip close-up | `1FBiWtsc1ckqNOy_5tbIpKzKHRVsTdG_-` |
-| Annotated frame | `1WoaEcNnImuxSEezsWOPI3C1ZwwOJbym2` |
-| Changed-pixel mask | `1JSnWv76Fb5lTUOu8icgkx0M5nUwin73B` |
-| Diff map | `1hniubiHxSiX9_XdxUFn4ZixjKy3OFDPi` |
-| Checksums | `1BUIiEcHiubzLp44JtdUhs04VhzvSJmQk` |
-| Evidence package | `1MLTa2heov8qkmPWN3Io3GOqRNpzWmB-L` |
+| Review folder | `1_-DHgtaItPQue_ZhOeW6QuknOJBOekJO` |
+| Review report | `1EPU-cZjgChayLJfGwkHssE7sUnJPfKVO` |
+| Review evidence JSON | `1GKGfE4vEhLXLVqdsjh51qsdmY45_lo2s` |
+| Review receipt | `13fEhsApZxkfaubHnIgqik96cRe01j4VF` |
+| Review script | `1T13c960pcx0g0p0-kNc6ZsN-rWFdfrAf` |
+| Independent review sheet | `1ep2IlNgVgubccMn1dOuCbIlw7gDvJNe_` |
+| Annotated full frame | `1bGS2rqSXAUaQ34a81lBHSmvQMtRMx1nA` |
+| Tip 10× | `1SLX5i0EG4ni1BLCcW28Bt1qpurJsdNCN` |
+| Paper patch comparison | `1Ubx2dXRZ9pA8B8LXr7U4Dn80Il8UCwfY` |
+| Optical-flow proxy | `1vDSSewRw-5FRtTKTpE2AWiO4E67h_oJS` |
+| Changed-pixel mask | `1xf1KpDve-KSjo5_P84FfOdBMOsPLzPKK` |
+| Diff map | `1aWdUidytsZkqowgaZYR2wlg2j8tHQLTq` |
+| Checksums | `16RrpiwrC08zmZRjorZWFvEA1fS--3WHR` |
+| Evidence package | `19U2C3UTDMCmCLFqlg3zECPglf7IScaKr` |
 
 ## GitHub evidence
 
 ```text
-report: acf2e84da5116c44ea9afc0ee1abc2a37073e207 / 8b7258a22f0cba8895c17e606e187f95b6ea5f5e
-evidence JSON: 546f61bd7ae681807533fe657fbd6b61391f6099 / 5075f08e2c1a25656076cd2b172c20b7e3d97b28
-repair script: 545957a8942405f71000b24a01f92da7b6b7c275 / 8d1990dbcc247984b180936649b019b7da55d1ea
-evidence script: ef8757d14d8d2112dd7d6bd95d4f51b0e5b8f6ce / fe1fd5e80623fb7b139d3904ba4f314d95862144
+review report: 3c7e4eed1daa1554952ce9b86e95c2c5bdbd2280 / 2656879dbc75d39e16b01ac0a1f8cd244889d117
+review evidence JSON: c8b483beaa9bef1adedc1ad904dd6110507fa6a3 / 482305e156d77664b426481a1f2cfd20251a9225
+review script: ac44e03f94c1e0ca21d764c96ac623cd23a27151 / f70a397b4b3944404f4912a446f6647dddfe2a38
+```
+
+## Asset disposition
+
+```text
+Attempt 02 Drive file: unchanged
+Attempt 02 status: REJECTED_REVIEW_RETAINED_AS_EVIDENCE
+silent overwrite: false
+delete: false
+canonical mutation: 0
+mapping mutation: false
+manifest mutation: false
+K3 authorized: false
+```
+
+## Validation boundary
+
+```text
+static anchor quality: REVIEWED_FAIL
+static interpolation proxy: REVIEWED_FAIL_RISK
+real video generation: NOT_EXECUTED
+real temporal continuity: NOT_VERIFIED
 ```
 
 ## Unchanged authority
@@ -103,7 +145,7 @@ EP01→EP02 boundary: unchanged
 ## Next action
 
 ```text
-EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_02
+EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_03_FULL_ROI_REGEN
 ```
 
-K3 remains blocked until the repaired K2 passes an independent review.
+Attempt 03 must regenerate/edit the complete hand–wrist–shaft–bristle ROI from K1. It must not continue translating or patching Attempt 02. K3 remains blocked until Attempt 03 passes a new independent review.
