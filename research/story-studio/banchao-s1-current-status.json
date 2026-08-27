@@ -110,12 +110,15 @@
     "ep01_ep02_boundary": true
   },
   "readback": {
-    "drive_review_evidence": "PENDING_FINAL_READBACK",
+    "drive_review_evidence": "PASS_EXACT_BYTES",
     "github_review_evidence": "PASS_GIT_BLOB_READBACK",
-    "drive_current_status": "PENDING_WRITE_AND_READBACK",
-    "github_current_status": "PENDING_WRITE_AND_READBACK",
-    "task_revision_31_exec_0031": "PENDING_WRITE_AND_READBACK",
-    "registry": "PENDING_REVISION_25_SYNC"
+    "drive_current_status_pending": "PASS_EXACT_BYTES",
+    "github_current_status_pending": "PASS_GIT_BLOB_READBACK",
+    "task_revision_31_exec_0031": "PASS",
+    "registry_pending_rows": "PASS",
+    "mapping_revision_10": "PASS_UNCHANGED",
+    "manifest_revision_10": "PASS_UNCHANGED"
   },
-  "sync_status": "PENDING_REVISION_25_READBACK"
+  "sync_status": "PASS_REVISION_25_READBACK",
+  "synced_at_utc": "2026-08-27T15:42:37Z"
 }
