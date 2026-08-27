@@ -1,0 +1,91 @@
+{
+  "schema": "story-studio/k1-static-anchor-source-reuse-evidence-v1",
+  "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
+  "task_key": "story-studio/banchao/s1-final-gate",
+  "execution_unit": "EP01_WRITING_SYSTEM_K1_STATIC_ANCHOR_PREFLIGHT_AND_SOURCE_REUSE",
+  "performed_at_utc": "2026-08-27T08:04:02Z",
+  "precondition": {
+    "status_revision": 20,
+    "task_revision": 25,
+    "mapping_revision": 10,
+    "manifest_revision": 10
+  },
+  "failure_classification": {
+    "misrouted_dashboard_outputs": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING",
+    "preauthorization_five-image_batch": "FAIL_CONTRACT_SEQUENCE_AND_NATIVE_SPEC",
+    "laydown_zone_wording": "FAIL_CONTRACT_REFERENCE_GEOMETRY_MISMATCH",
+    "architecture_change_required": false
+  },
+  "bounded_correction": {
+    "sequence_base_frame": "EP01-F01",
+    "laydown_zone": "front-edge bare-wood strip immediately below writing surface and left of existing long low wooden edge bar",
+    "set_geometry_changed": false,
+    "new_prop_added": false,
+    "prompt_package_revision": 2,
+    "motion_contract_revision": 3
+  },
+  "K1": {
+    "result": "PASS_BOUNDED_SOURCE_DIRECT_REUSE",
+    "role": "production_motion_anchor_internal_candidate",
+    "source_frame": "EP01-F01",
+    "source_drive_file_id": "1sYNi4U-MbP-EjR_ggqamzKa196Ifq7Tc",
+    "source_sha256": "ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473",
+    "output_file_name": "EP01-K1-NORMAL-WRITING.png",
+    "output_drive_file_id": "1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg",
+    "output_sha256": "ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473",
+    "byte_identical": true,
+    "pixel_mutation": false,
+    "image": {
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    "checks": {
+      "identity_costume_set_camera_lighting": "PASS_EXACT_SOURCE_IDENTITY",
+      "hand_anatomy": "PASS_VISUAL",
+      "hero_brush_geometry": "PASS_BOUNDED_NO_VISIBLE_METAL_OR_LOOP",
+      "tip_contact": "PASS",
+      "shaft_near_vertical": "PASS",
+      "writing_surface_stable": "PASS",
+      "readable_or_pseudo_text": "PASS_NONE_VISIBLE",
+      "watermark_or_platform_mark": "PASS_NONE_VISIBLE",
+      "clean_frame": "PASS",
+      "native_spec": "PASS_1920X1080_RGB_PNG"
+    },
+    "rights_status": "internal_candidate_only",
+    "production_ready": false
+  },
+  "authorization_after": {
+    "K2": "AUTHORIZED_NEXT",
+    "K3": "NOT_AUTHORIZED_UNTIL_K2_PASS",
+    "K4": "NOT_AUTHORIZED_UNTIL_K3_PASS",
+    "K5": "NOT_AUTHORIZED_UNTIL_K4_PASS"
+  },
+  "unchanged": {
+    "canonical": 194,
+    "production_ready": 0,
+    "mapping_revision": 10,
+    "manifest_revision": 10,
+    "canonical_drive_refs": 194
+  },
+  "drive_registration": {
+    "registered_at_utc": "2026-08-27T08:13:50Z",
+    "evidence_folder_id": "1GCpdL1t93bdOGj6aVPVoAazUvspgOMCj",
+    "k1_png_drive_file_id": "1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg",
+    "preflight_report_drive_file_id": "1YTgaagmnOojGNymM3Fo-3cNDABSs5g74",
+    "receipt_drive_file_id": "15rZI8_ZxSGBUy4UoW-JC5FGHfVuC99Lm",
+    "prompt_package_drive_file_id": "1dqJxF30dbEEFocIV4cuOqlHtgfbSLOpb",
+    "motion_contract_drive_file_id": "1g8I8K5aC57brNEZAbOkTlfyGlLxk28WI",
+    "evidence_json_drive_file_id": "1u3SawHT_GPm5L8qj827edJdOYp--9KHG",
+    "checksums_drive_file_id": "1fIBz0oUpFL2lM5Y6EjarSjxIaeJYtxMi",
+    "evidence_package_drive_file_id": "1uyhOVINWAig7cgndaaVIzx0bms8rYG8o"
+  },
+  "github_projection": {
+    "prompt_package_commit": "926fddce44bab3de32d890e6146a023eae9c639d",
+    "prompt_package_blob": "7e3b84e4e2cb3452be729d06972ba967fce486e2",
+    "motion_contract_commit": "3e599c3b9194c124619e06c211b202005e7c3478",
+    "motion_contract_blob": "16004e695541ec2fb5972803c84e58d53edfdbf5",
+    "preflight_report_commit": "8623d0e8de458fd5d4c788c71ad2adc10de7371f"
+  }
+}
