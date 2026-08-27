@@ -1,0 +1,90 @@
+{
+  "schema": "story-studio/k2-static-anchor-generation-evidence-v1",
+  "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
+  "execution_unit": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_GENERATION",
+  "result": "K2_CANDIDATE_GENERATED_PENDING_REVIEW",
+  "candidate": {
+    "role": "K2 production_motion_anchor_internal_candidate_pending_review",
+    "file_name": "EP01-K2-TIP-OFF-SURFACE.png",
+    "sha256": "f1a6f98b14ae62c0c81a4792f10f5d9ce6500960504a198b52860dd48186a7e6",
+    "dimensions": [1920,1080],
+    "mode": "RGB",
+    "format": "PNG",
+    "rights_status": "internal_candidate_only",
+    "production_ready": false
+  },
+  "source": {
+    "role": "K1 production_motion_anchor_internal_candidate",
+    "file_name": "EP01-K1-NORMAL-WRITING.png",
+    "drive_file_id": "1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg",
+    "sha256": "ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473",
+    "dimensions": [1920,1080],
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "derivation": {
+    "method": "deterministic_local_source_edit",
+    "reason": "Three generative edit attempts misrouted to dashboard/report imagery; Adobe Firefly edit initialization returned HTTP 403. No invalid output was registered.",
+    "operation": "inpaint original paper-contact pixels and translate the existing tapered lower bristle-tip pixels upward by 10 px",
+    "changed_bbox_xyxy": [1015,825,1038,871],
+    "changed_pixel_count": 677,
+    "outside_bbox_pixel_identity": true,
+    "script_file": "BANCHAO-S1-EP01-K2-STATIC-ANCHOR-DERIVATION.py",
+    "script_sha256": "86210cd001154561726bdbaa87e609c4d6e11892123e925f47ad9820ff202d4c",
+    "rerun_sha256": "f1a6f98b14ae62c0c81a4792f10f5d9ce6500960504a198b52860dd48186a7e6",
+    "byte_identical_rerun": true,
+    "opencv_version": "4.13.0",
+    "python_version": "3.13.5",
+    "pillow_version": "12.3.0"
+  },
+  "generation_gate": {
+    "native_spec": "PASS_1920X1080_RGB_PNG",
+    "single_clean_frame": "PASS",
+    "tip_visibly_clear_of_surface": "PASS_VISUAL_BOUNDED",
+    "brush_near_vertical": "PASS",
+    "paper_movement": "PASS_NONE",
+    "new_mark": "PASS_NONE",
+    "identity_costume_set_camera_lighting": "PASS_PIXEL_IDENTICAL_OUTSIDE_LOCAL_BBOX",
+    "watermark_or_text_added": "PASS_NONE",
+    "full_k2_review": "NOT_EXECUTED",
+    "k3_authorized": false
+  },
+  "failure_attempts": [
+    {"attempt":"image_gen_edit_01","result":"FAIL_IMPLEMENTATION_OUTPUT_ROUTING","registered":false},
+    {"attempt":"image_gen_edit_02","result":"FAIL_IMPLEMENTATION_OUTPUT_ROUTING","registered":false},
+    {"attempt":"image_gen_crop_edit_03","result":"FAIL_IMPLEMENTATION_OUTPUT_ROUTING","registered":false},
+    {"attempt":"adobe_firefly_edit_init","result":"FAIL_RIGHTS_OR_PROVIDER_HTTP_403","registered":false}
+  ],
+  "review_derivatives": [
+    "BANCHAO-S1-EP01-K1-K2-FULL-FRAME-REVIEW-SHEET-REV22.jpg",
+    "BANCHAO-S1-EP01-K1-K2-TIP-CLOSEUP-REV22.jpg",
+    "BANCHAO-S1-EP01-K2-CHANGE-BOUNDING-BOX-REV22.jpg",
+    "BANCHAO-S1-EP01-K2-CHANGED-PIXEL-MASK-REV22.png"
+  ],
+  "authorization_after": {
+    "K2_review": "AUTHORIZED_NEXT",
+    "K3": "NOT_AUTHORIZED_UNTIL_K2_REVIEW_PASS",
+    "K4": "NOT_AUTHORIZED",
+    "K5": "NOT_AUTHORIZED"
+  },
+  "unchanged": {
+    "canonical": 194,
+    "production_ready": 0,
+    "mapping_revision": 10,
+    "manifest_revision": 10,
+    "canonical_drive_refs": 194,
+    "ep01_ep02_boundary": true
+  },
+  "drive_registration": {
+    "folder": "1pJHzbZTDCJBKcJ3GdvBxRoPAWg736sep",
+    "k2_png": "1-1A3NoYCCmY0kUat9jGIDbUzLTiCPxJZ",
+    "report": "1xIBtEurtE5PuKQWkpLyaFeZLcmmmrBg2",
+    "receipt": "1PDn4yepB0bwVQk6trfFoW3AmYDpeIxVJ",
+    "evidence_json": "18JbOsegLE_BoRkF1APQU6QFlQ1WiiN1L",
+    "script": "11u0p3olhOSP-zydNnk3QcOM5KfK0L_MC",
+    "full_review": "1wcSD3nReI2J9N4bwOgsD-E86d0nuxn13",
+    "tip_review": "1Wa9H-TBYorsrZHTWdf5QGrXhgrSpyUdm",
+    "checksums": "1W3ajUU4b4EHeIGwmRS0n73UFXSKt_L7G",
+    "package": "1IvWidXg-BWyjsPqxs5y53CxtuimnrzIz"
+  }
+}
