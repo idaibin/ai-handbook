@@ -1,0 +1,87 @@
+{
+  "schema": "story-studio/k2-static-anchor-independent-review-evidence-v1",
+  "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
+  "task_key": "story-studio/banchao/s1-final-gate",
+  "execution_unit": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW",
+  "reviewed_at_utc": "2026-08-27T11:36:17Z",
+  "precondition": {
+    "status_revision": 22,
+    "task_revision": 28,
+    "mapping_revision": 10,
+    "manifest_revision": 10
+  },
+  "inputs": {
+    "K1": {
+      "file_name": "EP01-K1-NORMAL-WRITING.png",
+      "drive_file_id": "1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg",
+      "sha256": "ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473"
+    },
+    "K2": {
+      "file_name": "EP01-K2-TIP-OFF-SURFACE.png",
+      "drive_file_id": "1-1A3NoYCCmY0kUat9jGIDbUzLTiCPxJZ",
+      "sha256": "f1a6f98b14ae62c0c81a4792f10f5d9ce6500960504a198b52860dd48186a7e6",
+      "pre_review_role": "production_motion_anchor_internal_candidate_pending_review"
+    }
+  },
+  "mechanical_comparison": {
+    "native_spec": "PASS_1920X1080_RGB_PNG",
+    "changed_bbox_xyxy": [1015, 825, 1038, 871],
+    "changed_pixel_count": 677,
+    "outside_bbox_pixel_identity": true,
+    "hand_wrist_roi_xyxy": [760, 560, 1080, 825],
+    "hand_wrist_changed_pixel_count": 0,
+    "visible_tip_surface_gap": "PASS_BOUNDED",
+    "paper_movement": "PASS_NONE",
+    "new_readable_mark": "PASS_NONE"
+  },
+  "visual_review": {
+    "character_identity": "PASS_UNCHANGED",
+    "costume": "PASS_UNCHANGED",
+    "set_camera_lighting": "PASS_UNCHANGED",
+    "hand_anatomy": "PASS_UNCHANGED",
+    "hero_brush_single_continuous_tip": "FAIL_SPLIT_DUPLICATED_SILHOUETTE",
+    "hero_brush_geometry_continuity": "FAIL",
+    "wrist_lift_state": "FAIL_NOT_REPRESENTED",
+    "physical_interpolation_suitability": "FAIL",
+    "watermark_or_text": "PASS_NONE"
+  },
+  "review_result": "FAIL_IMPLEMENTATION_REPAIR_REQUIRED",
+  "failure_classification": {
+    "primary": "FAIL_IMPLEMENTATION_LOCAL_EDIT_GEOMETRY",
+    "secondary": "FAIL_IMPLEMENTATION_ACTION_STATE_INCOMPLETE",
+    "contract_change_required": false,
+    "dependency_change_required": false,
+    "architecture_change_required": false
+  },
+  "asset_disposition": {
+    "K2_candidate_status": "REJECTED_REVIEW_RETAINED_AS_EVIDENCE",
+    "delete_or_overwrite": false,
+    "canonical_change": 0,
+    "mapping_change": false,
+    "manifest_change": false,
+    "K3_authorized": false
+  },
+  "next_action": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_02",
+  "resume_after_pass": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_02",
+  "unchanged": {
+    "canonical": 194,
+    "production_ready": 0,
+    "mapping_revision": 10,
+    "manifest_revision": 10,
+    "canonical_drive_refs": 194,
+    "ep01_ep02_boundary": true
+  },
+  "drive_registration": {
+    "folder": "12Ft-KCVWhkhdv9qiwqJw-rl2-wh5lVUv",
+    "report": "1wVyY7Hg3Tblf5YMejUHgBak4etCkyXll",
+    "evidence_json": "1lwEEKpkzoge_t8NwuNU3Qn6JlqiEkpyZ",
+    "mechanical_receipt": "1Io-e9r40jiCojBD9qccyk_9tllsSiFWG",
+    "review_script": "1oVyUMx3YGE6FAWVtzVEl3iD1zZoTbHKl",
+    "review_sheet": "1bL-k94-YtwduexgiSgJBU-bACuydXf4T",
+    "annotated_full_frame": "1t-0pR76_htklWiF76ma4pM3KN4laeX0i",
+    "changed_pixel_mask": "1lqCyGwJ8ysMlZfUAhTIkxjcyUdcekn0V",
+    "diff_map": "123WIP_nqwQk7Le87dBGLt6RY7jHNy5Jm",
+    "checksums": "1pVvW-PElYrqv-An5T0m4rX-4XlvRBEZu",
+    "evidence_package": "19_EErmfEu-G0-g8DohCWtL_ayjl4UKpo"
+  }
+}
