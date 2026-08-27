@@ -4,63 +4,65 @@
   "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
   "task_key": "story-studio/banchao/s1-final-gate",
   "project_id": "banchao",
-  "status_revision": 20,
-  "task_revision": 25,
-  "as_of_utc": "2026-08-27T06:40:25Z",
+  "status_revision": 21,
+  "task_revision": 26,
+  "as_of_utc": "2026-08-27T08:28:06Z",
   "current_stage": "S1_VIDEO_CHAIN_TEST",
-  "current_status": "k1_k5_prompt_artifact_contract_refined_generation_not_started",
-  "current_execution_unit": "EP01_WRITING_SYSTEM_K1_K5_PROMPT_AND_ARTIFACT_CONTRACT_REFINEMENT_COMPLETED",
+  "current_status": "k1_source_direct_anchor_pass_k2_authorized",
+  "current_execution_unit": "EP01_WRITING_SYSTEM_K1_STATIC_ANCHOR_PREFLIGHT_AND_SOURCE_REUSE_COMPLETED",
   "canonical": 194,
   "production_ready": 0,
-  "next_action": "EP01_WRITING_SYSTEM_K1_K5_STATIC_ANCHOR_GENERATION",
-  "resume_after_pass": "EP01_WRITING_SYSTEM_K1_K5_STATIC_ANCHOR_REVIEW",
-  "failure_classification": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING",
-  "corrective_scope": "BOUNDED_WORK_ORDER_AND_PROMPT_PACKAGE_CLARIFICATION",
-  "architecture_change_required": false,
-  "artifact_boundary": {
-    "canonical_storyboard_reference": "NARRATIVE_AND_VISUAL_REFERENCE_ONLY",
-    "prompt_package": "TEXTUAL_GENERATION_CONTROL_ONLY",
-    "production_motion_anchor": "CLEAN_SINGLE_FRAME_PHYSICAL_STATE_IMAGE",
-    "review_contact_sheet": "HUMAN_REVIEW_DERIVATIVE_ONLY_AFTER_NATIVE_OUTPUTS",
-    "evidence_manifest_status": "METADATA_ONLY_NOT_EMBEDDED_IN_IMAGE",
-    "contact_sheet_as_model_input": "FORBIDDEN",
-    "dashboard_or_infographic_as_anchor": "FAIL_IMPLEMENTATION"
+  "next_action": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_GENERATION",
+  "resume_after_pass": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW",
+  "k1_static_anchor": {
+    "result": "PASS_BOUNDED_SOURCE_DIRECT_REUSE",
+    "source_frame": "EP01-F01",
+    "source_drive_file_id": "1sYNi4U-MbP-EjR_ggqamzKa196Ifq7Tc",
+    "output_drive_file_id": "1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg",
+    "sha256": "ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473",
+    "byte_identical": true,
+    "pixel_mutation": false,
+    "native_spec": "1920x1080_RGB_PNG",
+    "preflight": "PASS_BOUNDED",
+    "rights_status": "internal_candidate_only",
+    "production_ready": false
   },
-  "generation_contract": {
-    "one_anchor_per_generation_call": true,
-    "approve_k1_before_k2_k5": true,
-    "native_output": "1920x1080_RGB_PNG_CLEAN_SCENE_ONLY",
-    "source_policy": "INDIVIDUAL_CANON_FRAMES_FROM_MAPPING_REVISION_10",
-    "brush_laydown_target": "BARE_DESK_BRUSH_LAYDOWN_ZONE_NO_INDEPENDENT_PROP",
-    "prompt_package_drive_file_id": "1dqJxF30dbEEFocIV4cuOqlHtgfbSLOpb",
-    "artifact_boundary_drive_file_id": "14-8isk3GbhoTbsG6C6IQjRFGFr7425h8",
-    "prompt_refinement_evidence_drive_file_id": "1D0Pselsha-3AFKVVyiSmieny6oEq70Xc",
-    "motion_contract_drive_file_id": "1g8I8K5aC57brNEZAbOkTlfyGlLxk28WI",
-    "motion_contract_revision": 2,
-    "k1_k5_native_anchors": "NOT_STARTED"
+  "bounded_contract_correction": {
+    "failure_classification": "FAIL_CONTRACT_REFERENCE_GEOMETRY_MISMATCH",
+    "sequence_base_frame": "EP01-F01",
+    "brush_laydown_zone": "front-edge bare-wood strip immediately below writing surface and left of existing long low wooden edge bar",
+    "set_geometry_changed": false,
+    "new_prop_added": false,
+    "prompt_package_revision": 2,
+    "motion_contract_revision": 3,
+    "architecture_change_required": false
   },
-  "drive_readback": {
-    "prompt_package": "PASS_EXACT_BYTES:c9cbd8b21c4a4febafa9b400f806b72a2e4d8e63eefbb48d5d078ed09ad38398",
-    "artifact_boundary": "PASS_EXACT_BYTES:fa40017503d433d49be0e012a13a2281115b259e2359567dda164a66b5a7c63d",
-    "motion_contract_revision_2": "PASS_EXACT_BYTES:b27126a202acfef3cee00299c8db37ce038a6a98c75b784f4d16367cd545d3f8",
-    "refinement_evidence": "PASS_EXACT_BYTES:2ee5e5d8ed5b91ce64f6b286d3a81ba7a7066c873442ecb9337b380497c15c26"
+  "authorization_after": {
+    "K2": "AUTHORIZED_NEXT",
+    "K3": "NOT_AUTHORIZED_UNTIL_K2_PASS",
+    "K4": "NOT_AUTHORIZED_UNTIL_K3_PASS",
+    "K5": "NOT_AUTHORIZED_UNTIL_K4_PASS"
   },
-  "github_readback": {
-    "prompt_package_commit": "4e0b9e6aedc14e3286291a9555b1e676e65d9371",
-    "prompt_package_blob": "e2c5dc887c00d24096f6aee314c8192be22a15a0",
-    "artifact_boundary_commit": "536de9869009912db41daba3f78ee14aeba9d67b",
-    "artifact_boundary_blob": "5aca4f0bbc678fea6face33c305c2c889b198f40",
-    "motion_contract_commit": "9b0606313d52a4510e28f5e7bc669e6eff025dab",
-    "motion_contract_blob": "5588a5c04a65781dcfd013222e6bfc10f36bbd26",
-    "current_status_markdown_final_commit": "794cd5cef0b77190d1426acf17f58de928349f37"
+  "drive_evidence": {
+    "k1_png": "1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg",
+    "preflight_report": "1YTgaagmnOojGNymM3Fo-3cNDABSs5g74",
+    "receipt": "15rZI8_ZxSGBUy4UoW-JC5FGHfVuC99Lm",
+    "evidence_json": "1u3SawHT_GPm5L8qj827edJdOYp--9KHG",
+    "checksums": "1fIBz0oUpFL2lM5Y6EjarSjxIaeJYtxMi",
+    "evidence_package": "1uyhOVINWAig7cgndaaVIzx0bms8rYG8o",
+    "prompt_package": "1dqJxF30dbEEFocIV4cuOqlHtgfbSLOpb",
+    "motion_contract": "1g8I8K5aC57brNEZAbOkTlfyGlLxk28WI"
   },
-  "task_readback": {
-    "task_revision": 25,
-    "exec_0025": "PASS_UNIQUE",
-    "historical_task_revision_24_restored": true,
-    "sync_receipt": "TASK_DOCUMENT_SYNC_REV20"
+  "github_evidence": {
+    "prompt_package_commit": "926fddce44bab3de32d890e6146a023eae9c639d",
+    "prompt_package_blob": "7e3b84e4e2cb3452be729d06972ba967fce486e2",
+    "motion_contract_commit": "3e599c3b9194c124619e06c211b202005e7c3478",
+    "motion_contract_blob": "16004e695541ec2fb5972803c84e58d53edfdbf5",
+    "preflight_report_commit": "8623d0e8de458fd5d4c788c71ad2adc10de7371f",
+    "evidence_json_commit": "18ca931b6fdc631d6485eeabd123d64263e84b2f",
+    "current_status_markdown_pending_commit": "ce2556072f8e543e8306af4c910a0ce928f96e58",
+    "current_status_markdown_pending_blob": "f7c56c3337a532212d70abe62dc856243b3128d1"
   },
-  "registry_sync_id": "sync-story-studio-s1-k1-k5-prompt-boundary-rev20-20260827",
   "unchanged": {
     "mapping_revision": 10,
     "manifest_revision": 10,
@@ -69,6 +71,11 @@
     "f03_f06_f10_production_motion_anchor_false": true,
     "ep01_ep02_boundary": true
   },
-  "sync_status": "PASS_REVISION_20_READBACK",
-  "synced_at_utc": "2026-08-27T06:40:25Z"
+  "readback": {
+    "drive_current_status": "PENDING_FINAL_READBACK",
+    "task_revision_26_exec_0026": "PENDING",
+    "registry": "PENDING",
+    "github_current_status": "PENDING_FINAL_READBACK"
+  },
+  "sync_status": "PENDING_REVISION_21_READBACK"
 }
