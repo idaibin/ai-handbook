@@ -1,87 +1,85 @@
 # Story Studio — 班超 S1 Current Status
 
 - `task_identifier`: `TASK — Story Studio — 班超 S1 FINAL GATE`
-- `status_revision`: `20`
-- `task_revision`: `25`
-- `as_of_utc`: `2026-08-27T06:40:25Z`
+- `status_revision`: `21`
+- `task_revision`: `26`
+- `as_of_utc`: `2026-08-27T08:28:06Z`
 - `current_stage`: `S1_VIDEO_CHAIN_TEST`
-- `current_status`: `k1_k5_prompt_artifact_contract_refined_generation_not_started`
-- `current_execution_unit`: `EP01_WRITING_SYSTEM_K1_K5_PROMPT_AND_ARTIFACT_CONTRACT_REFINEMENT_COMPLETED`
-- `next_action`: `EP01_WRITING_SYSTEM_K1_K5_STATIC_ANCHOR_GENERATION`
-- `resume_after_pass`: `EP01_WRITING_SYSTEM_K1_K5_STATIC_ANCHOR_REVIEW`
+- `current_status`: `k1_source_direct_anchor_pass_k2_authorized`
+- `current_execution_unit`: `EP01_WRITING_SYSTEM_K1_STATIC_ANCHOR_PREFLIGHT_AND_SOURCE_REUSE_COMPLETED`
+- `next_action`: `EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_GENERATION`
+- `resume_after_pass`: `EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW`
 - `canonical`: `194`
 - `production_ready`: `0`
-- `sync_status`: `PASS_REVISION_20_READBACK`
-- `synced_at_utc`: `2026-08-27T06:40:25Z`
+- `sync_status`: `PENDING_REVISION_21_READBACK`
 
-## Revision 20 conclusion
-
-The previous dashboard/card-style images were invalid output routing. They are not storyboard frames, motion anchors, review assets, or evidence and were not registered as project assets.
+## Revision 21 result
 
 ```text
-classification: FAIL_IMPLEMENTATION_OUTPUT_ROUTING
-corrective_scope: BOUNDED_WORK_ORDER_AND_PROMPT_PACKAGE_CLARIFICATION
-architecture_change_required: false
-K1–K5 native anchors: NOT_STARTED
+K1: PASS_BOUNDED_SOURCE_DIRECT_REUSE
+K2: AUTHORIZED_NEXT
+K3–K5: sequentially not authorized yet
 ```
 
-## Frozen artifact boundary
+`EP01-F01` already satisfies the exact K1 normal-writing state and native specification. A separate K1 file identity was created without changing any pixels:
 
 ```text
-canonical_storyboard_reference
-= narrative, identity, set, costume, lighting and composition reference
-
-prompt_package
-= textual generation control; never rendered into the image
-
-production_motion_anchor
-= one clean independent physical-state image
-
-review_contact_sheet
-= human-review derivative, created only after five native images exist
-
-evidence / manifest / status
-= IDs, hashes, validation and synchronization metadata; never rendered into the image
+source: EP01-F01
+source Drive ID: 1sYNi4U-MbP-EjR_ggqamzKa196Ifq7Tc
+K1 Drive ID: 1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg
+SHA-256: ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473
+byte-identical: PASS
+spec: 1920×1080 / RGB PNG
+rights: internal_candidate_only
 ```
 
-Native anchors must not contain dashboards, cards, tables, arrows, labels, filenames, Prompt text, metadata, PASS/FAIL markers, borders, contact-sheet layout or watermarks.
+No generative redraw was used for K1 because it would add identity, hand and prop risk without adding a new physical state.
 
-## Generation contract
+## Bounded correction
+
+The previous `front-right BRUSH_LAYDOWN_ZONE` wording did not match the selected individual Canon base frame. The approved zone is now:
 
 ```text
-one generation call = one Anchor
-K1 must pass preflight before K2–K5 are authorized
-model references = individual Canon frame files from mapping revision 10
-labeled contact sheet = review-only; forbidden as direct model input
-native output = 1920×1080 RGB PNG, clean scene only
+The existing clear dry bare-wood strip along the desk front edge,
+immediately below the writing surface and left of the existing long low wooden edge bar.
 ```
 
-The approved K4 target is `BRUSH_LAYDOWN_ZONE`: the existing desk's clear, dry bare-wood edge zone. No independent brush rest, groove, holder or support prop may be added.
+No set geometry changed and no independent brush rest, groove, holder or support prop was added.
 
-## Outputs and readback
-
-| Artifact | Drive file ID | Readback |
-|---|---|---|
-| K1–K5 Prompt Package | `1dqJxF30dbEEFocIV4cuOqlHtgfbSLOpb` | `PASS_EXACT_BYTES` |
-| Artifact Boundary | `14-8isk3GbhoTbsG6C6IQjRFGFr7425h8` | `PASS_EXACT_BYTES` |
-| Motion Anchor Contract revision 2 | `1g8I8K5aC57brNEZAbOkTlfyGlLxk28WI` | `PASS_EXACT_BYTES` |
-| Refinement Evidence | `1D0Pselsha-3AFKVVyiSmieny6oEq70Xc` | `PASS_EXACT_BYTES` |
+## Validation
 
 ```text
-Prompt Package SHA-256:
-c9cbd8b21c4a4febafa9b400f806b72a2e4d8e63eefbb48d5d078ed09ad38398
-
-Artifact Boundary SHA-256:
-fa40017503d433d49be0e012a13a2281115b259e2359567dda164a66b5a7c63d
-
-Motion Contract revision 2 SHA-256:
-b27126a202acfef3cee00299c8db37ce038a6a98c75b784f4d16367cd545d3f8
-
-Refinement Evidence SHA-256:
-2ee5e5d8ed5b91ce64f6b286d3a81ba7a7066c873442ecb9337b380497c15c26
+identity / costume / set / camera / lighting: PASS_EXACT_SOURCE_IDENTITY
+hand anatomy: PASS_VISUAL
+Hero Brush: PASS_BOUNDED_NO_VISIBLE_METAL_OR_LOOP
+tip contact / near-vertical shaft: PASS
+writing surface / pseudo-text / watermark: PASS
+native decode: PASS_1920X1080_RGB_PNG
 ```
 
-GitHub prompt package, artifact-boundary note and contract revision 2 were fetched after write and matched their expected Git blobs. Task revision 25 contains one unique `EXEC-0025`; Registry Project and Task rows were read back. The final self-identities for Current Status are recorded in Task `[SYNC-REV20]` and Registry sync ID `sync-story-studio-s1-k1-k5-prompt-boundary-rev20-20260827`.
+The dark brush joint has no visible metal reflection or ring, but its material cannot be proven from pixels alone; therefore the result is `PASS_BOUNDED`, not historical-material certification.
+
+## Evidence
+
+| Artifact | Drive file ID |
+|---|---|
+| K1 PNG | `1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg` |
+| Preflight report | `1YTgaagmnOojGNymM3Fo-3cNDABSs5g74` |
+| Receipt | `15rZI8_ZxSGBUy4UoW-JC5FGHfVuC99Lm` |
+| Evidence JSON | `1u3SawHT_GPm5L8qj827edJdOYp--9KHG` |
+| Checksums | `1fIBz0oUpFL2lM5Y6EjarSjxIaeJYtxMi` |
+| Evidence package | `1uyhOVINWAig7cgndaaVIzx0bms8rYG8o` |
+| Prompt package | `1dqJxF30dbEEFocIV4cuOqlHtgfbSLOpb` |
+| Motion contract | `1g8I8K5aC57brNEZAbOkTlfyGlLxk28WI` |
+
+GitHub:
+
+```text
+prompt package: 926fddce44bab3de32d890e6146a023eae9c639d
+motion contract: 3e599c3b9194c124619e06c211b202005e7c3478
+preflight report: 8623d0e8de458fd5d4c788c71ad2adc10de7371f
+evidence JSON: 18ca931b6fdc631d6485eeabd123d64263e84b2f
+```
 
 ## Unchanged
 
@@ -90,6 +88,7 @@ canonical: 194
 production_ready: 0
 mapping revision: 10
 manifest revision: 10
+194 canonical Drive refs: unchanged
 F08–F10 canonical_storyboard_reference: unchanged
 F03 / F06–F10 production_motion_anchor=false: unchanged
 EP01→EP02 boundary: unchanged
@@ -98,7 +97,7 @@ EP01→EP02 boundary: unchanged
 ## Next action
 
 ```text
-EP01_WRITING_SYSTEM_K1_K5_STATIC_ANCHOR_GENERATION
+EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_GENERATION
 ```
 
-The next execution unit generates only `K1` as one clean frame. K2–K5 remain unauthorized until K1 passes identity, set, Hero Brush, anatomy, contact-state and clean-frame preflight.
+Only K2 is authorized. K3 remains blocked until K2 passes its independent preflight.
