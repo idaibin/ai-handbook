@@ -6,7 +6,7 @@
   "project_id": "banchao",
   "status_revision": 25,
   "task_revision": 31,
-  "as_of_utc": "2026-08-27T14:39:08Z",
+  "as_of_utc": "2026-08-27T15:10:35Z",
   "current_stage": "S1_VIDEO_CHAIN_TEST",
   "current_status": "k2_review_attempt_02_fail_repair_attempt_03_required",
   "current_execution_unit": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_02_COMPLETED",
@@ -34,27 +34,28 @@
       "outside_changed_bbox_pixel_identity": true
     },
     "failures": {
-      "bristle_single_continuous_soft_gathered_tip": "FAIL_RIGID_SOLID_WEDGE",
-      "hand_wrist_state_naturalness": "FAIL_TRANSLATED_PATCH_GHOSTING",
-      "tip_surface_air_gap": "FAIL_AMBIGUOUS_OR_CONTACT_NO_CLEAR_CONTINUOUS_BACKGROUND_BAND",
-      "local_patch_naturalness": "FAIL_BLUR_SMEAR_EDGE_HALO",
-      "static_interpolation_input_suitability": "FAIL_RISK_DOUBLE_EDGE_AND_GHOSTING",
-      "real_video_temporal_continuity": "NOT_VERIFIED_NO_PROVIDER_RUN"
+      "bristle_geometry": "FAIL_RIGID_SOLID_WEDGE_NO_SOFT_GATHERED_BRISTLE",
+      "hand_wrist_state_naturalness": "FAIL_COHERENT_TRANSLATION_BUT_UNNATURAL_CUTOUT_AND_CUFF_GHOST",
+      "tip_surface_air_gap": "FAIL_AMBIGUOUS_CONTACT_NO_CONTINUOUS_PAPER_TONED_AIR_BAND",
+      "local_patch_naturalness": "FAIL_DARK_GHOST_BAND_BLUR_AND_TEXTURE_DISCONTINUITY",
+      "static_interpolation_input_suitability": "FAIL_RISK_DOUBLE_EDGES_AND_FLOW_INCONSISTENCY_TAIL",
+      "real_video_temporal_continuity": "NOT_VERIFIED"
     },
     "mechanical_proxy": {
       "changed_bbox_xyxy": [884, 538, 1057, 900],
       "changed_pixel_count": 31520,
       "hand_wrist_changed_pixel_count": 24856,
       "face_changed_pixel_count": 0,
-      "optical_flow_proxy_residual_mae": 7.1086,
-      "optical_flow_proxy_residual_p95": 48.0,
-      "optical_flow_proxy_residual_max": 190
+      "forward_flow_magnitude_p50_px": 13.803597450256348,
+      "forward_flow_magnitude_p95_px": 14.202459335327148,
+      "forward_backward_error_p90_px": 3.203840732574463,
+      "forward_backward_error_p95_px": 5.275964260101318,
+      "forward_backward_error_p99_px": 9.8228178024292
     },
     "failure_classification": [
-      "FAIL_IMPLEMENTATION_HAND_BRUSH_LOCAL_TRANSFORM_ARTIFACT",
-      "FAIL_IMPLEMENTATION_HERO_BRUSH_GEOMETRY",
-      "FAIL_IMPLEMENTATION_TIP_SURFACE_STATE_AMBIGUOUS",
-      "FAIL_IMPLEMENTATION_INTERPOLATION_INPUT_RISK"
+      "FAIL_IMPLEMENTATION_LOCAL_COMPOSITING_ARTIFACTS",
+      "FAIL_IMPLEMENTATION_PROP_GEOMETRY",
+      "FAIL_IMPLEMENTATION_ACTION_STATE_UNNATURAL"
     ],
     "contract_change_required": false,
     "architecture_change_required": false,
@@ -69,26 +70,28 @@
     "K5": "NOT_AUTHORIZED"
   },
   "drive_evidence": {
-    "folder": "1_-DHgtaItPQue_ZhOeW6QuknOJBOekJO",
-    "report": "1EPU-cZjgChayLJfGwkHssE7sUnJPfKVO",
-    "evidence_json": "1GKGfE4vEhLXLVqdsjh51qsdmY45_lo2s",
-    "receipt": "13fEhsApZxkfaubHnIgqik96cRe01j4VF",
-    "review_script": "1T13c960pcx0g0p0-kNc6ZsN-rWFdfrAf",
-    "review_sheet": "1ep2IlNgVgubccMn1dOuCbIlw7gDvJNe_",
-    "annotated_full_frame": "1bGS2rqSXAUaQ34a81lBHSmvQMtRMx1nA",
-    "tip_10x": "1SLX5i0EG4ni1BLCcW28Bt1qpurJsdNCN",
-    "paper_patch_compare": "1Ubx2dXRZ9pA8B8LXr7U4Dn80Il8UCwfY",
-    "optical_flow_proxy": "1vDSSewRw-5FRtTKTpE2AWiO4E67h_oJS",
-    "changed_pixel_mask": "1xf1KpDve-KSjo5_P84FfOdBMOsPLzPKK",
-    "diff_map": "1aWdUidytsZkqowgaZYR2wlg2j8tHQLTq",
-    "checksums": "16RrpiwrC08zmZRjorZWFvEA1fS--3WHR",
-    "package": "19U2C3UTDMCmCLFqlg3zECPglf7IScaKr"
+    "folder": "1xY09ZvrjX14M09LEuVqVzBCgCi6ctc8b",
+    "report": "1qBJKeHGjIhxP7ual7LgZ6dhpwk1n7BUC",
+    "evidence_json": "19I51wZwbGDYDm-X1-lcV-cgDNb0xw7Zs",
+    "receipt": "1XyF1XX9tnJn8qarTngX9dyvqHY5Ou9NV",
+    "review_script": "108o5a-qlrfZiIgtaLbPx-aHrHU89h7zt",
+    "review_sheet": "1eO2sbirdqlhk-5StZ_HGnVmx-4AsgyHk",
+    "hand_brush_compare": "1dV6pBj614henK8JOCRYAbzRcRgEvz0eL",
+    "tip_8x": "1N-_wX8PRJmbVbrbf6P51i8jDTUTAW9uY",
+    "patch_compare": "1ZEhSd22njvSmCOX3Z-87iR-fZJOtgiol",
+    "linear_blend_proxy": "1dX-o3bbWb8mwlLLfgA1xvF-9XUspHcHN",
+    "flow_error_heatmap": "1N_Niwmnv4MRFZLhS0_VtUUk0MkOAGR3t",
+    "changed_pixel_mask": "1fEVK51nL3soev3aVlswCuL9qQnKpTMDZ",
+    "diff_map": "1hc3tS8xBBLeS1hnqaXl5K1kLRMZ-_y3W",
+    "checksums": "1reqJov_AgrDPv5p-l_uaAO1JSmp9URAB",
+    "package": "1E4-W2aaJej19YLsy0a07xvy1R7ER2bnO",
+    "superseded_partial_folder": "1_-DHgtaItPQue_ZhOeW6QuknOJBOekJO"
   },
   "github_evidence": {
-    "review_report_commit": "3c7e4eed1daa1554952ce9b86e95c2c5bdbd2280",
-    "review_report_blob": "2656879dbc75d39e16b01ac0a1f8cd244889d117",
-    "review_evidence_json_commit": "c8b483beaa9bef1adedc1ad904dd6110507fa6a3",
-    "review_evidence_json_blob": "482305e156d77664b426481a1f2cfd20251a9225",
+    "review_report_commit": "d95a92361f7eae45e29fa6a71d9a22c29d9a2f1c",
+    "review_report_blob": "0498b4a7c21b8d0deab7f8f22f72629970c2024a",
+    "review_evidence_json_commit": "d64be4b4bcca61afc55098604216af5f39601a90",
+    "review_evidence_json_blob": "bf7d626f93e5069225930b03f54abf1fa960d955",
     "review_script_commit": "ac44e03f94c1e0ca21d764c96ac623cd23a27151",
     "review_script_blob": "f70a397b4b3944404f4912a446f6647dddfe2a38"
   },
@@ -107,7 +110,7 @@
     "ep01_ep02_boundary": true
   },
   "readback": {
-    "drive_review_evidence": "PASS_EXACT_BYTES",
+    "drive_review_evidence": "PENDING_FINAL_READBACK",
     "github_review_evidence": "PASS_GIT_BLOB_READBACK",
     "drive_current_status": "PENDING_WRITE_AND_READBACK",
     "github_current_status": "PENDING_WRITE_AND_READBACK",
