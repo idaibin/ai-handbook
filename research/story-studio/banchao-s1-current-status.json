@@ -6,7 +6,7 @@
   "project_id": "banchao",
   "status_revision": 20,
   "task_revision": 25,
-  "as_of_utc": "2026-08-27T06:19:40Z",
+  "as_of_utc": "2026-08-27T06:40:25Z",
   "current_stage": "S1_VIDEO_CHAIN_TEST",
   "current_status": "k1_k5_prompt_artifact_contract_refined_generation_not_started",
   "current_execution_unit": "EP01_WRITING_SYSTEM_K1_K5_PROMPT_AND_ARTIFACT_CONTRACT_REFINEMENT_COMPLETED",
@@ -21,7 +21,7 @@
     "canonical_storyboard_reference": "NARRATIVE_AND_VISUAL_REFERENCE_ONLY",
     "prompt_package": "TEXTUAL_GENERATION_CONTROL_ONLY",
     "production_motion_anchor": "CLEAN_SINGLE_FRAME_PHYSICAL_STATE_IMAGE",
-    "review_contact_sheet": "HUMAN_REVIEW_DERIVATIVE_ONLY",
+    "review_contact_sheet": "HUMAN_REVIEW_DERIVATIVE_ONLY_AFTER_NATIVE_OUTPUTS",
     "evidence_manifest_status": "METADATA_ONLY_NOT_EMBEDDED_IN_IMAGE",
     "contact_sheet_as_model_input": "FORBIDDEN",
     "dashboard_or_infographic_as_anchor": "FAIL_IMPLEMENTATION"
@@ -30,6 +30,8 @@
     "one_anchor_per_generation_call": true,
     "approve_k1_before_k2_k5": true,
     "native_output": "1920x1080_RGB_PNG_CLEAN_SCENE_ONLY",
+    "source_policy": "INDIVIDUAL_CANON_FRAMES_FROM_MAPPING_REVISION_10",
+    "brush_laydown_target": "BARE_DESK_BRUSH_LAYDOWN_ZONE_NO_INDEPENDENT_PROP",
     "prompt_package_drive_file_id": "1dqJxF30dbEEFocIV4cuOqlHtgfbSLOpb",
     "artifact_boundary_drive_file_id": "14-8isk3GbhoTbsG6C6IQjRFGFr7425h8",
     "prompt_refinement_evidence_drive_file_id": "1D0Pselsha-3AFKVVyiSmieny6oEq70Xc",
@@ -37,12 +39,28 @@
     "motion_contract_revision": 2,
     "k1_k5_native_anchors": "NOT_STARTED"
   },
-  "github": {
-    "prompt_package_commit": "4e0b9e6aedc14e3286291a9555b1e676e65d9371",
-    "artifact_boundary_commit": "536de9869009912db41daba3f78ee14aeba9d67b",
-    "motion_contract_commit": "9b0606313d52a4510e28f5e7bc669e6eff025dab",
-    "current_status_markdown_commit": "2fdcd02b15c43e5c177fccc380d6cd081d78bfa9"
+  "drive_readback": {
+    "prompt_package": "PASS_EXACT_BYTES:c9cbd8b21c4a4febafa9b400f806b72a2e4d8e63eefbb48d5d078ed09ad38398",
+    "artifact_boundary": "PASS_EXACT_BYTES:fa40017503d433d49be0e012a13a2281115b259e2359567dda164a66b5a7c63d",
+    "motion_contract_revision_2": "PASS_EXACT_BYTES:b27126a202acfef3cee00299c8db37ce038a6a98c75b784f4d16367cd545d3f8",
+    "refinement_evidence": "PASS_EXACT_BYTES:2ee5e5d8ed5b91ce64f6b286d3a81ba7a7066c873442ecb9337b380497c15c26"
   },
+  "github_readback": {
+    "prompt_package_commit": "4e0b9e6aedc14e3286291a9555b1e676e65d9371",
+    "prompt_package_blob": "e2c5dc887c00d24096f6aee314c8192be22a15a0",
+    "artifact_boundary_commit": "536de9869009912db41daba3f78ee14aeba9d67b",
+    "artifact_boundary_blob": "5aca4f0bbc678fea6face33c305c2c889b198f40",
+    "motion_contract_commit": "9b0606313d52a4510e28f5e7bc669e6eff025dab",
+    "motion_contract_blob": "5588a5c04a65781dcfd013222e6bfc10f36bbd26",
+    "current_status_markdown_final_commit": "794cd5cef0b77190d1426acf17f58de928349f37"
+  },
+  "task_readback": {
+    "task_revision": 25,
+    "exec_0025": "PASS_UNIQUE",
+    "historical_task_revision_24_restored": true,
+    "sync_receipt": "TASK_DOCUMENT_SYNC_REV20"
+  },
+  "registry_sync_id": "sync-story-studio-s1-k1-k5-prompt-boundary-rev20-20260827",
   "unchanged": {
     "mapping_revision": 10,
     "manifest_revision": 10,
@@ -51,18 +69,6 @@
     "f03_f06_f10_production_motion_anchor_false": true,
     "ep01_ep02_boundary": true
   },
-  "readback": {
-    "drive_prompt_package": "PENDING",
-    "drive_artifact_boundary": "PENDING",
-    "drive_motion_contract_revision_2": "PENDING",
-    "drive_prompt_refinement_evidence": "PENDING",
-    "drive_current_status": "PENDING",
-    "github_prompt_boundary_contract": "PENDING",
-    "github_current_status": "PENDING",
-    "task_revision_25_exec_0025": "PENDING",
-    "registry_projects": "PENDING",
-    "registry_tasks": "PENDING",
-    "registry_sync": "PENDING"
-  },
-  "sync_status": "PENDING_REVISION_20_READBACK"
+  "sync_status": "PASS_REVISION_20_READBACK",
+  "synced_at_utc": "2026-08-27T06:40:25Z"
 }
