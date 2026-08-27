@@ -71,10 +71,13 @@
   "readback": {
     "drive_k1_and_evidence": "PASS_EXACT_BYTES",
     "drive_prompt_and_contract": "PASS_EXACT_BYTES",
-    "drive_current_status": "PENDING_FINAL_FETCH",
-    "task_revision_27_exec_0027": "PENDING_WRITE_AND_READBACK",
-    "registry": "PENDING_FINAL_SOURCE_REF",
-    "github_current_status": "PENDING_FINAL_FETCH"
+    "drive_current_status_markdown": "PASS_EXACT_BYTES",
+    "drive_current_status_json": "PASS_EXACT_BYTES",
+    "task_revision_27_exec_0027": "PASS",
+    "registry_projects": "PASS",
+    "registry_tasks": "PASS_IN_PROGRESS",
+    "registry_sync": "PASS_SYNCED",
+    "github_current_status_markdown": "PASS_FINAL_BLOB_READBACK"
   },
   "sync_status": "PASS_REVISION_21_READBACK",
   "synced_at_utc": "2026-08-27T08:56:35Z"
