@@ -1,56 +1,34 @@
 # Story Studio — 班超 S1 Current Status
 
-- `task_identifier`: `TASK — Story Studio — 班超 S1 FINAL GATE`
-- `status_revision`: `17`
-- `as_of_utc`: `2026-08-26T11:41:41Z`
+- `status_revision`: `18`
+- `task_revision`: `23`
 - `current_stage`: `S1_VIDEO_CHAIN_TEST`
-- `current_status`: `video_chain_test_partial_pass_runway_paid_plan_required`
-- `current_execution_unit`: `VIDEO_CHAIN_TEST_GENERATIVE_PROVIDER_RESOLUTION_COMPLETED_WITH_RUNWAY_ACCOUNT_LIMITATION`
-- `next_action`: `GENERATIVE_VIDEO_PROVIDER_ENABLEMENT_OR_ALTERNATE_PROVIDER`
-- `asset_policy`: `canonical_storyboard_reference`
+- `current_status`: `ep01_writing_system_motion_anchor_impact_analysis_pass_option_a_media_intake_partial`
 - `canonical`: `194`
 - `production_ready`: `0`
-- `evidence_package_revision`: `6`
+- `next_action`: `REGISTER_GEMINI_10S_VIDEO_AND_REVIEW_MEDIA_EVIDENCE`
+- `resume_after_pass`: `EP01_WRITING_SYSTEM_K1_K5_STATIC_ANCHOR_GENERATION`
 
-## Conclusion
+## Revision 18 decision
 
-The deterministic 10-second downstream chain remains verified. A real Runway image-to-video attempt was made with `EP01-F01`, but the provider rejected it before generation.
+The current EP01-F01–F10 Drive sources were re-read from mapping revision 10. Impact analysis selected:
 
 ```text
-Runway authentication: PASS
-Runway availableVideoModels: []
-generation request: BLOCKED_ACCOUNT_LIMITATION_PAID_PLAN_REQUIRED
-generation job created: false
-video output created: false
-numeric credit balance: NOT_EXPOSED_BY_CONNECTOR
-canonical: 194
-production_ready: 0
+OPTION_A_KEEP_NARRATIVE_CANON
 ```
 
-This is a Provider/account limitation, not a content, canonical asset, Motion Contract, sound, assembly, or decode failure.
+- F08–F10 remain `canonical_storyboard_reference`.
+- F03 and F06–F10 are not `production_motion_anchor`.
+- No canonical count, mapping, manifest, or EP01→EP02 boundary change.
+- A separate K1–K5 physical-state contract is prepared.
+- `PROP_BRUSH_REST` was not introduced because it is absent from the active screenplay/current asset list.
 
-## Preserved verified results
+The handoff-reported Gemini MP4 and review media are not available as retrievable bytes in this session, so their media evidence intake remains partial.
 
-- 10/10 production derivatives: PASS;
-- deterministic Motion Contract proxy: PASS;
-- Foley/audio mux: PASS;
-- 1920×1080 / 24fps / 10.000s MP4 full decode: PASS;
-- Drive/GitHub/Registry/Task revision 16 readback: PASS;
-- 194 canonical storyboard references: unchanged.
-
-## State decision
+## Preserved status
 
 ```text
+deterministic 10-second chain: PASS
+Runway provider attempt: BLOCKED_ACCOUNT_LIMITATION_PAID_PLAN_REQUIRED
 full-season video production: not authorized
-next_action: GENERATIVE_VIDEO_PROVIDER_ENABLEMENT_OR_ALTERNATE_PROVIDER
-```
-
-## Revision 17 synchronization closure
-
-```text
-sync_status: PASS_REVISION_17_READBACK
-synced_at_utc: 2026-08-26T11:48:16Z
-task_revision: 22
-EXEC-0022 uniqueness: PASS
-Drive/GitHub/Registry/Task readback: PASS
 ```
