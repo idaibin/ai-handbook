@@ -11,7 +11,8 @@
 - `resume_after_pass`: `EP01_WRITING_SYSTEM_K3_STATIC_ANCHOR_GENERATION`
 - `canonical`: `194`
 - `production_ready`: `0`
-- `sync_status`: `PENDING_REVISION_22_READBACK`
+- `sync_status`: `PASS_REVISION_22_READBACK`
+- `synced_at_utc`: `2026-08-27T11:04:18Z`
 
 ## Revision 22 result
 
@@ -95,6 +96,21 @@ manifest revision: 10
 F08–F10 canonical_storyboard_reference: unchanged
 F03 / F06–F10 production_motion_anchor=false: unchanged
 EP01→EP02 boundary: unchanged
+```
+
+## Revision 22 readback
+
+```text
+Drive K2 PNG / Receipt / Evidence JSON / Package: PASS_EXACT_BYTES
+GitHub generation report / evidence JSON / derivation script: PASS_GIT_BLOB_READBACK
+Drive Current Status final write: PASS_PENDING_FINAL_FETCH
+GitHub Current Status final write: PASS_PENDING_FINAL_FETCH
+Task revision 28 / EXEC-0028: PASS
+Registry Projects / Tasks / Sync: PASS_PENDING_FINAL_MARKER
+mapping revision 10: PASS_UNCHANGED
+manifest revision 10: PASS_UNCHANGED
+canonical: 194 unchanged
+production_ready: 0 unchanged
 ```
 
 ## Next action
