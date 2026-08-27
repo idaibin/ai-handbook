@@ -1,94 +1,124 @@
 {
-  "schema": "story-studio/k2-static-anchor-independent-review-evidence-v1",
+  "schema": "story-studio/k2-static-anchor-review-attempt-02-evidence-v1",
   "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
   "task_key": "story-studio/banchao/s1-final-gate",
-  "status_revision_before": 24,
-  "task_revision_before": 30,
   "execution_unit": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_02",
-  "reviewed_at_utc": "2026-08-27T14:39:08Z",
-  "review_result": "FAIL_IMPLEMENTATION_REPAIR_REQUIRED",
-  "receipt": {
-    "schema": "story-studio/k2-static-anchor-review-attempt-02-receipt-v1",
-    "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
-    "execution_unit": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_02",
-    "reviewed_at_utc": "2026-08-27T14:39:08Z",
-    "inputs": {
-      "K1": {
-        "sha256": "ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473",
-        "spec": "1920x1080_RGB_PNG"
-      },
-      "K2_attempt_02": {
-        "sha256": "de3bb9745effca071f25f14e3b50d8c4f7518b195021b8a8176987957dd7e84e",
-        "spec": "1920x1080_RGB_PNG"
-      }
+  "reviewed_at_utc": "2026-08-27T15:10:35Z",
+  "precondition": {
+    "status_revision": 24,
+    "task_revision": 30,
+    "mapping_revision": 10,
+    "manifest_revision": 10
+  },
+  "inputs": {
+    "K1": {
+      "file_name": "EP01-K1-NORMAL-WRITING.png",
+      "drive_file_id": "1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg",
+      "sha256": "ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473"
     },
-    "mechanical_comparison": {
-      "changed_bbox_xyxy": [884, 538, 1057, 900],
-      "changed_pixel_count": 31520,
-      "hand_wrist_roi_xyxy": [760, 560, 1080, 825],
-      "hand_wrist_changed_pixel_count": 24856,
-      "face_roi_xyxy": [1080, 120, 1510, 570],
-      "face_changed_pixel_count": 0,
-      "outside_changed_bbox_pixel_identity": true,
-      "optical_flow_proxy_roi_xyxy": [760, 500, 1120, 920],
-      "optical_flow_proxy_residual_mae": 7.1086,
-      "optical_flow_proxy_residual_p95": 48.0,
-      "optical_flow_proxy_residual_max": 190
-    },
-    "independent_visual_review": {
-      "native_spec": "PASS",
-      "single_clean_frame": "PASS",
-      "character_costume_set_camera_lighting_outside_bbox": "PASS_EXACT_PIXEL_IDENTITY",
-      "bristle_single_continuous_soft_gathered_tip": "FAIL_RIGID_SOLID_WEDGE",
-      "hand_wrist_state_naturalness": "FAIL_TRANSLATED_PATCH_GHOSTING",
-      "tip_surface_air_gap": "FAIL_AMBIGUOUS_OR_CONTACT_NO_CLEAR_CONTINUOUS_BACKGROUND_BAND",
-      "local_patch_naturalness": "FAIL_BLUR_SMEAR_EDGE_HALO",
-      "static_interpolation_input_suitability": "FAIL_RISK_DOUBLE_EDGE_AND_GHOSTING",
-      "real_video_temporal_continuity": "NOT_VERIFIED_NO_PROVIDER_RUN"
-    },
-    "review_result": "FAIL_IMPLEMENTATION_REPAIR_REQUIRED",
-    "failure_classification": [
-      "FAIL_IMPLEMENTATION_HAND_BRUSH_LOCAL_TRANSFORM_ARTIFACT",
-      "FAIL_IMPLEMENTATION_HERO_BRUSH_GEOMETRY",
-      "FAIL_IMPLEMENTATION_TIP_SURFACE_STATE_AMBIGUOUS",
-      "FAIL_IMPLEMENTATION_INTERPOLATION_INPUT_RISK"
-    ],
-    "contract_change_required": false,
-    "architecture_change_required": false,
-    "asset_disposition": {
-      "K2_attempt_02": "REJECTED_REVIEW_RETAINED_AS_EVIDENCE",
-      "delete_or_overwrite": false,
-      "K3_authorized": false
-    },
-    "next_action": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_03_FULL_ROI_REGEN",
-    "resume_after_pass": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_03",
-    "unchanged": {
-      "canonical": 194,
-      "production_ready": 0,
-      "mapping_revision": 10,
-      "manifest_revision": 10,
-      "canonical_drive_refs": 194,
-      "ep01_ep02_boundary": true
-    },
-    "environment": {
-      "python": "3.13.5",
-      "opencv": "4.13.0",
-      "pillow": "12.3.0"
+    "K2_attempt_02": {
+      "file_name": "EP01-K2-TIP-OFF-SURFACE-ATTEMPT-02.png",
+      "drive_file_id": "1VRvECfjBepkG3VnUPdhaPeuJxvXm2aO4",
+      "sha256": "de3bb9745effca071f25f14e3b50d8c4f7518b195021b8a8176987957dd7e84e",
+      "pre_review_role": "production_motion_anchor_internal_candidate_pending_review_attempt_02"
     }
   },
-  "review_derivatives": [
-    "BANCHAO-S1-EP01-K2-ATTEMPT02-INDEPENDENT-REVIEW-SHEET-REV25.jpg",
-    "BANCHAO-S1-EP01-K2-ATTEMPT02-ANNOTATED-FULL-FRAME-REV25.jpg",
-    "BANCHAO-S1-EP01-K2-ATTEMPT02-TIP-10X-REV25.png",
-    "BANCHAO-S1-EP01-K2-ATTEMPT02-PAPER-PATCH-COMPARE-REV25.png",
-    "BANCHAO-S1-EP01-K2-ATTEMPT02-OPTICAL-FLOW-PROXY-REV25.jpg",
-    "BANCHAO-S1-EP01-K2-ATTEMPT02-CHANGED-PIXEL-MASK-REV25.png",
-    "BANCHAO-S1-EP01-K2-ATTEMPT02-DIFF-MAP-REV25.png"
-  ],
+  "mechanical_review": {
+    "changed_bbox_xyxy": [884, 538, 1057, 900],
+    "changed_pixel_count": 31520,
+    "hand_wrist_roi_xyxy": [760, 560, 1080, 825],
+    "hand_wrist_changed_pixel_count": 24856,
+    "face_roi_xyxy": [1080, 120, 1510, 570],
+    "face_changed_pixel_count": 0,
+    "max_channel_delta": 169,
+    "mean_channel_delta_changed_pixels": 23.802506345177665
+  },
+  "flow_risk_proxy": {
+    "roi_xyxy": [760, 500, 1120, 930],
+    "valid_changed_pixels": 31520,
+    "forward_flow_magnitude_px": {
+      "p50": 13.803597450256348,
+      "p75": 13.98785400390625,
+      "p90": 14.014167785644531,
+      "p95": 14.202459335327148,
+      "p99": 14.61909294128418
+    },
+    "forward_backward_consistency_error_px": {
+      "p50": 0.20311635732650757,
+      "p75": 1.141486406326294,
+      "p90": 3.203840732574463,
+      "p95": 5.275964260101318,
+      "p99": 9.8228178024292
+    },
+    "interpretation": "risk_proxy_only_not_video_model_validation"
+  },
+  "static_visual_review": {
+    "native_spec": "PASS",
+    "single_clean_frame": "PASS",
+    "identity_costume_set_camera_lighting_outside_edit": "PASS_EXACT_PIXEL_IDENTITY",
+    "hero_brush_bristle_geometry": "FAIL_RIGID_SOLID_WEDGE_NO_SOFT_GATHERED_BRISTLE",
+    "hand_wrist_state": "FAIL_COHERENT_TRANSLATION_BUT_UNNATURAL_CUTOUT_AND_CUFF_GHOST",
+    "tip_to_surface_gap": "FAIL_AMBIGUOUS_CONTACT_NO_CONTINUOUS_PAPER_TONED_AIR_BAND",
+    "local_patch_naturalness": "FAIL_DARK_GHOST_BAND_BLUR_AND_TEXTURE_DISCONTINUITY",
+    "static_interpolation_input_suitability": "FAIL_RISK_DOUBLE_EDGES_AND_FLOW_INCONSISTENCY_TAIL",
+    "actual_video_model_continuity": "NOT_VERIFIED"
+  },
+  "review_result": "FAIL_IMPLEMENTATION_REPAIR_REQUIRED",
+  "failure_classification": {
+    "primary": "FAIL_IMPLEMENTATION_LOCAL_COMPOSITING_ARTIFACTS",
+    "secondary": [
+      "FAIL_IMPLEMENTATION_PROP_GEOMETRY",
+      "FAIL_IMPLEMENTATION_ACTION_STATE_UNNATURAL"
+    ],
+    "contract_change_required": false,
+    "dependency_change_required": false,
+    "architecture_change_required": false
+  },
   "validation_boundary": {
-    "static_anchor_quality": "REVIEWED_FAIL",
-    "static_interpolation_proxy": "REVIEWED_FAIL_RISK",
-    "real_video_generation": "NOT_EXECUTED",
-    "real_temporal_continuity": "NOT_VERIFIED"
+    "prompt_contract": "DEFINITION_ONLY_NOT_RESULT_EVIDENCE",
+    "native_static_keyframe_review": "EXECUTED",
+    "static_interpolation_risk_proxy": "EXECUTED_NOT_VIDEO_OUTPUT",
+    "actual_provider_video_continuity": "NOT_VERIFIED"
+  },
+  "asset_disposition": {
+    "K2_attempt_02_status": "REJECTED_REVIEW_RETAINED_AS_EVIDENCE",
+    "delete_or_overwrite": false,
+    "canonical_change": 0,
+    "mapping_change": false,
+    "manifest_change": false,
+    "K3_authorized": false
+  },
+  "next_action": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_03_FULL_ROI_REGEN",
+  "resume_after_pass": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_03",
+  "unchanged": {
+    "canonical": 194,
+    "production_ready": 0,
+    "mapping_revision": 10,
+    "manifest_revision": 10,
+    "canonical_drive_refs": 194,
+    "ep01_ep02_boundary": true
+  },
+  "drive_registration": {
+    "folder": "1xY09ZvrjX14M09LEuVqVzBCgCi6ctc8b",
+    "review_script": "108o5a-qlrfZiIgtaLbPx-aHrHU89h7zt",
+    "review_sheet": "1eO2sbirdqlhk-5StZ_HGnVmx-4AsgyHk",
+    "hand_brush_compare": "1dV6pBj614henK8JOCRYAbzRcRgEvz0eL",
+    "tip_8x": "1N-_wX8PRJmbVbrbf6P51i8jDTUTAW9uY",
+    "patch_compare": "1ZEhSd22njvSmCOX3Z-87iR-fZJOtgiol",
+    "linear_blend_proxy": "1dX-o3bbWb8mwlLLfgA1xvF-9XUspHcHN",
+    "flow_error_heatmap": "1N_Niwmnv4MRFZLhS0_VtUUk0MkOAGR3t",
+    "changed_pixel_mask": "1fEVK51nL3soev3aVlswCuL9qQnKpTMDZ",
+    "diff_map": "1hc3tS8xBBLeS1hnqaXl5K1kLRMZ-_y3W",
+    "mechanical_receipt": "1XyF1XX9tnJn8qarTngX9dyvqHY5Ou9NV",
+    "review_report": "1qBJKeHGjIhxP7ual7LgZ6dhpwk1n7BUC",
+    "review_evidence_json": "19I51wZwbGDYDm-X1-lcV-cgDNb0xw7Zs",
+    "checksums": "1reqJov_AgrDPv5p-l_uaAO1JSmp9URAB",
+    "evidence_package": "1E4-W2aaJej19YLsy0a07xvy1R7ER2bnO"
+  },
+  "github_registration": {
+    "review_report_commit": "d95a92361f7eae45e29fa6a71d9a22c29d9a2f1c",
+    "review_report_blob": "0498b4a7c21b8d0deab7f8f22f72629970c2024a",
+    "review_evidence_json_commit": "PENDING_THIS_UPDATE",
+    "review_script_commit": "PENDING_UPDATE"
   }
 }
