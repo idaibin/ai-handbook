@@ -1,0 +1,144 @@
+schema: story-studio/ep01-writing-system-motion-anchor-contract-v1
+contract_id: BANCHAO-S1-EP01-WRITING-SYSTEM-MOTION-ANCHOR-v1
+task_identifier: TASK — Story Studio — 班超 S1 FINAL GATE
+task_key: story-studio/banchao/s1-final-gate
+created_at_utc: '2026-08-27T01:51:32Z'
+status: DESIGN_APPROVED_MEDIA_INTAKE_PARTIAL
+authority:
+  active_screenplay_drive_file_id: 1zj8EZnqR1DY-nvdPDSUPIMSZQLH1Zdzi
+  mapping_drive_file_id: 1U_pXUo1qD0D8rDELWvqUDUevpfoXClwa
+  mapping_revision: 10
+  manifest_drive_file_id: 1L-6SgE_3VINfxPuz6VQECJ_-pSDvY6WK
+  manifest_revision: 10
+  current_status_precondition: 17
+impact_decision:
+  decision: OPTION_A_KEEP_NARRATIVE_CANON
+  basis:
+  - 'Active screenplay explicitly defines: put brush down, pick it up again, finally do not resume writing.'
+  - F08-F10 can remain narrative/composition references but do not establish reliable physical interpolation states.
+  canonical_change: 0
+  canonical_after: 194
+  mapping_change: false
+  manifest_change: false
+  change_record_required: false
+  ep01_ep02_boundary_rerun_required: false
+  production_motion_anchor_eligibility:
+    EP01-F01: REFERENCE_ONLY_NOT_ACTION_LOCK
+    EP01-F02: REFERENCE_ONLY_NOT_ACTION_LOCK
+    EP01-F03: FALSE_SUBJECT_IDENTITY_AMBIGUITY
+    EP01-F04: REFERENCE_ONLY_NOT_ACTION_LOCK
+    EP01-F05: REFERENCE_ONLY_NOT_ACTION_LOCK
+    EP01-F06: FALSE_GAZE_HAND_STATE_NOT_SYNCHRONIZED
+    EP01-F07: FALSE_RETURNS_TO_ACTIVE_WRITING
+    EP01-F08: FALSE_INVALID_LAYDOWN_CONTACT_AND_NO_RELEASE
+    EP01-F09: FALSE_ACTIVE_WRITING_RESTART
+    EP01-F10: FALSE_FINAL_END_STATE_NOT_LOCKED
+asset_contracts:
+  hero_brush:
+    asset_id: PROP_HERO_BRUSH
+    asset_geometry:
+      one_fixed_construction: true
+      shaft: plain wood or bamboo appearance; continuous straight shaft
+      bristle: soft tapered hair tuft with visible fibre character and flexible convergence
+      joint: non-metallic transition; no modern ferrule appearance
+    hand_contact_points:
+      contact_zone: stable lower-middle shaft zone
+      grip_goal: vertical/oblique brush control, not modern pencil-like pinch at the extreme tip
+      historical_named_grip_claim: NOT_CLAIMED
+    failure_conditions:
+    - ring or loop on working end or tail
+    - hard plastic cone / marker / fountain-pen nib appearance
+    - metal ferrule
+    - shaft length or diameter morphing
+    - bristles fused into a rigid solid cone
+  writing_surface:
+    asset_id: PROP_WRITING_SURFACE
+    asset_geometry:
+      fixed_position: true
+      stable_plane: true
+      no unexplained paper or slip movement: true
+    text_policy:
+      video_generation: low-contrast nonsemantic ink marks only
+      readable_han_text: DETERMINISTIC_POST_COMPOSITE_ONLY
+      pseudo_text: FAIL
+  laydown_target:
+    asset_role: BRUSH_LAYDOWN_ZONE
+    implementation: clear dry zone on the existing low writing desk / approved set surface
+    dedicated_prop_id: null
+    PROP_BRUSH_REST_status: NOT_AUTHORIZED_NOT_VERIFIED
+    reason: The active screenplay and current canonical asset list do not include PROP_BRUSH_REST; a historical rest form must not be silently introduced.
+hand_choreography:
+  K1:
+    name: NORMAL_WRITING
+    start_state: brush tip touches writing surface; hand controls fixed shaft
+    end_state: writing slows; no geometry change
+  K2:
+    name: TIP_LEAVES_SURFACE
+    start_state: K1
+    action_path: wrist lifts slightly; tip separates vertically from the surface
+    end_state: tip visibly clear of surface; no new mark
+  K3:
+    name: HORIZONTAL_TRANSFER
+    start_state: K2
+    action_path: hand moves brush toward the approved laydown zone; tip remains suspended
+    end_state: shaft nearly horizontal above target; no contact yet
+  K4:
+    name: SHAFT_CONTACT_AND_RELEASE_START
+    start_state: K3
+    contact_target: BRUSH_LAYDOWN_ZONE
+    action_path: shaft settles on stable dry surface; fingers begin to open
+    release_condition: shaft is supported without rolling; tip does not touch writing surface
+    end_state: support established; partial finger separation
+  K5:
+    name: HAND_DETACHED_AND_DECISION
+    start_state: K4
+    action_path: fingers fully open; hand withdraws; protagonist looks toward the established outward/west direction
+    release_condition: no hand-brush contact remains
+    end_state: brush static, hand clear, writing does not resume, decision gaze locked
+clip_plan:
+  Clip_A:
+    duration_seconds: 3
+    states:
+    - K1
+    - K2
+    task: writing decelerates and stops
+  Clip_B:
+    duration_seconds: 4
+    states:
+    - K2
+    - K3
+    - K4
+    task: move brush and establish supported release
+  Clip_C:
+    duration_seconds: 3
+    states:
+    - K4
+    - K5
+    task: hand withdraws and gaze resolves
+acceptance_tests:
+- character identity stable
+- hand anatomy stable
+- hero brush construction stable
+- bristle form flexible and consistent
+- contact and release states physically explicit
+- writing surface stable
+- no readable pseudo-text
+- background motion bounded
+- no platform watermark in delivery derivative
+- native resolution recorded without relabeling
+- full video decode pass
+invalidates_on:
+- active screenplay beat change
+- PROP_HERO_BRUSH canonical geometry change
+- PROP_WRITING_SURFACE geometry change
+- approved set/desk geometry change
+media_intake:
+  current_drive_source_frames: 10/10 VERIFIED
+  gemini_10s_mp4: NOT_AVAILABLE_IN_CURRENT_SESSION
+  gemini_ffprobe_raw_output: NOT_AVAILABLE_IN_CURRENT_SESSION
+  gemini_1fps_review_sheet: NOT_AVAILABLE_IN_CURRENT_SESSION
+  generic_template_docx:
+    status: FILE_LIBRARY_TEXT_REVIEWED_REFERENCE_ONLY
+    file_library_id: file_00000000749081f58eae20b0fd8ed356
+    authority: false
+next_action_after_media_intake: EP01_WRITING_SYSTEM_K1_K5_STATIC_ANCHOR_GENERATION
