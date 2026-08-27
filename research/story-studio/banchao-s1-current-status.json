@@ -6,67 +6,43 @@
   "project_id": "banchao",
   "status_revision": 19,
   "task_revision": 24,
-  "as_of_utc": "2026-08-27T02:56:15Z",
+  "as_of_utc": "2026-08-27T04:01:16Z",
   "current_stage": "S1_VIDEO_CHAIN_TEST",
   "current_status": "gemini_media_evidence_registered_production_acceptance_fail",
+  "current_execution_unit": "REVISION_19_TASK_REGISTRY_SYNC_AND_READBACK_COMPLETED",
   "asset_policy": "canonical_storyboard_reference",
   "canonical": 194,
   "production_ready": 0,
   "next_action": "EP01_WRITING_SYSTEM_K1_K5_STATIC_ANCHOR_GENERATION",
   "resume_after_pass": "EP01_WRITING_SYSTEM_K1_K5_STATIC_ANCHOR_REVIEW",
-  "scope": {
-    "episodes": 24,
-    "logical_keyframes": 194,
-    "boundaries": 23
-  },
-  "impact_analysis": {
-    "decision": "OPTION_A_KEEP_NARRATIVE_CANON",
-    "production_motion_anchor_false": [
-      "EP01-F03",
-      "EP01-F06",
-      "EP01-F07",
-      "EP01-F08",
-      "EP01-F09",
-      "EP01-F10"
-    ],
-    "canonical_change": 0,
-    "mapping_change": false,
-    "manifest_change": false,
-    "change_record_required": false,
-    "boundary_rerun_required": false
-  },
+  "impact_decision": "OPTION_A_KEEP_NARRATIVE_CANON",
   "gemini_media_intake": {
     "status": "PASS_REGISTERED",
     "source_sha256": "951a15a405786fc056b84d5144c4d702191266dc42801a2211bf346e5cfe5d09",
-    "native_spec": "1280x720_24fps_240_frames_h264_high_aac_lc_48khz_stereo",
+    "video": "1280x720_24fps_240_frames_h264_high_10s",
+    "audio": "aac_lc_48khz_stereo",
     "full_decode": "PASS",
-    "physical_contact_and_release": "PASS_BOUNDED",
-    "corrected_prior_observations": [
-      "NO_SUPPORT_CONTACT_CONTRADICTED",
-      "NO_HAND_RELEASE_CONTRADICTED",
-      "NO_STATIC_END_STATE_CONTRADICTED"
-    ],
+    "motion_contact_release": "PASS_BOUNDED",
     "production_acceptance": "FAIL",
-    "failures": [
-      "UNAUTHORIZED_PROP_BRUSH_REST",
-      "CANON_IDENTITY_COSTUME_SET_DRIFT",
-      "HERO_BRUSH_GEOMETRY_FAIL",
-      "PSEUDO_TEXT",
-      "VISIBLE_PLATFORM_MARK",
-      "NATIVE_1280X720"
-    ],
     "drive_review_report": "1HRARJlqm8yZiv221XK26oI4Cb59Z-qT-",
     "drive_evidence_json": "1OCWZpIyyYNhEZr3bWR2qXkaxG_hIKXKA",
     "drive_package": "1HgolEWto1XQoxJ9Gqgrfti_0RWxlaiQI"
   },
-  "github": {
-    "media_review_commit": "c758282b6aafc90eca3fafedc19dc67fcfd82c03",
-    "media_evidence_commit": "a1563f722df664e4a40a3af2407038def1bbd31f",
-    "motion_contract_commit": "963481b23e23ccf8a8ea237968b94958df4d62fb"
+  "unchanged": {
+    "mapping_revision": 10,
+    "manifest_revision": 10,
+    "canonical_drive_refs": 194,
+    "ep01_ep02_boundary": true
   },
-  "preserved_video_chain_test": {
-    "deterministic_chain": "PASS",
-    "runway": "BLOCKED_ACCOUNT_LIMITATION_PAID_PLAN_REQUIRED"
+  "readback": {
+    "drive_media_evidence": "PASS",
+    "drive_current_status": "PASS_FINAL_WRITE_PENDING_FINAL_FETCH",
+    "task_revision_24_exec_0024": "PASS",
+    "registry_projects": "PASS",
+    "registry_tasks": "PASS_IN_PROGRESS",
+    "registry_sync": "PASS_PENDING_FINAL_MARKER",
+    "github_current_status": "PASS_FINAL_WRITE_PENDING_FINAL_FETCH"
   },
-  "sync_status": "PENDING_REVISION_19_READBACK"
+  "sync_status": "PASS_REVISION_19_READBACK",
+  "synced_at_utc": "2026-08-27T04:01:16Z"
 }
