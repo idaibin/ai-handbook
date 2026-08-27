@@ -3,14 +3,11 @@ package_id: BANCHAO-S1-EP01-K1-K5-STATIC-ANCHOR-PROMPT-v1
 task_identifier: TASK — Story Studio — 班超 S1 FINAL GATE
 task_key: story-studio/banchao/s1-final-gate
 created_at_utc: '2026-08-27T06:12:18Z'
-status: DESIGN_APPROVED_READY_FOR_STATIC_ANCHOR_GENERATION
-
+status: DESIGN_APPROVED_K1_SOURCE_REUSE_PASS_K2_AUTHORIZED
 purpose:
   role: textual_generation_control
-  statement: >-
-    This file controls image generation. It is not a storyboard frame, a motion anchor,
-    a contact sheet, a dashboard, or execution evidence.
-
+  statement: This file controls image generation. It is not a storyboard frame, a motion anchor, a contact sheet, a dashboard,
+    or execution evidence.
 artifact_boundary:
   canonical_storyboard_reference:
     role: narrative, identity, set, costume, lighting and composition reference
@@ -31,27 +28,40 @@ artifact_boundary:
   evidence:
     role: file identity, SHA-256, dimensions, review result and synchronization state
     embedded_in_image: false
-
 source_policy:
   mapping_drive_file_id: 1U_pXUo1qD0D8rDELWvqUDUevpfoXClwa
   mapping_revision: 10
   manifest_drive_file_id: 1L-6SgE_3VINfxPuz6VQECJ_-pSDvY6WK
   manifest_revision: 10
   preferred_individual_reference_frames:
-    - EP01-F01
-    - EP01-F02
-    - EP01-F04
-    - EP01-F05
+  - EP01-F01
+  - EP01-F02
+  - EP01-F04
+  - EP01-F05
   excluded_as_motion_anchor_input:
-    - EP01-F03
-    - EP01-F06
-    - EP01-F07
-    - EP01-F08
-    - EP01-F09
-    - EP01-F10
+  - EP01-F03
+  - EP01-F06
+  - EP01-F07
+  - EP01-F08
+  - EP01-F09
+  - EP01-F10
   contact_sheet_policy: REVIEW_ONLY_NEVER_DIRECT_MODEL_INPUT
   gemini_video_policy: FAILURE_EVIDENCE_AND_ACTION_PATH_REFERENCE_ONLY
-
+  sequence_base_frame: EP01-F01
+  K1_source_direct_reuse:
+    status: AUTHORIZED_AND_PASSED
+    mode: BYTE_IDENTICAL_ROLE_SEPARATED_SOURCE_REUSE
+    source_frame: EP01-F01
+    source_drive_file_id: 1sYNi4U-MbP-EjR_ggqamzKa196Ifq7Tc
+    source_sha256: ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473
+    output_filename: EP01-K1-NORMAL-WRITING.png
+    output_drive_file_id: 1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg
+    output_sha256: ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473
+    canonical_mutation: false
+    reason: EP01-F01 already satisfies K1 physical state and clean-frame checks; a new generative attempt would add identity
+      and prop risk without adding value.
+  direct_source_reuse_rule: Allowed only when the individual Canon source already satisfies the exact anchor state, native
+    specification and preflight gate; create a separate file identity and receipt without pixel mutation.
 output_contract:
   dimensions: 1920x1080
   aspect_ratio: '16:9'
@@ -66,146 +76,155 @@ output_contract:
     K4: EP01-K4-LAYDOWN-RELEASE-START.png
     K5: EP01-K5-HAND-DETACHED-DECISION.png
   forbidden_visual_content:
-    - dashboard
-    - infographic
-    - report page
-    - card layout
-    - table
-    - chart
-    - arrows
-    - labels or captions
-    - K1/K2/K3/K4/K5 text inside image
-    - filenames, prompts, metadata, revisions, PASS or FAIL markers
-    - collage, split panel, contact sheet or border
-    - watermark, platform mark or logo
-    - readable characters or pseudo-text
+  - dashboard
+  - infographic
+  - report page
+  - card layout
+  - table
+  - chart
+  - arrows
+  - labels or captions
+  - K1/K2/K3/K4/K5 text inside image
+  - filenames, prompts, metadata, revisions, PASS or FAIL markers
+  - collage, split panel, contact sheet or border
+  - watermark, platform mark or logo
+  - readable characters or pseudo-text
   post_generation_derivatives:
     contact_sheet: EP01-K1-K5-STATIC-ANCHOR-REVIEW-SHEET.jpg
     evidence_json: EP01-K1-K5-STATIC-ANCHOR-EVIDENCE.json
     rule: create only after five independent native PNG files exist
-
+  creation_policy: One anchor per creation action. K1 uses authorized byte-identical source reuse; K2-K5 require separate
+    generation/edit actions after prior-anchor approval.
+  K1_native_mode: SOURCE_NATIVE_BYTE_IDENTICAL_ROLE_SEPARATED_COPY
 continuity_strategy:
-  generation_order: [K1, K2, K3, K4, K5]
+  generation_order:
+  - K1_PASS
+  - K2
+  - K3
+  - K4
+  - K5
   approve_k1_before_k2_k5: true
-  K2_reference: [K1, EP01-F01, EP01-F02, EP01-F04]
-  K3_reference: [K2, K1]
-  K4_reference: [K3, K1]
-  K5_reference: [K4, K1]
+  K2_reference:
+  - K1
+  - EP01-F01
+  - EP01-F02
+  - EP01-F04
+  K3_reference:
+  - K2
+  - K1
+  K4_reference:
+  - K3
+  - K1
+  K5_reference:
+  - K4
+  - K1
   invariants:
-    - same protagonist identity, age state, hairstyle and clothing
-    - same camera position, focal length, crop and 180-degree side
-    - same desk, writing surface, prop positions and background geometry
-    - same light direction, time of day, palette and exposure
-    - same Hero Brush geometry and scale
+  - same protagonist identity, age state, hairstyle and clothing
+  - same camera position, focal length, crop and 180-degree side
+  - same desk, writing surface, prop positions and background geometry
+  - same light direction, time of day, palette and exposure
+  - same Hero Brush geometry and scale
   delta_rule: only the defined hand, brush and gaze state may change between anchors
   seed_policy: seed may assist reproducibility but must not be treated as identity proof
-
+  authorization_state:
+    K1: PASS_SOURCE_DIRECT_REUSE
+    K2: AUTHORIZED_NEXT
+    K3: NOT_AUTHORIZED_UNTIL_K2_PASS
+    K4: NOT_AUTHORIZED_UNTIL_K3_PASS
+    K5: NOT_AUTHORIZED_UNTIL_K4_PASS
 prompt_compilation:
   language: en
   assembly: shared_base_prompt + anchor.state_delta + shared_negative_prompt
-  shared_base_prompt: >-
-    A single clean cinematic historical frame in the approved EP01 Luoyang copying room.
-    Preserve the canonical Ban Chao identity, age state, high tied hair, deep indigo
-    cross-collar robe, the same low wooden writing desk, pale writing surface, shelf layout,
-    background scribes, left-window daylight, camera position, crop, lens character and
-    restrained cool-brown palette from the approved individual EP01 reference frames.
-    Show one fixed traditional Hero Brush with a plain continuous wood or bamboo shaft,
-    a non-metallic joint and soft tapered natural hair bristles with visible flexible fibres.
-    The writing surface stays fixed and shows only faint low-contrast nonsemantic ink traces.
-    The approved BRUSH_LAYDOWN_ZONE is a clear dry bare-wood area at the front-right edge
-    of the existing desk. It is part of the desk geometry, not a separate prop.
-    Output only the uninterrupted historical scene.
-  shared_negative_prompt: >-
-    dashboard, infographic, report, presentation slide, card layout, table, chart, arrows,
-    labels, captions, subtitles, filenames, prompt text, metadata, revisions, PASS or FAIL,
-    collage, split panels, contact sheet, borders, watermark, logo, platform mark, readable
-    Chinese characters, pseudo-text, modern objects, modern clothing, military armour,
-    separate brush rest, grooved brush holder, porcelain brush rest, new support prop,
-    metal ferrule, metal end cap, ring or loop on brush, marker, fountain-pen nib, hard
-    plastic cone, rigid fused bristles, duplicate brush, duplicate protagonist, identity drift,
-    costume drift, set drift, camera drift, changed lighting, extra fingers, missing fingers,
-    fused fingers, malformed joints, floating objects, melted props.
+  shared_base_prompt: A single clean cinematic historical frame in the approved EP01 Luoyang copying room. Preserve the canonical
+    Ban Chao identity, age state, high tied hair, deep indigo cross-collar robe, the same low wooden writing desk, pale writing
+    surface, shelf layout, background scribes, left-window daylight, camera position, crop, lens character and restrained
+    cool-brown palette from the approved individual EP01 reference frames. Show one fixed traditional Hero Brush with a plain
+    continuous wood or bamboo shaft, a non-metallic joint and soft tapered natural hair bristles with visible flexible fibres.
+    The writing surface stays fixed and shows only faint low-contrast nonsemantic ink traces. The approved BRUSH_LAYDOWN_ZONE
+    is the clear dry bare-wood strip along the front edge immediately below the writing surface and just left of the existing
+    long low wooden edge bar. It is part of the unchanged desk geometry, not a separate prop. Output only the uninterrupted
+    historical scene.
+  shared_negative_prompt: dashboard, infographic, report, presentation slide, card layout, table, chart, arrows, labels, captions,
+    subtitles, filenames, prompt text, metadata, revisions, PASS or FAIL, collage, split panels, contact sheet, borders, watermark,
+    logo, platform mark, readable Chinese characters, pseudo-text, modern objects, modern clothing, military armour, separate
+    brush rest, grooved brush holder, porcelain brush rest, new support prop, metal ferrule, metal end cap, ring or loop on
+    brush, marker, fountain-pen nib, hard plastic cone, rigid fused bristles, duplicate brush, duplicate protagonist, identity
+    drift, costume drift, set drift, camera drift, changed lighting, extra fingers, missing fingers, fused fingers, malformed
+    joints, floating objects, melted props.
   anchors:
     K1:
       name: NORMAL_WRITING
-      state_delta: >-
-        The right hand holds the Hero Brush near vertical in a natural brush-writing grip.
-        The soft bristle tip lightly contacts the writing surface and the final stroke is visibly
-        slowing to a stop. The wrist and fingers remain relaxed and anatomically natural.
-        The left hand rests beside the writing surface. No gaze change yet.
+      state_delta: The right hand holds the Hero Brush near vertical in a natural brush-writing grip. The soft bristle tip
+        lightly contacts the writing surface and the final stroke is visibly slowing to a stop. The wrist and fingers remain
+        relaxed and anatomically natural. The left hand rests beside the writing surface. No gaze change yet.
       physical_acceptance:
-        - tip contacts writing surface
-        - shaft remains near vertical
-        - no geometry change
-        - no new readable mark
+      - tip contacts writing surface
+      - shaft remains near vertical
+      - no geometry change
+      - no new readable mark
     K2:
       name: TIP_LEAVES_SURFACE
-      state_delta: >-
-        Writing has stopped. The wrist lifts slightly while the Hero Brush remains near vertical.
-        The soft bristle tip is clearly separated from the writing surface by a small visible gap.
-        No fresh mark appears. The hand still controls the same contact zone on the shaft.
+      state_delta: Writing has stopped. The wrist lifts slightly while the Hero Brush remains near vertical. The soft bristle
+        tip is clearly separated from the writing surface by a small visible gap. No fresh mark appears. The hand still controls
+        the same contact zone on the shaft.
       physical_acceptance:
-        - tip visibly clear of surface
-        - brush remains near vertical
-        - no paper movement
-        - no new mark
+      - tip visibly clear of surface
+      - brush remains near vertical
+      - no paper movement
+      - no new mark
     K3:
       name: HORIZONTAL_TRANSFER
-      state_delta: >-
-        The right hand moves the same Hero Brush laterally toward the approved front-right
-        BRUSH_LAYDOWN_ZONE. The shaft rotates toward near-horizontal. The bristle tip stays
-        suspended in air and touches neither paper, desk nor any object. The elbow and wrist
-        show a plausible continuous transfer path.
+      state_delta: The right hand moves the same Hero Brush laterally toward the approved front-edge BRUSH_LAYDOWN_ZONE immediately
+        below the writing surface and left of the existing long low wooden edge bar. The shaft rotates toward near-horizontal.
+        The bristle tip stays suspended in air and touches neither paper, desk nor any object. The elbow and wrist show a
+        plausible continuous transfer path.
       physical_acceptance:
-        - shaft near horizontal
-        - bristles fully suspended
-        - no contact with surface or props
-        - target direction matches K4 zone
+      - shaft near horizontal
+      - bristles fully suspended
+      - no contact with surface or props
+      - target direction matches K4 zone
     K4:
       name: SHAFT_CONTACT_AND_RELEASE_START
-      state_delta: >-
-        The shaft is placed directly onto the clear dry bare-wood BRUSH_LAYDOWN_ZONE at the
-        front-right edge of the existing desk. The shaft lies stable and still on the desk surface;
-        the soft bristles extend slightly beyond the desk edge so they touch neither paper nor wood.
-        The fingers begin to open while the hand remains close. Do not add any separate brush rest,
-        groove, holder, block or support object.
+      state_delta: Place the shaft directly onto the clear dry bare-wood strip along the front edge immediately below the
+        writing surface and just left of the existing long low wooden edge bar. Keep all existing set dressing fixed. The
+        shaft lies stable on bare desk wood; the soft bristles extend beyond the desk edge and touch neither paper nor wood.
+        The fingers begin to open while the hand remains close. Do not add, remove or move any independent brush rest, groove,
+        holder, block or support object.
       physical_acceptance:
-        - shaft contacts approved bare desk zone
-        - bristles remain untouched and suspended beyond edge
-        - fingers visibly begin release
-        - no independent support prop
+      - shaft contacts approved bare desk zone
+      - bristles remain untouched and suspended beyond edge
+      - fingers visibly begin release
+      - no independent support prop
     K5:
       name: HAND_DETACHED_AND_DECISION
-      state_delta: >-
-        The Hero Brush remains motionless in exactly the K4 laydown position. The right hand is
-        fully separated and withdrawn with no remaining contact. Ban Chao lifts his eyes and head
-        slightly toward the established outward direction, forming a restrained decision state.
-        Writing does not resume. Preserve all other scene geometry and lighting.
+      state_delta: The Hero Brush remains motionless in exactly the K4 laydown position. The right hand is fully separated
+        and withdrawn with no remaining contact. Ban Chao lifts his eyes and head slightly toward the established outward
+        direction, forming a restrained decision state. Writing does not resume. Preserve all other scene geometry and lighting.
       physical_acceptance:
-        - no hand-brush contact
-        - brush remains static in K4 position
-        - writing does not resume
-        - gaze change is restrained and readable
-
+      - no hand-brush contact
+      - brush remains static in K4 position
+      - writing does not resume
+      - gaze change is restrained and readable
 review_gate:
   gate_id: EP01_K1_K5_STATIC_ANCHOR_REVIEW
   per_anchor_checks:
-    - clean independent frame, not a document or derivative
-    - identity, costume, set, camera and lighting continuity
-    - five-finger anatomy and natural joints
-    - Hero Brush construction and scale
-    - defined contact or separation state
-    - BRUSH_LAYDOWN_ZONE compliance
-    - no readable or pseudo-text
-    - no watermark or platform mark
-    - exact native dimensions and RGB PNG decode
+  - clean independent scene file, not a document or review derivative
+  - identity, costume, set, camera and lighting continuity
+  - five-finger anatomy and natural joints
+  - Hero Brush construction and scale
+  - defined contact or separation state
+  - BRUSH_LAYDOWN_ZONE compliance
+  - no readable or pseudo-text
+  - no watermark or platform mark
+  - exact native dimensions and RGB PNG decode
   sequence_checks:
-    - K1 -> K2 -> K3 -> K4 -> K5 physical causality is complete
-    - no state reversal or unexplained prop relocation
-    - only approved action delta changes
+  - K1 -> K2 -> K3 -> K4 -> K5 physical causality is complete
+  - no state reversal or unexplained prop relocation
+  - only approved action delta changes
   failure_routing:
     visual_generation_error: REGENERATE_ONLY_FAILED_ANCHOR
     prompt_ambiguity: REVISE_THIS_PROMPT_PACKAGE
     canon_or_story_change: STOP_AND_CREATE_CHANGERECORD
-
-next_action_after_approval: EP01_WRITING_SYSTEM_K1_K5_STATIC_ANCHOR_GENERATION
+next_action_after_approval: EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_GENERATION
+prompt_package_revision: 2
+updated_at_utc: '2026-08-27T08:04:02Z'
