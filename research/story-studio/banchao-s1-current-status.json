@@ -6,7 +6,7 @@
   "project_id": "banchao",
   "status_revision": 19,
   "task_revision": 24,
-  "as_of_utc": "2026-08-27T04:01:16Z",
+  "as_of_utc": "2026-08-27T04:08:05Z",
   "current_stage": "S1_VIDEO_CHAIN_TEST",
   "current_status": "gemini_media_evidence_registered_production_acceptance_fail",
   "current_execution_unit": "REVISION_19_TASK_REGISTRY_SYNC_AND_READBACK_COMPLETED",
@@ -36,13 +36,13 @@
   },
   "readback": {
     "drive_media_evidence": "PASS",
-    "drive_current_status": "PASS_FINAL_WRITE_PENDING_FINAL_FETCH",
+    "drive_current_status": "PASS_EXACT_BYTES",
     "task_revision_24_exec_0024": "PASS",
     "registry_projects": "PASS",
     "registry_tasks": "PASS_IN_PROGRESS",
-    "registry_sync": "PASS_PENDING_FINAL_MARKER",
-    "github_current_status": "PASS_FINAL_WRITE_PENDING_FINAL_FETCH"
+    "registry_sync": "PASS_SYNCED",
+    "github_current_status": "PASS_FINAL_BLOB_READBACK"
   },
   "sync_status": "PASS_REVISION_19_READBACK",
-  "synced_at_utc": "2026-08-27T04:01:16Z"
+  "synced_at_utc": "2026-08-27T04:08:05Z"
 }
