@@ -82,8 +82,8 @@
     "evidence_json_blob": "3b53d3861fa087ad0455f286358bd2baa5f38eae",
     "derivation_script_commit": "7d4afef8f82b34c178009a4a96b86ab1ab63f8cb",
     "derivation_script_blob": "23488162b0a16233c5ee962c12355de870ea3843",
-    "current_status_markdown_commit": "1e9d0d326d1012e59be9633a26c6025fd857060c",
-    "current_status_markdown_blob": "57fc3ea5a1390068fcb13f37518dfb5d0a6fed5e"
+    "current_status_markdown_commit": "66082a78fc71e020b307a249cf2c796a6a539f39",
+    "current_status_markdown_blob": "2166d509df52ff89a7235f9c76ee7e60b5ee9c9e"
   },
   "unchanged": {
     "mapping_revision": 10,
@@ -98,17 +98,17 @@
     "drive_receipt": "PASS_EXACT_BYTES",
     "drive_evidence_json": "PASS_EXACT_BYTES",
     "drive_evidence_package": "PASS_EXACT_BYTES",
-    "drive_current_status_markdown": "PASS_FINAL_WRITE_PENDING_FETCH",
-    "drive_current_status_json": "PASS_FINAL_WRITE_PENDING_FETCH",
+    "drive_current_status_markdown": "PASS_EXACT_BYTES",
+    "drive_current_status_json": "PASS_EXACT_BYTES",
     "github_generation_report": "PASS_GIT_BLOB_READBACK",
     "github_evidence_json": "PASS_GIT_BLOB_READBACK",
     "github_derivation_script": "PASS_GIT_BLOB_READBACK",
     "github_current_status_markdown": "PASS_FINAL_BLOB_READBACK",
     "github_current_status_json": "PASS_FINAL_WRITE_PENDING_FETCH",
     "task_revision_28_exec_0028": "PASS",
-    "registry_projects": "PASS_PENDING_FINAL_MARKER",
-    "registry_tasks": "PASS_PENDING_FINAL_SOURCE_REF",
-    "registry_sync": "PASS_PENDING_FINAL_MARKER",
+    "registry_projects": "PASS",
+    "registry_tasks": "PASS_IN_PROGRESS",
+    "registry_sync": "PASS_SYNCED",
     "mapping_revision_10": "PASS_UNCHANGED",
     "manifest_revision_10": "PASS_UNCHANGED"
   },
