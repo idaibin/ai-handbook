@@ -1,0 +1,100 @@
+{
+  "schema": "story-studio/banchao-s1-ep01-gemini-media-evidence-rev19",
+  "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
+  "task_key": "story-studio/banchao/s1-final-gate",
+  "execution_unit": "REGISTER_GEMINI_10S_VIDEO_AND_REVIEW_MEDIA_EVIDENCE",
+  "performed_at_utc": "2026-08-27T02:56:15Z",
+  "precondition": {
+    "status_revision": 18,
+    "task_revision": 23,
+    "mapping_revision": 10,
+    "manifest_revision": 10,
+    "canonical": 194,
+    "production_ready": 0
+  },
+  "result": "PASS_MEDIA_EVIDENCE_REGISTERED_PRODUCTION_ACCEPTANCE_FAIL",
+  "source": {
+    "provider_declared_by_user": "Gemini",
+    "encoder_tag": "Google",
+    "sha256": "951a15a405786fc056b84d5144c4d702191266dc42801a2211bf346e5cfe5d09",
+    "drive_file_id": "1-HAifRlGJydN_crLPhLEkSZMznfcH2B8"
+  },
+  "media": {
+    "container_duration_seconds": 10.005,
+    "video": {
+      "codec": "h264",
+      "profile": "High",
+      "width": 1280,
+      "height": 720,
+      "pixel_format": "yuv420p",
+      "fps": 24,
+      "frames": 240,
+      "duration_seconds": 10.0
+    },
+    "audio": {
+      "codec": "aac",
+      "profile": "LC",
+      "sample_rate": 48000,
+      "channels": 2,
+      "layout": "stereo",
+      "duration_seconds": 10.005,
+      "non_silent_probe": true,
+      "semantic_audio_review": "NOT_PERFORMED"
+    },
+    "full_decode": "PASS"
+  },
+  "motion_review": {
+    "K1": "PASS_BOUNDED_0_TO_4P5_SECONDS",
+    "K2": "PASS_BOUNDED_4P5_TO_6P25_SECONDS_GAZE_BEGINS_EARLY",
+    "K3": "PASS_6P5_TO_7P5_SECONDS",
+    "K4": "PHYSICAL_CONTACT_PASS_CONTRACT_FAIL_UNAUTHORIZED_REST_7P75_TO_8P25_SECONDS",
+    "K5_release": "PASS_BOUNDED_HAND_DETACHED_BY_8P5_SECONDS",
+    "K5_decision": "PASS_BOUNDED_9_TO_10_SECONDS"
+  },
+  "corrected_prior_observations": {
+    "no_brush_rest_contact": "CONTRADICTED_BY_VIDEO_BYTES",
+    "no_hand_release": "CONTRADICTED_BY_VIDEO_BYTES",
+    "no_static_end_state": "CONTRADICTED_BY_VIDEO_BYTES"
+  },
+  "acceptance": {
+    "motion_path_visibility": "PASS_BOUNDED",
+    "physical_contact_and_release": "PASS_BOUNDED",
+    "canonical_identity_and_costume": "FAIL",
+    "canonical_set_continuity": "FAIL",
+    "hand_anatomy_sampled_frames": "PASS_BOUNDED",
+    "hero_brush_geometry": "FAIL",
+    "authorized_laydown_target": "FAIL_UNAUTHORIZED_PROP_BRUSH_REST",
+    "pseudo_text": "FAIL",
+    "background": "PASS_WITH_LIMITATION",
+    "visible_platform_mark": "FAIL",
+    "native_1920x1080": "FAIL_NATIVE_1280x720",
+    "production_clip": "FAIL",
+    "provider_capability_evidence": "PASS"
+  },
+  "drive": {
+    "folder": "1GCpdL1t93bdOGj6aVPVoAazUvspgOMCj",
+    "original_mp4": "1-HAifRlGJydN_crLPhLEkSZMznfcH2B8",
+    "ffprobe": "18NEst-YnhjvERJl_-yvk2IgC7qbZQf3t",
+    "decode_receipt": "1FJZlGqMsCElAAXRGitm39064CEb-A_A9",
+    "review_1fps": "1rubqDEtc5spdKYLPj46yUW96T3mTaZlg",
+    "review_quarter_second": "1ryolV1QODnjsNF8MvYI-je-2xDiilgYK",
+    "brush_placement_closeup": "1gpjSKMswOf-ymaP0eB4n7g82svY2Z9xn",
+    "identity_comparison": "1zBdU44pvjglsdYyqM75NIyhHkJqDaXPI",
+    "hand_brush_closeups": "1NjEmxR5MQnHR_SEoC3xGR_DNTcN5vWm2",
+    "user_canonical_contact_sheet": "1i81ncsLVDYyateZgj-GxnPgEDblRr-Jc",
+    "review_report": "1HRARJlqm8yZiv221XK26oI4Cb59Z-qT-",
+    "evidence_json": "1OCWZpIyyYNhEZr3bWR2qXkaxG_hIKXKA",
+    "media_summary": "1j2ctR1T5FjunkW0xetCkEEV4NjPk6qov",
+    "motion_contract": "1g8I8K5aC57brNEZAbOkTlfyGlLxk28WI",
+    "checksums": "1JGcfUX9L8jKQUas-zQQqE0Ns453CUpso",
+    "evidence_package": "1HgolEWto1XQoxJ9Gqgrfti_0RWxlaiQI"
+  },
+  "state_change": {
+    "media_intake": "PARTIAL_TO_COMPLETE",
+    "canonical_change": 0,
+    "mapping_change": false,
+    "manifest_change": false,
+    "production_ready_change": 0
+  },
+  "next_action": "EP01_WRITING_SYSTEM_K1_K5_STATIC_ANCHOR_GENERATION"
+}
