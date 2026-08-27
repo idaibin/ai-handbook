@@ -1,128 +1,158 @@
 # 班超 S1 — EP01 K2 静态动作锚点独立审核 Attempt 02（Revision 25）
 
 - `task_identifier`: `TASK — Story Studio — 班超 S1 FINAL GATE`
+- `task_key`: `story-studio/banchao/s1-final-gate`
 - `execution_unit`: `EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_02`
-- `reviewed_at_utc`: `2026-08-27T14:39:08Z`
+- `reviewed_at_utc`: `2026-08-27T15:10:35Z`
 - `precondition_status_revision`: `24`
 - `precondition_task_revision`: `30`
+- `review_scope`: `native_static_keyframes_and_static_interpolation_risk_proxy_only`
 
 ## 结论
 
 ```text
+K2 Review Attempt 02: FAIL_IMPLEMENTATION_REPAIR_REQUIRED
+K2 Attempt 02 disposition: REJECTED_REVIEW_RETAINED_AS_EVIDENCE
+K3: NOT_AUTHORIZED
+actual provider video continuity: NOT_VERIFIED
+canonical: 194 unchanged
+production_ready: 0 unchanged
+```
+
+Attempt 02 修复了 Attempt 01 的一个机械问题：手、手腕和毛笔不再是“只有笔尖发生变化”，而是形成约 14 px 的联合位移。但静态原生关键帧仍未通过五项验收，不能作为 K1→K3 的生产动作锚点。
+
+## 审核对象
+
+```text
+K1 source:
+EP01-K1-NORMAL-WRITING.png
+Drive ID: 1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg
+SHA-256: ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473
+
 K2 Attempt 02:
-FAIL_IMPLEMENTATION_REPAIR_REQUIRED
-
-asset disposition:
-REJECTED_REVIEW_RETAINED_AS_EVIDENCE
-
-K3:
-NOT_AUTHORIZED
-
-canonical:
-194 unchanged
-
-production_ready:
-0 unchanged
+EP01-K2-TIP-OFF-SURFACE-ATTEMPT-02.png
+Drive ID: 1VRvECfjBepkG3VnUPdhaPeuJxvXm2aO4
+SHA-256: de3bb9745effca071f25f14e3b50d8c4f7518b195021b8a8176987957dd7e84e
 ```
 
-审核对象是 K1 与 K2 Attempt 02 的原生关键帧，不是 Prompt。Prompt 与 Motion Contract 只提供验收语义，不能替代像素级结果证据。
+两张均为 `1920×1080 / RGB PNG`。
 
-## Verified passes
+## 已验证通过项
 
 ```text
-native 1920×1080 RGB PNG: PASS
+native specification: PASS
 single clean frame: PASS
-face changed pixels: 0
-outside changed bbox pixel identity: PASS
-hand/wrist region changed pixels: 24856
-byte identity of inputs: PASS
+face ROI changed pixels: 0
+identity / costume / set / camera / lighting outside changed bbox: PASS_EXACT_PIXEL_IDENTITY
+new readable text / watermark / dashboard content: PASS_NONE
 ```
 
-Attempt 02 已修复 Attempt 01 的“手腕区域完全不动”问题，但只是证明手腕区域发生变化，不证明动作自然。
-
-## Independent review failures
-
-### 1. 笔毫
-
-```text
-single soft gathered bristle tip:
-FAIL_RIGID_SOLID_WEDGE
-```
-
-分叉轮廓基本消除，但当前笔毫仍表现为刚性的实心三角尖锥，缺少柔软毛丝、聚锋和受力后的连续形变。
-
-### 2. 手部与手腕状态
-
-```text
-hand/wrist state naturalness:
-FAIL_TRANSLATED_PATCH_GHOSTING
-```
-
-手、袖口与毛笔被作为局部贴片共同上移。手腕下缘和袖口边界存在重影、拖影及局部涂抹，动作更像图层平移，不是自然的关节抬升。
-
-### 3. 离纸间隙
-
-```text
-tip-to-surface air gap:
-FAIL_AMBIGUOUS_OR_CONTACT
-```
-
-10×最近邻放大中，没有出现清晰、连续、可确认的纸面背景像素带。笔尖仍近似接触纸面，不能作为明确的 K2 终态。
-
-### 4. 局部修补自然度
-
-```text
-local patch naturalness:
-FAIL_BLUR_SMEAR_EDGE_HALO
-```
-
-原接触区和袖口下方出现低频模糊、纹理断裂和边缘光晕。该问题在全画面不显著，但在动作锚点与视频插值输入中会被放大。
-
-### 5. 插值适用性
-
-```text
-static interpolation input suitability:
-FAIL_RISK_DOUBLE_EDGE_AND_GHOSTING
-
-real video temporal continuity:
-NOT_VERIFIED
-```
-
-确定性 optical-flow proxy 在手指、袖口、笔杆和笔尖处产生双边缘及拖影。该 proxy 只用于输入风险筛查，不是视频模型结果；当前没有执行真实 Provider 视频生成，因此不能验证真实时间连续性。
-
-Mechanical proxy metrics:
+机械差异：
 
 ```text
 changed_bbox_xyxy: [884, 538, 1057, 900]
 changed_pixel_count: 31520
+hand_wrist_roi_xyxy: [760, 560, 1080, 825]
 hand_wrist_changed_pixel_count: 24856
 face_changed_pixel_count: 0
-flow_proxy_residual_mae: 7.1086
-flow_proxy_residual_p95: 48.0000
 ```
+
+## 五项审核结果
+
+### 1. 笔毫：FAIL
+
+```text
+hero_brush_bristle_geometry:
+FAIL_RIGID_SOLID_WEDGE_NO_SOFT_GATHERED_BRISTLE
+```
+
+分叉轮廓较 Attempt 01 减少，但笔毫仍呈实心、刚性三角锥形，缺少柔软毛丝、聚锋和自然受力形变。它仍可能诱发视频模型将笔毫解释为硬塑料锥或继续发生融化、分裂。
+
+### 2. 手部状态：FAIL
+
+```text
+hand_wrist_state:
+FAIL_COHERENT_TRANSLATION_BUT_UNNATURAL_CUTOUT_AND_CUFF_GHOST
+```
+
+非零手腕像素变化只证明局部区域移动。视觉上更接近“手—袖口—毛笔剪切块整体平移”，而不是自然的腕关节抬起、指节控制和笔杆受力变化。袖口下方存在明显暗色残影和涂抹边界。
+
+### 3. 离纸间隙：FAIL
+
+```text
+tip_to_surface_gap:
+FAIL_AMBIGUOUS_CONTACT_NO_CONTINUOUS_PAPER_TONED_AIR_BAND
+```
+
+在原生 100% 与 8× nearest-neighbour 放大下，最低笔锋与纸面之间未形成清晰、连续的纸面色背景带；视觉上仍近似接触或仅有不可可靠辨认的亚像素间隙。
+
+### 4. 局部修补自然度：FAIL
+
+```text
+local_patch_naturalness:
+FAIL_DARK_GHOST_BAND_BLUR_AND_TEXTURE_DISCONTINUITY
+```
+
+原接触区和袖口下方出现横向暗带、模糊区域及纹理连续性破坏。该区域不是自然纸面与自然阴影的连续变化。
+
+### 5. 插值适用性：FAIL_RISK
+
+```text
+static_interpolation_input_suitability:
+FAIL_RISK_DOUBLE_EDGES_AND_FLOW_INCONSISTENCY_TAIL
+```
+
+静态线性混合代理在手指、袖口、笔杆和笔锋周围形成明显双边缘/残影。Farneback 双向一致性代理显示：
+
+```text
+forward flow magnitude p50: 13.80 px
+forward flow magnitude p95: 14.20 px
+forward-backward consistency error p90: 3.20 px
+forward-backward consistency error p95: 5.28 px
+forward-backward consistency error p99: 9.82 px
+```
+
+这些结果只用于暴露输入对应关系风险，不是视频模型输出，也不能替代 Clip A 的真实逐帧验收。
+
+## 验证边界
+
+```text
+Prompt / Motion Contract:
+用于定义期望状态和失败条件，不是视觉通过证据。
+
+Static keyframe review:
+本轮已执行。
+
+Actual provider video interpolation:
+NOT_VERIFIED。
+```
+
+没有视频 Provider 时，本轮可以否决不合格静态输入，但不能证明合格关键帧一定能生成稳定视频。
 
 ## Failure classification
 
 ```text
-FAIL_IMPLEMENTATION_HAND_BRUSH_LOCAL_TRANSFORM_ARTIFACT
-FAIL_IMPLEMENTATION_HERO_BRUSH_GEOMETRY
-FAIL_IMPLEMENTATION_TIP_SURFACE_STATE_AMBIGUOUS
-FAIL_IMPLEMENTATION_INTERPOLATION_INPUT_RISK
+primary:
+FAIL_IMPLEMENTATION_LOCAL_COMPOSITING_ARTIFACTS
+
+secondary:
+FAIL_IMPLEMENTATION_PROP_GEOMETRY
+FAIL_IMPLEMENTATION_ACTION_STATE_UNNATURAL
 
 FAIL_CONTRACT: false
 FAIL_DEPENDENCY: false
 FAIL_ARCHITECTURE: false
 ```
 
-现有 Prompt 与 Motion Contract 不需要修改。失败属于 Attempt 02 的实现质量。
+现有 Motion Anchor Contract 无需修改；问题来自实现方式。
 
-## Asset disposition
+## 资产处理
 
 ```text
-Attempt 02 Drive file: unchanged
-status: REJECTED_REVIEW_RETAINED_AS_EVIDENCE
-delete: false
+Attempt 02 Drive file remains unchanged
+Attempt 02 status becomes REJECTED_REVIEW_RETAINED_AS_EVIDENCE
 silent overwrite: false
+delete: false
 canonical mutation: 0
 mapping mutation: false
 manifest mutation: false
@@ -135,16 +165,35 @@ K3 authorized: false
 EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_03_FULL_ROI_REGEN
 ```
 
-Attempt 03 约束：
+Attempt 03 必须：
 
-1. 不再对 Attempt 02 做继续平移或小块像素修补；
-2. 从 K1 重新生成/编辑完整的手—手腕—笔杆—笔毫 ROI；
-3. 显示真实的轻微腕部抬升与稳定握持点；
-4. 只保留一个连续、柔软、聚锋的笔毫；
-5. 笔尖与纸面之间必须存在清晰连续的背景带；
-6. 无袖口重影、边缘接缝、纸面模糊或克隆纹理；
-7. 人物、服装、场景、机位、光线及其他道具保持不变；
-8. 通过独立 Review Attempt 03 后才允许 K3。
+1. 不再使用整块 14 px 平移、局部克隆或仅笔尖位移；
+2. 对完整“手腕—手指—笔杆—笔毫—纸面接触区”执行一次统一重绘/重建；
+3. 保留同一人物、服装、机位、光线、纸面和道具布局；
+4. 形成单一、柔软、聚锋的毛笔笔毫；
+5. 在原生像素中形成明确、连续的空气间隙；
+6. 不出现袖口残影、补丁接缝、纹理断裂或重复边缘；
+7. 独立 Review Attempt 03 通过后才允许 K3。
+
+## Drive registration
+
+```text
+folder: 1xY09ZvrjX14M09LEuVqVzBCgCi6ctc8b
+review_script: 108o5a-qlrfZiIgtaLbPx-aHrHU89h7zt
+review_sheet: 1eO2sbirdqlhk-5StZ_HGnVmx-4AsgyHk
+hand_brush_compare: 1dV6pBj614henK8JOCRYAbzRcRgEvz0eL
+tip_8x: 1N-_wX8PRJmbVbrbf6P51i8jDTUTAW9uY
+patch_compare: 1ZEhSd22njvSmCOX3Z-87iR-fZJOtgiol
+linear_blend_proxy: 1dX-o3bbWb8mwlLLfgA1xvF-9XUspHcHN
+flow_error_heatmap: 1N_Niwmnv4MRFZLhS0_VtUUk0MkOAGR3t
+changed_pixel_mask: 1fEVK51nL3soev3aVlswCuL9qQnKpTMDZ
+diff_map: 1hc3tS8xBBLeS1hnqaXl5K1kLRMZ-_y3W
+mechanical_receipt: 1XyF1XX9tnJn8qarTngX9dyvqHY5Ou9NV
+review_report: 1qBJKeHGjIhxP7ual7LgZ6dhpwk1n7BUC
+review_evidence_json: 19I51wZwbGDYDm-X1-lcV-cgDNb0xw7Zs
+checksums: 1reqJov_AgrDPv5p-l_uaAO1JSmp9URAB
+evidence_package: 1E4-W2aaJej19YLsy0a07xvy1R7ER2bnO
+```
 
 ## Unchanged authority
 
