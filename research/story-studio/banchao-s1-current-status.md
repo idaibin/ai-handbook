@@ -11,7 +11,8 @@
 - `resume_after_pass`: `EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_02`
 - `canonical`: `194`
 - `production_ready`: `0`
-- `sync_status`: `PENDING_REVISION_23_READBACK`
+- `sync_status`: `PASS_REVISION_23_READBACK`
+- `synced_at_utc`: `2026-08-27T11:58:46Z`
 
 ## Revision 23 result
 
@@ -129,3 +130,20 @@ EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_02
 ```
 
 Attempt 02 must move a coherent hand–brush state and preserve one continuous soft bristle tip. K3 remains blocked until repaired K2 passes a new independent review.
+
+## Revision 23 readback
+
+```text
+Drive review report: PASS_EXACT_BYTES; SHA c437f3aa8b980d94d238e9f7548190f5afbb52fcc514d5f9c99d7a7d49d2b02a
+Drive review evidence JSON: PASS_EXACT_BYTES; SHA 441efe1afb6ea526c1f13d740dd46313b37da9b28aba1d648b11fc49b9e521eb
+Drive mechanical receipt: PASS_EXACT_BYTES; SHA b25a5081a6fd8b64f3df3a51416de59bbd20e4329fb18557ec154e3e498057e4
+Drive evidence package: PASS_EXACT_BYTES; SHA 8d04adee8d70d141bc8e44c008ed2aece5f638ca58df40d5f021778e1ef0ad58
+GitHub review report: PASS_GIT_BLOB_READBACK; blob 40d477cd87b903202583e543474a158a8b252931
+GitHub review evidence JSON: PASS_GIT_BLOB_READBACK; blob 100d3b2578c0aeb18b0e5caaf1bed760a6fbb4ca
+GitHub review script: PASS_GIT_BLOB_READBACK; blob 3e0acf6725b815c4c909ed624a1457f4aa43fbce
+Task revision 29 / EXEC-0029: PASS
+Registry Projects / Tasks / Sync: PASS
+mapping revision 10 / manifest revision 10: PASS_UNCHANGED
+canonical: 194 unchanged
+production_ready: 0 unchanged
+```
