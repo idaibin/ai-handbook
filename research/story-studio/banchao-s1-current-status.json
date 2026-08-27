@@ -95,9 +95,11 @@
   },
   "github_evidence": {
     "report_commit": "db056122153051cda68a0b3f53101ed77b95b36e",
+    "report_blob": "b10fae34e7fde6b6326d904c96919986576fc042",
     "evidence_json_commit": "ae2a33c6fc2d69313e6164fe5a98ee48bfc2e890",
-    "current_status_markdown_commit": "a1d47fae55ac40f252f65bde1c4cbddbec8c0c91",
-    "current_status_markdown_blob": "66280d76e93c70aa5967e2d8a3f6f9f70146e384"
+    "evidence_json_blob": "dcd021e4278e2212f5841f373dcf070308704bc5",
+    "current_status_markdown_commit": "14015860cd58623fedb52ca073e20f573b68bed9",
+    "current_status_markdown_blob": "482e7701cc727f4264a576ed4ebebe3aa614b8f3"
   },
   "validation_boundary": {
     "attempt03_native_generation": "NOT_EXECUTED_SUCCESSFULLY",
@@ -114,13 +116,21 @@
     "ep01_ep02_boundary": true
   },
   "readback": {
-    "drive_blocker_evidence": "PENDING_FINAL_READBACK",
-    "github_blocker_evidence": "PENDING_FINAL_READBACK",
-    "drive_current_status": "PENDING_WRITE_AND_READBACK",
-    "github_current_status_markdown": "PASS_WRITE_PENDING_FINAL_FETCH",
-    "github_current_status_json": "PENDING_FINAL_FETCH",
-    "task_revision_32_exec_0032": "PENDING_WRITE_AND_READBACK",
-    "registry": "PENDING_REVISION_26_SYNC"
+    "drive_blocker_report": "PASS_EXACT_BYTES",
+    "drive_blocker_report_sha256": "58d83205321156a2c306533fb032a7b2664f9ed6976b432ee7677771fd902ea6",
+    "drive_blocker_evidence_json": "PASS_EXACT_BYTES",
+    "drive_blocker_evidence_json_sha256": "3e992d5decf68c092f82a6216271066e013af7e010db769ebc3963fe5e4d5a80",
+    "drive_pending_current_status_markdown": "PASS_EXACT_BYTES",
+    "drive_pending_current_status_markdown_sha256": "ec81727ace3c056646f3dfb95702660a667372ec4773665153286f29af881ff8",
+    "drive_pending_current_status_json": "PASS_EXACT_BYTES",
+    "drive_pending_current_status_json_sha256": "610eb1477e85a09872ba8adcff1c6039b8c3b4d59a5766cd785b3924d3d1d5c3",
+    "github_blocker_evidence": "PASS_GIT_BLOB_READBACK",
+    "github_pending_current_status": "PASS_GIT_BLOB_READBACK",
+    "task_revision_32_exec_0032": "PASS",
+    "registry_pending_rows": "PASS",
+    "mapping_revision_10": "PASS_UNCHANGED",
+    "manifest_revision_10": "PASS_UNCHANGED"
   },
-  "sync_status": "PENDING_REVISION_26_READBACK"
+  "sync_status": "PASS_REVISION_26_READBACK",
+  "synced_at_utc": "2026-08-27T17:00:50Z"
 }
