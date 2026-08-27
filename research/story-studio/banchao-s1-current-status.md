@@ -103,10 +103,10 @@ EP01→EP02 boundary: unchanged
 ```text
 Drive K2 PNG / Receipt / Evidence JSON / Package: PASS_EXACT_BYTES
 GitHub generation report / evidence JSON / derivation script: PASS_GIT_BLOB_READBACK
-Drive Current Status final write: PASS_PENDING_FINAL_FETCH
-GitHub Current Status final write: PASS_PENDING_FINAL_FETCH
+Drive Current Status final readback: PASS_EXACT_BYTES
+GitHub Current Status final blob readback: PASS
 Task revision 28 / EXEC-0028: PASS
-Registry Projects / Tasks / Sync: PASS_PENDING_FINAL_MARKER
+Registry Projects / Tasks / Sync: PASS
 mapping revision 10: PASS_UNCHANGED
 manifest revision 10: PASS_UNCHANGED
 canonical: 194 unchanged
