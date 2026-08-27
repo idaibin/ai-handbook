@@ -10,7 +10,7 @@
 - `next_action`: `EP01_WRITING_SYSTEM_K1_K5_STATIC_ANCHOR_GENERATION`
 - `resume_after_pass`: `EP01_WRITING_SYSTEM_K1_K5_STATIC_ANCHOR_REVIEW`
 - `sync_status`: `PASS_REVISION_19_READBACK`
-- `synced_at_utc`: `2026-08-27T04:01:16Z`
+- `synced_at_utc`: `2026-08-27T04:08:05Z`
 
 ## Revision 19 result
 
@@ -53,12 +53,12 @@ GitHub contract update commit: 963481b23e23ccf8a8ea237968b94958df4d62fb
 
 ```text
 Drive media evidence and evidence package: PASS
-Drive Current Status final write: PASS_FINAL_WRITE_PENDING_FINAL_FETCH
+Drive Current Status exact byte readback: PASS
 Task revision 24 / EXEC-0024: PASS
 Registry Projects row: PASS
 Registry Tasks row: PASS in_progress
-Registry Sync row: PASS_PENDING_FINAL_MARKER
-GitHub Current Status final write: PASS_FINAL_WRITE_PENDING_FINAL_FETCH
+Registry Sync row: PASS synced
+GitHub Current Status blob readback: PASS
 mapping revision 10: PASS_UNCHANGED
 manifest revision 10: PASS_UNCHANGED
 canonical: 194 unchanged
