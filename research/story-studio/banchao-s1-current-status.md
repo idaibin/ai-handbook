@@ -11,7 +11,8 @@
 - `resume_after_pass`: `EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_03`
 - `canonical`: `194`
 - `production_ready`: `0`
-- `sync_status`: `PENDING_REVISION_27_READBACK`
+- `sync_status`: `PASS_REVISION_27_READBACK`
+- `synced_at_utc`: `2026-09-01T08:26:46Z`
 
 ## Revision 27 result
 
@@ -83,6 +84,32 @@ aa5fbb13e4fc910cabcf785a76fcfa72c2cfecff
 ```
 
 Revision 27 evidence report and machine-readable JSON are stored in Drive and projected to GitHub. Final Drive file IDs, GitHub commits, exact SHA readbacks and Registry rows are recorded in the Task document `[SYNC-REV27-FINAL]` to avoid self-referential status commits.
+
+## Revision 27 readback
+
+```text
+Drive evidence report: PASS_EXACT_BYTES
+file ID: 1g7WYV7jZVxyKf_pYUkjp8kQeOT9yNjp3
+SHA-256: 95f804cd0caa002b08fdee2f644815b3b5fe074441e8f142d63714c789bd8d27
+
+Drive evidence JSON: PASS_EXACT_BYTES
+file ID: 1lZCtS4JDJMNmEbg0kzhPk6cYSbaN8dOY
+SHA-256: 379075f9a45a865a7b4dfcfeba9641568313ad668e4e94bd512027c01b9095cd
+
+Drive pending Current Status Markdown: PASS_EXACT_BYTES
+SHA-256: 8121d9f13363664f1ed6d83ae87e8fa68e7c57a702218f576d06e648125f63a1
+
+Drive pending Current Status JSON: PASS_EXACT_BYTES
+SHA-256: 0cb53a0f56343a9aa4b47ed0be515c67f16c8869e99b26892674c2a2ab10628f
+
+GitHub report / evidence JSON: PASS_GIT_BLOB_READBACK
+GitHub pending Current Status Markdown / JSON: PASS_GIT_BLOB_READBACK
+GitHub pending main head: 8ef6501b7e4fec73fb450a128f30ea7a13e1880f
+Task header task_revision 33 / EXEC-0033: PASS
+Registry Tasks row 15 / Runs row 15 / Evidence row 31 / Sync row 69: PASS
+```
+
+Final Current Status commit identities and final Drive status checksums are recorded in `[SYNC-REV27-FINAL]` and Registry Sync row 69 to avoid self-referential status commits.
 
 ## Next action
 
