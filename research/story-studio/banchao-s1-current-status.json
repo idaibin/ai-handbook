@@ -4,109 +4,65 @@
   "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
   "task_key": "story-studio/banchao/s1-final-gate",
   "project_id": "banchao",
-  "status_revision": 28,
-  "task_revision": 34,
-  "as_of_utc": "2026-09-01T09:26:58Z",
+  "status_revision": 29,
+  "task_revision": 35,
+  "as_of_utc": "2026-09-01T10:05:00Z",
   "current_stage": "S1_VIDEO_CHAIN_TEST",
-  "current_status": "k2_attempt03_output_routing_failed_new_infographic",
-  "current_execution_unit": "EP01_WRITING_SYSTEM_K2_ATTEMPT03_OUTPUT_ROUTING_FAILURE_RECONCILIATION_COMPLETED",
-  "asset_policy": "canonical_storyboard_reference",
+  "current_status": "paused_task_intent_conflict_image_edit_route_circuit_open",
+  "current_execution_unit": "TASK_AND_MEDIA_EXECUTION_GUARD_HARDENING_COMPLETED",
   "canonical": 194,
   "production_ready": 0,
-  "next_action": "EP01_WRITING_SYSTEM_K2_ATTEMPT03_EXPLICIT_IMAGE_TARGET_BINDING_PROBE",
-  "resume_after_pass": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_03",
-  "trusted_input": {
-    "drive_file_id": "1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg",
-    "conversation_file_id": "file_000000009a14820981dd04f71abbc2f6",
-    "runtime_path": "/mnt/data/EP01-K1-NORMAL-WRITING.png",
-    "sha256": "ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473",
-    "status": "UNCHANGED_READABLE"
+  "next_action": "AWAIT_EXPLICIT_TASK_SWITCH_OR_VERIFIED_PROVIDER_BINDING_CHANGE",
+  "routing_guard": {
+    "active_task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
+    "latest_explicit_user_goal": "prevent repeated wrong routing and proceed with the Xiaohongshu historical-anime direction",
+    "intent_match": false,
+    "failure": "STOP_TASK_INTENT_CONFLICT",
+    "action": "STOP_BEFORE_TOOL"
   },
-  "k2_attempt_03_routing_output": {
-    "result": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING_NEW_INFOGRAPHIC",
-    "valid_native_output_created": false,
-    "conversation_file_id": "file_00000000bd0c81fb9c52ad601170cac2",
-    "runtime_path": "/mnt/data/a_detailed_infographic_slide_image_with_a_dense_la.png",
-    "drive_evidence_file_id": "1I1MCEqVH2eT6Fjv9G6HGnYRKTTS5gZtq",
-    "mime_type": "image/png",
-    "size_bytes": 2038795,
-    "width": 1536,
-    "height": 1024,
-    "mode": "RGB",
-    "sha256": "52d636887d6088a69e7d459cd88f3b923e8c6564ddc6d9123bcffaa91a565c76",
-    "visual_classification": "EP01_G07_PROJECT_STATUS_INFOGRAPHIC",
-    "generation_metadata": {
-      "gen_id": "71d63a9b-8229-41e7-8f4d-bf00a60a94c4",
-      "edit_op": null,
-      "parent_gen_id": null,
-      "seed": null
-    },
-    "active_asset": false,
-    "disposition": "REJECTED_OUTPUT_ROUTING_EVIDENCE"
+  "media_execution_guard": {
+    "operation_kind": "image_edit",
+    "source_asset_id": "EP01-K1-NORMAL-WRITING",
+    "source_file_id": "file_000000009a14820981dd04f71abbc2f6",
+    "source_sha256": "ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473",
+    "provider": "image_gen",
+    "binding_verified": false,
+    "failure_fingerprint": "image_gen+image_edit+OUTPUT_ROUTING_EDIT_TARGET_NOT_BOUND+EP01-K1",
+    "circuit_open": true,
+    "circuit_reason": "repeated unbound text-to-image infographic output",
+    "attempts_remaining": 0
   },
-  "failure_classification": {
-    "primary": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING_EDIT_TARGET_NOT_BOUND",
-    "secondary": "INFERENCE_CONTEXT_DOMINATED_TEXT_TO_IMAGE_ROUTING",
-    "contract_change_required": false,
-    "dependency_change_required": false,
-    "architecture_change_required": false
+  "provider_routes": {
+    "image_gen_k1_edit": "CIRCUIT_OPEN",
+    "adobe_private_source_input": "BLOCKED_PROVIDER_ACCESS"
   },
   "authorization_after": {
-    "explicit_image_target_binding_probe": "AUTHORIZED_NEXT_ONE_CALL_ONLY",
-    "K2_review_attempt_03": "NOT_AUTHORIZED_UNTIL_VALID_NATIVE_OUTPUT_EXISTS",
-    "K3": "NOT_AUTHORIZED_UNTIL_K2_REVIEW_ATTEMPT_03_PASS",
-    "K4": "NOT_AUTHORIZED",
-    "K5": "NOT_AUTHORIZED"
+    "bare_continue": "STOP_BEFORE_TOOL",
+    "prompt_only_retry": "NOT_AUTHORIZED",
+    "same_source_reupload_retry": "NOT_AUTHORIZED",
+    "exact_task_switch": "AUTHORIZED",
+    "new_provider_with_verified_explicit_binding": "REQUIRES_NEW_WORK_ORDER_AND_GUARD_REVIEW",
+    "K2_review_attempt_03": "NOT_AUTHORIZED_NO_VALID_OUTPUT",
+    "K3": "NOT_AUTHORIZED"
   },
-  "evidence": {
-    "drive_folder": "1i2npNgt2Pu_RyuSAzC82W2cQvOlDZ4st",
-    "drive_invalid_output": "1I1MCEqVH2eT6Fjv9G6HGnYRKTTS5gZtq",
-    "drive_report": "1-UfDxvECrZvHmFSX-M1eODa9Vtz7EPbs",
-    "drive_evidence_json": "1Hw3bA1-ILE1SzruPbVBDMaqkLtek81j_",
-    "github_report_commit": "664c27cd2a41a4da6b6fa5af57c71e7128c6dba2",
-    "github_evidence_json_commit": "71a706a0f0a1e471736ac16e61ba1ab503229735"
+  "policy_authority": {
+    "path": "research/story-studio/2026-08-21-assistant-owned-non-video-execution-policy.md",
+    "hardening_commit": "6a2fc0b3b3b7d0ff29f6f0bc143591d406bade0b"
   },
-  "validation_boundary": {
-    "attempt03_valid_native_generation": "NOT_CREATED",
-    "attempt03_independent_review": "NOT_STARTED",
-    "explicit_source_binding": "NOT_TESTED",
-    "real_video_generation": "NOT_EXECUTED",
-    "real_temporal_continuity": "NOT_VERIFIED"
-  },
+  "allowed_next_actions": [
+    "TASK — Story Studio — 班超 小红书历史动漫三集试播验证",
+    "verified provider capability change plus new Work Order"
+  ],
   "unchanged": {
-    "mapping_revision": 10,
-    "manifest_revision": 10,
-    "canonical_drive_refs": 194,
     "canonical": 194,
     "production_ready": 0,
+    "mapping_revision": 10,
+    "manifest_revision": 10,
     "k1_overwritten": false,
     "k2_attempt_01_overwritten": false,
     "k2_attempt_02_overwritten": false,
+    "invalid_infographics_active_asset": false,
     "k3_authorized": false
   },
-  "sync_status": "PASS_REVISION_28_READBACK",
-  "synced_at_utc": "2026-09-01T09:34:32Z",
-  "readback": {
-    "drive_invalid_output_exact_bytes": true,
-    "drive_invalid_output_sha256": "52d636887d6088a69e7d459cd88f3b923e8c6564ddc6d9123bcffaa91a565c76",
-    "drive_report_exact_bytes": true,
-    "drive_report_sha256": "5075d8668dcd225b4205bcbdf4e38a1d72820c42d415095e259a9911ddecb316",
-    "drive_evidence_json_exact_bytes": true,
-    "drive_evidence_json_sha256": "e1f13eb827448a98519cf322eea31a66c5917d31dc43fff85302daf5bb8014c9",
-    "drive_pending_status_markdown_exact_bytes": true,
-    "drive_pending_status_markdown_sha256": "c95e473ab2d8e49c86580a96400e90f54fec34686242d590f5cd785497491204",
-    "drive_pending_status_json_exact_bytes": true,
-    "drive_pending_status_json_sha256": "c7a1fc36a82f3dd5a5d3f0d0df0c73322c862f0c729319546238fe089ed9ae72",
-    "github_report_blob": "3c0e75746ec8dd2205a6456deea0218491fdf791",
-    "github_evidence_json_blob": "5e132b7300f96486f273e55e45766190682a8aba",
-    "github_pending_current_status_markdown_blob": "e4eee84f2729f030754d0bc060d2ce560dddf2e1",
-    "github_pending_current_status_json_blob": "934b7939f40c4e83a8cdd26a858a7dd16c888620",
-    "github_pending_main_head": "1cb539bacc6ce24d22ba9a3d5143104e1eadde09",
-    "task_revision_34_header": true,
-    "task_exec_0034": true,
-    "registry_tasks_row_15": true,
-    "registry_runs_row_16": true,
-    "registry_evidence_row_32": true,
-    "registry_sync_row_70": true
-  }
+  "sync_status": "PENDING_REVISION_29_READBACK"
 }
