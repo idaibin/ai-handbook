@@ -11,7 +11,8 @@
 - `resume_after_pass`: `EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_03`
 - `canonical`: `194`
 - `production_ready`: `0`
-- `sync_status`: `PENDING_REVISION_28_READBACK`
+- `sync_status`: `PASS_REVISION_28_READBACK`
+- `synced_at_utc`: `2026-09-01T09:34:32Z`
 
 ## Revision 28 result
 
@@ -118,3 +119,34 @@ EP01_WRITING_SYSTEM_K2_ATTEMPT03_EXPLICIT_IMAGE_TARGET_BINDING_PROBE
 ```
 
 Only one explicit-source probe is permitted. If it again returns a new image or the wrong scene, the current `image_gen` edit route must be marked unavailable and no further retries are authorized. K3 remains blocked.
+
+## Revision 28 readback
+
+```text
+Drive invalid output: PASS_EXACT_BYTES
+SHA-256: 52d636887d6088a69e7d459cd88f3b923e8c6564ddc6d9123bcffaa91a565c76
+
+Drive report: PASS_EXACT_BYTES
+SHA-256: 5075d8668dcd225b4205bcbdf4e38a1d72820c42d415095e259a9911ddecb316
+
+Drive evidence JSON: PASS_EXACT_BYTES
+SHA-256: e1f13eb827448a98519cf322eea31a66c5917d31dc43fff85302daf5bb8014c9
+
+Drive pending Current Status Markdown: PASS_EXACT_BYTES
+SHA-256: c95e473ab2d8e49c86580a96400e90f54fec34686242d590f5cd785497491204
+
+Drive pending Current Status JSON: PASS_EXACT_BYTES
+SHA-256: c7a1fc36a82f3dd5a5d3f0d0df0c73322c862f0c729319546238fe089ed9ae72
+
+GitHub report blob: 3c0e75746ec8dd2205a6456deea0218491fdf791
+GitHub evidence JSON blob: 5e132b7300f96486f273e55e45766190682a8aba
+GitHub pending Current Status Markdown blob: e4eee84f2729f030754d0bc060d2ce560dddf2e1
+GitHub pending Current Status JSON blob: 934b7939f40c4e83a8cdd26a858a7dd16c888620
+GitHub pending main head: 1cb539bacc6ce24d22ba9a3d5143104e1eadde09
+
+Task header task_revision 34: PASS
+Task EXEC-0034: PASS
+Registry Tasks row 15 / Runs row 16 / Evidence row 32 / Sync row 70: PASS
+```
+
+Final Current Status commit identities and final Drive status checksums are recorded in Task `[SYNC-REV28-FINAL]` and Registry Sync row 70 to avoid self-referential status commits.
