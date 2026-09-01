@@ -1,0 +1,60 @@
+schema_version: '1.0'
+task_identifier: TASK — Story Studio — 班超 小红书历史动漫三集试播验证
+task_id: story-studio-banchao-xhs-history-anime-3ep-pilot
+system_id: story-studio
+project_id: banchao
+registry_project_ref: story-studio
+work_item_id: xhs-history-anime-3ep-pilot
+task_key: story-studio/banchao/xhs-history-anime-3ep-pilot
+status: planned_preflight_complete
+active_binding: not_bound
+current_active_task_unchanged: TASK — Story Studio — 班超 S1 FINAL GATE
+canonical: false
+production_ready: false
+publication_ready: false
+source_basis:
+  github_repository: idaibin/ai-handbook
+  github_branch: main
+  github_commit_at_load: 108982238f2fa591668ff69321f1385795134716
+  drive_task_doc_id: 1CJEoK7VTDAOAMosU92NaDqruGKkaxuJOJ_kx8FiLVjw
+  drive_story_bible_id: 1F-DnHftRIN5F4-o2M0i10EZ_d2HjL-6P
+  drive_treatment_id: 1wlDngVD09q7sbL4IPtAKMiwaV-a9HP88
+  primary_source: 《后汉书》卷四十七《班超传》
+pilot_episodes:
+- id: P01
+  title: 佣书者
+  duration_seconds: 60-75
+  question: 成为班超以前，他是谁？
+- id: P02
+  title: 投笔之后
+  duration_seconds: 60-75
+  question: 投笔以后，他是否立刻改变命运？
+- id: P03
+  title: 礼变
+  duration_seconds: 75-90
+  question: 怎样从礼遇变化判断危险已经到来？
+validation_gates:
+- historical_and_script
+- visual_and_character
+- comprehension
+- production_sustainability
+- publication
+execution_record:
+  unit: PILOT_BASELINE_AND_FACT_BOUNDARY_PREFLIGHT
+  result: PASS_WITH_CORRECTIONS
+  completed_at: 2026-09-01T16:53:00+09:00
+  verified:
+  - source basis loaded
+  - scope isolated from current S1 task
+  - three-episode recut is feasible
+  - throw-brush-to-immediate-enlistment false causality corrected
+  - P03 terminology fixed to 吏士三十六人
+  - three posts are insufficient to prove a stable traffic lane
+  not_verified:
+  - visual distinctiveness
+  - cross-episode identity consistency
+  - audience comprehension
+  - actual production cost
+  - Xiaohongshu publication performance
+next_action: PILOT_EP01_SCRIPT_DRAFT_AND_FACT_CHECK
+updated_at: 2026-09-01T16:53:00+09:00
