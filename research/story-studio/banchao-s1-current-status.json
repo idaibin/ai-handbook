@@ -4,133 +4,102 @@
   "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
   "task_key": "story-studio/banchao/s1-final-gate",
   "project_id": "banchao",
-  "status_revision": 26,
-  "task_revision": 32,
-  "as_of_utc": "2026-08-27T16:47:14Z",
+  "status_revision": 27,
+  "task_revision": 33,
+  "as_of_utc": "2026-09-01T08:18:00Z",
   "current_stage": "S1_VIDEO_CHAIN_TEST",
-  "current_status": "k2_attempt03_blocked_image_edit_provider_access_and_output_routing",
-  "current_execution_unit": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_03_FULL_ROI_REGEN_BLOCKED",
+  "current_status": "k2_attempt03_trusted_image_input_staged_image_gen_adobe_blocked",
+  "current_execution_unit": "EP01_WRITING_SYSTEM_K2_ATTEMPT03_TRUSTED_IMAGE_EDIT_INPUT_ENABLEMENT_COMPLETED",
   "asset_policy": "canonical_storyboard_reference",
   "canonical": 194,
   "production_ready": 0,
-  "next_action": "EP01_WRITING_SYSTEM_K2_ATTEMPT03_TRUSTED_IMAGE_EDIT_INPUT_ENABLEMENT",
-  "resume_after_pass": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_03_FULL_ROI_REGEN",
-  "k1_static_anchor": {
-    "result": "PASS_BOUNDED_SOURCE_DIRECT_REUSE",
-    "output_drive_file_id": "1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg",
+  "next_action": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_03_FULL_ROI_REGEN",
+  "resume_after_pass": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_03",
+  "trusted_input": {
+    "drive_file_id": "1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg",
+    "title": "EP01-K1-NORMAL-WRITING.png",
+    "conversation_file_id": "file_000000009a14820981dd04f71abbc2f6",
+    "runtime_path": "/mnt/data/EP01-K1-NORMAL-WRITING.png",
+    "mime_type": "image/png",
+    "size_bytes": 2170841,
+    "width": 1920,
+    "height": 1080,
+    "mode": "RGB",
     "sha256": "ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473",
-    "production_ready": false
+    "identity_match_revision21": true,
+    "visual_target_readback": "PASS_HISTORICAL_WRITING_FRAME_NOT_INFOGRAPHIC"
   },
-  "k2_attempt_02": {
-    "drive_file_id": "1VRvECfjBepkG3VnUPdhaPeuJxvXm2aO4",
-    "sha256": "de3bb9745effca071f25f14e3b50d8c4f7518b195021b8a8176987957dd7e84e",
-    "review_result": "FAIL_IMPLEMENTATION_REPAIR_REQUIRED",
-    "disposition": "REJECTED_REVIEW_RETAINED_AS_EVIDENCE",
-    "production_ready": false,
-    "k3_authorized": false
-  },
-  "k2_attempt_03": {
-    "result": "BLOCKED_IMAGE_EDIT_PROVIDER_ACCESS_AND_OUTPUT_ROUTING",
-    "valid_output_created": false,
-    "attempts": [
-      {
-        "provider": "image_gen",
-        "scope": "full_frame_k1_edit",
-        "result": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING_INFOGRAPHIC",
-        "registered": false
-      },
-      {
-        "provider": "image_gen",
-        "scope": "explicit_k1_only_edit",
-        "result": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING_INFOGRAPHIC",
-        "registered": false
-      },
-      {
-        "provider": "image_gen",
-        "scope": "isolated_hand_brush_paper_roi_edit",
-        "result": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING_INFOGRAPHIC",
-        "registered": false
-      },
-      {
-        "provider": "adobe_firefly",
-        "scope": "asset_openai_file_upload",
-        "result": "FORBIDDEN_ASSET_NOT_ACCESSIBLE_TO_USER",
-        "registered": false
-      },
-      {
-        "provider": "adobe_firefly",
-        "scope": "image_instruct_edit_drive_url",
-        "result": "URL_DOMAIN_NOT_WHITELISTED_DRIVE_GOOGLE_COM",
-        "registered": false
-      }
-    ],
-    "failure_classification": {
-      "primary": "FAIL_RIGHTS_OR_PROVIDER_INPUT_ACCESS",
-      "secondary": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING",
-      "contract_change_required": false,
-      "dependency_change_required": false,
-      "architecture_change_required": false
+  "provider_routes": {
+    "google_drive_to_conversation": {
+      "result": "PASS",
+      "connector_file_uri_created": true,
+      "runtime_materialized": true
     },
-    "asset_disposition": {
-      "native_output": "NO_VALID_OUTPUT",
-      "invalid_outputs_registered": false,
-      "k1_overwritten": false,
-      "k2_attempt_01_overwritten": false,
-      "k2_attempt_02_overwritten": false,
-      "k3_authorized": false
+    "image_gen": {
+      "trusted_input_target": "STAGED_IN_CURRENT_CONVERSATION",
+      "edit_execution": "NOT_STARTED",
+      "output_routing": "NOT_VERIFIED_UNTIL_NEXT_UNIT"
+    },
+    "adobe": {
+      "result": "BLOCKED_PROVIDER_ACCESS",
+      "attempts": [
+        {
+          "tool": "asset_openai_file_upload",
+          "input": "conversation_file_id",
+          "result": "FORBIDDEN_ASSET_NOT_ACCESSIBLE_TO_USER"
+        },
+        {
+          "tool": "asset_openai_file_upload",
+          "input": "runtime_path",
+          "result": "FORBIDDEN_ASSET_NOT_ACCESSIBLE_TO_USER"
+        },
+        {
+          "tool": "asset_initialize_file_upload",
+          "input": "filename_and_size",
+          "result": "FORBIDDEN_ASSET_NOT_ACCESSIBLE_TO_USER"
+        }
+      ],
+      "asset_created": false,
+      "presigned_asset_url_created": false,
+      "edit_executed": false
     }
   },
+  "failure_classification": {
+    "adobe": "FAIL_RIGHTS_OR_PROVIDER_INPUT_ACCESS",
+    "image_gen": "NO_FAILURE_IN_THIS_UNIT",
+    "contract_change_required": false,
+    "dependency_change_required": false,
+    "architecture_change_required": false
+  },
   "authorization_after": {
-    "trusted_image_edit_input_enablement": "AUTHORIZED_NEXT",
-    "K2_repair_attempt_03_full_roi_regen": "BLOCKED_UNTIL_TRUSTED_INPUT_AVAILABLE",
-    "K2_review_attempt_03": "NOT_AUTHORIZED_UNTIL_VALID_REPAIR_OUTPUT_EXISTS",
+    "K2_repair_attempt_03_full_roi_regen": "AUTHORIZED_NEXT_WITH_CURRENT_CONVERSATION_K1",
+    "K2_review_attempt_03": "NOT_AUTHORIZED_UNTIL_VALID_NATIVE_OUTPUT_EXISTS",
     "K3": "NOT_AUTHORIZED_UNTIL_K2_REVIEW_ATTEMPT_03_PASS",
     "K4": "NOT_AUTHORIZED",
     "K5": "NOT_AUTHORIZED"
   },
-  "drive_evidence": {
-    "folder": "1oTnQQxYURKCWhIYxo8V1YgXhJ17IeQXE",
-    "report": "1WzBCeB6n0Rbb7yLUwM6OZh3JJACThjNa",
-    "evidence_json": "1yJiEH_vvh4x6ssp_vKr16YOxzmKtGPkM"
-  },
-  "github_evidence": {
-    "report_commit": "db056122153051cda68a0b3f53101ed77b95b36e",
-    "report_blob": "b10fae34e7fde6b6326d904c96919986576fc042",
-    "evidence_json_commit": "ae2a33c6fc2d69313e6164fe5a98ee48bfc2e890",
-    "evidence_json_blob": "dcd021e4278e2212f5841f373dcf070308704bc5",
-    "current_status_markdown_commit": "14015860cd58623fedb52ca073e20f573b68bed9",
-    "current_status_markdown_blob": "482e7701cc727f4264a576ed4ebebe3aa614b8f3"
-  },
   "validation_boundary": {
-    "attempt03_native_generation": "NOT_EXECUTED_SUCCESSFULLY",
+    "trusted_image_input_enablement": "PASS_FOR_IMAGE_GEN",
+    "adobe_provider_input": "FAIL_RIGHTS_OR_PROVIDER_INPUT_ACCESS",
+    "attempt03_native_generation": "NOT_STARTED",
+    "attempt03_output_routing": "NOT_VERIFIED",
     "attempt03_independent_review": "NOT_STARTED",
     "real_video_generation": "NOT_EXECUTED",
     "real_temporal_continuity": "NOT_VERIFIED"
   },
   "unchanged": {
+    "canonical": 194,
+    "production_ready": 0,
     "mapping_revision": 10,
     "manifest_revision": 10,
-    "canonical_drive_refs": 194,
-    "f08_f10_canonical_storyboard_reference": true,
-    "f03_f06_f10_production_motion_anchor_false": true,
-    "ep01_ep02_boundary": true
+    "k1_overwritten": false,
+    "k2_attempt_01_overwritten": false,
+    "k2_attempt_02_overwritten": false,
+    "k3_authorized": false
   },
-  "readback": {
-    "drive_blocker_report": "PASS_EXACT_BYTES",
-    "drive_blocker_report_sha256": "58d83205321156a2c306533fb032a7b2664f9ed6976b432ee7677771fd902ea6",
-    "drive_blocker_evidence_json": "PASS_EXACT_BYTES",
-    "drive_blocker_evidence_json_sha256": "3e992d5decf68c092f82a6216271066e013af7e010db769ebc3963fe5e4d5a80",
-    "drive_pending_current_status_markdown": "PASS_EXACT_BYTES",
-    "drive_pending_current_status_markdown_sha256": "ec81727ace3c056646f3dfb95702660a667372ec4773665153286f29af881ff8",
-    "drive_pending_current_status_json": "PASS_EXACT_BYTES",
-    "drive_pending_current_status_json_sha256": "610eb1477e85a09872ba8adcff1c6039b8c3b4d59a5766cd785b3924d3d1d5c3",
-    "github_blocker_evidence": "PASS_GIT_BLOB_READBACK",
-    "github_pending_current_status": "PASS_GIT_BLOB_READBACK",
-    "task_revision_32_exec_0032": "PASS",
-    "registry_pending_rows": "PASS",
-    "mapping_revision_10": "PASS_UNCHANGED",
-    "manifest_revision_10": "PASS_UNCHANGED"
-  },
-  "sync_status": "PASS_REVISION_26_READBACK",
-  "synced_at_utc": "2026-08-27T17:00:50Z"
+  "sync_status": "PENDING_REVISION_27_READBACK",
+  "github_evidence": {
+    "report_commit": "22f16080ad68ee092d6c4175ff0ee301795aaf3a",
+    "evidence_json_commit": "aa5fbb13e4fc910cabcf785a76fcfa72c2cfecff"
+  }
 }
