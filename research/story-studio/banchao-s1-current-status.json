@@ -64,5 +64,24 @@
     "invalid_infographics_active_asset": false,
     "k3_authorized": false
   },
-  "sync_status": "PENDING_REVISION_29_READBACK"
+  "sync_status": "PASS_REVISION_29_READBACK",
+  "synced_at_utc": "2026-09-01T10:20:00Z",
+  "readback": {
+    "policy_github_blob": "06e50d6aa79577c5cbf7c50e25f44c16b1b28f99",
+    "policy_hardening_commit": "6a2fc0b3b3b7d0ff29f6f0bc143591d406bade0b",
+    "drive_pending_status_markdown_exact_bytes": true,
+    "drive_pending_status_markdown_sha256": "b57c61387902161826c4cead37105c9005a4e1674da2020593724cca7c58925c",
+    "drive_pending_status_json_exact_bytes": true,
+    "drive_pending_status_json_sha256": "190f2f007ca4fdc0c9f5e34acb41ce6a68eb3e93122a7240c15c372f6863a7a4",
+    "github_pending_status_markdown_blob": "0f3c4a1d08d36a3917c966d75c71dd78b3e15f0b",
+    "github_pending_status_json_blob": "41281975bb8cd8318336f6f81c4306312cba9e1d",
+    "task_revision_35_header": true,
+    "task_exec_0035": true,
+    "historical_revision_28_restored": true,
+    "registry_tasks_row_15": true,
+    "registry_runs_row_17": true,
+    "registry_evidence_row_33": true,
+    "registry_sync_row_71": true,
+    "media_tools_called_during_hardening": 0
+  }
 }
