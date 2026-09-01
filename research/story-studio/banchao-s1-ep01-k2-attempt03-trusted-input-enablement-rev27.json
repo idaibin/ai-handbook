@@ -1,0 +1,78 @@
+{
+  "schema": "story-studio/k2-attempt03-trusted-image-input-enablement-v1",
+  "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
+  "task_key": "story-studio/banchao/s1-final-gate",
+  "status_revision": 27,
+  "task_revision": 33,
+  "execution_unit": "EP01_WRITING_SYSTEM_K2_ATTEMPT03_TRUSTED_IMAGE_EDIT_INPUT_ENABLEMENT",
+  "executed_at_utc": "2026-09-01T08:18:00Z",
+  "result": "PASS_IMAGE_GEN_INPUT_STAGED_ADOBE_STILL_BLOCKED",
+  "input": {
+    "drive_file_id": "1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg",
+    "title": "EP01-K1-NORMAL-WRITING.png",
+    "conversation_file_id": "file_000000009a14820981dd04f71abbc2f6",
+    "runtime_path": "/mnt/data/EP01-K1-NORMAL-WRITING.png",
+    "mime_type": "image/png",
+    "size_bytes": 2170841,
+    "width": 1920,
+    "height": 1080,
+    "mode": "RGB",
+    "sha256": "ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473",
+    "identity_match_revision21": true,
+    "visual_target_readback": "PASS_HISTORICAL_WRITING_FRAME_NOT_INFOGRAPHIC"
+  },
+  "routes": {
+    "google_drive_to_conversation": {
+      "result": "PASS",
+      "connector_file_uri_created": true,
+      "runtime_materialized": true
+    },
+    "image_gen": {
+      "trusted_input_target": "STAGED_IN_CURRENT_CONVERSATION",
+      "edit_execution": "NOT_STARTED",
+      "output_routing": "NOT_VERIFIED_UNTIL_NEXT_UNIT"
+    },
+    "adobe": {
+      "result": "BLOCKED_PROVIDER_ACCESS",
+      "attempts": [
+        {
+          "tool": "asset_openai_file_upload",
+          "input": "conversation_file_id",
+          "result": "FORBIDDEN_ASSET_NOT_ACCESSIBLE_TO_USER"
+        },
+        {
+          "tool": "asset_openai_file_upload",
+          "input": "runtime_path",
+          "result": "FORBIDDEN_ASSET_NOT_ACCESSIBLE_TO_USER"
+        },
+        {
+          "tool": "asset_initialize_file_upload",
+          "input": "filename_and_size",
+          "result": "FORBIDDEN_ASSET_NOT_ACCESSIBLE_TO_USER"
+        }
+      ],
+      "asset_created": false,
+      "presigned_asset_url_created": false,
+      "edit_executed": false
+    }
+  },
+  "failure_classification": {
+    "adobe": "FAIL_RIGHTS_OR_PROVIDER_INPUT_ACCESS",
+    "image_gen": "NO_FAILURE_IN_THIS_UNIT",
+    "contract_change_required": false,
+    "dependency_change_required": false,
+    "architecture_change_required": false
+  },
+  "unchanged": {
+    "canonical": 194,
+    "production_ready": 0,
+    "mapping_revision": 10,
+    "manifest_revision": 10,
+    "k1_overwritten": false,
+    "k2_attempt_01_overwritten": false,
+    "k2_attempt_02_overwritten": false,
+    "k3_authorized": false
+  },
+  "next_action": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_03_FULL_ROI_REGEN",
+  "resume_after_pass": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_03"
+}
