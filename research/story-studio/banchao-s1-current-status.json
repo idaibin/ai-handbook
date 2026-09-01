@@ -4,135 +4,85 @@
   "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
   "task_key": "story-studio/banchao/s1-final-gate",
   "project_id": "banchao",
-  "status_revision": 27,
-  "task_revision": 33,
-  "as_of_utc": "2026-09-01T08:18:00Z",
+  "status_revision": 28,
+  "task_revision": 34,
+  "as_of_utc": "2026-09-01T09:26:58Z",
   "current_stage": "S1_VIDEO_CHAIN_TEST",
-  "current_status": "k2_attempt03_trusted_image_input_staged_image_gen_adobe_blocked",
-  "current_execution_unit": "EP01_WRITING_SYSTEM_K2_ATTEMPT03_TRUSTED_IMAGE_EDIT_INPUT_ENABLEMENT_COMPLETED",
+  "current_status": "k2_attempt03_output_routing_failed_new_infographic",
+  "current_execution_unit": "EP01_WRITING_SYSTEM_K2_ATTEMPT03_OUTPUT_ROUTING_FAILURE_RECONCILIATION_COMPLETED",
   "asset_policy": "canonical_storyboard_reference",
   "canonical": 194,
   "production_ready": 0,
-  "next_action": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REPAIR_ATTEMPT_03_FULL_ROI_REGEN",
+  "next_action": "EP01_WRITING_SYSTEM_K2_ATTEMPT03_EXPLICIT_IMAGE_TARGET_BINDING_PROBE",
   "resume_after_pass": "EP01_WRITING_SYSTEM_K2_STATIC_ANCHOR_REVIEW_ATTEMPT_03",
   "trusted_input": {
     "drive_file_id": "1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg",
-    "title": "EP01-K1-NORMAL-WRITING.png",
     "conversation_file_id": "file_000000009a14820981dd04f71abbc2f6",
     "runtime_path": "/mnt/data/EP01-K1-NORMAL-WRITING.png",
-    "mime_type": "image/png",
-    "size_bytes": 2170841,
-    "width": 1920,
-    "height": 1080,
-    "mode": "RGB",
     "sha256": "ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473",
-    "identity_match_revision21": true,
-    "visual_target_readback": "PASS_HISTORICAL_WRITING_FRAME_NOT_INFOGRAPHIC"
+    "status": "UNCHANGED_READABLE"
   },
-  "provider_routes": {
-    "google_drive_to_conversation": {
-      "result": "PASS",
-      "connector_file_uri_created": true,
-      "runtime_materialized": true
+  "k2_attempt_03_routing_output": {
+    "result": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING_NEW_INFOGRAPHIC",
+    "valid_native_output_created": false,
+    "conversation_file_id": "file_00000000bd0c81fb9c52ad601170cac2",
+    "runtime_path": "/mnt/data/a_detailed_infographic_slide_image_with_a_dense_la.png",
+    "drive_evidence_file_id": "1I1MCEqVH2eT6Fjv9G6HGnYRKTTS5gZtq",
+    "mime_type": "image/png",
+    "size_bytes": 2038795,
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "sha256": "52d636887d6088a69e7d459cd88f3b923e8c6564ddc6d9123bcffaa91a565c76",
+    "visual_classification": "EP01_G07_PROJECT_STATUS_INFOGRAPHIC",
+    "generation_metadata": {
+      "gen_id": "71d63a9b-8229-41e7-8f4d-bf00a60a94c4",
+      "edit_op": null,
+      "parent_gen_id": null,
+      "seed": null
     },
-    "image_gen": {
-      "trusted_input_target": "STAGED_IN_CURRENT_CONVERSATION",
-      "edit_execution": "NOT_STARTED",
-      "output_routing": "NOT_VERIFIED_UNTIL_NEXT_UNIT"
-    },
-    "adobe": {
-      "result": "BLOCKED_PROVIDER_ACCESS",
-      "attempts": [
-        {
-          "tool": "asset_openai_file_upload",
-          "input": "conversation_file_id",
-          "result": "FORBIDDEN_ASSET_NOT_ACCESSIBLE_TO_USER"
-        },
-        {
-          "tool": "asset_openai_file_upload",
-          "input": "runtime_path",
-          "result": "FORBIDDEN_ASSET_NOT_ACCESSIBLE_TO_USER"
-        },
-        {
-          "tool": "asset_initialize_file_upload",
-          "input": "filename_and_size",
-          "result": "FORBIDDEN_ASSET_NOT_ACCESSIBLE_TO_USER"
-        }
-      ],
-      "asset_created": false,
-      "presigned_asset_url_created": false,
-      "edit_executed": false
-    }
+    "active_asset": false,
+    "disposition": "REJECTED_OUTPUT_ROUTING_EVIDENCE"
   },
   "failure_classification": {
-    "adobe": "FAIL_RIGHTS_OR_PROVIDER_INPUT_ACCESS",
-    "image_gen": "NO_FAILURE_IN_THIS_UNIT",
+    "primary": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING_EDIT_TARGET_NOT_BOUND",
+    "secondary": "INFERENCE_CONTEXT_DOMINATED_TEXT_TO_IMAGE_ROUTING",
     "contract_change_required": false,
     "dependency_change_required": false,
     "architecture_change_required": false
   },
   "authorization_after": {
-    "K2_repair_attempt_03_full_roi_regen": "AUTHORIZED_NEXT_WITH_CURRENT_CONVERSATION_K1",
+    "explicit_image_target_binding_probe": "AUTHORIZED_NEXT_ONE_CALL_ONLY",
     "K2_review_attempt_03": "NOT_AUTHORIZED_UNTIL_VALID_NATIVE_OUTPUT_EXISTS",
     "K3": "NOT_AUTHORIZED_UNTIL_K2_REVIEW_ATTEMPT_03_PASS",
     "K4": "NOT_AUTHORIZED",
     "K5": "NOT_AUTHORIZED"
   },
+  "evidence": {
+    "drive_folder": "1i2npNgt2Pu_RyuSAzC82W2cQvOlDZ4st",
+    "drive_invalid_output": "1I1MCEqVH2eT6Fjv9G6HGnYRKTTS5gZtq",
+    "drive_report": "1-UfDxvECrZvHmFSX-M1eODa9Vtz7EPbs",
+    "drive_evidence_json": "1Hw3bA1-ILE1SzruPbVBDMaqkLtek81j_",
+    "github_report_commit": "664c27cd2a41a4da6b6fa5af57c71e7128c6dba2",
+    "github_evidence_json_commit": "71a706a0f0a1e471736ac16e61ba1ab503229735"
+  },
   "validation_boundary": {
-    "trusted_image_input_enablement": "PASS_FOR_IMAGE_GEN",
-    "adobe_provider_input": "FAIL_RIGHTS_OR_PROVIDER_INPUT_ACCESS",
-    "attempt03_native_generation": "NOT_STARTED",
-    "attempt03_output_routing": "NOT_VERIFIED",
+    "attempt03_valid_native_generation": "NOT_CREATED",
     "attempt03_independent_review": "NOT_STARTED",
+    "explicit_source_binding": "NOT_TESTED",
     "real_video_generation": "NOT_EXECUTED",
     "real_temporal_continuity": "NOT_VERIFIED"
   },
   "unchanged": {
-    "canonical": 194,
-    "production_ready": 0,
     "mapping_revision": 10,
     "manifest_revision": 10,
+    "canonical_drive_refs": 194,
+    "canonical": 194,
+    "production_ready": 0,
     "k1_overwritten": false,
     "k2_attempt_01_overwritten": false,
     "k2_attempt_02_overwritten": false,
     "k3_authorized": false
   },
-  "sync_status": "PASS_REVISION_27_READBACK",
-  "github_evidence": {
-    "report_commit": "22f16080ad68ee092d6c4175ff0ee301795aaf3a",
-    "evidence_json_commit": "aa5fbb13e4fc910cabcf785a76fcfa72c2cfecff",
-    "report_blob": "65466b584e4f3ff1de7261346547ab34e616395f",
-    "evidence_json_blob": "99467532491984a02cbe773682a13d34599c4291",
-    "pending_current_status_markdown_commit": "4e84d70716657cdde00e005189c96535d7c7fd84",
-    "pending_current_status_markdown_blob": "f0b868ff016fdc23a4a1456ec81c4f686eb24475",
-    "pending_current_status_json_commit": "8ef6501b7e4fec73fb450a128f30ea7a13e1880f",
-    "pending_current_status_json_blob": "aafecef0b8fe0acf40aa5cc4bd6009b5c8f6125e"
-  },
-  "synced_at_utc": "2026-09-01T08:26:46Z",
-  "drive_evidence": {
-    "folder": "1RXwxriPdBdZQxXGELWA5A6UuKzmGAWky",
-    "report": "1g7WYV7jZVxyKf_pYUkjp8kQeOT9yNjp3",
-    "report_sha256": "95f804cd0caa002b08fdee2f644815b3b5fe074441e8f142d63714c789bd8d27",
-    "evidence_json": "1lZCtS4JDJMNmEbg0kzhPk6cYSbaN8dOY",
-    "evidence_json_sha256": "379075f9a45a865a7b4dfcfeba9641568313ad668e4e94bd512027c01b9095cd"
-  },
-  "readback": {
-    "drive_report_exact_bytes": true,
-    "drive_evidence_json_exact_bytes": true,
-    "drive_pending_status_markdown_exact_bytes": true,
-    "drive_pending_status_markdown_sha256": "8121d9f13363664f1ed6d83ae87e8fa68e7c57a702218f576d06e648125f63a1",
-    "drive_pending_status_json_exact_bytes": true,
-    "drive_pending_status_json_sha256": "0cb53a0f56343a9aa4b47ed0be515c67f16c8869e99b26892674c2a2ab10628f",
-    "github_report_blob": true,
-    "github_evidence_json_blob": true,
-    "github_pending_current_status_markdown_blob": true,
-    "github_pending_current_status_json_blob": true,
-    "github_main_head": "8ef6501b7e4fec73fb450a128f30ea7a13e1880f",
-    "task_revision_33_header": true,
-    "task_exec_0033": true,
-    "registry_tasks_row_15": true,
-    "registry_runs_row_15": true,
-    "registry_evidence_row_31": true,
-    "registry_sync_row_69": true
-  }
+  "sync_status": "PENDING_REVISION_28_READBACK"
 }
