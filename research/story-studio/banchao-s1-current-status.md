@@ -10,7 +10,8 @@
 - `next_action`: `AWAIT_EXPLICIT_TASK_SWITCH_OR_VERIFIED_PROVIDER_BINDING_CHANGE`
 - `canonical`: `194`
 - `production_ready`: `0`
-- `sync_status`: `PENDING_REVISION_29_READBACK`
+- `sync_status`: `PASS_REVISION_29_READBACK`
+- `synced_at_utc`: `2026-09-01T10:20:00Z`
 
 ## Revision 29 decision
 
@@ -81,4 +82,26 @@ K1: unchanged
 K2 Attempt 01/02: rejected evidence unchanged
 invalid infographic outputs: evidence-only
 K3 authorized: false
+```
+
+## Revision 29 readback
+
+```text
+Policy GitHub blob: 06e50d6aa79577c5cbf7c50e25f44c16b1b28f99
+Policy hardening commit: 6a2fc0b3b3b7d0ff29f6f0bc143591d406bade0b
+
+Drive pending status Markdown: PASS_EXACT_BYTES
+SHA-256: b57c61387902161826c4cead37105c9005a4e1674da2020593724cca7c58925c
+
+Drive pending status JSON: PASS_EXACT_BYTES
+SHA-256: 190f2f007ca4fdc0c9f5e34acb41ce6a68eb3e93122a7240c15c372f6863a7a4
+
+GitHub pending status Markdown blob: 0f3c4a1d08d36a3917c966d75c71dd78b3e15f0b
+GitHub pending status JSON blob: 41281975bb8cd8318336f6f81c4306312cba9e1d
+
+Task header task_revision 35: PASS
+Task EXEC-0035: PASS
+Historical revision 28 records restored after targeted replacement: PASS
+Registry Tasks row 15 / Runs row 17 / Evidence row 33 / Sync row 71: PASS
+Media tools called during hardening: 0
 ```
