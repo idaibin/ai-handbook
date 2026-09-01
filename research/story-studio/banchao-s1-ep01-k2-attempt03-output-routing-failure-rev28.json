@@ -1,0 +1,92 @@
+{
+  "schema": "story-studio/k2-attempt03-output-routing-failure-v1",
+  "task_identifier": "TASK — Story Studio — 班超 S1 FINAL GATE",
+  "task_key": "story-studio/banchao/s1-final-gate",
+  "status_revision": 28,
+  "task_revision": 34,
+  "execution_unit": "EP01_WRITING_SYSTEM_K2_ATTEMPT03_OUTPUT_ROUTING_FAILURE_RECONCILIATION",
+  "executed_at_utc": "2026-09-01T09:26:58Z",
+  "result": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING_NEW_INFOGRAPHIC",
+  "requested_operation": {
+    "source_drive_file_id": "1VMntzshVFdYTUft1KVW4CmMiPVDZ-Uwg",
+    "source_conversation_file_id": "file_000000009a14820981dd04f71abbc2f6",
+    "source_sha256": "ecc2c27acdc44517296f3b7454a34a107eddbfddbfc1fd8c7aae109b6f76e473",
+    "operation": "full_roi_image_edit",
+    "roi": "hand-wrist-brush-paper interaction",
+    "expected_spec": "1920x1080 RGB PNG",
+    "forbidden": [
+      "dashboard",
+      "card",
+      "table",
+      "explanatory text",
+      "contact sheet",
+      "pixel translation",
+      "manual patching"
+    ]
+  },
+  "actual_output": {
+    "conversation_file_id": "file_00000000bd0c81fb9c52ad601170cac2",
+    "runtime_path": "/mnt/data/a_detailed_infographic_slide_image_with_a_dense_la.png",
+    "drive_evidence_file_id": "1I1MCEqVH2eT6Fjv9G6HGnYRKTTS5gZtq",
+    "drive_evidence_folder_id": "1i2npNgt2Pu_RyuSAzC82W2cQvOlDZ4st",
+    "mime_type": "image/png",
+    "size_bytes": 2038795,
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "sha256": "52d636887d6088a69e7d459cd88f3b923e8c6564ddc6d9123bcffaa91a565c76",
+    "visual_classification": "EP01_G07_PROJECT_STATUS_INFOGRAPHIC",
+    "contains_k1_scene": false,
+    "valid_k2_candidate": false
+  },
+  "generation_metadata": {
+    "gen_id": "71d63a9b-8229-41e7-8f4d-bf00a60a94c4",
+    "edit_op": null,
+    "parent_gen_id": null,
+    "seed": null,
+    "interpretation": "NEW_IMAGE_GENERATION_NOT_BOUND_SOURCE_EDIT"
+  },
+  "acceptance": {
+    "source_image_retained": false,
+    "historical_scene_retained": false,
+    "roi_regenerated": false,
+    "single_clean_historical_frame": false,
+    "native_1920x1080": false,
+    "no_dashboard_or_text": false,
+    "valid_k2_attempt03_output": false
+  },
+  "failure_classification": {
+    "primary": "FAIL_IMPLEMENTATION_OUTPUT_ROUTING_EDIT_TARGET_NOT_BOUND",
+    "secondary": "INFERENCE_CONTEXT_DOMINATED_TEXT_TO_IMAGE_ROUTING",
+    "contract_change_required": false,
+    "dependency_change_required": false,
+    "architecture_change_required": false
+  },
+  "asset_disposition": {
+    "role": "rejected_output_routing_evidence",
+    "active_asset": false,
+    "canonical": false,
+    "production_ready": false,
+    "publication_ready": false,
+    "mapping_changed": false,
+    "manifest_changed": false,
+    "k1_overwritten": false,
+    "k2_attempt_01_overwritten": false,
+    "k2_attempt_02_overwritten": false,
+    "k3_authorized": false
+  },
+  "unchanged": {
+    "canonical": 194,
+    "production_ready": 0,
+    "mapping_revision": 10,
+    "manifest_revision": 10
+  },
+  "next_action": "EP01_WRITING_SYSTEM_K2_ATTEMPT03_EXPLICIT_IMAGE_TARGET_BINDING_PROBE",
+  "next_action_limits": {
+    "max_calls": 1,
+    "explicit_source_conversation_file_id": "file_000000009a14820981dd04f71abbc2f6",
+    "stop_if_not_edit": true,
+    "stop_if_wrong_scene": true,
+    "k3_remains_blocked": true
+  }
+}
