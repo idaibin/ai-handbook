@@ -97,9 +97,42 @@
     "k2_attempt_02_overwritten": false,
     "k3_authorized": false
   },
-  "sync_status": "PENDING_REVISION_27_READBACK",
+  "sync_status": "PASS_REVISION_27_READBACK",
   "github_evidence": {
     "report_commit": "22f16080ad68ee092d6c4175ff0ee301795aaf3a",
-    "evidence_json_commit": "aa5fbb13e4fc910cabcf785a76fcfa72c2cfecff"
+    "evidence_json_commit": "aa5fbb13e4fc910cabcf785a76fcfa72c2cfecff",
+    "report_blob": "65466b584e4f3ff1de7261346547ab34e616395f",
+    "evidence_json_blob": "99467532491984a02cbe773682a13d34599c4291",
+    "pending_current_status_markdown_commit": "4e84d70716657cdde00e005189c96535d7c7fd84",
+    "pending_current_status_markdown_blob": "f0b868ff016fdc23a4a1456ec81c4f686eb24475",
+    "pending_current_status_json_commit": "8ef6501b7e4fec73fb450a128f30ea7a13e1880f",
+    "pending_current_status_json_blob": "aafecef0b8fe0acf40aa5cc4bd6009b5c8f6125e"
+  },
+  "synced_at_utc": "2026-09-01T08:26:46Z",
+  "drive_evidence": {
+    "folder": "1RXwxriPdBdZQxXGELWA5A6UuKzmGAWky",
+    "report": "1g7WYV7jZVxyKf_pYUkjp8kQeOT9yNjp3",
+    "report_sha256": "95f804cd0caa002b08fdee2f644815b3b5fe074441e8f142d63714c789bd8d27",
+    "evidence_json": "1lZCtS4JDJMNmEbg0kzhPk6cYSbaN8dOY",
+    "evidence_json_sha256": "379075f9a45a865a7b4dfcfeba9641568313ad668e4e94bd512027c01b9095cd"
+  },
+  "readback": {
+    "drive_report_exact_bytes": true,
+    "drive_evidence_json_exact_bytes": true,
+    "drive_pending_status_markdown_exact_bytes": true,
+    "drive_pending_status_markdown_sha256": "8121d9f13363664f1ed6d83ae87e8fa68e7c57a702218f576d06e648125f63a1",
+    "drive_pending_status_json_exact_bytes": true,
+    "drive_pending_status_json_sha256": "0cb53a0f56343a9aa4b47ed0be515c67f16c8869e99b26892674c2a2ab10628f",
+    "github_report_blob": true,
+    "github_evidence_json_blob": true,
+    "github_pending_current_status_markdown_blob": true,
+    "github_pending_current_status_json_blob": true,
+    "github_main_head": "8ef6501b7e4fec73fb450a128f30ea7a13e1880f",
+    "task_revision_33_header": true,
+    "task_exec_0033": true,
+    "registry_tasks_row_15": true,
+    "registry_runs_row_15": true,
+    "registry_evidence_row_31": true,
+    "registry_sync_row_69": true
   }
 }
