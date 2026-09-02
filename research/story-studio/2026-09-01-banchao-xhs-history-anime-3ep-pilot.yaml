@@ -136,6 +136,7 @@ execution_history:
   evidence:
     path: research/story-studio/2026-09-02-banchao-xhs-p01-keyframe-routing-attempt03.md
     github_commit: 3d8cb26f4c363bf8fe06298de52a6e89b0242938
+    github_blob_sha: 14d99a69f95e717a0caa59ddae9d5f72b99b2ee4
   conclusion:
     valid_keyframes: 0
     required_keyframes: 3
@@ -154,7 +155,29 @@ gates:
   gate_d: NOT_STARTED
   gate_e: NOT_STARTED
 sync:
-  status: pending_final_readback
+  status: synced
+  verified_at: 2026-09-02T16:18:19+09:00
+  readback:
+    github_state_before_final_sync_commit:
+      result: pass
+      blob_sha: 3dec5bfa07f8164ab0ed9f05dd47e9ab1828f2a5
+    github_attempt03:
+      result: pass
+      blob_sha: 14d99a69f95e717a0caa59ddae9d5f72b99b2ee4
+    drive_task_document:
+      result: pass
+      revision_id: AIroW37omASVPtpHx8dQuEdP5K8FX9NvN1JhtSArPKN80LcWP8pk9v1XrGYtExI_IgvUZD8ejEhoSHaoEaELTz7Qo7utNTsm3uTJqIOHjSo
+    drive_routing_incident:
+      result: pass
+      revision_id: ANLCKQlJTcTajEuyEDGG-d8wIQGogw7oAkyzrKSTzIKr7aLFtOcJJpghqRqCRd0z5ikHsnJBQH5WPntXGc8TmVZbnPapgH4M0erji_EC4Yk
+    drive_invalid_output_03:
+      result: pass
+      file_id: 1A3dpb1Hmr99KZsb_BY-dYlVPFs_TM6_1
+      bytes: 1972510
+    registry_tasks: Tasks!A16:H16
+    registry_runs: Runs!A20:J20
+    registry_evidence: Evidence!A36:I36
+    registry_sync: Sync!A77:I77
   previous_task_state_modified: false
 not_verified:
 - actual_voice_duration
@@ -171,4 +194,4 @@ last_completed_execution_unit: PILOT_EP01_SCRIPT_DRAFT_AND_FACT_CHECK
 last_partial_execution_unit: PILOT_EP01_VISUAL_IDENTITY_CONTRACT_AND_THREE_KEYFRAMES
 last_failed_execution_unit: PILOT_EP01_VERIFIED_IMAGE_ROUTE_BINDING_OR_ACCESSIBLE_REFERENCE_TRANSFER
 next_action: PILOT_EP01_ALTERNATE_IMAGE_PROVIDER_WITH_ACCESSIBLE_REFERENCE_REQUIRED
-updated_at: 2026-09-02T16:14:47+09:00
+updated_at: 2026-09-02T16:18:19+09:00
