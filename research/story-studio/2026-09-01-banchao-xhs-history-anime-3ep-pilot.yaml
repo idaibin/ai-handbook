@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '1.1'
 task_identifier: TASK — Story Studio — 班超 小红书历史动漫三集试播验证
 task_id: story-studio-banchao-xhs-history-anime-3ep-pilot
 system_id: story-studio
@@ -6,7 +6,7 @@ project_id: banchao
 registry_project_ref: story-studio
 work_item_id: xhs-history-anime-3ep-pilot
 task_key: story-studio/banchao/xhs-history-anime-3ep-pilot
-status: active_gate_b_blocked_generation_route
+status: active_gate_b_blocked_generation_route_hard_stop
 active_binding: active
 previous_active_task: TASK — Story Studio — 班超 S1 FINAL GATE
 task_switch:
@@ -19,7 +19,7 @@ publication_ready: false
 source_basis:
   github_repository: idaibin/ai-handbook
   github_branch: main
-  github_commit_at_execution_start: f426a07b0f489a6c72488d7a6f34e79aeb2295b0
+  github_commit_at_unit_start: ee678d47d35502643bb613b5a57a507a7960a7ac
   pilot_baseline_commit: 77c5cb5b44ac21b7b1716d8cc9b94fa948b93175
   drive_task_doc_id: 1XbzjUTeUJLm92_fwkHrDFmC5rs-ZxieQ0ThhMreKrAE
   drive_story_bible_id: 1F-DnHftRIN5F4-o2M0i10EZ_d2HjL-6P
@@ -54,37 +54,22 @@ execution_history:
   - three-episode recut is feasible
   - throw-brush-to-immediate-enlistment false causality corrected
   - P03 terminology fixed to 吏士三十六人
-  - three posts are insufficient to prove a stable traffic lane
 - unit: PILOT_EP01_SCRIPT_DRAFT_AND_FACT_CHECK
   result: PASS_WITH_VISUAL_HOLDS
   completed_at: 2026-09-02T13:00:01+09:00
   artifact:
     path: research/story-studio/2026-09-02-banchao-xhs-p01-script-claim-ledger.md
-    github_artifact_commit: e764620fcf368661d9243aeae431730653ec81b2
+    github_commit: e764620fcf368661d9243aeae431730653ec81b2
     github_blob_sha: a4f95ecfeb6cdb43eebe929d3e281cc07177a1ed
     content_sha256: c0d6cbacbdf0bb3fcf0ef191579c2c68f4700afbb8c4b8c411fb492310ba5244
     drive_document_id: 1c27ZCBInvWrqoYre48DKTrzPQoNsbheXoBCyAki-kgo
-    drive_document_revision: AIroW36WArSyXVkJok0Pgs2fk1ETkBzeIpw-Sml8uKqf4UfV_rOef2837E4whfqlnQUP85KEWLCBaEfkBRDTQvq5gYt6DPwgf7Nhpc2ewVk
-    drive_folder_id: 18WNl6QhFAlJOC-XeSgCHNfExGQE581wq
   mechanical_checks:
     target_duration_seconds: 72
     shot_count: 7
     major_location_count: 1
     speaking_roles: 2
     script_claims: 11
-  gate_a:
-    claim_traceability: pass
-    adaptation_labels: pass
-    chronology: pass
-    single_episode_story: pass
-    platform_contract: pass_static
-    actual_voice_timing: not_verified
-  visual_holds:
-  - Ban Chao identity and labor-state design
-  - official copying-space structure
-  - writing substrate and tool forms
-  - costume hair lamp and currency details
-  - throw-brush hand-prop-surface continuity
+  gate_a: PASS_WITH_VISUAL_HOLDS
 - unit: PILOT_EP01_VISUAL_IDENTITY_CONTRACT_AND_THREE_KEYFRAMES
   result: PARTIAL_CONTRACT_COMPLETE_KEYFRAMES_BLOCKED
   failure_class: FAIL_PROVIDER_OUTPUT_ROUTING
@@ -95,7 +80,6 @@ execution_history:
     github_commit: a55bc5f593f390675da1a1e27171af02f5949b74
     content_sha256: 4014cff4147237256a5895c37e3abf7654073a38b68e5107525c3a1dd58716cd
     drive_document_id: 1cyl2PbDBbJeA4qksbsDmkvoMravCb9rdF1QqK6UwkqA
-    drive_folder_id: 18WNl6QhFAlJOC-XeSgCHNfExGQE581wq
     identity_reference:
       drive_file_id: 1RP2qjzN0DP6hkuy2XnsA1mZCttPj8mOr
       sha256: 86f95cd86c9d05994c8756fbf520976bf40b44192c36daf3c03906cf95748ce1
@@ -103,18 +87,12 @@ execution_history:
       use_scope: identity_reference_only
   generation_attempts:
   - attempt_id: P01_KEYFRAMES_IMAGE_GEN_ATTEMPT_01
-    tool: image_gen
-    requested_outputs: 3
-    returned_outputs: 1
     generation_id: 5eea2af5-6400-4373-baad-513a14edd24f
     result: INVALID_OUTPUT_REPORT_INFOGRAPHIC
     sha256: 3f77f302d537435e11af87c3dab037141a9db68de8e01a25c81e777a53456bcc
     dimensions: 1024x1536
     drive_evidence_file_id: 1QKCR_n3gT5C7XVF2kTuLx1AXwmGFacvp
   - attempt_id: P01_KEYFRAMES_IMAGE_GEN_ATTEMPT_02
-    tool: image_gen
-    requested_outputs: 3
-    returned_outputs: 1
     generation_id: 2ea2205b-19f8-40e8-8ba7-78ab2cffac8b
     result: INVALID_OUTPUT_REPORT_DASHBOARD
     sha256: 17deb7f208d96f2f13f205de49d259a3dfd6a9e8e1c59e5a7f4a637d17c6af1c
@@ -130,59 +108,53 @@ execution_history:
   routing_incident:
     path: research/story-studio/2026-09-02-banchao-xhs-p01-keyframe-routing-incident.md
     github_commit: 1308ce28ed3dfd324d5b9beac423c7980aa6ba43
-    content_sha256: 800093e616aa37061946f3e26f51cfbe82df14a17fb33a2e75080a987faa848a
     drive_document_id: 16Msab0lbVmrVwY2DTR162RZ_SGjbpIEgQpqd6PnZL2U
-  gate_b:
-    status: blocked_not_run
+- unit: PILOT_EP01_VERIFIED_IMAGE_ROUTE_BINDING_OR_ACCESSIBLE_REFERENCE_TRANSFER
+  result: FAIL_SAME_ROUTE_REPRODUCED
+  failure_class: FAIL_PROVIDER_OUTPUT_ROUTING_REPRODUCED
+  completed_at: 2026-09-02T16:14:47+09:00
+  requested_action:
+  - bind Variant B as the only identity anchor
+  - generate only P01-KF01 as one independent portrait character scene
+  - exclude all text tables UI infographics frames logos and watermarks
+  adobe_reference_transfer_retry:
+    result: fail_forbidden_asset_not_accessible
+    attempts_this_unit: 2
+  image_gen_attempt:
+    attempt_id: P01_KEYFRAMES_IMAGE_GEN_ATTEMPT_03
+    tool: image_gen
+    requested_outputs: 1
+    returned_outputs: 1
+    generation_id: 5d46729a-0206-4114-b4a0-f6f06d0d64c5
+    edit_op: null
+    parent_generation_id: null
+    result: INVALID_OUTPUT_REPORT_INFOGRAPHIC
+    sha256: 9c3dbfe569928161f60e93815c1bf06eba678ccd0e9d3bceff3ec72530e47f09
+    bytes: 1972510
+    dimensions: 1178x1335
+    drive_evidence_file_id: 1A3dpb1Hmr99KZsb_BY-dYlVPFs_TM6_1
+  evidence:
+    path: research/story-studio/2026-09-02-banchao-xhs-p01-keyframe-routing-attempt03.md
+    github_commit: 3d8cb26f4c363bf8fe06298de52a6e89b0242938
+  conclusion:
     valid_keyframes: 0
     required_keyframes: 3
-    identity_consistency: not_evaluated
-    material_culture: not_evaluated
-    blind_review: not_evaluated
-    no_readable_text: fail_on_both_invalid_outputs
-    no_report_layout: fail_on_both_invalid_outputs
-    aspect_ratio_9_16: fail_on_both_invalid_outputs
-  circuit_breakers:
-    image_gen_current_context: open
-    condition: two_consecutive_report_or_dashboard_outputs
-    repeated_continue_behavior: do_not_call_failed_route_without_new_binding_evidence
+    reference_binding_verified: false
+    gate_b: BLOCKED_NOT_RUN
+routing_control:
+  image_gen_current_context: CIRCUIT_OPEN_HARD_STOP
+  consecutive_invalid_report_outputs: 3
+  adobe_reference_transfer: BLOCKED_FORBIDDEN
+  repeated_continue_behavior: do_not_call_image_tools_without_new_provider_binding_evidence
+  invalid_output_disposition: evidence_only_never_crop_or_promote
+gates:
+  gate_a: PASS_WITH_VISUAL_HOLDS
+  gate_b: BLOCKED_NOT_RUN
+  gate_c: NOT_STARTED
+  gate_d: NOT_STARTED
+  gate_e: NOT_STARTED
 sync:
-  status: synced
-  verified_at: 2026-09-02T15:39:00+09:00
-  readback:
-    github_contract:
-      result: pass
-      blob_sha: 67b52d2053db84cab1e9710ced607337712a7892
-    github_routing_incident:
-      result: pass
-      blob_sha: e12fbba51937c2b6ccec4f00970eb2c1a287c65e
-    github_state_before_final_commit:
-      result: pass
-      blob_sha: 602d1f5cea1dfa3c6d0ff0df3e85b238fa0e43c7
-    drive_contract:
-      result: pass
-      document_id: 1cyl2PbDBbJeA4qksbsDmkvoMravCb9rdF1QqK6UwkqA
-      revision_id: ANLCKQlKXh413ld3gMMWcV4fanu5_AE4J7H9oeUFL3Xzr9cVlELL2bUTRZrYlnepeWSmYkjuRhMYuGdTeep9Zb7dKqZTyHZYCyr3zJn8p7Y
-    drive_routing_incident:
-      result: pass
-      document_id: 16Msab0lbVmrVwY2DTR162RZ_SGjbpIEgQpqd6PnZL2U
-      revision_id: ANLCKQm6Lh0hIix7Uys08_pVDVdnDBr4R6W-KKKLXOu3odXqkb9k3rBsq2KNGCvyKMBNKxkEbf3BlFM-VwKUsBI4NtPFmuFxS90ZpoplB9Y
-    drive_task_document:
-      result: pass
-      document_id: 1XbzjUTeUJLm92_fwkHrDFmC5rs-ZxieQ0ThhMreKrAE
-      revision_id: ANLCKQmbd4WRqDl2ixzvX95yvN9yN-fOYNWEXxOpzO5sKZRPxNJF0GhJBShnA9zNbRdfWIQxcQDMWNCSLmttgj21mBeSQqrhji0VvePNGPc
-    drive_invalid_output_01:
-      result: pass
-      file_id: 1QKCR_n3gT5C7XVF2kTuLx1AXwmGFacvp
-      bytes: 1897525
-    drive_invalid_output_02:
-      result: pass
-      file_id: 1ZoGEc5VztyCxqWsCTV1wsdE7cViBdJZi
-      bytes: 1927738
-    registry_tasks: Tasks!A16:H16
-    registry_runs: Runs!A19:J19
-    registry_evidence: Evidence!A35:I35
-    registry_sync: Sync!A76:I76
+  status: pending_final_readback
   previous_task_state_modified: false
 not_verified:
 - actual_voice_duration
@@ -192,10 +164,11 @@ not_verified:
 - blind_visual_review
 - audience_comprehension
 - actual_production_cost
-- Xiaohongshu publication performance
+- Xiaohongshu publication_performance
 - commercial_rights
-current_execution_unit: PILOT_EP01_VISUAL_IDENTITY_CONTRACT_AND_THREE_KEYFRAMES
+current_execution_unit: PILOT_EP01_VERIFIED_IMAGE_ROUTE_BINDING_OR_ACCESSIBLE_REFERENCE_TRANSFER
 last_completed_execution_unit: PILOT_EP01_SCRIPT_DRAFT_AND_FACT_CHECK
 last_partial_execution_unit: PILOT_EP01_VISUAL_IDENTITY_CONTRACT_AND_THREE_KEYFRAMES
-next_action: PILOT_EP01_VERIFIED_IMAGE_ROUTE_BINDING_OR_ACCESSIBLE_REFERENCE_TRANSFER
-updated_at: 2026-09-02T15:39:00+09:00
+last_failed_execution_unit: PILOT_EP01_VERIFIED_IMAGE_ROUTE_BINDING_OR_ACCESSIBLE_REFERENCE_TRANSFER
+next_action: PILOT_EP01_ALTERNATE_IMAGE_PROVIDER_WITH_ACCESSIBLE_REFERENCE_REQUIRED
+updated_at: 2026-09-02T16:14:47+09:00
