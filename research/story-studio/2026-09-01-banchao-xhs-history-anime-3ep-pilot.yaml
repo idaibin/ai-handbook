@@ -57,11 +57,15 @@ execution_history:
   - three posts are insufficient to prove a stable traffic lane
 - unit: PILOT_EP01_SCRIPT_DRAFT_AND_FACT_CHECK
   result: PASS_WITH_VISUAL_HOLDS
-  completed_at: 2026-09-02T12:51:46+09:00
+  completed_at: 2026-09-02T13:00:01+09:00
   artifact:
     path: research/story-studio/2026-09-02-banchao-xhs-p01-script-claim-ledger.md
-    github_commit: e764620fcf368661d9243aeae431730653ec81b2
-    sha256: c0d6cbacbdf0bb3fcf0ef191579c2c68f4700afbb8c4b8c411fb492310ba5244
+    github_artifact_commit: e764620fcf368661d9243aeae431730653ec81b2
+    github_blob_sha: a4f95ecfeb6cdb43eebe929d3e281cc07177a1ed
+    content_sha256: c0d6cbacbdf0bb3fcf0ef191579c2c68f4700afbb8c4b8c411fb492310ba5244
+    drive_document_id: 1c27ZCBInvWrqoYre48DKTrzPQoNsbheXoBCyAki-kgo
+    drive_document_revision: AIroW36WArSyXVkJok0Pgs2fk1ETkBzeIpw-Sml8uKqf4UfV_rOef2837E4whfqlnQUP85KEWLCBaEfkBRDTQvq5gYt6DPwgf7Nhpc2ewVk
+    drive_folder_id: 18WNl6QhFAlJOC-XeSgCHNfExGQE581wq
   mechanical_checks:
     target_duration_seconds: 72
     shot_count: 7
@@ -81,6 +85,19 @@ execution_history:
   - writing substrate and tool forms
   - costume hair lamp and currency details
   - throw-brush hand-prop-surface continuity
+sync:
+  status: synced
+  verified_at: 2026-09-02T13:00:01+09:00
+  readback:
+    github_artifact: pass
+    github_state_before_final_commit: pass
+    drive_artifact: pass
+    drive_task_document: pass
+    registry_tasks: Tasks!A16:H16
+    registry_runs: Runs!A18:J18
+    registry_evidence: Evidence!A34:I34
+    registry_sync: Sync!A31:I31
+  previous_task_state_modified: false
 not_verified:
 - actual_voice_duration
 - visual_distinctiveness
@@ -93,4 +110,4 @@ not_verified:
 current_execution_unit: none
 last_completed_execution_unit: PILOT_EP01_SCRIPT_DRAFT_AND_FACT_CHECK
 next_action: PILOT_EP01_VISUAL_IDENTITY_CONTRACT_AND_THREE_KEYFRAMES
-updated_at: 2026-09-02T12:51:46+09:00
+updated_at: 2026-09-02T13:00:01+09:00
