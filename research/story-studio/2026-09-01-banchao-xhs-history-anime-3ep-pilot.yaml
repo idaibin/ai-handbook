@@ -6,7 +6,7 @@ project_id: banchao
 registry_project_ref: story-studio
 work_item_id: xhs-history-anime-3ep-pilot
 task_key: story-studio/banchao/xhs-history-anime-3ep-pilot
-status: active_gate_a_passed
+status: active_gate_b_blocked_generation_route
 active_binding: active
 previous_active_task: TASK — Story Studio — 班超 S1 FINAL GATE
 task_switch:
@@ -19,7 +19,7 @@ publication_ready: false
 source_basis:
   github_repository: idaibin/ai-handbook
   github_branch: main
-  github_commit_at_execution_start: a7472475910ea2706981b1139953c1ae56e36c22
+  github_commit_at_execution_start: f426a07b0f489a6c72488d7a6f34e79aeb2295b0
   pilot_baseline_commit: 77c5cb5b44ac21b7b1716d8cc9b94fa948b93175
   drive_task_doc_id: 1XbzjUTeUJLm92_fwkHrDFmC5rs-ZxieQ0ThhMreKrAE
   drive_story_bible_id: 1F-DnHftRIN5F4-o2M0i10EZ_d2HjL-6P
@@ -85,18 +85,69 @@ execution_history:
   - writing substrate and tool forms
   - costume hair lamp and currency details
   - throw-brush hand-prop-surface continuity
+- unit: PILOT_EP01_VISUAL_IDENTITY_CONTRACT_AND_THREE_KEYFRAMES
+  result: PARTIAL_CONTRACT_COMPLETE_KEYFRAMES_BLOCKED
+  failure_class: FAIL_PROVIDER_OUTPUT_ROUTING
+  completed_at: 2026-09-02T15:30:47+09:00
+  visual_identity_contract:
+    status: completed_pending_final_readback
+    path: research/story-studio/2026-09-02-banchao-xhs-p01-visual-identity-contract.md
+    github_commit: a55bc5f593f390675da1a1e27171af02f5949b74
+    content_sha256: 4014cff4147237256a5895c37e3abf7654073a38b68e5107525c3a1dd58716cd
+    drive_document_id: 1cyl2PbDBbJeA4qksbsDmkvoMravCb9rdF1QqK6UwkqA
+    drive_folder_id: 18WNl6QhFAlJOC-XeSgCHNfExGQE581wq
+    identity_reference:
+      drive_file_id: 1RP2qjzN0DP6hkuy2XnsA1mZCttPj8mOr
+      sha256: 86f95cd86c9d05994c8756fbf520976bf40b44192c36daf3c03906cf95748ce1
+      dimensions: 1672x941
+      use_scope: identity_reference_only
+  generation_attempts:
+  - attempt_id: P01_KEYFRAMES_IMAGE_GEN_ATTEMPT_01
+    tool: image_gen
+    requested_outputs: 3
+    returned_outputs: 1
+    generation_id: 5eea2af5-6400-4373-baad-513a14edd24f
+    result: INVALID_OUTPUT_REPORT_INFOGRAPHIC
+    sha256: 3f77f302d537435e11af87c3dab037141a9db68de8e01a25c81e777a53456bcc
+    dimensions: 1024x1536
+    drive_evidence_file_id: 1QKCR_n3gT5C7XVF2kTuLx1AXwmGFacvp
+  - attempt_id: P01_KEYFRAMES_IMAGE_GEN_ATTEMPT_02
+    tool: image_gen
+    requested_outputs: 3
+    returned_outputs: 1
+    generation_id: 2ea2205b-19f8-40e8-8ba7-78ab2cffac8b
+    result: INVALID_OUTPUT_REPORT_DASHBOARD
+    sha256: 17deb7f208d96f2f13f205de49d259a3dfd6a9e8e1c59e5a7f4a637d17c6af1c
+    dimensions: 1536x1024
+    drive_evidence_file_id: 1ZoGEc5VztyCxqWsCTV1wsdE7cViBdJZi
+  fallback_route:
+    tool: Adobe
+    init: pass
+    reference_transfer_attempts: 3
+    reference_transfer_result: fail_forbidden_asset_not_accessible
+    firefly_generation_called: false
+    output_count: 0
+  routing_incident:
+    path: research/story-studio/2026-09-02-banchao-xhs-p01-keyframe-routing-incident.md
+    github_commit: 1308ce28ed3dfd324d5b9beac423c7980aa6ba43
+    content_sha256: 800093e616aa37061946f3e26f51cfbe82df14a17fb33a2e75080a987faa848a
+    drive_document_id: 16Msab0lbVmrVwY2DTR162RZ_SGjbpIEgQpqd6PnZL2U
+  gate_b:
+    status: blocked_not_run
+    valid_keyframes: 0
+    required_keyframes: 3
+    identity_consistency: not_evaluated
+    material_culture: not_evaluated
+    blind_review: not_evaluated
+    no_readable_text: fail_on_both_invalid_outputs
+    no_report_layout: fail_on_both_invalid_outputs
+    aspect_ratio_9_16: fail_on_both_invalid_outputs
+  circuit_breakers:
+    image_gen_current_context: open
+    condition: two_consecutive_report_or_dashboard_outputs
+    repeated_continue_behavior: do_not_call_failed_route_without_new_binding_evidence
 sync:
-  status: synced
-  verified_at: 2026-09-02T13:00:01+09:00
-  readback:
-    github_artifact: pass
-    github_state_before_final_commit: pass
-    drive_artifact: pass
-    drive_task_document: pass
-    registry_tasks: Tasks!A16:H16
-    registry_runs: Runs!A18:J18
-    registry_evidence: Evidence!A34:I34
-    registry_sync: Sync!A31:I31
+  status: pending_final_readback
   previous_task_state_modified: false
 not_verified:
 - actual_voice_duration
@@ -107,7 +158,9 @@ not_verified:
 - audience_comprehension
 - actual_production_cost
 - Xiaohongshu publication performance
-current_execution_unit: none
+- commercial_rights
+current_execution_unit: PILOT_EP01_VISUAL_IDENTITY_CONTRACT_AND_THREE_KEYFRAMES
 last_completed_execution_unit: PILOT_EP01_SCRIPT_DRAFT_AND_FACT_CHECK
-next_action: PILOT_EP01_VISUAL_IDENTITY_CONTRACT_AND_THREE_KEYFRAMES
-updated_at: 2026-09-02T13:00:01+09:00
+last_partial_execution_unit: PILOT_EP01_VISUAL_IDENTITY_CONTRACT_AND_THREE_KEYFRAMES
+next_action: PILOT_EP01_VERIFIED_IMAGE_ROUTE_BINDING_OR_ACCESSIBLE_REFERENCE_TRANSFER
+updated_at: 2026-09-02T15:30:47+09:00
