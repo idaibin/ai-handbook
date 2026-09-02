@@ -84,42 +84,65 @@ execution_history:
 
 - unit: PILOT_EP01_MEDIA_ISOLATION_POLICY_SYNC_AND_KF01_CAPSULE_PREPARATION
   result: PASS_CONTROL_PLANE
-  completed_at: 2026-09-02T09:22:09Z
+  completed_at: 2026-09-02T09:34:07Z
   verified:
   - updated project instruction contains Media Asset Generation Isolation
-  - direct media generation in control project is superseded
+  - direct media generation in the control project is superseded
   - old control-context image route remains CIRCUIT_OPEN_HARD_STOP
   - P01 visual contract migrated to isolated media execution
   - exactly one asset P01-KF01 is authorized in the media package
-  - reference image, pure media input and acceptance checklist packaged together
+  - reference image, pure media input and acceptance checklist are packaged together
+  - Drive raw policy, capsule and ZIP are byte-identical to local prepared files
+  - ZIP contains exactly three expected files and testzip passes
+  - GitHub and Drive artifacts plus Registry rows were read back
   artifacts:
     isolation_policy:
       path: research/story-studio/2026-09-02-media-asset-generation-isolation-policy.md
       github_commit: 7bc9c243097968846a7b03e8a2e62aa0c71ce4d9
+      github_blob_sha: 9e49f6134dcab1de650a08f7b46006da7ae15663
       drive_file_id: 1wSKJTTkpMhk4Jcs1bKAKv7SihmcGjBHh
+      drive_sha256: f60199a757a8550354a87b183a6f17e4b02824fedbb45d88025d254bdd15c48a
+      drive_bytes: 3003
     previous_policy_disposition:
       path: research/story-studio/2026-08-21-assistant-owned-non-video-execution-policy.md
       status: superseded_for_media_execution
       github_commit: 55ff27a207c3f54d7de8c3df2229cc637082815a
+      github_blob_sha: 0b38572f410533e53a7309b3c041a4bc7ddb4deb
     visual_contract_v02:
       path: research/story-studio/2026-09-02-banchao-xhs-p01-visual-identity-contract-v0.2.md
       github_commit: 34e8c751e43ad587a6de013b05641fec221942f7
+      github_blob_sha: 76f8f954fce5310b822f7c5b75e6db8d0d0e6795
       drive_document_id: 1i1JOpsCGcPsPddvHSFwatXvSl3QZmPUh47mGLsSmyow
+      drive_revision_id: ANLCKQnmaQTvTnBAcBJYak9D4krVN_Oz6gpAsdt-efdPkJyCvquKKXhFiRundZa_B1kNTVyzsXxGCyasenIq16oGeyljnzgJ-Y3dXEMiiBc
     media_input:
       path: research/story-studio/2026-09-02-banchao-xhs-p01-kf01-media-input.txt
       github_commit: 8303660586830f8220e15268d311cf8da5d8e8ad
-      sha256: c38b20ad00251649b3f2f66e4aff9b8984726dc5071261d53d40cdcf55a5ba62
+      github_blob_sha: 9d48e588a6e744ae1d67c39d380c22779f6f2369
+      content_sha256: c38b20ad00251649b3f2f66e4aff9b8984726dc5071261d53d40cdcf55a5ba62
     isolated_capsule:
       path: research/story-studio/2026-09-02-banchao-xhs-p01-kf01-isolated-media-capsule.yaml
       github_commit: f9a368f0c1ad228803f0dda2c0d10ff8c03a7cdf
+      github_blob_sha: 431b5bb6aca438649600b41e1d31c9dde26412c5
       drive_file_id: 1pLyIgUiyOqejbJKg49m1BRvaOihNIV_1
+      drive_sha256: 23c0238a9af96ada7840384d88d63ec307071a2472408220b74ff65e6e9fd7dd
+      drive_bytes: 1319
     media_package:
       drive_file_id: 14qXzECtJmKMdrDn93V_07Axs7zpFrMUm
       sha256: 836addefcfe0e78e9be22ee9e06b9747640f63f0ee882b356c833d377d384962
+      bytes: 1985408
+      zip_test: pass
       contents:
       - P01-KF01_REFERENCE.png
       - P01-KF01_MEDIA_INPUT.txt
       - P01-KF01_ACCEPTANCE.txt
+    drive_task_document:
+      document_id: 1XbzjUTeUJLm92_fwkHrDFmC5rs-ZxieQ0ThhMreKrAE
+      revision_id: ANLCKQlz3RvumpZfeIcLKgw_mrQ0MfHNbsSC4NyLap6rE_rGOfBfcmVnb_4qQxKEkOajjelP10CuuiE55ONOhEMhnxCkR0cQ_Rrn5goQSt0
+    registry:
+      tasks: Tasks!A16:H16
+      runs: Runs!A21:J21
+      evidence: Evidence!A37:I37
+      sync: Sync!A78:I78
 
 media_execution:
   control_project:
@@ -167,5 +190,10 @@ current_execution_unit: PILOT_EP01_KF01_EXECUTE_IN_ISOLATED_MEDIA_CONTEXT
 current_execution_status: waiting_isolated_media_context
 next_action: PILOT_EP01_KF01_EXECUTE_IN_ISOLATED_MEDIA_CONTEXT
 sync:
-  status: pending_final_readback
-updated_at: 2026-09-02T09:22:09Z
+  status: synced
+  verified_at: 2026-09-02T09:34:07Z
+  github_state_before_final_sync_commit:
+    commit: d1c7bdf958f8767aec43d816b8a1ac02fc85dad4
+    blob_sha: 84a3a97fc06fa045257119e1f059bcae55aeff52
+  previous_task_state_modified: false
+updated_at: 2026-09-02T09:34:07Z
