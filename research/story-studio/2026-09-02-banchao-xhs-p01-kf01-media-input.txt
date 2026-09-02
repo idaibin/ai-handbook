@@ -1,0 +1,13 @@
+asset_id: P01-KF01_SCRIBE_STATE
+
+Use the attached four-view character reference as the sole identity anchor. Preserve the same adult East Asian man: the same narrow oval face, slightly high cheekbones, straight dense eyebrows, narrow eyes with nearly level outer corners, medium nose, thin lips, restrained jaw, warm brown skin, lean non-military build, black hair tied in a compact high bun, and a few natural loose strands. Do not reproduce the four-view layout; create one new scene with this same person.
+
+Create one independent vertical 9:16 historical animation keyframe. He is a civilian copyist in a restrained Eastern Han–inspired Luoyang copying room. He sits at a low plain wooden work table, body slightly leaning forward, focused and calm. His right hand holds a simple wood-or-bamboo shaft brush with soft bristles and no metal ferrule. His left hand organizes narrow grouped writing slips. His gaze stays on the writing surface and does not face the viewer.
+
+Clothing: plain worn layered matte cloth, muted brown, warm grey and faded earth tones; cross-collar wrapped layers; practical wide sleeves; simple cloth sash; no garment patterns, embroidery, metal decoration, armor, cloak, military bracers or long decorative hair ribbons.
+
+Environment: simplified timber structure, low-detail wall surfaces, floor mat, one low table, narrow grouped or tied writing slips, single-side natural daylight. All marks on the writing surface are abstract and unreadable. Do not include bound books, modern paper stacks, Western desk or chair, glass windows, modern stationery, coins, weapons, flags or battlefield elements.
+
+Visual style: hand-drawn hard-edge 2D historical animation, subtle paper-fiber surface, warm bamboo-paper base, soot-ink brown lines, restrained mineral ochre and blue-grey accents, small natural asymmetries, documentary cinematic framing, no heroic lighting.
+
+Output exactly one image. No text, title, subtitle, label, table, border, interface, infographic, dashboard, logo, watermark or explanatory panel.
