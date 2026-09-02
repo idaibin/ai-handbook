@@ -90,7 +90,7 @@ execution_history:
   failure_class: FAIL_PROVIDER_OUTPUT_ROUTING
   completed_at: 2026-09-02T15:30:47+09:00
   visual_identity_contract:
-    status: completed_pending_final_readback
+    status: completed_synced
     path: research/story-studio/2026-09-02-banchao-xhs-p01-visual-identity-contract.md
     github_commit: a55bc5f593f390675da1a1e27171af02f5949b74
     content_sha256: 4014cff4147237256a5895c37e3abf7654073a38b68e5107525c3a1dd58716cd
@@ -147,7 +147,42 @@ execution_history:
     condition: two_consecutive_report_or_dashboard_outputs
     repeated_continue_behavior: do_not_call_failed_route_without_new_binding_evidence
 sync:
-  status: pending_final_readback
+  status: synced
+  verified_at: 2026-09-02T15:39:00+09:00
+  readback:
+    github_contract:
+      result: pass
+      blob_sha: 67b52d2053db84cab1e9710ced607337712a7892
+    github_routing_incident:
+      result: pass
+      blob_sha: e12fbba51937c2b6ccec4f00970eb2c1a287c65e
+    github_state_before_final_commit:
+      result: pass
+      blob_sha: 602d1f5cea1dfa3c6d0ff0df3e85b238fa0e43c7
+    drive_contract:
+      result: pass
+      document_id: 1cyl2PbDBbJeA4qksbsDmkvoMravCb9rdF1QqK6UwkqA
+      revision_id: ANLCKQlKXh413ld3gMMWcV4fanu5_AE4J7H9oeUFL3Xzr9cVlELL2bUTRZrYlnepeWSmYkjuRhMYuGdTeep9Zb7dKqZTyHZYCyr3zJn8p7Y
+    drive_routing_incident:
+      result: pass
+      document_id: 16Msab0lbVmrVwY2DTR162RZ_SGjbpIEgQpqd6PnZL2U
+      revision_id: ANLCKQm6Lh0hIix7Uys08_pVDVdnDBr4R6W-KKKLXOu3odXqkb9k3rBsq2KNGCvyKMBNKxkEbf3BlFM-VwKUsBI4NtPFmuFxS90ZpoplB9Y
+    drive_task_document:
+      result: pass
+      document_id: 1XbzjUTeUJLm92_fwkHrDFmC5rs-ZxieQ0ThhMreKrAE
+      revision_id: ANLCKQmbd4WRqDl2ixzvX95yvN9yN-fOYNWEXxOpzO5sKZRPxNJF0GhJBShnA9zNbRdfWIQxcQDMWNCSLmttgj21mBeSQqrhji0VvePNGPc
+    drive_invalid_output_01:
+      result: pass
+      file_id: 1QKCR_n3gT5C7XVF2kTuLx1AXwmGFacvp
+      bytes: 1897525
+    drive_invalid_output_02:
+      result: pass
+      file_id: 1ZoGEc5VztyCxqWsCTV1wsdE7cViBdJZi
+      bytes: 1927738
+    registry_tasks: Tasks!A16:H16
+    registry_runs: Runs!A19:J19
+    registry_evidence: Evidence!A35:I35
+    registry_sync: Sync!A76:I76
   previous_task_state_modified: false
 not_verified:
 - actual_voice_duration
@@ -163,4 +198,4 @@ current_execution_unit: PILOT_EP01_VISUAL_IDENTITY_CONTRACT_AND_THREE_KEYFRAMES
 last_completed_execution_unit: PILOT_EP01_SCRIPT_DRAFT_AND_FACT_CHECK
 last_partial_execution_unit: PILOT_EP01_VISUAL_IDENTITY_CONTRACT_AND_THREE_KEYFRAMES
 next_action: PILOT_EP01_VERIFIED_IMAGE_ROUTE_BINDING_OR_ACCESSIBLE_REFERENCE_TRANSFER
-updated_at: 2026-09-02T15:30:47+09:00
+updated_at: 2026-09-02T15:39:00+09:00
