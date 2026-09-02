@@ -6,17 +6,22 @@ project_id: banchao
 registry_project_ref: story-studio
 work_item_id: xhs-history-anime-3ep-pilot
 task_key: story-studio/banchao/xhs-history-anime-3ep-pilot
-status: planned_preflight_complete
-active_binding: not_bound
-current_active_task_unchanged: TASK — Story Studio — 班超 S1 FINAL GATE
+status: active_gate_a_passed
+active_binding: active
+previous_active_task: TASK — Story Studio — 班超 S1 FINAL GATE
+task_switch:
+  trigger: exact_task_identifier
+  bound_at: 2026-09-02T12:51:46+09:00
+  previous_task_state_modified: false
 canonical: false
 production_ready: false
 publication_ready: false
 source_basis:
   github_repository: idaibin/ai-handbook
   github_branch: main
-  github_commit_at_load: 108982238f2fa591668ff69321f1385795134716
-  drive_task_doc_id: 1CJEoK7VTDAOAMosU92NaDqruGKkaxuJOJ_kx8FiLVjw
+  github_commit_at_execution_start: a7472475910ea2706981b1139953c1ae56e36c22
+  pilot_baseline_commit: 77c5cb5b44ac21b7b1716d8cc9b94fa948b93175
+  drive_task_doc_id: 1XbzjUTeUJLm92_fwkHrDFmC5rs-ZxieQ0ThhMreKrAE
   drive_story_bible_id: 1F-DnHftRIN5F4-o2M0i10EZ_d2HjL-6P
   drive_treatment_id: 1wlDngVD09q7sbL4IPtAKMiwaV-a9HP88
   primary_source: 《后汉书》卷四十七《班超传》
@@ -39,22 +44,53 @@ validation_gates:
 - comprehension
 - production_sustainability
 - publication
-execution_record:
-  unit: PILOT_BASELINE_AND_FACT_BOUNDARY_PREFLIGHT
+execution_history:
+- unit: PILOT_BASELINE_AND_FACT_BOUNDARY_PREFLIGHT
   result: PASS_WITH_CORRECTIONS
   completed_at: 2026-09-01T16:53:00+09:00
   verified:
   - source basis loaded
-  - scope isolated from current S1 task
+  - scope isolated from S1 FINAL GATE
   - three-episode recut is feasible
   - throw-brush-to-immediate-enlistment false causality corrected
   - P03 terminology fixed to 吏士三十六人
   - three posts are insufficient to prove a stable traffic lane
-  not_verified:
-  - visual distinctiveness
-  - cross-episode identity consistency
-  - audience comprehension
-  - actual production cost
-  - Xiaohongshu publication performance
-next_action: PILOT_EP01_SCRIPT_DRAFT_AND_FACT_CHECK
-updated_at: 2026-09-01T16:53:00+09:00
+- unit: PILOT_EP01_SCRIPT_DRAFT_AND_FACT_CHECK
+  result: PASS_WITH_VISUAL_HOLDS
+  completed_at: 2026-09-02T12:51:46+09:00
+  artifact:
+    path: research/story-studio/2026-09-02-banchao-xhs-p01-script-claim-ledger.md
+    github_commit: e764620fcf368661d9243aeae431730653ec81b2
+    sha256: c0d6cbacbdf0bb3fcf0ef191579c2c68f4700afbb8c4b8c411fb492310ba5244
+  mechanical_checks:
+    target_duration_seconds: 72
+    shot_count: 7
+    major_location_count: 1
+    speaking_roles: 2
+    script_claims: 11
+  gate_a:
+    claim_traceability: pass
+    adaptation_labels: pass
+    chronology: pass
+    single_episode_story: pass
+    platform_contract: pass_static
+    actual_voice_timing: not_verified
+  visual_holds:
+  - Ban Chao identity and labor-state design
+  - official copying-space structure
+  - writing substrate and tool forms
+  - costume hair lamp and currency details
+  - throw-brush hand-prop-surface continuity
+not_verified:
+- actual_voice_duration
+- visual_distinctiveness
+- cross_episode_identity_consistency
+- material_culture_accuracy
+- blind_visual_review
+- audience_comprehension
+- actual_production_cost
+- Xiaohongshu publication performance
+current_execution_unit: none
+last_completed_execution_unit: PILOT_EP01_SCRIPT_DRAFT_AND_FACT_CHECK
+next_action: PILOT_EP01_VISUAL_IDENTITY_CONTRACT_AND_THREE_KEYFRAMES
+updated_at: 2026-09-02T12:51:46+09:00
