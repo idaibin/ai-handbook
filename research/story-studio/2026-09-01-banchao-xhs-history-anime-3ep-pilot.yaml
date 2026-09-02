@@ -1,4 +1,4 @@
-schema_version: '1.1'
+schema_version: '1.2'
 task_identifier: TASK — Story Studio — 班超 小红书历史动漫三集试播验证
 task_id: story-studio-banchao-xhs-history-anime-3ep-pilot
 system_id: story-studio
@@ -6,25 +6,23 @@ project_id: banchao
 registry_project_ref: story-studio
 work_item_id: xhs-history-anime-3ep-pilot
 task_key: story-studio/banchao/xhs-history-anime-3ep-pilot
-status: active_gate_b_blocked_generation_route_hard_stop
+status: active_gate_b_waiting_isolated_media_execution
 active_binding: active
 previous_active_task: TASK — Story Studio — 班超 S1 FINAL GATE
-task_switch:
-  trigger: exact_task_identifier
-  bound_at: 2026-09-02T12:51:46+09:00
-  previous_task_state_modified: false
 canonical: false
 production_ready: false
 publication_ready: false
+
 source_basis:
   github_repository: idaibin/ai-handbook
   github_branch: main
-  github_commit_at_unit_start: ee678d47d35502643bb613b5a57a507a7960a7ac
+  github_commit_at_unit_start: 57c7ec9bf597e52b2428c631fc03d4958abffcd5
   pilot_baseline_commit: 77c5cb5b44ac21b7b1716d8cc9b94fa948b93175
   drive_task_doc_id: 1XbzjUTeUJLm92_fwkHrDFmC5rs-ZxieQ0ThhMreKrAE
   drive_story_bible_id: 1F-DnHftRIN5F4-o2M0i10EZ_d2HjL-6P
   drive_treatment_id: 1wlDngVD09q7sbL4IPtAKMiwaV-a9HP88
   primary_source: 《后汉书》卷四十七《班超传》
+
 pilot_episodes:
 - id: P01
   title: 佣书者
@@ -38,30 +36,23 @@ pilot_episodes:
   title: 礼变
   duration_seconds: 75-90
   question: 怎样从礼遇变化判断危险已经到来？
-validation_gates:
-- historical_and_script
-- visual_and_character
-- comprehension
-- production_sustainability
-- publication
+
 execution_history:
 - unit: PILOT_BASELINE_AND_FACT_BOUNDARY_PREFLIGHT
   result: PASS_WITH_CORRECTIONS
-  completed_at: 2026-09-01T16:53:00+09:00
+  completed_at: 2026-09-01T07:53:00Z
   verified:
   - source basis loaded
   - scope isolated from S1 FINAL GATE
-  - three-episode recut is feasible
   - throw-brush-to-immediate-enlistment false causality corrected
   - P03 terminology fixed to 吏士三十六人
+
 - unit: PILOT_EP01_SCRIPT_DRAFT_AND_FACT_CHECK
   result: PASS_WITH_VISUAL_HOLDS
-  completed_at: 2026-09-02T13:00:01+09:00
+  completed_at: 2026-09-02T04:00:01Z
   artifact:
     path: research/story-studio/2026-09-02-banchao-xhs-p01-script-claim-ledger.md
     github_commit: e764620fcf368661d9243aeae431730653ec81b2
-    github_blob_sha: a4f95ecfeb6cdb43eebe929d3e281cc07177a1ed
-    content_sha256: c0d6cbacbdf0bb3fcf0ef191579c2c68f4700afbb8c4b8c411fb492310ba5244
     drive_document_id: 1c27ZCBInvWrqoYre48DKTrzPQoNsbheXoBCyAki-kgo
   mechanical_checks:
     target_duration_seconds: 72
@@ -70,128 +61,111 @@ execution_history:
     speaking_roles: 2
     script_claims: 11
   gate_a: PASS_WITH_VISUAL_HOLDS
+
 - unit: PILOT_EP01_VISUAL_IDENTITY_CONTRACT_AND_THREE_KEYFRAMES
   result: PARTIAL_CONTRACT_COMPLETE_KEYFRAMES_BLOCKED
   failure_class: FAIL_PROVIDER_OUTPUT_ROUTING
-  completed_at: 2026-09-02T15:30:47+09:00
-  visual_identity_contract:
-    status: completed_synced
-    path: research/story-studio/2026-09-02-banchao-xhs-p01-visual-identity-contract.md
-    github_commit: a55bc5f593f390675da1a1e27171af02f5949b74
-    content_sha256: 4014cff4147237256a5895c37e3abf7654073a38b68e5107525c3a1dd58716cd
+  completed_at: 2026-09-02T06:30:47Z
+  visual_identity_contract_v01:
+    status: superseded
+    historical_path: research/story-studio/2026-09-02-banchao-xhs-p01-visual-identity-contract.md
     drive_document_id: 1cyl2PbDBbJeA4qksbsDmkvoMravCb9rdF1QqK6UwkqA
-    identity_reference:
-      drive_file_id: 1RP2qjzN0DP6hkuy2XnsA1mZCttPj8mOr
-      sha256: 86f95cd86c9d05994c8756fbf520976bf40b44192c36daf3c03906cf95748ce1
-      dimensions: 1672x941
-      use_scope: identity_reference_only
-  generation_attempts:
-  - attempt_id: P01_KEYFRAMES_IMAGE_GEN_ATTEMPT_01
-    generation_id: 5eea2af5-6400-4373-baad-513a14edd24f
-    result: INVALID_OUTPUT_REPORT_INFOGRAPHIC
-    sha256: 3f77f302d537435e11af87c3dab037141a9db68de8e01a25c81e777a53456bcc
-    dimensions: 1024x1536
-    drive_evidence_file_id: 1QKCR_n3gT5C7XVF2kTuLx1AXwmGFacvp
-  - attempt_id: P01_KEYFRAMES_IMAGE_GEN_ATTEMPT_02
-    generation_id: 2ea2205b-19f8-40e8-8ba7-78ab2cffac8b
-    result: INVALID_OUTPUT_REPORT_DASHBOARD
-    sha256: 17deb7f208d96f2f13f205de49d259a3dfd6a9e8e1c59e5a7f4a637d17c6af1c
-    dimensions: 1536x1024
-    drive_evidence_file_id: 1ZoGEc5VztyCxqWsCTV1wsdE7cViBdJZi
-  fallback_route:
-    tool: Adobe
-    init: pass
-    reference_transfer_attempts: 3
-    reference_transfer_result: fail_forbidden_asset_not_accessible
-    firefly_generation_called: false
-    output_count: 0
-  routing_incident:
-    path: research/story-studio/2026-09-02-banchao-xhs-p01-keyframe-routing-incident.md
-    github_commit: 1308ce28ed3dfd324d5b9beac423c7980aa6ba43
-    drive_document_id: 16Msab0lbVmrVwY2DTR162RZ_SGjbpIEgQpqd6PnZL2U
-- unit: PILOT_EP01_VERIFIED_IMAGE_ROUTE_BINDING_OR_ACCESSIBLE_REFERENCE_TRANSFER
-  result: FAIL_SAME_ROUTE_REPRODUCED
-  failure_class: FAIL_PROVIDER_OUTPUT_ROUTING_REPRODUCED
-  completed_at: 2026-09-02T16:14:47+09:00
-  requested_action:
-  - bind Variant B as the only identity anchor
-  - generate only P01-KF01 as one independent portrait character scene
-  - exclude all text tables UI infographics frames logos and watermarks
-  adobe_reference_transfer_retry:
-    result: fail_forbidden_asset_not_accessible
-    attempts_this_unit: 2
-  image_gen_attempt:
-    attempt_id: P01_KEYFRAMES_IMAGE_GEN_ATTEMPT_03
-    tool: image_gen
-    requested_outputs: 1
-    returned_outputs: 1
-    generation_id: 5d46729a-0206-4114-b4a0-f6f06d0d64c5
-    edit_op: null
-    parent_generation_id: null
-    result: INVALID_OUTPUT_REPORT_INFOGRAPHIC
-    sha256: 9c3dbfe569928161f60e93815c1bf06eba678ccd0e9d3bceff3ec72530e47f09
-    bytes: 1972510
-    dimensions: 1178x1335
-    drive_evidence_file_id: 1A3dpb1Hmr99KZsb_BY-dYlVPFs_TM6_1
-  evidence:
-    path: research/story-studio/2026-09-02-banchao-xhs-p01-keyframe-routing-attempt03.md
-    github_commit: 3d8cb26f4c363bf8fe06298de52a6e89b0242938
-    github_blob_sha: 14d99a69f95e717a0caa59ddae9d5f72b99b2ee4
-  conclusion:
+  failed_attempts:
+    count: 3
     valid_keyframes: 0
-    required_keyframes: 3
+    fingerprints:
+    - report_infographic_1024x1536
+    - report_dashboard_1536x1024
+    - report_infographic_1178x1335
+    conclusion: reference_binding_not_verified
+  incident:
+    path: research/story-studio/2026-09-02-banchao-xhs-p01-keyframe-routing-incident.md
+    drive_document_id: 16Msab0lbVmrVwY2DTR162RZ_SGjbpIEgQpqd6PnZL2U
+
+- unit: PILOT_EP01_MEDIA_ISOLATION_POLICY_SYNC_AND_KF01_CAPSULE_PREPARATION
+  result: PASS_CONTROL_PLANE
+  completed_at: 2026-09-02T09:22:09Z
+  verified:
+  - updated project instruction contains Media Asset Generation Isolation
+  - direct media generation in control project is superseded
+  - old control-context image route remains CIRCUIT_OPEN_HARD_STOP
+  - P01 visual contract migrated to isolated media execution
+  - exactly one asset P01-KF01 is authorized in the media package
+  - reference image, pure media input and acceptance checklist packaged together
+  artifacts:
+    isolation_policy:
+      path: research/story-studio/2026-09-02-media-asset-generation-isolation-policy.md
+      github_commit: 7bc9c243097968846a7b03e8a2e62aa0c71ce4d9
+      drive_file_id: 1wSKJTTkpMhk4Jcs1bKAKv7SihmcGjBHh
+    previous_policy_disposition:
+      path: research/story-studio/2026-08-21-assistant-owned-non-video-execution-policy.md
+      status: superseded_for_media_execution
+      github_commit: 55ff27a207c3f54d7de8c3df2229cc637082815a
+    visual_contract_v02:
+      path: research/story-studio/2026-09-02-banchao-xhs-p01-visual-identity-contract-v0.2.md
+      github_commit: 34e8c751e43ad587a6de013b05641fec221942f7
+      drive_document_id: 1i1JOpsCGcPsPddvHSFwatXvSl3QZmPUh47mGLsSmyow
+    media_input:
+      path: research/story-studio/2026-09-02-banchao-xhs-p01-kf01-media-input.txt
+      github_commit: 8303660586830f8220e15268d311cf8da5d8e8ad
+      sha256: c38b20ad00251649b3f2f66e4aff9b8984726dc5071261d53d40cdcf55a5ba62
+    isolated_capsule:
+      path: research/story-studio/2026-09-02-banchao-xhs-p01-kf01-isolated-media-capsule.yaml
+      github_commit: f9a368f0c1ad228803f0dda2c0d10ff8c03a7cdf
+      drive_file_id: 1pLyIgUiyOqejbJKg49m1BRvaOihNIV_1
+    media_package:
+      drive_file_id: 14qXzECtJmKMdrDn93V_07Axs7zpFrMUm
+      sha256: 836addefcfe0e78e9be22ee9e06b9747640f63f0ee882b356c833d377d384962
+      contents:
+      - P01-KF01_REFERENCE.png
+      - P01-KF01_MEDIA_INPUT.txt
+      - P01-KF01_ACCEPTANCE.txt
+
+media_execution:
+  control_project:
+    media_tool_calls: prohibited
+  isolated_media_context:
+    status: ready_waiting_execution
+    active_asset_id: P01-KF01_SCRIBE_STATE
+    single_asset_only: true
+    reference_required: true
+    reference_drive_file_id: 1RP2qjzN0DP6hkuy2XnsA1mZCttPj8mOr
+    reference_sha256: 86f95cd86c9d05994c8756fbf520976bf40b44192c36daf3c03906cf95748ce1
+    reference_dimensions: 1672x941
     reference_binding_verified: false
-    gate_b: BLOCKED_NOT_RUN
+    package_drive_file_id: 14qXzECtJmKMdrDn93V_07Axs7zpFrMUm
+    on_missing_binding: STOP_BEFORE_TOOL
+
 routing_control:
-  image_gen_current_context: CIRCUIT_OPEN_HARD_STOP
+  control_context_image_gen_route: CIRCUIT_OPEN_HARD_STOP
   consecutive_invalid_report_outputs: 3
   adobe_reference_transfer: BLOCKED_FORBIDDEN
-  repeated_continue_behavior: do_not_call_image_tools_without_new_provider_binding_evidence
+  prompt_only_retry_is_recovery_evidence: false
   invalid_output_disposition: evidence_only_never_crop_or_promote
-gates:
+
+validation_gates:
   gate_a: PASS_WITH_VISUAL_HOLDS
   gate_b: BLOCKED_NOT_RUN
   gate_c: NOT_STARTED
   gate_d: NOT_STARTED
   gate_e: NOT_STARTED
-sync:
-  status: synced
-  verified_at: 2026-09-02T16:18:19+09:00
-  readback:
-    github_state_before_final_sync_commit:
-      result: pass
-      blob_sha: 3dec5bfa07f8164ab0ed9f05dd47e9ab1828f2a5
-    github_attempt03:
-      result: pass
-      blob_sha: 14d99a69f95e717a0caa59ddae9d5f72b99b2ee4
-    drive_task_document:
-      result: pass
-      revision_id: AIroW37omASVPtpHx8dQuEdP5K8FX9NvN1JhtSArPKN80LcWP8pk9v1XrGYtExI_IgvUZD8ejEhoSHaoEaELTz7Qo7utNTsm3uTJqIOHjSo
-    drive_routing_incident:
-      result: pass
-      revision_id: ANLCKQlJTcTajEuyEDGG-d8wIQGogw7oAkyzrKSTzIKr7aLFtOcJJpghqRqCRd0z5ikHsnJBQH5WPntXGc8TmVZbnPapgH4M0erji_EC4Yk
-    drive_invalid_output_03:
-      result: pass
-      file_id: 1A3dpb1Hmr99KZsb_BY-dYlVPFs_TM6_1
-      bytes: 1972510
-    registry_tasks: Tasks!A16:H16
-    registry_runs: Runs!A20:J20
-    registry_evidence: Evidence!A36:I36
-    registry_sync: Sync!A77:I77
-  previous_task_state_modified: false
+
 not_verified:
-- actual_voice_duration
-- visual_distinctiveness
-- cross_episode_identity_consistency
+- reference_binding_in_isolated_media_context
+- actual_provider_model_and_version
+- valid_kf01_output
+- cross_image_identity_consistency
 - material_culture_accuracy
-- blind_visual_review
-- audience_comprehension
+- blind_review
+- actual_voice_duration
 - actual_production_cost
-- Xiaohongshu publication_performance
+- Xiaohongshu_publication_performance
 - commercial_rights
-current_execution_unit: PILOT_EP01_VERIFIED_IMAGE_ROUTE_BINDING_OR_ACCESSIBLE_REFERENCE_TRANSFER
-last_completed_execution_unit: PILOT_EP01_SCRIPT_DRAFT_AND_FACT_CHECK
-last_partial_execution_unit: PILOT_EP01_VISUAL_IDENTITY_CONTRACT_AND_THREE_KEYFRAMES
-last_failed_execution_unit: PILOT_EP01_VERIFIED_IMAGE_ROUTE_BINDING_OR_ACCESSIBLE_REFERENCE_TRANSFER
-next_action: PILOT_EP01_ALTERNATE_IMAGE_PROVIDER_WITH_ACCESSIBLE_REFERENCE_REQUIRED
-updated_at: 2026-09-02T16:18:19+09:00
+
+last_completed_execution_unit: PILOT_EP01_MEDIA_ISOLATION_POLICY_SYNC_AND_KF01_CAPSULE_PREPARATION
+current_execution_unit: PILOT_EP01_KF01_EXECUTE_IN_ISOLATED_MEDIA_CONTEXT
+current_execution_status: waiting_isolated_media_context
+next_action: PILOT_EP01_KF01_EXECUTE_IN_ISOLATED_MEDIA_CONTEXT
+sync:
+  status: pending_final_readback
+updated_at: 2026-09-02T09:22:09Z
