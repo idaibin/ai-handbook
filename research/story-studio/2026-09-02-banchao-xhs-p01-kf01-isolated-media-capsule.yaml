@@ -1,0 +1,69 @@
+schema: story-studio/isolated-media-capsule/v1
+capsule_id: BANCHAO_XHS_P01_KF01_ISOLATED_MEDIA_CAPSULE_V1
+asset_id: P01-KF01_SCRIBE_STATE
+execution_surface: isolated_media_context
+context_isolation_required: true
+single_asset_only: true
+control_project_media_tool_calls: prohibited
+policy:
+  path: research/story-studio/2026-09-02-media-asset-generation-isolation-policy.md
+reference:
+  filename: P01-KF01_REFERENCE.png
+  source_drive_file_id: 1RP2qjzN0DP6hkuy2XnsA1mZCttPj8mOr
+  sha256: 86f95cd86c9d05994c8756fbf520976bf40b44192c36daf3c03906cf95748ce1
+  dimensions: 1672x941
+media_input:
+  path: research/story-studio/2026-09-02-banchao-xhs-p01-kf01-media-input.txt
+  sha256: c38b20ad00251649b3f2f66e4aff9b8984726dc5071261d53d40cdcf55a5ba62
+package:
+  drive_file_id: 14qXzECtJmKMdrDn93V_07Axs7zpFrMUm
+  sha256: 836addefcfe0e78e9be22ee9e06b9747640f63f0ee882b356c833d377d384962
+  contents:
+    - P01-KF01_REFERENCE.png
+    - P01-KF01_MEDIA_INPUT.txt
+    - P01-KF01_ACCEPTANCE.txt
+control_capsule_drive_file_id: 1pLyIgUiyOqejbJKg49m1BRvaOihNIV_1
+visual_contract_drive_document_id: 1i1JOpsCGcPsPddvHSFwatXvSl3QZmPUh47mGLsSmyow
+context_allowlist:
+  - asset_id
+  - current_visual_target
+  - required_reference_image
+  - identity_contract
+  - scene_contract
+  - composition
+  - style
+  - negative_constraints
+context_denylist:
+  - task_state
+  - gate
+  - registry
+  - execution_record
+  - commit
+  - sha256
+  - github_status
+  - drive_status
+  - evidence_report
+  - next_action
+preconditions:
+  reference_bound_in_isolated_context: required
+  unique_reference_image: required
+  provider_supports_reference_binding: required
+  prior_control_context_route: prohibited
+on_precondition_failure: STOP_BEFORE_TOOL
+acceptance:
+  - exactly_one_independent_9_16_image
+  - same_face_hair_age_and_body_as_reference
+  - civilian_copyist_state
+  - coherent_hand_brush_writing_surface
+  - plain_unpatterned_clothing
+  - no_readable_text
+  - no_modern_objects
+  - no_report_dashboard_table_ui_or_title
+return_required:
+  - provider_native_image
+  - exact_dimensions
+  - provider_receipt_or_generation_metadata
+  - reference_binding_evidence
+  - original_bytes
+status: ready_waiting_isolated_media_execution
+created_at_utc: '2026-09-02T09:22:09Z'
