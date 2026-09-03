@@ -1,4 +1,4 @@
-schema_version: '1.2'
+schema_version: '1.3'
 task_identifier: TASK — Story Studio — 班超 小红书历史动漫三集试播验证
 task_id: story-studio-banchao-xhs-history-anime-3ep-pilot
 system_id: story-studio
@@ -6,7 +6,7 @@ project_id: banchao
 registry_project_ref: story-studio
 work_item_id: xhs-history-anime-3ep-pilot
 task_key: story-studio/banchao/xhs-history-anime-3ep-pilot
-status: active_gate_b_waiting_isolated_media_execution
+status: active_gate_b_kf02_waiting_isolated_media_execution
 active_binding: active
 previous_active_task: TASK — Story Studio — 班超 S1 FINAL GATE
 canonical: false
@@ -16,12 +16,13 @@ publication_ready: false
 source_basis:
   github_repository: idaibin/ai-handbook
   github_branch: main
-  github_commit_at_unit_start: 57c7ec9bf597e52b2428c631fc03d4958abffcd5
+  github_commit_at_unit_start: 4b8db22c4253d3c2694b13371da2be108b3cfb39
   pilot_baseline_commit: 77c5cb5b44ac21b7b1716d8cc9b94fa948b93175
   drive_task_doc_id: 1XbzjUTeUJLm92_fwkHrDFmC5rs-ZxieQ0ThhMreKrAE
   drive_story_bible_id: 1F-DnHftRIN5F4-o2M0i10EZ_d2HjL-6P
   drive_treatment_id: 1wlDngVD09q7sbL4IPtAKMiwaV-a9HP88
   primary_source: 《后汉书》卷四十七《班超传》
+  execution_history_authority: Drive Task document
 
 pilot_episodes:
 - id: P01
@@ -42,7 +43,6 @@ execution_history:
   result: PASS_WITH_CORRECTIONS
   completed_at: 2026-09-01T07:53:00Z
   verified:
-  - source basis loaded
   - scope isolated from S1 FINAL GATE
   - throw-brush-to-immediate-enlistment false causality corrected
   - P03 terminology fixed to 吏士三十六人
@@ -66,17 +66,9 @@ execution_history:
   result: PARTIAL_CONTRACT_COMPLETE_KEYFRAMES_BLOCKED
   failure_class: FAIL_PROVIDER_OUTPUT_ROUTING
   completed_at: 2026-09-02T06:30:47Z
-  visual_identity_contract_v01:
-    status: superseded
-    historical_path: research/story-studio/2026-09-02-banchao-xhs-p01-visual-identity-contract.md
-    drive_document_id: 1cyl2PbDBbJeA4qksbsDmkvoMravCb9rdF1QqK6UwkqA
   failed_attempts:
     count: 3
     valid_keyframes: 0
-    fingerprints:
-    - report_infographic_1024x1536
-    - report_dashboard_1536x1024
-    - report_infographic_1178x1335
     conclusion: reference_binding_not_verified
   incident:
     path: research/story-studio/2026-09-02-banchao-xhs-p01-keyframe-routing-incident.md
@@ -86,114 +78,125 @@ execution_history:
   result: PASS_CONTROL_PLANE
   completed_at: 2026-09-02T09:34:07Z
   verified:
-  - updated project instruction contains Media Asset Generation Isolation
-  - direct media generation in the control project is superseded
-  - old control-context image route remains CIRCUIT_OPEN_HARD_STOP
+  - control and media execution surfaces separated
   - P01 visual contract migrated to isolated media execution
-  - exactly one asset P01-KF01 is authorized in the media package
-  - reference image, pure media input and acceptance checklist are packaged together
-  - Drive raw policy, capsule and ZIP are byte-identical to local prepared files
-  - ZIP contains exactly three expected files and testzip passes
-  - GitHub and Drive artifacts plus Registry rows were read back
+  - KF01 single-asset media package validated and synced
   artifacts:
-    isolation_policy:
-      path: research/story-studio/2026-09-02-media-asset-generation-isolation-policy.md
-      github_commit: 7bc9c243097968846a7b03e8a2e62aa0c71ce4d9
-      github_blob_sha: 9e49f6134dcab1de650a08f7b46006da7ae15663
-      drive_file_id: 1wSKJTTkpMhk4Jcs1bKAKv7SihmcGjBHh
-      drive_sha256: f60199a757a8550354a87b183a6f17e4b02824fedbb45d88025d254bdd15c48a
-      drive_bytes: 3003
-    previous_policy_disposition:
-      path: research/story-studio/2026-08-21-assistant-owned-non-video-execution-policy.md
-      status: superseded_for_media_execution
-      github_commit: 55ff27a207c3f54d7de8c3df2229cc637082815a
-      github_blob_sha: 0b38572f410533e53a7309b3c041a4bc7ddb4deb
-    visual_contract_v02:
-      path: research/story-studio/2026-09-02-banchao-xhs-p01-visual-identity-contract-v0.2.md
-      github_commit: 34e8c751e43ad587a6de013b05641fec221942f7
-      github_blob_sha: 76f8f954fce5310b822f7c5b75e6db8d0d0e6795
-      drive_document_id: 1i1JOpsCGcPsPddvHSFwatXvSl3QZmPUh47mGLsSmyow
-      drive_revision_id: ANLCKQnmaQTvTnBAcBJYak9D4krVN_Oz6gpAsdt-efdPkJyCvquKKXhFiRundZa_B1kNTVyzsXxGCyasenIq16oGeyljnzgJ-Y3dXEMiiBc
-    media_input:
-      path: research/story-studio/2026-09-02-banchao-xhs-p01-kf01-media-input.txt
-      github_commit: 8303660586830f8220e15268d311cf8da5d8e8ad
-      github_blob_sha: 9d48e588a6e744ae1d67c39d380c22779f6f2369
-      content_sha256: c38b20ad00251649b3f2f66e4aff9b8984726dc5071261d53d40cdcf55a5ba62
-    isolated_capsule:
-      path: research/story-studio/2026-09-02-banchao-xhs-p01-kf01-isolated-media-capsule.yaml
-      github_commit: f9a368f0c1ad228803f0dda2c0d10ff8c03a7cdf
-      github_blob_sha: 431b5bb6aca438649600b41e1d31c9dde26412c5
-      drive_file_id: 1pLyIgUiyOqejbJKg49m1BRvaOihNIV_1
-      drive_sha256: 23c0238a9af96ada7840384d88d63ec307071a2472408220b74ff65e6e9fd7dd
-      drive_bytes: 1319
-    media_package:
-      drive_file_id: 14qXzECtJmKMdrDn93V_07Axs7zpFrMUm
-      sha256: 836addefcfe0e78e9be22ee9e06b9747640f63f0ee882b356c833d377d384962
-      bytes: 1985408
-      zip_test: pass
-      contents:
-      - P01-KF01_REFERENCE.png
-      - P01-KF01_MEDIA_INPUT.txt
-      - P01-KF01_ACCEPTANCE.txt
-    drive_task_document:
-      document_id: 1XbzjUTeUJLm92_fwkHrDFmC5rs-ZxieQ0ThhMreKrAE
-      revision_id: ANLCKQlz3RvumpZfeIcLKgw_mrQ0MfHNbsSC4NyLap6rE_rGOfBfcmVnb_4qQxKEkOajjelP10CuuiE55ONOhEMhnxCkR0cQ_Rrn5goQSt0
-    registry:
-      tasks: Tasks!A16:H16
-      runs: Runs!A21:J21
-      evidence: Evidence!A37:I37
-      sync: Sync!A78:I78
+    policy_path: research/story-studio/2026-09-02-media-asset-generation-isolation-policy.md
+    visual_contract_path: research/story-studio/2026-09-02-banchao-xhs-p01-visual-identity-contract-v0.2.md
+    kf01_package_drive_file_id: 14qXzECtJmKMdrDn93V_07Axs7zpFrMUm
+
+- unit: PILOT_EP01_KF01_RETURN_REVIEW_AND_KF02_AUTHORIZATION
+  result: PASS_CANDIDATE_WITH_HOLDS
+  completed_at: 2026-09-03T06:02:28Z
+  kf01:
+    asset_id: P01-KF01_SCRIBE_STATE
+    status: visual_candidate_accepted_lineage_incomplete
+    source: user_returned_attachment
+    chat_file_id: file_00000000105881f5ba346b61db2aeb32
+    format: PNG
+    dimensions: 941x1672
+    mode: RGBA
+    bytes: 3825728
+    sha256: 5a0358c4c90826c14c3eeb882864c2d65c95b1cdfe3ac2bc0fce771304bfc881
+    drive_asset_file_id: 1G9igwcGXes_KLPrt8ZG41EOyw3UN6kVp
+    drive_receipt_file_id: 1N5ZP8_th4hBSmFeQXPPR1pik7u4HhSSC
+    provider: not_verified
+    reference_binding_metadata: absent
+  review:
+    result: PASS_CANDIDATE_WITH_HOLDS
+    github_path: research/story-studio/2026-09-03-banchao-xhs-p01-kf01-visual-review.md
+    github_commit: c1bb6da707a5d78fe85d4f596e4edbeab80de456
+    drive_document_id: 1su8HGGLTTZNBnNLbKQaXkWRJIPnN6KoQiTVcuXgScqQ
+    drive_revision_id: ANLCKQkfg3qOQ5opwmBZHwuTH888GmiSONGMZgTuci6YnzX7UF0x1uw_q3haEtFq4rUSsKJayEhU_CIYRfAjvRQHzU3_ZHrg3JLu_W4CevM
+  verified:
+  - exactly one independent image
+  - near-exact 9:16 aspect ratio
+  - same-person visual identity accepted with minor age and bun-size drift
+  - civilian copyist state readable
+  - hands brush and writing surface coherent
+  - plain unpatterned clothing
+  - no obvious modern objects
+  - no readable text
+  - no report or dashboard layout
+  holds:
+  - provider receipt and explicit reference-binding metadata absent
+  - later frames must prevent further age or bun-size drift
+  - later frames must avoid Edo ronin samurai kimono and shoji visual coding
+  authorization:
+    kf02_authorized: true
+    kf03_authorized: false
 
 media_execution:
   control_project:
     media_tool_calls: prohibited
   isolated_media_context:
     status: ready_waiting_execution
-    active_asset_id: P01-KF01_SCRIBE_STATE
+    active_asset_id: P01-KF02_LONG_LABOR_STATE
     single_asset_only: true
-    reference_required: true
-    reference_drive_file_id: 1RP2qjzN0DP6hkuy2XnsA1mZCttPj8mOr
-    reference_sha256: 86f95cd86c9d05994c8756fbf520976bf40b44192c36daf3c03906cf95748ce1
-    reference_dimensions: 1672x941
-    reference_binding_verified: false
-    package_drive_file_id: 14qXzECtJmKMdrDn93V_07Axs7zpFrMUm
+    references:
+      identity_root:
+        drive_file_id: 1RP2qjzN0DP6hkuy2XnsA1mZCttPj8mOr
+        sha256: 86f95cd86c9d05994c8756fbf520976bf40b44192c36daf3c03906cf95748ce1
+        dimensions: 1672x941
+      continuity_kf01:
+        drive_file_id: 1G9igwcGXes_KLPrt8ZG41EOyw3UN6kVp
+        sha256: 5a0358c4c90826c14c3eeb882864c2d65c95b1cdfe3ac2bc0fce771304bfc881
+        dimensions: 941x1672
+    package:
+      drive_file_id: 1EHGRp_opYr1QuC-JtCKUHepFlRA0VBxW
+      sha256: 93994da9fd53f82487ec7e44c7a6d85dcc05c2cc2f7b89ee509eb736fca182bc
+      contents:
+      - P01-KF02_IDENTITY_REFERENCE.png
+      - P01-KF02_CONTINUITY_REFERENCE.png
+      - P01-KF02_MEDIA_INPUT.txt
+      - P01-KF02_ACCEPTANCE.txt
+    capsule:
+      github_path: research/story-studio/2026-09-03-banchao-xhs-p01-kf02-isolated-media-capsule.yaml
+      github_commit: 4bf082b831d7c939b117c171a592d3a137d43768
+      drive_file_id: 1jmHSMjXEoZTAg1dGha1rkJis5P2QzdFj
+    media_input:
+      github_path: research/story-studio/2026-09-03-banchao-xhs-p01-kf02-media-input.txt
+      github_commit: a7129d331658b559331bde3f5536893b3313d444
+    acceptance:
+      github_path: research/story-studio/2026-09-03-banchao-xhs-p01-kf02-acceptance.txt
+      github_commit: c5be03010d6cea2bedc406a1e51e1af700440cac
     on_missing_binding: STOP_BEFORE_TOOL
 
 routing_control:
   control_context_image_gen_route: CIRCUIT_OPEN_HARD_STOP
-  consecutive_invalid_report_outputs: 3
-  adobe_reference_transfer: BLOCKED_FORBIDDEN
-  prompt_only_retry_is_recovery_evidence: false
   invalid_output_disposition: evidence_only_never_crop_or_promote
 
 validation_gates:
   gate_a: PASS_WITH_VISUAL_HOLDS
-  gate_b: BLOCKED_NOT_RUN
+  gate_b:
+    status: IN_PROGRESS
+    visual_valid_keyframes: 1/3
+    evidence_complete_keyframes: 0/3
+    kf01: PASS_CANDIDATE_WITH_HOLDS
+    kf02: AUTHORIZED_WAITING_ISOLATED_EXECUTION
+    kf03: NOT_AUTHORIZED
   gate_c: NOT_STARTED
   gate_d: NOT_STARTED
   gate_e: NOT_STARTED
 
 not_verified:
-- reference_binding_in_isolated_media_context
-- actual_provider_model_and_version
-- valid_kf01_output
+- provider_and_model_for_kf01
+- explicit_reference_binding_for_kf01
+- kf02_output
 - cross_image_identity_consistency
-- material_culture_accuracy
+- material_culture_accuracy_across_three_frames
 - blind_review
 - actual_voice_duration
 - actual_production_cost
 - Xiaohongshu_publication_performance
 - commercial_rights
 
-last_completed_execution_unit: PILOT_EP01_MEDIA_ISOLATION_POLICY_SYNC_AND_KF01_CAPSULE_PREPARATION
-current_execution_unit: PILOT_EP01_KF01_EXECUTE_IN_ISOLATED_MEDIA_CONTEXT
+last_completed_execution_unit: PILOT_EP01_KF01_RETURN_REVIEW_AND_KF02_AUTHORIZATION
+current_execution_unit: PILOT_EP01_KF02_EXECUTE_IN_ISOLATED_MEDIA_CONTEXT
 current_execution_status: waiting_isolated_media_context
-next_action: PILOT_EP01_KF01_EXECUTE_IN_ISOLATED_MEDIA_CONTEXT
+next_action: PILOT_EP01_KF02_EXECUTE_IN_ISOLATED_MEDIA_CONTEXT
 sync:
-  status: synced
-  verified_at: 2026-09-02T09:34:07Z
-  github_state_before_final_sync_commit:
-    commit: d1c7bdf958f8767aec43d816b8a1ac02fc85dad4
-    blob_sha: 84a3a97fc06fa045257119e1f059bcae55aeff52
+  status: pending_final_readback
   previous_task_state_modified: false
-updated_at: 2026-09-02T09:34:07Z
+updated_at: 2026-09-03T06:02:28Z
