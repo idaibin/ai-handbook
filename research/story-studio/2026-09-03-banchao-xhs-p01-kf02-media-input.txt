@@ -1,0 +1,15 @@
+asset_id: P01-KF02_LONG_LABOR_STATE
+
+Use both attached reference images:
+1. P01-KF02_IDENTITY_REFERENCE.png is the identity root anchor.
+2. P01-KF02_CONTINUITY_REFERENCE.png is the accepted scene, clothing, face-performance, low-table, writing-slip and visual-style continuity anchor.
+
+Create exactly one independent vertical 9:16 historical animation keyframe. Preserve the same adult East Asian man from both references: same narrow oval face, slightly high cheekbones, straight dense eyebrows, narrow level-set eyes, medium nose, thin lips, restrained jaw, warm brown skin, lean civilian build, compact high bun and natural loose strands. Preserve the same plain brown-grey cross-collar layered clothing, the same copying room, the same low wooden table, the same writing-slip system, the same brush family and the same textured hand-drawn 2D style.
+
+This is the later “long labor” state in the same day. Natural light has shifted toward restrained late afternoon or early evening. His shoulders and upper back sit slightly lower than in the continuity reference. He has paused writing: the brush remains in or near his right hand but is not actively making a stroke; the other hand gently flexes or massages stiff fingers. His expression shows accumulated fatigue and concentration, not despair, sleep, pain, anger or dramatic suffering. Keep him the same age; do not add wrinkles, grey hair or an older face. Increase the visible unfinished writing slips only moderately.
+
+Keep the room structure, window position, table geometry and camera family consistent with the continuity reference. Avoid visual language associated with Japanese Edo-period samurai, ronin, kimono, shoji or warrior drama. Keep the hair bun compact rather than larger or more ornamental. Maintain a restrained Eastern Han–inspired civilian copying environment.
+
+Brush: simple wood-or-bamboo shaft, soft bristles, no metal ferrule. Writing slips: narrow grouped or tied slips with abstract unreadable marks. Clothing: worn matte cloth, no patterns, embroidery, metal decoration, armor, cloak, military bracers or long decorative ribbons.
+
+Output exactly one image. No text, title, subtitle, label, table, border, interface, infographic, dashboard, logo, watermark or explanatory panel. No bound books, modern paper stacks, Western furniture, glass windows, modern stationery, coins, weapons, flags or battlefield elements.
