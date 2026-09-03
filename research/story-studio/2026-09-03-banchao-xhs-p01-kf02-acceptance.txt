@@ -1,0 +1,31 @@
+P01-KF02_LONG_LABOR_STATE acceptance checklist
+
+HARD REQUIREMENTS
+- exactly one independent image
+- vertical 9:16 composition
+- same person as both references
+- same age; no ageing or face replacement
+- same compact bun, clothing system, room, table and writing-slip system
+- visibly more fatigued than KF01 without exaggerated suffering
+- paused writing action and believable stiff-finger gesture
+- coherent hands, brush and writing surface
+- simple brush with no metal ferrule
+- plain unpatterned clothing
+- no obvious modern objects
+- no readable text
+- no report, dashboard, table, UI, title, label, logo or watermark
+
+CONTINUITY HOLDS
+- do not enlarge or ornament the bun
+- do not broaden the body into a warrior build
+- do not shift toward Edo, ronin, samurai, kimono or shoji aesthetics
+- do not change room geometry or camera family
+- do not change the textured hand-drawn historical illustration style
+
+FAIL IF
+- wrong person or clear age drift
+- heroic, military or battlefield framing
+- Japanese-period visual coding becomes dominant
+- malformed hands or brush/surface discontinuity
+- modern paper, books, furniture, glass or stationery appears
+- any readable text or report-like layout appears
