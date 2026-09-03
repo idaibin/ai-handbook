@@ -12,7 +12,6 @@ previous_active_task: TASK — Story Studio — 班超 S1 FINAL GATE
 canonical: false
 production_ready: false
 publication_ready: false
-
 source_basis:
   github_repository: idaibin/ai-handbook
   github_branch: main
@@ -23,7 +22,6 @@ source_basis:
   drive_treatment_id: 1wlDngVD09q7sbL4IPtAKMiwaV-a9HP88
   primary_source: 《后汉书》卷四十七《班超传》
   execution_history_authority: Drive Task document
-
 pilot_episodes:
 - id: P01
   title: 佣书者
@@ -37,19 +35,17 @@ pilot_episodes:
   title: 礼变
   duration_seconds: 75-90
   question: 怎样从礼遇变化判断危险已经到来？
-
 execution_history:
 - unit: PILOT_BASELINE_AND_FACT_BOUNDARY_PREFLIGHT
   result: PASS_WITH_CORRECTIONS
-  completed_at: 2026-09-01T07:53:00Z
+  completed_at: 2026-09-01 07:53:00+00:00
   verified:
   - scope isolated from S1 FINAL GATE
   - throw-brush-to-immediate-enlistment false causality corrected
   - P03 terminology fixed to 吏士三十六人
-
 - unit: PILOT_EP01_SCRIPT_DRAFT_AND_FACT_CHECK
   result: PASS_WITH_VISUAL_HOLDS
-  completed_at: 2026-09-02T04:00:01Z
+  completed_at: 2026-09-02 04:00:01+00:00
   artifact:
     path: research/story-studio/2026-09-02-banchao-xhs-p01-script-claim-ledger.md
     github_commit: e764620fcf368661d9243aeae431730653ec81b2
@@ -61,11 +57,10 @@ execution_history:
     speaking_roles: 2
     script_claims: 11
   gate_a: PASS_WITH_VISUAL_HOLDS
-
 - unit: PILOT_EP01_VISUAL_IDENTITY_CONTRACT_AND_THREE_KEYFRAMES
   result: PARTIAL_CONTRACT_COMPLETE_KEYFRAMES_BLOCKED
   failure_class: FAIL_PROVIDER_OUTPUT_ROUTING
-  completed_at: 2026-09-02T06:30:47Z
+  completed_at: 2026-09-02 06:30:47+00:00
   failed_attempts:
     count: 3
     valid_keyframes: 0
@@ -73,10 +68,9 @@ execution_history:
   incident:
     path: research/story-studio/2026-09-02-banchao-xhs-p01-keyframe-routing-incident.md
     drive_document_id: 16Msab0lbVmrVwY2DTR162RZ_SGjbpIEgQpqd6PnZL2U
-
 - unit: PILOT_EP01_MEDIA_ISOLATION_POLICY_SYNC_AND_KF01_CAPSULE_PREPARATION
   result: PASS_CONTROL_PLANE
-  completed_at: 2026-09-02T09:34:07Z
+  completed_at: 2026-09-02 09:34:07+00:00
   verified:
   - control and media execution surfaces separated
   - P01 visual contract migrated to isolated media execution
@@ -85,10 +79,9 @@ execution_history:
     policy_path: research/story-studio/2026-09-02-media-asset-generation-isolation-policy.md
     visual_contract_path: research/story-studio/2026-09-02-banchao-xhs-p01-visual-identity-contract-v0.2.md
     kf01_package_drive_file_id: 14qXzECtJmKMdrDn93V_07Axs7zpFrMUm
-
 - unit: PILOT_EP01_KF01_RETURN_REVIEW_AND_KF02_AUTHORIZATION
   result: PASS_CANDIDATE_WITH_HOLDS
-  completed_at: 2026-09-03T06:02:28Z
+  completed_at: 2026-09-03 06:02:28+00:00
   kf01:
     asset_id: P01-KF01_SCRIBE_STATE
     status: visual_candidate_accepted_lineage_incomplete
@@ -126,7 +119,6 @@ execution_history:
   authorization:
     kf02_authorized: true
     kf03_authorized: false
-
 media_execution:
   control_project:
     media_tool_calls: prohibited
@@ -162,11 +154,9 @@ media_execution:
       github_path: research/story-studio/2026-09-03-banchao-xhs-p01-kf02-acceptance.txt
       github_commit: c5be03010d6cea2bedc406a1e51e1af700440cac
     on_missing_binding: STOP_BEFORE_TOOL
-
 routing_control:
   control_context_image_gen_route: CIRCUIT_OPEN_HARD_STOP
   invalid_output_disposition: evidence_only_never_crop_or_promote
-
 validation_gates:
   gate_a: PASS_WITH_VISUAL_HOLDS
   gate_b:
@@ -179,7 +169,6 @@ validation_gates:
   gate_c: NOT_STARTED
   gate_d: NOT_STARTED
   gate_e: NOT_STARTED
-
 not_verified:
 - provider_and_model_for_kf01
 - explicit_reference_binding_for_kf01
@@ -191,12 +180,53 @@ not_verified:
 - actual_production_cost
 - Xiaohongshu_publication_performance
 - commercial_rights
-
 last_completed_execution_unit: PILOT_EP01_KF01_RETURN_REVIEW_AND_KF02_AUTHORIZATION
 current_execution_unit: PILOT_EP01_KF02_EXECUTE_IN_ISOLATED_MEDIA_CONTEXT
 current_execution_status: waiting_isolated_media_context
 next_action: PILOT_EP01_KF02_EXECUTE_IN_ISOLATED_MEDIA_CONTEXT
 sync:
-  status: pending_final_readback
+  status: synced
+  verified_at: '2026-09-03T06:12:25Z'
+  github_state_before_final_sync_commit:
+    commit: 68fc2edb5e7d9d8a45c4e3ececac025d42e270cb
+    blob_sha: 22f3a076b30fe3f9793586c82ff1e4fed209203f
+  github_review:
+    commit: c1bb6da707a5d78fe85d4f596e4edbeab80de456
+    blob_sha: f6a8d02a3f36f07bc42448bb68ef8d23dd94a4a1
+  github_kf02_media_input:
+    commit: a7129d331658b559331bde3f5536893b3313d444
+    blob_sha: aff301a01121a3952ee321dbc2cac6f3b772c9ed
+  github_kf02_acceptance:
+    commit: c5be03010d6cea2bedc406a1e51e1af700440cac
+    blob_sha: 5de5ed2d579fbbd0216860b00dbc93cfd5d60291
+  github_kf02_capsule:
+    commit: 4bf082b831d7c939b117c171a592d3a137d43768
+    blob_sha: 4cfa90504639a84f649ce0c98025be79671f46eb
+  drive_kf01:
+    file_id: 1G9igwcGXes_KLPrt8ZG41EOyw3UN6kVp
+    bytes: 3825728
+    sha256: 5a0358c4c90826c14c3eeb882864c2d65c95b1cdfe3ac2bc0fce771304bfc881
+    byte_identical_readback: true
+  drive_kf01_receipt:
+    file_id: 1N5ZP8_th4hBSmFeQXPPR1pik7u4HhSSC
+  drive_kf01_review:
+    document_id: 1su8HGGLTTZNBnNLbKQaXkWRJIPnN6KoQiTVcuXgScqQ
+    revision_id: ANLCKQkfg3qOQ5opwmBZHwuTH888GmiSONGMZgTuci6YnzX7UF0x1uw_q3haEtFq4rUSsKJayEhU_CIYRfAjvRQHzU3_ZHrg3JLu_W4CevM
+  drive_kf02_package:
+    file_id: 1EHGRp_opYr1QuC-JtCKUHepFlRA0VBxW
+    bytes: 5811713
+    sha256: 93994da9fd53f82487ec7e44c7a6d85dcc05c2cc2f7b89ee509eb736fca182bc
+    byte_identical_readback: true
+    zip_test: pass
+  drive_kf02_capsule:
+    file_id: 1jmHSMjXEoZTAg1dGha1rkJis5P2QzdFj
+  drive_task_document:
+    document_id: 1XbzjUTeUJLm92_fwkHrDFmC5rs-ZxieQ0ThhMreKrAE
+    revision_id: ANLCKQnxteP18d8F13kaqrTyCpaFmidnY0ghavRHDIDZTjQj8bWR5o1RdfRTTVZZdpoDdIQdOIW6Ga4ISokC1mBKzPURmQcyvmSCL3gKtyc
+  registry:
+    tasks: Tasks!A16:H16
+    runs: Runs!A22:J22
+    evidence: Evidence!A38:I38
+    sync: Sync!A83:I83
   previous_task_state_modified: false
-updated_at: 2026-09-03T06:02:28Z
+updated_at: '2026-09-03T06:12:25Z'
