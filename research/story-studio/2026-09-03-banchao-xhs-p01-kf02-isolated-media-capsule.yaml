@@ -1,0 +1,51 @@
+schema: story-studio/isolated-media-capsule/v1
+capsule_id: BANCHAO_XHS_P01_KF02_ISOLATED_MEDIA_CAPSULE_V1
+asset_id: P01-KF02_LONG_LABOR_STATE
+execution_surface: isolated_media_context
+context_isolation_required: true
+single_asset_only: true
+control_project_media_tool_calls: prohibited
+references:
+  identity_root:
+    filename: P01-KF02_IDENTITY_REFERENCE.png
+    source_drive_file_id: 1RP2qjzN0DP6hkuy2XnsA1mZCttPj8mOr
+    sha256: 86f95cd86c9d05994c8756fbf520976bf40b44192c36daf3c03906cf95748ce1
+    dimensions: 1672x941
+  continuity:
+    filename: P01-KF02_CONTINUITY_REFERENCE.png
+    source_status: accepted_visual_candidate
+    source_drive_file_id: 1G9igwcGXes_KLPrt8ZG41EOyw3UN6kVp
+    sha256: 5a0358c4c90826c14c3eeb882864c2d65c95b1cdfe3ac2bc0fce771304bfc881
+    dimensions: 941x1672
+media_input:
+  path: research/story-studio/2026-09-03-banchao-xhs-p01-kf02-media-input.txt
+acceptance:
+  path: research/story-studio/2026-09-03-banchao-xhs-p01-kf02-acceptance.txt
+package:
+  drive_file_id: 1EHGRp_opYr1QuC-JtCKUHepFlRA0VBxW
+  sha256: 93994da9fd53f82487ec7e44c7a6d85dcc05c2cc2f7b89ee509eb736fca182bc
+  contents:
+  - P01-KF02_IDENTITY_REFERENCE.png
+  - P01-KF02_CONTINUITY_REFERENCE.png
+  - P01-KF02_MEDIA_INPUT.txt
+  - P01-KF02_ACCEPTANCE.txt
+preconditions:
+  both_references_present: required
+  provider_supports_reference_binding: required
+  governance_context_absent: required
+on_precondition_failure: STOP_BEFORE_TOOL
+acceptance_tests:
+- exactly_one_independent_9_16_image
+- same_face_hair_age_body_and_clothing
+- same_room_table_and_writing_system
+- distinguishable_long_labor_state
+- coherent_hands_brush_and_surface
+- no_modern_or_japanese_period_dominant_cues
+- no_readable_text
+- no_report_dashboard_table_ui_or_title
+return_required:
+- original_image
+- exact_dimensions
+- provider_metadata_when_available
+status: ready_waiting_isolated_media_execution
+created_at_utc: 2026-09-03T06:02:28Z
