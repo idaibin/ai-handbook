@@ -12,7 +12,7 @@ active_binding: active
 paused: true
 pause:
   requested_at: '2026-09-07T14:09:39+08:00'
-  verified_at: '2026-09-07T14:14:32+08:00'
+  verified_at: '2026-09-07T14:15:49+08:00'
   trigger: explicit_user_request
   reason: user_not_satisfied_with_current_designs
   resume_requires: explicit_resume
@@ -164,10 +164,10 @@ artifacts:
     blob_sha: 6292b573e5896c32636c1a6f77d906b33e8b3314
   drive_pause_summary:
     document_id: 1jsxm_DepvY-MfiZbtaHnSbjjy-aPNUdJh33Bcqi3z0E
-    revision_id: ANLCKQlB3gcszs_4FjPGMaQ6zBRwi8mToqxH9-NTIFqjhDnLXSrLj_gOhuXfCksFcq8DLWDLeafCD0DViehfcPFp7tYL3jfKjKHz5DtMhgw
+    revision_id: ANLCKQlXhT139tWG8td4nJoGikTPgdHxPevdJoYXf5amJcJBXwuzKOGNE5dgaQjiAbLh4miGITEBTtfl07f44YBnjkSqAMThARq0Y_C53Ug
   drive_task_document:
     document_id: 1XbzjUTeUJLm92_fwkHrDFmC5rs-ZxieQ0ThhMreKrAE
-    revision_id: ANLCKQlq_8fjMPAexVVhHa1evcoW8o-gZz0y5PtyO3P22bJJkmOcBl-nhX60dgq6A5a17JIVbCdTgjSV1c7ZQtNmUR_Lp2SP1_cv-GMRXqg
+    revision_id: ANLCKQkDThWlQsVmDxu88A2nRwTmLXvjvsUAmndB4lop2v1bTGAHNfdBXsqUgIJUJUz8TGIKtXbiipCK8wF1OWIYCocuaMypP6ADAerUOgw
   drive_kf02_capsule:
     file_id: 1jmHSMjXEoZTAg1dGha1rkJis5P2QzdFj
     name: SUPERSEDED-BANCHAO-XHS-P01-KF02-ISOLATED-MEDIA-CAPSULE-v1.yaml
@@ -181,8 +181,8 @@ artifacts:
 
 sync:
   status: synced
-  verified_at: '2026-09-07T14:14:32+08:00'
-  github_state_previous_commit: af40004ad7dc78f57d8efc5283bc4d7c86aab8ff
+  verified_at: '2026-09-07T14:15:49+08:00'
+  github_state_previous_commit: dda4b6fb95508278b9351756f643b5f7223483bc
   registry:
     tasks: Tasks!A16:H16
     runs: Runs!A23:J23
@@ -190,4 +190,4 @@ sync:
     sync: Sync!A86:I86
   previous_task_state_modified: false
 
-updated_at: '2026-09-07T14:14:32+08:00'
+updated_at: '2026-09-07T14:15:49+08:00'
