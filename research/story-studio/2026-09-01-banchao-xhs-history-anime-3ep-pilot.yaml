@@ -12,15 +12,11 @@ active_binding: active
 paused: true
 pause:
   requested_at: '2026-09-07T14:09:39+08:00'
+  verified_at: '2026-09-07T14:14:32+08:00'
   trigger: explicit_user_request
   reason: user_not_satisfied_with_current_designs
-  scope:
-  - P01_visual_direction
-  - P01_keyframes
-  - P01_animatic_and_video
-  - P02_and_P03_production
-  - publication_validation
   resume_requires: explicit_resume
+  resume_entry: PILOT_EP01_VISUAL_DIRECTION_DISCOVERY_AND_STYLE_FREEZE
 
 canonical: false
 production_ready: false
@@ -40,97 +36,40 @@ pilot_episodes:
 - id: P01
   title: 佣书者
   target_duration_seconds: 72
-  status: script_complete_visual_reset_paused
+  script_status: complete_gate_a_passed_with_visual_holds
+  visual_status: reset_paused
 - id: P02
   title: 投笔之后
   target_duration_seconds: 60-75
-  status: treatment_only_not_started
+  status: treatment_only_not_started_paused
 - id: P03
   title: 礼变
   target_duration_seconds: 75-90
-  status: treatment_only_not_started
+  status: treatment_only_not_started_paused
 
-execution_history:
+completed_units:
 - unit: PILOT_BASELINE_AND_FACT_BOUNDARY_PREFLIGHT
   result: PASS_WITH_CORRECTIONS
   completed_at: '2026-09-01T07:53:00Z'
-  verified:
-  - scope isolated from S1 FINAL GATE
-  - throw-brush-to-immediate-enlistment false causality corrected
-  - P03 terminology fixed to 吏士三十六人
-
 - unit: PILOT_EP01_SCRIPT_DRAFT_AND_FACT_CHECK
   result: PASS_WITH_VISUAL_HOLDS
   completed_at: '2026-09-02T04:00:01Z'
-  artifact:
-    path: research/story-studio/2026-09-02-banchao-xhs-p01-script-claim-ledger.md
-    github_commit: e764620fcf368661d9243aeae431730653ec81b2
-    drive_document_id: 1c27ZCBInvWrqoYre48DKTrzPQoNsbheXoBCyAki-kgo
-  mechanical_checks:
-    target_duration_seconds: 72
-    shot_count: 7
-    major_location_count: 1
-    speaking_roles: 2
-    script_claims: 11
-  gate_a: PASS_WITH_VISUAL_HOLDS
-
-- unit: PILOT_EP01_VISUAL_IDENTITY_CONTRACT_AND_THREE_KEYFRAMES
-  result: PARTIAL_CONTRACT_COMPLETE_KEYFRAMES_BLOCKED
-  failure_class: FAIL_PROVIDER_OUTPUT_ROUTING
-  completed_at: '2026-09-02T06:30:47Z'
-  failed_attempts:
-    count: 3
-    valid_keyframes: 0
-    disposition: invalid_output_quarantined
-  incident:
-    path: research/story-studio/2026-09-02-banchao-xhs-p01-keyframe-routing-incident.md
-    drive_document_id: 16Msab0lbVmrVwY2DTR162RZ_SGjbpIEgQpqd6PnZL2U
-
+  artifact_path: research/story-studio/2026-09-02-banchao-xhs-p01-script-claim-ledger.md
+  drive_document_id: 1c27ZCBInvWrqoYre48DKTrzPQoNsbheXoBCyAki-kgo
+  target_duration_seconds: 72
+  shot_count: 7
+  claim_ledger_items: 11
 - unit: PILOT_EP01_MEDIA_ISOLATION_POLICY_SYNC_AND_KF01_CAPSULE_PREPARATION
   result: PASS_CONTROL_PLANE
   completed_at: '2026-09-02T09:34:07Z'
-  verified:
-  - control and media execution surfaces separated
-  - direct media generation in control project prohibited
-  - KF01 isolated package validated and synced
-  artifacts:
-    policy_path: research/story-studio/2026-09-02-media-asset-generation-isolation-policy.md
-    visual_contract_path: research/story-studio/2026-09-02-banchao-xhs-p01-visual-identity-contract-v0.2.md
-    kf01_package_drive_file_id: 14qXzECtJmKMdrDn93V_07Axs7zpFrMUm
-
+  policy_path: research/story-studio/2026-09-02-media-asset-generation-isolation-policy.md
 - unit: PILOT_EP01_KF01_RETURN_REVIEW_AND_KF02_AUTHORIZATION
-  result: SUPERSEDED_BY_CREATIVE_DIRECTION_REJECTION
+  historical_result: PASS_CANDIDATE_WITH_HOLDS
+  current_result: SUPERSEDED_BY_CREATIVE_DIRECTION_REJECTION
   completed_at: '2026-09-03T06:02:28Z'
-  historical_technical_result: PASS_CANDIDATE_WITH_HOLDS
-  kf01:
-    asset_id: P01-KF01_SCRIBE_STATE
-    drive_asset_file_id: 1G9igwcGXes_KLPrt8ZG41EOyw3UN6kVp
-    dimensions: 941x1672
-    sha256: 5a0358c4c90826c14c3eeb882864c2d65c95b1cdfe3ac2bc0fce771304bfc881
-    provider: not_verified
-    reference_binding_metadata: absent
-    current_status: rejected_by_creative_direction
-  previous_kf02_authorization: revoked
-
 - unit: PILOT_EP01_CREATIVE_DIRECTION_REJECTION_AND_PAUSE
   result: PASS_PAUSE_RECORDED
   completed_at: '2026-09-07T14:09:39+08:00'
-  trigger: user_explicit_rejection_and_pause_request
-  verified:
-  - current retro historical illustration direction rejected
-  - technical pass does not override creative rejection
-  - KF01 removed from active continuity chain
-  - KF02 authorization revoked
-  - KF03 remains not authorized
-  - all pilot media production paused
-  artifacts:
-    pause_summary:
-      path: research/story-studio/2026-09-07-banchao-xhs-3ep-pilot-pause-status.md
-      github_commit: 6fa2ca89dad03ba3050225f3d8127b81d40790b7
-    kf02_capsule_revocation:
-      path: research/story-studio/2026-09-03-banchao-xhs-p01-kf02-isolated-media-capsule.yaml
-      github_commit: a7ed290f099cea3b1e7cd6020bd393ac5959c199
-      status: superseded_authorization_revoked
 
 creative_direction:
   status: RESET_REQUIRED
@@ -154,10 +93,16 @@ asset_disposition:
     count: 3
     status: invalid_output_quarantined_evidence_only
   kf01:
+    asset_id: P01-KF01_SCRIBE_STATE
     drive_file_id: 1G9igwcGXes_KLPrt8ZG41EOyw3UN6kVp
+    dimensions: 941x1672
+    sha256: 5a0358c4c90826c14c3eeb882864c2d65c95b1cdfe3ac2bc0fce771304bfc881
+    technical_review: PASS_CANDIDATE_WITH_HOLDS
+    creative_review: REJECTED_BY_USER
     status: rejected_by_creative_direction_negative_reference_only
-  kf02_package:
-    drive_file_id: 1EHGRp_opYr1QuC-JtCKUHepFlRA0VBxW
+  kf02:
+    package_drive_file_id: 1EHGRp_opYr1QuC-JtCKUHepFlRA0VBxW
+    capsule_drive_file_id: 1jmHSMjXEoZTAg1dGha1rkJis5P2QzdFj
     status: superseded_authorization_revoked_do_not_execute
   kf03:
     status: not_prepared_not_authorized
@@ -169,11 +114,6 @@ media_execution:
     status: paused_no_active_asset
     active_asset_id: null
     prepared_package_authorized: false
-
-routing_control:
-  control_context_image_gen_route: CIRCUIT_OPEN_HARD_STOP
-  invalid_output_disposition: evidence_only_never_crop_or_promote
-  kf02_previous_capsule: revoked
 
 validation_gates:
   gate_a:
@@ -213,10 +153,41 @@ current_execution_unit: none
 current_execution_status: paused
 next_action: AWAIT_EXPLICIT_RESUME_FOR_VISUAL_DIRECTION_DISCOVERY_AND_STYLE_FREEZE
 
+artifacts:
+  github_pause_summary:
+    path: research/story-studio/2026-09-07-banchao-xhs-3ep-pilot-pause-status.md
+    commit: 6fa2ca89dad03ba3050225f3d8127b81d40790b7
+    blob_sha: 420aab40fb20fc811e93775e84c7a55b45f58d57
+  github_kf02_capsule:
+    path: research/story-studio/2026-09-03-banchao-xhs-p01-kf02-isolated-media-capsule.yaml
+    commit: a7ed290f099cea3b1e7cd6020bd393ac5959c199
+    blob_sha: 6292b573e5896c32636c1a6f77d906b33e8b3314
+  drive_pause_summary:
+    document_id: 1jsxm_DepvY-MfiZbtaHnSbjjy-aPNUdJh33Bcqi3z0E
+    revision_id: ANLCKQlB3gcszs_4FjPGMaQ6zBRwi8mToqxH9-NTIFqjhDnLXSrLj_gOhuXfCksFcq8DLWDLeafCD0DViehfcPFp7tYL3jfKjKHz5DtMhgw
+  drive_task_document:
+    document_id: 1XbzjUTeUJLm92_fwkHrDFmC5rs-ZxieQ0ThhMreKrAE
+    revision_id: ANLCKQlq_8fjMPAexVVhHa1evcoW8o-gZz0y5PtyO3P22bJJkmOcBl-nhX60dgq6A5a17JIVbCdTgjSV1c7ZQtNmUR_Lp2SP1_cv-GMRXqg
+  drive_kf02_capsule:
+    file_id: 1jmHSMjXEoZTAg1dGha1rkJis5P2QzdFj
+    name: SUPERSEDED-BANCHAO-XHS-P01-KF02-ISOLATED-MEDIA-CAPSULE-v1.yaml
+    bytes: 1128
+    status: readback_passed
+  drive_kf02_package:
+    file_id: 1EHGRp_opYr1QuC-JtCKUHepFlRA0VBxW
+    name: SUPERSEDED-BANCHAO-XHS-P01-KF02-ISOLATED-MEDIA-PACKAGE-v1.zip
+    bytes: 5811713
+    status: metadata_readback_passed
+
 sync:
-  status: pending_drive_and_registry_sync
-  github_pause_summary_commit: 6fa2ca89dad03ba3050225f3d8127b81d40790b7
-  github_kf02_capsule_revocation_commit: a7ed290f099cea3b1e7cd6020bd393ac5959c199
+  status: synced
+  verified_at: '2026-09-07T14:14:32+08:00'
+  github_state_previous_commit: af40004ad7dc78f57d8efc5283bc4d7c86aab8ff
+  registry:
+    tasks: Tasks!A16:H16
+    runs: Runs!A23:J23
+    evidence: Evidence!A39:I39
+    sync: Sync!A86:I86
   previous_task_state_modified: false
 
-updated_at: '2026-09-07T14:09:39+08:00'
+updated_at: '2026-09-07T14:14:32+08:00'
