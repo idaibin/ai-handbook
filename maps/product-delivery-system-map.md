@@ -39,6 +39,8 @@ Forgeway does not own Createway content creation or Story Studio media productio
 
 ## Product UI delivery
 
+Scroll interaction terminology and reusable requirement wording: [`research/product-ui/scroll-interaction-patterns.md`](../research/product-ui/scroll-interaction-patterns.md).
+
 Forgeway implements the Product UI chain as:
 
 ```text
