@@ -110,6 +110,20 @@ sources:
     reading_status: unread
     verification_status: unverified
 
+  - id: x.yupi996.2107735426769551691
+    canonical_url: https://x.com/yupi996/status/2107735426769551691
+    observed_at: "2026-10-08"
+    source_type: social_post
+    source_role: terminology_discovery
+    domains:
+      - product-ui
+      - scroll-interaction
+    origins:
+      - user_provided
+    discovery_status: discovered
+    reading_status: unread
+    verification_status: unverified
+
 duplicates_observed:
   - canonical_id: github.jwasham.coding-interview-university
     provided_occurrences: 2
