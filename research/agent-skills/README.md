@@ -17,6 +17,10 @@ historical content-identity reconciliation, runtime-evidence inventory and adopt
 mapping can measure marginal value. See the
 [repository research stage closure](../stage-reviews/2026-08-11-repository-research-stage-closure.md).
 
+## 新批准维护范围（2026-10-16）
+
+[Skills 优化记录](skills-optimization.md)：维护当前建议、优先级、上游 Skills 与模型能力变化、精简方案及真实对照结果。仅此文档及本入口获准新增维护；旧研究继续 paused，不恢复批量扫描、顺序深研或其它项目。实现与测试仍归 `idaibin/skills`，通过链接关联；建议不代表已执行或已证实收益。
+
 ## Verified Candidates
 
 | Repository | Category | Evidence | Notes |
