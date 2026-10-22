@@ -6,10 +6,11 @@
 
 | 优先级 | 当前建议 | 状态 |
 | --- | --- | --- |
-| P0 | 区分执行阶段与质量失败，落实已有提交/反馈规则 | 本轮有可复现 recorder 缺口及聚焦修复；最终门禁/独审见交付关联 |
+| P0 | 区分执行阶段与质量失败，落实已有提交/反馈规则 | 10/22 既有实现已交付，统一门禁 471 测试、102 路由；晚间研究仅引用，未复跑 |
 | P1 | 补跨篇语义重复和 ops 失败反例；运行规则只作最小修订 | 测试候选已实现，生产写作规则保持不变 |
 | P1 | 比较无技能、当前和候选的真实端到端增量 | 严格对照与收益仍未验证；现有合成决定不能替代 |
-| P2 | 对照官方/上游资料，拒绝重复或无证据规则 | 10 月 21 日材料已筛选；Graphify/OTel 扩展未采纳 |
+| P1 | 核 compaction/resume 后既有授权、在途状态和完成门禁的恢复资格 | 新增研究候选；先核已有覆盖，无本仓缺陷或收益结论，未启动实现/实测 |
+| P2 | 对照官方/上游资料，拒绝重复或无证据规则 | 10 月 21–22 日材料已去重；Graphify/OTel 不扩展，晚间仅新增恢复资格核验候选 |
 | P2 | 重复 YAML 键校验链及宿主差异 | 历史待核项，本轮不扩展为无关实现 |
 
 本文件及[目录入口](README.md)是 2026-10-16 新批准的维护范围。旧研究的 [paused 状态与阶段关闭边界](../stage-reviews/2026-08-11-repository-research-stage-closure.md)继续有效；不恢复批量扫描、顺序深研或其它项目。建议不等于执行，也不等于已证实收益。
@@ -25,6 +26,97 @@
 - 验收由独立结果判据决定，保留失败、跳过与基础设施异常；先确认实际运行了哪些断言及覆盖，再判断通过。只有质量和完整验收达标、权限边界保持，且重复对照支持成本改善，才考虑采纳；退化或证据不足则保留原方案或继续验证。
 
 每条记录使用北京时间（Asia/Shanghai）日期，区分来源发生日、记录日与复测日。至少包含：变化与固定来源、具体删改建议、依据、预期收益、验证方案、真实结果及实现/测试链接。预期收益是待验证假设；结果分别标记历史证据、今日静态核验或真实运行。
+
+## 2026-10-22（北京时间，晚间）｜来源增量与压缩恢复资格核验
+
+研究交接记录于 23:07；仓库搜索约为 UTC 14:59，逐库 metadata/默认 HEAD 核验窗口为 UTC 14:59:45–15:01:40（北京时间 22:59:45–23:01:40）。这是研究增量，不是新研发包；今日统一实施的 20 包、471 测试、102 路由沿用前节对应回执，不在本轮重放或重新宣派。
+
+### 本地基线、范围及交接限制
+
+- 固定文档编辑前为本地 `c369a3b01a2855471531bef81b193ea7e71931e8`，299 行、49,987 字节、SHA-256 `5f425288ce6abf669c130f4b86211189c434e8b817f58ace1a08850dc707609d`；编辑端已读全文，交接研究端获得关键原文和覆盖摘要，两者不混称。真实远端 main 仍为 `1859577953ae342dadf265a7e1172d4e62574c5f`，固定文档 blob 为 `23cd78183793b9fe11d897846bac9a4811d8bdc6`；远端初始化正文不替代今日本地终版。
+- Skills 公开研究基线仍为 `27f8aa1e1028ec20e1b59d63b167d4b1c48fbca6`；今日已交付本地版本为 `0d34a1d45bd3436afd0cc7f9caf5a56251bb859c`。本地已拆分 `ops-device`，不以远端旧模拟器归属覆盖现有实现；本轮不修改 Skills。
+- 复用研究交接的公开来源采样和 compare 元数据；编辑端另核关键固定文件、故障报告和官方发布说明，没有独立重放搜索及 11 个完整 compare，更没有逐行审计全部变更。20 库集合与 10/19 相同，11 库 HEAD 变化、9 库相同；10/21 三个定向提交不是完整新快照。
+- 比较中 Dify、Deer-flow、Lobehub 的返回列表均为 300 文件，按达到 API 文件列表上限处理，不能称完整；其它库取得列表也不等于完成代码审计。没有执行上游脚本或模型评测，未取得全站搜索完整性证明。
+- 本轮未新增读取私人邮件或 Reddit；X 选题没有在本轮独立核读原帖，不写作新鲜已验证来源或运行证据。公开记录不收录私人任务、运行原文，亦不转载公开 issue 中附带的会话标识或私人上下文。研究交接提及的机器可读采样附件不等于已在仓库归档，本节表格保留实际取得的字段。
+
+### 可得搜索前 20 原序快照
+
+交接采用 GitHub `search_repositories`，查询 `skills sort:stars-desc`、page=1、per_page=20；[查询入口](https://github.com/search?q=skills&type=repositories&s=stars&o=desc)。搜索与逐库核验非原子采样；以下保留返回原序，不剔除 Dify、JavaGuide、RuView 等来制造“20 个 AI 技能库”。Stars 只作采样字段，不作采纳依据；下列时间是固定 HEAD 提交时间，不是 pushed_at。
+
+| 原序 | 仓库 | Stars | 默认分支 | 固定 SHA | HEAD 提交时间 UTC |
+| ---: | --- | ---: | --- | --- | --- |
+| 1 | [obra/superpowers](https://github.com/obra/superpowers) | 303,514 | main | `2ce8aa15d05bd57213e6f746f953aafb7ded7a8b` | 2026-10-21T21:00:49Z |
+| 2 | [mattpocock/skills](https://github.com/mattpocock/skills) | 300,575 | main | `5beb35b040e3de97e54fa9e386d7e42d15c295c2` | 2026-10-19T15:51:40Z |
+| 3 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 286,199 | main | `90606c8315ee09cafc303515c5f33024db6b9882` | 2026-10-20T21:28:23Z |
+| 4 | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | 222,315 | main | `2c606141936f1eeef17fa3043a72095b4765b9c2` | 2026-04-20T10:05:04Z |
+| 5 | [anthropics/skills](https://github.com/anthropics/skills) | 182,947 | main | `dbd4588f9e1033efb41dad4bef2f7947c8993d44` | 2026-10-09T18:45:49Z |
+| 6 | [langgenius/dify](https://github.com/langgenius/dify) | 159,251 | main | `0d06488de5dfc0ae49b28be5ffb19c8b819ef364` | 2026-10-22T08:51:52Z |
+| 7 | [Snailclimb/JavaGuide](https://github.com/Snailclimb/JavaGuide) | 159,207 | main | `50f02a5984c062fe7221629d0a6a40ec15c26fd7` | 2026-10-16T06:30:59Z |
+| 8 | [farion1231/cc-switch](https://github.com/farion1231/cc-switch) | 147,623 | main | `e4873bc8aa2555225d4867ec2f04b1290f1d21d9` | 2026-10-22T08:50:37Z |
+| 9 | [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | 142,653 | main | `6c16b23f1bacd0fdf240bb5141ef45e59e82c306` | 2026-10-21T23:23:38Z |
+| 10 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 138,838 | main | `623a9a9037d006ea727f8213f084d02a6b6f11b5` | 2026-10-21T22:06:38Z |
+| 11 | [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) | 132,486 | v8 | `847a93f3cab5e2c82ea9170014b21cd2c52a4417` | 2026-10-21T15:22:06Z |
+| 12 | [Chalarangelo/30-seconds-of-code](https://github.com/Chalarangelo/30-seconds-of-code) | 129,293 | master | `bd756f8b2283a38560efe83cb30af38324d4e9e9` | 2026-09-09T11:56:56Z |
+| 13 | [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | 114,311 | main | `bad48a0e1df55e05e3f52249afa35ecc1909ee76` | 2026-10-17T21:08:52Z |
+| 14 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 109,541 | main | `aeac41d4d005999432bb7312f7ff06383a91d59d` | 2026-10-13T20:21:06Z |
+| 15 | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | 100,951 | main | `6010f91a9935f1c167dfc500fb1a475681892e6b` | 2026-10-20T18:38:06Z |
+| 16 | [ruvnet/RuView](https://github.com/ruvnet/RuView) | 99,147 | main | `a1ca023ee872683d160250d47ae3d4d228af55a0` | 2026-10-13T04:04:27Z |
+| 17 | [florinpop17/app-ideas](https://github.com/florinpop17/app-ideas) | 98,293 | master | `9e8dd00f10b881babc273d66949b7ffa0e310097` | 2025-10-11T14:51:21Z |
+| 18 | [tt-a1i/archify](https://github.com/tt-a1i/archify) | 87,444 | main | `25cf37080fc8b1dbe758a4efc3935b55f3327083` | 2026-10-19T13:54:27Z |
+| 19 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 84,281 | main | `66508d7522015ab6582105130da691e2803eba0d` | 2026-10-22T11:35:43Z |
+| 20 | [lobehub/lobehub](https://github.com/lobehub/lobehub) | 83,417 | canary | `9cc0cfbba4b8244b62e4272f584fe266b21c12e6` | 2026-10-22T13:29:56Z |
+
+相对 10/19：Dify/JavaGuide 互换 6/7，Graphify/30-seconds-of-code 互换 11/12，其余顺序不变。旧表已有 stars，本轮不据非原子采样报告精确全站排名或采纳收益，也不把 pushed_at 当 HEAD 时间。
+
+### 11 库变化的比较范围
+
+下表是研究交接返回的 compare 元数据与文件列表计数；链接固定旧表和本表端点。ahead 是提交数，文件数不是审计通过数。
+
+| 仓库 / 固定比较 | Ahead commits | 返回文件 | 覆盖限制 |
+| --- | ---: | ---: | --- |
+| [obra/superpowers](https://github.com/obra/superpowers/compare/bb92a77741419a4ab5f06e711a283343f1ada0c3...2ce8aa15d05bd57213e6f746f953aafb7ded7a8b) | 2 | 64 | 列表筛选，非逐行审计 |
+| [mattpocock/skills](https://github.com/mattpocock/skills/compare/49dd158d1076134a641b33efb035946536778336...5beb35b040e3de97e54fa9e386d7e42d15c295c2) | 1 | 2 | 列表筛选，非逐行审计 |
+| [affaan-m/ECC](https://github.com/affaan-m/ECC/compare/76aaa77df6adc5b889e689007bf99b9a4f74af34...90606c8315ee09cafc303515c5f33024db6b9882) | 23 | 60 | 列表筛选，非逐行审计 |
+| [langgenius/dify](https://github.com/langgenius/dify/compare/823f40e71fc9e045a9ff2aa903a74b5b001dff33...0d06488de5dfc0ae49b28be5ffb19c8b819ef364) | 85 | 300 | 达列表上限，完整性未核 |
+| [farion1231/cc-switch](https://github.com/farion1231/cc-switch/compare/f92ff0b03964188f1cd011d9302ab8869d7a8219...e4873bc8aa2555225d4867ec2f04b1290f1d21d9) | 58 | 259 | 列表筛选，非逐行审计 |
+| [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps/compare/874bc13a57aa2ba1266a84f2444808ce3093efb6...6c16b23f1bacd0fdf240bb5141ef45e59e82c306) | 2 | 2 | 列表筛选，非逐行审计 |
+| [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/compare/56ea9cf174ed86786187daa9de0e6247cb0747e4...623a9a9037d006ea727f8213f084d02a6b6f11b5) | 2 | 2 | README 翻译/使用说明，不作行为增量 |
+| [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify/compare/86c57be8204673c2a1b9849a3292a7dd3ab373d8...847a93f3cab5e2c82ea9170014b21cd2c52a4417) | 37 | 137 | 列表筛选；partial-read 建议已去重 |
+| [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill/compare/b9ca2fd8047f4c72d7da90ebc1c1203e57c72cd2...6010f91a9935f1c167dfc500fb1a475681892e6b) | 6 | 55 | 列表筛选；profile 归属建议已去重 |
+| [bytedance/deer-flow](https://github.com/bytedance/deer-flow/compare/085924a3d0cbf797d23fddc830f14cc6e5531256...66508d7522015ab6582105130da691e2803eba0d) | 93 | 300 | 达列表上限，完整性未核 |
+| [lobehub/lobehub](https://github.com/lobehub/lobehub/compare/fae57cfd558b14aff1047212fb4cf564f9ca44f0...9cc0cfbba4b8244b62e4272f584fe266b21c12e6) | 128 | 300 | 达列表上限，完整性未核 |
+
+9 库 HEAD 不变：andrej-karpathy-skills、anthropics/skills、JavaGuide、30-seconds-of-code、Caveman、addyosmani/agent-skills、RuView、app-ideas、Archify。不把其既有正文计作新发布；HEAD 相同亦不证明所有 release、设置或上游内容未变。ECC、cc-switch 等没有形成必须复制的新通用技能证据；大平台变更只完成有界筛选。
+
+### 唯一新增候选：compaction/resume 资格核验
+
+**状态：研究候选，未实现、未运行、未采纳；未证实本仓缺陷，不启动行为实测或新研发包。**
+
+[Superpowers v7.0.1 发布说明](https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/RELEASE-NOTES.md)（10/21）把压缩后的恢复、修复循环和最终审核转到按阶段读取的 references；[SDD 正文](https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/subagent-driven-development/SKILL.md)以既有 ledger/Git 事实恢复任务。[size 测试](https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/tests/skill-size/test-skill-size.sh)实际使用 `wc -c`，达到 20,000 字节即失败；这比非 ASCII 文本的字符限制更严，是上游采用的静态门槛，未在本轮运行，不能推广为所有 Codex/Claude/其它 host 的通用阈值。
+
+[公开故障报告 #2481](https://github.com/obra/superpowers/issues/2481)描述特定 Claude Code 扩展版本中重新附加技能被截到 20,000 字符、五轮上限位于截断点后，任务继续超过 18 轮。报告者明确没有移除 Superpowers 的复现对照，因果未获证实，仅属可能解释之一；发布说明的修复与该案例相关，不证明当前本机 host 已复现或已获修复。只保留故障机制，不转载其会话标识、私人上下文或日志。
+
+编辑端读回本地固定版本 `0d34a1d45bd3436afd0cc7f9caf5a56251bb859c` 的 `skills/dev-tests/references/workflow.md`、`skills/to-task/references/task-ledger.md` 及 `skills/ops-client/references/session-protocols.md`：分别已有恢复时对齐原 case ID/证据、最新暂停与逐项恢复边界、exact-session 绑定和未知提交对账。这是编辑端本地去重结果，不声称外部审查已访问该未推送提交。因此最小下一步仅为**核当前冻结版本已有检查是否覆盖真实压缩/恢复条件**：授权/拒绝和单写交接是否仍可找回、已完成任务是否不重派、未知提交是否先核原请求、关键 reference 是否仍可达、终态是否仍不冒充交付。完全覆盖则结项无实现；缺覆盖且另有明确执行授权时，才考虑在既有测试中补反例，不复制 ledger、重试或完成规则。
+
+未来获准验证时须固定模型/host 版本、输入、代码和工具环境，比较有/无压缩，检查上述可观察结果。平台不能模拟就标未验证，不以文件长度通过代替行为通过。拆分也可能造成引用不可达或恢复加载丢失，不能只按字数缩短采纳。预期减少重复读取/返工只是待验证假设，数值未知；不导入上游完整设计审批或实施流程。
+
+### 补充旁证与不重复采纳项
+
+| 固定公开依据 | 去重判断 |
+| --- | --- |
+| [Claude Code v2.1.307](https://github.com/anthropics/claude-code/releases/tag/v2.1.307)，10/21 22:17 UTC | 官方说明新增 safety_event，并修复 HTTP MCP 断连重复调用、锁定 keychain 被误报认证问题、睡眠导致连接超时及 transcript token 占位。它们是 Claude Code 的实现说明，不代表本地 Codex/ZCode 已获修复；原 ops-* 的先对账、拒绝不可绕过、ambiguous 门禁及 usage 缺失规则已覆盖核心语义，不再加同义运行规则或强接 OTel。旧占位记录不因升级变为真实用量。 |
+| [Claude Code v2.1.308](https://github.com/anthropics/claude-code/releases/tag/v2.1.308)，10/22 | 发布说明仅泛称修复和可靠性改善，无足以新增本仓规则的具体内容。 |
+| [Gemini CLI 10/22 nightly](https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261022.g09d81bf11) | 官方列出 home 工作目录重复 agent 加载、只读文件/hardlink 原子写保护等修复；它是 nightly，不据此安装、升级或删目标/只读边界。 |
+| [Caveman HONEST-NUMBERS 固定正文](https://github.com/JuliusBrussee/caveman/blob/bad48a0e1df55e05e3f52249afa35ecc1909ee76/docs/HONEST-NUMBERS.md) | 原 HEAD 未变，仅作既有主张的反证补读。文风输出缩短不等于 input/context 压缩；十题单次输出长度近似值不证明语义/技术等价、可计费总成本或最新规则效果。既有严格指标已覆盖；若未来授权比较，须有普通“简洁回答”控制，并计 input/output/cache、返工和完整验收。 |
+| [Matt Pocock 固定 README](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/README.md) | 插件/技能复制二选一和 orchestrator/discipline 分工仅作来源与重复加载线索；尚无本仓新增缺陷证据，不添全局门禁，不导入 grill、issue 写入或新 wiki 系统。单次 commit 中带日期/版本的事实记录不构成新研究系统需求。 |
+
+[OpenAI ChatGPT & Codex changelog](https://learn.chatgpt.com/docs/changelog)（区别于 10/21 节引用的 API changelog）在研究交接可得页面中最新明确日期仍为 10/14；该检索范围没有取得 10/21–22 新条目。交接的 releases 接口空结果不证明产品无更新；套餐/模型可用性旧消息不重复计为本轮新能力。这里沿用交接范围，不宣称编辑端独立重放全部官方查询。
+
+Graphify partial-read、Deer-flow 失败产物、Taste profile 归属及 Codex hooks/默认零值已在 10/19–21 记录，不重复采纳。角色目录、科学技能清单、热门排名或收藏不触发批量安装；未核 X 选题不形成新任务。
+
+### 本轮真实结果与停止点
+
+本轮产出仅为公开来源研究及固定文档增量、原序快照和范围澄清。未改 Skills、未执行上游脚本、未启动候选行为实验或其它研发包；旧实现验收只引用，不冒称本次复跑。A/B/C、端到端耗时、input/output/cache token、返工、人工介入及质量配对均未采集，缺失不填 0，无提效百分比或采纳收益结论。本轮仅新增恢复资格核验这一研究候选；全部旧日期记录及既有待查项继续保留，不恢复 paused 队列。
 
 ## 2026-10-22（北京时间）｜统一接收复盘中的 Skills 改进
 
