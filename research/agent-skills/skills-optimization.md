@@ -6,10 +6,11 @@
 
 | 优先级 | 当前建议 | 状态 |
 | --- | --- | --- |
-| P0 | 先核验收覆盖，再针对跳过、日志截断等缺口补反例；不重复堆叠已有规则 | 现有规范静态已核；实际覆盖与运行待核 |
-| P1 | 精炼 repo-audit / ops-client 两个入口描述，补纯截图等实际缺失反例 | 既有候选收窄；未改描述、未跑真实路由 |
-| P1 | 固定条件对照无技能、当前技能、精简技能，验证端到端增量 | 未运行；真实耗时、token 与质量配对未采集 |
-| P2 | 对照官方模型能力与上游 Skills 变化，删除无增量的描述、流程或验收要求 | 官方设计依据已补；本地能力与收益对照未做 |
+| P0 | 区分执行阶段与质量失败，落实已有提交/反馈规则 | 本轮有可复现 recorder 缺口及聚焦修复；最终门禁/独审见交付关联 |
+| P1 | 补跨篇语义重复和 ops 失败反例；运行规则只作最小修订 | 测试候选已实现，生产写作规则保持不变 |
+| P1 | 比较无技能、当前和候选的真实端到端增量 | 严格对照与收益仍未验证；现有合成决定不能替代 |
+| P2 | 对照官方/上游资料，拒绝重复或无证据规则 | 10 月 21 日材料已筛选；Graphify/OTel 扩展未采纳 |
+| P2 | 重复 YAML 键校验链及宿主差异 | 历史待核项，本轮不扩展为无关实现 |
 
 本文件及[目录入口](README.md)是 2026-10-16 新批准的维护范围。旧研究的 [paused 状态与阶段关闭边界](../stage-reviews/2026-08-11-repository-research-stage-closure.md)继续有效；不恢复批量扫描、顺序深研或其它项目。建议不等于执行，也不等于已证实收益。
 
@@ -24,6 +25,132 @@
 - 验收由独立结果判据决定，保留失败、跳过与基础设施异常；先确认实际运行了哪些断言及覆盖，再判断通过。只有质量和完整验收达标、权限边界保持，且重复对照支持成本改善，才考虑采纳；退化或证据不足则保留原方案或继续验证。
 
 每条记录使用北京时间（Asia/Shanghai）日期，区分来源发生日、记录日与复测日。至少包含：变化与固定来源、具体删改建议、依据、预期收益、验证方案、真实结果及实现/测试链接。预期收益是待验证假设；结果分别标记历史证据、今日静态核验或真实运行。
+
+## 2026-10-22（北京时间）｜失败阶段验收与本地采纳边界
+
+本轮从 Skills 固定代码基线 `309d5ebcb5e204911645cc8bf596d595d895850e` 创建隔离非 main 分支，由原执行会话单写。原 Skills 11 个 dirty 文件未纳入；旧维护工作树中与本任务相关的 10 月 19 日文档增量按原字节读回并继承，原工作树及 main 不动。本轮正式提交、独审与最终证据以交付回执为准，不能把工作树存在当成已提交或已安装。
+
+### 已筛选的最小变化
+
+- **采用：** ops-client 增加七类维护反例，覆盖 registry connected 与 CreateProcess 失败的分层、恢复超时、初始化阶段失败、已接收 turn 对账、历史锁屏/他方工具缺失、截断结果和拒绝不可绕过；继续复用现有 submit-once、授权和后置条件规则，不添加新恢复框架。
+- **采用：** ZCode 示例在已有配置发现步骤补可执行文件与原 builtin 配置存在/可读检查，并要求按安装布局解析。实际原配置存在于 bundle 的 config/provider 目录；默认 launcher 查找失败不等于安装资源缺失。使用原构建支持的进程内绑定，doctor 退出 0；不读取凭据内容，不建替代配置或切换账号。
+- **采用：** 一个可执行缺口已复现：反馈 recorder 接受显式标为 failed-before-submit 的 review-attempt。规范早已禁止，不再加同义说明；实现增加拒绝检查及正反例，保留 submitted / ambiguous 和无新字段旧事件兼容。修改前聚焦 15 项测试一项失败；修改后通过。这不证明过去真实调用曾写入错误事件，也不让 recorder 从缺失字段推断提交事实。
+- **仅补回归：** human-writing 六个合成跨篇案例与维护判据。现有 repeated reasoning 规则继续有效；先前额外运行段落没有质量增量证据，不采用。旧六次/36 答复只保留历史边界，不算本次复跑或当前质量认证。
+- **拒绝扩展：** 不把 Graphify 提示约束说成 Codex 硬覆盖门禁，不移植厂商业务技能、另造通用日志框架、删除 canonical 协议副本，或强接 OTel Development 遥测。没有本地缺口与收益证据的材料保持参考状态。
+
+### 本地交付关联
+
+Skills 已本地提交至 `feat/skills-ops-acceptance-2026-10-22`，固定 SHA 为 `addbb661b1f8180f35449822aaab0a0eb08ef7b2`，未推送、未合 main、未安装到宿主。提交仅含本任务九个文件；原工作树的 11 个 dirty 文件完整保留，原 main 不动。实现与验证摘要为该提交的 `docs/quality/ops-stage-validation.md`，用例与 recorder 测试仍在 Skills，研究文档不复制其完整实现。
+
+最终 canonical `bash scripts/check-skills.sh` 在锁定环境自然退出 0：19 包、455 项测试、92/92 路由、contract_errors=0、regressions=0、context warnings=0，共享协议及 DESIGN.md 检查通过。92 是干净固定基线的本轮计数；原 dirty 工作树额外三条路由未被裹挟，旧 95 项记录不冒充本轮结果。
+
+真实 ZCode CLI 0.17.0 在同一精确会话先审查冻结八文件，再对六个变更路径复审；provider 账本归属 bigmodel / glm-5.3。两轮均自然 exit 0、projection idle，增量结论无阻断项。首轮建议推动 all-event 拒绝检查、可选字段契约及资产映射补齐；复审通过。两条非阻断证据建议另用临时夹具补验：隔离 I/O 夹具分别证明旧基线接受三类矛盾事件、当前版全部拒绝且不落盘，当前省略 completion_state 的合法 review-attempt 持久化回读匹配；受审源码未再变更。
+
+ZCode plan 模式未能独立执行哈希/测试命令，其结论来自源码、原始 trace 和实际留存门禁日志的静态复核；哈希由本地执行方复算，不把它说成独立 runtime 重跑。原始命令、JSONL、红绿日志、清单、ZCode 原生结果与终态保存在 Skills 忽略的 `.codex/artifacts/` / `.codex/reviews/`，不是已公开上传的材料。提交源码不等于所有会话已加载，也不证明实际客户端业务链或端到端提效。
+
+### 本轮验证与限制
+
+使用已有 Homebrew Python 3.14.6 的缓存环境，PyYAML 6.0.2 / jsonschema 4.25.1 及已有 DESIGN.md 0.4.0 校验器；没有安装。系统 Python 依赖版本不符的第一次 canonical 入口失败保留；改用现存锁定环境后全门禁执行。最终完整门禁、独立审查和提交状态关联 Skills 的固定交付版本及证据，不复用历史 453/95 计数冒充本次通过。
+
+四次新 Codex CLI 0.163.0 决策运行固定八个合成输入，以 B/C/C/B 顺序、同一请求模型 gpt-6.1-sol / medium 和 read-only 工具策略执行，均自然退出 0。B 是基线参考，C 增加配置预检段落；这不是实际客户端重连、业务发送或自动技能路由验收。有效 provider 快照、全局上下文隔离、TTL 子桶和实际账单缺失；输入 usage 的变化大于规则文本变化，存在混杂，因此不宣称 token、成本或真实端到端效率收益。
+
+独立审查只使用用户指定的 ZCode，冻结候选文件哈希和实际日志；报告写出不替代自然终态，Codex 不兼任其审查者。最终受审版本、发现处理和提交证据见本节后的交付关联；未观察的真实业务工作流仍为 Not verified。
+
+## 2026-10-21（北京时间）｜研究交接筛选落库
+
+复用当日研究附件（文件 SHA-256：`14003a805d77746f4e6142e6a871c8ab58674d5073d860a47acb57cbadda511d`），不重做前 20 采集，也不将收藏全量同步。附件中的上游比较属于原研究交接，本轮未重放全部仓库审计。
+
+| 固定来源 | 本地取舍与验收边界 |
+| --- | --- |
+| [Graphify partial-read 修复](https://github.com/Graphify-Labs/graphify/commit/8a982c4a927e2f185036c339bee7a999364b8c9a) | 参考缺失 coverage / 部分读取误作完整的反例；repo-map 已有覆盖门禁，未证新 runtime 缺口，不加同义规则、不安装 Graphify |
+| [Deer-flow 失败输出](https://github.com/bytedance/deer-flow/commit/033fb1aa1f7c9b606380c1cfba7ddf49bcdc77ce) | 借鉴“失败不能作为成功产物”的可执行判据，落实本轮阶段测试；不复制平台工具或整套框架 |
+| [Taste profile 清理](https://github.com/Leonxlnx/taste-skill/commit/99c1877abedc943436241a1e9d1a1a9825c152dd) | 只参考归属与后置条件；不把全机进程列表设唯一单写前提，不扩大删除权限 |
+| human-writing 既有重复论证门槛和真实系列失败反馈 | 合成固定正反例，保护合法连续性、局部编辑与事实；不录入私人稿件，不增加没有收益的泛化规则 |
+
+[官方 prompt caching](https://developers.openai.com/api/docs/guides/prompt-caching)与 [10 月 20 日 changelog](https://developers.openai.com/api/docs/changelog)已交叉核读：适用模型的 30 分钟/12 小时写入分别为普通输入价 1.25/2.5 倍，是总写入价；读取单独计算。评测需分开普通输入、读取、写入及 TTL 子桶，不能重复计费，字段缺失写缺失。CLI 订阅 usage 不能直接转换为 API 账单，也不能用命中字数或文字缩短代替端到端收益。
+
+### 每日维护覆盖
+
+10 月 15–16 日记录在 main，10 月 18 日在原维护分支已提交，10 月 19 日候选在本分支按原内容继承，10 月 21 日附件在上表去重落库。10 月 20 日完整交付正文尚未在本任务恢复；本轮两次定向 Library 标题检索也未取得正文，这不证明文件不存在。只有后续附件的引用，故不补写一个虚构的 10 月 20 日独立记录。该来源缺口保留为未核，不阻止已取得材料的有界采纳。
+
+## 2026-10-19（北京时间）｜版本去重、解析待查与遥测边界
+
+### 结论与版本适用范围
+
+维持 P0/P1，不新增 Skill 或实施任务。10 月 18 日的两个入口描述与六类截图近邻场景继续沿用，不重复算新增。今日唯一新增待查项是重复 YAML mapping key 的现有校验覆盖；尚未证实本仓缺陷，不启动修复或模型实验。
+
+- **最新本地文档已读回：** `de95cd81403f0f3de4f081493e7b7f74f4c7e503` 的完整固定文档已逐字节核对，SHA-256 为 `b5cf05c0b6ddae6cbc1708b3da91b9f64549cfa56238f29f23f176b65e37565f`，未推送。因此早期研究稿“未读本地最终全文”的限制已解除；以下与该终版去重，旧日期正文保留。
+- **真实远端：** 协调方于 UTC 15:20 通过 GitHub 连接读取 [Handbook branches](https://api.github.com/repos/idaibin/ai-handbook/branches?per_page=100) 与 [Skills branches](https://api.github.com/repos/idaibin/skills/branches?per_page=100)。Handbook main 仍为 `1859577953ae342dadf265a7e1172d4e62574c5f`，Skills [main@27f8aa1e1028ec20e1b59d63b167d4b1c48fbca6](https://github.com/idaibin/skills/tree/27f8aa1e1028ec20e1b59d63b167d4b1c48fbca6)、feat/development `349c7106473376780d5557690a1eaec2a9931381` 均未变。这是连接器交接证据，不表示文档编辑端的 Git 连接已恢复。
+- **远端与本地区分：** 发布研究基线 27f8aa1 的 20 包、92 个静态 case、tests/dev-tests 并存是旧事实。今日本地只读核为 `b1ab634581b97c9e4eaddfb61a664d489857ded2`、19 包；tests 包已删除，其 api-and-logic、page-walkthrough、test-record、workflow 参考迁入 dev-tests，并新增 performance-measurement。路由清单仍 92 个 case，但内容已变；work-retro 的 validation/eval-cases 也已有提交变化。两个入口 description 则仍与 27f8aa1 相同。上述本地工作区当时干净，不建议重复迁移，不把远端 20 包当本地现状，也不证明安装、宿主加载或测试通过。
+- **历史限制：** 028f7afe 的 compare/commit 读取返回 404，完整历史 diff 仍未完成，不能推定提交不存在。固定来源与去重完成即止；门户性能验收优先，旧 paused 队列不恢复。
+
+### 改变来源的适用判断
+
+前 20 集合及原序与 10 月 18 日相同，7 个 HEAD 变化、13 个相同。只深入相关变化文档；大 compare 可能受文件上限影响，不宣称全代码审计。下表为已审研究交接的静态来源判断，编辑时未重放全部网页读取。
+
+| 改变来源与固定证据 | 本仓适用判断 |
+| --- | --- |
+| [taste-skill CHANGELOG](https://github.com/Leonxlnx/taste-skill/blob/b9ca2fd8047f4c72d7da90ebc1c1203e57c72cd2/CHANGELOG.md)记录 10 月 19 日 2.1.0–2.1.2；2.1.2 修复 description 未引用冒号导致未加载，并增加 strict/uniqueKeys 检查 | 仅引出下方解析覆盖待查。2.1.1 的旧样式显式调用、合并重设计不作为重复合并本地 tests/dev-tests 的理由 |
+| [cc-switch 4.0.16](https://github.com/farion1231/cc-switch/blob/f92ff0b03964188f1cd011d9302ab8869d7a8219/docs/release-notes/v4.0.16-en.md)涉及托盘、会话、路由与模型元数据修复 | 是客户端修复，不是模型官方能力发布；未确认本地采用，不改 ops-client/ask-ai、不安装或换账号 |
+| [Archify update-awareness](https://github.com/tt-a1i/archify/blob/25cf37080fc8b1dbe758a4efc3935b55f3327083/archify/references/update-awareness.md)将更新摘要视作不可信数据，检查失败不阻塞交付 | 现有证据与权限边界可覆盖；未见本仓更新器适用缺口，不新增流程 |
+| [DeerFlow data-analysis](https://github.com/bytedance/deer-flow/blob/085924a3d0cbf797d23fddc830f14cc6e5531256/skills/public/data-analysis/SKILL.md)明确依赖准备、脚本不自动安装、输入顺序/名称绑定缓存 | 具体实现修复，不泛化为全目录规则 |
+| [LobeHub acceptance Skill](https://github.com/lobehub/lobehub/blob/fae57cfd558b14aff1047212fb4cf564f9ca44f0/.agents/skills/acceptance/SKILL.md) 0.8.1 统一计划/自写 round 产物、本地逐步保存后单次发布及 preflight/dry-run，依赖 lh 平台 | 现有 dev-tests 及旧 tests 参考已有 case 复用与证据契约，不导入其平台命令或发布门禁 |
+
+Dify 与 awesome-llm-apps 只核 HEAD 变化及提交索引，未取得足以新增本仓规则的相关证据，未深读全部代码。Caveman/Graphify HEAD 未变，不计为今日增量；stars 与上游宣传不证明质量或本地提效。
+
+### 唯一新增待查项：重复 YAML 键覆盖
+
+**状态：待查，未实现、未运行、未采纳；不是本仓缺陷结论，也不新开实施任务。** 目标归现有 [validate-skills.py](https://github.com/idaibin/skills/blob/27f8aa1e1028ec20e1b59d63b167d4b1c48fbca6/scripts/validate-skills.py)及其测试，不建 Skill 或框架。
+
+研究已读发布基线的 [test_validate_skills.py](https://github.com/idaibin/skills/blob/27f8aa1e1028ec20e1b59d63b167d4b1c48fbca6/scripts/test_validate_skills.py)、[check-skills.sh](https://github.com/idaibin/skills/blob/27f8aa1e1028ec20e1b59d63b167d4b1c48fbca6/scripts/check-skills.sh)及 validator：已有 `yaml.safe_load`、类型、长度、OpenAI policy、block scalar 正例，不重复增加通用 YAML 解析。SafeLoader、uniqueKeys 的索引查询无命中，不证明全树没有其他检查，也不证明实际宿主行为；本地 b1ab634 的完整重复键校验链仍未核完。
+
+最小下一步仅是核现有完整校验链与宿主对重复 mapping key 的处理，证实适用缺口后才考虑负例。若后续获执行授权，固定 parser/host 版本，将重复 name/description/policy 键负例与 quoted/block scalar 正例成对核对，保留合法包；静态通过不当宿主加载通过。风险包括宿主差异、YAML merge/别名合法输入与额外维护复杂度。预期可减少解析歧义及不可发现包风险，数值未知，没有成本改善结论。
+
+### 官方工具增量：仅作未来遥测资格待查
+
+独立来源交接核稳定版 Codex 0.163 与 10 月 19 日 alpha.5 的 Pre/PostModelRequest hooks；固定证据为 [model_request.rs](https://github.com/openai/codex/blob/70b3bb6d8814ab3f2045238b4ae14c43da99783b/codex-rs/hooks/src/events/model_request.rs)、[turn.rs](https://github.com/openai/codex/blob/70b3bb6d8814ab3f2045238b4ae14c43da99783b/codex-rs/core/src/session/turn.rs)，源码许可 [Apache-2.0](https://github.com/openai/codex/blob/70b3bb6d8814ab3f2045238b4ae14c43da99783b/LICENSE)。这不是本机版本、安装状态或收益证据；许可也不构成安装或外发授权。
+
+- **数据完整性：** usage 可能为空；cache_write 默认 0 不能解释为厂商实际报告 0。缺 request ID、attempt 序号和时间戳，重试关联仍需单独核定，未知不填 0。
+- **安全边界：** command 完整 payload 包含 cwd、transcript_path、session/turn 及未脱敏错误。observation-only 限制输出不能改模型上下文，不是 shell 权限隔离。字段最小化、接收方及具体授权须先明确，不默认启用或传给新接收器。
+- **成本边界：** 同步 hook 延迟工具分发，内部 sampling 计时不含全部 hook 开销；比较必须计入端到端成本。
+
+状态为未来遥测资格待查，不启用、不安装、不执行、不宣称收益；无新增模型官方能力结论。研究交接所见 Claude 2.1.303 稳定更新仅泛称 bugfix，不据此删除约束。
+
+### 10 月 19 日搜索快照
+
+检索时间：**2026-10-19 23:06 Asia/Shanghai（UTC 15:06）**。原生 GitHub 仓库搜索 `query=skills sort:stars-desc`，`page=1`，`per_page=20`；[搜索入口](https://github.com/search?q=skills&type=repositories&s=stars&o=desc)。随后逐仓读取 stars 与默认 HEAD，非原子快照；REST search URL 不受 fetch 支持，原生连接不返回 total_count/incomplete_results。20 项 stars/SHA 均取得，保留原序，仍未独立证明全球检索完整性；不是逐仓质量认证。
+
+| 原序 | 仓库 | Stars | 固定 SHA | 相对 10 月 18 日 HEAD |
+| ---: | --- | ---: | --- | --- |
+| 1 | [obra/superpowers](https://github.com/obra/superpowers) | 301,968 | [`bb92a77741419a4ab5f06e711a283343f1ada0c3`](https://github.com/obra/superpowers/tree/bb92a77741419a4ab5f06e711a283343f1ada0c3) | 相同 |
+| 2 | [mattpocock/skills](https://github.com/mattpocock/skills) | 297,082 | [`49dd158d1076134a641b33efb035946536778336`](https://github.com/mattpocock/skills/tree/49dd158d1076134a641b33efb035946536778336) | 相同 |
+| 3 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 283,782 | [`76aaa77df6adc5b889e689007bf99b9a4f74af34`](https://github.com/affaan-m/ECC/tree/76aaa77df6adc5b889e689007bf99b9a4f74af34) | 相同 |
+| 4 | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | 221,138 | [`2c606141936f1eeef17fa3043a72095b4765b9c2`](https://github.com/multica-ai/andrej-karpathy-skills/tree/2c606141936f1eeef17fa3043a72095b4765b9c2) | 相同 |
+| 5 | [anthropics/skills](https://github.com/anthropics/skills) | 182,158 | [`dbd4588f9e1033efb41dad4bef2f7947c8993d44`](https://github.com/anthropics/skills/tree/dbd4588f9e1033efb41dad4bef2f7947c8993d44) | 相同 |
+| 6 | [Snailclimb/JavaGuide](https://github.com/Snailclimb/JavaGuide) | 159,138 | [`50f02a5984c062fe7221629d0a6a40ec15c26fd7`](https://github.com/Snailclimb/JavaGuide/tree/50f02a5984c062fe7221629d0a6a40ec15c26fd7) | 相同 |
+| 7 | [langgenius/dify](https://github.com/langgenius/dify) | 158,888 | [`823f40e71fc9e045a9ff2aa903a74b5b001dff33`](https://github.com/langgenius/dify/tree/823f40e71fc9e045a9ff2aa903a74b5b001dff33) | 变化 |
+| 8 | [farion1231/cc-switch](https://github.com/farion1231/cc-switch) | 146,280 | [`f92ff0b03964188f1cd011d9302ab8869d7a8219`](https://github.com/farion1231/cc-switch/tree/f92ff0b03964188f1cd011d9302ab8869d7a8219) | 变化 |
+| 9 | [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | 142,296 | [`874bc13a57aa2ba1266a84f2444808ce3093efb6`](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/874bc13a57aa2ba1266a84f2444808ce3093efb6) | 变化 |
+| 10 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 137,501 | [`56ea9cf174ed86786187daa9de0e6247cb0747e4`](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/56ea9cf174ed86786187daa9de0e6247cb0747e4) | 相同 |
+| 11 | [Chalarangelo/30-seconds-of-code](https://github.com/Chalarangelo/30-seconds-of-code) | 129,257 | [`bd756f8b2283a38560efe83cb30af38324d4e9e9`](https://github.com/Chalarangelo/30-seconds-of-code/tree/bd756f8b2283a38560efe83cb30af38324d4e9e9) | 相同 |
+| 12 | [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) | 128,872 | [`86c57be8204673c2a1b9849a3292a7dd3ab373d8`](https://github.com/Graphify-Labs/graphify/tree/86c57be8204673c2a1b9849a3292a7dd3ab373d8) | 相同 |
+| 13 | [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | 113,604 | [`bad48a0e1df55e05e3f52249afa35ecc1909ee76`](https://github.com/JuliusBrussee/caveman/tree/bad48a0e1df55e05e3f52249afa35ecc1909ee76) | 相同 |
+| 14 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 108,484 | [`aeac41d4d005999432bb7312f7ff06383a91d59d`](https://github.com/addyosmani/agent-skills/tree/aeac41d4d005999432bb7312f7ff06383a91d59d) | 相同 |
+| 15 | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | 99,199 | [`b9ca2fd8047f4c72d7da90ebc1c1203e57c72cd2`](https://github.com/Leonxlnx/taste-skill/tree/b9ca2fd8047f4c72d7da90ebc1c1203e57c72cd2) | 变化 |
+| 16 | [ruvnet/RuView](https://github.com/ruvnet/RuView) | 98,755 | [`a1ca023ee872683d160250d47ae3d4d228af55a0`](https://github.com/ruvnet/RuView/tree/a1ca023ee872683d160250d47ae3d4d228af55a0) | 相同 |
+| 17 | [florinpop17/app-ideas](https://github.com/florinpop17/app-ideas) | 98,260 | [`9e8dd00f10b881babc273d66949b7ffa0e310097`](https://github.com/florinpop17/app-ideas/tree/9e8dd00f10b881babc273d66949b7ffa0e310097) | 相同 |
+| 18 | [tt-a1i/archify](https://github.com/tt-a1i/archify) | 85,718 | [`25cf37080fc8b1dbe758a4efc3935b55f3327083`](https://github.com/tt-a1i/archify/tree/25cf37080fc8b1dbe758a4efc3935b55f3327083) | 变化 |
+| 19 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 84,140 | [`085924a3d0cbf797d23fddc830f14cc6e5531256`](https://github.com/bytedance/deer-flow/tree/085924a3d0cbf797d23fddc830f14cc6e5531256) | 变化 |
+| 20 | [lobehub/lobehub](https://github.com/lobehub/lobehub) | 83,327 | [`fae57cfd558b14aff1047212fb4cf564f9ca44f0`](https://github.com/lobehub/lobehub/tree/fae57cfd558b14aff1047212fb4cf564f9ca44f0) | 变化 |
+
+本日两轮可得列表比较中原序不变、20 项 stars 均增加；相同 SHA 仅指记录的默认 HEAD，不推断 release、设置或全部上游内容不变。完整来源检索、全部代码审计及所有 release 比较均未完成。
+
+### 本轮结果与未验证边界
+
+- **真实完成：** 研究交接固定今日快照、审阅相关变化与官方 hooks 源码；编辑读回最新本地文档，区分发布基线与本地已提交迁移，重算 20 行字段差异。来源内容采用已独立审查的研究交接，不称文档编辑端独立重放了全部网页核验。
+- **来源覆盖限制：** 10 月 18 日后的相关邮箱限定查询没有新增可用线索；可访问 Reddit 搜索未获改变候选判断的一手增量，X 仅做域名限定搜索且无相关可核结果，未全面站内覆盖。这里只记录范围，不收录私人内容，不写成全网无变化。
+- **仍未验证：** 用户实际安装/加载内容、全部代码审计、本地完整重复键校验链、实际宿主行为及 alpha hooks 运行。最新本地文档全文已核，不再列作缺失；本轮未修改 Skills、未跑技能实验、未安装或启用工具。
+- **效率数据：** A 无技能/B 当前/C 精简未运行；端到端耗时、input/output/cached/总 token、返工、人工介入与配对质量均未采集，不填 0、不宣称收益。文档提交不改变任何候选的实施、测试或采纳状态。
 
 ## 2026-10-18（北京时间）｜既有 P1 收窄与来源快照
 
