@@ -27,6 +27,67 @@
 
 每条记录使用北京时间（Asia/Shanghai）日期，区分来源发生日、记录日与复测日。至少包含：变化与固定来源、具体删改建议、依据、预期收益、验证方案、真实结果及实现/测试链接。预期收益是待验证假设；结果分别标记历史证据、今日静态核验或真实运行。
 
+## 2026-10-26（北京时间）｜宿主资格与验收覆盖增量
+
+### 当前建议与状态
+
+- **不新增运行规则或框架。** Forgeway 既有证据契约已覆盖真实宿主注册、实际事件、加载的 handler bytes、可信 CODE owner 和独立目标读回；本日仅核官方变化的适用边界，不更新 adapter 版本、不启用 hooks。
+- **保留 JSX 覆盖披露。** tooling typecheck 成功不能声称检查了未包含的 UI JSX；复用已修 Primer 38 的范围证据，不重复增加同类 canary、不安装依赖。
+- **未来资格核验清单候选：** 如果以后明确获准验证 Codex 0.164 的实际 plugin hook，记录实际宿主版本、bundle/content identity 与当前 trust 状态；插件变更或回滚后，未经重新确认的资格不能沿用。该候选不是新 trust 实现或当前执行批准。
+- **收益与状态：** 仅只读研究、源代码对照及独立适用性审查；未运行行为评测，无端到端耗时/token/cache 节省结论。Handbook 按需参考设计仍只是已交付设计，未实施。
+
+### 基线、日期与缺口
+
+研究窗口为 2026-10-25 UTC 16:01–16:04，即北京时间 10 月 26 日 00:01–00:04。开始前核对当前任务树及共享研究记录，未发现本日已完成研究；用户明确说明 10 月 25 日份已完成，不重复该日研究。
+
+固定文档读取基线为维护分支 `docs/skills-ops-validation-2026-10-22@917bcf5f32e0daae9d5a21a36b6e549701848460`，blob `ef89e2f700bb40b3e4b0c937985b76b9feedbd1c`，不是仍停在初始化版本的 main。共享记录有 10 月 23–24 日研究交付；10 月 25 日完成采用本次明确交接。未取得 10 月 25 日原始 20 项快照，不伪造逐日差异，也不把归档缺口写成当日未研究；本次不代为补齐 23–25 日正文。
+
+### 可得 20 项采样与限制
+
+GitHub connector 搜索 `skills sort:stars-desc`、page=1、per_page=20，UTC 16:01:20–16:01:27。保留返回原序；[直接搜索入口](https://github.com/search?q=skills&type=repositories&s=stars&o=desc) 返回 HTTP 429，公共 API 搜索的网页读取不可得，未继续重试。connector 不给出明确排序认证、total_count 或 incomplete_results，故**不能认证全站严格前 20 或搜索完整性**。随后 UTC 16:02:31–16:02:41 分别读取这 20 库 metadata/default branch，取得下列 stars/SHA；非原子采样，不重新排序或过滤普通项目。
+
+| 返回原序 | 仓库 | Stars | 固定 HEAD |
+| ---: | --- | ---: | --- |
+| 1 | [obra/superpowers](https://github.com/obra/superpowers) | 304,900 | [`2ce8aa15d05bd57213e6f746f953aafb7ded7a8b`](https://github.com/obra/superpowers/tree/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b) |
+| 2 | [mattpocock/skills](https://github.com/mattpocock/skills) | 303,017 | [`5beb35b040e3de97e54fa9e386d7e42d15c295c2`](https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2) |
+| 3 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 288,568 | [`90606c8315ee09cafc303515c5f33024db6b9882`](https://github.com/affaan-m/ECC/tree/90606c8315ee09cafc303515c5f33024db6b9882) |
+| 4 | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | 223,654 | [`2c606141936f1eeef17fa3043a72095b4765b9c2`](https://github.com/multica-ai/andrej-karpathy-skills/tree/2c606141936f1eeef17fa3043a72095b4765b9c2) |
+| 5 | [anthropics/skills](https://github.com/anthropics/skills) | 183,685 | [`dbd4588f9e1033efb41dad4bef2f7947c8993d44`](https://github.com/anthropics/skills/tree/dbd4588f9e1033efb41dad4bef2f7947c8993d44) |
+| 6 | [langgenius/dify](https://github.com/langgenius/dify) | 159,499 | [`f64b57d6565adbabb40f5b95ea9780f381dc0f97`](https://github.com/langgenius/dify/tree/f64b57d6565adbabb40f5b95ea9780f381dc0f97) |
+| 7 | [Snailclimb/JavaGuide](https://github.com/Snailclimb/JavaGuide) | 159,248 | [`992dae31eade2a34ba8dbbbcf5ed9de5511325ec`](https://github.com/Snailclimb/JavaGuide/tree/992dae31eade2a34ba8dbbbcf5ed9de5511325ec) |
+| 8 | [farion1231/cc-switch](https://github.com/farion1231/cc-switch) | 148,554 | [`de0a235ad6389ce4afa333b472cdee615a3f3987`](https://github.com/farion1231/cc-switch/tree/de0a235ad6389ce4afa333b472cdee615a3f3987) |
+| 9 | [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | 143,009 | [`6c16b23f1bacd0fdf240bb5141ef45e59e82c306`](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/6c16b23f1bacd0fdf240bb5141ef45e59e82c306) |
+| 10 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 140,249 | [`d14efff8ed1faa4187f004f79926f428c8074ec7`](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/d14efff8ed1faa4187f004f79926f428c8074ec7) |
+| 11 | [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) | 134,899 | [`92741d162b2094ffc2fed58cfbd8ee823e9da62c`](https://github.com/Graphify-Labs/graphify/tree/92741d162b2094ffc2fed58cfbd8ee823e9da62c) |
+| 12 | [Chalarangelo/30-seconds-of-code](https://github.com/Chalarangelo/30-seconds-of-code) | 129,324 | [`bd756f8b2283a38560efe83cb30af38324d4e9e9`](https://github.com/Chalarangelo/30-seconds-of-code/tree/bd756f8b2283a38560efe83cb30af38324d4e9e9) |
+| 13 | [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | 114,966 | [`9b68f7ed12b05e7efaff18e65c5a3fc2849fd0a4`](https://github.com/JuliusBrussee/caveman/tree/9b68f7ed12b05e7efaff18e65c5a3fc2849fd0a4) |
+| 14 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 110,396 | [`aeac41d4d005999432bb7312f7ff06383a91d59d`](https://github.com/addyosmani/agent-skills/tree/aeac41d4d005999432bb7312f7ff06383a91d59d) |
+| 15 | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | 102,321 | [`12af471f627f866411b4bd785b19646d3672784c`](https://github.com/Leonxlnx/taste-skill/tree/12af471f627f866411b4bd785b19646d3672784c) |
+| 16 | [ruvnet/RuView](https://github.com/ruvnet/RuView) | 99,514 | [`fefb0f918eefa7db6daef8cc83787fc7d6f74187`](https://github.com/ruvnet/RuView/tree/fefb0f918eefa7db6daef8cc83787fc7d6f74187) |
+| 17 | [florinpop17/app-ideas](https://github.com/florinpop17/app-ideas) | 98,322 | [`9e8dd00f10b881babc273d66949b7ffa0e310097`](https://github.com/florinpop17/app-ideas/tree/9e8dd00f10b881babc273d66949b7ffa0e310097) |
+| 18 | [tt-a1i/archify](https://github.com/tt-a1i/archify) | 89,044 | [`81c6be8d87090670c45d08a8f97f9d29c5af0bec`](https://github.com/tt-a1i/archify/tree/81c6be8d87090670c45d08a8f97f9d29c5af0bec) |
+| 19 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 84,410 | [`ce0fa4c114226213e5e5799cc2fea43687dc4aba`](https://github.com/bytedance/deer-flow/tree/ce0fa4c114226213e5e5799cc2fea43687dc4aba) |
+| 20 | [lobehub/lobehub](https://github.com/lobehub/lobehub) | 83,481 | [`2c759f545c1382cafa2d81b6b299502c797e5dc9`](https://github.com/lobehub/lobehub/tree/2c759f545c1382cafa2d81b6b299502c797e5dc9) |
+
+仅与既有 10 月 22 日可读完整表比较：集合、返回顺序相同，11 个 HEAD 不同、9 个相同；**这不是 10 月 25→26 日变化统计**。未变来源不重复深读，变化仓库亦未全量逐行审计。Stars 不作为采纳依据。
+
+### 固定来源、反证与具体取舍
+
+| 来源与核验 | 建议 / 风险 / 验收 / 状态 |
+| --- | --- |
+| [Codex 0.164.0](https://github.com/openai/codex/releases/tag/rust-v0.164.0)，10 月 23 日 04:48:10 UTC 发布，固定 `6aaac694803004a63c6f393d153c96d22521a6b9`；Forgeway 原适配器固定 0.163.0 / `83086188ae0614bd882818ff1aa23f3194962012`。直接读取两个版本的 [PostToolUse input schema](https://github.com/openai/codex/blob/6aaac694803004a63c6f393d153c96d22521a6b9/codex-rs/hooks/schema/generated/post-tool-use.command.input.schema.json)，均为 blob `f92af1dd3249ddf3511ef707c4310329e5b85c80`、1,386 字符，正文相同。 | **不改 envelope、不因版本新而升级。** 仅证明 schema 未变，不证明 0.164 整体运行或真实宿主链已经验证；无运行实测。 |
+| [plugin_trust.rs](https://github.com/openai/codex/blob/6aaac694803004a63c6f393d153c96d22521a6b9/codex-rs/hooks/src/engine/plugin_trust.rs)，blob `8fe88effa1c4e447d15af402d637afff69322354`：执行前核 fresh content hash；[hooks_list integration tests](https://github.com/openai/codex/blob/6aaac694803004a63c6f393d153c96d22521a6b9/codex-rs/app-server/tests/suite/v2/hooks_list.rs)覆盖升级和回滚后 Modified/重新批准。对应 [PR #54619](https://github.com/openai/codex/pull/54619) 于 10 月 16 日合入，不能称 10 月 26 日新实现。 | 仅进入未来 **F06 / ops-client 宿主资格清单**：实际版本、bundle identity、当前 trust 必须匹配；变更/回滚后的未确认资格保持阻塞。既有 Forgeway 契约已经要求加载字节和可信宿主绑定，本日独立适用性审查认为无需改运行代码。风险是重复宿主安全实现或将旧 declaration approval 当作当前代码信任；不启用 hooks、不写配置、不迁移 legacy trust。 |
+| 实际 Forgeway Primer 修复固定本地 `5e4018d2efbbe86ecab1b37fdb726ac899a47a4e` 的证据与配置直接核读：`tsconfig.tooling.json` 只 include `tooling/stage-registry-contract.ts`，不覆盖 `product-ui/src/main.jsx`。生成 JS/CSS 检查是静态产物证据，非浏览器/AT。 | 对 **dev-tests / UI 验收** 保留检查入口、配置和范围披露，不把 tooling check 计作 JSX 类型安全。若后续获准补覆盖，应由原入口证明 JSX 真正纳入检查且具备所需类型，而非加一条同义提示或重复 sx canary。本日未改依赖、源码或测试。 |
+| [Claude Code 2.1.310](https://github.com/anthropics/claude-code/releases/tag/v2.1.310) 有压缩、符号链接提示、无人回应 elicitation 的错误处理修复；[Gemini 10/25 nightly](https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261025.gcd1b45c2d) 无详细新增变更说明。 | 仅官方来源旁证，不推定 Codex/Forgeway 已具备同等行为，不安装、不以模型“已经会”为由删具体约束。 |
+
+Codex 两 release 的 compare 返回 330 commits / 300 files，达到文件列表上限；本轮只对上述固定关键文件继续核读，不能宣称完整代码审计。插件内容指纹本身也不是完整运行环境证明，不复制上游实现或其安全配置。
+
+近期已完成的 malformed-gate 分类、loading status、Primer 38 和 canonical pkg/obs CLI 修复，分别保持原发布/本地冻结/独审状态，不借本日研究重新执行或扩大验收。发布版本 `8e26dac37392fc845fc7ca1ebf691f4a1a7a282f` 不代表所有候选已发布；原 browser/reader/host trust 阻塞不因研究解除。无新 runner、无 Tokyo 复跑、无模型调用。
+
+### 结果与停止点
+
+今天的可复核增量是 schema 不变的反证、宿主内容信任的未来资格要点，以及真实 UI typecheck 覆盖边界。**不新增 Forgeway 运行实现**；独立适用性审查支持这一判断。严格全站排序认证和 10 月 25 日原始快照比较仍为未完成证据项，不用重复检索或历史统计伪装补齐。没有 A/B/C 运行、完整 token、耗时、返工或质量配对；不宣称稳定收益。
+
 ## 2026-10-22（北京时间，晚间）｜来源增量与压缩恢复资格核验
 
 研究交接记录于 23:07；仓库搜索约为 UTC 14:59，逐库 metadata/默认 HEAD 核验窗口为 UTC 14:59:45–15:01:40（北京时间 22:59:45–23:01:40）。这是研究增量，不是新研发包；今日统一实施的 20 包、471 测试、102 路由沿用前节对应回执，不在本轮重放或重新宣派。
