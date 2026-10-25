@@ -86,3 +86,11 @@ media remain separate Createway or Story Studio Tasks.
 ## Historical source
 
 This Map succeeds `ai-product-experience-map.md`.
+
+## Optional supporting references
+
+For a concrete design or verification knowledge gap, consult the
+[Handbook reference projection](../registry/README.md#optional-reference-projection-bounded-pilot).
+Only a qualified metadata hit permits selecting its fixed source for later reading.
+Missing/related-only references do not call extra capabilities or weaken required
+Gates. Project design authority and accepted sources always outrank these references.

@@ -11,3 +11,10 @@ Current execution, product system and capability Maps:
 The older `ai-engineering`, `ai-creative-media` and `ai-product-experience` Maps are
 historical capability-domain entrypoints. They remain queryable but do not select a
 Task route or own product artifacts.
+
+## Optional reference lookup pilot
+
+[Registry reference projection](../registry/README.md#optional-reference-projection-bounded-pilot)
+provides metadata-first access to five fixed-source UI, prompt and audit references.
+Use it only for a concrete task knowledge need; misses do not block otherwise valid
+work. It is not a new route, capability catalog or complete cross-domain index.

@@ -10,6 +10,11 @@ from typing import Any
 
 import yaml
 
+if __package__:
+    from .reference_index import validate_reference_index
+else:
+    from reference_index import validate_reference_index
+
 
 class RegistryError(ValueError):
     pass
@@ -148,7 +153,7 @@ def validate_story_studio_pilot(root: Path, route_ids: set[str], projects: dict[
     }
 
 
-def validate(root: Path) -> dict[str, Any]:
+def validate(root: Path, check_reference_sources: bool = False) -> dict[str, Any]:
     registry = root / "registry"
     workflow_root = root / "workflows" / "ai-engineering-system"
     routes_doc = load_yaml(registry / "routes.yaml")
@@ -242,6 +247,13 @@ def validate(root: Path) -> dict[str, Any]:
         raise RegistryError("Createway and Story Studio output boundary drift")
 
     pilot_result = validate_story_studio_pilot(root, route_ids, projects)
+    try:
+        reference_result = validate_reference_index(
+            json.loads((registry / "references.json").read_text(encoding="utf-8")),
+            root if check_reference_sources else None,
+        )
+    except (ValueError, TypeError, OSError) as error:
+        raise RegistryError(str(error)) from error
 
     return {
         "verified": True,
@@ -251,14 +263,16 @@ def validate(root: Path) -> dict[str, Any]:
         "routing_eval_count": len(evals_doc.get("cases", [])),
         "workflow_version": workflow_doc["workflow"]["version"],
         "pilot_experiment": pilot_result,
+        "reference_index": reference_result,
     }
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
+    parser.add_argument("--check-reference-sources", action="store_true", help="Producer-only local source hash checks; no network")
     args = parser.parse_args()
-    print(json.dumps(validate(args.root.resolve()), ensure_ascii=False, sort_keys=True))
+    print(json.dumps(validate(args.root.resolve(), args.check_reference_sources), ensure_ascii=False, sort_keys=True))
     return 0
 
 

@@ -1,0 +1,230 @@
+{
+  "schema_version": "handbook-reference-index/1",
+  "owner": "idaibin/ai-handbook",
+  "basis": {
+    "repository": "idaibin/ai-handbook",
+    "revision": "1859577953ae342dadf265a7e1172d4e62574c5f"
+  },
+  "entries": [
+    {
+      "id": "scroll-interactions",
+      "kind": "interaction-pattern",
+      "title": "滚动交互检索卡 / Scroll interaction terminology",
+      "summary": "区分粘性定位、滚动停靠与滚动联动；仅有文档阅读证据。",
+      "topics": [
+        "scroll",
+        "sticky",
+        "snap",
+        "滚动交互",
+        "粘性定位"
+      ],
+      "stages": [
+        "design"
+      ],
+      "applies_to": [],
+      "excludes": [
+        "verified-mobile-touch"
+      ],
+      "source": {
+        "repository": "idaibin/ai-handbook",
+        "path": "research/product-ui/scroll-interaction-patterns.md",
+        "revision": "1859577953ae342dadf265a7e1172d4e62574c5f",
+        "sha256": "6f685aab630c1f2569130afe8dd8c56a0166af6bf86e4f348a848463fbc485e7"
+      },
+      "status": "reference",
+      "evidence": {
+        "level": "source-read",
+        "limitations": [
+          "Official documentation read; mobile touch, keyboard, reduced motion and performance not tested."
+        ]
+      },
+      "rights": {
+        "status": "unknown",
+        "allowed_use": [
+          "reference"
+        ]
+      },
+      "freshness": {
+        "checked_at": "2026-10-25",
+        "recheck_when": [
+          "source-revision-changed",
+          "task-constraints-changed"
+        ]
+      }
+    },
+    {
+      "id": "image-first-ui",
+      "kind": "method",
+      "title": "Image-first UI delivery",
+      "summary": "Image-first UI delivery",
+      "topics": [
+        "ui",
+        "image-first"
+      ],
+      "stages": [
+        "design",
+        "verification"
+      ],
+      "applies_to": [],
+      "excludes": [
+        "replace-project-design-system"
+      ],
+      "source": {
+        "repository": "idaibin/ai-handbook",
+        "path": "workflows/image-design/README.md",
+        "revision": "1859577953ae342dadf265a7e1172d4e62574c5f",
+        "sha256": "b04e03ea483588bfaf7cd843788ea7dbc30673f55df3c35e3f623ebc534c152b"
+      },
+      "status": "reference",
+      "evidence": {
+        "level": "source-read",
+        "limitations": [
+          "Cross-project effectiveness not validated; existing project tokens and components remain authoritative."
+        ]
+      },
+      "rights": {
+        "status": "unknown",
+        "allowed_use": [
+          "reference"
+        ]
+      },
+      "freshness": {
+        "checked_at": "2026-10-25",
+        "recheck_when": [
+          "source-revision-changed",
+          "task-constraints-changed"
+        ]
+      }
+    },
+    {
+      "id": "dashboard-prompt-comparison",
+      "kind": "prompt-case",
+      "title": "Dashboard prompt A/B/C experiment",
+      "summary": "Dashboard prompt A/B/C experiment",
+      "topics": [
+        "dashboard",
+        "prompt-comparison"
+      ],
+      "stages": [
+        "design"
+      ],
+      "applies_to": [],
+      "excludes": [
+        "proven-best-prompt"
+      ],
+      "source": {
+        "repository": "idaibin/ai-handbook",
+        "path": "experiments/visual-registry-mvp-01/image-cases/saas-dashboard-prompt-comparison.json",
+        "revision": "1859577953ae342dadf265a7e1172d4e62574c5f",
+        "sha256": "aaeccd85a6053feb9ce325af00b5b85d523d4f8902f71d0eacb21556be3f39ba"
+      },
+      "status": "candidate",
+      "evidence": {
+        "level": "not-verified",
+        "limitations": [
+          "Original status prompt_set_ready; no provider-effectiveness claim; reading never authorizes generation."
+        ]
+      },
+      "rights": {
+        "status": "unknown",
+        "allowed_use": [
+          "reference"
+        ]
+      },
+      "freshness": {
+        "checked_at": "2026-10-25",
+        "recheck_when": [
+          "source-revision-changed",
+          "task-constraints-changed"
+        ]
+      }
+    },
+    {
+      "id": "source-coverage-audit",
+      "kind": "audit-case",
+      "title": "Fixed-basis source coverage audit",
+      "summary": "Fixed-basis source coverage audit",
+      "topics": [
+        "source-coverage",
+        "oracle"
+      ],
+      "stages": [
+        "verification"
+      ],
+      "applies_to": [],
+      "excludes": [
+        "remote-verification"
+      ],
+      "source": {
+        "repository": "idaibin/ai-handbook",
+        "path": "experiments/ai-capability-clusters/applications/case-02-source-coverage-audit/README.md",
+        "revision": "1859577953ae342dadf265a7e1172d4e62574c5f",
+        "sha256": "385a7e7f877fbf97daca686b85012910335416fd8c1e59504403313749e09f40"
+      },
+      "status": "reference",
+      "evidence": {
+        "level": "local-experiment",
+        "limitations": [
+          "Recorded local experiment only; not rerun here; remote locator validation not verified."
+        ]
+      },
+      "rights": {
+        "status": "unknown",
+        "allowed_use": [
+          "reference"
+        ]
+      },
+      "freshness": {
+        "checked_at": "2026-10-25",
+        "recheck_when": [
+          "source-revision-changed",
+          "task-constraints-changed"
+        ]
+      }
+    },
+    {
+      "id": "forgeway-ui-directions",
+      "kind": "design-candidate",
+      "title": "Unselected Forgeway UI directions",
+      "summary": "Unselected Forgeway UI directions",
+      "topics": [
+        "forgeway-ui",
+        "design-direction"
+      ],
+      "stages": [
+        "design"
+      ],
+      "applies_to": [],
+      "excludes": [
+        "accepted-design",
+        "private-media-fetch"
+      ],
+      "source": {
+        "repository": "idaibin/ai-handbook",
+        "path": "registry/assets.yaml",
+        "revision": "1859577953ae342dadf265a7e1172d4e62574c5f",
+        "sha256": "7ab4f88896435e5bc8be7b1ea2274f463043ba03f3e87b092f8fe40d57b9d40c"
+      },
+      "status": "candidate",
+      "evidence": {
+        "level": "not-verified",
+        "limitations": [
+          "Registry metadata only; generated/not-selected; private media not read; human exact-source selection required."
+        ]
+      },
+      "rights": {
+        "status": "unknown",
+        "allowed_use": [
+          "reference"
+        ]
+      },
+      "freshness": {
+        "checked_at": "2026-10-25",
+        "recheck_when": [
+          "source-revision-changed",
+          "task-constraints-changed"
+        ]
+      }
+    }
+  ]
+}
