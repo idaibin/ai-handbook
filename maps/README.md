@@ -44,6 +44,7 @@ Prompts Hub 不合仓、不删除或归档；一般索引维护不改变资产�
 ## 创作参考与共享能力
 
 - [Craftway 内容创作地图](content-output-system-map.md)：先前称 Creatorway，更早资料使用 Createway；历史记录和既有兼容 ID 保留。
+- [Craftway 运营、文案与海报参考](../research/agent-skills/README.md#craftway-运营文案与海报参考)：四个固定来源的许可、取舍与原 owner 映射；仅静态借鉴，不新增 Skill 或扩大发布权限。
 - [媒体制作地图](media-production-system-map.md)：Story Studio 历史架构，不恢复其暂停任务。
 - [共享 AI 能力地图](shared-ai-capabilities-map.md)：Knowledge、Writing、Visual、Workflow、Evaluation 的参考边界。
 - [知识与情报地图](knowledge-intelligence-system-map.md)：既有 feeds-hub 关系，不因补链接启动产品。
