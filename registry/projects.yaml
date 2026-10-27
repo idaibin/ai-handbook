@@ -1,6 +1,6 @@
 # Historical v0.2 execution snapshot: only Story Studio MVP was active at that stage.
 # These statuses are retained as evidence, not current authorization. See ../README.md
-# for the continuing Handbook, Forgeway and Creatorway workstreams; do not resume old tasks.
+# for the continuing Handbook, Forgeway and Craftway workstreams; do not resume old tasks.
 projects:
   - id: ai-handbook
     type: framework

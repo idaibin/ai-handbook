@@ -28,10 +28,10 @@ routes:
     name: Content Creation System
     compatibility:
       retained_id_from: AI Engineering Lab v2.0
-      narrowed_for: Creatorway Content Creation
+      narrowed_for: Craftway Content Creation
     product:
       id: createway # Legacy compatibility id; not the current display spelling.
-      name: Creatorway
+      name: Craftway
       implementation_status: defined
     purpose: Turn knowledge, ideas and product information into reviewed audience-facing content.
     outputs:

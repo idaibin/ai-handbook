@@ -1,10 +1,16 @@
 # Handbook — Knowledge & Reference Hub
 
-- **维护定位：** 为 Forgeway 与 Creatorway 提供可追溯的方案、UI、工具、Skills、Prompt 和创作参考。
+- **维护定位：** 为 Forgeway 与 Craftway 提供可追溯的方案、UI、工具、Skills、Prompt 和创作参考。
 - **本轮核对：** 2026-10-27（北京时间）；仓库保留 `idaibin/ai-handbook`，不改名。
 - **范围：** 来源、主题地图、研究结论和验证状态。源码、实现、运行配置与内容运营仍由原 owner 维护。
 
-Handbook、Forgeway、Creatorway 是长期保留的三条主线，不被临时任务替代。
+Handbook、Forgeway、Craftway 是长期保留的三条主线，不被临时任务替代。
+
+- **Forgeway：** 完整 IT 研发交付，覆盖 PRD、架构、UI、代码、测试、构建与部署；管理调度，不复制各仓执行能力。
+- **Handbook：** Knowledge & Reference Hub，维护资料完整索引与地图，以及来源、版本、许可、取舍、证据和下游映射。
+- **Craftway：** 以 AI 内容和个人 IP 为主，后续规划教育、健康内容与变现；规划不构成平台发布授权。
+
+Craftway 为 2026-10-27 用户确认的当前名称，先前称 Creatorway，更早资料使用 Createway。此次仅同步显示名与解释；稳定 ID、仓库地址、目录及账号不变，历史记录保留原名。
 资料维护不自动启动旧项目、安装工具、扩大资产授权或发布内容；Tokyo、Story Studio 等暂停项目不因补索引而恢复。
 
 ## 从哪里查
@@ -20,11 +26,11 @@ Handbook、Forgeway、Creatorway 是长期保留的三条主线，不被临时�
 
 ## 使用与维护
 
-复用现有来源台账、索引和地图；按明确问题补证、去重、追一手来源，记录日期、固定版本、许可、成本与验证状态。未知项保留未知。旧批量研究的 [paused 边界](research/stage-reviews/2026-08-11-repository-research-stage-closure.md)仍有效，不恢复 Top20 重跑或顺序深研。
+复用现有来源台账、索引和地图；按明确问题补证、去重、追一手来源，记录日期、固定版本、许可、成本与验证状态。未知项保留未知。Skills、CLIs、Plugins 的执行能力真源留在各维护仓；借鉴优先，非必需不新增 Skill。旧批量研究的 [paused 边界](research/stage-reviews/2026-08-11-repository-research-stage-closure.md)仍有效，不恢复 Top20 重跑或顺序深研。
 
 入口存在、链接有效或本地校验通过，不等于资产全验、项目可用或生产已发布。
 私人 Library 不全量搬入仓库，也不自动同步收藏；大型、私有或受版权限制的原始资料保留在原 owner。
-Handbook 云端先保存、每周批量同步；不因每次资料变更自动 commit、push 或部署。
+已完成的逻辑改动批次应在当前授权环境本地 Git 提交，不长期只保留 dirty。远端仍每周批量同步；本地提交不等于已 push，也不自动推送或部署。
 
 Prompt 内容范围包含独立的 `idaibin/prompts-hub`，见[主题地图中的 Prompt 入口](maps/README.md#prompt)。
 保留独立仓、原 owner 和既有资产上传／allowlist／WebP quality 82／真实 URL 回读约束；一般内容维护不扩大资源发布授权。

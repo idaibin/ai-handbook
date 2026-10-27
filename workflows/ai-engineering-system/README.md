@@ -1,6 +1,6 @@
 # AI Engineering Lab v0.2 Minimal Workflow
 
-> 历史门禁：下文保留 v0.2 当时的单一 MVP 与冻结规则，不作为当前三条长期主线的总入口。2026-10-27 的 Handbook、Forgeway、Creatorway 定位见[根 README](../../README.md)。本澄清不恢复任何暂停项目或授权旧 next_action。
+> 历史门禁：下文保留 v0.2 当时的单一 MVP 与冻结规则，不作为当前三条长期主线的总入口。2026-10-27 的 Handbook、Forgeway、Craftway 定位见[根 README](../../README.md)。本澄清不恢复任何暂停项目或授权旧 next_action。
 
 - **Version:** `0.2`
 - **Status:** `FROZEN_PENDING_MVP_SELECTION`

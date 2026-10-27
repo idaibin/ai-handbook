@@ -1,6 +1,6 @@
 # Handbook 主题地图
 
-本页复用既有地图和研究入口，为 Forgeway 与 Creatorway 提供知识参考。维护定位见[根入口](../README.md)。
+本页复用既有地图和研究入口，为 Forgeway 与 Craftway 提供知识参考。维护定位见[根入口](../README.md)。
 主题入口不选择执行任务、不拥有源代码或运营资产；资料列入导航不等于已验证或已采用。
 
 ## 方案、AI 工程与 Agent
@@ -43,12 +43,12 @@ Prompts Hub 不合仓、不删除或归档；一般索引维护不改变资产�
 
 ## 创作参考与共享能力
 
-- [Creatorway 内容创作地图](content-output-system-map.md)：旧文使用 Createway；既有兼容 ID 保留。
+- [Craftway 内容创作地图](content-output-system-map.md)：先前称 Creatorway，更早资料使用 Createway；历史记录和既有兼容 ID 保留。
 - [媒体制作地图](media-production-system-map.md)：Story Studio 历史架构，不恢复其暂停任务。
 - [共享 AI 能力地图](shared-ai-capabilities-map.md)：Knowledge、Writing、Visual、Workflow、Evaluation 的参考边界。
 - [知识与情报地图](knowledge-intelligence-system-map.md)：既有 feeds-hub 关系，不因补链接启动产品。
 
-Creatorway 的资料借鉴与原内容运营 owner 分开；没有原入口证据时，不把浏览器提交说明扩成全运营 SOP，也不新建仓库或平行写作能力。
+Craftway 的资料借鉴与原内容运营 owner 分开；没有原入口证据时，不把浏览器提交说明扩成全运营 SOP，也不新建仓库或平行写作能力。
 
 ## 来源与历史分类
 

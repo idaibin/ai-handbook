@@ -2,7 +2,7 @@
 
 - Stable route id: `content-output-system`
 - Status: architecture-defined; implementation not verified
-- Product: Creatorway
+- Product display name: Craftway
 - Lifecycle: `Knowledge → Writing → Visual Enhancement → Publishing`
 
 ## Outcome
@@ -47,7 +47,7 @@ Narrative image sequences, comics, animation, video, voice and audio select
 
 ## Compatibility
 
-The current workstream spelling is **Creatorway** (confirmed 2026-10-27). Earlier documents used **Createway**. The product id `createway` and route id `content-output-system` remain unchanged; this naming clarification does not create a repository, runtime or publication authorization.
+The current workstream spelling is **Craftway** (confirmed 2026-10-27), formerly **Creatorway** and earlier **Createway**. The product id `createway` and route id `content-output-system` remain unchanged. The original architecture and implementation observations elsewhere in this map retain their historical names and scope; current workstream planning follows the [Handbook entrypoint](../README.md). Personal-IP planning is not a claim that the historical Story Studio media/IP contract has migrated. This display-name clarification does not create a repository, runtime or publication authorization.
 
 The route id remains `content-output-system` because current Registry, workflow and
 handoff consumers use it. The architecture narrows its product meaning to Creatorway
