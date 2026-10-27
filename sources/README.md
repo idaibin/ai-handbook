@@ -2,15 +2,28 @@
 
 `sources/` 保存候选来源、固定阅读证据和来源治理记录。它不是“已完成学习清单”。
 
-- `catalog.yaml`：现有候选来源台账；历史字段按原证据解释，不自动升级。
-- `inbox/`：用户提供、GitHub Stars 或自动发现的待筛选来源。
-- `coverage/`：固定提交上的来源角色覆盖和验证工具。
-- `distillation-ledger.yaml`：历史局部蒸馏记录，不代表整个来源已完成研究。
-- `github-ai-repositories.yaml`：已有 GitHub 候选池。
+- [catalog.yaml](catalog.yaml)：现有候选来源台账；历史字段按原证据解释，不自动升级。
+- [inbox/](inbox/README.md)：用户提供、GitHub Stars 或自动发现的待筛选来源。
+- [coverage/](coverage/README.md)：固定提交上的来源角色覆盖和验证工具。
+- [distillation-ledger.yaml](distillation-ledger.yaml)：历史局部蒸馏记录，不代表整个来源已完成研究。
+- [github-ai-repositories.yaml](github-ai-repositories.yaml)：已有 GitHub 候选池。
+- [历史 Agent Skills 来源索引](catalog/github-agent-skills-index.md)：保留元数据索引、分组运行记录与暂停边界，不重启采集。
+
+按主题取用见[Handbook 地图](../maps/README.md)。本目录是来源权威入口，不另造平行台账。
+蒸馏记录的 `source_id` 可关联 GitHub 候选池的同名 `id` 与固定 `commit_sha`；不能把该关联省略后认定没有固定来源。
+两项既有蒸馏产物的 `artifact` 已固定到原仓提交 `e13f311b2240c881523f15aee9f548d3d70da471`（2026-08-03 可达历史中首次／最后文件改动；2026-10-27 核到与当前内容一致）。原产物和台账声明的 2026-07-31 日期保留，但尚无当天产物的 Git 字节证据，不能把固定链接倒推为该日版本。
+
+产物正文仍由独立仓 `idaibin/knowledge-distillation` 拥有；Handbook 仅保存引用、局部覆盖和适用边界。两份 IR 均为 `draft / level_3`，要求发布审查；历史结构校验、来源支持和 `distilled` 不等于当前运行验证、跨场景收益或可执行 Skill。台账的 `mcp-servers` 与产物的 `mcp-reference-servers` 指向同一固定来源，保留各自稳定 ID。
+
+原仓 MIT 与上游来源许可分别核对；`public` 访问不表示发布审查已通过。两产物明确只保留转化笔记，不复制源文或替代原来源。2026-10-27 的固定根许可核验保留 MCP 的迁移／文档许可差异和 Langfuse 的 EE／第三方例外，不把历史 `Not verified` 粗改成单一许可证，也不把根许可核验称为全量权利链验证。
+
+2026-10-27 核到的范围：catalog 有 4 个顶层条目（含课程集合和仓库候选池）；Inbox 有 9 个唯一记录；coverage manifest 有 12 个主来源；蒸馏有 2 簇、10 个局部来源引用。这些集合重叠、层级不同，不能相加为独立已验证资产总数。完整阅读、许可／成本、新鲜度和外部资产状态仍按每条证据核实。
 
 统一来源规则见 [`../workflows/ai-engineering-system/source-management.md`](../workflows/ai-engineering-system/source-management.md)，状态合同见 [`../workflows/ai-engineering-system/state-model.yaml`](../workflows/ai-engineering-system/state-model.yaml)。
 
 ## 双循环
+
+阶段与最小证据包见既有[产出驱动学习路径](../roadmap/learning-path.md)。这是方法参考，不自动启用发现任务、执行实验或恢复历史输出路由。
 
 ### 持续发现
 

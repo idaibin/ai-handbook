@@ -21,6 +21,14 @@ mapping can measure marginal value. See the
 
 [Skills 优化记录](skills-optimization.md)：维护当前建议、优先级、上游 Skills 与模型能力变化、精简方案及真实对照结果。仅此文档及本入口获准新增维护；旧研究继续 paused，不恢复批量扫描、顺序深研或其它项目。实现与测试仍归 `idaibin/skills`，通过链接关联；建议不代表已执行或已证实收益。
 
+## 历史证据导航（2026-10-27 补链）
+
+- [历史研究批次](batches/)：保留报告原文与日期；目录可浏览，不把每份报告逐条复制到总入口。
+- [仓库记录](repositories/)、[当前研究状态](state.json)、[既有分析汇总](deep-analysis-latest.json)：结构化引用仍由这些原文件拥有。
+- [来源索引及采集历史](../../sources/catalog/github-agent-skills-index.md)：元数据发现与内容／运行验证分开。
+
+本节只增加检索入口，不更新历史数量、恢复队列或执行旧 next_action。无 Markdown 入链也不等于没有结构化引用，更不是删除依据。
+
 ## Verified Candidates
 
 | Repository | Category | Evidence | Notes |

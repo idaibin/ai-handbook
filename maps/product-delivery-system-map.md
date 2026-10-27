@@ -1,5 +1,7 @@
 # Product Delivery System Map
 
+> This map retains historical architecture and implementation observations. Current workstream scope is recorded in the [Handbook entrypoint](../README.md); an `active` label below is not a fresh runtime check or authorization to resume a paused project.
+
 - Stable route id: `product-delivery-system`
 - Status: active
 - Product: Forgeway
@@ -35,7 +37,7 @@ capability. The target repository owns its design tokens, components and impleme
 source. Forgeway may own an internal UI module only when Forgeway itself is the real
 non-LLM consumer; this does not create another shared Skill or design authority.
 
-Forgeway does not own Createway content creation or Story Studio media production.
+Forgeway does not own Creatorway content creation or Story Studio media production.
 
 ## Product UI delivery
 
@@ -73,8 +75,8 @@ page text cannot advance the browser Gate.
 ## Task route rule
 
 A software engineering Task selects `product-delivery-system` even when the product's
-primary route is feeds-hub, Createway or Story Studio. Authored content and narrative
-media remain separate Createway or Story Studio Tasks.
+primary route is feeds-hub, Creatorway or Story Studio. Authored content and narrative
+media remain separate Creatorway or Story Studio Tasks.
 
 ## Related projects
 

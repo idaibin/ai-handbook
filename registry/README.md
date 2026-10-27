@@ -1,6 +1,8 @@
 # Registry
 
-`registry/` is the machine-readable relationship and routing index for AI Engineering Lab.
+`registry/` is the existing machine-readable relationship and routing index retained by Handbook.
+
+Current knowledge-hub scope and the three continuing workstreams are described in the [Handbook entrypoint](../README.md). The execution statuses retained here are historical snapshots, not a current grant to start or resume a project. Creatorway is the current display name; the legacy product id `createway` and route id `content-output-system` remain compatibility identifiers.
 
 It connects:
 
@@ -21,11 +23,11 @@ Registry stores stable identity, relationships, routing metadata and references.
 
 ## Files
 
-- `routes.yaml`: feeds-hub, Createway, Story Studio and Forgeway route definitions, task cardinality and 5 shared capability systems.
-- `domains.yaml`: retained research-domain and capability classification.
-- `projects.yaml`: project identity, primary/secondary routes, capabilities and repository mappings.
-- `assets.yaml`: external asset references and migration state.
-- `relationships.yaml`: typed relationships between objects.
+- [routes.yaml](routes.yaml): feeds-hub, Creatorway, Story Studio and Forgeway route definitions, task cardinality and 5 shared capability systems.
+- [domains.yaml](domains.yaml): retained research-domain and capability classification.
+- [projects.yaml](projects.yaml): project identity, historical execution status, primary/secondary routes, capabilities and repository mappings.
+- [assets.yaml](assets.yaml): external asset references and migration state; not a complete inventory or current readback of all assets.
+- [relationships.yaml](relationships.yaml): typed relationships between objects.
 
 ## Routing rules
 
@@ -33,7 +35,7 @@ Registry stores stable identity, relationships, routing metadata and references.
 2. Every executable delivery Task must select exactly one route.
 3. Shared AI Capabilities (Knowledge, Writing, Visual, Workflow, Evaluation) may support any route but are not another delivery route.
 4. A project default does not override a Task's explicit route.
-5. `content-output-system` is retained as Createway's stable id with narrowed Content Creation meaning.
+5. `content-output-system` is retained as Creatorway's stable route id with the historical Content Creation meaning; changing a display name does not migrate executable contracts.
 6. `Story Studio` is architecture/experiment-defined only; Registry must not imply a repository, pilot or runtime.
 7. feeds-hub owns source-bound intelligence and knowledge candidates, not durable Knowledge IR promotion.
 
