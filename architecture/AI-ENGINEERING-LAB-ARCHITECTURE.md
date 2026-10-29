@@ -7,5 +7,5 @@
 
 The v0.1 multi-system architecture is retained in Git history as evidence. It no longer authorizes project execution, scope expansion, new repositories, new registries, or workflow continuation.
 
-AI Engineering Lab v0.2 remains frozen until one bounded `MVP_BRIEF` is explicitly approved.
+The [v0.2 workflow](../workflows/ai-engineering-system/README.md) describes the Lab's single-MVP gate. Current project status and resumption conditions belong to each project's status record.
 

@@ -1,8 +1,10 @@
 # AI Engineering Lab v0.2 Minimal Workflow
 
 - **Version:** `0.2`
-- **Status:** `FROZEN_PENDING_MVP_SELECTION`
+- **Scope:** AI Engineering Lab v0.2
 - **Canonical owner:** `idaibin/ai-handbook`
+
+本工作流描述 Lab 的单 MVP 工作方式。具体项目的当前状态和恢复条件以项目状态记录为准；班超 S1 见 [当前状态](../../research/story-studio/banchao-s1-current-status.md)。
 
 ## 门禁
 

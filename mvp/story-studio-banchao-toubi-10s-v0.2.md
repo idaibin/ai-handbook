@@ -5,7 +5,9 @@
 - `artifact_role`: `downstream_video_chain_test_slice`
 - `project_status_ref`: `research/story-studio/banchao-s1-current-status.md`
 - `supersedes`: `story-studio/banchao/toubi-30s-v0.2`
-- `scope`: Story Studio only; Forgeway and Skills remain frozen
+- `scope`: Story Studio downstream video-chain test slice
+
+Lab v0.2 中 Forgeway 与 Skills 的冻结及恢复条件仍以[重启决策](../decisions/2026-08-22-ai-engineering-lab-v0.1-freeze-and-v0.2-reset.md)为准。
 
 > **状态说明（2026-08-26）**：本文档仅定义一个后续真实视频链路验证切片，不再代表《班超》S1 的当前项目范围，也不覆盖 S1 当前状态。S1 当前已经进入 EP01–EP24 / 194 张候选分镜的 Visual Canon 最终门禁，权威入口见 `research/story-studio/banchao-s1-current-status.md`。
 
