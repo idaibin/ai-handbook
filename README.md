@@ -10,3 +10,7 @@
 - [AI Engineering Lab v0.1 架构归档](architecture/AI-ENGINEERING-LAB-ARCHITECTURE.md)及 [v0.2 重启决策](decisions/2026-08-22-ai-engineering-lab-v0.1-freeze-and-v0.2-reset.md)：保留当时的基线和决策。
 
 Lab v0.2 的项目恢复和扩展限制见[重启决策](decisions/2026-08-22-ai-engineering-lab-v0.1-freeze-and-v0.2-reset.md)及[工作流](workflows/ai-engineering-system/README.md)：Lab 内恢复工作须通过单一 MVP 的批准和证据门禁。Forgeway 与 Skills 的仓库状态分别由各自仓库维护。
+
+## 工程案例
+
+- [Codex Remote 加载失败排查经验](research/workflows/codex-remote-troubleshooting.md)：连接通道、授权状态、正文读取验收及恢复归因边界。
