@@ -2,6 +2,8 @@
 
 ## 当前建议与状态
 
+> 2026-11-01（北京时间）更新：增加写作/视觉入口一致性研究与有界上游观察；建议均为待验证候选，不表示已采用或完成行为验收。
+
 目标：缩短研发总时间、减少 token，同时保持交付质量、完整验收和权限边界。模型已可靠具备的能力不重复包装为 Skill；保留能补足具体缺口、提供项目约束或可执行资源的内容。
 
 | 优先级 | 当前建议 | 状态 |
@@ -24,6 +26,54 @@
 - 验收由独立结果判据决定，保留失败、跳过与基础设施异常；先确认实际运行了哪些断言及覆盖，再判断通过。只有质量和完整验收达标、权限边界保持，且重复对照支持成本改善，才考虑采纳；退化或证据不足则保留原方案或继续验证。
 
 每条记录使用北京时间（Asia/Shanghai）日期，区分来源发生日、记录日与复测日。至少包含：变化与固定来源、具体删改建议、依据、预期收益、验证方案、真实结果及实现/测试链接。预期收益是待验证假设；结果分别标记历史证据、今日静态核验或真实运行。
+
+## 2026-11-01（北京时间）｜写作、视觉入口与有界上游观察
+
+### 可复用结论与验证边界
+
+研究范围包括研发、写作、海报、卡片、PPT 与排版。不因新增领域另建协调包，也不把资料收录当采用。
+- 源码、已安装副本与实际加载入口应分别核验；源码已有规则时，先查分发/加载一致性，不补同义规则。包索引数量不能代表全部宿主能力。
+- 文案语义、格式/图像生产与审批/发布应分别归属；职责声明冲突时保留未核状态，不据入口名字推定已有替代执行能力，也不自动删除供应商工具。
+- 静态检查通过不能替代模型行为或权限执行证明。检查器应有能够击穿实际消费者假设的反例；此处不报告新的模型实验或运行验收。
+
+### 待评精简候选
+
+[human-writing content-modes.md 固定来源](https://github.com/idaibin/skills/blob/182a5023e5d91bb1b71725ec4ba219b855d2a57a/skills/human-writing/references/content-modes.md)的短文事实闭包说明，可对照同版本 [Source-Based Editing Check](https://github.com/idaibin/skills/blob/182a5023e5d91bb1b71725ec4ba219b855d2a57a/skills/human-writing/references/fact-integrity.md#source-based-editing-check)，评估改为精确引用并保留短文特有边界。第95–96行多稿信息用途差异不应随之删除。候选尚未实施，也没有模型 A/B 或真实成品验收；文字或字节减少不证明 token、耗时或质量收益。下一步只在固定输入、权限、模型和验收条件下比较源事实保真、格式与多稿用途，记录退化及未知，不用已曝光场景冒充盲测。
+
+### 上游变化：只读定点，不把排序当能力
+
+- [mattpocock/skills 比较](https://github.com/mattpocock/skills/compare/a496f5513d4a4cf889bc48e189e579f4b0bdf6aa...4ae2317ddb22b046e26455e4f9c9b3aaaf62212d)：chief-of-staff 改为优先已有共享 wiki；已有权威文档时应复用，不另建同义台账。新 software-factory 位于 in-progress；其术语和自动任务/发布流程不直接迁入，也不扩当前授权。仓 metadata 为 MIT，未作全许可审计。
+- [ui-ux-pro-max 比较](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/compare/28b3b8dee8c976df4fa3e94aed4e092ad43fcb03...9a3f14f7423037ccb8feeb4fee7482291b9c820e)：主要为 AutoClaw 路径/入口兼容，Python 脚本显式解析自身目录。不能称视觉质量提升，也不因新增宿主安装其六个子包；当前无同类已证失败，不复制实现。
+- [addyosmani agent-skills quality gate](https://github.com/addyosmani/agent-skills/blob/8bfcc1f9916f2eea55494d8c1fa7f4bde867dd9e/skills/constraint-driven-development/scripts/quality-gate.mjs) 与 [原CLI反例](https://github.com/addyosmani/agent-skills/blob/8bfcc1f9916f2eea55494d8c1fa7f4bde867dd9e/scripts/quality-gate-test.js)：区分阻断发现与报告不可用，覆盖空扫描、未知severity、浏览器错误URL等。仅静态核读，不是运行PASS；有效HTTP地址也不证明正确任务页或完整覆盖。借鉴的是测试实际消费者的失效输入，现有本地门需先核对应缺口，不搬通用新门。
+
+### GitHub skills 本日返回原序
+
+查询 `skills sort:stars-desc`，page1/per_page20；[原搜索入口](https://github.com/search?q=skills&type=repositories&s=stars&o=desc)。搜索UTC 2026-10-31 16:04:57–16:05:05，metadata/default HEAD 16:05:11–16:05:17（BJT11/1 00:04:57–00:05:17）。与10/31快照约24小时5分钟间隔，非完整自然日；20成员/顺序同前，11 HEAD不变、9变化。stars为逐仓metadata时读值，非搜索响应原子值；搜索未给total_count/incomplete_results，不能认证全站完整性。9个compare仅摘要筛选，LobeHub文件返回300可能截断；其余变化未全量审查，未变仓不重读。以下保留当次采样的原序与固定版本；这是一份有界观察，不代表当前实时排序或完整上游审计。
+
+| 原序 | 仓库 | Stars | ΔStars | 默认分支 | 固定 SHA |
+| ---: | --- | ---: | ---: | --- | --- |
+| 1 | [obra/superpowers](https://github.com/obra/superpowers) | 309841 | +619 | main | [`2ce8aa15d05bd57213e6f746f953aafb7ded7a8b`](https://github.com/obra/superpowers/tree/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b) |
+| 2 | [mattpocock/skills](https://github.com/mattpocock/skills) | 308056 | +871 | main | [`4ae2317ddb22b046e26455e4f9c9b3aaaf62212d`](https://github.com/mattpocock/skills/tree/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d) |
+| 3 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 293807 | +634 | main | [`b38be6a7f6350964d59328b52f0624e1d1d552d1`](https://github.com/affaan-m/ECC/tree/b38be6a7f6350964d59328b52f0624e1d1d552d1) |
+| 4 | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | 227301 | +611 | main | [`2c606141936f1eeef17fa3043a72095b4765b9c2`](https://github.com/multica-ai/andrej-karpathy-skills/tree/2c606141936f1eeef17fa3043a72095b4765b9c2) |
+| 5 | [anthropics/skills](https://github.com/anthropics/skills) | 185760 | +697 | main | [`ca45fc496a3436251f191354091d557da31c15b5`](https://github.com/anthropics/skills/tree/ca45fc496a3436251f191354091d557da31c15b5) |
+| 6 | [langgenius/dify](https://github.com/langgenius/dify) | 160090 | +83 | main | [`4c521a3c0a1f60607c8a7bcf90792f34adcf18d0`](https://github.com/langgenius/dify/tree/4c521a3c0a1f60607c8a7bcf90792f34adcf18d0) |
+| 7 | [Snailclimb/JavaGuide](https://github.com/Snailclimb/JavaGuide) | 159363 | +19 | main | [`992dae31eade2a34ba8dbbbcf5ed9de5511325ec`](https://github.com/Snailclimb/JavaGuide/tree/992dae31eade2a34ba8dbbbcf5ed9de5511325ec) |
+| 8 | [farion1231/cc-switch](https://github.com/farion1231/cc-switch) | 150594 | +234 | main | [`66d530d6efb68e57f51a97217b0146684f1990bd`](https://github.com/farion1231/cc-switch/tree/66d530d6efb68e57f51a97217b0146684f1990bd) |
+| 9 | [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | 143568 | +73 | main | [`6c16b23f1bacd0fdf240bb5141ef45e59e82c306`](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/6c16b23f1bacd0fdf240bb5141ef45e59e82c306) |
+| 10 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 143292 | +380 | main | [`9a3f14f7423037ccb8feeb4fee7482291b9c820e`](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/9a3f14f7423037ccb8feeb4fee7482291b9c820e) |
+| 11 | [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) | 139865 | +616 | v8 | [`a0946f962af31b19bff941b453f6dae9a7077c7a`](https://github.com/Graphify-Labs/graphify/tree/a0946f962af31b19bff941b453f6dae9a7077c7a) |
+| 12 | [Chalarangelo/30-seconds-of-code](https://github.com/Chalarangelo/30-seconds-of-code) | 129378 | +2 | master | [`bd756f8b2283a38560efe83cb30af38324d4e9e9`](https://github.com/Chalarangelo/30-seconds-of-code/tree/bd756f8b2283a38560efe83cb30af38324d4e9e9) |
+| 13 | [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | 116473 | +204 | main | [`9b68f7ed12b05e7efaff18e65c5a3fc2849fd0a4`](https://github.com/JuliusBrussee/caveman/tree/9b68f7ed12b05e7efaff18e65c5a3fc2849fd0a4) |
+| 14 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 112130 | +210 | main | [`8bfcc1f9916f2eea55494d8c1fa7f4bde867dd9e`](https://github.com/addyosmani/agent-skills/tree/8bfcc1f9916f2eea55494d8c1fa7f4bde867dd9e) |
+| 15 | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | 106788 | +678 | main | [`12af471f627f866411b4bd785b19646d3672784c`](https://github.com/Leonxlnx/taste-skill/tree/12af471f627f866411b4bd785b19646d3672784c) |
+| 16 | [ruvnet/RuView](https://github.com/ruvnet/RuView) | 101838 | +135 | main | [`5728b90949e60e3f908d996997d453147c1794e0`](https://github.com/ruvnet/RuView/tree/5728b90949e60e3f908d996997d453147c1794e0) |
+| 17 | [florinpop17/app-ideas](https://github.com/florinpop17/app-ideas) | 98421 | +16 | master | [`9e8dd00f10b881babc273d66949b7ffa0e310097`](https://github.com/florinpop17/app-ideas/tree/9e8dd00f10b881babc273d66949b7ffa0e310097) |
+| 18 | [tt-a1i/archify](https://github.com/tt-a1i/archify) | 92049 | +294 | main | [`a4065941f12be7967436261d9934784e381d423c`](https://github.com/tt-a1i/archify/tree/a4065941f12be7967436261d9934784e381d423c) |
+| 19 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 84762 | +36 | main | [`a9bd03ef572a4898ea1ba977e906408dc2f28d7d`](https://github.com/bytedance/deer-flow/tree/a9bd03ef572a4898ea1ba977e906408dc2f28d7d) |
+| 20 | [lobehub/lobehub](https://github.com/lobehub/lobehub) | 83639 | +27 | canary | [`bf259e60ee422d5613f6dff46acaf69119c35a24`](https://github.com/lobehub/lobehub/tree/bf259e60ee422d5613f6dff46acaf69119c35a24) |
+
+**结果与下一条件：** 本日为有界采样及静态阅读；没有运行上游测试、模型调用或真实成品验收。耗时、token、质量收益未知。后续先核既有能力是否已覆盖，再决定是否做获准的局部验证；本记录不授权安装、生成、发布或改动其他项目。
 
 ## 2026-10-16（北京时间）｜初始化维护范围
 
