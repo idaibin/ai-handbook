@@ -1,7 +1,9 @@
 # Shared AI Capabilities Map
 
+> This map retains historical architecture and implementation observations. Current workstream scope is recorded in the [Handbook entrypoint](../README.md); an `active` label below is not a fresh runtime check or authorization to resume a paused project.
+
 - Status: active
-- Role: reusable inputs for feeds-hub, Createway, Story Studio and Forgeway
+- Role: reusable inputs for feeds-hub, Creatorway, Story Studio and Forgeway
 
 ## Boundary
 
@@ -41,8 +43,8 @@ patterns), not top-level current shared systems.
 
 | Shared capability | Example consumers | Product-owned authority remains with |
 | --- | --- | --- |
-| Knowledge System | feeds-hub, Createway, Story Studio, Forgeway | source/report/brief/product owner |
-| Writing System | reports, articles, scripts, product specs | feeds-hub, Createway, Story Studio or Forgeway |
+| Knowledge System | feeds-hub, Creatorway, Story Studio, Forgeway | source/report/brief/product owner |
+| Writing System | reports, articles, scripts, product specs | feeds-hub, Creatorway, Story Studio or Forgeway |
 | Visual System | feed graphics, covers, story frames, UI directions | the corresponding product route |
 | Workflow System | all products as needed | selected Task route and product lifecycle |
 | Evaluation System | all products | named reviewer and owning acceptance gate |
@@ -56,7 +58,7 @@ The shared visual prompt vocabulary may describe subject, environment, style,
 composition, camera, lighting, color, emotion, references and negative constraints.
 It does not own:
 
-- Createway Content View styles and publication templates;
+- Creatorway Content View styles and publication templates;
 - Story Studio character, scene and continuity references;
 - Forgeway or target-repository Product View/UI tokens and components;
 - feeds-hub event/source identity.

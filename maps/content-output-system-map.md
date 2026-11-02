@@ -2,7 +2,7 @@
 
 - Stable route id: `content-output-system`
 - Status: architecture-defined; implementation not verified
-- Product: Createway
+- Product display name: Craftway
 - Lifecycle: `Knowledge → Writing → Visual Enhancement → Publishing`
 
 ## Outcome
@@ -25,15 +25,15 @@ Knowledge → Writing → Visual Enhancement → Publishing
 
 ## Boundary
 
-Createway owns text and lightweight text+visual publishing outputs. It may consume
+Creatorway owns text and lightweight text+visual publishing outputs. It may consume
 feeds-hub research/insights plus shared Knowledge, Writing and Visual systems.
 
-Createway does not own source/event identity, complex video, IP management,
+Creatorway does not own source/event identity, complex video, IP management,
 long-lived hierarchical media assets, Story Studio narrative media/IP, Product UI or
 software delivery.
 
 Narrative image sequences, comics, animation, video, voice and audio select
-`media-production-system`. A Createway runtime/code change selects
+`media-production-system`. A Creatorway runtime/code change selects
 `product-delivery-system` as a separate Task.
 
 ## Gates
@@ -47,12 +47,14 @@ Narrative image sequences, comics, animation, video, voice and audio select
 
 ## Compatibility
 
+The current workstream spelling is **Craftway** (confirmed 2026-10-27), formerly **Creatorway** and earlier **Createway**. The product id `createway` and route id `content-output-system` remain unchanged. The original architecture and implementation observations elsewhere in this map retain their historical names and scope; current workstream planning follows the [Handbook entrypoint](../README.md). Personal-IP planning is not a claim that the historical Story Studio media/IP contract has migrated. This display-name clarification does not create a repository, runtime or publication authorization.
+
 The route id remains `content-output-system` because current Registry, workflow and
-handoff consumers use it. The architecture narrows its product meaning to Createway
+handoff consumers use it. The architecture narrows its product meaning to Creatorway
 Content Creation instead of silently renaming a live contract.
 
-## Current state
+## Historical implementation observation
 
-Createway is architecture-defined. No remote repository, merged runtime, external
-publication adapter or production release is currently verified. The Forgeway
-Creative pilot remains historical evidence, not Createway authority.
+Creatorway is architecture-defined. No remote repository, merged runtime, external
+publication adapter or production release was verified in the 2026-08-17 architecture observation. The Forgeway
+Creative pilot remains historical evidence, not Creatorway authority.

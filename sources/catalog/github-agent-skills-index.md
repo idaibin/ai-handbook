@@ -1,5 +1,9 @@
 # GitHub Agent Skills Repository Index
 
+> Historical index-stage evidence. Discovery and sequential deep analysis have been paused since the [2026-08-11 stage closure](../../research/stage-reviews/2026-08-11-repository-research-stage-closure.md). Counts, “current” labels and the next action below describe the original collection stage; they do not authorize resuming it. Current bounded maintenance is linked from the [Skills research entrypoint](../../research/agent-skills/README.md).
+
+Browse the existing [run reports](runs/), [batch data](batches/), [snapshots](snapshots/) and [retrospectives](retrospectives/) as historical groups. These folders are not newly generated assets or separately verified sources merely because they are indexed.
+
 ## Current verified catalog
 
 - Canonical unique repositories: `2502`

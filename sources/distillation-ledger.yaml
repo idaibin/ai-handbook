@@ -1,9 +1,13 @@
 version: "0.1"
 updated_at: "2026-07-31"
+# Reference-only review: 2026-10-27. Artifact links pin the first/last reachable
+# path change (2026-08-03); both blobs match observed main 9b9090da2ec8ca026d829036b4327c4a03640a3f.
+# Original dates and validation claims are retained; a 2026-07-31 artifact version is not established.
+# Both artifacts remain draft / level_3 with publication_review required; no runtime or benefit was revalidated.
 scope_rule: "distilled applies only to the listed fixed-commit sections; it never means the full repository was read, reproduced, or adopted."
 clusters:
   - id: evaluation-driven-agent-workflow
-    artifact: https://github.com/idaibin/knowledge-distillation/blob/main/examples/engineering/evaluation-driven-agent-workflow/knowledge.yaml
+    artifact: https://github.com/idaibin/knowledge-distillation/blob/e13f311b2240c881523f15aee9f548d3d70da471/examples/engineering/evaluation-driven-agent-workflow/knowledge.yaml
     selected_level: level_3
     validation: "Knowledge IR validator and JSON Schema passed for this IR; the generic 9-case basic suite passed but does not exercise this IR"
     sources:
@@ -26,10 +30,11 @@ clusters:
       - "interface-closure-v1 packet frozen and tested on Case 003"
       - "No Case 003 lift; not promoted to Skill"
   - id: agent-tool-boundaries
-    artifact: https://github.com/idaibin/knowledge-distillation/blob/main/examples/engineering/agent-tool-boundaries/knowledge.yaml
+    artifact: https://github.com/idaibin/knowledge-distillation/blob/e13f311b2240c881523f15aee9f548d3d70da471/examples/engineering/agent-tool-boundaries/knowledge.yaml
     selected_level: level_3
     validation: "Knowledge IR validator and JSON Schema passed for this IR; the generic 9-case basic suite passed but does not exercise this IR"
     sources:
+      # Stable Handbook id; the artifact uses mcp-reference-servers for the same repository and fixed commit.
       - source_id: mcp-servers
         coverage: "README.md — reference-server warning and access examples"
         status: distilled
